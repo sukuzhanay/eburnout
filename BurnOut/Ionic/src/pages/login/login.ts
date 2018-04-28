@@ -62,6 +62,8 @@ export class LoginPage {
 
 
     private _onInit(){
+     // Sql lite deactive
+/*
         var _self = this;
         this._createDatabase().then((success) => {
 
@@ -82,9 +84,10 @@ export class LoginPage {
         }, (error) => {
             _self.toast(JSON.stringify(error));
         });
-
+*/
     }
 
+/*
     private _createDatabase(){
         var _self = this;
         return this._sqlite.create({
@@ -118,13 +121,13 @@ export class LoginPage {
         let sql = 'INSERT INTO usuario(email,pwd) VALUES(?,?)';
         return this._db.executeSql(sql, [email,pwd]);
     }
-
+*/
     /*private _deleteTable(){
         let sql = 'DROP TABLE IF EXISTS usuario';
         return this._db.executeSql(sql, []);
     }*/
 
-    
+    /*
     private _createTable(){
         let sql = 'CREATE TABLE IF NOT EXISTS usuario(id INTEGER PRIMARY KEY AUTOINCREMENT, email VARCHAR(100),pwd TEXT)';
         return this._db.executeSql(sql, []);
@@ -144,7 +147,7 @@ export class LoginPage {
             .catch(error => Promise.reject( error ) );
 			
     }
-
+*/
    
     
 
@@ -168,12 +171,13 @@ export class LoginPage {
                 this.navCtrl.setRoot('RegistroPage', { idUsuario: resultado.uid, email: this.formulario.email, password: this.formulario.password });
                 this.loading.dismiss();
               } else {
-                var dato = this._cipher(this.formulario.password,'encrypt');
+                /*var dato = this._cipher(this.formulario.password,'encrypt');
                 if( this._id ){
                     this._update(this.formulario.email, dato, this._id);
                 }else{
                     this._create(this.formulario.email, dato);
-                }
+                }*/
+
 
                 this.global.usuario = resultados[2];
                 this.global.resultadoPreguntas = this.global.usuario.ultimaencuesta;
@@ -185,7 +189,7 @@ export class LoginPage {
                   this.global.client_id = llavesFitBit["client_id"];
                   this.global.client_secret = llavesFitBit["client_secret"];
                 }
-                this.navCtrl.setRoot('TabGeneralPage');
+                this.navCtrl.setRoot('ConsentimientoPage');
                 this.loading.dismiss();
               }
 			  

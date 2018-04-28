@@ -1,1 +1,895 @@
-webpackJsonp([7],{151:function(t,e,a){"use strict";a.d(e,"a",function(){return n});a(4);var n=function(){function t(t,e){this.http=t,this.db=e}return t.prototype.preguntas=function(){return this.db.list("/questions").valueChanges()},t.prototype.recomendaciones=function(){return this.db.list("/recommendations").valueChanges()},t.prototype.especialidades=function(){return this.db.list("/especialidades").valueChanges()},t.prototype.registroUsuarioBD=function(t){this.db.database.ref("/usuarios/"+t.id).set(t)},t.prototype.usuarioRegistradoBD=function(t){return this.db.object("/usuarios/"+t).valueChanges()},t.prototype.guardarUltimaEncuesta=function(t,e){this.db.database.ref("/usuarios/"+t+"/ultimaencuesta").set(e)},t.prototype.guardarEncuesta=function(t,e){this.db.database.ref("/encuestas").push({id:t,encuesta:e})},t.prototype.encuestasUltimas=function(t){return this.db.list("/encuestas/",function(e){return e.orderByChild("id").equalTo(t).limitToLast(3)}).valueChanges()},t.prototype.guardarEstadoAnimo=function(t,e){this.db.database.ref("/estadosanimo").push({id:t,estado:e})},t.prototype.consultaFoto=function(t){return this.http.post("https://vision.googleapis.com/v1/images:annotate?key=AIzaSyB_mk7PfJCwuHBCw51P4juWqxBJdwVEG5o",{requests:[{image:{content:t},features:[{type:"FACE_DETECTION"}]}]})},t.prototype.idClientFitBit=function(t){return this.db.list("/fbclient/",function(e){return e.orderByChild("id").equalTo(t)}).valueChanges()},t}()},163:function(t,e,a){"use strict";a(4);var n=a(148),i=(a(0),a(88),a(388),a(7)),o={url:"https://www.fitbit.com/oauth2/authorize",rate_limit:150,key_access_token:"access_token",body:{redirect_uri:"https://localhost:8100/eburnout_callback",client_id:"",scope:"activity nutrition heartrate location nutrition profile settings sleep social weight",response_type:"token",expires_in:"600"}},r=(a(67),function(){return function(t,e,a,n){this.timeinbed=t,this.starttime=e,this.endtime=a,this.minutesawake=n}}());a(97),a(149),a(101);a.d(e,"a",function(){return s});var s=function(){function t(t,e,a,n,o,s){var c=this;this.http=t,this.platform=e,this.alertCtrl=a,this._global=n,this._storage=o,this._sqlite=s,this._renew_token=!1,this._access_token="",this._client_id="",this._client_secret="",this._iCron=null,this._timeCron=5e3,this._tsAHI=[],this._stayWaiting=!1,this._db=null,this._id=0,this._db_client_id="",this._fbsleep=new r(0,"","",0),this.errorObserver=null,this.error=i.Observable.create(function(t){c.errorObserver=t}),this._set_time_cron(),this._oninit()}return t.prototype._oninit=function(){var t=this;this._createDatabase().then(function(e){var a="";void 0!==e[0]&&(t._id=e[0].id,t._db_client_id=e[0].client_id,a=t._db_client_id==t._global.client_id?e[0].token:""),t._client_id=t._db_client_id,t._storage.set("fb_client_id",t._db_client_id),t._access_token=a,t._storage.set("fb_access_token",a),t._load_vars(),t._valuate_error({error:"",status:1020})},function(e){t.showAlert(JSON.stringify(e))})},t.prototype._createDatabase=function(){var t=this;return this._sqlite.create({name:"eburnout.db",location:"default"}).then(function(e){return t._setDatabase(e),t._createTable(),t._getClient()}).catch(function(e){t.showAlert(JSON.stringify(e)),Promise.reject(e)})},t.prototype._setDatabase=function(t){null===this._db&&(this._db=t)},t.prototype._create=function(t){return this._db.executeSql("INSERT INTO client(token,client_id) VALUES(?,?)",[t,this._client_id])},t.prototype._createTable=function(){return this._db.executeSql("CREATE TABLE IF NOT EXISTS client(id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT,client_id VARCHAR(6))",[])},t.prototype._getClient=function(){return this._db.executeSql("SELECT * FROM client WHERE id=1",[]).then(function(t){for(var e=[],a=0;a<t.rows.length;a++)e.push(t.rows.item(a));return Promise.resolve(e)}).catch(function(t){return Promise.reject(t)})},t.prototype._update=function(t,e){return this._db.executeSql("UPDATE client SET token=?, client_id=? WHERE id=?",[t,this._client_id,e])},t.prototype._set_time_cron=function(){this._timeCron=(o.rate_limit<=0?150:o.rate_limit)/60*60*1e3},t.prototype._load_vars=function(){var t=this;this._global.client_id&&(t._storage.get("fb_client_id").then(function(e){t._client_id=e||""}),t._storage.get("fb_access_token").then(function(e){t._access_token=e||""}),t._storage.get("fb_client_secret").then(function(e){t._client_secret=e||""}))},t.prototype._get_url=function(){return o.body.client_id=this._global.client_id,o.url+"?"+Object.keys(o.body).map(function(t){return encodeURIComponent(t)+"="+encodeURIComponent(o.body[t])}).join("&")},t.prototype.get_strDate=function(t,e){void 0===t&&(t=""),void 0===e&&(e="");var a,n=(a=t.length?new Date(t):new Date).getDate()<10?"0"+a.getDate().toString():a.getDate().toString(),i=a.getMinutes()<10?"0"+a.getMinutes().toString():a.getMinutes().toString(),o=a.getMonth()+1<10?"0"+(a.getMonth()+1).toString():(a.getMonth()+1).toString();return"HH:mm:ss"==e?a.getHours().toString()+":"+i+":"+a.getSeconds().toString():"dd-mm-yyyy"==e?n+"-"+o+"-"+a.getFullYear().toString():a.getFullYear().toString()+"-"+o+"-"+n},t.prototype._getAuthPermission=function(){var t=this;return new Promise(function(e,a){t._renew_token=t._db_client_id!=t._global.client_id;var n=t._renew_token?",clearsessioncache=yes,clearcache=yes":"";if(void 0!=window.cordova){var i=window.cordova.InAppBrowser.open(t._get_url(),"_blank","location=no"+n);i.addEventListener("loadstart",function(t){if(0===t.url.indexOf(o.body.redirect_uri)){i.removeEventListener("exit",function(){}),i.close();var n=t.url.split(o.key_access_token)[1].split("&")[0].split("=")[1],r={},s={error:"Problem authenticating with FitBit",status:1010};void 0!==n&&null!==n?(r[o.key_access_token]=n,e(r)):a(s)}}),i.addEventListener("exit",function(t){a({error:"The FitBit authorization in flow was canceled",status:1010})})}else window.open(t._get_url(),"_blank","location=no"+n),e({access_token:"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjVLOTkiLCJhdWQiOiIyMkNHODQiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJwcm8gcm51dCByc2xlIiwiZXhwIjoxNTE1MDc4MTQzLCJpYXQiOjE1MTQ5OTg2ODB9.j6YhSfy7123wFYVsF0b9PNKm8sVihjplrUV_r6kBXuE"})})},t.prototype._toAutorizate=function(){var t=this,e=this;this._getAuthPermission().then(function(a){void 0!==a[o.key_access_token]&&(e._access_token=a[o.key_access_token],e._renew_token=!1,e._client_id=e._global.client_id,e._id?e._update(e._access_token,e._id):e._create(e._access_token),e._client_secret=e._global.client_secret,e._storage.set("fb_client_id",e._client_id),e._storage.set("fb_client_secret",e._client_secret),t._global.access_token=e._access_token,e._storage.set("fb_access_token",e._access_token),e._valuate_error({status:1001}))},function(t){e.showAlert(JSON.stringify(t)),e._valuate_error(t)})},t.prototype.check_auth=function(){var t=this;this.platform.ready().then(function(){t._load_vars(),!t._access_token.trim().length&&t.have_bracelet()?t._toAutorizate():t._valuate_error({status:1001})})},t.prototype._valuate_error=function(t){this.errorObserver.next(t),void 0!=t.status&&(400==t.status||401==t.status?(this.toStopCron(),this._global.access_token="",this._storage.set("fb_access_token",""),this._load_vars(),this._toAutorizate()):429==t.status?this._stayWaiting=!0:1002==t.status&&(this._stayWaiting=!1))},t.prototype.toStopCron=function(){this._iCron&&clearInterval(this._iCron),this._iCron=null},t.prototype.toStartCron=function(){this._iCron&&this.toStopCron();var t=this;t._toCron(),this._iCron=setInterval(function(){t._toCron()},t._timeCron)},t.prototype._toCron=function(){this._get_heart()},t.prototype._get_authHeader=function(){return{"Content-Type":"application/x-www-form-urlencoded",Authorization:"Bearer "+this._access_token}},t.prototype._get_heart=function(){var t=new n.g(this._get_authHeader()),e=this;this.http.get("https://api.fitbit.com/1/user/-/activities/heart/date/today/1d/1sec/time/00:00/23:59.json",{headers:t}).subscribe(function(t){e._stayWaiting&&e._valuate_error({status:1002}),void 0!==t["activities-heart-intraday"]&&(e._tsAHI=t["activities-heart-intraday"].dataset.map(function(t){return{name:t.time,value:t.value}})),e._get_sleep()},function(t){e._valuate_error(t)})},t.prototype._get_sleep=function(){var t=new n.g(this._get_authHeader()),e=this,a=this.get_strDate();this.http.get("https://api.fitbit.com/1.2/user/-/sleep/date/"+a+"/"+a+".json",{headers:t}).subscribe(function(t){if(e._stayWaiting&&e._valuate_error({status:1002}),void 0!==t.sleep)if(void 0!==t.sleep[0]){var a=t.sleep.length-1;e._fbsleep.starttime=t.sleep[a].startTime,e._fbsleep.endtime=t.sleep[a].endTime,e._fbsleep.timeinbed=0,e._fbsleep.minutesawake=0;for(var n=a;n>=0;n--)e._fbsleep.timeinbed+=t.sleep[n].timeInBed,e._fbsleep.minutesawake+=t.sleep[n].minutesAwake}else e._fbsleep.timeinbed=t.sleep.timeInBed,e._fbsleep.starttime=t.sleep.startTime,e._fbsleep.endtime=t.sleep.endTime,e._fbsleep.minutesawake=t.sleep.minutesAwake},function(t){e._valuate_error(t)})},t.prototype.sleep=function(){return this._fbsleep},t.prototype.tsAHI=function(){return this._tsAHI},t.prototype.showAlert=function(t){this.alertCtrl.create({title:"FitBit",subTitle:t,buttons:["OK"]}).present()},t.prototype.have_bracelet=function(){return""!=this._global.client_id&&null!=this._global.client_id&&void 0!=this._global.client_id},t}()},177:function(t,e){function a(t){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+t+"'.")})}a.keys=function(){return[]},a.resolve=a,t.exports=a,a.id=177},207:function(t,e,a){function n(t){var e=i[t];return e?a.e(e[1]).then(function(){return a(e[0])}):Promise.reject(new Error("Cannot find module '"+t+"'."))}var i={"../pages/camara/camara.module.ngfactory":[403,5],"../pages/dashboard/dashboard.module.ngfactory":[402,0],"../pages/encuesta/encuesta.module.ngfactory":[401,2],"../pages/login/login.module.ngfactory":[404,1],"../pages/recomendacion/recomendacion.module.ngfactory":[406,4],"../pages/registro/registro.module.ngfactory":[407,3],"../pages/tab-general/tab-general.module.ngfactory":[405,6]};n.keys=function(){return Object.keys(i)},n.id=207,t.exports=n},284:function(t,e,a){"use strict";function n(t){return o._19(0,[(t()(),o.Z(0,0,null,null,2,"ion-nav",[],null,null,null,M.b,M.a)),o._15(6144,null,H.a,null,[F.a]),o.Y(2,4374528,null,0,F.a,[[2,N.a],[2,B.a],D.a,R.a,J.a,o.j,o.u,o.z,o.i,q.l,L.a,[2,x.a],X.a,o.k],{root:[0,"root"]},null),(t()(),o._18(-1,null,["\n"]))],function(t,e){t(e,2,0,e.component.rootPage)},null)}Object.defineProperty(e,"__esModule",{value:!0});var i=a(32),o=a(0),r=(a(4),a(67),a(95)),s=a(96),c=function(){return function(t,e,a){this.rootPage="LoginPage",t.ready().then(function(){e.styleDefault(),a.hide()})}}(),_=a(164),l=a(130),u=a(148),d=a(43),h=a(121),p=a(165),g=a(97),f=a(151),b=a(163),m=a(273),y=a(149),v=a(101),k=function(){return function(){}}(),w=a(58),C=a(274),E=a(275),T=a(276),P=a(277),S=a(278),A=a(279),I=a(280),O=a(281),j=a(282),M=a(400),H=a(38),F=a(62),N=a(6),B=a(27),D=a(11),R=a(2),J=a(5),q=a(10),L=a(31),x=a(16),X=a(12),z=o.X({encapsulation:2,styles:[],data:{}}),U=o.V("ng-component",c,function(t){return o._19(0,[(t()(),o.Z(0,0,null,null,1,"ng-component",[],null,null,null,n,z)),o.Y(1,49152,null,0,c,[J.a,s.a,r.a],null,null)],null,null)},{},{},[]),W=a(17),Y=a(132),G=a(21),V=a(112),Z=a(114),Q=a(131),K=a(18),$=a(37),tt=a(44),et=a(102),at=a(152),nt=a(60),it=a(45),ot=a(136),rt=a(74),st=a(139),ct=a(134),_t=a(100),lt=a(270),ut=a(272),dt=a(133),ht=a(34),pt=a(120),gt=a(135),ft=o.W(k,[w.b],function(t){return o._10([o._11(512,o.i,o.S,[[8,[C.a,E.a,T.a,P.a,S.a,A.a,I.a,O.a,j.a,U]],[3,o.i],o.s]),o._11(5120,o.r,o._9,[[3,o.r]]),o._11(4608,W.k,W.j,[o.r,[2,W.s]]),o._11(5120,o.b,o._0,[]),o._11(5120,o.p,o._6,[]),o._11(5120,o.q,o._7,[]),o._11(4608,i.c,i.q,[W.c]),o._11(6144,o.D,null,[i.c]),o._11(4608,i.f,Y.a,[]),o._11(5120,i.d,function(t,e,a,n,o){return[new i.k(t,e),new i.o(a),new i.n(n,o)]},[W.c,o.u,W.c,W.c,i.f]),o._11(4608,i.e,i.e,[i.d,o.u]),o._11(135680,i.m,i.m,[W.c]),o._11(4608,i.l,i.l,[i.e,i.m]),o._11(6144,o.B,null,[i.l]),o._11(6144,i.p,null,[i.m]),o._11(4608,o.G,o.G,[o.u]),o._11(4608,i.h,i.h,[W.c]),o._11(4608,i.i,i.i,[W.c]),o._11(4608,G.o,G.o,[]),o._11(4608,G.d,G.d,[]),o._11(4608,l.c,l.c,[]),o._11(4608,l.g,l.b,[]),o._11(5120,l.i,l.j,[]),o._11(4608,l.h,l.h,[l.c,l.g,l.i]),o._11(4608,l.f,l.a,[]),o._11(5120,l.d,l.k,[l.h,l.f]),o._11(4608,u.i,u.n,[W.c,o.w,u.l]),o._11(4608,u.o,u.o,[u.i,u.m]),o._11(5120,u.a,function(t){return[t]},[u.o]),o._11(4608,u.k,u.k,[]),o._11(6144,u.j,null,[u.k]),o._11(4608,u.h,u.h,[u.j]),o._11(6144,u.b,null,[u.h]),o._11(5120,u.f,u.p,[u.b,[2,u.a]]),o._11(4608,u.c,u.c,[u.f]),o._11(4608,m.b,m.b,[]),o._11(5120,d.b,d.f,[d.c,d.d]),o._11(5120,h.a,h.c,[d.b]),o._11(5120,p.a,p.c,[d.b]),o._11(4608,V.a,V.a,[D.a,R.a]),o._11(4608,Z.a,Z.a,[D.a,R.a]),o._11(4608,Q.a,Q.a,[]),o._11(4608,K.a,K.a,[]),o._11(4608,$.a,$.a,[J.a]),o._11(4608,tt.a,tt.a,[R.a,J.a,o.u,X.a]),o._11(4608,et.a,et.a,[D.a,R.a]),o._11(5120,W.f,at.c,[W.q,[2,W.a],R.a]),o._11(4608,W.e,W.e,[W.f]),o._11(5120,nt.b,nt.d,[D.a,nt.a]),o._11(5120,x.a,x.b,[D.a,nt.b,W.e,it.b,o.i]),o._11(4608,ot.a,ot.a,[D.a,R.a,x.a]),o._11(4608,rt.a,rt.a,[D.a,R.a]),o._11(4608,st.a,st.a,[D.a,R.a,x.a]),o._11(4608,ct.a,ct.a,[R.a,J.a,X.a,D.a,q.l]),o._11(4608,_t.a,_t.a,[D.a,R.a]),o._11(4608,L.a,L.a,[J.a,R.a]),o._11(5120,lt.a,lt.c,[lt.b]),o._11(4608,s.a,s.a,[]),o._11(4608,r.a,r.a,[]),o._11(4608,_.a,_.a,[]),o._11(4608,g.a,g.a,[]),o._11(4608,f.a,f.a,[l.d,h.a]),o._11(4608,v.a,v.a,[]),o._11(4608,b.a,b.a,[u.c,J.a,Z.a,g.a,lt.a,v.a]),o._11(512,W.b,W.b,[]),o._11(512,o.k,ut.a,[]),o._11(256,R.b,{mode:"md",tabsHideOnSubPages:!0,scrollPadding:!1,scrollAssist:!0,autoFocusAssist:!1,preloadModules:!0},[]),o._11(1024,dt.a,dt.b,[]),o._11(1024,J.a,J.b,[i.b,dt.a,o.u]),o._11(1024,R.a,R.c,[R.b,J.a]),o._11(512,X.a,X.a,[J.a]),o._11(512,ht.a,ht.a,[]),o._11(512,D.a,D.a,[R.a,J.a,[2,ht.a]]),o._11(512,q.l,q.l,[D.a]),o._11(256,nt.a,{links:[{loadChildren:"../pages/encuesta/encuesta.module.ngfactory#EncuestaPageModuleNgFactory",name:"EncuestaPage",segment:"encuesta",priority:"low",defaultHistory:[]},{loadChildren:"../pages/dashboard/dashboard.module.ngfactory#DashboardPageModuleNgFactory",name:"DashboardPage",segment:"dashboard",priority:"low",defaultHistory:[]},{loadChildren:"../pages/camara/camara.module.ngfactory#CamaraPageModuleNgFactory",name:"CamaraPage",segment:"camara",priority:"low",defaultHistory:[]},{loadChildren:"../pages/login/login.module.ngfactory#LoginPageModuleNgFactory",name:"LoginPage",segment:"login",priority:"low",defaultHistory:[]},{loadChildren:"../pages/tab-general/tab-general.module.ngfactory#TabGeneralPageModuleNgFactory",name:"TabGeneralPage",segment:"tab-general",priority:"low",defaultHistory:[]},{loadChildren:"../pages/recomendacion/recomendacion.module.ngfactory#RecomendacionPageModuleNgFactory",name:"RecomendacionPage",segment:"recomendacion",priority:"low",defaultHistory:[]},{loadChildren:"../pages/registro/registro.module.ngfactory#RegistroPageModuleNgFactory",name:"RegistroPage",segment:"registro",priority:"low",defaultHistory:[]}]},[]),o._11(512,o.h,o.h,[]),o._11(512,pt.a,pt.a,[o.h]),o._11(1024,it.b,it.c,[pt.a,o.o]),o._11(1024,o.c,function(t,e,a,n,o,r,s,c,_,l,u,d,h){return[i.s(t),gt.a(e),Q.b(a,n),ct.b(o,r,s,c,_),it.d(l,u,d,h)]},[[2,o.t],R.a,J.a,X.a,R.a,J.a,X.a,D.a,q.l,R.a,nt.a,it.b,o.u]),o._11(512,o.d,o.d,[[2,o.c]]),o._11(131584,o.f,o.f,[o.u,o.T,o.o,o.k,o.i,o.d]),o._11(512,o.e,o.e,[o.f]),o._11(512,i.a,i.a,[[3,i.a]]),o._11(512,G.m,G.m,[]),o._11(512,G.e,G.e,[]),o._11(512,G.l,G.l,[]),o._11(512,at.a,at.a,[]),o._11(512,l.e,l.e,[]),o._11(512,u.e,u.e,[]),o._11(512,u.d,u.d,[]),o._11(512,m.a,m.a,[]),o._11(512,d.a,d.a,[]),o._11(512,h.b,h.b,[]),o._11(512,p.b,p.b,[]),o._11(512,y.a,y.a,[]),o._11(512,k,k,[]),o._11(256,u.l,"XSRF-TOKEN",[]),o._11(256,u.m,"X-XSRF-TOKEN",[]),o._11(256,d.c,{apiKey:"AIzaSyA0mnZssyqo5PieFUUBTipdU9VB9uh0Xvo",authDomain:"my-first-project-7d187.firebaseapp.com",databaseURL:"https://my-first-project-7d187.firebaseio.com",projectId:"my-first-project-7d187",storageBucket:"my-first-project-7d187.appspot.com",messagingSenderId:"323245343363"},[]),o._11(256,d.d,void 0,[]),o._11(256,w.a,c,[]),o._11(256,W.a,"/",[]),o._11(256,lt.b,null,[])])});Object(o.M)(),Object(i.j)().bootstrapModuleFactory(ft)},97:function(t,e,a){"use strict";a.d(e,"a",function(){return n});a(4);var n=function(){return function(){this.questions=[],this.recommendations=[],this.usuario=[],this.resultadosPreguntas=[],this.client_id="",this.client_secret="",this.access_token="",this.resultadoPreguntas={ae:0,d:0,rp:0,q:""}}}()}},[284]);
+webpackJsonp([8],{
+
+/***/ 136:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var GlobalProvider = (function () {
+    function GlobalProvider() {
+        this.questions = [];
+        this.recommendations = [];
+        this.usuario = [];
+        this.resultadosPreguntas = [];
+        this.client_id = "";
+        this.client_secret = "";
+        this.access_token = "";
+        this.resultadoPreguntas = { ae: 0, d: 0, rp: 0, q: '' };
+    }
+    GlobalProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], GlobalProvider);
+    return GlobalProvider;
+}());
+
+//# sourceMappingURL=global.js.map
+
+/***/ }),
+
+/***/ 149:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 149;
+
+/***/ }),
+
+/***/ 191:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/camara/camara.module": [
+		466,
+		7
+	],
+	"../pages/consentimiento/consentimiento.module": [
+		465,
+		6
+	],
+	"../pages/dashboard/dashboard.module": [
+		467,
+		0
+	],
+	"../pages/encuesta/encuesta.module": [
+		468,
+		5
+	],
+	"../pages/login/login.module": [
+		469,
+		1
+	],
+	"../pages/recomendacion/recomendacion.module": [
+		471,
+		4
+	],
+	"../pages/registro/registro.module": [
+		470,
+		3
+	],
+	"../pages/tab-general/tab-general.module": [
+		472,
+		2
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 191;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 289:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatabaseProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(243);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var DatabaseProvider = (function () {
+    function DatabaseProvider(http, db) {
+        this.http = http;
+        this.db = db;
+    }
+    /* CONSULTA PREGUNTAS */
+    DatabaseProvider.prototype.preguntas = function () {
+        return this.db.list('/questions').valueChanges();
+    };
+    /* FIN CONSULTA PREGUNTAS */
+    /* CONSULTA RECOMENDACIONES */
+    DatabaseProvider.prototype.recomendaciones = function () {
+        return this.db.list('/recommendations').valueChanges();
+    };
+    /* FIN CONSULTA RECOMENDACIONES */
+    /* CONSULTA ESPECIALIDADES */
+    DatabaseProvider.prototype.especialidades = function () {
+        return this.db.list('/especialidades').valueChanges();
+    };
+    /* FIN CONSULTA ESPECIALIDADES */
+    /* CONSULTA REGISTRO USUARIO BD */
+    DatabaseProvider.prototype.registroUsuarioBD = function (usuario) {
+        this.db.database.ref('/usuarios/' + usuario.id).set(usuario);
+    };
+    /* FIN CONSULTA REGISTRO USUARIO BD */
+    /* CONSULTA USUARIO REGISTRADO BD */
+    DatabaseProvider.prototype.usuarioRegistradoBD = function (idUsuario) {
+        return this.db.object('/usuarios/' + idUsuario).valueChanges();
+    };
+    /* FIN CONSULTA USUARIO REGISTRADO BD */
+    /* CONSULTA GUARDAR ULTIMA ENCUESTA */
+    DatabaseProvider.prototype.guardarUltimaEncuesta = function (idUsuario, resultadoPreguntas) {
+        this.db.database.ref('/usuarios/' + idUsuario + '/ultimaencuesta').set(resultadoPreguntas);
+    };
+    /* FIN CONSULTA GUARDAR ULTIMA ENCUESTA */
+    /* CONSULTA GUARDAR ENCUESTA */
+    DatabaseProvider.prototype.guardarEncuesta = function (idUsuario, resultadoPreguntas) {
+        this.db.database.ref('/encuestas').push({ id: idUsuario, encuesta: resultadoPreguntas });
+    };
+    /* FIN CONSULTA GUARDAR ENCUESTA */
+    /* CONSULTA ULTIMAS 3 ENCUESTA */
+    DatabaseProvider.prototype.encuestasUltimas = function (idUsuario) {
+        return this.db.list('/encuestas/', function (encuestas) { return encuestas.orderByChild('id').equalTo(idUsuario).limitToLast(3); }).valueChanges();
+    };
+    /* FIN CONSULTA ULTIMAS 3 ENCUESTA */
+    /* CONSULTA GUARDAR ENCUESTA */
+    DatabaseProvider.prototype.guardarEstadoAnimo = function (idUsuario, estadoAnimo) {
+        this.db.database.ref('/estadosanimo').push({ id: idUsuario, estado: estadoAnimo });
+    };
+    /* FIN CONSULTA GUARDAR ENCUESTA */
+    /* CONSULTA FOTO CLOUD VIDION */
+    DatabaseProvider.prototype.consultaFoto = function (foto) {
+        var body = {
+            "requests": [
+                {
+                    "image": {
+                        "content": foto
+                    },
+                    "features": [
+                        {
+                            "type": "FACE_DETECTION"
+                        }
+                    ]
+                }
+            ]
+        };
+        return this.http.post('https://vision.googleapis.com/v1/images:annotate?key=' + 'AIzaSyB_mk7PfJCwuHBCw51P4juWqxBJdwVEG5o', body);
+    };
+    /* FIN CONSULTA FOTO CLOUD VIDION */
+    /* CONSULTA DEL CLIENT_ID DEL USUARIO */
+    DatabaseProvider.prototype.idClientFitBit = function (idUsuario) {
+        return this.db.list('/fbclient/', function (referencia) { return referencia.orderByChild('id').equalTo(idUsuario); }).valueChanges();
+    };
+    DatabaseProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]])
+    ], DatabaseProvider);
+    return DatabaseProvider;
+}());
+
+//# sourceMappingURL=database.js.map
+
+/***/ }),
+
+/***/ 291:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FitBitServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(434);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__auth_config__ = __webpack_require__(435);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_fbsleep__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__global_global__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_storage__ = __webpack_require__(245);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_sqlite__ = __webpack_require__(140);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+ // HttpHeaders ha sido importado para poder usar en el request.
+
+ // Haceo un mapeo del post y/o get
+
+
+
+ // Pre- cargala application
+ // Model, para instanciar la información del usuario
+
+
+
+
+var FitBitServiceProvider = (function () {
+    function FitBitServiceProvider(http, // get y post
+        platform, alertCtrl, _global, _storage, _sqlite) {
+        // localStorage.setItem('fb_access_token','');
+        var _this = this;
+        this.http = http;
+        this.platform = platform;
+        this.alertCtrl = alertCtrl;
+        this._global = _global;
+        this._storage = _storage;
+        this._sqlite = _sqlite;
+        this._renew_token = false;
+        this._access_token = "";
+        // ID CLIENT FOR ACCESS PERSONAL DATA IN FITBIT
+        this._client_id = "";
+        this._client_secret = "";
+        this._iCron = null;
+        this._timeCron = 5000;
+        // Series de tiempo activity heart
+        this._tsAHI = [];
+        this._stayWaiting = false;
+        this._db = null;
+        this._id = 0;
+        this._db_client_id = "";
+        this._fbsleep = new __WEBPACK_IMPORTED_MODULE_7__models_fbsleep__["a" /* FBSleep */](0, "", "", 0);
+        this.errorObserver = null;
+        this.error = __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"].create(function (observer) {
+            _this.errorObserver = observer;
+        });
+        this._set_time_cron();
+        this._oninit();
+    }
+    FitBitServiceProvider.prototype._oninit = function () {
+        var _self = this;
+        this._createDatabase().then(function (success) {
+            // _self.showAlert(JSON.stringify(success));
+            var _token = "";
+            if (success[0] !== undefined) {
+                _self._id = success[0]["id"];
+                _self._db_client_id = success[0]["client_id"];
+                if (_self._db_client_id == _self._global.client_id) {
+                    _token = success[0]["token"];
+                }
+                else {
+                    _token = "";
+                }
+            }
+            _self._client_id = _self._db_client_id;
+            _self._storage.set('fb_client_id', _self._db_client_id);
+            _self._access_token = _token;
+            _self._storage.set('fb_access_token', _token);
+            _self._load_vars();
+            _self._valuate_error({ error: '', status: 1020 });
+            //return Promise.resolve( {error:'',status:1020} );
+        }, function (error) {
+            _self.showAlert(JSON.stringify(error));
+            // Promise.reject( error );
+        });
+    };
+    FitBitServiceProvider.prototype._createDatabase = function () {
+        var _self = this;
+        return this._sqlite.create({
+            name: 'eburnout.db',
+            location: 'default' // the location field is required
+        })
+            .then(function (db) {
+            _self._setDatabase(db);
+            _self._createTable();
+            return _self._getClient();
+        })
+            .catch(function (error) {
+            _self.showAlert(JSON.stringify(error));
+            Promise.reject(error);
+        });
+    };
+    FitBitServiceProvider.prototype._setDatabase = function (db) {
+        if (this._db === null) {
+            this._db = db;
+        }
+    };
+    FitBitServiceProvider.prototype._create = function (token) {
+        var sql = 'INSERT INTO client(token,client_id) VALUES(?,?)';
+        return this._db.executeSql(sql, [token, this._client_id]);
+    };
+    /*private _deleteTable(){
+        let sql = 'DROP TABLE IF EXISTS client';
+        return this._db.executeSql(sql, []);
+    }*/
+    FitBitServiceProvider.prototype._createTable = function () {
+        var sql = 'CREATE TABLE IF NOT EXISTS client(id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT,client_id VARCHAR(6))';
+        return this._db.executeSql(sql, []);
+    };
+    /*private _delete(id: any){
+        let sql = 'DELETE FROM client WHERE id=?';
+        return this._db.executeSql(sql, [id]);
+    }*/
+    FitBitServiceProvider.prototype._getClient = function () {
+        var sql = 'SELECT * FROM client WHERE id=1';
+        return this._db.executeSql(sql, [])
+            .then(function (response) {
+            var arrClient = [];
+            for (var index = 0; index < response.rows.length; index++) {
+                arrClient.push(response.rows.item(index));
+            }
+            return Promise.resolve(arrClient);
+        })
+            .catch(function (error) { return Promise.reject(error); });
+    };
+    FitBitServiceProvider.prototype._update = function (token, id) {
+        var sql = 'UPDATE client SET token=?, client_id=? WHERE id=?';
+        return this._db.executeSql(sql, [token, this._client_id, id]);
+    };
+    FitBitServiceProvider.prototype._set_time_cron = function () {
+        var t_in_ms = __WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].rate_limit <= 0 ? 150 : __WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].rate_limit;
+        // Time in miliseconds to cronjob
+        this._timeCron = t_in_ms / 60 * 60 * 1000;
+    };
+    FitBitServiceProvider.prototype._load_vars = function () {
+        var _self = this;
+        if (this._global.client_id) {
+            _self._storage.get('fb_client_id').then(function (client_id) {
+                _self._client_id = client_id ? client_id : "";
+            });
+            _self._storage.get('fb_access_token').then(function (val) {
+                _self._access_token = val ? val : "";
+            });
+            _self._storage.get('fb_client_secret').then(function (client_secret) {
+                _self._client_secret = client_secret ? client_secret : "";
+            });
+        }
+    };
+    FitBitServiceProvider.prototype._get_url = function () {
+        __WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].body.client_id = this._global.client_id;
+        return __WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].url + "?" + Object.keys(__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].body).map(function (k) {
+            return encodeURIComponent(k) + '=' + encodeURIComponent(__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].body[k]);
+        }).join('&');
+    };
+    FitBitServiceProvider.prototype.get_strDate = function (sDate, sFormat) {
+        if (sDate === void 0) { sDate = ""; }
+        if (sFormat === void 0) { sFormat = ""; }
+        var date;
+        if (sDate.length) {
+            date = new Date(sDate);
+        }
+        else {
+            date = new Date();
+        }
+        var day = date.getDate() < 10 ? "0" + date.getDate().toString() : date.getDate().toString();
+        var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes().toString() : date.getMinutes().toString();
+        var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1).toString() : (date.getMonth() + 1).toString();
+        if (sFormat == "HH:mm:ss")
+            return date.getHours().toString() + ":" + minutes + ":" + date.getSeconds().toString();
+        else if (sFormat == "dd-mm-yyyy")
+            return day + "-" + month + "-" + date.getFullYear().toString();
+        else
+            return date.getFullYear().toString() + "-" + month + "-" + day;
+    };
+    FitBitServiceProvider.prototype._getAuthPermission = function () {
+        // Metodos observables, si pasa algo X, doy la promesa de regresar con algo.
+        var self = this;
+        return new Promise(function (resolve, reject) {
+            if (self._db_client_id == self._global.client_id) {
+                self._renew_token = false;
+            }
+            else {
+                self._renew_token = true;
+            }
+            var navigator_clean = self._renew_token ? ",clearsessioncache=yes,clearcache=yes" : "";
+            // self.showAlert("a renew => "+navigator_clean);
+            if (window.cordova != undefined) {
+                var browser_1 = window.cordova.InAppBrowser.open(self._get_url(), '_blank', 'location=no' + navigator_clean);
+                browser_1.addEventListener('loadstart', function (event) {
+                    if ((event.url).indexOf(__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].body.redirect_uri) === 0) {
+                        browser_1.removeEventListener('exit', function () { });
+                        browser_1.close();
+                        var responseParameters = (((event.url).split(__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].key_access_token)[1]).split("&")[0]).split('=')[1];
+                        var parsedResponse = {};
+                        var defaultError = { error: 'Problem authenticating with FitBit', status: 1010 };
+                        if (responseParameters !== undefined && responseParameters !== null) {
+                            parsedResponse[__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].key_access_token] = responseParameters;
+                            resolve(parsedResponse);
+                        }
+                        else {
+                            reject(defaultError);
+                        }
+                    }
+                });
+                browser_1.addEventListener('exit', function (event) {
+                    reject({ error: 'The FitBit authorization in flow was canceled', status: 1010 });
+                });
+            }
+            else {
+                window.open(self._get_url(), '_blank', 'location=no' + navigator_clean);
+                resolve({ "access_token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjVLOTkiLCJhdWQiOiIyMkNHODQiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJwcm8gcm51dCByc2xlIiwiZXhwIjoxNTE1MDc4MTQzLCJpYXQiOjE1MTQ5OTg2ODB9.j6YhSfy7123wFYVsF0b9PNKm8sVihjplrUV_r6kBXuE" });
+            }
+        });
+    };
+    FitBitServiceProvider.prototype._toAutorizate = function () {
+        var _this = this;
+        var self = this;
+        this._getAuthPermission().then(function (success) {
+            if (success[__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].key_access_token] !== undefined) {
+                self._access_token = success[__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].key_access_token];
+                self._renew_token = false;
+                self._client_id = self._global.client_id;
+                if (self._id) {
+                    self._update(self._access_token, self._id);
+                }
+                else {
+                    self._create(self._access_token);
+                }
+                self._client_secret = self._global.client_secret;
+                self._storage.set('fb_client_id', self._client_id);
+                self._storage.set('fb_client_secret', self._client_secret);
+                //localStorage.setItem('fb_access_token', self._access_token);
+                _this._global.access_token = self._access_token;
+                self._storage.set('fb_access_token', self._access_token);
+                self._valuate_error({ status: 1001 });
+            }
+        }, function (error) {
+            self.showAlert(JSON.stringify(error));
+            self._valuate_error(error);
+        });
+    };
+    FitBitServiceProvider.prototype.check_auth = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            _this._load_vars();
+            if (!_this._access_token.trim().length && _this.have_bracelet()) {
+                _this._toAutorizate();
+            }
+            else {
+                _this._valuate_error({ status: 1001 });
+            }
+        });
+    };
+    FitBitServiceProvider.prototype._valuate_error = function (error) {
+        this.errorObserver.next(error);
+        if (error.status != undefined) {
+            if (error.status == 400 || error.status == 401) {
+                // Authorization code invalid
+                this.toStopCron();
+                //localStorage.setItem('fb_access_token',null);
+                this._global.access_token = "";
+                this._storage.set('fb_access_token', "");
+                this._load_vars();
+                this._toAutorizate();
+            }
+            else if (error.status == 429) {
+                this._stayWaiting = true;
+            }
+            else if (error.status == 1002) {
+                this._stayWaiting = false;
+            }
+        }
+    };
+    FitBitServiceProvider.prototype.toStopCron = function () {
+        if (this._iCron) {
+            clearInterval(this._iCron);
+        }
+        this._iCron = null;
+    };
+    FitBitServiceProvider.prototype.toStartCron = function () {
+        if (this._iCron) {
+            this.toStopCron();
+        }
+        var self = this;
+        self._toCron();
+        this._iCron = setInterval(function () {
+            self._toCron();
+        }, self._timeCron);
+    };
+    FitBitServiceProvider.prototype._toCron = function () {
+        this._get_heart();
+    };
+    FitBitServiceProvider.prototype._get_authHeader = function () {
+        return {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Bearer ' + this._access_token
+        };
+    };
+    /*private _get_userData() {
+
+        var headers = new HttpHeaders(this._get_authHeader());
+        return this.http.get('https://api.fitbit.com/1/user/-/profile.json',
+            {headers: headers}).map( res => res );
+
+    }*/
+    FitBitServiceProvider.prototype._get_heart = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */](this._get_authHeader());
+        var _self = this;
+        this.http.get('https://api.fitbit.com/1/user/-/activities/heart/date/today/1d/1sec/time/00:00/23:59.json', { headers: headers })
+            .subscribe(function (timeSeries) {
+            if (_self._stayWaiting)
+                _self._valuate_error({ status: 1002 });
+            if (timeSeries['activities-heart-intraday'] !== undefined) {
+                _self._tsAHI = timeSeries['activities-heart-intraday'].dataset.map(function (measurement) {
+                    var a = {
+                        name: measurement.time,
+                        value: measurement.value
+                    };
+                    return a;
+                });
+            }
+            _self._get_sleep();
+        }, function (error) {
+            _self._valuate_error(error);
+        });
+    };
+    FitBitServiceProvider.prototype._get_sleep = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */](this._get_authHeader());
+        var _self = this;
+        var dNow = this.get_strDate();
+        this.http.get('https://api.fitbit.com/1.2/user/-/sleep/date/' + dNow + '/' + dNow + '.json', { headers: headers }).subscribe(function (sleeps) {
+            if (_self._stayWaiting)
+                _self._valuate_error({ status: 1002 });
+            if (sleeps["sleep"] !== undefined) {
+                if (sleeps["sleep"][0] !== undefined) {
+                    var len = sleeps["sleep"].length - 1;
+                    _self._fbsleep.starttime = sleeps["sleep"][len]["startTime"];
+                    _self._fbsleep.endtime = sleeps["sleep"][len]["endTime"];
+                    _self._fbsleep.timeinbed = 0;
+                    _self._fbsleep.minutesawake = 0;
+                    for (var i = len; i >= 0; i--) {
+                        _self._fbsleep.timeinbed += sleeps["sleep"][i]["timeInBed"];
+                        _self._fbsleep.minutesawake += sleeps["sleep"][i]["minutesAwake"];
+                    }
+                }
+                else {
+                    _self._fbsleep.timeinbed = sleeps["sleep"]["timeInBed"];
+                    _self._fbsleep.starttime = sleeps["sleep"]["startTime"];
+                    _self._fbsleep.endtime = sleeps["sleep"]["endTime"];
+                    _self._fbsleep.minutesawake = sleeps["sleep"]["minutesAwake"];
+                }
+            }
+            // _self._get_steps();
+        }, function (error) {
+            _self._valuate_error(error);
+        });
+    };
+    /*
+        private _get_steps() {
+    
+            var headers = new HttpHeaders(this._get_authHeader());
+            var _self = this;
+    
+            var dNow = this.get_strDate();
+    
+            this.http.get('https://api.fitbit.com/1/user/-/activities/date/'+dNow+'.json',
+                {headers: headers}).subscribe((steps) => {
+    
+                    if(_self._stayWaiting) _self._valuate_error({status:1002});
+    
+                    if(steps["summary"] !== undefined){
+                        _self._fbsteps.steps = steps["summary"]["steps"];
+                        _self._fbsteps.steps_goal = steps["goals"]["steps"];
+                        _self._fbsteps.distance_goal =steps["goals"]["distance"];
+                        for (var i = steps["summary"]["distances"].length - 1; i >= 0; i--) {
+                            if(steps["summary"]["distances"][i]["activity"]=="total")
+                                _self._fbsteps.distance = steps["summary"]["distances"][i]["distance"];
+                        }
+                        _self._fbsteps.calories_goal =steps["goals"]["caloriesOut"];
+                        _self._fbsteps.calories =steps["summary"]["caloriesOut"];
+                        _self._fbsteps.minutes =steps["summary"]["veryActiveMinutes"];
+                        _self._fbsteps.minutes_goal =steps["goals"]["activeMinutes"];
+    
+                         console.log( _self._fbsteps  );
+                    }
+    
+                }, (error: HttpErrorResponse ) => {
+                   _self._valuate_error(error);
+                });
+    
+        }
+    
+    
+    
+    
+        public steps(): FBSteps {
+    
+            return this._fbsteps;
+    
+    
+        }*/
+    FitBitServiceProvider.prototype.sleep = function () {
+        return this._fbsleep;
+    };
+    FitBitServiceProvider.prototype.tsAHI = function () {
+        return this._tsAHI;
+    };
+    FitBitServiceProvider.prototype.showAlert = function (message) {
+        var alert = this.alertCtrl.create({
+            title: 'FitBit',
+            subTitle: message,
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    FitBitServiceProvider.prototype.have_bracelet = function () {
+        return this._global.client_id == "" || this._global.client_id == null || this._global.client_id == undefined
+            ? false
+            : true;
+    };
+    FitBitServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])() // Decorator
+        ,
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["i" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_8__global_global__["a" /* GlobalProvider */],
+            __WEBPACK_IMPORTED_MODULE_9__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_10__ionic_native_sqlite__["a" /* SQLite */]])
+    ], FitBitServiceProvider);
+    return FitBitServiceProvider;
+}());
+
+//# sourceMappingURL=fit-bit-service.js.map
+
+/***/ }),
+
+/***/ 293:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(313);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 313:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export firebaseConfig */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(461);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_common_http__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angularfire2__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2_database__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angularfire2_auth__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_global_global__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_database_database__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_fit_bit_service_fit_bit_service__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ngx_echarts__ = __webpack_require__(462);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_storage__ = __webpack_require__(245);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_sqlite__ = __webpack_require__(140);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var firebaseConfig = {
+    apiKey: "AIzaSyA0mnZssyqo5PieFUUBTipdU9VB9uh0Xvo",
+    authDomain: "my-first-project-7d187.firebaseapp.com",
+    databaseURL: "https://my-first-project-7d187.firebaseio.com",
+    projectId: "my-first-project-7d187",
+    storageBucket: "my-first-project-7d187.appspot.com",
+    messagingSenderId: "323245343363"
+};
+var AppModule = (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {
+                    mode: 'md',
+                    tabsHideOnSubPages: true,
+                    scrollPadding: false,
+                    scrollAssist: true,
+                    autoFocusAssist: false,
+                    preloadModules: true
+                }, {
+                    links: [
+                        { loadChildren: '../pages/consentimiento/consentimiento.module#ConsentimientoPageModule', name: 'ConsentimientoPage', segment: 'consentimiento', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/camara/camara.module#CamaraPageModule', name: 'CamaraPage', segment: 'camara', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/encuesta/encuesta.module#EncuestaPageModule', name: 'EncuestaPage', segment: 'encuesta', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/registro/registro.module#RegistroPageModule', name: 'RegistroPage', segment: 'registro', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recomendacion/recomendacion.module#RecomendacionPageModule', name: 'RecomendacionPage', segment: 'recomendacion', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tab-general/tab-general.module#TabGeneralPageModule', name: 'TabGeneralPage', segment: 'tab-general', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_7__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_8__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_15_ngx_echarts__["a" /* NgxEchartsModule */],
+                __WEBPACK_IMPORTED_MODULE_9_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
+                __WEBPACK_IMPORTED_MODULE_10_angularfire2_database__["b" /* AngularFireDatabaseModule */],
+                __WEBPACK_IMPORTED_MODULE_11_angularfire2_auth__["b" /* AngularFireAuthModule */],
+                __WEBPACK_IMPORTED_MODULE_16__ionic_storage__["a" /* IonicStorageModule */].forRoot()
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_12__providers_global_global__["a" /* GlobalProvider */],
+                __WEBPACK_IMPORTED_MODULE_13__providers_database_database__["a" /* DatabaseProvider */],
+                __WEBPACK_IMPORTED_MODULE_14__providers_fit_bit_service_fit_bit_service__["a" /* FitBitServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_17__ionic_native_sqlite__["a" /* SQLite */]
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 435:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthConfig; });
+var AuthConfig = {
+    // Url of the Identity Provider
+    url: "https://www.fitbit.com/oauth2/authorize",
+    // allow request per hour 
+    rate_limit: 150,
+    key_access_token: "access_token",
+    body: {
+        // URL to redirect the user to after login
+        redirect_uri: "https://localhost:8100/eburnout_callback",
+        // The client id
+        client_id: "",
+        // set the scope for the permissions the client should request
+        scope: "activity nutrition heartrate location nutrition profile settings sleep social weight",
+        // set the response type, token or code
+        response_type: "token",
+        expires_in: "600" // "604800"
+    }
+};
+//# sourceMappingURL=auth-config.js.map
+
+/***/ }),
+
+/***/ 436:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FBSleep; });
+// del tiempo en cama se le puede restart el tiempo awake para presentar en pantalla
+var FBSleep = (function () {
+    function FBSleep(timeinbed, starttime, endtime, minutesawake) {
+        this.timeinbed = timeinbed;
+        this.starttime = starttime;
+        this.endtime = endtime;
+        this.minutesawake = minutesawake;
+    }
+    return FBSleep;
+}());
+
+//# sourceMappingURL=fbsleep.js.map
+
+/***/ }),
+
+/***/ 461:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(287);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var MyApp = (function () {
+    function MyApp(platform, statusBar, splashScreen) {
+        this.rootPage = 'LoginPage';
+        platform.ready().then(function () {
+            statusBar.styleDefault();
+            splashScreen.hide();
+        });
+    }
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/myApp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/myApp/src/app/app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    ], MyApp);
+    return MyApp;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ })
+
+},[293]);
+//# sourceMappingURL=main.js.map
