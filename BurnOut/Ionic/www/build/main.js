@@ -61,35 +61,31 @@ webpackEmptyAsyncContext.id = 149;
 var map = {
 	"../pages/camara/camara.module": [
 		466,
-		7
-	],
-	"../pages/consentimiento/consentimiento.module": [
-		465,
-		6
+		16
 	],
 	"../pages/dashboard/dashboard.module": [
 		467,
-		0
+		10
 	],
 	"../pages/encuesta/encuesta.module": [
 		468,
-		5
+		15
 	],
 	"../pages/login/login.module": [
 		469,
-		1
+		11
 	],
 	"../pages/recomendacion/recomendacion.module": [
 		471,
-		4
+		14
 	],
 	"../pages/registro/registro.module": [
 		470,
-		3
+		13
 	],
 	"../pages/tab-general/tab-general.module": [
 		472,
-		2
+		12
 	]
 };
 function webpackAsyncContext(req) {
@@ -882,9 +878,10 @@ var MyApp = (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/myApp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/myApp/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _c || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=app.component.js.map
