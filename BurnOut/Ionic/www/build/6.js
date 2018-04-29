@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 465:
+/***/ 466:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConsentimientoPageModule", function() { return ConsentimientoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__consentimiento__ = __webpack_require__(753);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__consentimiento__ = __webpack_require__(754);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,13 +38,14 @@ var ConsentimientoPageModule = (function () {
 
 /***/ }),
 
-/***/ 753:
+/***/ 754:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConsentimientoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_global_global__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global_global__ = __webpack_require__(136);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,13 +57,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+// Componente de tipo pagina @IonicPage
 var ConsentimientoPage = (function () {
-    function ConsentimientoPage(global) {
+    // Este es el main
+    function ConsentimientoPage(global, NavControl) {
         this.global = global;
+        this.NavControl = NavControl;
         this.mensaje = "";
+        // Main  
     }
-    ConsentimientoPage.prototype.ionViewDidLoad = function () {
-    };
+    // Cuando entras a la  pag / modulo y antes de cargarla. 
     ConsentimientoPage.prototype.ionViewWillEnter = function () {
         // metodo que vamos a usar para mostrar msg de texto enb panatalla
         this.ponerTextoConsentimiento();
@@ -110,14 +115,20 @@ var ConsentimientoPage = (function () {
         this.mensaje += 'pulsera de actividad al investigador.';
         this.mensaje += 'El estudio no implica ningún riesgo para la salud física o mental de los participantes.';
     };
+    ConsentimientoPage.prototype.ToAccept = function () {
+        if (this.checkAcepto) {
+            this.NavControl.setRoot("TabGeneralPage");
+        }
+    };
     ConsentimientoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-consentimiento',template:/*ion-inline-start:"/myApp/src/pages/consentimiento/consentimiento.html"*/'<!-->HEADER</!-->\n<ion-header>\n  <div>\n    <ion-navbar>\n      <ion-title>Consentimiento informado</ion-title>\n    </ion-navbar>\n  </div>\n</ion-header>\n<!-->FIN HEADER</!-->\n\n<!-->CONTENT</!-->\n<ion-content padding>\n    <p class="texto">- {{ mensaje }}</p>\n</ion-content>\n\n<!-->FIN CONTENT</!-->'/*ion-inline-end:"/myApp/src/pages/consentimiento/consentimiento.html"*/,
-        }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__providers_global_global__["a" /* GlobalProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_global_global__["a" /* GlobalProvider */]) === "function" && _a || Object])
+            selector: 'page-consentimiento',template:/*ion-inline-start:"/myApp/src/pages/consentimiento/consentimiento.html"*/'<!-->HEADER</!-->\n<ion-header>\n  <div>\n    <ion-navbar>\n      <ion-title>Consentimiento informado</ion-title>\n    </ion-navbar>\n  </div>\n</ion-header>\n<!-->FIN HEADER</!-->\n\n<!-->CONTENT</!-->\n<ion-content padding>\n    <p class="texto">- {{ mensaje }}</p>\n    <br>\n    <ion-label> Acepto los términos</ion-label>\n    <ion-checkbox [(ngModel)]= "checkAcepto"> </ion-checkbox>\n    <!-- Manda a Dashboard-->\n\n    <button ion-button block (click)="ToAccept()" [disabled]="!checkAcepto" > Siguiente </button>\n\n</ion-content>\n\n<!-->FIN CONTENT</!-->'/*ion-inline-end:"/myApp/src/pages/consentimiento/consentimiento.html"*/,
+        })
+        // Export va como modulo, parecido a Var global
+        ,
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_global_global__["a" /* GlobalProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], ConsentimientoPage);
     return ConsentimientoPage;
-    var _a;
 }());
 
 //# sourceMappingURL=consentimiento.js.map

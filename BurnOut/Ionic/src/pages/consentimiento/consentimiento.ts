@@ -1,26 +1,26 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { GlobalProvider } from '../../providers/global/global';
 
 
-
+// Componente de tipo pagina @IonicPage
 @IonicPage()
 @Component({
   selector: 'page-consentimiento',
   templateUrl: 'consentimiento.html',
 })
+
+// Export va como modulo, parecido a Var global
 export class ConsentimientoPage {
   mensaje:string = "";
+  checkAcepto;
 
-
-  constructor(public global: GlobalProvider) {
-    
+  // Este es el main
+  constructor(public global: GlobalProvider, public NavControl:NavController) {
+  // Main  
   }
-
-  ionViewDidLoad() {
-
-  }
-
+  
+// Cuando entras a la  pag / modulo y antes de cargarla. 
   ionViewWillEnter() {
     // metodo que vamos a usar para mostrar msg de texto enb panatalla
     this.ponerTextoConsentimiento();
@@ -66,11 +66,13 @@ export class ConsentimientoPage {
     this.mensaje += 'será anónimo.';
     this.mensaje += 'En cualquier momento los participantes pueden abandonar el estudio, devolviendo la';
     this.mensaje += 'pulsera de actividad al investigador.';
-    this.mensaje += 'El estudio no implica ningún riesgo para la salud física o mental de los participantes.';
-   
-    
+    this.mensaje += 'El estudio no implica ningún riesgo para la salud física o mental de los participantes.';    
   }
 
-
+  ToAccept(){
+      if(this.checkAcepto){
+        this.NavControl.setRoot("TabGeneralPage");
+      }
+  }
 
 }

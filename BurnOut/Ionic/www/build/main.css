@@ -30736,6 +30736,40 @@ page-camara .btn-der.activated {
   box-shadow: inherit;
 }
 
+page-consentimiento .icono {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 7em;
+}
+
+page-consentimiento .titulo {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #DE3831;
+  margin-bottom: 32px;
+}
+
+page-consentimiento .titulo-texto {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #DE3831;
+}
+
+page-consentimiento .texto {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: justify;
+}
+
 page-dashboard .col-flecha {
   display: -webkit-box;
   display: -webkit-flex;

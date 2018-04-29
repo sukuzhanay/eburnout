@@ -11,6 +11,13 @@
 <!-->CONTENT</!-->
 <ion-content padding>
     <p class="texto">- {{ mensaje }}</p>
+    <br>
+    <ion-label> Acepto los términos</ion-label>
+    <ion-checkbox [(ngModel)]= "checkAcepto"> </ion-checkbox>
+    <!-- Manda a Dashboard-->
+
+    <button ion-button block (click)="ToAccept()" [disabled]="!checkAcepto" > Siguiente </button>
+
 </ion-content>
 
 <!-->FIN CONTENT</!-->
