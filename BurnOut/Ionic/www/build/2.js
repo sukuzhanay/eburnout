@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 1103:
+/***/ 1097:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24,7 +24,6 @@ var TabGeneralPage = (function () {
         this.navParams = navParams;
         this.dashboardRoot = 'DashboardPage';
         this.encuestaRoot = 'EncuestaPage';
-        this.camaraRoot = 'CamaraPage';
         this.recomendacionRoot = 'RecomendacionPage';
         this.primeraVez = this.navParams.get('primeraVez');
     }
@@ -37,7 +36,7 @@ var TabGeneralPage = (function () {
     ], TabGeneralPage.prototype, "tabRef", void 0);
     TabGeneralPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tab-general',template:/*ion-inline-start:"/myApp/src/pages/tab-general/tab-general.html"*/'<ion-tabs #tab>\n  <ion-tab [root]="dashboardRoot" tabTitle="Dashboard" tabIcon="apps"></ion-tab>\n  <ion-tab [root]="encuestaRoot" tabTitle="Encuesta" tabIcon="list-box"></ion-tab>\n  <ion-tab [root]="camaraRoot" tabTitle="Camara" tabIcon="camera"></ion-tab>\n  <ion-tab [root]="recomendacionRoot" tabTitle="Recomendación" tabIcon="speedometer"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/myApp/src/pages/tab-general/tab-general.html"*/
+            selector: 'page-tab-general',template:/*ion-inline-start:"/myApp/src/pages/tab-general/tab-general.html"*/'<ion-tabs #tab>\n  <ion-tab [root]="dashboardRoot" tabTitle="Dashboard" tabIcon="apps"></ion-tab>\n  <ion-tab [root]="encuestaRoot" tabTitle="Encuesta" tabIcon="list-box"></ion-tab>\n  <ion-tab [root]="recomendacionRoot" tabTitle="Recomendación" tabIcon="speedometer"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/myApp/src/pages/tab-general/tab-general.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
     ], TabGeneralPage);
@@ -48,7 +47,7 @@ var TabGeneralPage = (function () {
 
 /***/ }),
 
-/***/ 472:
+/***/ 470:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56,7 +55,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabGeneralPageModule", function() { return TabGeneralPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tab_general__ = __webpack_require__(1103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tab_general__ = __webpack_require__(1097);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
