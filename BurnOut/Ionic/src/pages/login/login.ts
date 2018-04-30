@@ -189,7 +189,7 @@ export class LoginPage {
                   this.global.client_id = llavesFitBit["client_id"];
                   this.global.client_secret = llavesFitBit["client_secret"];
                 }
-                this.navCtrl.setRoot('ConsentimientoPage');
+                this.navCtrl.setRoot('TabGeneralPage');
                 this.loading.dismiss();
               }
 			  

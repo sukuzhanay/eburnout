@@ -110,7 +110,7 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
         var toStop = false;
         var toReestart = false;
         var tostart = false;
-        this._fts.error.subscribe((error) => {
+/*        this._fts.error.subscribe((error) => {
             toStop = false;
             toReestart = false;
             tostart = false;
@@ -164,7 +164,7 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
             if (tostart){
                 _self._toauthfitbit();
             }
-        });
+        });*/
 
     }
 

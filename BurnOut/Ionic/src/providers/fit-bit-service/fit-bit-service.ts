@@ -58,14 +58,14 @@ export class FitBitServiceProvider {
     private _id : number = 0;
     private _db_client_id : string = "";
 
-	constructor(
-		public http: HttpClient, // get y post
+    constructor(
+        public http: HttpClient, // get y post
         private platform: Platform,
         public alertCtrl: AlertController,
         private _global: GlobalProvider,
         private _storage: Storage,
         private _sqlite: SQLite
-		) {
+        ) {
 
 // localStorage.setItem('fb_access_token','');
         
@@ -73,10 +73,10 @@ export class FitBitServiceProvider {
 
 
 
-        this.errorObserver = null;
+        /*this.errorObserver = null;
         this.error = Observable.create(observer => {
             this.errorObserver = observer;
-        });
+        });*/
 
 
         this._set_time_cron();
@@ -85,17 +85,17 @@ export class FitBitServiceProvider {
         this._oninit();
 
 
-  	}
+      }
 
     public  _oninit(){
         var _self = this;
-         this._createDatabase().then((success) => {
+         //this._createDatabase().then((success) => {
 
             // _self.showAlert(JSON.stringify(success));
             
             var _token = "";
 
-            if(success[0] !== undefined){
+            /*if(success[0] !== undefined){
 
                 _self._id = success[0]["id"];
                 _self._db_client_id = success[0]["client_id"];
@@ -105,27 +105,29 @@ export class FitBitServiceProvider {
                     _token = "";
                 }
 
-            }
+            }*/
 
-            _self._client_id = _self._db_client_id;
-            _self._storage.set('fb_client_id', _self._db_client_id);
+
+
+            _self._client_id = this._global.client_id; // _self._db_client_id;
+            _self._storage.set('fb_client_id', this._global.client_id ); //_self._db_client_id);
 
             _self._access_token = _token;
             _self._storage.set('fb_access_token', _token);
 
             _self._load_vars();
                     
-            _self._valuate_error({error:'',status:1020});
+            //_self._valuate_error({error:'',status:1020});
 
             //return Promise.resolve( {error:'',status:1020} );
 
-        }, (error) => {
+        /*}, (error) => {
             _self.showAlert(JSON.stringify(error));
             // Promise.reject( error );
-        });
+        });*/
     }
 
-    private _createDatabase(){
+    /*private _createDatabase(){
         var _self = this;
         return this._sqlite.create({
               name: 'eburnout.db',
@@ -152,24 +154,24 @@ export class FitBitServiceProvider {
     private _create(token:any){
         let sql = 'INSERT INTO client(token,client_id) VALUES(?,?)';
         return this._db.executeSql(sql, [token,this._client_id]);
-    }
+    }*/
 
     /*private _deleteTable(){
         let sql = 'DROP TABLE IF EXISTS client';
         return this._db.executeSql(sql, []);
     }*/
 
-    private _createTable(){
+    /*private _createTable(){
         let sql = 'CREATE TABLE IF NOT EXISTS client(id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT,client_id VARCHAR(6))';
         return this._db.executeSql(sql, []);
-    }
+    }*/
 
     /*private _delete(id: any){
         let sql = 'DELETE FROM client WHERE id=?';
         return this._db.executeSql(sql, [id]);
     }*/
 
-    private _getClient(){
+    /*private _getClient(){
 
         let sql = 'SELECT * FROM client WHERE id=1';
         return this._db.executeSql(sql, [])
@@ -181,13 +183,13 @@ export class FitBitServiceProvider {
                 return Promise.resolve( arrClient );
             })
             .catch(error => Promise.reject( error ) );
-			
+            
     }
 
     private _update(token,id: any){
         let sql = 'UPDATE client SET token=?, client_id=? WHERE id=?';
         return this._db.executeSql(sql, [token, this._client_id, id]);
-    }
+    }*/
 
 
 
@@ -265,10 +267,10 @@ export class FitBitServiceProvider {
     }
 
 
-  	private _getAuthPermission(): Promise<any> {
+      private _getAuthPermission(): Promise<any> {
       // Metodos observables, si pasa algo X, doy la promesa de regresar con algo.
-
-  		var self = this;
+self.showAlert("to allow");
+          var self = this;
 
         return new Promise(function (resolve, reject) {
 
@@ -329,7 +331,7 @@ export class FitBitServiceProvider {
 
         var self = this;
 
-    	this._getAuthPermission().then((success) => {
+        this._getAuthPermission().then((success) => {
 
             if(success[AuthConfig.key_access_token] !== undefined ){
 
@@ -338,11 +340,11 @@ export class FitBitServiceProvider {
                     self._renew_token = false;
                     self._client_id = self._global.client_id;
 
-                    if(self._id){
+                    /*if(self._id){
                         self._update(self._access_token,self._id);
                     }else{
                         self._create(self._access_token);
-                    }
+                    }*/
 
                     self._client_secret = self._global.client_secret;
                     self._storage.set('fb_client_id', self._client_id);
@@ -387,7 +389,7 @@ export class FitBitServiceProvider {
 
 
     private _valuate_error(error){
-        
+
         this.errorObserver.next(error);
 
         if(error.status != undefined){

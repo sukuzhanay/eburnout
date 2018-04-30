@@ -14,6 +14,7 @@ export class TabGeneralPage {
   dashboardRoot = 'DashboardPage';
   encuestaRoot = 'EncuestaPage';
   recomendacionRoot = 'RecomendacionPage';
+  profileRoot = 'ProfilePage';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.primeraVez = this.navParams.get('primeraVez');
