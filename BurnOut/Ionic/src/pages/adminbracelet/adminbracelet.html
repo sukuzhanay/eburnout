@@ -1,0 +1,38 @@
+<ion-header>
+
+	<ion-navbar>
+
+        <ion-buttons start>
+            <button ion-button (click)="returnParent()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+
+    	<ion-title>Pulseras</ion-title>
+
+    	<ion-buttons end>
+      		<button navPush="AddbraceletPage" ion-button>
+        		<ion-icon name="add"></ion-icon>
+      		</button>
+    	</ion-buttons>
+  
+  	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-list>
+    	<ion-list-header>
+      		Pulseras
+    	</ion-list-header>
+ 
+    	<ion-item *ngFor="let bracelet of braceletList | async" 
+    		detail-push navPush="EditbraceletPage" [navParams]="{bracelet:bracelet}">
+      		{{bracelet.code}}
+    	</ion-item>
+  
+  </ion-list>
+
+</ion-content>

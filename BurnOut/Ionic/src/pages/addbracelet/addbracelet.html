@@ -1,0 +1,47 @@
+<ion-header>
+ 
+    <ion-navbar>
+        <ion-title>Agregar Pulsera</ion-title>
+    </ion-navbar>
+ 
+</ion-header>
+ 
+<ion-content padding>
+ 
+
+    <ion-list no-lines>
+ 
+        <form [formGroup]="ctrls_add">
+     
+            <ion-item>
+                <ion-label floating>Código</ion-label>
+                <ion-input formControlName="code" type="text" [class.invalid]="!ctrls_add.controls.code.valid && (ctrls_add.controls.code.dirty)">
+                    
+                </ion-input>
+            </ion-item>
+            <ion-item *ngIf="!ctrls_add.controls.code.valid  && (ctrls_add.controls.code.dirty)">
+                <p>No se permiten caractéres especiales, sólo letras y números.</p>
+            </ion-item>
+
+     
+            <ion-item>
+                <ion-label floating>Serial</ion-label>
+                <ion-input formControlName="serial" type="text" [class.invalid]="!ctrls_add.controls.serial.valid && (ctrls_add.controls.serial.dirty)">
+
+                </ion-input>
+            </ion-item>
+     
+           <ion-item *ngIf="!ctrls_add.controls.serial.valid  && (ctrls_add.controls.serial.dirty)">
+                <p>No se permiten caractéres especiales, sólo letras y números.</p>
+            </ion-item>
+     
+        </form>
+ 
+    </ion-list>
+
+    <button ion-button full color="primary" (click)="addBracelet(bracelet)">Guardar</button>
+    <button ion-button full color="secondary" (click)="toListBracelet()">Cancelar</button>
+ 
+    
+    
+</ion-content>

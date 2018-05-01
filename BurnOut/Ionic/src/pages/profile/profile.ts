@@ -26,6 +26,10 @@ export class ProfilePage {
 		this.navCtrl.setRoot('PersonaldataPage');
 	}
 
+	toAdminBracelet(){
+		this.navCtrl.setRoot('AdminbraceletPage');
+	}
+
 	
   
 

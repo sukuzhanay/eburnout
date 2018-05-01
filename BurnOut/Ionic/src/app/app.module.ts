@@ -20,6 +20,10 @@ import { IonicStorageModule } from '@ionic/storage';
 import { SQLite } from '@ionic-native/sqlite';
 
 
+
+import { BraceletListService } from '../providers/database/bracelet-list.service';
+
+
 export const firebaseConfig = {
   apiKey: "AIzaSyA0mnZssyqo5PieFUUBTipdU9VB9uh0Xvo",
   authDomain: "my-first-project-7d187.firebaseapp.com",
@@ -63,7 +67,8 @@ export const firebaseConfig = {
     GlobalProvider,
     DatabaseProvider,
     FitBitServiceProvider,
-    SQLite
+    SQLite,
+    BraceletListService
   ]
 })
 export class AppModule { }
