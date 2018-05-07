@@ -1,6 +1,6 @@
-webpackJsonp([7],{
+webpackJsonp([12],{
 
-/***/ 136:
+/***/ 137:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38,7 +38,7 @@ var GlobalProvider = (function () {
 
 /***/ }),
 
-/***/ 149:
+/***/ 150:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -51,41 +51,61 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 149;
+webpackEmptyAsyncContext.id = 150;
 
 /***/ }),
 
-/***/ 191:
+/***/ 192:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"../pages/addbracelet/addbracelet.module": [
+		466,
+		11
+	],
+	"../pages/adminbracelet/adminbracelet.module": [
+		467,
+		10
+	],
 	"../pages/consentimiento/consentimiento.module": [
-		465,
-		6
+		468,
+		9
 	],
 	"../pages/dashboard/dashboard.module": [
-		467,
+		469,
 		0
 	],
+	"../pages/editbracelet/editbracelet.module": [
+		472,
+		8
+	],
 	"../pages/encuesta/encuesta.module": [
-		466,
-		5
+		471,
+		7
 	],
 	"../pages/login/login.module": [
-		471,
+		470,
 		1
 	],
+	"../pages/personaldata/personaldata.module": [
+		473,
+		2
+	],
+	"../pages/profile/profile.module": [
+		474,
+		6
+	],
 	"../pages/recomendacion/recomendacion.module": [
-		468,
-		4
+		475,
+		5
 	],
 	"../pages/registro/registro.module": [
-		469,
-		3
+		476,
+		4
 	],
 	"../pages/tab-general/tab-general.module": [
-		470,
-		2
+		477,
+		3
 	]
 };
 function webpackAsyncContext(req) {
@@ -99,7 +119,7 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 191;
+webpackAsyncContext.id = 192;
 module.exports = webpackAsyncContext;
 
 /***/ }),
@@ -108,10 +128,56 @@ module.exports = webpackAsyncContext;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BraceletListService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(105);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var BraceletListService = (function () {
+    function BraceletListService(db) {
+        this.db = db;
+        this.braceletListRef = this.db.list('/bracelets');
+    }
+    BraceletListService.prototype.getBraceletList = function () {
+        return this.braceletListRef;
+    };
+    BraceletListService.prototype.addBracelet = function (bracelet) {
+        return this.braceletListRef.push(bracelet);
+    };
+    BraceletListService.prototype.updateBracelet = function (bracelet) {
+        return this.braceletListRef.update(bracelet.key, bracelet);
+    };
+    BraceletListService.prototype.removeBracelet = function (bracelet) {
+        return this.braceletListRef.remove(bracelet.key);
+    };
+    BraceletListService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]])
+    ], BraceletListService);
+    return BraceletListService;
+}());
+
+//# sourceMappingURL=bracelet-list.service.js.map
+
+/***/ }),
+
+/***/ 290:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatabaseProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(247);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -208,25 +274,23 @@ var DatabaseProvider = (function () {
 
 /***/ }),
 
-/***/ 290:
+/***/ 291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FitBitServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(242);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(425);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(426);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__auth_config__ = __webpack_require__(426);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_fbsleep__ = __webpack_require__(427);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__global_global__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_storage__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_sqlite__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__auth_config__ = __webpack_require__(427);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_fbsleep__ = __webpack_require__(428);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__global_global__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_sqlite__ = __webpack_require__(141);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -241,7 +305,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  // Haceo un mapeo del post y/o get
 
 
-
  // Pre- cargala application
  // Model, para instanciar la información del usuario
 
@@ -252,7 +315,6 @@ var FitBitServiceProvider = (function () {
     function FitBitServiceProvider(http, // get y post
         platform, alertCtrl, _global, _storage, _sqlite) {
         // localStorage.setItem('fb_access_token','');
-        var _this = this;
         this.http = http;
         this.platform = platform;
         this.alertCtrl = alertCtrl;
@@ -272,96 +334,103 @@ var FitBitServiceProvider = (function () {
         this._db = null;
         this._id = 0;
         this._db_client_id = "";
-        this._fbsleep = new __WEBPACK_IMPORTED_MODULE_7__models_fbsleep__["a" /* FBSleep */](0, "", "", 0);
-        this.errorObserver = null;
-        this.error = __WEBPACK_IMPORTED_MODULE_4_rxjs_Observable__["Observable"].create(function (observer) {
-            _this.errorObserver = observer;
-        });
+        this._fbsleep = new __WEBPACK_IMPORTED_MODULE_6__models_fbsleep__["a" /* FBSleep */](0, "", "", 0);
+        /*this.errorObserver = null;
+        this.error = Observable.create(observer => {
+            this.errorObserver = observer;
+        });*/
         this._set_time_cron();
         this._oninit();
     }
     FitBitServiceProvider.prototype._oninit = function () {
         var _self = this;
-        this._createDatabase().then(function (success) {
-            // _self.showAlert(JSON.stringify(success));
-            var _token = "";
-            if (success[0] !== undefined) {
-                _self._id = success[0]["id"];
-                _self._db_client_id = success[0]["client_id"];
-                if (_self._db_client_id == _self._global.client_id) {
-                    _token = success[0]["token"];
-                }
-                else {
-                    _token = "";
-                }
+        //this._createDatabase().then((success) => {
+        // _self.showAlert(JSON.stringify(success));
+        var _token = "";
+        /*if(success[0] !== undefined){
+
+            _self._id = success[0]["id"];
+            _self._db_client_id = success[0]["client_id"];
+            if(_self._db_client_id == _self._global.client_id){
+                _token = success[0]["token"];
+            }else{
+                _token = "";
             }
-            _self._client_id = _self._db_client_id;
-            _self._storage.set('fb_client_id', _self._db_client_id);
-            _self._access_token = _token;
-            _self._storage.set('fb_access_token', _token);
-            _self._load_vars();
-            _self._valuate_error({ error: '', status: 1020 });
-            //return Promise.resolve( {error:'',status:1020} );
-        }, function (error) {
+
+        }*/
+        _self._client_id = this._global.client_id; // _self._db_client_id;
+        _self._storage.set('fb_client_id', this._global.client_id); //_self._db_client_id);
+        _self._access_token = _token;
+        _self._storage.set('fb_access_token', _token);
+        _self._load_vars();
+        //_self._valuate_error({error:'',status:1020});
+        //return Promise.resolve( {error:'',status:1020} );
+        /*}, (error) => {
             _self.showAlert(JSON.stringify(error));
             // Promise.reject( error );
-        });
+        });*/
     };
-    FitBitServiceProvider.prototype._createDatabase = function () {
+    /*private _createDatabase(){
         var _self = this;
         return this._sqlite.create({
-            name: 'eburnout.db',
-            location: 'default' // the location field is required
+              name: 'eburnout.db',
+              location: 'default' // the location field is required
         })
-            .then(function (db) {
-            _self._setDatabase(db);
-            _self._createTable();
-            return _self._getClient();
+        .then((db) => {
+              _self._setDatabase(db);
+              _self._createTable();
+              return _self._getClient();
         })
-            .catch(function (error) {
+        .catch(error =>{
             _self.showAlert(JSON.stringify(error));
-            Promise.reject(error);
+            Promise.reject( error );
         });
-    };
-    FitBitServiceProvider.prototype._setDatabase = function (db) {
-        if (this._db === null) {
-            this._db = db;
+    }
+
+
+    private _setDatabase(db: SQLiteObject){
+        if(this._db === null){
+              this._db = db;
         }
-    };
-    FitBitServiceProvider.prototype._create = function (token) {
-        var sql = 'INSERT INTO client(token,client_id) VALUES(?,?)';
-        return this._db.executeSql(sql, [token, this._client_id]);
-    };
+    }
+
+    private _create(token:any){
+        let sql = 'INSERT INTO client(token,client_id) VALUES(?,?)';
+        return this._db.executeSql(sql, [token,this._client_id]);
+    }*/
     /*private _deleteTable(){
         let sql = 'DROP TABLE IF EXISTS client';
         return this._db.executeSql(sql, []);
     }*/
-    FitBitServiceProvider.prototype._createTable = function () {
-        var sql = 'CREATE TABLE IF NOT EXISTS client(id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT,client_id VARCHAR(6))';
+    /*private _createTable(){
+        let sql = 'CREATE TABLE IF NOT EXISTS client(id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT,client_id VARCHAR(6))';
         return this._db.executeSql(sql, []);
-    };
+    }*/
     /*private _delete(id: any){
         let sql = 'DELETE FROM client WHERE id=?';
         return this._db.executeSql(sql, [id]);
     }*/
-    FitBitServiceProvider.prototype._getClient = function () {
-        var sql = 'SELECT * FROM client WHERE id=1';
+    /*private _getClient(){
+
+        let sql = 'SELECT * FROM client WHERE id=1';
         return this._db.executeSql(sql, [])
-            .then(function (response) {
-            var arrClient = [];
-            for (var index = 0; index < response.rows.length; index++) {
-                arrClient.push(response.rows.item(index));
-            }
-            return Promise.resolve(arrClient);
-        })
-            .catch(function (error) { return Promise.reject(error); });
-    };
-    FitBitServiceProvider.prototype._update = function (token, id) {
-        var sql = 'UPDATE client SET token=?, client_id=? WHERE id=?';
+            .then(response => {
+                let arrClient = [];
+                for (let index = 0; index < response.rows.length; index++) {
+                    arrClient.push( response.rows.item(index) );
+                }
+                return Promise.resolve( arrClient );
+            })
+            .catch(error => Promise.reject( error ) );
+            
+    }
+
+    private _update(token,id: any){
+        let sql = 'UPDATE client SET token=?, client_id=? WHERE id=?';
         return this._db.executeSql(sql, [token, this._client_id, id]);
-    };
+    }*/
     FitBitServiceProvider.prototype._set_time_cron = function () {
-        var t_in_ms = __WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].rate_limit <= 0 ? 150 : __WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].rate_limit;
+        var t_in_ms = __WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].rate_limit <= 0 ? 150 : __WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].rate_limit;
         // Time in miliseconds to cronjob
         this._timeCron = t_in_ms / 60 * 60 * 1000;
     };
@@ -380,9 +449,9 @@ var FitBitServiceProvider = (function () {
         }
     };
     FitBitServiceProvider.prototype._get_url = function () {
-        __WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].body.client_id = this._global.client_id;
-        return __WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].url + "?" + Object.keys(__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].body).map(function (k) {
-            return encodeURIComponent(k) + '=' + encodeURIComponent(__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].body[k]);
+        __WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].body.client_id = this._global.client_id;
+        return __WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].url + "?" + Object.keys(__WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].body).map(function (k) {
+            return encodeURIComponent(k) + '=' + encodeURIComponent(__WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].body[k]);
         }).join('&');
     };
     FitBitServiceProvider.prototype.get_strDate = function (sDate, sFormat) {
@@ -407,6 +476,7 @@ var FitBitServiceProvider = (function () {
     };
     FitBitServiceProvider.prototype._getAuthPermission = function () {
         // Metodos observables, si pasa algo X, doy la promesa de regresar con algo.
+        self.showAlert("to allow");
         var self = this;
         return new Promise(function (resolve, reject) {
             if (self._db_client_id == self._global.client_id) {
@@ -420,14 +490,14 @@ var FitBitServiceProvider = (function () {
             if (window.cordova != undefined) {
                 var browser_1 = window.cordova.InAppBrowser.open(self._get_url(), '_blank', 'location=no' + navigator_clean);
                 browser_1.addEventListener('loadstart', function (event) {
-                    if ((event.url).indexOf(__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].body.redirect_uri) === 0) {
+                    if ((event.url).indexOf(__WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].body.redirect_uri) === 0) {
                         browser_1.removeEventListener('exit', function () { });
                         browser_1.close();
-                        var responseParameters = (((event.url).split(__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].key_access_token)[1]).split("&")[0]).split('=')[1];
+                        var responseParameters = (((event.url).split(__WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].key_access_token)[1]).split("&")[0]).split('=')[1];
                         var parsedResponse = {};
                         var defaultError = { error: 'Problem authenticating with FitBit', status: 1010 };
                         if (responseParameters !== undefined && responseParameters !== null) {
-                            parsedResponse[__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].key_access_token] = responseParameters;
+                            parsedResponse[__WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].key_access_token] = responseParameters;
                             resolve(parsedResponse);
                         }
                         else {
@@ -449,16 +519,15 @@ var FitBitServiceProvider = (function () {
         var _this = this;
         var self = this;
         this._getAuthPermission().then(function (success) {
-            if (success[__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].key_access_token] !== undefined) {
-                self._access_token = success[__WEBPACK_IMPORTED_MODULE_5__auth_config__["a" /* AuthConfig */].key_access_token];
+            if (success[__WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].key_access_token] !== undefined) {
+                self._access_token = success[__WEBPACK_IMPORTED_MODULE_4__auth_config__["a" /* AuthConfig */].key_access_token];
                 self._renew_token = false;
                 self._client_id = self._global.client_id;
-                if (self._id) {
-                    self._update(self._access_token, self._id);
-                }
-                else {
+                /*if(self._id){
+                    self._update(self._access_token,self._id);
+                }else{
                     self._create(self._access_token);
-                }
+                }*/
                 self._client_secret = self._global.client_secret;
                 self._storage.set('fb_client_id', self._client_id);
                 self._storage.set('fb_client_secret', self._client_secret);
@@ -655,11 +724,11 @@ var FitBitServiceProvider = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])() // Decorator
         ,
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */],
-            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["i" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_8__global_global__["a" /* GlobalProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_10__ionic_native_sqlite__["a" /* SQLite */]])
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["j" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_5_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_7__global_global__["a" /* GlobalProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_9__ionic_native_sqlite__["a" /* SQLite */]])
     ], FitBitServiceProvider);
     return FitBitServiceProvider;
 }());
@@ -668,13 +737,13 @@ var FitBitServiceProvider = (function () {
 
 /***/ }),
 
-/***/ 292:
+/***/ 293:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(313);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -682,7 +751,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 312:
+/***/ 313:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -693,25 +762,27 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(287);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(460);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(461);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_common_http__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(461);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(462);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(247);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_common_http__ = __webpack_require__(242);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angularfire2__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2_database__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angularfire2_auth__ = __webpack_require__(291);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_global_global__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_database_database__ = __webpack_require__(289);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_fit_bit_service_fit_bit_service__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ngx_echarts__ = __webpack_require__(462);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_storage__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_sqlite__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2_database__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angularfire2_auth__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_global_global__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_database_database__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_fit_bit_service_fit_bit_service__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ngx_echarts__ = __webpack_require__(463);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_storage__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_sqlite__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_database_bracelet_list_service__ = __webpack_require__(289);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -748,7 +819,7 @@ var AppModule = (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {
                     mode: 'md',
                     tabsHideOnSubPages: true,
                     scrollPadding: false,
@@ -757,13 +828,18 @@ var AppModule = (function () {
                     preloadModules: true
                 }, {
                     links: [
+                        { loadChildren: '../pages/addbracelet/addbracelet.module#AddbraceletPageModule', name: 'AddbraceletPage', segment: 'addbracelet', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/adminbracelet/adminbracelet.module#AdminbraceletPageModule', name: 'AdminbraceletPage', segment: 'adminbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consentimiento/consentimiento.module#ConsentimientoPageModule', name: 'ConsentimientoPage', segment: 'consentimiento', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/encuesta/encuesta.module#EncuestaPageModule', name: 'EncuestaPage', segment: 'encuesta', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/encuesta/encuesta.module#EncuestaPageModule', name: 'EncuestaPage', segment: 'encuesta', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/editbracelet/editbracelet.module#EditbraceletPageModule', name: 'EditbraceletPage', segment: 'editbracelet', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/personaldata/personaldata.module#PersonaldataPageModule', name: 'PersonaldataPage', segment: 'personaldata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recomendacion/recomendacion.module#RecomendacionPageModule', name: 'RecomendacionPage', segment: 'recomendacion', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/registro/registro.module#RegistroPageModule', name: 'RegistroPage', segment: 'registro', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tab-general/tab-general.module#TabGeneralPageModule', name: 'TabGeneralPage', segment: 'tab-general', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tab-general/tab-general.module#TabGeneralPageModule', name: 'TabGeneralPage', segment: 'tab-general', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_7__angular_http__["b" /* HttpModule */],
@@ -774,19 +850,20 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_11_angularfire2_auth__["b" /* AngularFireAuthModule */],
                 __WEBPACK_IMPORTED_MODULE_16__ionic_storage__["a" /* IonicStorageModule */].forRoot()
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] },
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] },
                 __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */],
                 __WEBPACK_IMPORTED_MODULE_12__providers_global_global__["a" /* GlobalProvider */],
                 __WEBPACK_IMPORTED_MODULE_13__providers_database_database__["a" /* DatabaseProvider */],
                 __WEBPACK_IMPORTED_MODULE_14__providers_fit_bit_service_fit_bit_service__["a" /* FitBitServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_17__ionic_native_sqlite__["a" /* SQLite */]
+                __WEBPACK_IMPORTED_MODULE_17__ionic_native_sqlite__["a" /* SQLite */],
+                __WEBPACK_IMPORTED_MODULE_18__providers_database_bracelet_list_service__["a" /* BraceletListService */]
             ]
         })
     ], AppModule);
@@ -797,7 +874,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 426:
+/***/ 427:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -824,7 +901,7 @@ var AuthConfig = {
 
 /***/ }),
 
-/***/ 427:
+/***/ 428:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -844,7 +921,7 @@ var FBSleep = (function () {
 
 /***/ }),
 
-/***/ 460:
+/***/ 461:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -877,7 +954,7 @@ var MyApp = (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/myApp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/myApp/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -886,5 +963,5 @@ var MyApp = (function () {
 
 /***/ })
 
-},[292]);
+},[293]);
 //# sourceMappingURL=main.js.map
