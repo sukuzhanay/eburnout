@@ -30,7 +30,14 @@ export class ProfilePage {
 		this.navCtrl.setRoot('AdminbraceletPage');
 	}
 
+
+	toUserBracelet(){
+		this.navCtrl.setRoot('UserbraceletPage');
+	}
+
 	
+
+
   
 
 }

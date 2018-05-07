@@ -23,6 +23,8 @@ import { SQLite } from '@ionic-native/sqlite';
 
 import { BraceletListService } from '../providers/database/bracelet-list.service';
 
+import { ProfileListService } from '../providers/database/profile-list.service';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyA0mnZssyqo5PieFUUBTipdU9VB9uh0Xvo",
@@ -68,7 +70,8 @@ export const firebaseConfig = {
     DatabaseProvider,
     FitBitServiceProvider,
     SQLite,
-    BraceletListService
+    BraceletListService,
+    ProfileListService
   ]
 })
 export class AppModule { }
