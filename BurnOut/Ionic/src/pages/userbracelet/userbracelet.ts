@@ -2,14 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Events } from 'ionic-angular';
 
 import { Observable } from 'rxjs/Observable';
-/*import { Profile } from './../../models/profile.model';*/
+import { User } from './../../models/user.model';
 import { ProfileListService } from '../../providers/database/profile-list.service';
-
-import { Bracelet } from './../../models/bracelet.model';
-import { BraceletListService } from '../../providers/database/bracelet-list.service';
-
-import {AngularFireAuth} from 'angularfire2/auth';
-import { AngularFireDatabase } from 'angularfire2/database';
 
 
 @IonicPage()
@@ -20,32 +14,18 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class UserbraceletPage {
 
 
-	//profileList: Observable<Profile[]>;
-    braceletList: Observable<Bracelet[]>;
-
-    profileData: Observable<any>;
-
+	profileList: Observable<User[]>;
+    
 
 	constructor(
 		public navCtrl: NavController,
 		public navParams: NavParams,
 		public evts: Events,
-        private braceletListService: BraceletListService,
-        private profileListService: ProfileListService,
-        private fire:AngularFireAuth,private db :AngularFireDatabase
+        private profileListService: ProfileListService
 	){
 
 
-		/*this.profileList = this.profileListService.getProfileList()
-            .snapshotChanges()
-            .map(
-                changes => {
-                            return changes.map(c => ({
-                                    key: c.payload.key, ...c.payload.val()
-                            }))
-                }
-        );*/
-        this.braceletList = this.braceletListService.getBraceletList()
+		this.profileList = this.profileListService.getProfileList()
             .snapshotChanges()
             .map(
                 changes => {
@@ -54,34 +34,7 @@ export class UserbraceletPage {
                             }))
                 }
         );
-
-
-        /*this.profileData = this.fire.authState.subscribe(auth =>{
-            this.db.list(`profile/`).snapshotChanges()
-            .map(
-                changes => {
-                            return changes.map(c => ({
-                                    key: c.payload.key, ...c.payload.val()
-                            }))
-                }
-            );
-     
-        });*/
-
-
-        this.profileData = this.profileListService.getProfileList()
-            .snapshotChanges()
-            .map(
-                changes => {
-                            return changes.map(c => ({
-                                    key: c.payload.key, ...c.payload.val()
-                            }))
-                }
-        );
-
-        console.log(this.profileData);
         
-
 	}
 
 

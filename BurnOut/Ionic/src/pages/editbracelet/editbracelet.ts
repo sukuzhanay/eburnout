@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { AlertController } from 'ionic-angular';
 
 import { Bracelet } from './../../models/bracelet.model';
 import { BraceletListService } from '../../providers/database/bracelet-list.service';
@@ -24,7 +25,8 @@ export class EditbraceletPage {
     	public navCtrl: NavController,
     	public navParams: NavParams,
     	private braceletListService: BraceletListService,
-        public formBuilder: FormBuilder
+        public formBuilder: FormBuilder,
+        private alertCtrl: AlertController
     ) {
 
         this.ctrls_edit = this.formBuilder.group({
@@ -56,9 +58,31 @@ export class EditbraceletPage {
     }
 
     removeBracelet(bracelet: Bracelet) {
-        this.braceletListService.removeBracelet(bracelet).then(() => {
-        		this.navCtrl.setRoot('AdminbraceletPage');
+
+        var self = this;
+        let alert = this.alertCtrl.create({
+            title: 'Confirmar eliminación',
+            message: 'Deseas eliminar el registro?',
+            buttons: [
+                {
+                    text: 'No',
+                    role: 'cancelar'
+                },
+                {
+                    text: 'Sí',
+                    handler: () => {
+
+                        self.braceletListService.removeBracelet(bracelet).then(() => {
+                            self.navCtrl.setRoot('AdminbraceletPage');
+                        });
+                    }
+                }
+            ]
         });
+        
+        alert.present();
+
+        
     }
 
     toListBracelet() {

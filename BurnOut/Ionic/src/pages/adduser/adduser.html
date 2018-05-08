@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Agregar Usuario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+	<ion-list no-lines>
+ 
+        <form [formGroup]="ctrls_add">
+     
+            <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input formControlName="email" type="text" [class.invalid]="!ctrls_add.controls.email.valid && (ctrls_add.controls.email.dirty)">
+                    
+                </ion-input>
+            </ion-item>
+            <ion-item *ngIf="!ctrls_add.controls.email.valid  && (ctrls_add.controls.email.dirty)">
+                <p>Debe contener formato de email.</p>
+            </ion-item>
+
+     
+            <ion-item>
+                <ion-label floating>Nombre</ion-label>
+                <ion-input formControlName="name" type="text" [class.invalid]="!ctrls_add.controls.name.valid && (ctrls_add.controls.name.dirty)">
+
+                </ion-input>
+            </ion-item>
+     
+            <ion-item *ngIf="!ctrls_add.controls.name.valid  && (ctrls_add.controls.name.dirty)">
+                <p>No se permiten caractéres especiales, sólo letras y números.</p>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Seleccione la Pulsera</ion-label>
+                <ion-select formControlName="braceletsel" [class.invalid]="!ctrls_add.controls.braceletsel.valid">
+
+                    <ion-option *ngFor="let bracelet of braceletList | async" [value]="bracelet.code">
+                        {{ bracelet.code }}
+                    </ion-option>
+
+                </ion-select>
+            </ion-item> 
+
+            <ion-item *ngIf="!ctrls_add.controls.braceletsel.valid">
+                <p>La pulsera es requerida, debe seleccionar alguna.</p>
+            </ion-item>
+
+        </form>
+ 
+    </ion-list>
+
+    <button ion-button full color="primary" (click)="addUser(user)">Guardar</button>
+    <button ion-button full color="secondary" (click)="toListUser()">Cancelar</button>
+ 
+    
+
+</ion-content>

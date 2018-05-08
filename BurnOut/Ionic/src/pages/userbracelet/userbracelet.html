@@ -10,6 +10,12 @@
 
     	<ion-title>Usuarios</ion-title>
 
+      <ion-buttons end>
+          <button navPush="AdduserPage" ion-button>
+            <ion-icon name="add"></ion-icon>
+          </button>
+      </ion-buttons>
+
   	</ion-navbar>
 
 </ion-header>
@@ -22,9 +28,9 @@
           Usuarios
       </ion-list-header>
  
-      <ion-item *ngFor="let bracelet of braceletList | async" 
-        detail-push navPush="EditbraceletPage" [navParams]="{bracelet:bracelet}">
-          {{bracelet.code}}
+      <ion-item *ngFor="let profile of profileList | async" 
+        detail-push navPush="EdituserPage" [navParams]="{profile:profile}">
+          {{profile.email}}
       </ion-item>
   
   </ion-list>
