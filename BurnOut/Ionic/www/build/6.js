@@ -1,12 +1,12 @@
 webpackJsonp([6],{
 
-/***/ 1110:
+/***/ 1113:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecomendacionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_global_global__ = __webpack_require__(137);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,40 +18,96 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ProfilePage = (function () {
-    function ProfilePage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
+var RecomendacionPage = (function () {
+    function RecomendacionPage(global) {
+        this.global = global;
+        this.cansancioEmocional = 'Realiza la encuesta para saber tu recomendación';
+        this.despersonalizacion = 'Realiza la encuesta para saber tu recomendación';
+        this.realizacionPersonal = 'Realiza la encuesta para saber tu recomendación';
     }
-    ProfilePage.prototype.toPersonalData = function () {
-        this.navCtrl.setRoot('PersonaldataPage');
+    RecomendacionPage.prototype.ionViewDidLoad = function () {
     };
-    ProfilePage.prototype.toAdminBracelet = function () {
-        this.navCtrl.setRoot('AdminbraceletPage');
+    RecomendacionPage.prototype.ionViewWillEnter = function () {
+        this.calcularNivel();
     };
-    ProfilePage = __decorate([
+    RecomendacionPage.prototype.calcularNivel = function () {
+        var nivelAe = '';
+        var nivelD = '';
+        var nivelRp = '';
+        if (this.global.resultadoPreguntas.ae > 0 && this.global.resultadoPreguntas.ae <= 18) {
+            nivelAe = 'bajo';
+        }
+        else {
+            if (this.global.resultadoPreguntas.ae > 18 && this.global.resultadoPreguntas.ae <= 26) {
+                nivelAe = 'medio';
+            }
+            else {
+                if (this.global.resultadoPreguntas.ae > 26 && this.global.resultadoPreguntas.ae <= 54) {
+                    nivelAe = 'alto';
+                }
+            }
+        }
+        if (this.global.resultadoPreguntas.d > 0 && this.global.resultadoPreguntas.d <= 5) {
+            nivelD = 'bajo';
+        }
+        else {
+            if (this.global.resultadoPreguntas.d > 5 && this.global.resultadoPreguntas.d <= 9) {
+                nivelD = 'medio';
+            }
+            else {
+                if (this.global.resultadoPreguntas.d > 9 && this.global.resultadoPreguntas.d <= 30) {
+                    nivelD = 'alto';
+                }
+            }
+        }
+        if (this.global.resultadoPreguntas.rp > 0 && this.global.resultadoPreguntas.rp <= 33) {
+            nivelRp = 'bajo';
+        }
+        else {
+            if (this.global.resultadoPreguntas.rp > 33 && this.global.resultadoPreguntas.rp <= 39) {
+                nivelRp = 'medio';
+            }
+            else {
+                if (this.global.resultadoPreguntas.rp > 39 && this.global.resultadoPreguntas.rp <= 48) {
+                    nivelRp = 'alto';
+                }
+            }
+        }
+        for (var _i = 0, _a = this.global.recommendations; _i < _a.length; _i++) {
+            var recommendation = _a[_i];
+            if (recommendation.type == 'AE' && nivelAe == recommendation.nivel) {
+                this.cansancioEmocional = recommendation.recommendation;
+            }
+            if (recommendation.type == 'D' && nivelD == recommendation.nivel) {
+                this.despersonalizacion = recommendation.recommendation;
+            }
+            if (recommendation.type == 'RP' && nivelRp == recommendation.nivel) {
+                this.realizacionPersonal = recommendation.recommendation;
+            }
+        }
+    };
+    RecomendacionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"/myApp/src/pages/profile/profile.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Perfil\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    \n    <button ion-button icon-start (click)="toPersonalData()">\n  		<ion-icon name="logo-buffer"></ion-icon>\n  			Mis datos\n	</button>\n\n	<button ion-button icon-start (click)="toAdminBracelet()">\n  		<ion-icon name="finger-print"></ion-icon>\n  			Pulseras\n	</button>\n\n\n	\n\n</ion-content>'/*ion-inline-end:"/myApp/src/pages/profile/profile.html"*/,
+            selector: 'page-recomendacion',template:/*ion-inline-start:"/myApp/src/pages/recomendacion/recomendacion.html"*/'<!-->HEADER</!-->\n<ion-header>\n  <div>\n    <ion-navbar>\n      <ion-title>Recomendación</ion-title>\n    </ion-navbar>\n  </div>\n</ion-header>\n<!-->FIN HEADER</!-->\n\n<!-->CONTENT</!-->\n<ion-content padding>\n  <ion-icon name="pulse" class="icono"></ion-icon>\n  <p class="titulo">Te recomendamos mejorar</p>\n  <p class="titulo-texto">CANSANCIO EMOCIONAL:</p>\n  <p class="texto">- {{ cansancioEmocional }}</p>\n  <p class="titulo-texto">DESPERSONALIZACIÓN:</p>\n  <p class="texto">- {{ despersonalizacion }}</p>\n  <p class="titulo-texto">REALIZACIÓN PERSONAL:</p>\n  <p class="texto">- {{ realizacionPersonal }}</p>\n</ion-content>\n<!-->FIN CONTENT</!-->'/*ion-inline-end:"/myApp/src/pages/recomendacion/recomendacion.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], ProfilePage);
-    return ProfilePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_global_global__["a" /* GlobalProvider */]])
+    ], RecomendacionPage);
+    return RecomendacionPage;
 }());
 
-//# sourceMappingURL=profile.js.map
+//# sourceMappingURL=recomendacion.js.map
 
 /***/ }),
 
-/***/ 474:
+/***/ 476:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProfilePageModule", function() { return ProfilePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecomendacionPageModule", function() { return RecomendacionPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__profile__ = __webpack_require__(1110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__recomendacion__ = __webpack_require__(1113);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,23 +117,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ProfilePageModule = (function () {
-    function ProfilePageModule() {
+var RecomendacionPageModule = (function () {
+    function RecomendacionPageModule() {
     }
-    ProfilePageModule = __decorate([
+    RecomendacionPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_2__recomendacion__["a" /* RecomendacionPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__profile__["a" /* ProfilePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__recomendacion__["a" /* RecomendacionPage */]),
             ],
         })
-    ], ProfilePageModule);
-    return ProfilePageModule;
+    ], RecomendacionPageModule);
+    return RecomendacionPageModule;
 }());
 
-//# sourceMappingURL=profile.module.js.map
+//# sourceMappingURL=recomendacion.module.js.map
 
 /***/ })
 
