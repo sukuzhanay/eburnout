@@ -171,7 +171,13 @@ export class LoginPage {
               this.global.questions = resultados[0];
               this.global.recommendations = resultados[1];
               if (resultados[2] == null) {
-                this.navCtrl.setRoot('RegistroPage', { idUsuario: resultado.uid, email: this.formulario.email, password: this.formulario.password });
+
+                if(!resultados[5].length){
+                  this.navCtrl.setRoot('ConsentimientoPage',{email:this.formulario.email, to: "register", params:{ idUsuario: resultado.uid, email: this.formulario.email, password: this.formulario.password }});
+                }else{
+                  this.navCtrl.setRoot('RegistroPage', { idUsuario: resultado.uid, email: this.formulario.email, password: this.formulario.password });
+                }
+
                 this.loading.dismiss();
               } else {
                 /*var dato = this._cipher(this.formulario.password,'encrypt');

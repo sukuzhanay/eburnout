@@ -24,6 +24,9 @@ export class ConsentimientoPage {
         consent: 0,
     };
 
+    to:string="";
+    params={};
+
     // Este es el main
     constructor(
         public global: GlobalProvider,
@@ -43,6 +46,11 @@ export class ConsentimientoPage {
     ionViewDidLoad() {
 
         this.consent.email = this.navParams.get('email');
+        if( this.navParams.get('to') != undefined ){
+            this.to = this.navParams.get('to');
+            this.params = this.navParams.get('params');
+        }
+
 
     }
 
@@ -60,7 +68,11 @@ export class ConsentimientoPage {
 
             this.consentUserService.addConsent(this.consent).then(ref => {
             
-                this.NavControl.setRoot("TabGeneralPage");
+                if( this.to!= ""){
+                    this.NavControl.setRoot("RegistroPage", this.params);
+                }else{
+                    this.NavControl.setRoot("TabGeneralPage");
+                }
                 
             });
 
