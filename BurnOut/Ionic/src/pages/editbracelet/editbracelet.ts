@@ -18,6 +18,7 @@ export class EditbraceletPage {
 
     bracelet : Bracelet = {
         code: "",
+        client_secret: "",
         serial: ""
     };
 
@@ -30,7 +31,8 @@ export class EditbraceletPage {
     ) {
 
         this.ctrls_edit = this.formBuilder.group({
-            code: [this.bracelet.code, Validators.compose([Validators.maxLength(5), Validators.pattern('[a-zA-Z0-9 ]*'), Validators.required])],
+            code: [this.bracelet.code, Validators.compose([Validators.maxLength(10), Validators.pattern('[a-zA-Z0-9 ]*'), Validators.required])],
+            client_secret: ['', Validators.compose([Validators.maxLength(50), Validators.required])],
             serial: [this.bracelet.serial, Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
         });
         
@@ -40,6 +42,7 @@ export class EditbraceletPage {
         this.bracelet = this.navParams.get('bracelet');
 
         this.ctrls_edit.controls.code.setValue( this.bracelet.code );
+        this.ctrls_edit.controls.client_secret.setValue( this.bracelet.client_secret );
         this.ctrls_edit.controls.serial.setValue( this.bracelet.serial );
 
     }
@@ -48,6 +51,7 @@ export class EditbraceletPage {
 
          if(this.ctrls_edit.valid){
             this.bracelet.code = this.ctrls_edit.controls.code.value;
+            this.bracelet.client_secret = this.ctrls_edit.controls.client_secret.value;
             this.bracelet.serial = this.ctrls_edit.controls.serial.value;
 
             this.braceletListService.updateBracelet(bracelet).then(() => {

@@ -22,6 +22,16 @@
                 <p>No se permiten caractéres especiales, sólo letras y números.</p>
             </ion-item>
 
+            <ion-item>
+                <ion-label floating>Client Secret</ion-label>
+                <ion-input formControlName="client_secret" type="text" [class.invalid]="!ctrls_edit.controls.client_secret.valid && (ctrls_edit.controls.client_secret.dirty)">
+                    
+                </ion-input>
+            </ion-item>
+            <ion-item *ngIf="!ctrls_edit.controls.client_secret.valid  && (ctrls_edit.controls.client_secret.dirty)">
+                <p>Client Secret es requerido y no puede estar vacio.</p>
+            </ion-item>
+
 
             <ion-item>
                 <ion-label floating>Serial</ion-label>

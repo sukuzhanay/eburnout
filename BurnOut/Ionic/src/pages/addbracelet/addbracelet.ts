@@ -17,6 +17,7 @@ export class AddbraceletPage {
 
     bracelet : Bracelet = {
         code: "",
+        client_secret: "",
         serial: ""
     };
 
@@ -28,7 +29,8 @@ export class AddbraceletPage {
     ) {
 
         this.ctrls_add = this.formBuilder.group({
-            code: ['', Validators.compose([Validators.maxLength(5), Validators.pattern('[a-zA-Z0-9 ]*'), Validators.required])],
+            code: ['', Validators.compose([Validators.maxLength(10), Validators.pattern('[a-zA-Z0-9 ]*'), Validators.required])],
+            client_secret: ['', Validators.compose([Validators.maxLength(50), Validators.required])],
             serial: ['', Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
         });
 
@@ -38,6 +40,7 @@ export class AddbraceletPage {
 
         if(this.ctrls_add.valid){
             this.bracelet.code = this.ctrls_add.controls.code.value;
+            this.bracelet.client_secret = this.ctrls_add.controls.client_secret.value;
             this.bracelet.serial = this.ctrls_add.controls.serial.value;
 
             this.braceletListService.addBracelet(bracelet).then(ref => {

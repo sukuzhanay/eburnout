@@ -23,7 +23,8 @@ export class AdduserPage {
         email: "",
         name: "",
         bracelet_id: "",
-        code: ""
+        code: "",
+        client_secret: ""
     };
 
     braceletList: Observable<Bracelet[]>;
@@ -69,12 +70,14 @@ export class AdduserPage {
                 .subscribe(bracelets => {
 
                     this.user.bracelet_id = "";
+                    this.user.client_secret = "";
                     
                     for (var i = 0; i < bracelets.length; i++) {
                         for (var j = 0; j < bracelets[i].length; j++) {
                             if(bracelets[i][j].code == this.user.code){
                                 if(bracelets[i][j].key != undefined){
                                     this.user.bracelet_id = bracelets[i][j].key.toString();
+                                    this.user.client_secret = bracelets[i][j].client_secret.toString();
                                 }
                             }
                         }
