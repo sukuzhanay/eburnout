@@ -1,20 +1,20 @@
 webpackJsonp([1],{
 
-/***/ 1106:
+/***/ 1111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(294);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_global_global__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database_database__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database_database__ = __webpack_require__(291);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_combineLatest__ = __webpack_require__(1107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_combineLatest__ = __webpack_require__(1112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_combineLatest___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_combineLatest__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_sqlite__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_database_consent_user_service__ = __webpack_require__(292);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -33,15 +33,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var LoginPage = (function () {
-    function LoginPage(navCtrl, fireAuth, toastCtrl, global, database, loadingCtrl, _sqlite) {
+    function LoginPage(navCtrl, fireAuth, toastCtrl, global, database, loadingCtrl, consentUserService) {
         this.navCtrl = navCtrl;
         this.fireAuth = fireAuth;
         this.toastCtrl = toastCtrl;
         this.global = global;
         this.database = database;
         this.loadingCtrl = loadingCtrl;
-        this._sqlite = _sqlite;
-        this._db = null;
+        this.consentUserService = consentUserService;
         this._id = 0;
         this.formulario = { email: '', password: '' };
     }
@@ -160,7 +159,7 @@ var LoginPage = (function () {
         this.loading.present().then(function () {
             _this.fireAuth.auth.signInWithEmailAndPassword(_this.formulario.email, _this.formulario.password)
                 .then(function (resultado) {
-                _this.observable = __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__["Observable"].combineLatest(_this.database.preguntas(), _this.database.recomendaciones(), _this.database.usuarioRegistradoBD(resultado.uid), _this.database.encuestasUltimas(resultado.uid), _this.database.idClientFitBit(resultado.uid)).subscribe(function (resultados) {
+                _this.observable = __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__["Observable"].combineLatest(_this.database.preguntas(), _this.database.recomendaciones(), _this.database.usuarioRegistradoBD(resultado.uid), _this.database.encuestasUltimas(resultado.uid), _this.database.idClientFitBit(resultado.uid), _this.consentUserService.getConsentUser(_this.formulario.email)).subscribe(function (resultados) {
                     _this.global.questions = resultados[0];
                     _this.global.recommendations = resultados[1];
                     if (resultados[2] == null) {
@@ -186,7 +185,12 @@ var LoginPage = (function () {
                             _this.global.client_id = llavesFitBit["client_id"];
                             _this.global.client_secret = llavesFitBit["client_secret"];
                         }
-                        _this.navCtrl.setRoot('TabGeneralPage');
+                        if (!resultados[5].length) {
+                            _this.navCtrl.setRoot('ConsentimientoPage', { email: _this.formulario.email });
+                        }
+                        else {
+                            _this.navCtrl.setRoot('TabGeneralPage');
+                        }
                         _this.loading.dismiss();
                     }
                 });
@@ -218,29 +222,29 @@ var LoginPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"/myApp/src/pages/login/login.html"*/'<!-->HEADER</!-->\n<ion-header>\n  <div></div>\n</ion-header>\n<!-->FIN HEADER</!-->\n\n<!-->CONTENT</!-->\n<ion-content padding class="contenedor">\n  <img src="assets/imgs/logo.svg" class="logo" />\n  <form (ngSubmit)="login()" class="formulario" *ngIf="!_id">\n    <ion-item>\n      <ion-input type="email" [(ngModel)]="formulario.email" name="email" placeholder="Correo electrónico"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-input type="password" [(ngModel)]="formulario.password" name="password" placeholder="Contraseña"></ion-input>\n    </ion-item>\n    <button ion-button type="submit" class="btn-1">Entrar</button>\n  </form>\n</ion-content>\n<!-->FIN CONTENT</!-->'/*ion-inline-end:"/myApp/src/pages/login/login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_global_global__["a" /* GlobalProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_database_database__["a" /* DatabaseProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_sqlite__["a" /* SQLite */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__providers_global_global__["a" /* GlobalProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_global_global__["a" /* GlobalProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__providers_database_database__["a" /* DatabaseProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__providers_database_database__["a" /* DatabaseProvider */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_7__providers_database_consent_user_service__["a" /* ConsentUserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__providers_database_consent_user_service__["a" /* ConsentUserService */]) === "function" && _g || Object])
     ], LoginPage);
     return LoginPage;
+    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=login.js.map
 
 /***/ }),
 
-/***/ 1107:
+/***/ 1112:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Observable_1 = __webpack_require__(4);
-var combineLatest_1 = __webpack_require__(1108);
+var combineLatest_1 = __webpack_require__(1113);
 Observable_1.Observable.combineLatest = combineLatest_1.combineLatest;
 //# sourceMappingURL=combineLatest.js.map
 
 /***/ }),
 
-/***/ 1108:
+/***/ 1113:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -248,7 +252,7 @@ Observable_1.Observable.combineLatest = combineLatest_1.combineLatest;
 var isScheduler_1 = __webpack_require__(140);
 var isArray_1 = __webpack_require__(138);
 var ArrayObservable_1 = __webpack_require__(139);
-var combineLatest_1 = __webpack_require__(1109);
+var combineLatest_1 = __webpack_require__(1114);
 /* tslint:enable:max-line-length */
 /**
  * Combines multiple Observables to create an Observable whose values are
@@ -383,7 +387,7 @@ exports.combineLatest = combineLatest;
 
 /***/ }),
 
-/***/ 1109:
+/***/ 1114:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -541,15 +545,15 @@ exports.CombineLatestSubscriber = CombineLatestSubscriber;
 
 /***/ }),
 
-/***/ 473:
+/***/ 476:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(1106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(1111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

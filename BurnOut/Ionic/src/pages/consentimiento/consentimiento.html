@@ -10,13 +10,84 @@
 
 <!-->CONTENT</!-->
 <ion-content padding>
-    <p class="texto">- {{ mensaje }}</p>
-    <br>
-    <ion-label> Acepto los términos</ion-label>
-    <ion-checkbox [(ngModel)]= "checkAcepto"> </ion-checkbox>
-    <!-- Manda a Dashboard-->
+    <p class="texto">
+      El término «burnout» (o síndrome de quemarse por el trabajo) se define como la respuesta
+      inadecuada al estrés emocional crónico, que resulta de una discrepancia entre los ideales
+      individuales y la realidad de la vida ocupacional diaria, requiriéndose al menos seis meses
+      de periodo des adaptativo. Involucra básicamente el agotamiento emocional, la
+      deshumanización o despersonalización y la falta de realización personal en el trabajo.
+      Como consecuencias del burnout aparece deterioro en la calidad del cuidado o el servicio
+      provisto por el personal sanitario, el aumento de la rotación en los trabajos, el absentismo
+      y la baja moral, así como disfunción personal, incluyendo agotamiento físico, insomnio,
+      consumo de alcohol y drogas y problemas conyugales y familiares.
+    </p>
+    <p class="texto">
+      En general el burnout aparece en individuos sin historia de trastornos psicológicos o
+      psiquiátricos, se desarrolla gradualmente y no está presente cuando se inicia un nuevo
+      empleo. El desarrollo del cuadro se relaciona con la sobrecarga del trabajo, pero el exceso
+      de tarea no provoca sin más el síndrome, es más importante la desmotivación emocional
+      y cognitiva por el abandono de intereses que habían sido importantes, por la discrepancia
+      entre el esfuerzo y lo conseguido.
+    </p>
+    <p class="texto">
+      Desde que se describiera en 1974, la presencia de burnout ha crecido exponencialmente
+      dentro de la comunidad médica, llegando a alcanzar en las encuestas de la última década
+      niveles alarmantes de síntomas de dicho cuadro. No podemos negar la coexistencia del
+      mismo con el desempeño del trabajador de salud, como tampoco podemos negar la alta
+      penetración de la tecnología móvil en el hacer profesional, dicha razón nos motiva a
+      desarrollar herramientas y estrategias apoyándonos en la misma. Existen ya algunas
+      aplicaciones tipo aplicación móvil que se muestran prometedoras en reducir el síndrome
+      de burnout en personal sanitario.
+    </p>
+    <p class="texto">
+      Se trata de un estudio longitudinal en el que se miden las puntuaciones en el
+      Inventario de Burnout de Maslach mediante el uso de la Aplicación móvil diseñada para
+      este estudio, en la que se darán una serie de indicaciones. Además de las indicaciones de
+      la Aplicación móvil se registran datos sobre la actividad física con periodicidad semanal
+      mediante una pulsera de actividad en un grupo y sin ella en otro grupo. Las puntuaciones
+      del MBI se recogen mensualmente, para lo que la Aplicación móvil tiene una alarma
+      recordatoria. Se mide semanalmente la puesta en marcha de alguna indicación y
+      mensualmente las puntuaciones en el Maslach. Se incluye una pregunta directa sobre la
+      utilidad de la aplicación y de las indicaciones, a responder después de cada una.
+    <p class="texto">
+      Al final del estudio se hará un análisis agrupado de las respuestas a las posibles medidas
+      que podría tomar la institución, según las respuestas libres de cada participante.
+      Se incluyen médicos de urgencias y psiquiatras.
+    </p>
+    <p class="texto">
+      Los datos de los participantes serán encriptados y se garantizará que el análisis de éstos
+      será anónimo.
+    </p>
+    <p class="texto">
+      En cualquier momento los participantes pueden abandonar el estudio, devolviendo la
+      pulsera de actividad al investigador.
+    </p>
+    <p class="texto">
+      El estudio no implica ningún riesgo para la salud física o mental de los participantes.
+    </p>
 
-    <button ion-button block (click)="ToAccept()" [disabled]="!checkAcepto" > Siguiente </button>
+    <br>
+
+
+    <ion-list no-lines>
+ 
+        <ion-item>
+                
+            <ion-label> Acepto los términos</ion-label>
+
+            <ion-checkbox [(ngModel)]= "checkAcepto"> </ion-checkbox>
+            <!-- Manda a Dashboard-->
+
+        </ion-item>
+
+        <button ion-button block (click)="ToAccept()" [disabled]="!checkAcepto" > Siguiente </button>
+
+    </ion-list>
+
+
+
+
+    
 
 </ion-content>
 

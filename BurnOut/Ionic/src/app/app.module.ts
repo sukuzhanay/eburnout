@@ -25,6 +25,8 @@ import { BraceletListService } from '../providers/database/bracelet-list.service
 
 import { ProfileListService } from '../providers/database/profile-list.service';
 
+import { ConsentUserService } from '../providers/database/consent-user.service';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyA0mnZssyqo5PieFUUBTipdU9VB9uh0Xvo",
@@ -71,7 +73,8 @@ export const firebaseConfig = {
     FitBitServiceProvider,
     SQLite,
     BraceletListService,
-    ProfileListService
+    ProfileListService,
+    ConsentUserService
   ]
 })
 export class AppModule { }

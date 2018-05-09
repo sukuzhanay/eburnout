@@ -6,8 +6,8 @@ import { DatabaseProvider } from '../../providers/database/database';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/combineLatest';
 
-import { SQLite } from '@ionic-native/sqlite';
-import { SQLiteObject } from '@ionic-native/sqlite';
+import { ConsentUserService } from '../../providers/database/consent-user.service';
+
 
 
 @IonicPage()
@@ -21,12 +21,11 @@ export class LoginPage {
   loading: any;
   observable: any;
 
-  private _db: SQLiteObject = null;
   private _id : number = 0;
   
 
   constructor(public navCtrl: NavController, public fireAuth: AngularFireAuth, public toastCtrl: ToastController,
-	  public global: GlobalProvider, public database: DatabaseProvider, public loadingCtrl: 	LoadingController, private _sqlite: SQLite) {
+	  public global: GlobalProvider, public database: DatabaseProvider, public loadingCtrl: 	LoadingController, private consentUserService: ConsentUserService) {
     this.formulario = { email: '', password: '' };
     
   }
@@ -162,8 +161,12 @@ export class LoginPage {
     this.loading.present().then(() => {
       this.fireAuth.auth.signInWithEmailAndPassword(this.formulario.email, this.formulario.password)
         .then(resultado => {
-          this.observable = Observable.combineLatest(this.database.preguntas(), this.database.recomendaciones(),
-            this.database.usuarioRegistradoBD(resultado.uid), this.database.encuestasUltimas(resultado.uid),this.database.idClientFitBit(resultado.uid)).subscribe(resultados => {
+          this.observable = Observable.combineLatest(
+            this.database.preguntas(), this.database.recomendaciones(),
+            this.database.usuarioRegistradoBD(resultado.uid), this.database.encuestasUltimas(resultado.uid),
+            this.database.idClientFitBit(resultado.uid),
+            this.consentUserService.getConsentUser(this.formulario.email)
+            ).subscribe(resultados => {
 
               this.global.questions = resultados[0];
               this.global.recommendations = resultados[1];
@@ -189,7 +192,12 @@ export class LoginPage {
                   this.global.client_id = llavesFitBit["client_id"];
                   this.global.client_secret = llavesFitBit["client_secret"];
                 }
-                this.navCtrl.setRoot('TabGeneralPage');
+
+                if(!resultados[5].length){
+                  this.navCtrl.setRoot('ConsentimientoPage',{email:this.formulario.email});
+                }else{
+                  this.navCtrl.setRoot('TabGeneralPage');
+                }
                 this.loading.dismiss();
               }
 			  
