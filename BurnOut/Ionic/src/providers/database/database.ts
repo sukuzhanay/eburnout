@@ -84,9 +84,9 @@ export class DatabaseProvider {
   /* FIN CONSULTA FOTO CLOUD VIDION */
 
     /* CONSULTA DEL CLIENT_ID DEL USUARIO */
-    idClientFitBit(idUsuario: string) {
-        return this.db.list('/fbclient/',
-            referencia => referencia.orderByChild('id').equalTo(idUsuario)
+    idClientFitBit(email: string) {
+        return this.db.list('/users/',
+            referencia => referencia.orderByChild('email').equalTo(email)
         ).valueChanges();
     }
     /* FIN CONSULTA DEL CLIENT_ID DEL USUARIO */

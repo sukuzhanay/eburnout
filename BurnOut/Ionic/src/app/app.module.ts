@@ -17,7 +17,8 @@ import { FitBitServiceProvider } from '../providers/fit-bit-service/fit-bit-serv
 import { NgxEchartsModule } from 'ngx-echarts';
 
 import { IonicStorageModule } from '@ionic/storage';
-import { SQLite } from '@ionic-native/sqlite';
+
+import { Base64 } from '@ionic-native/base64';
 
 
 
@@ -26,6 +27,9 @@ import { BraceletListService } from '../providers/database/bracelet-list.service
 import { ProfileListService } from '../providers/database/profile-list.service';
 
 import { ConsentUserService } from '../providers/database/consent-user.service';
+
+import { TokenFitBitService } from './../providers/fit-bit-service/tokenfitbit-service';
+
 
 
 export const firebaseConfig = {
@@ -71,10 +75,11 @@ export const firebaseConfig = {
     GlobalProvider,
     DatabaseProvider,
     FitBitServiceProvider,
-    SQLite,
     BraceletListService,
     ProfileListService,
-    ConsentUserService
+    ConsentUserService,
+    TokenFitBitService,
+    Base64
   ]
 })
 export class AppModule { }

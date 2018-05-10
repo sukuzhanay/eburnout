@@ -1,5 +1,7 @@
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http'; // HttpHeaders ha sido importado para poder usar en el request.
 
+import { Base64 } from '@ionic-native/base64';
+
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map'; // Haceo un mapeo del post y/o get
 
@@ -22,8 +24,9 @@ import { AlertController } from 'ionic-angular';
 import { GlobalProvider } from '../global/global';
 
 import { Storage } from '@ionic/storage';
-import { SQLite } from '@ionic-native/sqlite';
-import { SQLiteObject } from '@ionic-native/sqlite';
+
+import { TokenFBUser } from './../../models/tokenfbuser.model';
+import { TokenFitBitService } from './tokenfitbit-service';
 
 
 
@@ -53,10 +56,20 @@ export class FitBitServiceProvider {
 
     private _stayWaiting : boolean = false;
 
-    private _db: SQLiteObject = null;
 
-    private _id : number = 0;
     private _db_client_id : string = "";
+
+
+    private _TokenFBUser: TokenFBUser = {
+        email: "",
+        token: "",
+        client_id: ""
+    };
+
+    private _debugin : boolean = true;
+
+    tokenFBRecord: Observable<TokenFBUser[]>;
+
 
     constructor(
         public http: HttpClient, // get y post
@@ -64,7 +77,8 @@ export class FitBitServiceProvider {
         public alertCtrl: AlertController,
         private _global: GlobalProvider,
         private _storage: Storage,
-        private _sqlite: SQLite
+        private _tokenFitBitService: TokenFitBitService,
+        private base64: Base64
         ) {
 
 // localStorage.setItem('fb_access_token','');
@@ -73,10 +87,10 @@ export class FitBitServiceProvider {
 
 
 
-        /*this.errorObserver = null;
+        this.errorObserver = null;
         this.error = Observable.create(observer => {
             this.errorObserver = observer;
-        });*/
+        });
 
 
         this._set_time_cron();
@@ -88,110 +102,82 @@ export class FitBitServiceProvider {
       }
 
     public  _oninit(){
-        var _self = this;
-         //this._createDatabase().then((success) => {
 
-            // _self.showAlert(JSON.stringify(success));
-            
-            var _token = "";
+        this._TokenFBUser.email = this._global.usuario.email;
 
-            /*if(success[0] !== undefined){
+        var _token = "";
 
-                _self._id = success[0]["id"];
-                _self._db_client_id = success[0]["client_id"];
-                if(_self._db_client_id == _self._global.client_id){
-                    _token = success[0]["token"];
-                }else{
-                    _token = "";
+        this.tokenFBRecord = this._tokenFitBitService.getTokenFitBit(this._TokenFBUser.email)
+            .snapshotChanges()
+            .map(
+                changes => {
+                            return changes.map(c => ({
+                                    key: c.payload.key, ...c.payload.val()
+                            }))
                 }
+        );
 
-            }*/
+        this.tokenFBRecord.forEach( item => {
 
+            if(item.length){
+                this._TokenFBUser = item[0];
+            }else{
+                this._TokenFBUser.client_id = this._global.client_id;
+            }
+            
+            console.log(this._TokenFBUser);
 
+            this._db_client_id = this._TokenFBUser.client_id;
+            if(this._db_client_id == this._global.client_id){
+                _token = this._TokenFBUser.token;
+            }else{
+                _token = "";
+            }
 
-            _self._client_id = this._global.client_id; // _self._db_client_id;
-            _self._storage.set('fb_client_id', this._global.client_id ); //_self._db_client_id);
+            this._client_secret = this._global.client_secret;
+            this._storage.set('fb_client_secret', this._client_secret);
 
-            _self._access_token = _token;
-            _self._storage.set('fb_access_token', _token);
+            this._client_id = this._db_client_id;
+            this._storage.set('fb_client_id', this._db_client_id);
 
-            _self._load_vars();
-                    
-            //_self._valuate_error({error:'',status:1020});
+            this._access_token = _token;
+            this._storage.set('fb_access_token', _token);
 
-            //return Promise.resolve( {error:'',status:1020} );
+            this._load_vars();
 
-        /*}, (error) => {
-            _self.showAlert(JSON.stringify(error));
-            // Promise.reject( error );
-        });*/
-    }
+            //_self._save_token_desktop();
 
-    /*private _createDatabase(){
-        var _self = this;
-        return this._sqlite.create({
-              name: 'eburnout.db',
-              location: 'default' // the location field is required
-        })
-        .then((db) => {
-              _self._setDatabase(db);
-              _self._createTable();
-              return _self._getClient();
-        })
-        .catch(error =>{
-            _self.showAlert(JSON.stringify(error));
-            Promise.reject( error );
+            this.to_init_in_client();
+
         });
-    }
 
 
-    private _setDatabase(db: SQLiteObject){
-        if(this._db === null){
-              this._db = db;
-        }
-    }
 
-    private _create(token:any){
-        let sql = 'INSERT INTO client(token,client_id) VALUES(?,?)';
-        return this._db.executeSql(sql, [token,this._client_id]);
-    }*/
+         
 
-    /*private _deleteTable(){
-        let sql = 'DROP TABLE IF EXISTS client';
-        return this._db.executeSql(sql, []);
-    }*/
-
-    /*private _createTable(){
-        let sql = 'CREATE TABLE IF NOT EXISTS client(id INTEGER PRIMARY KEY AUTOINCREMENT, token TEXT,client_id VARCHAR(6))';
-        return this._db.executeSql(sql, []);
-    }*/
-
-    /*private _delete(id: any){
-        let sql = 'DELETE FROM client WHERE id=?';
-        return this._db.executeSql(sql, [id]);
-    }*/
-
-    /*private _getClient(){
-
-        let sql = 'SELECT * FROM client WHERE id=1';
-        return this._db.executeSql(sql, [])
-            .then(response => {
-                let arrClient = [];
-                for (let index = 0; index < response.rows.length; index++) {
-                    arrClient.push( response.rows.item(index) );
-                }
-                return Promise.resolve( arrClient );
-            })
-            .catch(error => Promise.reject( error ) );
             
+
     }
 
-    private _update(token,id: any){
-        let sql = 'UPDATE client SET token=?, client_id=? WHERE id=?';
-        return this._db.executeSql(sql, [token, this._client_id, id]);
-    }*/
+    
+
+    private _save_token_desktop(){
 
 
+        this._TokenFBUser.token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjVLOTkiLCJhdWQiOiIyMkNHODQiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJwcm8gcm51dCByc2xlIiwiZXhwIjoxNTI1OTc1MzYyLCJpYXQiOjE1MjU4ODg5NjJ9.kXRLQx3JJlvqeDtBqECPdDm7HFFUFctC8hvmOIE_Tp8";
+        this._TokenFBUser.client_id = "22CG84";
+        this._tokenFitBitService.addTokenFB(this._TokenFBUser);
+
+
+    }
+
+
+
+    public to_init_in_client(){
+
+        this._valuate_error({error:'',status:1020});
+
+    }
 
 
 
@@ -269,7 +255,7 @@ export class FitBitServiceProvider {
 
       private _getAuthPermission(): Promise<any> {
       // Metodos observables, si pasa algo X, doy la promesa de regresar con algo.
-self.showAlert("to allow");
+
           var self = this;
 
         return new Promise(function (resolve, reject) {
@@ -340,11 +326,14 @@ self.showAlert("to allow");
                     self._renew_token = false;
                     self._client_id = self._global.client_id;
 
-                    /*if(self._id){
-                        self._update(self._access_token,self._id);
+                    //GUARDAR EL NUEVO TOCKEN
+                    if(self._TokenFBUser.token.trim().length){
+                        self._TokenFBUser.token = self._access_token
+                        self._tokenFitBitService.updateTokenFB(self._TokenFBUser);
                     }else{
-                        self._create(self._access_token);
-                    }*/
+                        self._TokenFBUser.token = self._access_token
+                        self._tokenFitBitService.addTokenFB(self._TokenFBUser);
+                    }
 
                     self._client_secret = self._global.client_secret;
                     self._storage.set('fb_client_id', self._client_id);
@@ -360,7 +349,6 @@ self.showAlert("to allow");
             }
 
         }, (error) => {
-            self.showAlert( JSON.stringify(error));
             self._valuate_error(error);
         });
 
@@ -392,8 +380,14 @@ self.showAlert("to allow");
 
         this.errorObserver.next(error);
 
+        if(this._debugin){
+
+            console.log(error);
+
+        }
+
         if(error.status != undefined){
-            if(error.status == 400 || error.status == 401){
+            if(error.status == 400 ){
                 // Authorization code invalid
                 this.toStopCron();
                 //localStorage.setItem('fb_access_token',null);
@@ -401,6 +395,11 @@ self.showAlert("to allow");
                 this._storage.set('fb_access_token', "");
                 this._load_vars();
                 this._toAutorizate();
+            }else if( error.status == 401 ){
+
+                this.toStopCron();
+                this._toRenewToken();
+
             }else if(error.status == 429 ){
 
                 this._stayWaiting = true;
@@ -430,10 +429,11 @@ self.showAlert("to allow");
 
         var self = this;
         self._toCron();
+        
         this._iCron = setInterval( function(){
             self._toCron();
         }, self._timeCron );
-        
+               
     }
 
     private _toCron(){
@@ -449,15 +449,7 @@ self.showAlert("to allow");
     }
 
 
-    /*private _get_userData() {
-
-        var headers = new HttpHeaders(this._get_authHeader());
-        return this.http.get('https://api.fitbit.com/1/user/-/profile.json', 
-            {headers: headers}).map( res => res );
-
-    }*/
-
-
+   
     private _get_heart() {
 
         var headers = new HttpHeaders(this._get_authHeader());
@@ -482,6 +474,14 @@ self.showAlert("to allow");
                             return a;
                         }
                     );
+
+                }
+
+                if(_self._debugin){
+
+                    console.log(_self._tsAHI);
+
+                    //_self.showAlert( JSON.stringify(_self._tsAHI));
 
                 }
 
@@ -529,44 +529,14 @@ self.showAlert("to allow");
                     }
                 }
 
-                // _self._get_steps();
-
-            }, (error: HttpErrorResponse ) => {
-               _self._valuate_error(error);
-            });
-
-    }
-
-
-/*
-    private _get_steps() {
-
-        var headers = new HttpHeaders(this._get_authHeader());
-        var _self = this;
-
-        var dNow = this.get_strDate();
-
-        this.http.get('https://api.fitbit.com/1/user/-/activities/date/'+dNow+'.json',
-            {headers: headers}).subscribe((steps) => {
-
-                if(_self._stayWaiting) _self._valuate_error({status:1002});
-
-                if(steps["summary"] !== undefined){
-                    _self._fbsteps.steps = steps["summary"]["steps"];
-                    _self._fbsteps.steps_goal = steps["goals"]["steps"];
-                    _self._fbsteps.distance_goal =steps["goals"]["distance"];
-                    for (var i = steps["summary"]["distances"].length - 1; i >= 0; i--) {
-                        if(steps["summary"]["distances"][i]["activity"]=="total")
-                            _self._fbsteps.distance = steps["summary"]["distances"][i]["distance"];
-                    }
-                    _self._fbsteps.calories_goal =steps["goals"]["caloriesOut"];
-                    _self._fbsteps.calories =steps["summary"]["caloriesOut"];
-                    _self._fbsteps.minutes =steps["summary"]["veryActiveMinutes"];
-                    _self._fbsteps.minutes_goal =steps["goals"]["activeMinutes"];
-
-                     console.log( _self._fbsteps  );
+                if(_self._debugin){
+                    console.log(_self._fbsleep.timeinbed);
+                    console.log(_self._fbsleep.starttime);
+                    console.log(_self._fbsleep.endtime);
+                    console.log(_self._fbsleep.minutesawake);
                 }
 
+
             }, (error: HttpErrorResponse ) => {
                _self._valuate_error(error);
             });
@@ -574,14 +544,37 @@ self.showAlert("to allow");
     }
 
 
+    private _toRenewToken(){
+
+        var header_b64 =  window.btoa(this._client_id+":"+this._client_secret);
+
+        var header = {
+            'Authorization': 'Basic '+ header_b64,
+            'Content-Type':'application/x-www-form-urlencoded',
+        };
+
+        var headers = new HttpHeaders(header);
+        var _self = this;
+
+        var params = "grant_type=refresh_token&refresh_token="+this._access_token;
+
+        this.http.post('https://api.fitbit.com/oauth2/token',params, {headers: headers})
+                .subscribe((refresh) => {
 
 
-    public steps(): FBSteps {
 
-        return this._fbsteps;
+                                //_self.showAlert( JSON.stringify(refresh));
+                                console.log( refresh );
 
 
-    }*/
+                }, (error: HttpErrorResponse ) => {
+                   console.log(error);
+                }
+        );
+
+    }
+
+
 
     public sleep(): FBSleep {
 

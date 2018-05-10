@@ -102,6 +102,7 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
 
     private _prepare_fitbit(){
         this._checkServiceError();
+        //this._fts.to_init_in_client();
     }
 
     private _checkServiceError(){
@@ -110,10 +111,11 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
         var toStop = false;
         var toReestart = false;
         var tostart = false;
-/*        this._fts.error.subscribe((error) => {
+        this._fts.error.subscribe((error) => {
             toStop = false;
             toReestart = false;
             tostart = false;
+
             if(error.status != undefined)
 
                 switch (error.status) {
@@ -164,7 +166,7 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
             if (tostart){
                 _self._toauthfitbit();
             }
-        });*/
+        });
 
     }
 

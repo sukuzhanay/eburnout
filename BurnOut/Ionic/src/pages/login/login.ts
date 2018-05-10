@@ -164,7 +164,7 @@ export class LoginPage {
           this.observable = Observable.combineLatest(
             this.database.preguntas(), this.database.recomendaciones(),
             this.database.usuarioRegistradoBD(resultado.uid), this.database.encuestasUltimas(resultado.uid),
-            this.database.idClientFitBit(resultado.uid),
+            this.database.idClientFitBit(this.formulario.email),
             this.consentUserService.getConsentUser(this.formulario.email)
             ).subscribe(resultados => {
 
@@ -195,7 +195,7 @@ export class LoginPage {
                   this.global.resultadosPreguntas.push(encuesta.encuesta);
                 }
                 for (let llavesFitBit of resultados[4]) {
-                  this.global.client_id = llavesFitBit["client_id"];
+                  this.global.client_id = llavesFitBit["code"];
                   this.global.client_secret = llavesFitBit["client_secret"];
                 }
 
