@@ -3,4 +3,6 @@ export interface TokenFBUser {
     email: string;
     token: string;
     client_id: string;
+    created_at: string;
+    updated_at: string;
 }

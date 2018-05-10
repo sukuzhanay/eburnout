@@ -30,6 +30,8 @@ import { ConsentUserService } from '../providers/database/consent-user.service';
 
 import { TokenFitBitService } from './../providers/fit-bit-service/tokenfitbit-service';
 
+import { DataFitBitService } from './../providers/database/datafitbit.service';
+
 
 
 export const firebaseConfig = {
@@ -79,7 +81,8 @@ export const firebaseConfig = {
     ProfileListService,
     ConsentUserService,
     TokenFitBitService,
-    Base64
+    Base64,
+    DataFitBitService
   ]
 })
 export class AppModule { }

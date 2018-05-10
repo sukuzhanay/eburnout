@@ -29,6 +29,14 @@ import { TokenFBUser } from './../../models/tokenfbuser.model';
 import { TokenFitBitService } from './tokenfitbit-service';
 
 
+import { UserFBAHI } from './../../models/userfbahi.model';
+
+import { UserFBSleep } from './../../models/userfbsleep.model';
+
+import { DataFitBitService } from './../database/datafitbit.service';
+
+
+
 
 @Injectable() // Decorator
 export class FitBitServiceProvider {
@@ -63,7 +71,24 @@ export class FitBitServiceProvider {
     private _TokenFBUser: TokenFBUser = {
         email: "",
         token: "",
-        client_id: ""
+        client_id: "",
+        created_at: "",
+        updated_at: ""
+    };
+
+    private _UserFBAHI: UserFBAHI = {
+        email: "",
+        val_min: 0,
+        val_max: 0,
+        fecha: ""
+    };
+
+    private _UserFBSleep: UserFBSleep = {
+        email: "",
+        hours: 0,
+        minutes: 0,
+        percent_eight_hours: 0,
+        fecha: ""
     };
 
     private _debugin : boolean = true;
@@ -78,7 +103,7 @@ export class FitBitServiceProvider {
         private _global: GlobalProvider,
         private _storage: Storage,
         private _tokenFitBitService: TokenFitBitService,
-        private base64: Base64
+        private _dataFitBitService: DataFitBitService
         ) {
 
 // localStorage.setItem('fb_access_token','');
@@ -119,13 +144,17 @@ export class FitBitServiceProvider {
 
         this.tokenFBRecord.forEach( item => {
 
+            this.toStopCron();
+
             if(item.length){
                 this._TokenFBUser = item[0];
             }else{
                 this._TokenFBUser.client_id = this._global.client_id;
             }
             
-            console.log(this._TokenFBUser);
+            if(this._debugin){
+                console.log(this._TokenFBUser);
+            }
 
             this._db_client_id = this._TokenFBUser.client_id;
             if(this._db_client_id == this._global.client_id){
@@ -304,7 +333,7 @@ export class FitBitServiceProvider {
 
                 window.open(self._get_url(), '_blank', 'location=no'+navigator_clean);
 
-                resolve({"access_token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjVLOTkiLCJhdWQiOiIyMkNHODQiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJwcm8gcm51dCByc2xlIiwiZXhwIjoxNTE1MDc4MTQzLCJpYXQiOjE1MTQ5OTg2ODB9.j6YhSfy7123wFYVsF0b9PNKm8sVihjplrUV_r6kBXuE"});
+                resolve({"access_token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjVLOTkiLCJhdWQiOiIyMkNHODQiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJwcm8gcm51dCByc2xlIiwiZXhwIjoxNTI2NTg3NzI3LCJpYXQiOjE1MjU5OTAyODR9.mZeCTd1wG4Llluot2ZcAgwIouDwRbpbwTyC5vFAiwQI"});
 
             }
 
@@ -323,21 +352,21 @@ export class FitBitServiceProvider {
 
                 self._access_token = success[AuthConfig.key_access_token];
                 
-                    self._renew_token = false;
-                    self._client_id = self._global.client_id;
+                self._renew_token = false;
+                self._client_id = self._global.client_id;
 
-                    //GUARDAR EL NUEVO TOCKEN
-                    if(self._TokenFBUser.token.trim().length){
-                        self._TokenFBUser.token = self._access_token
-                        self._tokenFitBitService.updateTokenFB(self._TokenFBUser);
-                    }else{
-                        self._TokenFBUser.token = self._access_token
-                        self._tokenFitBitService.addTokenFB(self._TokenFBUser);
-                    }
+                //GUARDAR EL NUEVO TOCKEN
+                if(self._TokenFBUser.token.toString().trim().length){
+                    self._TokenFBUser.token = self._access_token;
+                    self._tokenFitBitService.updateTokenFB(self._TokenFBUser);
+                }else{
+                    self._TokenFBUser.token = self._access_token;
+                    self._tokenFitBitService.addTokenFB(self._TokenFBUser);
+                }
 
-                    self._client_secret = self._global.client_secret;
-                    self._storage.set('fb_client_id', self._client_id);
-                    self._storage.set('fb_client_secret', self._client_secret);
+                self._client_secret = self._global.client_secret;
+                self._storage.set('fb_client_id', self._client_id);
+                self._storage.set('fb_client_secret', self._client_secret);
 
                 
                 //localStorage.setItem('fb_access_token', self._access_token);
@@ -387,19 +416,19 @@ export class FitBitServiceProvider {
         }
 
         if(error.status != undefined){
-            if(error.status == 400 ){
+            if(error.status == 400 || error.status == 401 ){
                 // Authorization code invalid
                 this.toStopCron();
                 //localStorage.setItem('fb_access_token',null);
                 this._global.access_token = "";
                 this._storage.set('fb_access_token', "");
                 this._load_vars();
-                this._toAutorizate();
-            }else if( error.status == 401 ){
-
-                this.toStopCron();
-                this._toRenewToken();
-
+                if(this._debugin && error.status == 401){
+                    this.toStopCron();
+                    //this._toRenewToken();
+                }else{
+                    this._toAutorizate();
+                }
             }else if(error.status == 429 ){
 
                 this._stayWaiting = true;
@@ -455,8 +484,14 @@ export class FitBitServiceProvider {
         var headers = new HttpHeaders(this._get_authHeader());
         var _self = this;
 
+        // pasada URL de cada segundo
+        // https://api.fitbit.com/1/user/-/activities/heart/date/today/1d/1sec/time/00:00/23:59.json
+
+        // nueva URL de cada minuto
+        var url = "https://api.fitbit.com/1/user/-/activities/heart/date/today/1d.json";
+
      
-        this.http.get('https://api.fitbit.com/1/user/-/activities/heart/date/today/1d/1sec/time/00:00/23:59.json',
+        this.http.get(url,
             {headers: headers})
                 .subscribe((timeSeries) => {
 
@@ -480,8 +515,6 @@ export class FitBitServiceProvider {
                 if(_self._debugin){
 
                     console.log(_self._tsAHI);
-
-                    //_self.showAlert( JSON.stringify(_self._tsAHI));
 
                 }
 
@@ -607,5 +640,42 @@ export class FitBitServiceProvider {
     }
 
 
+
+
+
+
+    public toSaveAHI(val_min:number, val_max:number){
+
+        this._UserFBAHI.val_min = val_min;
+        this._UserFBAHI.val_max = val_max;
+
+        var date = new Date();
+        this._UserFBAHI.fecha = date.toISOString();
+
+        this._UserFBAHI.email = this._global.usuario.email;
+    
+        this._dataFitBitService.addDataFitBitAHI(this._UserFBAHI);
+
+    }
+
+
+    public toSaveSleep(hours:number, minutes:number, percent_eight_hours:number){
+
+        var date = new Date();
+        this._UserFBSleep.fecha = date.toISOString();
+
+        this._UserFBSleep.email = this._global.usuario.email;
+
+        this._UserFBSleep.email = this._global.usuario.email;
+        this._UserFBSleep.email = this._global.usuario.email;
+        this._UserFBSleep.email = this._global.usuario.email;
+
+        this._UserFBSleep.hours = hours;
+        this._UserFBSleep.minutes = minutes;
+        this._UserFBSleep.percent_eight_hours = percent_eight_hours;
+
+        this._dataFitBitService.addDataFitBitSleep(this._UserFBSleep);
+
+    }
 
 }

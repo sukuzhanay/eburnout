@@ -20,10 +20,14 @@ export class TokenFitBitService {
     }
  
     addTokenFB(tokenfb: TokenFBUser) {
+        var date = new Date();
+        tokenfb.created_at = date.toISOString();
         return this.tokenFBUListRef.push(tokenfb);
     }
  
     updateTokenFB(tokenfb: TokenFBUser) {
+        var date = new Date();
+        tokenfb.updated_at = date.toISOString();
         return this.tokenFBUListRef.update(tokenfb.key, tokenfb);
     }
  

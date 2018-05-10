@@ -58,6 +58,15 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
     private _chartAHI: any;
     bpm_heart : string = "";
 
+    private val_minAHI: number = 0;
+    private val_maxAHI: number = 0;
+
+
+    private hours : number = 0;
+    private minutes : number = 0;
+    private idel_percent : number = 0;
+
+
 
   constructor(public navCtrl: NavController, public global: GlobalProvider, private _fts: FitBitServiceProvider) {
     this.porcentajeBurnout = 0;
@@ -272,9 +281,9 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
 
         let ideal_minutes : number = 480;
 
-        var timeinbed : number = Number(this._fbsleep.timeinbed) - Number(this._fbsleep.minutesawake);
+        var timeinbed : number = parseInt(this._fbsleep.timeinbed.toString()) - parseInt(this._fbsleep.minutesawake.toString());
 
-        var time = timeinbed / 60;
+        var time = timeinbed > 0 ? timeinbed / 60 : 0;
 
         var hours : number = parseInt(time.toString());
 
@@ -289,6 +298,16 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
                                       ?    "#FF8000"
                                       :    "#00FF00";
 
+
+        if(hours != this.hours && minutes != this.minutes){
+
+            this._fts.toSaveSleep(hours,minutes,idel_percent);
+
+        }
+
+        this.hours = hours;
+        this.minutes = minutes;
+        this.idel_percent = idel_percent;
 
         this.sleep = this._set_indicators_value('', 100, idel_percent);
 
@@ -315,6 +334,14 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
                                             ?    this._fbtsAHI[leng-1]["value"]
                                             :    0
                                     :    0;
+
+        if(val_min != this.val_minAHI || val_max != this.val_maxAHI){
+            // MANDAMOS PERSISTIR LA LECTURA
+            this._fts.toSaveAHI(val_min, val_max);
+        }
+
+        this.val_minAHI = val_min;
+        this.val_maxAHI = val_max;
 
         /*this.opts_tsAHI["series"]["0"]["data"]["0"] = 50;//val_min;
         this.opts_tsAHI["series"]["0"]["data"]["1"] = 60;//val_max;*/
