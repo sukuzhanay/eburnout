@@ -176,7 +176,7 @@ export class FitBitServiceProvider {
             this._access_token = _token;
             this._storage.set('fb_access_token', _token);
 
-            this._load_vars();
+            //this._load_vars();
 
             //_self._save_token_desktop();
 

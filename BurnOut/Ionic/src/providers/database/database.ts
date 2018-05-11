@@ -39,13 +39,18 @@ export class DatabaseProvider {
 
   /* CONSULTA GUARDAR ULTIMA ENCUESTA */
   guardarUltimaEncuesta(idUsuario: string, resultadoPreguntas: any) {
+    var date = new Date();
+    resultadoPreguntas["created_at"] = date.toISOString();
     this.db.database.ref('/usuarios/' + idUsuario + '/ultimaencuesta').set(resultadoPreguntas);
   }
   /* FIN CONSULTA GUARDAR ULTIMA ENCUESTA */
 
   /* CONSULTA GUARDAR ENCUESTA */
   guardarEncuesta(idUsuario: string, resultadoPreguntas: any) {
-    this.db.database.ref('/encuestas').push({ id: idUsuario, encuesta: resultadoPreguntas });
+
+    var date = new Date();
+    this.db.database.ref('/encuestas').push({ id: idUsuario, created_at:date.toISOString(), encuesta: resultadoPreguntas });
+    
   }
   /* FIN CONSULTA GUARDAR ENCUESTA */
 
