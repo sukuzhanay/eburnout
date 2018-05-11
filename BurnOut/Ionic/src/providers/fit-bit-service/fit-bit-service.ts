@@ -91,6 +91,10 @@ export class FitBitServiceProvider {
         fecha: ""
     };
 
+    /**
+     * SOLO PARA CUANDO SE ESTE EN NAVEGADOR Y NO EN MOBILE, ES PARA QUE NO PIDA CONTINUAMENTE EL TOCKEN EN NUEVA VENTANA
+     * @type {boolean}
+     */
     private _debugin : boolean = true;
 
     tokenFBRecord: Observable<TokenFBUser[]>;
@@ -244,6 +248,8 @@ export class FitBitServiceProvider {
 
             });
 
+            console.log('ENTRO!!!');
+
         }
 
     }
@@ -333,7 +339,7 @@ export class FitBitServiceProvider {
 
                 window.open(self._get_url(), '_blank', 'location=no'+navigator_clean);
 
-                resolve({"access_token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjVLOTkiLCJhdWQiOiIyMkNHODQiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJwcm8gcm51dCByc2xlIiwiZXhwIjoxNTI2NTg3NzI3LCJpYXQiOjE1MjU5OTAyODR9.mZeCTd1wG4Llluot2ZcAgwIouDwRbpbwTyC5vFAiwQI"});
+                resolve({"access_token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MjVLOTkiLCJhdWQiOiIyMkNHODQiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJwcm8gcm51dCByc2xlIiwiZXhwIjoxNTI2NTg3NzI2LCJpYXQiOjE1MjYwMTY5Mjh9.PkVFjhGPQIwJwGB0WhnBqZIfAen69NOi338lC4Te6qM"});
 
             }
 
@@ -389,7 +395,7 @@ export class FitBitServiceProvider {
 
         this.platform.ready().then(() => {
 
-            this._load_vars();
+            //this._load_vars();
 
             if( !this._access_token.trim().length && this.have_bracelet() ){
                 this._toAutorizate();
@@ -420,9 +426,9 @@ export class FitBitServiceProvider {
                 // Authorization code invalid
                 this.toStopCron();
                 //localStorage.setItem('fb_access_token',null);
-                this._global.access_token = "";
+                /*this._global.access_token = "";
                 this._storage.set('fb_access_token', "");
-                this._load_vars();
+                this._load_vars();*/
                 if(this._debugin && error.status == 401){
                     this.toStopCron();
                     //this._toRenewToken();
@@ -484,6 +490,10 @@ export class FitBitServiceProvider {
         var headers = new HttpHeaders(this._get_authHeader());
         var _self = this;
 
+        if(this._debugin){
+            console.log(this._get_authHeader());
+        }
+
         // pasada URL de cada segundo
         // https://api.fitbit.com/1/user/-/activities/heart/date/today/1d/1sec/time/00:00/23:59.json
 
@@ -533,6 +543,10 @@ export class FitBitServiceProvider {
         var headers = new HttpHeaders(this._get_authHeader());
         var _self = this;
 
+        if(this._debugin){
+            console.log(this._get_authHeader());
+        }
+        
         var dNow = this.get_strDate();
 
         this.http.get('https://api.fitbit.com/1.2/user/-/sleep/date/'+dNow+'/'+dNow+'.json',

@@ -23,8 +23,7 @@
               <ion-icon name="flame"></ion-icon>
             </div>
           </div>
-          <p>BURNOUT
-            <span [ngClass]="{'color-porcentaje' : porcentajeBurnout > 0 }" class="porcentaje">{{ porcentajeBurnout }}%</span>
+          <p>USTED<span [ngClass]="{'color-porcentaje' : porcentajeBurnout > 0 }" class="porcentaje">{{ porcentajeBurnout > 0 ? ' TIENE BURNOUT' : ' NO TIENE BURNOUT' }}</span>
           </p>
         </div>
       </ion-col>
@@ -77,7 +76,7 @@
         <p>CANSANCIO EMOCIONAL</p>
       </ion-col>
       <ion-col class="col-porcentaje">
-        <p [ngClass]="{'color-porcentaje' : porcentajeAE > 0 }">{{ porcentajeAE }}%</p>
+        <p [ngClass]="{'color-porcentaje' : porcentajeAE > 0 }">{{ resultadoPreguntas.ae }}</p>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -88,7 +87,7 @@
         <p>DESPERSONALIZACIÓN</p>
       </ion-col>
       <ion-col class="col-porcentaje">
-        <p [ngClass]="{'color-porcentaje' : porcentajeD > 0 }">{{ porcentajeD }}%</p>
+        <p [ngClass]="{'color-porcentaje' : porcentajeD > 0 }">{{ resultadoPreguntas.d }}</p>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -99,7 +98,7 @@
         <p>REALIZACIÓN PERSONAL</p>
       </ion-col>
       <ion-col class="col-porcentaje">
-        <p [ngClass]="{'color-porcentaje' : porcentajeRP > 0 }">{{ porcentajeRP }}%</p>
+        <p [ngClass]="{'color-porcentaje' : porcentajeRP > 0 }">{{ resultadoPreguntas.rp }}</p>
       </ion-col>
     </ion-row>
   </ion-grid>

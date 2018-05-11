@@ -31,6 +31,9 @@ export class EdituserPage {
 
     braceletList: Observable<Bracelet[]>;
 
+    bracelets: Array<Bracelet> = [];
+
+
     constructor(
         public navCtrl: NavController,
         public navParams: NavParams,
@@ -55,6 +58,9 @@ export class EdituserPage {
                             }))
                 }
         );
+        this.braceletList.forEach( item => {
+            this.bracelets = item;
+        });
     }
 
 
@@ -76,33 +82,20 @@ export class EdituserPage {
             this.user.name = this.ctrls_edit.controls.name.value;
             this.user.code = this.ctrls_edit.controls.braceletsel.value;
 
-            var self = this;
+            this.user.bracelet_id = "";
+            this.user.client_secret = "";
+
             
-            Observable.combineLatest(this.braceletListService.getBraceletList().valueChanges())
-                .subscribe(bracelets => {
-
-                    this.user.bracelet_id = "";
-                    this.user.client_secret = "";
-
-                    
-                    for (var i = 0; i < bracelets.length; i++) {
-                        for (var j = 0; j < bracelets[i].length; j++) {
-                            if(bracelets[i][j].code == this.user.code){
-                                if(bracelets[i][j].key != undefined){
-                                    this.user.bracelet_id = bracelets[i][j].key.toString();
-                                    this.user.client_secret = bracelets[i][j].client_secret.toString();
-                                }
-                            }
-                        }
-                    }
-
-                    self.profileListService.updateUser(self.user).then(ref => {
-                        self.navCtrl.setRoot('UserbraceletPage');
-                    });
-
+            for (var j = 0; j < this.bracelets.length; j++) {
+                if(this.bracelets[j].code == this.user.code){
+                    this.user.bracelet_id = this.bracelets[j].key.toString();
+                    this.user.client_secret = this.bracelets[j].client_secret.toString();
                 }
+            }
 
-            );
+            this.profileListService.updateUser(this.user).then(ref => {
+                this.navCtrl.setRoot('UserbraceletPage');
+            });
 
         }
         

@@ -33,7 +33,7 @@ export class EditbraceletPage {
         this.ctrls_edit = this.formBuilder.group({
             code: [this.bracelet.code, Validators.compose([Validators.maxLength(10), Validators.pattern('[a-zA-Z0-9 ]*'), Validators.required])],
             client_secret: ['', Validators.compose([Validators.maxLength(50), Validators.required])],
-            serial: [this.bracelet.serial, Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z ]*'), Validators.required])],
+            serial: [this.bracelet.serial, Validators.compose([Validators.maxLength(30), Validators.pattern('[a-zA-Z0-9 ]*'), Validators.required])],
         });
         
     }

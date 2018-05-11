@@ -281,7 +281,15 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
 
         let ideal_minutes : number = 480;
 
-        var timeinbed : number = parseInt(this._fbsleep.timeinbed.toString()) - parseInt(this._fbsleep.minutesawake.toString());
+        var inttimeinbed = this._fbsleep.timeinbed != undefined && this._fbsleep.timeinbed != null
+                                    ?    parseInt(this._fbsleep.timeinbed.toString())
+                                    :    0;
+
+        var intminutesawake = this._fbsleep.minutesawake != undefined && this._fbsleep.minutesawake != null
+                                    ?    parseInt(this._fbsleep.minutesawake.toString())
+                                    :    0;
+
+        var timeinbed : number = inttimeinbed - intminutesawake;
 
         var time = timeinbed > 0 ? timeinbed / 60 : 0;
 
@@ -376,20 +384,24 @@ export class DashboardPage implements AfterViewInit,OnDestroy{
 
     }
 
-  /* CALCULAR DATOS GRAFICAS */
-  calcularDatosGraficas() {
-    if (this.resultadoPreguntas.ae > 26 && this.resultadoPreguntas.d > 9 && this.resultadoPreguntas.rp < 34) {
-      this.porcentajeBurnout = Math.round(
-        ((this.resultadoPreguntas.ae + this.resultadoPreguntas.d - this.resultadoPreguntas.rp) * 100) / 84
-      );
-    } else {
-      this.porcentajeBurnout = 0;
+    /* CALCULAR DATOS GRAFICAS */
+    calcularDatosGraficas() {
+        if (this.resultadoPreguntas.ae > 40 && this.resultadoPreguntas.d > 22 && this.resultadoPreguntas.rp < 12) {
+
+            this.porcentajeBurnout = 100;
+      
+        } else {
+      
+            this.porcentajeBurnout = 0;
+
+        }
+
+        this.porcentajeAE = Math.round((this.resultadoPreguntas.ae * 100) / 54);
+        this.porcentajeD = Math.round((this.resultadoPreguntas.d * 100) / 30);
+        this.porcentajeRP = Math.round((this.resultadoPreguntas.rp * 100) / 33);
+
     }
-    this.porcentajeAE = Math.round((this.resultadoPreguntas.ae * 100) / 54);
-    this.porcentajeD = Math.round((this.resultadoPreguntas.d * 100) / 30);
-    this.porcentajeRP = Math.round((this.resultadoPreguntas.rp * 100) / 48);
-  }
-  /* FIN CALCULAR DATOS GRAFICAS */
+    /* FIN CALCULAR DATOS GRAFICAS */
 
   /* GRAFICAS */
   graficas() {
