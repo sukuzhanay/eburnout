@@ -13,7 +13,7 @@ export class TabGeneralPage {
 
   dashboardRoot = 'DashboardPage';
   encuestaRoot = 'EncuestaPage';
-  recomendacionRoot = 'RecomendacionPage';
+  recomendacionRoot = 'RecommendationsPage';
   profileRoot = 'ProfilePage';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

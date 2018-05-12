@@ -32,6 +32,8 @@ import { TokenFitBitService } from './../providers/fit-bit-service/tokenfitbit-s
 
 import { DataFitBitService } from './../providers/database/datafitbit.service';
 
+import { RecommendationsService } from './../providers/database/recommendations.service';
+
 
 
 export const firebaseConfig = {
@@ -82,7 +84,8 @@ export const firebaseConfig = {
     ConsentUserService,
     TokenFitBitService,
     Base64,
-    DataFitBitService
+    DataFitBitService,
+    RecommendationsService
   ]
 })
 export class AppModule { }
