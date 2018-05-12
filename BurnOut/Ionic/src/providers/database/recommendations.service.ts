@@ -27,6 +27,10 @@ export class RecommendationsService {
         return this.db.list('/question_answer_user/', questionUser => questionUser.orderByChild('user').equalTo(idUsuario).limitToLast(1));
     }
 
+    getQuestionUserPerSurveyList(survey: string) {
+        return this.db.list('/question_answer_user/', questionUser => questionUser.orderByChild('survey').equalTo(survey).limitToLast(1));
+    }
+
     addQuestionUser(qu: QuestionUser) {
         return this.questionUserListRef.push(qu);
     }

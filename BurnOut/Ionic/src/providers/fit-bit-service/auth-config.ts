@@ -22,7 +22,7 @@ export const AuthConfig = {
   		// set the response type, token or code
    		response_type : "token",
 
-        expires_in : "600" // "604800"
+        expires_in : "2592000" // "604800"
 
    	}
 
