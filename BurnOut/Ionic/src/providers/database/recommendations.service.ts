@@ -17,6 +17,16 @@ export class RecommendationsService {
     private answerQListRef = this.db.list<AnswerR>('answer_categories/');
 
     private userSurveyListRef = this.db.list('encuestas/');
+
+    /**
+     * Son los días iniciales y permisibles para empezar a contestar, antes puede escoger cualquier indicativo, 
+     * luego tiene que responder
+     * @type {number}
+     */
+    public days_to_answer : number = 5;
+
+    public id_first_question_forced = 23;
+    public id_second_question_forced = 24;
  
     constructor(private db: AngularFireDatabase) { }
  
@@ -58,5 +68,20 @@ export class RecommendationsService {
     }
  
     
+
+
+    diff_dates(dateq : string){
+
+        var days = 0;
+
+        var dq = new Date(dateq);
+        var b = new Date();
+        var c = b.toISOString();
+        var d = new Date(c);
+
+        days = Math.round((d.getTime()-dq.getTime())/(1000*60*60*24));
+
+        return days;
+    }
     
 }

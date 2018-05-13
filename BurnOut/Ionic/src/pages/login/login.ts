@@ -172,6 +172,11 @@ export class LoginPage {
               this.global.recommendations = resultados[1];
               if (resultados[2] == null) {
 
+                for (let llavesFitBit of resultados[4]) {
+                  this.global.client_id = llavesFitBit["code"];
+                  this.global.client_secret = llavesFitBit["client_secret"];
+                }
+
                 if(!resultados[5].length){
                   this.navCtrl.setRoot('ConsentimientoPage',{email:this.formulario.email, to: "register", params:{ idUsuario: resultado.uid, email: this.formulario.email, password: this.formulario.password }});
                 }else{

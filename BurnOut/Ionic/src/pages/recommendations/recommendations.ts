@@ -51,15 +51,9 @@ export class RecommendationsPage {
     };
 
 
-    /**
-     * Son los días iniciales y permisibles para empezar a contestar, antes puede escoger cualquier indicativo, 
-     * luego tiene que responder
-     * @type {number}
-     */
-    private _days_to_answer : number = 5;
+    public is_permissible : boolean = true;
 
-    private _id_first_question_forced = 23;
-    private _id_second_question_forced = 24;
+    
 
 
 
@@ -74,28 +68,11 @@ export class RecommendationsPage {
 		private alertCtrl: AlertController
 	) {
 
-
-		this.loadQuestionUser();
-
-
-        
-
+        this.loadQuestionUser();
 
 	}
 
-	protected _diff_dates(dateq : string){
-
-		var days = 0;
-
-		var dq = new Date(dateq);
-		var b = new Date();
-		var c = b.toISOString();
-		var d = new Date(c);
-
-		days = Math.round((d.getTime()-dq.getTime())/(1000*60*60*24));
-
-		return days;
-	}
+	
 
 
 	protected _before_save_is_false(){
@@ -154,12 +131,24 @@ export class RecommendationsPage {
 		return pass;
 	}
 
+    protected _clean(){
+
+        this._QuestionUser = {
+                    email: "",
+                    user: "",
+                    survey: "",
+                    created_at: "",
+                    updated_at: "",
+                    questions: [],
+                    answers: []
+        };
+        this.Answers = undefined;
+    }
+
 	
-
-
 	protected loadQuestionUser(){
 
-		this._QuestionUserList = this._recommendationsService.getQuestionUserList(this._global.usuario.id)
+		this._QuestionUserList = !this._QuestionUserList ? this._recommendationsService.getQuestionUserList(this._global.usuario.id)
             .snapshotChanges()
             .map(
                 changes => {
@@ -167,42 +156,83 @@ export class RecommendationsPage {
                                     key: c.payload.key, ...c.payload.val()
                             }))
                 }
-        );
+        ) : this._QuestionUserList;
 
         this._QuestionUserList.forEach( item => {
 
-        	this.section = "";
-			this.first = true;
 
-			this.section_a = "";
-			this.first_a = true;
 
-        	if(item.length){
-            	this._QuestionUser = item[0];
+            this.LastSurvey = !this.LastSurvey ? this._recommendationsService.getLastUserSurvey(this._global.usuario.id)
+                .snapshotChanges()
+                .map(
+                    changes => {
+                                return changes.map(c => ({
+                                        key: c.payload.key, ...c.payload.val()
+                                }))
+                    }
+            ) : this.LastSurvey;
 
-            	var diff_dates = this._diff_dates(this._QuestionUser.created_at);
 
-            	console.log(diff_dates);
+            this.LastSurvey.forEach( encuesta => {
 
-            	if( diff_dates >= this._days_to_answer ){
-            		this._question_modality = false
-            	}else{
-            		this._question_modality = true
-            	}
-            	this._insert = false;
-        	}else{
-        		this._insert = true;
-        	}
 
-            console.log(this._QuestionUser);
+                if(encuesta.length){
 
-            if(this._question_modality){
-            	this.loadQuestions();
-            }else{
-            	this.loadAnswers();
-            }
+                    this.is_permissible = true;
 
-            
+                    this.key_latestSurvey = encuesta[0]["key"];
+                    this.date_latestSurvey = encuesta[0]["created_at"];
+
+                    console.log(this.key_latestSurvey);
+
+                    this.section = "";
+                    this.first = true;
+
+                    this.section_a = "";
+                    this.first_a = true;
+
+                    this._question_modality = true;
+
+                    console.log('questions 2');
+
+                    if(item.length){
+
+                        if(item[0]["survey"] == this.key_latestSurvey){
+
+                            this._QuestionUser = item[0];
+
+                            var diff_dates = this._recommendationsService.diff_dates(this._QuestionUser.created_at);
+
+                            console.log(diff_dates);
+
+                            if( diff_dates >= this._recommendationsService.days_to_answer ){
+                                this._question_modality = false
+                            }else{
+                                this._question_modality = true
+                            }
+                            this._insert = false;
+                        }else{
+                            this._insert = true;
+                            this._clean();
+                        }
+                    }else{
+                        this._insert = true;
+                        this._clean();
+                    }
+
+                    console.log(this._QuestionUser);
+
+                    if(this._question_modality){
+                        this.loadQuestions();
+                    }else{
+                        this.loadAnswers();
+                    }
+
+                }else{
+                    this.is_permissible = false;
+                }
+
+            });
            
         });
 
@@ -212,7 +242,7 @@ export class RecommendationsPage {
 
 	protected loadQuestions(){
 
-		this.RecommendationsList = this._recommendationsService.getQuestionsList()
+		this.RecommendationsList = !this.RecommendationsList ? this._recommendationsService.getQuestionsList()
             .snapshotChanges()
             .map(
                 changes => {
@@ -220,7 +250,7 @@ export class RecommendationsPage {
                                     key: c.payload.key, ...c.payload.val()
                             }))
                 }
-        );
+        ) : this.RecommendationsList;
 
         this.RecommendationsList.forEach( item => {
 
@@ -239,8 +269,7 @@ export class RecommendationsPage {
             			checked: false,
             		});
             	}
-            	// LA ULTIMA ENCUESTA
-            	this.get_LastSurvey();
+
             }
 
         });
@@ -251,7 +280,7 @@ export class RecommendationsPage {
 
 	protected loadAnswers(){
 
-		this.AnswersList = this._recommendationsService.getAnswersList()
+		this.AnswersList = !this.AnswersList ? this._recommendationsService.getAnswersList()
             .snapshotChanges()
             .map(
                 changes => {
@@ -259,7 +288,7 @@ export class RecommendationsPage {
                                     key: c.payload.key, ...c.payload.val()
                             }))
                 }
-        );
+        ) : this.AnswersList;
 
         this.AnswersList.forEach( item => {
 
@@ -278,9 +307,9 @@ export class RecommendationsPage {
 
             	if(this.Answers.length){
 
-            		this.Answers[ indice ] = item[ this._id_first_question_forced - 1 ];
+            		this.Answers[ indice ] = item[ this._recommendationsService.id_first_question_forced - 1 ];
 					indice++;
-					this.Answers[ indice ] = item[ this._id_second_question_forced - 1 ];
+					this.Answers[ indice ] = item[ this._recommendationsService.id_second_question_forced - 1 ];
 
             		this.section_a = this.Answers[0]["categoria"];
 
@@ -308,27 +337,7 @@ export class RecommendationsPage {
 
 
 
-	protected get_LastSurvey(){
 
-		this.LastSurvey = this._recommendationsService.getLastUserSurvey(this._global.usuario.id)
-            .snapshotChanges()
-            .map(
-                changes => {
-                            return changes.map(c => ({
-                                    key: c.payload.key, ...c.payload.val()
-                            }))
-                }
-        );
-
-
-        this.LastSurvey.forEach( item => {
-
-            this.key_latestSurvey = item[0]["key"];
-            this.date_latestSurvey = item[0]["created_at"];
-           
-        });
-
-	}
 
 	public changeSection(newSection:string){
 		this.section = newSection;
@@ -421,7 +430,12 @@ export class RecommendationsPage {
             buttons: [
                 {
                     text: 'OK',
-                    role: 'cancelar'
+                    role: 'cancelar',
+                    handler: () => {
+
+                        this.navCtrl.parent.select(1);
+
+                    }
                 }
             ]
         });

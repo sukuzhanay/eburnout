@@ -15,77 +15,85 @@
 
 	<ion-icon name="pulse" class="icono" style="font-size: 50px; text-align: right; padding-left: 50%"></ion-icon>
 
-	<div *ngIf="_question_modality">
+	<div *ngIf="is_permissible">
 
-		<div *ngFor="let recommendation of Recommendations; let i = index">
-	  
-			<div *ngIf="recommendation.categoria != section || i == 0">
+		<div *ngIf="_question_modality && _QuestionUser.questions.length">
+
+			<div *ngFor="let recommendation of Recommendations; let i = index">
+		  
+				<div *ngIf="recommendation.categoria != section || i == 0">
+
+					<ion-item text-wrap>
+					
+						<ion-icon name="happy" darkgreen item-left></ion-icon>
+
+		     			<ion-label>{{recommendation.categoria}}</ion-label>
+
+		     		</ion-item>
+
+					<div [class.inactive]="changeSection(recommendation.categoria)"></div>
+					
+				</div>
 
 				<ion-item text-wrap>
-				
-					<ion-icon name="happy" darkgreen item-left></ion-icon>
 
-	     			<ion-label>{{recommendation.categoria}}</ion-label>
+		     		<ion-label (tap)="AddSelCatego(recommendation);" tappable>{{recommendation.recommendation}}</ion-label>
+		     	
+		     		<ion-checkbox red item-right [(ngModel)]="_QuestionUser.questions[i].checked" (ionChange)="AddSelCatego(recommendation);"></ion-checkbox>
 
-	     		</ion-item>
+				</ion-item>
 
-				<div [class.inactive]="changeSection(recommendation.categoria)"></div>
-				
 			</div>
 
-			<ion-item text-wrap>
+		
 
-	     		<ion-label (tap)="AddSelCatego(recommendation);" tappable>{{recommendation.recommendation}}</ion-label>
-	     	
-	     		<ion-checkbox red item-right [(ngModel)]="_QuestionUser.questions[i].checked" (ionChange)="AddSelCatego(recommendation);"></ion-checkbox>
+			<br/>
+			<br/>
 
-			</ion-item>
+
+			<button ion-button full color="primary" (click)="saveRecomm()">Guardar</button>
 
 		</div>
 
-	
+		<div *ngIf="!_question_modality && _QuestionUser.answers != undefined">
 
-		<br/>
-		<br/>
+			<div *ngIf="_QuestionUser.answers.length">
 
+				<div *ngFor="let Answer of Answers; let j = index">
+			  
+					<div *ngIf="Answer.categoria != section_a || j == 0">
 
-		<button ion-button full color="primary" (click)="saveRecomm()">Guardar</button>
+						<ion-item text-wrap>
+						
+							<ion-icon name="checkmark-circle" darkgreen item-left></ion-icon>
 
-	</div>
+			     			<ion-label>{{Answer.categoria}}</ion-label>
 
-	<div *ngIf="!_question_modality">
+			     		</ion-item>
 
-		<div *ngFor="let Answer of Answers; let j = index">
-	  
-			<div *ngIf="Answer.categoria != section_a || j == 0">
+						<div [class.inactive]="changeSection_a(Answer.categoria)"></div>
+						
+					</div>
 
-				<ion-item text-wrap>
-				
-					<ion-icon name="checkmark-circle" darkgreen item-left></ion-icon>
+					<ion-item text-wrap>
 
-	     			<ion-label>{{Answer.categoria}}</ion-label>
+			     		<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>
+			     	
+			     		<ion-input type="text" [(ngModel)]="_QuestionUser.answers[j].value" placeholder="en minutos, dias, texto"></ion-input>
 
-	     		</ion-item>
+					</ion-item>
 
-				<div [class.inactive]="changeSection_a(Answer.categoria)"></div>
-				
+				</div>
+
 			</div>
 
-			<ion-item text-wrap>
+			<br/>
+			<br/>
 
-	     		<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>
-	     	
-	     		<ion-input type="text" [(ngModel)]="_QuestionUser.answers[j].value" placeholder="en minutos, dias, texto"></ion-input>
 
-			</ion-item>
+			<button ion-button full color="primary" (click)="saveAnswer()">Guardar</button>
 
 		</div>
-
-		<br/>
-		<br/>
-
-
-		<button ion-button full color="primary" (click)="saveAnswer()">Guardar</button>
 
 	</div>
 

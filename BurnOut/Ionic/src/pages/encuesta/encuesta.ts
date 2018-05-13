@@ -38,9 +38,15 @@ export class EncuestaPage {
     date_latestSurvey : string = "";
 
 
-    to_Survey = true;
+    to_Survey = false;
     on_recommendation = false;
     in_response = false;
+
+    diff_dates : number = 0;
+
+    last_survey : boolean = false;
+
+    last_qa_survey;
 
     constructor(
         public navCtrl: NavController,
@@ -62,7 +68,7 @@ export class EncuestaPage {
 
     protected loadQuestionUser(){
 
-        this._QuestionUserList = this._recommendationsService.getQuestionUserList(this._global.usuario.id)
+        this._QuestionUserList = !this._QuestionUserList ? this._recommendationsService.getQuestionUserList(this._global.usuario.id)
             .snapshotChanges()
             .map(
                 changes => {
@@ -70,23 +76,40 @@ export class EncuestaPage {
                                     key: c.payload.key, ...c.payload.val()
                             }))
                 }
-        );
+        ) : this._QuestionUserList;
 
         this._QuestionUserList.forEach( item => {
+
+            this.to_Survey = false;
+            this.on_recommendation = false;
+            this.in_response = false;
+
+            console.log('questions 1');
+            this.last_survey = false;
 
             if(item.length){
 
                 // verifica el status de la tabla recomendacion-contestación
                 this._QuestionUser = item[0];
 
+                console.log(this._QuestionUser);
+
                 if(this._QuestionUser.answers==undefined && this._QuestionUser.questions.length){
                     this.on_recommendation = false;
                     this.in_response = true;
                     this.to_Survey = false;
+
+                    this.diff_dates = this._recommendationsService.diff_dates(this._QuestionUser.created_at);
+
+                    if( this.diff_dates > this._recommendationsService.days_to_answer ){
+                        this.diff_dates = 0;
+                    }else{
+                        this.diff_dates = this._recommendationsService.days_to_answer - this.diff_dates;
+                    }
+
                 }else if(this._QuestionUser.answers.length && this._QuestionUser.questions.length){
-                    this.to_Survey = true;
-                    this.on_recommendation = false;
-                    this.in_response = false;
+                    this.last_survey = true;
+                    this.get_LastSurvey();
                 }
 
             }else{
@@ -96,20 +119,11 @@ export class EncuestaPage {
                 // SIGNIFICA QUE LA ENCUESTA ANTERIOR NO HA TENIDO RETROALIMENTACION, ENTONCES, NO PASA
                 // 
                 // SIGNIFICA QUE NO HA COMENZADO A LLENAR LAS RECOMENDACIONES
-
+                this.last_survey = true;
                 this.get_LastSurvey();
 
-                
-
-                
             }
 
-
-            
-
-
-           
-           
         });
 
 
@@ -118,7 +132,7 @@ export class EncuestaPage {
 
     protected get_LastSurvey(){
 
-        this.LastSurvey = this._recommendationsService.getLastUserSurvey(this._global.usuario.id)
+        this.LastSurvey =  !this.LastSurvey ? this._recommendationsService.getLastUserSurvey(this._global.usuario.id)
             .snapshotChanges()
             .map(
                 changes => {
@@ -126,7 +140,7 @@ export class EncuestaPage {
                                     key: c.payload.key, ...c.payload.val()
                             }))
                 }
-        );
+        ) : this.LastSurvey;
 
 
         this.LastSurvey.forEach( item => {
@@ -134,37 +148,43 @@ export class EncuestaPage {
 
             if(item.length){
 
-                this.key_latestSurvey = item[0]["key"];
-                this.date_latestSurvey = item[0]["created_at"];
+                if(this.last_survey){
 
-                console.log(this.key_latestSurvey);
+                    this.key_latestSurvey = item[0]["key"];
 
-                //VERIFICAR SI EL ID DE LA ENCUESTA NO ESTA EN RECOMENDACIONES_RESPUESTAS,
-                // QUIERE DECIR QUE ESTA A LA ESPERA DE RECOMENDACIONES
-                 
-                var have_recom_last = this._recommendationsService.getQuestionUserPerSurveyList(this.key_latestSurvey)
-                    .valueChanges().subscribe(res => {
+                    console.log(this.key_latestSurvey);
 
-                        console.log(res);
+                    this.date_latestSurvey = item[0]["created_at"];
 
+                    //VERIFICAR SI EL ID DE LA ENCUESTA NO ESTA EN RECOMENDACIONES_RESPUESTAS,
+                    // QUIERE DECIR QUE ESTA A LA ESPERA DE RECOMENDACIONES
+                     
+                    this._recommendationsService.getQuestionUserPerSurveyList(this.key_latestSurvey)
+                        .valueChanges().subscribe(res => {
 
-                        console.log(this.to_Survey);
-                        console.log(this.on_recommendation );
-                        console.log(this.in_response );
+                            console.log(res);
 
+                            if(this.last_survey){
 
+                                if(!res.length){
 
-                    });
+                                    this.to_Survey = false;
+                                    this.on_recommendation = true;
+                                    this.in_response = false;
 
-                
+                                }else{
+                                    this.to_Survey = true;
+                                    this.on_recommendation = false;
+                                    this.in_response = false;
+                                }
 
-                
+                            }
 
+                            this.last_survey = false;
 
-
-
-
-                this.to_Survey = true;
+                        }
+                    );
+                }
 
             }else{
                 this.to_Survey = true;
@@ -175,15 +195,6 @@ export class EncuestaPage {
         });
 
     }
-
-
-
-
-
-
-
-
-
 
 
   ionViewDidLoad() {
@@ -222,7 +233,8 @@ export class EncuestaPage {
     this.database.guardarEncuesta(this.global.usuario.id, this.global.resultadoPreguntas);
     this.resultadoPreguntas = { ae: 0, d: 0, rp: 0, q: '' };
     this.formulario = { mensaje: '' };
-    this.navCtrl.parent.select(0);
+    this.loadQuestionUser();
+    this.navCtrl.parent.select(2);
   }
   /* TERMINAR ENCUESTA */
 
