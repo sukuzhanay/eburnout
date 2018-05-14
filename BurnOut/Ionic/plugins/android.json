@@ -30,6 +30,9 @@
     },
     "cordova-sqlite-storage": {
       "PACKAGE_NAME": "com.ue.burnoutapp"
+    },
+    "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "com.ue.eburnoutapp"
     }
   },
   "dependent_plugins": {}

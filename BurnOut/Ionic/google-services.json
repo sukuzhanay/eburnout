@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "323245343363",
+    "firebase_url": "https://my-first-project-7d187.firebaseio.com",
+    "project_id": "my-first-project-7d187",
+    "storage_bucket": "my-first-project-7d187.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323245343363:android:718b9d8f5427512a",
+        "android_client_info": {
+          "package_name": "com.ue.eburnout"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323245343363-lsf1r4jg298jj4v8c6qf9cie49drmgb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJrP3si4w8Aaf2MPMNplmnUcc-BuxQMKE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:323245343363:android:d1ecb18677b48f57",
+        "android_client_info": {
+          "package_name": "com.ue.eburnoutapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "323245343363-lsf1r4jg298jj4v8c6qf9cie49drmgb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJrP3si4w8Aaf2MPMNplmnUcc-BuxQMKE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

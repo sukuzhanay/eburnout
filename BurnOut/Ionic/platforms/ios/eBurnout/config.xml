@@ -110,4 +110,7 @@
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="orientation" value="portrait" />
+    <feature name="FCMPlugin">
+        <param name="ios-package" value="FCMPlugin" />
+    </feature>
 </widget>

@@ -20,6 +20,7 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { Base64 } from '@ionic-native/base64';
 
+import { FCM } from '@ionic-native/fcm';
 
 
 import { BraceletListService } from '../providers/database/bracelet-list.service';
@@ -76,6 +77,7 @@ export const firebaseConfig = {
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Camera,
+    FCM,
     GlobalProvider,
     DatabaseProvider,
     FitBitServiceProvider,

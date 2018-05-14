@@ -73,6 +73,14 @@ module.exports = [
     "clobbers": [
       "SQLitePlugin"
     ]
+  },
+  {
+    "id": "cordova-plugin-fcm.FCMPlugin",
+    "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+    "pluginId": "cordova-plugin-fcm",
+    "clobbers": [
+      "FCMPlugin"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -85,7 +93,8 @@ module.exports.metadata =
   "cordova-plugin-splashscreen": "4.0.3",
   "cordova-plugin-ionic-webview": "1.1.16",
   "cordova-plugin-inappbrowser": "1.7.2",
-  "cordova-sqlite-storage": "2.1.5"
+  "cordova-sqlite-storage": "2.1.5",
+  "cordova-plugin-fcm": "2.1.2"
 };
 // BOTTOM OF METADATA
 });

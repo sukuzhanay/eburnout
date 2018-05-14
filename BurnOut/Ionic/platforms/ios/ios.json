@@ -47,6 +47,30 @@
             {
               "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"FCMPlugin\"><param name=\"ios-package\" value=\"FCMPlugin\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*/Entitlements-Debug.plist": {
+        "parents": {
+          "aps-environment": [
+            {
+              "xml": "<string>development</string>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "*/Entitlements-Release.plist": {
+        "parents": {
+          "aps-environment": [
+            {
+              "xml": "<string>production</string>",
+              "count": 1
             }
           ]
         }
@@ -77,6 +101,9 @@
     },
     "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "com.ue.eburnout"
+    },
+    "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "com.ue.eburnoutapp"
     }
   },
   "dependent_plugins": {},
@@ -162,6 +189,14 @@
         "cordova.plugins.Keyboard"
       ],
       "runs": true
+    },
+    {
+      "id": "cordova-plugin-fcm.FCMPlugin",
+      "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+      "pluginId": "cordova-plugin-fcm",
+      "clobbers": [
+        "FCMPlugin"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -172,6 +207,7 @@
     "cordova-plugin-splashscreen": "4.0.3",
     "cordova-plugin-whitelist": "1.3.1",
     "cordova-sqlite-storage": "2.1.5",
-    "ionic-plugin-keyboard": "2.2.1"
+    "ionic-plugin-keyboard": "2.2.1",
+    "cordova-plugin-fcm": "2.1.2"
   }
 }
