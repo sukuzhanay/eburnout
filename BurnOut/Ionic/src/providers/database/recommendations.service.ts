@@ -23,7 +23,7 @@ export class RecommendationsService {
      * luego tiene que responder
      * @type {number}
      */
-    public days_to_answer : number = 5;
+    public days_to_answer : number = 7;
 
     public id_first_question_forced = 23;
     public id_second_question_forced = 24;
