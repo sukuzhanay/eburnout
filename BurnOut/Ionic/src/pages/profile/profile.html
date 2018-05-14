@@ -8,20 +8,37 @@
 
 <ion-content>
     
-    <button ion-button icon-start (click)="toPersonalData()">
+    <br/>
+    <br/>
+
+    <button ion-button block icon-start (click)="toPersonalData()">
   		<ion-icon name="logo-buffer"></ion-icon>
   			Mis datos
 	</button>
 
-	<button ion-button icon-start (click)="toAdminBracelet()">
-  		<ion-icon name="finger-print"></ion-icon>
-  			Pulseras
-	</button>
+    <br/>
+    <br/>
 
-  <button ion-button icon-start (click)="toUserBracelet()">
-      <ion-icon name="people"></ion-icon>
-        Usuarios
-  </button>
+    <div *ngIf="is_admin">
+
+    	<button ion-button block icon-start (click)="toAdminBracelet()">
+            <ion-icon name="finger-print"></ion-icon>
+            Pulseras
+        </button>
+
+    </div>
+
+    <br/>
+    <br/>
+
+    <div *ngIf="is_admin">
+
+        <button ion-button block icon-start (click)="toUserBracelet()">
+            <ion-icon name="people"></ion-icon>
+            Usuarios
+        </button>
+
+    </div>
 
 
 	

@@ -35,7 +35,7 @@ import { DataFitBitService } from './../providers/database/datafitbit.service';
 
 import { RecommendationsService } from './../providers/database/recommendations.service';
 
-
+import { Device } from '@ionic-native/device';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyA0mnZssyqo5PieFUUBTipdU9VB9uh0Xvo",
@@ -78,6 +78,7 @@ export const firebaseConfig = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     Camera,
     FCM,
+    Device,
     GlobalProvider,
     DatabaseProvider,
     FitBitServiceProvider,

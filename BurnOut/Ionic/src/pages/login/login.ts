@@ -9,6 +9,9 @@ import 'rxjs/add/observable/combineLatest';
 import { ConsentUserService } from '../../providers/database/consent-user.service';
 
 
+import { Device } from '@ionic-native/device';
+
+
 
 @IonicPage()
 @Component({
@@ -17,22 +20,34 @@ import { ConsentUserService } from '../../providers/database/consent-user.servic
 })
 export class LoginPage {
 
-  formulario: { email: string, password: string };
-  loading: any;
-  observable: any;
+    formulario: { email: string, password: string };
+    loading: any;
+    observable: any;
 
-  private _id : number = 0;
+    private _id : number = 0;
   
 
-  constructor(public navCtrl: NavController, public fireAuth: AngularFireAuth, public toastCtrl: ToastController,
-	  public global: GlobalProvider, public database: DatabaseProvider, public loadingCtrl: 	LoadingController, private consentUserService: ConsentUserService) {
-    this.formulario = { email: '', password: '' };
+    constructor(
+        public navCtrl: NavController,
+        public fireAuth: AngularFireAuth,
+        public toastCtrl: ToastController,
+        public global: GlobalProvider,
+        public database: DatabaseProvider,
+        public loadingCtrl: LoadingController,
+        private consentUserService: ConsentUserService,
+        private device: Device
+    ) {
     
-  }
+        this.formulario = { email: '', password: '' };
 
-  ionViewDidLoad() {
-      this._onInit();
-  }
+    }
+
+  
+    ionViewDidLoad() {
+        
+        this._onInit();
+  
+    }
 
     private _cipher(message, action) {
         var text = message;
@@ -61,6 +76,14 @@ export class LoginPage {
 
 
     private _onInit(){
+
+
+
+
+
+        
+
+
      // Sql lite deactive
 /*
         var _self = this;
@@ -155,10 +178,16 @@ export class LoginPage {
 
   /* LOGIN FIREBASE */
   login() {
+
+
     this.loading = this.loadingCtrl.create({
       content: 'Cargando'
     });
     this.loading.present().then(() => {
+
+          this.toast(this.device.uuid);
+
+
       this.fireAuth.auth.signInWithEmailAndPassword(this.formulario.email, this.formulario.password)
         .then(resultado => {
           this.observable = Observable.combineLatest(
