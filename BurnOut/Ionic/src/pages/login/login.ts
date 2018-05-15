@@ -92,6 +92,7 @@ export class LoginPage {
         this.loading.present().then(() => {
 
             this.toast(this._uuid);
+            console.log(this._uuid);
 
             this.fireAuth.auth.signInWithEmailAndPassword(this.formulario.email, this.formulario.password)
                 .then(resultado => {

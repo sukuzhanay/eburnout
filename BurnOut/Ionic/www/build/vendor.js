@@ -50052,15 +50052,15 @@ function fromRef(ref, event, listenType) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__plugin__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__plugin__ = __webpack_require__(248);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__decorators__ = __webpack_require__(438);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__decorators__ = __webpack_require__(446);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__decorators__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__decorators__["b"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_1__decorators__["c"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(115);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_plugin__ = __webpack_require__(441);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_plugin__ = __webpack_require__(449);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__ionic_native_plugin__["a"]; });
 
 
@@ -78642,21 +78642,54 @@ function waitForLoaded(query, action$) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AngularFireAuth; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase_auth__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase_auth___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_firebase_auth__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_observeOn__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_observeOn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_observeOn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__ = __webpack_require__(237);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_of__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_fromPromise__ = __webpack_require__(432);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_fromPromise__);
+/* unused harmony export HttpBackend */
+/* unused harmony export HttpHandler */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpClient; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return HttpHeaders; });
+/* unused harmony export HTTP_INTERCEPTORS */
+/* unused harmony export JsonpClientBackend */
+/* unused harmony export JsonpInterceptor */
+/* unused harmony export HttpClientJsonpModule */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return HttpClientModule; });
+/* unused harmony export HttpClientXsrfModule */
+/* unused harmony export ɵinterceptingHandler */
+/* unused harmony export HttpParams */
+/* unused harmony export HttpUrlEncodingCodec */
+/* unused harmony export HttpRequest */
+/* unused harmony export HttpErrorResponse */
+/* unused harmony export HttpEventType */
+/* unused harmony export HttpHeaderResponse */
+/* unused harmony export HttpResponse */
+/* unused harmony export HttpResponseBase */
+/* unused harmony export HttpXhrBackend */
+/* unused harmony export XhrFactory */
+/* unused harmony export HttpXsrfTokenExtractor */
+/* unused harmony export ɵa */
+/* unused harmony export ɵb */
+/* unused harmony export ɵc */
+/* unused harmony export ɵd */
+/* unused harmony export ɵg */
+/* unused harmony export ɵh */
+/* unused harmony export ɵe */
+/* unused harmony export ɵf */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__ = __webpack_require__(430);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__ = __webpack_require__(238);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_tslib__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__);
+/**
+ * @license Angular v5.0.1
+ * (c) 2010-2017 Google, Inc. https://angular.io/
+ * License: MIT
+ */
 
 
 
@@ -78665,60 +78698,2729 @@ function waitForLoaded(query, action$) {
 
 
 
-var AngularFireAuth = (function () {
-    function AngularFireAuth(app) {
-        var _this = this;
-        this.app = app;
-        this.auth = app.auth();
-        var authState$ = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"](function (subscriber) {
-            var unsubscribe = _this.auth.onAuthStateChanged(subscriber);
-            return { unsubscribe: unsubscribe };
-        });
-        this.authState = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_observeOn__["observeOn"].call(authState$, new __WEBPACK_IMPORTED_MODULE_4_angularfire2__["c" /* ZoneScheduler */](Zone.current));
-        var idToken$ = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"](function (subscriber) {
-            var unsubscribe = _this.auth.onIdTokenChanged(subscriber);
-            return { unsubscribe: unsubscribe };
-        }).switchMap(function (user) {
-            return user ? __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].fromPromise(user.getIdToken()) : __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].of(null);
-        });
-        this.idToken = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_observeOn__["observeOn"].call(idToken$, new __WEBPACK_IMPORTED_MODULE_4_angularfire2__["c" /* ZoneScheduler */](Zone.current));
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Transforms an `HttpRequest` into a stream of `HttpEvent`s, one of which will likely be a
+ * `HttpResponse`.
+ *
+ * `HttpHandler` is injectable. When injected, the handler instance dispatches requests to the
+ * first interceptor in the chain, which dispatches to the second, etc, eventually reaching the
+ * `HttpBackend`.
+ *
+ * In an `HttpInterceptor`, the `HttpHandler` parameter is the next interceptor in the chain.
+ *
+ * \@stable
+ * @abstract
+ */
+var HttpHandler = (function () {
+    function HttpHandler() {
     }
-    AngularFireAuth.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */] },
-    ];
-    AngularFireAuth.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_4_angularfire2__["b" /* FirebaseApp */], },
-    ]; };
-    return AngularFireAuth;
+    return HttpHandler;
+}());
+/**
+ * A final `HttpHandler` which will dispatch the request via browser HTTP APIs to a backend.
+ *
+ * Interceptors sit between the `HttpClient` interface and the `HttpBackend`.
+ *
+ * When injected, `HttpBackend` dispatches requests directly to the backend, without going
+ * through the interceptor chain.
+ *
+ * \@stable
+ * @abstract
+ */
+var HttpBackend = (function () {
+    function HttpBackend() {
+    }
+    return HttpBackend;
 }());
 
-//# sourceMappingURL=auth.js.map
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @record
+ */
+/**
+ * Immutable set of Http headers, with lazy parsing.
+ * \@stable
+ */
+var HttpHeaders = (function () {
+    function HttpHeaders(headers) {
+        var _this = this;
+        /**
+         * Internal map of lowercased header names to the normalized
+         * form of the name (the form seen first).
+         */
+        this.normalizedNames = new Map();
+        /**
+         * Queued updates to be materialized the next initialization.
+         */
+        this.lazyUpdate = null;
+        if (!headers) {
+            this.headers = new Map();
+        }
+        else if (typeof headers === 'string') {
+            this.lazyInit = function () {
+                _this.headers = new Map();
+                headers.split('\n').forEach(function (line) {
+                    var /** @type {?} */ index = line.indexOf(':');
+                    if (index > 0) {
+                        var /** @type {?} */ name_1 = line.slice(0, index);
+                        var /** @type {?} */ key = name_1.toLowerCase();
+                        var /** @type {?} */ value = line.slice(index + 1).trim();
+                        _this.maybeSetNormalizedName(name_1, key);
+                        if (_this.headers.has(key)) {
+                            /** @type {?} */ ((_this.headers.get(key))).push(value);
+                        }
+                        else {
+                            _this.headers.set(key, [value]);
+                        }
+                    }
+                });
+            };
+        }
+        else {
+            this.lazyInit = function () {
+                _this.headers = new Map();
+                Object.keys(headers).forEach(function (name) {
+                    var /** @type {?} */ values = headers[name];
+                    var /** @type {?} */ key = name.toLowerCase();
+                    if (typeof values === 'string') {
+                        values = [values];
+                    }
+                    if (values.length > 0) {
+                        _this.headers.set(key, values);
+                        _this.maybeSetNormalizedName(name, key);
+                    }
+                });
+            };
+        }
+    }
+    /**
+     * Checks for existence of header by given name.
+     */
+    /**
+     * Checks for existence of header by given name.
+     * @param {?} name
+     * @return {?}
+     */
+    HttpHeaders.prototype.has = /**
+     * Checks for existence of header by given name.
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) {
+        this.init();
+        return this.headers.has(name.toLowerCase());
+    };
+    /**
+     * Returns first header that matches given name.
+     */
+    /**
+     * Returns first header that matches given name.
+     * @param {?} name
+     * @return {?}
+     */
+    HttpHeaders.prototype.get = /**
+     * Returns first header that matches given name.
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) {
+        this.init();
+        var /** @type {?} */ values = this.headers.get(name.toLowerCase());
+        return values && values.length > 0 ? values[0] : null;
+    };
+    /**
+     * Returns the names of the headers
+     */
+    /**
+     * Returns the names of the headers
+     * @return {?}
+     */
+    HttpHeaders.prototype.keys = /**
+     * Returns the names of the headers
+     * @return {?}
+     */
+    function () {
+        this.init();
+        return Array.from(this.normalizedNames.values());
+    };
+    /**
+     * Returns list of header values for a given name.
+     */
+    /**
+     * Returns list of header values for a given name.
+     * @param {?} name
+     * @return {?}
+     */
+    HttpHeaders.prototype.getAll = /**
+     * Returns list of header values for a given name.
+     * @param {?} name
+     * @return {?}
+     */
+    function (name) {
+        this.init();
+        return this.headers.get(name.toLowerCase()) || null;
+    };
+    /**
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    HttpHeaders.prototype.append = /**
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    function (name, value) {
+        return this.clone({ name: name, value: value, op: 'a' });
+    };
+    /**
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    HttpHeaders.prototype.set = /**
+     * @param {?} name
+     * @param {?} value
+     * @return {?}
+     */
+    function (name, value) {
+        return this.clone({ name: name, value: value, op: 's' });
+    };
+    /**
+     * @param {?} name
+     * @param {?=} value
+     * @return {?}
+     */
+    HttpHeaders.prototype.delete = /**
+     * @param {?} name
+     * @param {?=} value
+     * @return {?}
+     */
+    function (name, value) {
+        return this.clone({ name: name, value: value, op: 'd' });
+    };
+    /**
+     * @param {?} name
+     * @param {?} lcName
+     * @return {?}
+     */
+    HttpHeaders.prototype.maybeSetNormalizedName = /**
+     * @param {?} name
+     * @param {?} lcName
+     * @return {?}
+     */
+    function (name, lcName) {
+        if (!this.normalizedNames.has(lcName)) {
+            this.normalizedNames.set(lcName, name);
+        }
+    };
+    /**
+     * @return {?}
+     */
+    HttpHeaders.prototype.init = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        if (!!this.lazyInit) {
+            if (this.lazyInit instanceof HttpHeaders) {
+                this.copyFrom(this.lazyInit);
+            }
+            else {
+                this.lazyInit();
+            }
+            this.lazyInit = null;
+            if (!!this.lazyUpdate) {
+                this.lazyUpdate.forEach(function (update) { return _this.applyUpdate(update); });
+                this.lazyUpdate = null;
+            }
+        }
+    };
+    /**
+     * @param {?} other
+     * @return {?}
+     */
+    HttpHeaders.prototype.copyFrom = /**
+     * @param {?} other
+     * @return {?}
+     */
+    function (other) {
+        var _this = this;
+        other.init();
+        Array.from(other.headers.keys()).forEach(function (key) {
+            _this.headers.set(key, /** @type {?} */ ((other.headers.get(key))));
+            _this.normalizedNames.set(key, /** @type {?} */ ((other.normalizedNames.get(key))));
+        });
+    };
+    /**
+     * @param {?} update
+     * @return {?}
+     */
+    HttpHeaders.prototype.clone = /**
+     * @param {?} update
+     * @return {?}
+     */
+    function (update) {
+        var /** @type {?} */ clone = new HttpHeaders();
+        clone.lazyInit =
+            (!!this.lazyInit && this.lazyInit instanceof HttpHeaders) ? this.lazyInit : this;
+        clone.lazyUpdate = (this.lazyUpdate || []).concat([update]);
+        return clone;
+    };
+    /**
+     * @param {?} update
+     * @return {?}
+     */
+    HttpHeaders.prototype.applyUpdate = /**
+     * @param {?} update
+     * @return {?}
+     */
+    function (update) {
+        var /** @type {?} */ key = update.name.toLowerCase();
+        switch (update.op) {
+            case 'a':
+            case 's':
+                var /** @type {?} */ value = /** @type {?} */ ((update.value));
+                if (typeof value === 'string') {
+                    value = [value];
+                }
+                if (value.length === 0) {
+                    return;
+                }
+                this.maybeSetNormalizedName(update.name, key);
+                var /** @type {?} */ base = (update.op === 'a' ? this.headers.get(key) : undefined) || [];
+                base.push.apply(base, value);
+                this.headers.set(key, base);
+                break;
+            case 'd':
+                var /** @type {?} */ toDelete_1 = /** @type {?} */ (update.value);
+                if (!toDelete_1) {
+                    this.headers.delete(key);
+                    this.normalizedNames.delete(key);
+                }
+                else {
+                    var /** @type {?} */ existing = this.headers.get(key);
+                    if (!existing) {
+                        return;
+                    }
+                    existing = existing.filter(function (value) { return toDelete_1.indexOf(value) === -1; });
+                    if (existing.length === 0) {
+                        this.headers.delete(key);
+                        this.normalizedNames.delete(key);
+                    }
+                    else {
+                        this.headers.set(key, existing);
+                    }
+                }
+                break;
+        }
+    };
+    /**
+     * @internal
+     */
+    /**
+     * \@internal
+     * @param {?} fn
+     * @return {?}
+     */
+    HttpHeaders.prototype.forEach = /**
+     * \@internal
+     * @param {?} fn
+     * @return {?}
+     */
+    function (fn) {
+        var _this = this;
+        this.init();
+        Array.from(this.normalizedNames.keys())
+            .forEach(function (key) { return fn(/** @type {?} */ ((_this.normalizedNames.get(key))), /** @type {?} */ ((_this.headers.get(key)))); });
+    };
+    return HttpHeaders;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * A codec for encoding and decoding parameters in URLs.
+ *
+ * Used by `HttpParams`.
+ *
+ * \@stable
+ *
+ * @record
+ */
+
+/**
+ * A `HttpParameterCodec` that uses `encodeURIComponent` and `decodeURIComponent` to
+ * serialize and parse URL parameter keys and values.
+ *
+ * \@stable
+ */
+var HttpUrlEncodingCodec = (function () {
+    function HttpUrlEncodingCodec() {
+    }
+    /**
+     * @param {?} k
+     * @return {?}
+     */
+    HttpUrlEncodingCodec.prototype.encodeKey = /**
+     * @param {?} k
+     * @return {?}
+     */
+    function (k) { return standardEncoding(k); };
+    /**
+     * @param {?} v
+     * @return {?}
+     */
+    HttpUrlEncodingCodec.prototype.encodeValue = /**
+     * @param {?} v
+     * @return {?}
+     */
+    function (v) { return standardEncoding(v); };
+    /**
+     * @param {?} k
+     * @return {?}
+     */
+    HttpUrlEncodingCodec.prototype.decodeKey = /**
+     * @param {?} k
+     * @return {?}
+     */
+    function (k) { return decodeURIComponent(k); };
+    /**
+     * @param {?} v
+     * @return {?}
+     */
+    HttpUrlEncodingCodec.prototype.decodeValue = /**
+     * @param {?} v
+     * @return {?}
+     */
+    function (v) { return decodeURIComponent(v); };
+    return HttpUrlEncodingCodec;
+}());
+/**
+ * @param {?} rawParams
+ * @param {?} codec
+ * @return {?}
+ */
+function paramParser(rawParams, codec) {
+    var /** @type {?} */ map$$1 = new Map();
+    if (rawParams.length > 0) {
+        var /** @type {?} */ params = rawParams.split('&');
+        params.forEach(function (param) {
+            var /** @type {?} */ eqIdx = param.indexOf('=');
+            var _a = eqIdx == -1 ?
+                [codec.decodeKey(param), ''] :
+                [codec.decodeKey(param.slice(0, eqIdx)), codec.decodeValue(param.slice(eqIdx + 1))], key = _a[0], val = _a[1];
+            var /** @type {?} */ list = map$$1.get(key) || [];
+            list.push(val);
+            map$$1.set(key, list);
+        });
+    }
+    return map$$1;
+}
+/**
+ * @param {?} v
+ * @return {?}
+ */
+function standardEncoding(v) {
+    return encodeURIComponent(v)
+        .replace(/%40/gi, '@')
+        .replace(/%3A/gi, ':')
+        .replace(/%24/gi, '$')
+        .replace(/%2C/gi, ',')
+        .replace(/%3B/gi, ';')
+        .replace(/%2B/gi, '+')
+        .replace(/%3D/gi, '=')
+        .replace(/%3F/gi, '?')
+        .replace(/%2F/gi, '/');
+}
+/**
+ * Options used to construct an `HttpParams` instance.
+ * @record
+ */
+
+/**
+ * An HTTP request/response body that represents serialized parameters,
+ * per the MIME type `application/x-www-form-urlencoded`.
+ *
+ * This class is immutable - all mutation operations return a new instance.
+ *
+ * \@stable
+ */
+var HttpParams = (function () {
+    function HttpParams(options) {
+        if (options === void 0) { options = /** @type {?} */ ({}); }
+        var _this = this;
+        this.updates = null;
+        this.cloneFrom = null;
+        this.encoder = options.encoder || new HttpUrlEncodingCodec();
+        if (!!options.fromString) {
+            if (!!options.fromObject) {
+                throw new Error("Cannot specify both fromString and fromObject.");
+            }
+            this.map = paramParser(options.fromString, this.encoder);
+        }
+        else if (!!options.fromObject) {
+            this.map = new Map();
+            Object.keys(options.fromObject).forEach(function (key) {
+                var /** @type {?} */ value = (/** @type {?} */ (options.fromObject))[key]; /** @type {?} */
+                ((_this.map)).set(key, Array.isArray(value) ? value : [value]);
+            });
+        }
+        else {
+            this.map = null;
+        }
+    }
+    /**
+     * Check whether the body has one or more values for the given parameter name.
+     */
+    /**
+     * Check whether the body has one or more values for the given parameter name.
+     * @param {?} param
+     * @return {?}
+     */
+    HttpParams.prototype.has = /**
+     * Check whether the body has one or more values for the given parameter name.
+     * @param {?} param
+     * @return {?}
+     */
+    function (param) {
+        this.init();
+        return /** @type {?} */ ((this.map)).has(param);
+    };
+    /**
+     * Get the first value for the given parameter name, or `null` if it's not present.
+     */
+    /**
+     * Get the first value for the given parameter name, or `null` if it's not present.
+     * @param {?} param
+     * @return {?}
+     */
+    HttpParams.prototype.get = /**
+     * Get the first value for the given parameter name, or `null` if it's not present.
+     * @param {?} param
+     * @return {?}
+     */
+    function (param) {
+        this.init();
+        var /** @type {?} */ res = /** @type {?} */ ((this.map)).get(param);
+        return !!res ? res[0] : null;
+    };
+    /**
+     * Get all values for the given parameter name, or `null` if it's not present.
+     */
+    /**
+     * Get all values for the given parameter name, or `null` if it's not present.
+     * @param {?} param
+     * @return {?}
+     */
+    HttpParams.prototype.getAll = /**
+     * Get all values for the given parameter name, or `null` if it's not present.
+     * @param {?} param
+     * @return {?}
+     */
+    function (param) {
+        this.init();
+        return /** @type {?} */ ((this.map)).get(param) || null;
+    };
+    /**
+     * Get all the parameter names for this body.
+     */
+    /**
+     * Get all the parameter names for this body.
+     * @return {?}
+     */
+    HttpParams.prototype.keys = /**
+     * Get all the parameter names for this body.
+     * @return {?}
+     */
+    function () {
+        this.init();
+        return Array.from(/** @type {?} */ ((this.map)).keys());
+    };
+    /**
+     * Construct a new body with an appended value for the given parameter name.
+     */
+    /**
+     * Construct a new body with an appended value for the given parameter name.
+     * @param {?} param
+     * @param {?} value
+     * @return {?}
+     */
+    HttpParams.prototype.append = /**
+     * Construct a new body with an appended value for the given parameter name.
+     * @param {?} param
+     * @param {?} value
+     * @return {?}
+     */
+    function (param, value) { return this.clone({ param: param, value: value, op: 'a' }); };
+    /**
+     * Construct a new body with a new value for the given parameter name.
+     */
+    /**
+     * Construct a new body with a new value for the given parameter name.
+     * @param {?} param
+     * @param {?} value
+     * @return {?}
+     */
+    HttpParams.prototype.set = /**
+     * Construct a new body with a new value for the given parameter name.
+     * @param {?} param
+     * @param {?} value
+     * @return {?}
+     */
+    function (param, value) { return this.clone({ param: param, value: value, op: 's' }); };
+    /**
+     * Construct a new body with either the given value for the given parameter
+     * removed, if a value is given, or all values for the given parameter removed
+     * if not.
+     */
+    /**
+     * Construct a new body with either the given value for the given parameter
+     * removed, if a value is given, or all values for the given parameter removed
+     * if not.
+     * @param {?} param
+     * @param {?=} value
+     * @return {?}
+     */
+    HttpParams.prototype.delete = /**
+     * Construct a new body with either the given value for the given parameter
+     * removed, if a value is given, or all values for the given parameter removed
+     * if not.
+     * @param {?} param
+     * @param {?=} value
+     * @return {?}
+     */
+    function (param, value) { return this.clone({ param: param, value: value, op: 'd' }); };
+    /**
+     * Serialize the body to an encoded string, where key-value pairs (separated by `=`) are
+     * separated by `&`s.
+     */
+    /**
+     * Serialize the body to an encoded string, where key-value pairs (separated by `=`) are
+     * separated by `&`s.
+     * @return {?}
+     */
+    HttpParams.prototype.toString = /**
+     * Serialize the body to an encoded string, where key-value pairs (separated by `=`) are
+     * separated by `&`s.
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        this.init();
+        return this.keys()
+            .map(function (key) {
+            var /** @type {?} */ eKey = _this.encoder.encodeKey(key);
+            return /** @type {?} */ ((/** @type {?} */ ((_this.map)).get(key))).map(function (value) { return eKey + '=' + _this.encoder.encodeValue(value); }).join('&');
+        })
+            .join('&');
+    };
+    /**
+     * @param {?} update
+     * @return {?}
+     */
+    HttpParams.prototype.clone = /**
+     * @param {?} update
+     * @return {?}
+     */
+    function (update) {
+        var /** @type {?} */ clone = new HttpParams(/** @type {?} */ ({ encoder: this.encoder }));
+        clone.cloneFrom = this.cloneFrom || this;
+        clone.updates = (this.updates || []).concat([update]);
+        return clone;
+    };
+    /**
+     * @return {?}
+     */
+    HttpParams.prototype.init = /**
+     * @return {?}
+     */
+    function () {
+        var _this = this;
+        if (this.map === null) {
+            this.map = new Map();
+        }
+        if (this.cloneFrom !== null) {
+            this.cloneFrom.init();
+            this.cloneFrom.keys().forEach(function (key) { return /** @type {?} */ ((_this.map)).set(key, /** @type {?} */ ((/** @type {?} */ ((/** @type {?} */ ((_this.cloneFrom)).map)).get(key)))); }); /** @type {?} */
+            ((this.updates)).forEach(function (update) {
+                switch (update.op) {
+                    case 'a':
+                    case 's':
+                        var /** @type {?} */ base = (update.op === 'a' ? /** @type {?} */ ((_this.map)).get(update.param) : undefined) || [];
+                        base.push(/** @type {?} */ ((update.value))); /** @type {?} */
+                        ((_this.map)).set(update.param, base);
+                        break;
+                    case 'd':
+                        if (update.value !== undefined) {
+                            var /** @type {?} */ base_1 = /** @type {?} */ ((_this.map)).get(update.param) || [];
+                            var /** @type {?} */ idx = base_1.indexOf(update.value);
+                            if (idx !== -1) {
+                                base_1.splice(idx, 1);
+                            }
+                            if (base_1.length > 0) {
+                                /** @type {?} */ ((_this.map)).set(update.param, base_1);
+                            }
+                            else {
+                                /** @type {?} */ ((_this.map)).delete(update.param);
+                            }
+                        }
+                        else {
+                            /** @type {?} */ ((_this.map)).delete(update.param);
+                            break;
+                        }
+                }
+            });
+            this.cloneFrom = null;
+        }
+    };
+    return HttpParams;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Determine whether the given HTTP method may include a body.
+ * @param {?} method
+ * @return {?}
+ */
+function mightHaveBody(method) {
+    switch (method) {
+        case 'DELETE':
+        case 'GET':
+        case 'HEAD':
+        case 'OPTIONS':
+        case 'JSONP':
+            return false;
+        default:
+            return true;
+    }
+}
+/**
+ * Safely assert whether the given value is an ArrayBuffer.
+ *
+ * In some execution environments ArrayBuffer is not defined.
+ * @param {?} value
+ * @return {?}
+ */
+function isArrayBuffer(value) {
+    return typeof ArrayBuffer !== 'undefined' && value instanceof ArrayBuffer;
+}
+/**
+ * Safely assert whether the given value is a Blob.
+ *
+ * In some execution environments Blob is not defined.
+ * @param {?} value
+ * @return {?}
+ */
+function isBlob(value) {
+    return typeof Blob !== 'undefined' && value instanceof Blob;
+}
+/**
+ * Safely assert whether the given value is a FormData instance.
+ *
+ * In some execution environments FormData is not defined.
+ * @param {?} value
+ * @return {?}
+ */
+function isFormData(value) {
+    return typeof FormData !== 'undefined' && value instanceof FormData;
+}
+/**
+ * An outgoing HTTP request with an optional typed body.
+ *
+ * `HttpRequest` represents an outgoing request, including URL, method,
+ * headers, body, and other request configuration options. Instances should be
+ * assumed to be immutable. To modify a `HttpRequest`, the `clone`
+ * method should be used.
+ *
+ * \@stable
+ */
+var HttpRequest = (function () {
+    function HttpRequest(method, url, third, fourth) {
+        this.url = url;
+        /**
+         * The request body, or `null` if one isn't set.
+         *
+         * Bodies are not enforced to be immutable, as they can include a reference to any
+         * user-defined data type. However, interceptors should take care to preserve
+         * idempotence by treating them as such.
+         */
+        this.body = null;
+        /**
+         * Whether this request should be made in a way that exposes progress events.
+         *
+         * Progress events are expensive (change detection runs on each event) and so
+         * they should only be requested if the consumer intends to monitor them.
+         */
+        this.reportProgress = false;
+        /**
+         * Whether this request should be sent with outgoing credentials (cookies).
+         */
+        this.withCredentials = false;
+        /**
+         * The expected response type of the server.
+         *
+         * This is used to parse the response appropriately before returning it to
+         * the requestee.
+         */
+        this.responseType = 'json';
+        this.method = method.toUpperCase();
+        // Next, need to figure out which argument holds the HttpRequestInit
+        // options, if any.
+        var /** @type {?} */ options;
+        // Check whether a body argument is expected. The only valid way to omit
+        // the body argument is to use a known no-body method like GET.
+        if (mightHaveBody(this.method) || !!fourth) {
+            // Body is the third argument, options are the fourth.
+            this.body = /** @type {?} */ (third) || null;
+            options = fourth;
+        }
+        else {
+            // No body required, options are the third argument. The body stays null.
+            options = /** @type {?} */ (third);
+        }
+        // If options have been passed, interpret them.
+        if (options) {
+            // Normalize reportProgress and withCredentials.
+            this.reportProgress = !!options.reportProgress;
+            this.withCredentials = !!options.withCredentials;
+            // Override default response type of 'json' if one is provided.
+            if (!!options.responseType) {
+                this.responseType = options.responseType;
+            }
+            // Override headers if they're provided.
+            if (!!options.headers) {
+                this.headers = options.headers;
+            }
+            if (!!options.params) {
+                this.params = options.params;
+            }
+        }
+        // If no headers have been passed in, construct a new HttpHeaders instance.
+        if (!this.headers) {
+            this.headers = new HttpHeaders();
+        }
+        // If no parameters have been passed in, construct a new HttpUrlEncodedParams instance.
+        if (!this.params) {
+            this.params = new HttpParams();
+            this.urlWithParams = url;
+        }
+        else {
+            // Encode the parameters to a string in preparation for inclusion in the URL.
+            var /** @type {?} */ params = this.params.toString();
+            if (params.length === 0) {
+                // No parameters, the visible URL is just the URL given at creation time.
+                this.urlWithParams = url;
+            }
+            else {
+                // Does the URL already have query parameters? Look for '?'.
+                var /** @type {?} */ qIdx = url.indexOf('?');
+                // There are 3 cases to handle:
+                // 1) No existing parameters -> append '?' followed by params.
+                // 2) '?' exists and is followed by existing query string ->
+                //    append '&' followed by params.
+                // 3) '?' exists at the end of the url -> append params directly.
+                // This basically amounts to determining the character, if any, with
+                // which to join the URL and parameters.
+                var /** @type {?} */ sep = qIdx === -1 ? '?' : (qIdx < url.length - 1 ? '&' : '');
+                this.urlWithParams = url + sep + params;
+            }
+        }
+    }
+    /**
+     * Transform the free-form body into a serialized format suitable for
+     * transmission to the server.
+     */
+    /**
+     * Transform the free-form body into a serialized format suitable for
+     * transmission to the server.
+     * @return {?}
+     */
+    HttpRequest.prototype.serializeBody = /**
+     * Transform the free-form body into a serialized format suitable for
+     * transmission to the server.
+     * @return {?}
+     */
+    function () {
+        // If no body is present, no need to serialize it.
+        if (this.body === null) {
+            return null;
+        }
+        // Check whether the body is already in a serialized form. If so,
+        // it can just be returned directly.
+        if (isArrayBuffer(this.body) || isBlob(this.body) || isFormData(this.body) ||
+            typeof this.body === 'string') {
+            return this.body;
+        }
+        // Check whether the body is an instance of HttpUrlEncodedParams.
+        if (this.body instanceof HttpParams) {
+            return this.body.toString();
+        }
+        // Check whether the body is an object or array, and serialize with JSON if so.
+        if (typeof this.body === 'object' || typeof this.body === 'boolean' ||
+            Array.isArray(this.body)) {
+            return JSON.stringify(this.body);
+        }
+        // Fall back on toString() for everything else.
+        return (/** @type {?} */ (this.body)).toString();
+    };
+    /**
+     * Examine the body and attempt to infer an appropriate MIME type
+     * for it.
+     *
+     * If no such type can be inferred, this method will return `null`.
+     */
+    /**
+     * Examine the body and attempt to infer an appropriate MIME type
+     * for it.
+     *
+     * If no such type can be inferred, this method will return `null`.
+     * @return {?}
+     */
+    HttpRequest.prototype.detectContentTypeHeader = /**
+     * Examine the body and attempt to infer an appropriate MIME type
+     * for it.
+     *
+     * If no such type can be inferred, this method will return `null`.
+     * @return {?}
+     */
+    function () {
+        // An empty body has no content type.
+        if (this.body === null) {
+            return null;
+        }
+        // FormData bodies rely on the browser's content type assignment.
+        if (isFormData(this.body)) {
+            return null;
+        }
+        // Blobs usually have their own content type. If it doesn't, then
+        // no type can be inferred.
+        if (isBlob(this.body)) {
+            return this.body.type || null;
+        }
+        // Array buffers have unknown contents and thus no type can be inferred.
+        if (isArrayBuffer(this.body)) {
+            return null;
+        }
+        // Technically, strings could be a form of JSON data, but it's safe enough
+        // to assume they're plain strings.
+        if (typeof this.body === 'string') {
+            return 'text/plain';
+        }
+        // `HttpUrlEncodedParams` has its own content-type.
+        if (this.body instanceof HttpParams) {
+            return 'application/x-www-form-urlencoded;charset=UTF-8';
+        }
+        // Arrays, objects, and numbers will be encoded as JSON.
+        if (typeof this.body === 'object' || typeof this.body === 'number' ||
+            Array.isArray(this.body)) {
+            return 'application/json';
+        }
+        // No type could be inferred.
+        return null;
+    };
+    /**
+     * @param {?=} update
+     * @return {?}
+     */
+    HttpRequest.prototype.clone = /**
+     * @param {?=} update
+     * @return {?}
+     */
+    function (update) {
+        if (update === void 0) { update = {}; }
+        // For method, url, and responseType, take the current value unless
+        // it is overridden in the update hash.
+        var /** @type {?} */ method = update.method || this.method;
+        var /** @type {?} */ url = update.url || this.url;
+        var /** @type {?} */ responseType = update.responseType || this.responseType;
+        // The body is somewhat special - a `null` value in update.body means
+        // whatever current body is present is being overridden with an empty
+        // body, whereas an `undefined` value in update.body implies no
+        // override.
+        var /** @type {?} */ body = (update.body !== undefined) ? update.body : this.body;
+        // Carefully handle the boolean options to differentiate between
+        // `false` and `undefined` in the update args.
+        var /** @type {?} */ withCredentials = (update.withCredentials !== undefined) ? update.withCredentials : this.withCredentials;
+        var /** @type {?} */ reportProgress = (update.reportProgress !== undefined) ? update.reportProgress : this.reportProgress;
+        // Headers and params may be appended to if `setHeaders` or
+        // `setParams` are used.
+        var /** @type {?} */ headers = update.headers || this.headers;
+        var /** @type {?} */ params = update.params || this.params;
+        // Check whether the caller has asked to add headers.
+        if (update.setHeaders !== undefined) {
+            // Set every requested header.
+            headers =
+                Object.keys(update.setHeaders)
+                    .reduce(function (headers, name) { return headers.set(name, /** @type {?} */ ((update.setHeaders))[name]); }, headers);
+        }
+        // Check whether the caller has asked to set params.
+        if (update.setParams) {
+            // Set every requested param.
+            params = Object.keys(update.setParams)
+                .reduce(function (params, param) { return params.set(param, /** @type {?} */ ((update.setParams))[param]); }, params);
+        }
+        // Finally, construct the new HttpRequest using the pieces from above.
+        return new HttpRequest(method, url, body, {
+            params: params, headers: headers, reportProgress: reportProgress, responseType: responseType, withCredentials: withCredentials,
+        });
+    };
+    return HttpRequest;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/** @enum {number} */
+var HttpEventType = {
+    /**
+       * The request was sent out over the wire.
+       */
+    Sent: 0,
+    /**
+       * An upload progress event was received.
+       */
+    UploadProgress: 1,
+    /**
+       * The response status code and headers were received.
+       */
+    ResponseHeader: 2,
+    /**
+       * A download progress event was received.
+       */
+    DownloadProgress: 3,
+    /**
+       * The full response including the body was received.
+       */
+    Response: 4,
+    /**
+       * A custom event from an interceptor or a backend.
+       */
+    User: 5,
+};
+HttpEventType[HttpEventType.Sent] = "Sent";
+HttpEventType[HttpEventType.UploadProgress] = "UploadProgress";
+HttpEventType[HttpEventType.ResponseHeader] = "ResponseHeader";
+HttpEventType[HttpEventType.DownloadProgress] = "DownloadProgress";
+HttpEventType[HttpEventType.Response] = "Response";
+HttpEventType[HttpEventType.User] = "User";
+/**
+ * Base interface for progress events.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * A download progress event.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * An upload progress event.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * An event indicating that the request was sent to the server. Useful
+ * when a request may be retried multiple times, to distinguish between
+ * retries on the final event stream.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * A user-defined event.
+ *
+ * Grouping all custom events under this type ensures they will be handled
+ * and forwarded by all implementations of interceptors.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * An error that represents a failed attempt to JSON.parse text coming back
+ * from the server.
+ *
+ * It bundles the Error object with the actual response body that failed to parse.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * Base class for both `HttpResponse` and `HttpHeaderResponse`.
+ *
+ * \@stable
+ * @abstract
+ */
+var HttpResponseBase = (function () {
+    /**
+     * Super-constructor for all responses.
+     *
+     * The single parameter accepted is an initialization hash. Any properties
+     * of the response passed there will override the default values.
+     */
+    function HttpResponseBase(init, defaultStatus, defaultStatusText) {
+        if (defaultStatus === void 0) { defaultStatus = 200; }
+        if (defaultStatusText === void 0) { defaultStatusText = 'OK'; }
+        // If the hash has values passed, use them to initialize the response.
+        // Otherwise use the default values.
+        this.headers = init.headers || new HttpHeaders();
+        this.status = init.status !== undefined ? init.status : defaultStatus;
+        this.statusText = init.statusText || defaultStatusText;
+        this.url = init.url || null;
+        // Cache the ok value to avoid defining a getter.
+        this.ok = this.status >= 200 && this.status < 300;
+    }
+    return HttpResponseBase;
+}());
+/**
+ * A partial HTTP response which only includes the status and header data,
+ * but no response body.
+ *
+ * `HttpHeaderResponse` is a `HttpEvent` available on the response
+ * event stream, only when progress events are requested.
+ *
+ * \@stable
+ */
+var HttpHeaderResponse = (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_5_tslib__["b" /* __extends */])(HttpHeaderResponse, _super);
+    /**
+     * Create a new `HttpHeaderResponse` with the given parameters.
+     */
+    function HttpHeaderResponse(init) {
+        if (init === void 0) { init = {}; }
+        var _this = _super.call(this, init) || this;
+        _this.type = HttpEventType.ResponseHeader;
+        return _this;
+    }
+    /**
+     * Copy this `HttpHeaderResponse`, overriding its contents with the
+     * given parameter hash.
+     */
+    /**
+     * Copy this `HttpHeaderResponse`, overriding its contents with the
+     * given parameter hash.
+     * @param {?=} update
+     * @return {?}
+     */
+    HttpHeaderResponse.prototype.clone = /**
+     * Copy this `HttpHeaderResponse`, overriding its contents with the
+     * given parameter hash.
+     * @param {?=} update
+     * @return {?}
+     */
+    function (update) {
+        if (update === void 0) { update = {}; }
+        // Perform a straightforward initialization of the new HttpHeaderResponse,
+        // overriding the current parameters with new ones if given.
+        return new HttpHeaderResponse({
+            headers: update.headers || this.headers,
+            status: update.status !== undefined ? update.status : this.status,
+            statusText: update.statusText || this.statusText,
+            url: update.url || this.url || undefined,
+        });
+    };
+    return HttpHeaderResponse;
+}(HttpResponseBase));
+/**
+ * A full HTTP response, including a typed response body (which may be `null`
+ * if one was not returned).
+ *
+ * `HttpResponse` is a `HttpEvent` available on the response event
+ * stream.
+ *
+ * \@stable
+ */
+var HttpResponse = (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_5_tslib__["b" /* __extends */])(HttpResponse, _super);
+    /**
+     * Construct a new `HttpResponse`.
+     */
+    function HttpResponse(init) {
+        if (init === void 0) { init = {}; }
+        var _this = _super.call(this, init) || this;
+        _this.type = HttpEventType.Response;
+        _this.body = init.body || null;
+        return _this;
+    }
+    /**
+     * @param {?=} update
+     * @return {?}
+     */
+    HttpResponse.prototype.clone = /**
+     * @param {?=} update
+     * @return {?}
+     */
+    function (update) {
+        if (update === void 0) { update = {}; }
+        return new HttpResponse({
+            body: (update.body !== undefined) ? update.body : this.body,
+            headers: update.headers || this.headers,
+            status: (update.status !== undefined) ? update.status : this.status,
+            statusText: update.statusText || this.statusText,
+            url: update.url || this.url || undefined,
+        });
+    };
+    return HttpResponse;
+}(HttpResponseBase));
+/**
+ * A response that represents an error or failure, either from a
+ * non-successful HTTP status, an error while executing the request,
+ * or some other failure which occurred during the parsing of the response.
+ *
+ * Any error returned on the `Observable` response stream will be
+ * wrapped in an `HttpErrorResponse` to provide additional context about
+ * the state of the HTTP layer when the error occurred. The error property
+ * will contain either a wrapped Error object or the error response returned
+ * from the server.
+ *
+ * \@stable
+ */
+var HttpErrorResponse = (function (_super) {
+    Object(__WEBPACK_IMPORTED_MODULE_5_tslib__["b" /* __extends */])(HttpErrorResponse, _super);
+    function HttpErrorResponse(init) {
+        var _this = 
+        // Initialize with a default status of 0 / Unknown Error.
+        _super.call(this, init, 0, 'Unknown Error') || this;
+        _this.name = 'HttpErrorResponse';
+        /**
+         * Errors are never okay, even when the status code is in the 2xx success range.
+         */
+        _this.ok = false;
+        // If the response was successful, then this was a parse error. Otherwise, it was
+        // a protocol-level failure of some sort. Either the request failed in transit
+        // or the server returned an unsuccessful status code.
+        if (_this.status >= 200 && _this.status < 300) {
+            _this.message = "Http failure during parsing for " + (init.url || '(unknown url)');
+        }
+        else {
+            _this.message =
+                "Http failure response for " + (init.url || '(unknown url)') + ": " + init.status + " " + init.statusText;
+        }
+        _this.error = init.error || null;
+        return _this;
+    }
+    return HttpErrorResponse;
+}(HttpResponseBase));
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Construct an instance of `HttpRequestOptions<T>` from a source `HttpMethodOptions` and
+ * the given `body`. Basically, this clones the object and adds the body.
+ * @template T
+ * @param {?} options
+ * @param {?} body
+ * @return {?}
+ */
+function addBody(options, body) {
+    return {
+        body: body,
+        headers: options.headers,
+        observe: options.observe,
+        params: options.params,
+        reportProgress: options.reportProgress,
+        responseType: options.responseType,
+        withCredentials: options.withCredentials,
+    };
+}
+/**
+ * Perform HTTP requests.
+ *
+ * `HttpClient` is available as an injectable class, with methods to perform HTTP requests.
+ * Each request method has multiple signatures, and the return type varies according to which
+ * signature is called (mainly the values of `observe` and `responseType`).
+ *
+ * \@stable
+ */
+var HttpClient = (function () {
+    function HttpClient(handler) {
+        this.handler = handler;
+    }
+    /**
+     * Constructs an `Observable` for a particular HTTP request that, when subscribed,
+     * fires the request through the chain of registered interceptors and on to the
+     * server.
+     *
+     * This method can be called in one of two ways. Either an `HttpRequest`
+     * instance can be passed directly as the only parameter, or a method can be
+     * passed as the first parameter, a string URL as the second, and an
+     * options hash as the third.
+     *
+     * If a `HttpRequest` object is passed directly, an `Observable` of the
+     * raw `HttpEvent` stream will be returned.
+     *
+     * If a request is instead built by providing a URL, the options object
+     * determines the return type of `request()`. In addition to configuring
+     * request parameters such as the outgoing headers and/or the body, the options
+     * hash specifies two key pieces of information about the request: the
+     * `responseType` and what to `observe`.
+     *
+     * The `responseType` value determines how a successful response body will be
+     * parsed. If `responseType` is the default `json`, a type interface for the
+     * resulting object may be passed as a type parameter to `request()`.
+     *
+     * The `observe` value determines the return type of `request()`, based on what
+     * the consumer is interested in observing. A value of `events` will return an
+     * `Observable<HttpEvent>` representing the raw `HttpEvent` stream,
+     * including progress events by default. A value of `response` will return an
+     * `Observable<HttpResponse<T>>` where the `T` parameter of `HttpResponse`
+     * depends on the `responseType` and any optionally provided type parameter.
+     * A value of `body` will return an `Observable<T>` with the same `T` body type.
+     */
+    /**
+     * Constructs an `Observable` for a particular HTTP request that, when subscribed,
+     * fires the request through the chain of registered interceptors and on to the
+     * server.
+     *
+     * This method can be called in one of two ways. Either an `HttpRequest`
+     * instance can be passed directly as the only parameter, or a method can be
+     * passed as the first parameter, a string URL as the second, and an
+     * options hash as the third.
+     *
+     * If a `HttpRequest` object is passed directly, an `Observable` of the
+     * raw `HttpEvent` stream will be returned.
+     *
+     * If a request is instead built by providing a URL, the options object
+     * determines the return type of `request()`. In addition to configuring
+     * request parameters such as the outgoing headers and/or the body, the options
+     * hash specifies two key pieces of information about the request: the
+     * `responseType` and what to `observe`.
+     *
+     * The `responseType` value determines how a successful response body will be
+     * parsed. If `responseType` is the default `json`, a type interface for the
+     * resulting object may be passed as a type parameter to `request()`.
+     *
+     * The `observe` value determines the return type of `request()`, based on what
+     * the consumer is interested in observing. A value of `events` will return an
+     * `Observable<HttpEvent>` representing the raw `HttpEvent` stream,
+     * including progress events by default. A value of `response` will return an
+     * `Observable<HttpResponse<T>>` where the `T` parameter of `HttpResponse`
+     * depends on the `responseType` and any optionally provided type parameter.
+     * A value of `body` will return an `Observable<T>` with the same `T` body type.
+     * @param {?} first
+     * @param {?=} url
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.request = /**
+     * Constructs an `Observable` for a particular HTTP request that, when subscribed,
+     * fires the request through the chain of registered interceptors and on to the
+     * server.
+     *
+     * This method can be called in one of two ways. Either an `HttpRequest`
+     * instance can be passed directly as the only parameter, or a method can be
+     * passed as the first parameter, a string URL as the second, and an
+     * options hash as the third.
+     *
+     * If a `HttpRequest` object is passed directly, an `Observable` of the
+     * raw `HttpEvent` stream will be returned.
+     *
+     * If a request is instead built by providing a URL, the options object
+     * determines the return type of `request()`. In addition to configuring
+     * request parameters such as the outgoing headers and/or the body, the options
+     * hash specifies two key pieces of information about the request: the
+     * `responseType` and what to `observe`.
+     *
+     * The `responseType` value determines how a successful response body will be
+     * parsed. If `responseType` is the default `json`, a type interface for the
+     * resulting object may be passed as a type parameter to `request()`.
+     *
+     * The `observe` value determines the return type of `request()`, based on what
+     * the consumer is interested in observing. A value of `events` will return an
+     * `Observable<HttpEvent>` representing the raw `HttpEvent` stream,
+     * including progress events by default. A value of `response` will return an
+     * `Observable<HttpResponse<T>>` where the `T` parameter of `HttpResponse`
+     * depends on the `responseType` and any optionally provided type parameter.
+     * A value of `body` will return an `Observable<T>` with the same `T` body type.
+     * @param {?} first
+     * @param {?=} url
+     * @param {?=} options
+     * @return {?}
+     */
+    function (first, url, options) {
+        var _this = this;
+        if (options === void 0) { options = {}; }
+        var /** @type {?} */ req;
+        // Firstly, check whether the primary argument is an instance of `HttpRequest`.
+        if (first instanceof HttpRequest) {
+            // It is. The other arguments must be undefined (per the signatures) and can be
+            // ignored.
+            req = /** @type {?} */ (first);
+        }
+        else {
+            // It's a string, so it represents a URL. Construct a request based on it,
+            // and incorporate the remaining arguments (assuming GET unless a method is
+            // provided.
+            // Figure out the headers.
+            var /** @type {?} */ headers = undefined;
+            if (!!options.headers !== undefined) {
+                if (options.headers instanceof HttpHeaders) {
+                    headers = options.headers;
+                }
+                else {
+                    headers = new HttpHeaders(options.headers);
+                }
+            }
+            // Sort out parameters.
+            var /** @type {?} */ params = undefined;
+            if (!!options.params) {
+                if (options.params instanceof HttpParams) {
+                    params = options.params;
+                }
+                else {
+                    params = new HttpParams(/** @type {?} */ ({ fromObject: options.params }));
+                }
+            }
+            // Construct the request.
+            req = new HttpRequest(first, /** @type {?} */ ((url)), options.body || null, {
+                headers: headers,
+                params: params,
+                reportProgress: options.reportProgress,
+                // By default, JSON is assumed to be returned for all calls.
+                responseType: options.responseType || 'json',
+                withCredentials: options.withCredentials,
+            });
+        }
+        // Start with an Observable.of() the initial request, and run the handler (which
+        // includes all interceptors) inside a concatMap(). This way, the handler runs
+        // inside an Observable chain, which causes interceptors to be re-run on every
+        // subscription (this also makes retries re-run the handler, including interceptors).
+        var /** @type {?} */ events$ = __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__["concatMap"].call(Object(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__["of"])(req), function (req) { return _this.handler.handle(req); });
+        // If coming via the API signature which accepts a previously constructed HttpRequest,
+        // the only option is to get the event stream. Otherwise, return the event stream if
+        // that is what was requested.
+        if (first instanceof HttpRequest || options.observe === 'events') {
+            return events$;
+        }
+        // The requested stream contains either the full response or the body. In either
+        // case, the first step is to filter the event stream to extract a stream of
+        // responses(s).
+        var /** @type {?} */ res$ = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__["filter"].call(events$, function (event) { return event instanceof HttpResponse; });
+        // Decide which stream to return.
+        switch (options.observe || 'body') {
+            case 'body':
+                // The requested stream is the body. Map the response stream to the response
+                // body. This could be done more simply, but a misbehaving interceptor might
+                // transform the response body into a different format and ignore the requested
+                // responseType. Guard against this by validating that the response is of the
+                // requested type.
+                switch (req.responseType) {
+                    case 'arraybuffer':
+                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"].call(res$, function (res) {
+                            // Validate that the body is an ArrayBuffer.
+                            if (res.body !== null && !(res.body instanceof ArrayBuffer)) {
+                                throw new Error('Response is not an ArrayBuffer.');
+                            }
+                            return res.body;
+                        });
+                    case 'blob':
+                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"].call(res$, function (res) {
+                            // Validate that the body is a Blob.
+                            if (res.body !== null && !(res.body instanceof Blob)) {
+                                throw new Error('Response is not a Blob.');
+                            }
+                            return res.body;
+                        });
+                    case 'text':
+                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"].call(res$, function (res) {
+                            // Validate that the body is a string.
+                            if (res.body !== null && typeof res.body !== 'string') {
+                                throw new Error('Response is not a string.');
+                            }
+                            return res.body;
+                        });
+                    case 'json':
+                    default:
+                        // No validation needed for JSON responses, as they can be of any type.
+                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"].call(res$, function (res) { return res.body; });
+                }
+            case 'response':
+                // The response stream was requested directly, so return it.
+                return res$;
+            default:
+                // Guard against new future observe types being added.
+                throw new Error("Unreachable: unhandled observe type " + options.observe + "}");
+        }
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * DELETE request to be executed on the server. See the individual overloads for
+     * details of `delete()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * DELETE request to be executed on the server. See the individual overloads for
+     * details of `delete()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.delete = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * DELETE request to be executed on the server. See the individual overloads for
+     * details of `delete()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('DELETE', url, /** @type {?} */ (options));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * GET request to be executed on the server. See the individual overloads for
+     * details of `get()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * GET request to be executed on the server. See the individual overloads for
+     * details of `get()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.get = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * GET request to be executed on the server. See the individual overloads for
+     * details of `get()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('GET', url, /** @type {?} */ (options));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * HEAD request to be executed on the server. See the individual overloads for
+     * details of `head()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * HEAD request to be executed on the server. See the individual overloads for
+     * details of `head()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.head = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * HEAD request to be executed on the server. See the individual overloads for
+     * details of `head()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('HEAD', url, /** @type {?} */ (options));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause a request
+     * with the special method `JSONP` to be dispatched via the interceptor pipeline.
+     *
+     * A suitable interceptor must be installed (e.g. via the `HttpClientJsonpModule`).
+     * If no such interceptor is reached, then the `JSONP` request will likely be
+     * rejected by the configured backend.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause a request
+     * with the special method `JSONP` to be dispatched via the interceptor pipeline.
+     *
+     * A suitable interceptor must be installed (e.g. via the `HttpClientJsonpModule`).
+     * If no such interceptor is reached, then the `JSONP` request will likely be
+     * rejected by the configured backend.
+     * @template T
+     * @param {?} url
+     * @param {?} callbackParam
+     * @return {?}
+     */
+    HttpClient.prototype.jsonp = /**
+     * Constructs an `Observable` which, when subscribed, will cause a request
+     * with the special method `JSONP` to be dispatched via the interceptor pipeline.
+     *
+     * A suitable interceptor must be installed (e.g. via the `HttpClientJsonpModule`).
+     * If no such interceptor is reached, then the `JSONP` request will likely be
+     * rejected by the configured backend.
+     * @template T
+     * @param {?} url
+     * @param {?} callbackParam
+     * @return {?}
+     */
+    function (url, callbackParam) {
+        return this.request('JSONP', url, {
+            params: new HttpParams().append(callbackParam, 'JSONP_CALLBACK'),
+            observe: 'body',
+            responseType: 'json',
+        });
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * OPTIONS request to be executed on the server. See the individual overloads for
+     * details of `options()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * OPTIONS request to be executed on the server. See the individual overloads for
+     * details of `options()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.options = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * OPTIONS request to be executed on the server. See the individual overloads for
+     * details of `options()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('OPTIONS', url, /** @type {?} */ (options));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * PATCH request to be executed on the server. See the individual overloads for
+     * details of `patch()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * PATCH request to be executed on the server. See the individual overloads for
+     * details of `patch()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.patch = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * PATCH request to be executed on the server. See the individual overloads for
+     * details of `patch()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, body, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('PATCH', url, addBody(options, body));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.post = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, body, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('POST', url, addBody(options, body));
+    };
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     */
+    /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClient.prototype.put = /**
+     * Constructs an `Observable` which, when subscribed, will cause the configured
+     * POST request to be executed on the server. See the individual overloads for
+     * details of `post()`'s return type based on the provided options.
+     * @param {?} url
+     * @param {?} body
+     * @param {?=} options
+     * @return {?}
+     */
+    function (url, body, options) {
+        if (options === void 0) { options = {}; }
+        return this.request('PUT', url, addBody(options, body));
+    };
+    HttpClient.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
+    ];
+    /** @nocollapse */
+    HttpClient.ctorParameters = function () { return [
+        { type: HttpHandler, },
+    ]; };
+    return HttpClient;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Intercepts `HttpRequest` and handles them.
+ *
+ * Most interceptors will transform the outgoing request before passing it to the
+ * next interceptor in the chain, by calling `next.handle(transformedReq)`.
+ *
+ * In rare cases, interceptors may wish to completely handle a request themselves,
+ * and not delegate to the remainder of the chain. This behavior is allowed.
+ *
+ * \@stable
+ * @record
+ */
+
+/**
+ * `HttpHandler` which applies an `HttpInterceptor` to an `HttpRequest`.
+ *
+ * \@stable
+ */
+var HttpInterceptorHandler = (function () {
+    function HttpInterceptorHandler(next, interceptor) {
+        this.next = next;
+        this.interceptor = interceptor;
+    }
+    /**
+     * @param {?} req
+     * @return {?}
+     */
+    HttpInterceptorHandler.prototype.handle = /**
+     * @param {?} req
+     * @return {?}
+     */
+    function (req) {
+        return this.interceptor.intercept(req, this.next);
+    };
+    return HttpInterceptorHandler;
+}());
+/**
+ * A multi-provider token which represents the array of `HttpInterceptor`s that
+ * are registered.
+ *
+ * \@stable
+ */
+var HTTP_INTERCEPTORS = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* InjectionToken */]('HTTP_INTERCEPTORS');
+var NoopInterceptor = (function () {
+    function NoopInterceptor() {
+    }
+    /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    NoopInterceptor.prototype.intercept = /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    function (req, next) {
+        return next.handle(req);
+    };
+    NoopInterceptor.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
+    ];
+    /** @nocollapse */
+    NoopInterceptor.ctorParameters = function () { return []; };
+    return NoopInterceptor;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+// Every request made through JSONP needs a callback name that's unique across the
+// whole page. Each request is assigned an id and the callback name is constructed
+// from that. The next id to be assigned is tracked in a global variable here that
+// is shared among all applications on the page.
+var nextRequestId = 0;
+// Error text given when a JSONP script is injected, but doesn't invoke the callback
+// passed in its URL.
+var JSONP_ERR_NO_CALLBACK = 'JSONP injected script did not invoke callback.';
+// Error text given when a request is passed to the JsonpClientBackend that doesn't
+// have a request method JSONP.
+var JSONP_ERR_WRONG_METHOD = 'JSONP requests must use JSONP request method.';
+var JSONP_ERR_WRONG_RESPONSE_TYPE = 'JSONP requests must use Json response type.';
+/**
+ * DI token/abstract type representing a map of JSONP callbacks.
+ *
+ * In the browser, this should always be the `window` object.
+ *
+ * \@stable
+ * @abstract
+ */
+var JsonpCallbackContext = (function () {
+    function JsonpCallbackContext() {
+    }
+    return JsonpCallbackContext;
+}());
+/**
+ * `HttpBackend` that only processes `HttpRequest` with the JSONP method,
+ * by performing JSONP style requests.
+ *
+ * \@stable
+ */
+var JsonpClientBackend = (function () {
+    function JsonpClientBackend(callbackMap, document) {
+        this.callbackMap = callbackMap;
+        this.document = document;
+    }
+    /**
+     * Get the name of the next callback method, by incrementing the global `nextRequestId`.
+     * @return {?}
+     */
+    JsonpClientBackend.prototype.nextCallback = /**
+     * Get the name of the next callback method, by incrementing the global `nextRequestId`.
+     * @return {?}
+     */
+    function () { return "ng_jsonp_callback_" + nextRequestId++; };
+    /**
+     * Process a JSONP request and return an event stream of the results.
+     */
+    /**
+     * Process a JSONP request and return an event stream of the results.
+     * @param {?} req
+     * @return {?}
+     */
+    JsonpClientBackend.prototype.handle = /**
+     * Process a JSONP request and return an event stream of the results.
+     * @param {?} req
+     * @return {?}
+     */
+    function (req) {
+        var _this = this;
+        // Firstly, check both the method and response type. If either doesn't match
+        // then the request was improperly routed here and cannot be handled.
+        if (req.method !== 'JSONP') {
+            throw new Error(JSONP_ERR_WRONG_METHOD);
+        }
+        else if (req.responseType !== 'json') {
+            throw new Error(JSONP_ERR_WRONG_RESPONSE_TYPE);
+        }
+        // Everything else happens inside the Observable boundary.
+        return new __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__["Observable"](function (observer) {
+            // The first step to make a request is to generate the callback name, and replace the
+            // callback placeholder in the URL with the name. Care has to be taken here to ensure
+            // a trailing &, if matched, gets inserted back into the URL in the correct place.
+            var /** @type {?} */ callback = _this.nextCallback();
+            var /** @type {?} */ url = req.urlWithParams.replace(/=JSONP_CALLBACK(&|$)/, "=" + callback + "$1");
+            // Construct the <script> tag and point it at the URL.
+            var /** @type {?} */ node = _this.document.createElement('script');
+            node.src = url;
+            // A JSONP request requires waiting for multiple callbacks. These variables
+            // are closed over and track state across those callbacks.
+            // The response object, if one has been received, or null otherwise.
+            var /** @type {?} */ body = null;
+            // Whether the response callback has been called.
+            var /** @type {?} */ finished = false;
+            // Whether the request has been cancelled (and thus any other callbacks)
+            // should be ignored.
+            var /** @type {?} */ cancelled = false;
+            // Set the response callback in this.callbackMap (which will be the window
+            // object in the browser. The script being loaded via the <script> tag will
+            // eventually call this callback.
+            // Set the response callback in this.callbackMap (which will be the window
+            // object in the browser. The script being loaded via the <script> tag will
+            // eventually call this callback.
+            _this.callbackMap[callback] = function (data) {
+                // Data has been received from the JSONP script. Firstly, delete this callback.
+                delete _this.callbackMap[callback];
+                // Next, make sure the request wasn't cancelled in the meantime.
+                if (cancelled) {
+                    return;
+                }
+                // Set state to indicate data was received.
+                body = data;
+                finished = true;
+            };
+            // cleanup() is a utility closure that removes the <script> from the page and
+            // the response callback from the window. This logic is used in both the
+            // success, error, and cancellation paths, so it's extracted out for convenience.
+            var /** @type {?} */ cleanup = function () {
+                // Remove the <script> tag if it's still on the page.
+                if (node.parentNode) {
+                    node.parentNode.removeChild(node);
+                }
+                // Remove the response callback from the callbackMap (window object in the
+                // browser).
+                delete _this.callbackMap[callback];
+            };
+            // onLoad() is the success callback which runs after the response callback
+            // if the JSONP script loads successfully. The event itself is unimportant.
+            // If something went wrong, onLoad() may run without the response callback
+            // having been invoked.
+            var /** @type {?} */ onLoad = function (event) {
+                // Do nothing if the request has been cancelled.
+                if (cancelled) {
+                    return;
+                }
+                // Cleanup the page.
+                cleanup();
+                // Check whether the response callback has run.
+                if (!finished) {
+                    // It hasn't, something went wrong with the request. Return an error via
+                    // the Observable error path. All JSONP errors have status 0.
+                    observer.error(new HttpErrorResponse({
+                        url: url,
+                        status: 0,
+                        statusText: 'JSONP Error',
+                        error: new Error(JSONP_ERR_NO_CALLBACK),
+                    }));
+                    return;
+                }
+                // Success. body either contains the response body or null if none was
+                // returned.
+                observer.next(new HttpResponse({
+                    body: body,
+                    status: 200,
+                    statusText: 'OK', url: url,
+                }));
+                // Complete the stream, the resposne is over.
+                observer.complete();
+            };
+            // onError() is the error callback, which runs if the script returned generates
+            // a Javascript error. It emits the error via the Observable error channel as
+            // a HttpErrorResponse.
+            var /** @type {?} */ onError = function (error) {
+                // If the request was already cancelled, no need to emit anything.
+                if (cancelled) {
+                    return;
+                }
+                cleanup();
+                // Wrap the error in a HttpErrorResponse.
+                observer.error(new HttpErrorResponse({
+                    error: error,
+                    status: 0,
+                    statusText: 'JSONP Error', url: url,
+                }));
+            };
+            // Subscribe to both the success (load) and error events on the <script> tag,
+            // and add it to the page.
+            node.addEventListener('load', onLoad);
+            node.addEventListener('error', onError);
+            _this.document.body.appendChild(node);
+            // The request has now been successfully sent.
+            observer.next({ type: HttpEventType.Sent });
+            // Cancellation handler.
+            return function () {
+                // Track the cancellation so event listeners won't do anything even if already scheduled.
+                cancelled = true;
+                // Remove the event listeners so they won't run if the events later fire.
+                node.removeEventListener('load', onLoad);
+                node.removeEventListener('error', onError);
+                // And finally, clean up the page.
+                cleanup();
+            };
+        });
+    };
+    JsonpClientBackend.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
+    ];
+    /** @nocollapse */
+    JsonpClientBackend.ctorParameters = function () { return [
+        { type: JsonpCallbackContext, },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_6__angular_common__["c" /* DOCUMENT */],] },] },
+    ]; };
+    return JsonpClientBackend;
+}());
+/**
+ * An `HttpInterceptor` which identifies requests with the method JSONP and
+ * shifts them to the `JsonpClientBackend`.
+ *
+ * \@stable
+ */
+var JsonpInterceptor = (function () {
+    function JsonpInterceptor(jsonp) {
+        this.jsonp = jsonp;
+    }
+    /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    JsonpInterceptor.prototype.intercept = /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    function (req, next) {
+        if (req.method === 'JSONP') {
+            return this.jsonp.handle(/** @type {?} */ (req));
+        }
+        // Fall through for normal HTTP requests.
+        return next.handle(req);
+    };
+    JsonpInterceptor.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
+    ];
+    /** @nocollapse */
+    JsonpInterceptor.ctorParameters = function () { return [
+        { type: JsonpClientBackend, },
+    ]; };
+    return JsonpInterceptor;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var XSSI_PREFIX = /^\)\]\}',?\n/;
+/**
+ * Determine an appropriate URL for the response, by checking either
+ * XMLHttpRequest.responseURL or the X-Request-URL header.
+ * @param {?} xhr
+ * @return {?}
+ */
+function getResponseUrl(xhr) {
+    if ('responseURL' in xhr && xhr.responseURL) {
+        return xhr.responseURL;
+    }
+    if (/^X-Request-URL:/m.test(xhr.getAllResponseHeaders())) {
+        return xhr.getResponseHeader('X-Request-URL');
+    }
+    return null;
+}
+/**
+ * A wrapper around the `XMLHttpRequest` constructor.
+ *
+ * \@stable
+ * @abstract
+ */
+var XhrFactory = (function () {
+    function XhrFactory() {
+    }
+    return XhrFactory;
+}());
+/**
+ * A factory for \@{link HttpXhrBackend} that uses the `XMLHttpRequest` browser API.
+ *
+ * \@stable
+ */
+var BrowserXhr = (function () {
+    function BrowserXhr() {
+    }
+    /**
+     * @return {?}
+     */
+    BrowserXhr.prototype.build = /**
+     * @return {?}
+     */
+    function () { return /** @type {?} */ ((new XMLHttpRequest())); };
+    BrowserXhr.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
+    ];
+    /** @nocollapse */
+    BrowserXhr.ctorParameters = function () { return []; };
+    return BrowserXhr;
+}());
+/**
+ * An `HttpBackend` which uses the XMLHttpRequest API to send
+ * requests to a backend server.
+ *
+ * \@stable
+ */
+var HttpXhrBackend = (function () {
+    function HttpXhrBackend(xhrFactory) {
+        this.xhrFactory = xhrFactory;
+    }
+    /**
+     * Process a request and return a stream of response events.
+     */
+    /**
+     * Process a request and return a stream of response events.
+     * @param {?} req
+     * @return {?}
+     */
+    HttpXhrBackend.prototype.handle = /**
+     * Process a request and return a stream of response events.
+     * @param {?} req
+     * @return {?}
+     */
+    function (req) {
+        var _this = this;
+        // Quick check to give a better error message when a user attempts to use
+        // HttpClient.jsonp() without installing the JsonpClientModule
+        if (req.method === 'JSONP') {
+            throw new Error("Attempted to construct Jsonp request without JsonpClientModule installed.");
+        }
+        // Everything happens on Observable subscription.
+        return new __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__["Observable"](function (observer) {
+            // Start by setting up the XHR object with request method, URL, and withCredentials flag.
+            var /** @type {?} */ xhr = _this.xhrFactory.build();
+            xhr.open(req.method, req.urlWithParams);
+            if (!!req.withCredentials) {
+                xhr.withCredentials = true;
+            }
+            // Add all the requested headers.
+            req.headers.forEach(function (name, values) { return xhr.setRequestHeader(name, values.join(',')); });
+            // Add an Accept header if one isn't present already.
+            if (!req.headers.has('Accept')) {
+                xhr.setRequestHeader('Accept', 'application/json, text/plain, */*');
+            }
+            // Auto-detect the Content-Type header if one isn't present already.
+            if (!req.headers.has('Content-Type')) {
+                var /** @type {?} */ detectedType = req.detectContentTypeHeader();
+                // Sometimes Content-Type detection fails.
+                if (detectedType !== null) {
+                    xhr.setRequestHeader('Content-Type', detectedType);
+                }
+            }
+            // Set the responseType if one was requested.
+            if (req.responseType) {
+                var /** @type {?} */ responseType = req.responseType.toLowerCase();
+                // JSON responses need to be processed as text. This is because if the server
+                // returns an XSSI-prefixed JSON response, the browser will fail to parse it,
+                // xhr.response will be null, and xhr.responseText cannot be accessed to
+                // retrieve the prefixed JSON data in order to strip the prefix. Thus, all JSON
+                // is parsed by first requesting text and then applying JSON.parse.
+                xhr.responseType = /** @type {?} */ (((responseType !== 'json') ? responseType : 'text'));
+            }
+            // Serialize the request body if one is present. If not, this will be set to null.
+            var /** @type {?} */ reqBody = req.serializeBody();
+            // If progress events are enabled, response headers will be delivered
+            // in two events - the HttpHeaderResponse event and the full HttpResponse
+            // event. However, since response headers don't change in between these
+            // two events, it doesn't make sense to parse them twice. So headerResponse
+            // caches the data extracted from the response whenever it's first parsed,
+            // to ensure parsing isn't duplicated.
+            var /** @type {?} */ headerResponse = null;
+            // partialFromXhr extracts the HttpHeaderResponse from the current XMLHttpRequest
+            // state, and memoizes it into headerResponse.
+            var /** @type {?} */ partialFromXhr = function () {
+                if (headerResponse !== null) {
+                    return headerResponse;
+                }
+                // Read status and normalize an IE9 bug (http://bugs.jquery.com/ticket/1450).
+                var /** @type {?} */ status = xhr.status === 1223 ? 204 : xhr.status;
+                var /** @type {?} */ statusText = xhr.statusText || 'OK';
+                // Parse headers from XMLHttpRequest - this step is lazy.
+                var /** @type {?} */ headers = new HttpHeaders(xhr.getAllResponseHeaders());
+                // Read the response URL from the XMLHttpResponse instance and fall back on the
+                // request URL.
+                var /** @type {?} */ url = getResponseUrl(xhr) || req.url;
+                // Construct the HttpHeaderResponse and memoize it.
+                headerResponse = new HttpHeaderResponse({ headers: headers, status: status, statusText: statusText, url: url });
+                return headerResponse;
+            };
+            // Next, a few closures are defined for the various events which XMLHttpRequest can
+            // emit. This allows them to be unregistered as event listeners later.
+            // First up is the load event, which represents a response being fully available.
+            var /** @type {?} */ onLoad = function () {
+                // Read response state from the memoized partial data.
+                var _a = partialFromXhr(), headers = _a.headers, status = _a.status, statusText = _a.statusText, url = _a.url;
+                // The body will be read out if present.
+                var /** @type {?} */ body = null;
+                if (status !== 204) {
+                    // Use XMLHttpRequest.response if set, responseText otherwise.
+                    body = (typeof xhr.response === 'undefined') ? xhr.responseText : xhr.response;
+                }
+                // Normalize another potential bug (this one comes from CORS).
+                if (status === 0) {
+                    status = !!body ? 200 : 0;
+                }
+                // ok determines whether the response will be transmitted on the event or
+                // error channel. Unsuccessful status codes (not 2xx) will always be errors,
+                // but a successful status code can still result in an error if the user
+                // asked for JSON data and the body cannot be parsed as such.
+                var /** @type {?} */ ok = status >= 200 && status < 300;
+                // Check whether the body needs to be parsed as JSON (in many cases the browser
+                // will have done that already).
+                if (ok && req.responseType === 'json' && typeof body === 'string') {
+                    // Attempt the parse. If it fails, a parse error should be delivered to the user.
+                    body = body.replace(XSSI_PREFIX, '');
+                    try {
+                        body = JSON.parse(body);
+                    }
+                    catch (/** @type {?} */ error) {
+                        // Even though the response status was 2xx, this is still an error.
+                        ok = false;
+                        // The parse error contains the text of the body that failed to parse.
+                        body = /** @type {?} */ ({ error: error, text: body });
+                    }
+                }
+                else if (!ok && req.responseType === 'json' && typeof body === 'string') {
+                    try {
+                        // Attempt to parse the body as JSON.
+                        body = JSON.parse(body);
+                    }
+                    catch (/** @type {?} */ error) {
+                        // Cannot be certain that the body was meant to be parsed as JSON.
+                        // Leave the body as a string.
+                    }
+                }
+                if (ok) {
+                    // A successful response is delivered on the event stream.
+                    observer.next(new HttpResponse({
+                        body: body,
+                        headers: headers,
+                        status: status,
+                        statusText: statusText,
+                        url: url || undefined,
+                    }));
+                    // The full body has been received and delivered, no further events
+                    // are possible. This request is complete.
+                    observer.complete();
+                }
+                else {
+                    // An unsuccessful request is delivered on the error channel.
+                    observer.error(new HttpErrorResponse({
+                        // The error in this case is the response body (error from the server).
+                        error: body,
+                        headers: headers,
+                        status: status,
+                        statusText: statusText,
+                        url: url || undefined,
+                    }));
+                }
+            };
+            // The onError callback is called when something goes wrong at the network level.
+            // Connection timeout, DNS error, offline, etc. These are actual errors, and are
+            // transmitted on the error channel.
+            var /** @type {?} */ onError = function (error) {
+                var /** @type {?} */ res = new HttpErrorResponse({
+                    error: error,
+                    status: xhr.status || 0,
+                    statusText: xhr.statusText || 'Unknown Error',
+                });
+                observer.error(res);
+            };
+            // The sentHeaders flag tracks whether the HttpResponseHeaders event
+            // has been sent on the stream. This is necessary to track if progress
+            // is enabled since the event will be sent on only the first download
+            // progerss event.
+            var /** @type {?} */ sentHeaders = false;
+            // The download progress event handler, which is only registered if
+            // progress events are enabled.
+            var /** @type {?} */ onDownProgress = function (event) {
+                // Send the HttpResponseHeaders event if it hasn't been sent already.
+                if (!sentHeaders) {
+                    observer.next(partialFromXhr());
+                    sentHeaders = true;
+                }
+                // Start building the download progress event to deliver on the response
+                // event stream.
+                var /** @type {?} */ progressEvent = {
+                    type: HttpEventType.DownloadProgress,
+                    loaded: event.loaded,
+                };
+                // Set the total number of bytes in the event if it's available.
+                if (event.lengthComputable) {
+                    progressEvent.total = event.total;
+                }
+                // If the request was for text content and a partial response is
+                // available on XMLHttpRequest, include it in the progress event
+                // to allow for streaming reads.
+                if (req.responseType === 'text' && !!xhr.responseText) {
+                    progressEvent.partialText = xhr.responseText;
+                }
+                // Finally, fire the event.
+                observer.next(progressEvent);
+            };
+            // The upload progress event handler, which is only registered if
+            // progress events are enabled.
+            var /** @type {?} */ onUpProgress = function (event) {
+                // Upload progress events are simpler. Begin building the progress
+                // event.
+                var /** @type {?} */ progress = {
+                    type: HttpEventType.UploadProgress,
+                    loaded: event.loaded,
+                };
+                // If the total number of bytes being uploaded is available, include
+                // it.
+                if (event.lengthComputable) {
+                    progress.total = event.total;
+                }
+                // Send the event.
+                observer.next(progress);
+            };
+            // By default, register for load and error events.
+            xhr.addEventListener('load', onLoad);
+            xhr.addEventListener('error', onError);
+            // Progress events are only enabled if requested.
+            if (req.reportProgress) {
+                // Download progress is always enabled if requested.
+                xhr.addEventListener('progress', onDownProgress);
+                // Upload progress depends on whether there is a body to upload.
+                if (reqBody !== null && xhr.upload) {
+                    xhr.upload.addEventListener('progress', onUpProgress);
+                }
+            }
+            // Fire the request, and notify the event stream that it was fired.
+            xhr.send(reqBody);
+            observer.next({ type: HttpEventType.Sent });
+            // This is the return from the Observable function, which is the
+            // request cancellation handler.
+            return function () {
+                // On a cancellation, remove all registered event listeners.
+                xhr.removeEventListener('error', onError);
+                xhr.removeEventListener('load', onLoad);
+                if (req.reportProgress) {
+                    xhr.removeEventListener('progress', onDownProgress);
+                    if (reqBody !== null && xhr.upload) {
+                        xhr.upload.removeEventListener('progress', onUpProgress);
+                    }
+                }
+                // Finally, abort the in-flight request.
+                xhr.abort();
+            };
+        });
+    };
+    HttpXhrBackend.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
+    ];
+    /** @nocollapse */
+    HttpXhrBackend.ctorParameters = function () { return [
+        { type: XhrFactory, },
+    ]; };
+    return HttpXhrBackend;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var XSRF_COOKIE_NAME = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* InjectionToken */]('XSRF_COOKIE_NAME');
+var XSRF_HEADER_NAME = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* InjectionToken */]('XSRF_HEADER_NAME');
+/**
+ * Retrieves the current XSRF token to use with the next outgoing request.
+ *
+ * \@stable
+ * @abstract
+ */
+var HttpXsrfTokenExtractor = (function () {
+    function HttpXsrfTokenExtractor() {
+    }
+    return HttpXsrfTokenExtractor;
+}());
+/**
+ * `HttpXsrfTokenExtractor` which retrieves the token from a cookie.
+ */
+var HttpXsrfCookieExtractor = (function () {
+    function HttpXsrfCookieExtractor(doc, platform, cookieName) {
+        this.doc = doc;
+        this.platform = platform;
+        this.cookieName = cookieName;
+        this.lastCookieString = '';
+        this.lastToken = null;
+        /**
+         * \@internal for testing
+         */
+        this.parseCount = 0;
+    }
+    /**
+     * @return {?}
+     */
+    HttpXsrfCookieExtractor.prototype.getToken = /**
+     * @return {?}
+     */
+    function () {
+        if (this.platform === 'server') {
+            return null;
+        }
+        var /** @type {?} */ cookieString = this.doc.cookie || '';
+        if (cookieString !== this.lastCookieString) {
+            this.parseCount++;
+            this.lastToken = Object(__WEBPACK_IMPORTED_MODULE_6__angular_common__["j" /* ɵparseCookieValue */])(cookieString, this.cookieName);
+            this.lastCookieString = cookieString;
+        }
+        return this.lastToken;
+    };
+    HttpXsrfCookieExtractor.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
+    ];
+    /** @nocollapse */
+    HttpXsrfCookieExtractor.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_6__angular_common__["c" /* DOCUMENT */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* PLATFORM_ID */],] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */], args: [XSRF_COOKIE_NAME,] },] },
+    ]; };
+    return HttpXsrfCookieExtractor;
+}());
+/**
+ * `HttpInterceptor` which adds an XSRF token to eligible outgoing requests.
+ */
+var HttpXsrfInterceptor = (function () {
+    function HttpXsrfInterceptor(tokenService, headerName) {
+        this.tokenService = tokenService;
+        this.headerName = headerName;
+    }
+    /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    HttpXsrfInterceptor.prototype.intercept = /**
+     * @param {?} req
+     * @param {?} next
+     * @return {?}
+     */
+    function (req, next) {
+        var /** @type {?} */ lcUrl = req.url.toLowerCase();
+        // Skip both non-mutating requests and absolute URLs.
+        // Non-mutating requests don't require a token, and absolute URLs require special handling
+        // anyway as the cookie set
+        // on our origin is not the same as the token expected by another origin.
+        if (req.method === 'GET' || req.method === 'HEAD' || lcUrl.startsWith('http://') ||
+            lcUrl.startsWith('https://')) {
+            return next.handle(req);
+        }
+        var /** @type {?} */ token = this.tokenService.getToken();
+        // Be careful not to overwrite an existing header of the same name.
+        if (token !== null && !req.headers.has(this.headerName)) {
+            req = req.clone({ headers: req.headers.set(this.headerName, token) });
+        }
+        return next.handle(req);
+    };
+    HttpXsrfInterceptor.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
+    ];
+    /** @nocollapse */
+    HttpXsrfInterceptor.ctorParameters = function () { return [
+        { type: HttpXsrfTokenExtractor, },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */], args: [XSRF_HEADER_NAME,] },] },
+    ]; };
+    return HttpXsrfInterceptor;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * Constructs an `HttpHandler` that applies a bunch of `HttpInterceptor`s
+ * to a request before passing it to the given `HttpBackend`.
+ *
+ * Meant to be used as a factory function within `HttpClientModule`.
+ *
+ * \@stable
+ * @param {?} backend
+ * @param {?=} interceptors
+ * @return {?}
+ */
+function interceptingHandler(backend, interceptors) {
+    if (interceptors === void 0) { interceptors = []; }
+    if (!interceptors) {
+        return backend;
+    }
+    return interceptors.reduceRight(function (next, interceptor) { return new HttpInterceptorHandler(next, interceptor); }, backend);
+}
+/**
+ * Factory function that determines where to store JSONP callbacks.
+ *
+ * Ordinarily JSONP callbacks are stored on the `window` object, but this may not exist
+ * in test environments. In that case, callbacks are stored on an anonymous object instead.
+ *
+ * \@stable
+ * @return {?}
+ */
+function jsonpCallbackContext() {
+    if (typeof window === 'object') {
+        return window;
+    }
+    return {};
+}
+/**
+ * `NgModule` which adds XSRF protection support to outgoing requests.
+ *
+ * Provided the server supports a cookie-based XSRF protection system, this
+ * module can be used directly to configure XSRF protection with the correct
+ * cookie and header names.
+ *
+ * If no such names are provided, the default is to use `X-XSRF-TOKEN` for
+ * the header name and `XSRF-TOKEN` for the cookie name.
+ *
+ * \@stable
+ */
+var HttpClientXsrfModule = (function () {
+    function HttpClientXsrfModule() {
+    }
+    /**
+     * Disable the default XSRF protection.
+     */
+    /**
+     * Disable the default XSRF protection.
+     * @return {?}
+     */
+    HttpClientXsrfModule.disable = /**
+     * Disable the default XSRF protection.
+     * @return {?}
+     */
+    function () {
+        return {
+            ngModule: HttpClientXsrfModule,
+            providers: [
+                { provide: HttpXsrfInterceptor, useClass: NoopInterceptor },
+            ],
+        };
+    };
+    /**
+     * Configure XSRF protection to use the given cookie name or header name,
+     * or the default names (as described above) if not provided.
+     */
+    /**
+     * Configure XSRF protection to use the given cookie name or header name,
+     * or the default names (as described above) if not provided.
+     * @param {?=} options
+     * @return {?}
+     */
+    HttpClientXsrfModule.withOptions = /**
+     * Configure XSRF protection to use the given cookie name or header name,
+     * or the default names (as described above) if not provided.
+     * @param {?=} options
+     * @return {?}
+     */
+    function (options) {
+        if (options === void 0) { options = {}; }
+        return {
+            ngModule: HttpClientXsrfModule,
+            providers: [
+                options.cookieName ? { provide: XSRF_COOKIE_NAME, useValue: options.cookieName } : [],
+                options.headerName ? { provide: XSRF_HEADER_NAME, useValue: options.headerName } : [],
+            ],
+        };
+    };
+    HttpClientXsrfModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */], args: [{
+                    providers: [
+                        HttpXsrfInterceptor,
+                        { provide: HTTP_INTERCEPTORS, useExisting: HttpXsrfInterceptor, multi: true },
+                        { provide: HttpXsrfTokenExtractor, useClass: HttpXsrfCookieExtractor },
+                        { provide: XSRF_COOKIE_NAME, useValue: 'XSRF-TOKEN' },
+                        { provide: XSRF_HEADER_NAME, useValue: 'X-XSRF-TOKEN' },
+                    ],
+                },] },
+    ];
+    /** @nocollapse */
+    HttpClientXsrfModule.ctorParameters = function () { return []; };
+    return HttpClientXsrfModule;
+}());
+/**
+ * `NgModule` which provides the `HttpClient` and associated services.
+ *
+ * Interceptors can be added to the chain behind `HttpClient` by binding them
+ * to the multiprovider for `HTTP_INTERCEPTORS`.
+ *
+ * \@stable
+ */
+var HttpClientModule = (function () {
+    function HttpClientModule() {
+    }
+    HttpClientModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */], args: [{
+                    imports: [
+                        HttpClientXsrfModule.withOptions({
+                            cookieName: 'XSRF-TOKEN',
+                            headerName: 'X-XSRF-TOKEN',
+                        }),
+                    ],
+                    providers: [
+                        HttpClient,
+                        // HttpHandler is the backend + interceptors and is constructed
+                        // using the interceptingHandler factory function.
+                        {
+                            provide: HttpHandler,
+                            useFactory: interceptingHandler,
+                            deps: [HttpBackend, [new __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */](), new __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */](HTTP_INTERCEPTORS)]],
+                        },
+                        HttpXhrBackend,
+                        { provide: HttpBackend, useExisting: HttpXhrBackend },
+                        BrowserXhr,
+                        { provide: XhrFactory, useExisting: BrowserXhr },
+                    ],
+                },] },
+    ];
+    /** @nocollapse */
+    HttpClientModule.ctorParameters = function () { return []; };
+    return HttpClientModule;
+}());
+/**
+ * `NgModule` which enables JSONP support in `HttpClient`.
+ *
+ * Without this module, Jsonp requests will reach the backend
+ * with method JSONP, where they'll be rejected.
+ *
+ * \@stable
+ */
+var HttpClientJsonpModule = (function () {
+    function HttpClientJsonpModule() {
+    }
+    HttpClientJsonpModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */], args: [{
+                    providers: [
+                        JsonpClientBackend,
+                        { provide: JsonpCallbackContext, useFactory: jsonpCallbackContext },
+                        { provide: HTTP_INTERCEPTORS, useClass: JsonpInterceptor, multi: true },
+                    ],
+                },] },
+    ];
+    /** @nocollapse */
+    HttpClientJsonpModule.ctorParameters = function () { return []; };
+    return HttpClientJsonpModule;
+}());
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes} checked by tsc
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+//# sourceMappingURL=http.js.map
+
 
 /***/ }),
 /* 242 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/**
- * Copyright 2017 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IonicStorageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__storage__ = __webpack_require__(435);
+/* unused harmony reexport StorageConfigToken */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__storage__["a"]; });
 
-__webpack_require__(431);
+
+
+var IonicStorageModule = (function () {
+    function IonicStorageModule() {
+    }
+    IonicStorageModule.forRoot = function (storageConfig) {
+        if (storageConfig === void 0) { storageConfig = null; }
+        return {
+            ngModule: IonicStorageModule,
+            providers: [
+                { provide: __WEBPACK_IMPORTED_MODULE_1__storage__["b" /* StorageConfigToken */], useValue: storageConfig },
+                { provide: __WEBPACK_IMPORTED_MODULE_1__storage__["a" /* Storage */], useFactory: __WEBPACK_IMPORTED_MODULE_1__storage__["c" /* provideStorage */], deps: [__WEBPACK_IMPORTED_MODULE_1__storage__["b" /* StorageConfigToken */]] },
+            ]
+        };
+    };
+    IonicStorageModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */], args: [{},] },
+    ];
+    /** @nocollapse */
+    IonicStorageModule.ctorParameters = function () { return []; };
+    return IonicStorageModule;
+}());
+
 
 
 /***/ }),
-/* 243 */
+/* 243 */,
+/* 244 */,
+/* 245 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81502,7 +84204,87 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["_7" /* Version */
 
 
 /***/ }),
-/* 244 */
+/* 246 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AngularFireAuth; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase_auth__ = __webpack_require__(247);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_firebase_auth___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_firebase_auth__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_observeOn__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_observeOn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_observeOn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angularfire2__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_switchMap__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_of__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_fromPromise__ = __webpack_require__(440);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_observable_fromPromise__);
+
+
+
+
+
+
+
+
+var AngularFireAuth = (function () {
+    function AngularFireAuth(app) {
+        var _this = this;
+        this.app = app;
+        this.auth = app.auth();
+        var authState$ = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"](function (subscriber) {
+            var unsubscribe = _this.auth.onAuthStateChanged(subscriber);
+            return { unsubscribe: unsubscribe };
+        });
+        this.authState = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_observeOn__["observeOn"].call(authState$, new __WEBPACK_IMPORTED_MODULE_4_angularfire2__["c" /* ZoneScheduler */](Zone.current));
+        var idToken$ = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"](function (subscriber) {
+            var unsubscribe = _this.auth.onIdTokenChanged(subscriber);
+            return { unsubscribe: unsubscribe };
+        }).switchMap(function (user) {
+            return user ? __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].fromPromise(user.getIdToken()) : __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].of(null);
+        });
+        this.idToken = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_observeOn__["observeOn"].call(idToken$, new __WEBPACK_IMPORTED_MODULE_4_angularfire2__["c" /* ZoneScheduler */](Zone.current));
+    }
+    AngularFireAuth.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */] },
+    ];
+    AngularFireAuth.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_4_angularfire2__["b" /* FirebaseApp */], },
+    ]; };
+    return AngularFireAuth;
+}());
+
+//# sourceMappingURL=auth.js.map
+
+/***/ }),
+/* 247 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+__webpack_require__(439);
+
+
+/***/ }),
+/* 248 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81515,10 +84297,10 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["_7" /* Version */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return wrap; });
 /* harmony export (immutable) */ __webpack_exports__["e"] = wrapInstance;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bootstrap__ = __webpack_require__(434);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__bootstrap__ = __webpack_require__(442);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_fromEvent__ = __webpack_require__(435);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_fromEvent__ = __webpack_require__(443);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_fromEvent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_fromEvent__);
 
 
@@ -81914,2788 +84696,6 @@ function wrapInstance(pluginObj, methodName, opts) {
 //# sourceMappingURL=plugin.js.map
 
 /***/ }),
-/* 245 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export HttpBackend */
-/* unused harmony export HttpHandler */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpClient; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return HttpHeaders; });
-/* unused harmony export HTTP_INTERCEPTORS */
-/* unused harmony export JsonpClientBackend */
-/* unused harmony export JsonpInterceptor */
-/* unused harmony export HttpClientJsonpModule */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return HttpClientModule; });
-/* unused harmony export HttpClientXsrfModule */
-/* unused harmony export ɵinterceptingHandler */
-/* unused harmony export HttpParams */
-/* unused harmony export HttpUrlEncodingCodec */
-/* unused harmony export HttpRequest */
-/* unused harmony export HttpErrorResponse */
-/* unused harmony export HttpEventType */
-/* unused harmony export HttpHeaderResponse */
-/* unused harmony export HttpResponse */
-/* unused harmony export HttpResponseBase */
-/* unused harmony export HttpXhrBackend */
-/* unused harmony export XhrFactory */
-/* unused harmony export HttpXsrfTokenExtractor */
-/* unused harmony export ɵa */
-/* unused harmony export ɵb */
-/* unused harmony export ɵc */
-/* unused harmony export ɵd */
-/* unused harmony export ɵg */
-/* unused harmony export ɵh */
-/* unused harmony export ɵe */
-/* unused harmony export ɵf */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__ = __webpack_require__(236);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__ = __webpack_require__(442);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__ = __webpack_require__(238);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_tslib__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__);
-/**
- * @license Angular v5.0.1
- * (c) 2010-2017 Google, Inc. https://angular.io/
- * License: MIT
- */
-
-
-
-
-
-
-
-
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * Transforms an `HttpRequest` into a stream of `HttpEvent`s, one of which will likely be a
- * `HttpResponse`.
- *
- * `HttpHandler` is injectable. When injected, the handler instance dispatches requests to the
- * first interceptor in the chain, which dispatches to the second, etc, eventually reaching the
- * `HttpBackend`.
- *
- * In an `HttpInterceptor`, the `HttpHandler` parameter is the next interceptor in the chain.
- *
- * \@stable
- * @abstract
- */
-var HttpHandler = (function () {
-    function HttpHandler() {
-    }
-    return HttpHandler;
-}());
-/**
- * A final `HttpHandler` which will dispatch the request via browser HTTP APIs to a backend.
- *
- * Interceptors sit between the `HttpClient` interface and the `HttpBackend`.
- *
- * When injected, `HttpBackend` dispatches requests directly to the backend, without going
- * through the interceptor chain.
- *
- * \@stable
- * @abstract
- */
-var HttpBackend = (function () {
-    function HttpBackend() {
-    }
-    return HttpBackend;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * @record
- */
-/**
- * Immutable set of Http headers, with lazy parsing.
- * \@stable
- */
-var HttpHeaders = (function () {
-    function HttpHeaders(headers) {
-        var _this = this;
-        /**
-         * Internal map of lowercased header names to the normalized
-         * form of the name (the form seen first).
-         */
-        this.normalizedNames = new Map();
-        /**
-         * Queued updates to be materialized the next initialization.
-         */
-        this.lazyUpdate = null;
-        if (!headers) {
-            this.headers = new Map();
-        }
-        else if (typeof headers === 'string') {
-            this.lazyInit = function () {
-                _this.headers = new Map();
-                headers.split('\n').forEach(function (line) {
-                    var /** @type {?} */ index = line.indexOf(':');
-                    if (index > 0) {
-                        var /** @type {?} */ name_1 = line.slice(0, index);
-                        var /** @type {?} */ key = name_1.toLowerCase();
-                        var /** @type {?} */ value = line.slice(index + 1).trim();
-                        _this.maybeSetNormalizedName(name_1, key);
-                        if (_this.headers.has(key)) {
-                            /** @type {?} */ ((_this.headers.get(key))).push(value);
-                        }
-                        else {
-                            _this.headers.set(key, [value]);
-                        }
-                    }
-                });
-            };
-        }
-        else {
-            this.lazyInit = function () {
-                _this.headers = new Map();
-                Object.keys(headers).forEach(function (name) {
-                    var /** @type {?} */ values = headers[name];
-                    var /** @type {?} */ key = name.toLowerCase();
-                    if (typeof values === 'string') {
-                        values = [values];
-                    }
-                    if (values.length > 0) {
-                        _this.headers.set(key, values);
-                        _this.maybeSetNormalizedName(name, key);
-                    }
-                });
-            };
-        }
-    }
-    /**
-     * Checks for existence of header by given name.
-     */
-    /**
-     * Checks for existence of header by given name.
-     * @param {?} name
-     * @return {?}
-     */
-    HttpHeaders.prototype.has = /**
-     * Checks for existence of header by given name.
-     * @param {?} name
-     * @return {?}
-     */
-    function (name) {
-        this.init();
-        return this.headers.has(name.toLowerCase());
-    };
-    /**
-     * Returns first header that matches given name.
-     */
-    /**
-     * Returns first header that matches given name.
-     * @param {?} name
-     * @return {?}
-     */
-    HttpHeaders.prototype.get = /**
-     * Returns first header that matches given name.
-     * @param {?} name
-     * @return {?}
-     */
-    function (name) {
-        this.init();
-        var /** @type {?} */ values = this.headers.get(name.toLowerCase());
-        return values && values.length > 0 ? values[0] : null;
-    };
-    /**
-     * Returns the names of the headers
-     */
-    /**
-     * Returns the names of the headers
-     * @return {?}
-     */
-    HttpHeaders.prototype.keys = /**
-     * Returns the names of the headers
-     * @return {?}
-     */
-    function () {
-        this.init();
-        return Array.from(this.normalizedNames.values());
-    };
-    /**
-     * Returns list of header values for a given name.
-     */
-    /**
-     * Returns list of header values for a given name.
-     * @param {?} name
-     * @return {?}
-     */
-    HttpHeaders.prototype.getAll = /**
-     * Returns list of header values for a given name.
-     * @param {?} name
-     * @return {?}
-     */
-    function (name) {
-        this.init();
-        return this.headers.get(name.toLowerCase()) || null;
-    };
-    /**
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    HttpHeaders.prototype.append = /**
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    function (name, value) {
-        return this.clone({ name: name, value: value, op: 'a' });
-    };
-    /**
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    HttpHeaders.prototype.set = /**
-     * @param {?} name
-     * @param {?} value
-     * @return {?}
-     */
-    function (name, value) {
-        return this.clone({ name: name, value: value, op: 's' });
-    };
-    /**
-     * @param {?} name
-     * @param {?=} value
-     * @return {?}
-     */
-    HttpHeaders.prototype.delete = /**
-     * @param {?} name
-     * @param {?=} value
-     * @return {?}
-     */
-    function (name, value) {
-        return this.clone({ name: name, value: value, op: 'd' });
-    };
-    /**
-     * @param {?} name
-     * @param {?} lcName
-     * @return {?}
-     */
-    HttpHeaders.prototype.maybeSetNormalizedName = /**
-     * @param {?} name
-     * @param {?} lcName
-     * @return {?}
-     */
-    function (name, lcName) {
-        if (!this.normalizedNames.has(lcName)) {
-            this.normalizedNames.set(lcName, name);
-        }
-    };
-    /**
-     * @return {?}
-     */
-    HttpHeaders.prototype.init = /**
-     * @return {?}
-     */
-    function () {
-        var _this = this;
-        if (!!this.lazyInit) {
-            if (this.lazyInit instanceof HttpHeaders) {
-                this.copyFrom(this.lazyInit);
-            }
-            else {
-                this.lazyInit();
-            }
-            this.lazyInit = null;
-            if (!!this.lazyUpdate) {
-                this.lazyUpdate.forEach(function (update) { return _this.applyUpdate(update); });
-                this.lazyUpdate = null;
-            }
-        }
-    };
-    /**
-     * @param {?} other
-     * @return {?}
-     */
-    HttpHeaders.prototype.copyFrom = /**
-     * @param {?} other
-     * @return {?}
-     */
-    function (other) {
-        var _this = this;
-        other.init();
-        Array.from(other.headers.keys()).forEach(function (key) {
-            _this.headers.set(key, /** @type {?} */ ((other.headers.get(key))));
-            _this.normalizedNames.set(key, /** @type {?} */ ((other.normalizedNames.get(key))));
-        });
-    };
-    /**
-     * @param {?} update
-     * @return {?}
-     */
-    HttpHeaders.prototype.clone = /**
-     * @param {?} update
-     * @return {?}
-     */
-    function (update) {
-        var /** @type {?} */ clone = new HttpHeaders();
-        clone.lazyInit =
-            (!!this.lazyInit && this.lazyInit instanceof HttpHeaders) ? this.lazyInit : this;
-        clone.lazyUpdate = (this.lazyUpdate || []).concat([update]);
-        return clone;
-    };
-    /**
-     * @param {?} update
-     * @return {?}
-     */
-    HttpHeaders.prototype.applyUpdate = /**
-     * @param {?} update
-     * @return {?}
-     */
-    function (update) {
-        var /** @type {?} */ key = update.name.toLowerCase();
-        switch (update.op) {
-            case 'a':
-            case 's':
-                var /** @type {?} */ value = /** @type {?} */ ((update.value));
-                if (typeof value === 'string') {
-                    value = [value];
-                }
-                if (value.length === 0) {
-                    return;
-                }
-                this.maybeSetNormalizedName(update.name, key);
-                var /** @type {?} */ base = (update.op === 'a' ? this.headers.get(key) : undefined) || [];
-                base.push.apply(base, value);
-                this.headers.set(key, base);
-                break;
-            case 'd':
-                var /** @type {?} */ toDelete_1 = /** @type {?} */ (update.value);
-                if (!toDelete_1) {
-                    this.headers.delete(key);
-                    this.normalizedNames.delete(key);
-                }
-                else {
-                    var /** @type {?} */ existing = this.headers.get(key);
-                    if (!existing) {
-                        return;
-                    }
-                    existing = existing.filter(function (value) { return toDelete_1.indexOf(value) === -1; });
-                    if (existing.length === 0) {
-                        this.headers.delete(key);
-                        this.normalizedNames.delete(key);
-                    }
-                    else {
-                        this.headers.set(key, existing);
-                    }
-                }
-                break;
-        }
-    };
-    /**
-     * @internal
-     */
-    /**
-     * \@internal
-     * @param {?} fn
-     * @return {?}
-     */
-    HttpHeaders.prototype.forEach = /**
-     * \@internal
-     * @param {?} fn
-     * @return {?}
-     */
-    function (fn) {
-        var _this = this;
-        this.init();
-        Array.from(this.normalizedNames.keys())
-            .forEach(function (key) { return fn(/** @type {?} */ ((_this.normalizedNames.get(key))), /** @type {?} */ ((_this.headers.get(key)))); });
-    };
-    return HttpHeaders;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * A codec for encoding and decoding parameters in URLs.
- *
- * Used by `HttpParams`.
- *
- * \@stable
- *
- * @record
- */
-
-/**
- * A `HttpParameterCodec` that uses `encodeURIComponent` and `decodeURIComponent` to
- * serialize and parse URL parameter keys and values.
- *
- * \@stable
- */
-var HttpUrlEncodingCodec = (function () {
-    function HttpUrlEncodingCodec() {
-    }
-    /**
-     * @param {?} k
-     * @return {?}
-     */
-    HttpUrlEncodingCodec.prototype.encodeKey = /**
-     * @param {?} k
-     * @return {?}
-     */
-    function (k) { return standardEncoding(k); };
-    /**
-     * @param {?} v
-     * @return {?}
-     */
-    HttpUrlEncodingCodec.prototype.encodeValue = /**
-     * @param {?} v
-     * @return {?}
-     */
-    function (v) { return standardEncoding(v); };
-    /**
-     * @param {?} k
-     * @return {?}
-     */
-    HttpUrlEncodingCodec.prototype.decodeKey = /**
-     * @param {?} k
-     * @return {?}
-     */
-    function (k) { return decodeURIComponent(k); };
-    /**
-     * @param {?} v
-     * @return {?}
-     */
-    HttpUrlEncodingCodec.prototype.decodeValue = /**
-     * @param {?} v
-     * @return {?}
-     */
-    function (v) { return decodeURIComponent(v); };
-    return HttpUrlEncodingCodec;
-}());
-/**
- * @param {?} rawParams
- * @param {?} codec
- * @return {?}
- */
-function paramParser(rawParams, codec) {
-    var /** @type {?} */ map$$1 = new Map();
-    if (rawParams.length > 0) {
-        var /** @type {?} */ params = rawParams.split('&');
-        params.forEach(function (param) {
-            var /** @type {?} */ eqIdx = param.indexOf('=');
-            var _a = eqIdx == -1 ?
-                [codec.decodeKey(param), ''] :
-                [codec.decodeKey(param.slice(0, eqIdx)), codec.decodeValue(param.slice(eqIdx + 1))], key = _a[0], val = _a[1];
-            var /** @type {?} */ list = map$$1.get(key) || [];
-            list.push(val);
-            map$$1.set(key, list);
-        });
-    }
-    return map$$1;
-}
-/**
- * @param {?} v
- * @return {?}
- */
-function standardEncoding(v) {
-    return encodeURIComponent(v)
-        .replace(/%40/gi, '@')
-        .replace(/%3A/gi, ':')
-        .replace(/%24/gi, '$')
-        .replace(/%2C/gi, ',')
-        .replace(/%3B/gi, ';')
-        .replace(/%2B/gi, '+')
-        .replace(/%3D/gi, '=')
-        .replace(/%3F/gi, '?')
-        .replace(/%2F/gi, '/');
-}
-/**
- * Options used to construct an `HttpParams` instance.
- * @record
- */
-
-/**
- * An HTTP request/response body that represents serialized parameters,
- * per the MIME type `application/x-www-form-urlencoded`.
- *
- * This class is immutable - all mutation operations return a new instance.
- *
- * \@stable
- */
-var HttpParams = (function () {
-    function HttpParams(options) {
-        if (options === void 0) { options = /** @type {?} */ ({}); }
-        var _this = this;
-        this.updates = null;
-        this.cloneFrom = null;
-        this.encoder = options.encoder || new HttpUrlEncodingCodec();
-        if (!!options.fromString) {
-            if (!!options.fromObject) {
-                throw new Error("Cannot specify both fromString and fromObject.");
-            }
-            this.map = paramParser(options.fromString, this.encoder);
-        }
-        else if (!!options.fromObject) {
-            this.map = new Map();
-            Object.keys(options.fromObject).forEach(function (key) {
-                var /** @type {?} */ value = (/** @type {?} */ (options.fromObject))[key]; /** @type {?} */
-                ((_this.map)).set(key, Array.isArray(value) ? value : [value]);
-            });
-        }
-        else {
-            this.map = null;
-        }
-    }
-    /**
-     * Check whether the body has one or more values for the given parameter name.
-     */
-    /**
-     * Check whether the body has one or more values for the given parameter name.
-     * @param {?} param
-     * @return {?}
-     */
-    HttpParams.prototype.has = /**
-     * Check whether the body has one or more values for the given parameter name.
-     * @param {?} param
-     * @return {?}
-     */
-    function (param) {
-        this.init();
-        return /** @type {?} */ ((this.map)).has(param);
-    };
-    /**
-     * Get the first value for the given parameter name, or `null` if it's not present.
-     */
-    /**
-     * Get the first value for the given parameter name, or `null` if it's not present.
-     * @param {?} param
-     * @return {?}
-     */
-    HttpParams.prototype.get = /**
-     * Get the first value for the given parameter name, or `null` if it's not present.
-     * @param {?} param
-     * @return {?}
-     */
-    function (param) {
-        this.init();
-        var /** @type {?} */ res = /** @type {?} */ ((this.map)).get(param);
-        return !!res ? res[0] : null;
-    };
-    /**
-     * Get all values for the given parameter name, or `null` if it's not present.
-     */
-    /**
-     * Get all values for the given parameter name, or `null` if it's not present.
-     * @param {?} param
-     * @return {?}
-     */
-    HttpParams.prototype.getAll = /**
-     * Get all values for the given parameter name, or `null` if it's not present.
-     * @param {?} param
-     * @return {?}
-     */
-    function (param) {
-        this.init();
-        return /** @type {?} */ ((this.map)).get(param) || null;
-    };
-    /**
-     * Get all the parameter names for this body.
-     */
-    /**
-     * Get all the parameter names for this body.
-     * @return {?}
-     */
-    HttpParams.prototype.keys = /**
-     * Get all the parameter names for this body.
-     * @return {?}
-     */
-    function () {
-        this.init();
-        return Array.from(/** @type {?} */ ((this.map)).keys());
-    };
-    /**
-     * Construct a new body with an appended value for the given parameter name.
-     */
-    /**
-     * Construct a new body with an appended value for the given parameter name.
-     * @param {?} param
-     * @param {?} value
-     * @return {?}
-     */
-    HttpParams.prototype.append = /**
-     * Construct a new body with an appended value for the given parameter name.
-     * @param {?} param
-     * @param {?} value
-     * @return {?}
-     */
-    function (param, value) { return this.clone({ param: param, value: value, op: 'a' }); };
-    /**
-     * Construct a new body with a new value for the given parameter name.
-     */
-    /**
-     * Construct a new body with a new value for the given parameter name.
-     * @param {?} param
-     * @param {?} value
-     * @return {?}
-     */
-    HttpParams.prototype.set = /**
-     * Construct a new body with a new value for the given parameter name.
-     * @param {?} param
-     * @param {?} value
-     * @return {?}
-     */
-    function (param, value) { return this.clone({ param: param, value: value, op: 's' }); };
-    /**
-     * Construct a new body with either the given value for the given parameter
-     * removed, if a value is given, or all values for the given parameter removed
-     * if not.
-     */
-    /**
-     * Construct a new body with either the given value for the given parameter
-     * removed, if a value is given, or all values for the given parameter removed
-     * if not.
-     * @param {?} param
-     * @param {?=} value
-     * @return {?}
-     */
-    HttpParams.prototype.delete = /**
-     * Construct a new body with either the given value for the given parameter
-     * removed, if a value is given, or all values for the given parameter removed
-     * if not.
-     * @param {?} param
-     * @param {?=} value
-     * @return {?}
-     */
-    function (param, value) { return this.clone({ param: param, value: value, op: 'd' }); };
-    /**
-     * Serialize the body to an encoded string, where key-value pairs (separated by `=`) are
-     * separated by `&`s.
-     */
-    /**
-     * Serialize the body to an encoded string, where key-value pairs (separated by `=`) are
-     * separated by `&`s.
-     * @return {?}
-     */
-    HttpParams.prototype.toString = /**
-     * Serialize the body to an encoded string, where key-value pairs (separated by `=`) are
-     * separated by `&`s.
-     * @return {?}
-     */
-    function () {
-        var _this = this;
-        this.init();
-        return this.keys()
-            .map(function (key) {
-            var /** @type {?} */ eKey = _this.encoder.encodeKey(key);
-            return /** @type {?} */ ((/** @type {?} */ ((_this.map)).get(key))).map(function (value) { return eKey + '=' + _this.encoder.encodeValue(value); }).join('&');
-        })
-            .join('&');
-    };
-    /**
-     * @param {?} update
-     * @return {?}
-     */
-    HttpParams.prototype.clone = /**
-     * @param {?} update
-     * @return {?}
-     */
-    function (update) {
-        var /** @type {?} */ clone = new HttpParams(/** @type {?} */ ({ encoder: this.encoder }));
-        clone.cloneFrom = this.cloneFrom || this;
-        clone.updates = (this.updates || []).concat([update]);
-        return clone;
-    };
-    /**
-     * @return {?}
-     */
-    HttpParams.prototype.init = /**
-     * @return {?}
-     */
-    function () {
-        var _this = this;
-        if (this.map === null) {
-            this.map = new Map();
-        }
-        if (this.cloneFrom !== null) {
-            this.cloneFrom.init();
-            this.cloneFrom.keys().forEach(function (key) { return /** @type {?} */ ((_this.map)).set(key, /** @type {?} */ ((/** @type {?} */ ((/** @type {?} */ ((_this.cloneFrom)).map)).get(key)))); }); /** @type {?} */
-            ((this.updates)).forEach(function (update) {
-                switch (update.op) {
-                    case 'a':
-                    case 's':
-                        var /** @type {?} */ base = (update.op === 'a' ? /** @type {?} */ ((_this.map)).get(update.param) : undefined) || [];
-                        base.push(/** @type {?} */ ((update.value))); /** @type {?} */
-                        ((_this.map)).set(update.param, base);
-                        break;
-                    case 'd':
-                        if (update.value !== undefined) {
-                            var /** @type {?} */ base_1 = /** @type {?} */ ((_this.map)).get(update.param) || [];
-                            var /** @type {?} */ idx = base_1.indexOf(update.value);
-                            if (idx !== -1) {
-                                base_1.splice(idx, 1);
-                            }
-                            if (base_1.length > 0) {
-                                /** @type {?} */ ((_this.map)).set(update.param, base_1);
-                            }
-                            else {
-                                /** @type {?} */ ((_this.map)).delete(update.param);
-                            }
-                        }
-                        else {
-                            /** @type {?} */ ((_this.map)).delete(update.param);
-                            break;
-                        }
-                }
-            });
-            this.cloneFrom = null;
-        }
-    };
-    return HttpParams;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Determine whether the given HTTP method may include a body.
- * @param {?} method
- * @return {?}
- */
-function mightHaveBody(method) {
-    switch (method) {
-        case 'DELETE':
-        case 'GET':
-        case 'HEAD':
-        case 'OPTIONS':
-        case 'JSONP':
-            return false;
-        default:
-            return true;
-    }
-}
-/**
- * Safely assert whether the given value is an ArrayBuffer.
- *
- * In some execution environments ArrayBuffer is not defined.
- * @param {?} value
- * @return {?}
- */
-function isArrayBuffer(value) {
-    return typeof ArrayBuffer !== 'undefined' && value instanceof ArrayBuffer;
-}
-/**
- * Safely assert whether the given value is a Blob.
- *
- * In some execution environments Blob is not defined.
- * @param {?} value
- * @return {?}
- */
-function isBlob(value) {
-    return typeof Blob !== 'undefined' && value instanceof Blob;
-}
-/**
- * Safely assert whether the given value is a FormData instance.
- *
- * In some execution environments FormData is not defined.
- * @param {?} value
- * @return {?}
- */
-function isFormData(value) {
-    return typeof FormData !== 'undefined' && value instanceof FormData;
-}
-/**
- * An outgoing HTTP request with an optional typed body.
- *
- * `HttpRequest` represents an outgoing request, including URL, method,
- * headers, body, and other request configuration options. Instances should be
- * assumed to be immutable. To modify a `HttpRequest`, the `clone`
- * method should be used.
- *
- * \@stable
- */
-var HttpRequest = (function () {
-    function HttpRequest(method, url, third, fourth) {
-        this.url = url;
-        /**
-         * The request body, or `null` if one isn't set.
-         *
-         * Bodies are not enforced to be immutable, as they can include a reference to any
-         * user-defined data type. However, interceptors should take care to preserve
-         * idempotence by treating them as such.
-         */
-        this.body = null;
-        /**
-         * Whether this request should be made in a way that exposes progress events.
-         *
-         * Progress events are expensive (change detection runs on each event) and so
-         * they should only be requested if the consumer intends to monitor them.
-         */
-        this.reportProgress = false;
-        /**
-         * Whether this request should be sent with outgoing credentials (cookies).
-         */
-        this.withCredentials = false;
-        /**
-         * The expected response type of the server.
-         *
-         * This is used to parse the response appropriately before returning it to
-         * the requestee.
-         */
-        this.responseType = 'json';
-        this.method = method.toUpperCase();
-        // Next, need to figure out which argument holds the HttpRequestInit
-        // options, if any.
-        var /** @type {?} */ options;
-        // Check whether a body argument is expected. The only valid way to omit
-        // the body argument is to use a known no-body method like GET.
-        if (mightHaveBody(this.method) || !!fourth) {
-            // Body is the third argument, options are the fourth.
-            this.body = /** @type {?} */ (third) || null;
-            options = fourth;
-        }
-        else {
-            // No body required, options are the third argument. The body stays null.
-            options = /** @type {?} */ (third);
-        }
-        // If options have been passed, interpret them.
-        if (options) {
-            // Normalize reportProgress and withCredentials.
-            this.reportProgress = !!options.reportProgress;
-            this.withCredentials = !!options.withCredentials;
-            // Override default response type of 'json' if one is provided.
-            if (!!options.responseType) {
-                this.responseType = options.responseType;
-            }
-            // Override headers if they're provided.
-            if (!!options.headers) {
-                this.headers = options.headers;
-            }
-            if (!!options.params) {
-                this.params = options.params;
-            }
-        }
-        // If no headers have been passed in, construct a new HttpHeaders instance.
-        if (!this.headers) {
-            this.headers = new HttpHeaders();
-        }
-        // If no parameters have been passed in, construct a new HttpUrlEncodedParams instance.
-        if (!this.params) {
-            this.params = new HttpParams();
-            this.urlWithParams = url;
-        }
-        else {
-            // Encode the parameters to a string in preparation for inclusion in the URL.
-            var /** @type {?} */ params = this.params.toString();
-            if (params.length === 0) {
-                // No parameters, the visible URL is just the URL given at creation time.
-                this.urlWithParams = url;
-            }
-            else {
-                // Does the URL already have query parameters? Look for '?'.
-                var /** @type {?} */ qIdx = url.indexOf('?');
-                // There are 3 cases to handle:
-                // 1) No existing parameters -> append '?' followed by params.
-                // 2) '?' exists and is followed by existing query string ->
-                //    append '&' followed by params.
-                // 3) '?' exists at the end of the url -> append params directly.
-                // This basically amounts to determining the character, if any, with
-                // which to join the URL and parameters.
-                var /** @type {?} */ sep = qIdx === -1 ? '?' : (qIdx < url.length - 1 ? '&' : '');
-                this.urlWithParams = url + sep + params;
-            }
-        }
-    }
-    /**
-     * Transform the free-form body into a serialized format suitable for
-     * transmission to the server.
-     */
-    /**
-     * Transform the free-form body into a serialized format suitable for
-     * transmission to the server.
-     * @return {?}
-     */
-    HttpRequest.prototype.serializeBody = /**
-     * Transform the free-form body into a serialized format suitable for
-     * transmission to the server.
-     * @return {?}
-     */
-    function () {
-        // If no body is present, no need to serialize it.
-        if (this.body === null) {
-            return null;
-        }
-        // Check whether the body is already in a serialized form. If so,
-        // it can just be returned directly.
-        if (isArrayBuffer(this.body) || isBlob(this.body) || isFormData(this.body) ||
-            typeof this.body === 'string') {
-            return this.body;
-        }
-        // Check whether the body is an instance of HttpUrlEncodedParams.
-        if (this.body instanceof HttpParams) {
-            return this.body.toString();
-        }
-        // Check whether the body is an object or array, and serialize with JSON if so.
-        if (typeof this.body === 'object' || typeof this.body === 'boolean' ||
-            Array.isArray(this.body)) {
-            return JSON.stringify(this.body);
-        }
-        // Fall back on toString() for everything else.
-        return (/** @type {?} */ (this.body)).toString();
-    };
-    /**
-     * Examine the body and attempt to infer an appropriate MIME type
-     * for it.
-     *
-     * If no such type can be inferred, this method will return `null`.
-     */
-    /**
-     * Examine the body and attempt to infer an appropriate MIME type
-     * for it.
-     *
-     * If no such type can be inferred, this method will return `null`.
-     * @return {?}
-     */
-    HttpRequest.prototype.detectContentTypeHeader = /**
-     * Examine the body and attempt to infer an appropriate MIME type
-     * for it.
-     *
-     * If no such type can be inferred, this method will return `null`.
-     * @return {?}
-     */
-    function () {
-        // An empty body has no content type.
-        if (this.body === null) {
-            return null;
-        }
-        // FormData bodies rely on the browser's content type assignment.
-        if (isFormData(this.body)) {
-            return null;
-        }
-        // Blobs usually have their own content type. If it doesn't, then
-        // no type can be inferred.
-        if (isBlob(this.body)) {
-            return this.body.type || null;
-        }
-        // Array buffers have unknown contents and thus no type can be inferred.
-        if (isArrayBuffer(this.body)) {
-            return null;
-        }
-        // Technically, strings could be a form of JSON data, but it's safe enough
-        // to assume they're plain strings.
-        if (typeof this.body === 'string') {
-            return 'text/plain';
-        }
-        // `HttpUrlEncodedParams` has its own content-type.
-        if (this.body instanceof HttpParams) {
-            return 'application/x-www-form-urlencoded;charset=UTF-8';
-        }
-        // Arrays, objects, and numbers will be encoded as JSON.
-        if (typeof this.body === 'object' || typeof this.body === 'number' ||
-            Array.isArray(this.body)) {
-            return 'application/json';
-        }
-        // No type could be inferred.
-        return null;
-    };
-    /**
-     * @param {?=} update
-     * @return {?}
-     */
-    HttpRequest.prototype.clone = /**
-     * @param {?=} update
-     * @return {?}
-     */
-    function (update) {
-        if (update === void 0) { update = {}; }
-        // For method, url, and responseType, take the current value unless
-        // it is overridden in the update hash.
-        var /** @type {?} */ method = update.method || this.method;
-        var /** @type {?} */ url = update.url || this.url;
-        var /** @type {?} */ responseType = update.responseType || this.responseType;
-        // The body is somewhat special - a `null` value in update.body means
-        // whatever current body is present is being overridden with an empty
-        // body, whereas an `undefined` value in update.body implies no
-        // override.
-        var /** @type {?} */ body = (update.body !== undefined) ? update.body : this.body;
-        // Carefully handle the boolean options to differentiate between
-        // `false` and `undefined` in the update args.
-        var /** @type {?} */ withCredentials = (update.withCredentials !== undefined) ? update.withCredentials : this.withCredentials;
-        var /** @type {?} */ reportProgress = (update.reportProgress !== undefined) ? update.reportProgress : this.reportProgress;
-        // Headers and params may be appended to if `setHeaders` or
-        // `setParams` are used.
-        var /** @type {?} */ headers = update.headers || this.headers;
-        var /** @type {?} */ params = update.params || this.params;
-        // Check whether the caller has asked to add headers.
-        if (update.setHeaders !== undefined) {
-            // Set every requested header.
-            headers =
-                Object.keys(update.setHeaders)
-                    .reduce(function (headers, name) { return headers.set(name, /** @type {?} */ ((update.setHeaders))[name]); }, headers);
-        }
-        // Check whether the caller has asked to set params.
-        if (update.setParams) {
-            // Set every requested param.
-            params = Object.keys(update.setParams)
-                .reduce(function (params, param) { return params.set(param, /** @type {?} */ ((update.setParams))[param]); }, params);
-        }
-        // Finally, construct the new HttpRequest using the pieces from above.
-        return new HttpRequest(method, url, body, {
-            params: params, headers: headers, reportProgress: reportProgress, responseType: responseType, withCredentials: withCredentials,
-        });
-    };
-    return HttpRequest;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/** @enum {number} */
-var HttpEventType = {
-    /**
-       * The request was sent out over the wire.
-       */
-    Sent: 0,
-    /**
-       * An upload progress event was received.
-       */
-    UploadProgress: 1,
-    /**
-       * The response status code and headers were received.
-       */
-    ResponseHeader: 2,
-    /**
-       * A download progress event was received.
-       */
-    DownloadProgress: 3,
-    /**
-       * The full response including the body was received.
-       */
-    Response: 4,
-    /**
-       * A custom event from an interceptor or a backend.
-       */
-    User: 5,
-};
-HttpEventType[HttpEventType.Sent] = "Sent";
-HttpEventType[HttpEventType.UploadProgress] = "UploadProgress";
-HttpEventType[HttpEventType.ResponseHeader] = "ResponseHeader";
-HttpEventType[HttpEventType.DownloadProgress] = "DownloadProgress";
-HttpEventType[HttpEventType.Response] = "Response";
-HttpEventType[HttpEventType.User] = "User";
-/**
- * Base interface for progress events.
- *
- * \@stable
- * @record
- */
-
-/**
- * A download progress event.
- *
- * \@stable
- * @record
- */
-
-/**
- * An upload progress event.
- *
- * \@stable
- * @record
- */
-
-/**
- * An event indicating that the request was sent to the server. Useful
- * when a request may be retried multiple times, to distinguish between
- * retries on the final event stream.
- *
- * \@stable
- * @record
- */
-
-/**
- * A user-defined event.
- *
- * Grouping all custom events under this type ensures they will be handled
- * and forwarded by all implementations of interceptors.
- *
- * \@stable
- * @record
- */
-
-/**
- * An error that represents a failed attempt to JSON.parse text coming back
- * from the server.
- *
- * It bundles the Error object with the actual response body that failed to parse.
- *
- * \@stable
- * @record
- */
-
-/**
- * Base class for both `HttpResponse` and `HttpHeaderResponse`.
- *
- * \@stable
- * @abstract
- */
-var HttpResponseBase = (function () {
-    /**
-     * Super-constructor for all responses.
-     *
-     * The single parameter accepted is an initialization hash. Any properties
-     * of the response passed there will override the default values.
-     */
-    function HttpResponseBase(init, defaultStatus, defaultStatusText) {
-        if (defaultStatus === void 0) { defaultStatus = 200; }
-        if (defaultStatusText === void 0) { defaultStatusText = 'OK'; }
-        // If the hash has values passed, use them to initialize the response.
-        // Otherwise use the default values.
-        this.headers = init.headers || new HttpHeaders();
-        this.status = init.status !== undefined ? init.status : defaultStatus;
-        this.statusText = init.statusText || defaultStatusText;
-        this.url = init.url || null;
-        // Cache the ok value to avoid defining a getter.
-        this.ok = this.status >= 200 && this.status < 300;
-    }
-    return HttpResponseBase;
-}());
-/**
- * A partial HTTP response which only includes the status and header data,
- * but no response body.
- *
- * `HttpHeaderResponse` is a `HttpEvent` available on the response
- * event stream, only when progress events are requested.
- *
- * \@stable
- */
-var HttpHeaderResponse = (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_5_tslib__["b" /* __extends */])(HttpHeaderResponse, _super);
-    /**
-     * Create a new `HttpHeaderResponse` with the given parameters.
-     */
-    function HttpHeaderResponse(init) {
-        if (init === void 0) { init = {}; }
-        var _this = _super.call(this, init) || this;
-        _this.type = HttpEventType.ResponseHeader;
-        return _this;
-    }
-    /**
-     * Copy this `HttpHeaderResponse`, overriding its contents with the
-     * given parameter hash.
-     */
-    /**
-     * Copy this `HttpHeaderResponse`, overriding its contents with the
-     * given parameter hash.
-     * @param {?=} update
-     * @return {?}
-     */
-    HttpHeaderResponse.prototype.clone = /**
-     * Copy this `HttpHeaderResponse`, overriding its contents with the
-     * given parameter hash.
-     * @param {?=} update
-     * @return {?}
-     */
-    function (update) {
-        if (update === void 0) { update = {}; }
-        // Perform a straightforward initialization of the new HttpHeaderResponse,
-        // overriding the current parameters with new ones if given.
-        return new HttpHeaderResponse({
-            headers: update.headers || this.headers,
-            status: update.status !== undefined ? update.status : this.status,
-            statusText: update.statusText || this.statusText,
-            url: update.url || this.url || undefined,
-        });
-    };
-    return HttpHeaderResponse;
-}(HttpResponseBase));
-/**
- * A full HTTP response, including a typed response body (which may be `null`
- * if one was not returned).
- *
- * `HttpResponse` is a `HttpEvent` available on the response event
- * stream.
- *
- * \@stable
- */
-var HttpResponse = (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_5_tslib__["b" /* __extends */])(HttpResponse, _super);
-    /**
-     * Construct a new `HttpResponse`.
-     */
-    function HttpResponse(init) {
-        if (init === void 0) { init = {}; }
-        var _this = _super.call(this, init) || this;
-        _this.type = HttpEventType.Response;
-        _this.body = init.body || null;
-        return _this;
-    }
-    /**
-     * @param {?=} update
-     * @return {?}
-     */
-    HttpResponse.prototype.clone = /**
-     * @param {?=} update
-     * @return {?}
-     */
-    function (update) {
-        if (update === void 0) { update = {}; }
-        return new HttpResponse({
-            body: (update.body !== undefined) ? update.body : this.body,
-            headers: update.headers || this.headers,
-            status: (update.status !== undefined) ? update.status : this.status,
-            statusText: update.statusText || this.statusText,
-            url: update.url || this.url || undefined,
-        });
-    };
-    return HttpResponse;
-}(HttpResponseBase));
-/**
- * A response that represents an error or failure, either from a
- * non-successful HTTP status, an error while executing the request,
- * or some other failure which occurred during the parsing of the response.
- *
- * Any error returned on the `Observable` response stream will be
- * wrapped in an `HttpErrorResponse` to provide additional context about
- * the state of the HTTP layer when the error occurred. The error property
- * will contain either a wrapped Error object or the error response returned
- * from the server.
- *
- * \@stable
- */
-var HttpErrorResponse = (function (_super) {
-    Object(__WEBPACK_IMPORTED_MODULE_5_tslib__["b" /* __extends */])(HttpErrorResponse, _super);
-    function HttpErrorResponse(init) {
-        var _this = 
-        // Initialize with a default status of 0 / Unknown Error.
-        _super.call(this, init, 0, 'Unknown Error') || this;
-        _this.name = 'HttpErrorResponse';
-        /**
-         * Errors are never okay, even when the status code is in the 2xx success range.
-         */
-        _this.ok = false;
-        // If the response was successful, then this was a parse error. Otherwise, it was
-        // a protocol-level failure of some sort. Either the request failed in transit
-        // or the server returned an unsuccessful status code.
-        if (_this.status >= 200 && _this.status < 300) {
-            _this.message = "Http failure during parsing for " + (init.url || '(unknown url)');
-        }
-        else {
-            _this.message =
-                "Http failure response for " + (init.url || '(unknown url)') + ": " + init.status + " " + init.statusText;
-        }
-        _this.error = init.error || null;
-        return _this;
-    }
-    return HttpErrorResponse;
-}(HttpResponseBase));
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Construct an instance of `HttpRequestOptions<T>` from a source `HttpMethodOptions` and
- * the given `body`. Basically, this clones the object and adds the body.
- * @template T
- * @param {?} options
- * @param {?} body
- * @return {?}
- */
-function addBody(options, body) {
-    return {
-        body: body,
-        headers: options.headers,
-        observe: options.observe,
-        params: options.params,
-        reportProgress: options.reportProgress,
-        responseType: options.responseType,
-        withCredentials: options.withCredentials,
-    };
-}
-/**
- * Perform HTTP requests.
- *
- * `HttpClient` is available as an injectable class, with methods to perform HTTP requests.
- * Each request method has multiple signatures, and the return type varies according to which
- * signature is called (mainly the values of `observe` and `responseType`).
- *
- * \@stable
- */
-var HttpClient = (function () {
-    function HttpClient(handler) {
-        this.handler = handler;
-    }
-    /**
-     * Constructs an `Observable` for a particular HTTP request that, when subscribed,
-     * fires the request through the chain of registered interceptors and on to the
-     * server.
-     *
-     * This method can be called in one of two ways. Either an `HttpRequest`
-     * instance can be passed directly as the only parameter, or a method can be
-     * passed as the first parameter, a string URL as the second, and an
-     * options hash as the third.
-     *
-     * If a `HttpRequest` object is passed directly, an `Observable` of the
-     * raw `HttpEvent` stream will be returned.
-     *
-     * If a request is instead built by providing a URL, the options object
-     * determines the return type of `request()`. In addition to configuring
-     * request parameters such as the outgoing headers and/or the body, the options
-     * hash specifies two key pieces of information about the request: the
-     * `responseType` and what to `observe`.
-     *
-     * The `responseType` value determines how a successful response body will be
-     * parsed. If `responseType` is the default `json`, a type interface for the
-     * resulting object may be passed as a type parameter to `request()`.
-     *
-     * The `observe` value determines the return type of `request()`, based on what
-     * the consumer is interested in observing. A value of `events` will return an
-     * `Observable<HttpEvent>` representing the raw `HttpEvent` stream,
-     * including progress events by default. A value of `response` will return an
-     * `Observable<HttpResponse<T>>` where the `T` parameter of `HttpResponse`
-     * depends on the `responseType` and any optionally provided type parameter.
-     * A value of `body` will return an `Observable<T>` with the same `T` body type.
-     */
-    /**
-     * Constructs an `Observable` for a particular HTTP request that, when subscribed,
-     * fires the request through the chain of registered interceptors and on to the
-     * server.
-     *
-     * This method can be called in one of two ways. Either an `HttpRequest`
-     * instance can be passed directly as the only parameter, or a method can be
-     * passed as the first parameter, a string URL as the second, and an
-     * options hash as the third.
-     *
-     * If a `HttpRequest` object is passed directly, an `Observable` of the
-     * raw `HttpEvent` stream will be returned.
-     *
-     * If a request is instead built by providing a URL, the options object
-     * determines the return type of `request()`. In addition to configuring
-     * request parameters such as the outgoing headers and/or the body, the options
-     * hash specifies two key pieces of information about the request: the
-     * `responseType` and what to `observe`.
-     *
-     * The `responseType` value determines how a successful response body will be
-     * parsed. If `responseType` is the default `json`, a type interface for the
-     * resulting object may be passed as a type parameter to `request()`.
-     *
-     * The `observe` value determines the return type of `request()`, based on what
-     * the consumer is interested in observing. A value of `events` will return an
-     * `Observable<HttpEvent>` representing the raw `HttpEvent` stream,
-     * including progress events by default. A value of `response` will return an
-     * `Observable<HttpResponse<T>>` where the `T` parameter of `HttpResponse`
-     * depends on the `responseType` and any optionally provided type parameter.
-     * A value of `body` will return an `Observable<T>` with the same `T` body type.
-     * @param {?} first
-     * @param {?=} url
-     * @param {?=} options
-     * @return {?}
-     */
-    HttpClient.prototype.request = /**
-     * Constructs an `Observable` for a particular HTTP request that, when subscribed,
-     * fires the request through the chain of registered interceptors and on to the
-     * server.
-     *
-     * This method can be called in one of two ways. Either an `HttpRequest`
-     * instance can be passed directly as the only parameter, or a method can be
-     * passed as the first parameter, a string URL as the second, and an
-     * options hash as the third.
-     *
-     * If a `HttpRequest` object is passed directly, an `Observable` of the
-     * raw `HttpEvent` stream will be returned.
-     *
-     * If a request is instead built by providing a URL, the options object
-     * determines the return type of `request()`. In addition to configuring
-     * request parameters such as the outgoing headers and/or the body, the options
-     * hash specifies two key pieces of information about the request: the
-     * `responseType` and what to `observe`.
-     *
-     * The `responseType` value determines how a successful response body will be
-     * parsed. If `responseType` is the default `json`, a type interface for the
-     * resulting object may be passed as a type parameter to `request()`.
-     *
-     * The `observe` value determines the return type of `request()`, based on what
-     * the consumer is interested in observing. A value of `events` will return an
-     * `Observable<HttpEvent>` representing the raw `HttpEvent` stream,
-     * including progress events by default. A value of `response` will return an
-     * `Observable<HttpResponse<T>>` where the `T` parameter of `HttpResponse`
-     * depends on the `responseType` and any optionally provided type parameter.
-     * A value of `body` will return an `Observable<T>` with the same `T` body type.
-     * @param {?} first
-     * @param {?=} url
-     * @param {?=} options
-     * @return {?}
-     */
-    function (first, url, options) {
-        var _this = this;
-        if (options === void 0) { options = {}; }
-        var /** @type {?} */ req;
-        // Firstly, check whether the primary argument is an instance of `HttpRequest`.
-        if (first instanceof HttpRequest) {
-            // It is. The other arguments must be undefined (per the signatures) and can be
-            // ignored.
-            req = /** @type {?} */ (first);
-        }
-        else {
-            // It's a string, so it represents a URL. Construct a request based on it,
-            // and incorporate the remaining arguments (assuming GET unless a method is
-            // provided.
-            // Figure out the headers.
-            var /** @type {?} */ headers = undefined;
-            if (!!options.headers !== undefined) {
-                if (options.headers instanceof HttpHeaders) {
-                    headers = options.headers;
-                }
-                else {
-                    headers = new HttpHeaders(options.headers);
-                }
-            }
-            // Sort out parameters.
-            var /** @type {?} */ params = undefined;
-            if (!!options.params) {
-                if (options.params instanceof HttpParams) {
-                    params = options.params;
-                }
-                else {
-                    params = new HttpParams(/** @type {?} */ ({ fromObject: options.params }));
-                }
-            }
-            // Construct the request.
-            req = new HttpRequest(first, /** @type {?} */ ((url)), options.body || null, {
-                headers: headers,
-                params: params,
-                reportProgress: options.reportProgress,
-                // By default, JSON is assumed to be returned for all calls.
-                responseType: options.responseType || 'json',
-                withCredentials: options.withCredentials,
-            });
-        }
-        // Start with an Observable.of() the initial request, and run the handler (which
-        // includes all interceptors) inside a concatMap(). This way, the handler runs
-        // inside an Observable chain, which causes interceptors to be re-run on every
-        // subscription (this also makes retries re-run the handler, including interceptors).
-        var /** @type {?} */ events$ = __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_concatMap__["concatMap"].call(Object(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__["of"])(req), function (req) { return _this.handler.handle(req); });
-        // If coming via the API signature which accepts a previously constructed HttpRequest,
-        // the only option is to get the event stream. Otherwise, return the event stream if
-        // that is what was requested.
-        if (first instanceof HttpRequest || options.observe === 'events') {
-            return events$;
-        }
-        // The requested stream contains either the full response or the body. In either
-        // case, the first step is to filter the event stream to extract a stream of
-        // responses(s).
-        var /** @type {?} */ res$ = __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_filter__["filter"].call(events$, function (event) { return event instanceof HttpResponse; });
-        // Decide which stream to return.
-        switch (options.observe || 'body') {
-            case 'body':
-                // The requested stream is the body. Map the response stream to the response
-                // body. This could be done more simply, but a misbehaving interceptor might
-                // transform the response body into a different format and ignore the requested
-                // responseType. Guard against this by validating that the response is of the
-                // requested type.
-                switch (req.responseType) {
-                    case 'arraybuffer':
-                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"].call(res$, function (res) {
-                            // Validate that the body is an ArrayBuffer.
-                            if (res.body !== null && !(res.body instanceof ArrayBuffer)) {
-                                throw new Error('Response is not an ArrayBuffer.');
-                            }
-                            return res.body;
-                        });
-                    case 'blob':
-                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"].call(res$, function (res) {
-                            // Validate that the body is a Blob.
-                            if (res.body !== null && !(res.body instanceof Blob)) {
-                                throw new Error('Response is not a Blob.');
-                            }
-                            return res.body;
-                        });
-                    case 'text':
-                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"].call(res$, function (res) {
-                            // Validate that the body is a string.
-                            if (res.body !== null && typeof res.body !== 'string') {
-                                throw new Error('Response is not a string.');
-                            }
-                            return res.body;
-                        });
-                    case 'json':
-                    default:
-                        // No validation needed for JSON responses, as they can be of any type.
-                        return __WEBPACK_IMPORTED_MODULE_4_rxjs_operator_map__["map"].call(res$, function (res) { return res.body; });
-                }
-            case 'response':
-                // The response stream was requested directly, so return it.
-                return res$;
-            default:
-                // Guard against new future observe types being added.
-                throw new Error("Unreachable: unhandled observe type " + options.observe + "}");
-        }
-    };
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * DELETE request to be executed on the server. See the individual overloads for
-     * details of `delete()`'s return type based on the provided options.
-     */
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * DELETE request to be executed on the server. See the individual overloads for
-     * details of `delete()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    HttpClient.prototype.delete = /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * DELETE request to be executed on the server. See the individual overloads for
-     * details of `delete()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    function (url, options) {
-        if (options === void 0) { options = {}; }
-        return this.request('DELETE', url, /** @type {?} */ (options));
-    };
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * GET request to be executed on the server. See the individual overloads for
-     * details of `get()`'s return type based on the provided options.
-     */
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * GET request to be executed on the server. See the individual overloads for
-     * details of `get()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    HttpClient.prototype.get = /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * GET request to be executed on the server. See the individual overloads for
-     * details of `get()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    function (url, options) {
-        if (options === void 0) { options = {}; }
-        return this.request('GET', url, /** @type {?} */ (options));
-    };
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * HEAD request to be executed on the server. See the individual overloads for
-     * details of `head()`'s return type based on the provided options.
-     */
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * HEAD request to be executed on the server. See the individual overloads for
-     * details of `head()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    HttpClient.prototype.head = /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * HEAD request to be executed on the server. See the individual overloads for
-     * details of `head()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    function (url, options) {
-        if (options === void 0) { options = {}; }
-        return this.request('HEAD', url, /** @type {?} */ (options));
-    };
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause a request
-     * with the special method `JSONP` to be dispatched via the interceptor pipeline.
-     *
-     * A suitable interceptor must be installed (e.g. via the `HttpClientJsonpModule`).
-     * If no such interceptor is reached, then the `JSONP` request will likely be
-     * rejected by the configured backend.
-     */
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause a request
-     * with the special method `JSONP` to be dispatched via the interceptor pipeline.
-     *
-     * A suitable interceptor must be installed (e.g. via the `HttpClientJsonpModule`).
-     * If no such interceptor is reached, then the `JSONP` request will likely be
-     * rejected by the configured backend.
-     * @template T
-     * @param {?} url
-     * @param {?} callbackParam
-     * @return {?}
-     */
-    HttpClient.prototype.jsonp = /**
-     * Constructs an `Observable` which, when subscribed, will cause a request
-     * with the special method `JSONP` to be dispatched via the interceptor pipeline.
-     *
-     * A suitable interceptor must be installed (e.g. via the `HttpClientJsonpModule`).
-     * If no such interceptor is reached, then the `JSONP` request will likely be
-     * rejected by the configured backend.
-     * @template T
-     * @param {?} url
-     * @param {?} callbackParam
-     * @return {?}
-     */
-    function (url, callbackParam) {
-        return this.request('JSONP', url, {
-            params: new HttpParams().append(callbackParam, 'JSONP_CALLBACK'),
-            observe: 'body',
-            responseType: 'json',
-        });
-    };
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * OPTIONS request to be executed on the server. See the individual overloads for
-     * details of `options()`'s return type based on the provided options.
-     */
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * OPTIONS request to be executed on the server. See the individual overloads for
-     * details of `options()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    HttpClient.prototype.options = /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * OPTIONS request to be executed on the server. See the individual overloads for
-     * details of `options()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?=} options
-     * @return {?}
-     */
-    function (url, options) {
-        if (options === void 0) { options = {}; }
-        return this.request('OPTIONS', url, /** @type {?} */ (options));
-    };
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * PATCH request to be executed on the server. See the individual overloads for
-     * details of `patch()`'s return type based on the provided options.
-     */
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * PATCH request to be executed on the server. See the individual overloads for
-     * details of `patch()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?} body
-     * @param {?=} options
-     * @return {?}
-     */
-    HttpClient.prototype.patch = /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * PATCH request to be executed on the server. See the individual overloads for
-     * details of `patch()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?} body
-     * @param {?=} options
-     * @return {?}
-     */
-    function (url, body, options) {
-        if (options === void 0) { options = {}; }
-        return this.request('PATCH', url, addBody(options, body));
-    };
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * POST request to be executed on the server. See the individual overloads for
-     * details of `post()`'s return type based on the provided options.
-     */
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * POST request to be executed on the server. See the individual overloads for
-     * details of `post()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?} body
-     * @param {?=} options
-     * @return {?}
-     */
-    HttpClient.prototype.post = /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * POST request to be executed on the server. See the individual overloads for
-     * details of `post()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?} body
-     * @param {?=} options
-     * @return {?}
-     */
-    function (url, body, options) {
-        if (options === void 0) { options = {}; }
-        return this.request('POST', url, addBody(options, body));
-    };
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * POST request to be executed on the server. See the individual overloads for
-     * details of `post()`'s return type based on the provided options.
-     */
-    /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * POST request to be executed on the server. See the individual overloads for
-     * details of `post()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?} body
-     * @param {?=} options
-     * @return {?}
-     */
-    HttpClient.prototype.put = /**
-     * Constructs an `Observable` which, when subscribed, will cause the configured
-     * POST request to be executed on the server. See the individual overloads for
-     * details of `post()`'s return type based on the provided options.
-     * @param {?} url
-     * @param {?} body
-     * @param {?=} options
-     * @return {?}
-     */
-    function (url, body, options) {
-        if (options === void 0) { options = {}; }
-        return this.request('PUT', url, addBody(options, body));
-    };
-    HttpClient.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
-    ];
-    /** @nocollapse */
-    HttpClient.ctorParameters = function () { return [
-        { type: HttpHandler, },
-    ]; };
-    return HttpClient;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Intercepts `HttpRequest` and handles them.
- *
- * Most interceptors will transform the outgoing request before passing it to the
- * next interceptor in the chain, by calling `next.handle(transformedReq)`.
- *
- * In rare cases, interceptors may wish to completely handle a request themselves,
- * and not delegate to the remainder of the chain. This behavior is allowed.
- *
- * \@stable
- * @record
- */
-
-/**
- * `HttpHandler` which applies an `HttpInterceptor` to an `HttpRequest`.
- *
- * \@stable
- */
-var HttpInterceptorHandler = (function () {
-    function HttpInterceptorHandler(next, interceptor) {
-        this.next = next;
-        this.interceptor = interceptor;
-    }
-    /**
-     * @param {?} req
-     * @return {?}
-     */
-    HttpInterceptorHandler.prototype.handle = /**
-     * @param {?} req
-     * @return {?}
-     */
-    function (req) {
-        return this.interceptor.intercept(req, this.next);
-    };
-    return HttpInterceptorHandler;
-}());
-/**
- * A multi-provider token which represents the array of `HttpInterceptor`s that
- * are registered.
- *
- * \@stable
- */
-var HTTP_INTERCEPTORS = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* InjectionToken */]('HTTP_INTERCEPTORS');
-var NoopInterceptor = (function () {
-    function NoopInterceptor() {
-    }
-    /**
-     * @param {?} req
-     * @param {?} next
-     * @return {?}
-     */
-    NoopInterceptor.prototype.intercept = /**
-     * @param {?} req
-     * @param {?} next
-     * @return {?}
-     */
-    function (req, next) {
-        return next.handle(req);
-    };
-    NoopInterceptor.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
-    ];
-    /** @nocollapse */
-    NoopInterceptor.ctorParameters = function () { return []; };
-    return NoopInterceptor;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-// Every request made through JSONP needs a callback name that's unique across the
-// whole page. Each request is assigned an id and the callback name is constructed
-// from that. The next id to be assigned is tracked in a global variable here that
-// is shared among all applications on the page.
-var nextRequestId = 0;
-// Error text given when a JSONP script is injected, but doesn't invoke the callback
-// passed in its URL.
-var JSONP_ERR_NO_CALLBACK = 'JSONP injected script did not invoke callback.';
-// Error text given when a request is passed to the JsonpClientBackend that doesn't
-// have a request method JSONP.
-var JSONP_ERR_WRONG_METHOD = 'JSONP requests must use JSONP request method.';
-var JSONP_ERR_WRONG_RESPONSE_TYPE = 'JSONP requests must use Json response type.';
-/**
- * DI token/abstract type representing a map of JSONP callbacks.
- *
- * In the browser, this should always be the `window` object.
- *
- * \@stable
- * @abstract
- */
-var JsonpCallbackContext = (function () {
-    function JsonpCallbackContext() {
-    }
-    return JsonpCallbackContext;
-}());
-/**
- * `HttpBackend` that only processes `HttpRequest` with the JSONP method,
- * by performing JSONP style requests.
- *
- * \@stable
- */
-var JsonpClientBackend = (function () {
-    function JsonpClientBackend(callbackMap, document) {
-        this.callbackMap = callbackMap;
-        this.document = document;
-    }
-    /**
-     * Get the name of the next callback method, by incrementing the global `nextRequestId`.
-     * @return {?}
-     */
-    JsonpClientBackend.prototype.nextCallback = /**
-     * Get the name of the next callback method, by incrementing the global `nextRequestId`.
-     * @return {?}
-     */
-    function () { return "ng_jsonp_callback_" + nextRequestId++; };
-    /**
-     * Process a JSONP request and return an event stream of the results.
-     */
-    /**
-     * Process a JSONP request and return an event stream of the results.
-     * @param {?} req
-     * @return {?}
-     */
-    JsonpClientBackend.prototype.handle = /**
-     * Process a JSONP request and return an event stream of the results.
-     * @param {?} req
-     * @return {?}
-     */
-    function (req) {
-        var _this = this;
-        // Firstly, check both the method and response type. If either doesn't match
-        // then the request was improperly routed here and cannot be handled.
-        if (req.method !== 'JSONP') {
-            throw new Error(JSONP_ERR_WRONG_METHOD);
-        }
-        else if (req.responseType !== 'json') {
-            throw new Error(JSONP_ERR_WRONG_RESPONSE_TYPE);
-        }
-        // Everything else happens inside the Observable boundary.
-        return new __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__["Observable"](function (observer) {
-            // The first step to make a request is to generate the callback name, and replace the
-            // callback placeholder in the URL with the name. Care has to be taken here to ensure
-            // a trailing &, if matched, gets inserted back into the URL in the correct place.
-            var /** @type {?} */ callback = _this.nextCallback();
-            var /** @type {?} */ url = req.urlWithParams.replace(/=JSONP_CALLBACK(&|$)/, "=" + callback + "$1");
-            // Construct the <script> tag and point it at the URL.
-            var /** @type {?} */ node = _this.document.createElement('script');
-            node.src = url;
-            // A JSONP request requires waiting for multiple callbacks. These variables
-            // are closed over and track state across those callbacks.
-            // The response object, if one has been received, or null otherwise.
-            var /** @type {?} */ body = null;
-            // Whether the response callback has been called.
-            var /** @type {?} */ finished = false;
-            // Whether the request has been cancelled (and thus any other callbacks)
-            // should be ignored.
-            var /** @type {?} */ cancelled = false;
-            // Set the response callback in this.callbackMap (which will be the window
-            // object in the browser. The script being loaded via the <script> tag will
-            // eventually call this callback.
-            // Set the response callback in this.callbackMap (which will be the window
-            // object in the browser. The script being loaded via the <script> tag will
-            // eventually call this callback.
-            _this.callbackMap[callback] = function (data) {
-                // Data has been received from the JSONP script. Firstly, delete this callback.
-                delete _this.callbackMap[callback];
-                // Next, make sure the request wasn't cancelled in the meantime.
-                if (cancelled) {
-                    return;
-                }
-                // Set state to indicate data was received.
-                body = data;
-                finished = true;
-            };
-            // cleanup() is a utility closure that removes the <script> from the page and
-            // the response callback from the window. This logic is used in both the
-            // success, error, and cancellation paths, so it's extracted out for convenience.
-            var /** @type {?} */ cleanup = function () {
-                // Remove the <script> tag if it's still on the page.
-                if (node.parentNode) {
-                    node.parentNode.removeChild(node);
-                }
-                // Remove the response callback from the callbackMap (window object in the
-                // browser).
-                delete _this.callbackMap[callback];
-            };
-            // onLoad() is the success callback which runs after the response callback
-            // if the JSONP script loads successfully. The event itself is unimportant.
-            // If something went wrong, onLoad() may run without the response callback
-            // having been invoked.
-            var /** @type {?} */ onLoad = function (event) {
-                // Do nothing if the request has been cancelled.
-                if (cancelled) {
-                    return;
-                }
-                // Cleanup the page.
-                cleanup();
-                // Check whether the response callback has run.
-                if (!finished) {
-                    // It hasn't, something went wrong with the request. Return an error via
-                    // the Observable error path. All JSONP errors have status 0.
-                    observer.error(new HttpErrorResponse({
-                        url: url,
-                        status: 0,
-                        statusText: 'JSONP Error',
-                        error: new Error(JSONP_ERR_NO_CALLBACK),
-                    }));
-                    return;
-                }
-                // Success. body either contains the response body or null if none was
-                // returned.
-                observer.next(new HttpResponse({
-                    body: body,
-                    status: 200,
-                    statusText: 'OK', url: url,
-                }));
-                // Complete the stream, the resposne is over.
-                observer.complete();
-            };
-            // onError() is the error callback, which runs if the script returned generates
-            // a Javascript error. It emits the error via the Observable error channel as
-            // a HttpErrorResponse.
-            var /** @type {?} */ onError = function (error) {
-                // If the request was already cancelled, no need to emit anything.
-                if (cancelled) {
-                    return;
-                }
-                cleanup();
-                // Wrap the error in a HttpErrorResponse.
-                observer.error(new HttpErrorResponse({
-                    error: error,
-                    status: 0,
-                    statusText: 'JSONP Error', url: url,
-                }));
-            };
-            // Subscribe to both the success (load) and error events on the <script> tag,
-            // and add it to the page.
-            node.addEventListener('load', onLoad);
-            node.addEventListener('error', onError);
-            _this.document.body.appendChild(node);
-            // The request has now been successfully sent.
-            observer.next({ type: HttpEventType.Sent });
-            // Cancellation handler.
-            return function () {
-                // Track the cancellation so event listeners won't do anything even if already scheduled.
-                cancelled = true;
-                // Remove the event listeners so they won't run if the events later fire.
-                node.removeEventListener('load', onLoad);
-                node.removeEventListener('error', onError);
-                // And finally, clean up the page.
-                cleanup();
-            };
-        });
-    };
-    JsonpClientBackend.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
-    ];
-    /** @nocollapse */
-    JsonpClientBackend.ctorParameters = function () { return [
-        { type: JsonpCallbackContext, },
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_6__angular_common__["c" /* DOCUMENT */],] },] },
-    ]; };
-    return JsonpClientBackend;
-}());
-/**
- * An `HttpInterceptor` which identifies requests with the method JSONP and
- * shifts them to the `JsonpClientBackend`.
- *
- * \@stable
- */
-var JsonpInterceptor = (function () {
-    function JsonpInterceptor(jsonp) {
-        this.jsonp = jsonp;
-    }
-    /**
-     * @param {?} req
-     * @param {?} next
-     * @return {?}
-     */
-    JsonpInterceptor.prototype.intercept = /**
-     * @param {?} req
-     * @param {?} next
-     * @return {?}
-     */
-    function (req, next) {
-        if (req.method === 'JSONP') {
-            return this.jsonp.handle(/** @type {?} */ (req));
-        }
-        // Fall through for normal HTTP requests.
-        return next.handle(req);
-    };
-    JsonpInterceptor.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
-    ];
-    /** @nocollapse */
-    JsonpInterceptor.ctorParameters = function () { return [
-        { type: JsonpClientBackend, },
-    ]; };
-    return JsonpInterceptor;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var XSSI_PREFIX = /^\)\]\}',?\n/;
-/**
- * Determine an appropriate URL for the response, by checking either
- * XMLHttpRequest.responseURL or the X-Request-URL header.
- * @param {?} xhr
- * @return {?}
- */
-function getResponseUrl(xhr) {
-    if ('responseURL' in xhr && xhr.responseURL) {
-        return xhr.responseURL;
-    }
-    if (/^X-Request-URL:/m.test(xhr.getAllResponseHeaders())) {
-        return xhr.getResponseHeader('X-Request-URL');
-    }
-    return null;
-}
-/**
- * A wrapper around the `XMLHttpRequest` constructor.
- *
- * \@stable
- * @abstract
- */
-var XhrFactory = (function () {
-    function XhrFactory() {
-    }
-    return XhrFactory;
-}());
-/**
- * A factory for \@{link HttpXhrBackend} that uses the `XMLHttpRequest` browser API.
- *
- * \@stable
- */
-var BrowserXhr = (function () {
-    function BrowserXhr() {
-    }
-    /**
-     * @return {?}
-     */
-    BrowserXhr.prototype.build = /**
-     * @return {?}
-     */
-    function () { return /** @type {?} */ ((new XMLHttpRequest())); };
-    BrowserXhr.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
-    ];
-    /** @nocollapse */
-    BrowserXhr.ctorParameters = function () { return []; };
-    return BrowserXhr;
-}());
-/**
- * An `HttpBackend` which uses the XMLHttpRequest API to send
- * requests to a backend server.
- *
- * \@stable
- */
-var HttpXhrBackend = (function () {
-    function HttpXhrBackend(xhrFactory) {
-        this.xhrFactory = xhrFactory;
-    }
-    /**
-     * Process a request and return a stream of response events.
-     */
-    /**
-     * Process a request and return a stream of response events.
-     * @param {?} req
-     * @return {?}
-     */
-    HttpXhrBackend.prototype.handle = /**
-     * Process a request and return a stream of response events.
-     * @param {?} req
-     * @return {?}
-     */
-    function (req) {
-        var _this = this;
-        // Quick check to give a better error message when a user attempts to use
-        // HttpClient.jsonp() without installing the JsonpClientModule
-        if (req.method === 'JSONP') {
-            throw new Error("Attempted to construct Jsonp request without JsonpClientModule installed.");
-        }
-        // Everything happens on Observable subscription.
-        return new __WEBPACK_IMPORTED_MODULE_7_rxjs_Observable__["Observable"](function (observer) {
-            // Start by setting up the XHR object with request method, URL, and withCredentials flag.
-            var /** @type {?} */ xhr = _this.xhrFactory.build();
-            xhr.open(req.method, req.urlWithParams);
-            if (!!req.withCredentials) {
-                xhr.withCredentials = true;
-            }
-            // Add all the requested headers.
-            req.headers.forEach(function (name, values) { return xhr.setRequestHeader(name, values.join(',')); });
-            // Add an Accept header if one isn't present already.
-            if (!req.headers.has('Accept')) {
-                xhr.setRequestHeader('Accept', 'application/json, text/plain, */*');
-            }
-            // Auto-detect the Content-Type header if one isn't present already.
-            if (!req.headers.has('Content-Type')) {
-                var /** @type {?} */ detectedType = req.detectContentTypeHeader();
-                // Sometimes Content-Type detection fails.
-                if (detectedType !== null) {
-                    xhr.setRequestHeader('Content-Type', detectedType);
-                }
-            }
-            // Set the responseType if one was requested.
-            if (req.responseType) {
-                var /** @type {?} */ responseType = req.responseType.toLowerCase();
-                // JSON responses need to be processed as text. This is because if the server
-                // returns an XSSI-prefixed JSON response, the browser will fail to parse it,
-                // xhr.response will be null, and xhr.responseText cannot be accessed to
-                // retrieve the prefixed JSON data in order to strip the prefix. Thus, all JSON
-                // is parsed by first requesting text and then applying JSON.parse.
-                xhr.responseType = /** @type {?} */ (((responseType !== 'json') ? responseType : 'text'));
-            }
-            // Serialize the request body if one is present. If not, this will be set to null.
-            var /** @type {?} */ reqBody = req.serializeBody();
-            // If progress events are enabled, response headers will be delivered
-            // in two events - the HttpHeaderResponse event and the full HttpResponse
-            // event. However, since response headers don't change in between these
-            // two events, it doesn't make sense to parse them twice. So headerResponse
-            // caches the data extracted from the response whenever it's first parsed,
-            // to ensure parsing isn't duplicated.
-            var /** @type {?} */ headerResponse = null;
-            // partialFromXhr extracts the HttpHeaderResponse from the current XMLHttpRequest
-            // state, and memoizes it into headerResponse.
-            var /** @type {?} */ partialFromXhr = function () {
-                if (headerResponse !== null) {
-                    return headerResponse;
-                }
-                // Read status and normalize an IE9 bug (http://bugs.jquery.com/ticket/1450).
-                var /** @type {?} */ status = xhr.status === 1223 ? 204 : xhr.status;
-                var /** @type {?} */ statusText = xhr.statusText || 'OK';
-                // Parse headers from XMLHttpRequest - this step is lazy.
-                var /** @type {?} */ headers = new HttpHeaders(xhr.getAllResponseHeaders());
-                // Read the response URL from the XMLHttpResponse instance and fall back on the
-                // request URL.
-                var /** @type {?} */ url = getResponseUrl(xhr) || req.url;
-                // Construct the HttpHeaderResponse and memoize it.
-                headerResponse = new HttpHeaderResponse({ headers: headers, status: status, statusText: statusText, url: url });
-                return headerResponse;
-            };
-            // Next, a few closures are defined for the various events which XMLHttpRequest can
-            // emit. This allows them to be unregistered as event listeners later.
-            // First up is the load event, which represents a response being fully available.
-            var /** @type {?} */ onLoad = function () {
-                // Read response state from the memoized partial data.
-                var _a = partialFromXhr(), headers = _a.headers, status = _a.status, statusText = _a.statusText, url = _a.url;
-                // The body will be read out if present.
-                var /** @type {?} */ body = null;
-                if (status !== 204) {
-                    // Use XMLHttpRequest.response if set, responseText otherwise.
-                    body = (typeof xhr.response === 'undefined') ? xhr.responseText : xhr.response;
-                }
-                // Normalize another potential bug (this one comes from CORS).
-                if (status === 0) {
-                    status = !!body ? 200 : 0;
-                }
-                // ok determines whether the response will be transmitted on the event or
-                // error channel. Unsuccessful status codes (not 2xx) will always be errors,
-                // but a successful status code can still result in an error if the user
-                // asked for JSON data and the body cannot be parsed as such.
-                var /** @type {?} */ ok = status >= 200 && status < 300;
-                // Check whether the body needs to be parsed as JSON (in many cases the browser
-                // will have done that already).
-                if (ok && req.responseType === 'json' && typeof body === 'string') {
-                    // Attempt the parse. If it fails, a parse error should be delivered to the user.
-                    body = body.replace(XSSI_PREFIX, '');
-                    try {
-                        body = JSON.parse(body);
-                    }
-                    catch (/** @type {?} */ error) {
-                        // Even though the response status was 2xx, this is still an error.
-                        ok = false;
-                        // The parse error contains the text of the body that failed to parse.
-                        body = /** @type {?} */ ({ error: error, text: body });
-                    }
-                }
-                else if (!ok && req.responseType === 'json' && typeof body === 'string') {
-                    try {
-                        // Attempt to parse the body as JSON.
-                        body = JSON.parse(body);
-                    }
-                    catch (/** @type {?} */ error) {
-                        // Cannot be certain that the body was meant to be parsed as JSON.
-                        // Leave the body as a string.
-                    }
-                }
-                if (ok) {
-                    // A successful response is delivered on the event stream.
-                    observer.next(new HttpResponse({
-                        body: body,
-                        headers: headers,
-                        status: status,
-                        statusText: statusText,
-                        url: url || undefined,
-                    }));
-                    // The full body has been received and delivered, no further events
-                    // are possible. This request is complete.
-                    observer.complete();
-                }
-                else {
-                    // An unsuccessful request is delivered on the error channel.
-                    observer.error(new HttpErrorResponse({
-                        // The error in this case is the response body (error from the server).
-                        error: body,
-                        headers: headers,
-                        status: status,
-                        statusText: statusText,
-                        url: url || undefined,
-                    }));
-                }
-            };
-            // The onError callback is called when something goes wrong at the network level.
-            // Connection timeout, DNS error, offline, etc. These are actual errors, and are
-            // transmitted on the error channel.
-            var /** @type {?} */ onError = function (error) {
-                var /** @type {?} */ res = new HttpErrorResponse({
-                    error: error,
-                    status: xhr.status || 0,
-                    statusText: xhr.statusText || 'Unknown Error',
-                });
-                observer.error(res);
-            };
-            // The sentHeaders flag tracks whether the HttpResponseHeaders event
-            // has been sent on the stream. This is necessary to track if progress
-            // is enabled since the event will be sent on only the first download
-            // progerss event.
-            var /** @type {?} */ sentHeaders = false;
-            // The download progress event handler, which is only registered if
-            // progress events are enabled.
-            var /** @type {?} */ onDownProgress = function (event) {
-                // Send the HttpResponseHeaders event if it hasn't been sent already.
-                if (!sentHeaders) {
-                    observer.next(partialFromXhr());
-                    sentHeaders = true;
-                }
-                // Start building the download progress event to deliver on the response
-                // event stream.
-                var /** @type {?} */ progressEvent = {
-                    type: HttpEventType.DownloadProgress,
-                    loaded: event.loaded,
-                };
-                // Set the total number of bytes in the event if it's available.
-                if (event.lengthComputable) {
-                    progressEvent.total = event.total;
-                }
-                // If the request was for text content and a partial response is
-                // available on XMLHttpRequest, include it in the progress event
-                // to allow for streaming reads.
-                if (req.responseType === 'text' && !!xhr.responseText) {
-                    progressEvent.partialText = xhr.responseText;
-                }
-                // Finally, fire the event.
-                observer.next(progressEvent);
-            };
-            // The upload progress event handler, which is only registered if
-            // progress events are enabled.
-            var /** @type {?} */ onUpProgress = function (event) {
-                // Upload progress events are simpler. Begin building the progress
-                // event.
-                var /** @type {?} */ progress = {
-                    type: HttpEventType.UploadProgress,
-                    loaded: event.loaded,
-                };
-                // If the total number of bytes being uploaded is available, include
-                // it.
-                if (event.lengthComputable) {
-                    progress.total = event.total;
-                }
-                // Send the event.
-                observer.next(progress);
-            };
-            // By default, register for load and error events.
-            xhr.addEventListener('load', onLoad);
-            xhr.addEventListener('error', onError);
-            // Progress events are only enabled if requested.
-            if (req.reportProgress) {
-                // Download progress is always enabled if requested.
-                xhr.addEventListener('progress', onDownProgress);
-                // Upload progress depends on whether there is a body to upload.
-                if (reqBody !== null && xhr.upload) {
-                    xhr.upload.addEventListener('progress', onUpProgress);
-                }
-            }
-            // Fire the request, and notify the event stream that it was fired.
-            xhr.send(reqBody);
-            observer.next({ type: HttpEventType.Sent });
-            // This is the return from the Observable function, which is the
-            // request cancellation handler.
-            return function () {
-                // On a cancellation, remove all registered event listeners.
-                xhr.removeEventListener('error', onError);
-                xhr.removeEventListener('load', onLoad);
-                if (req.reportProgress) {
-                    xhr.removeEventListener('progress', onDownProgress);
-                    if (reqBody !== null && xhr.upload) {
-                        xhr.upload.removeEventListener('progress', onUpProgress);
-                    }
-                }
-                // Finally, abort the in-flight request.
-                xhr.abort();
-            };
-        });
-    };
-    HttpXhrBackend.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
-    ];
-    /** @nocollapse */
-    HttpXhrBackend.ctorParameters = function () { return [
-        { type: XhrFactory, },
-    ]; };
-    return HttpXhrBackend;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var XSRF_COOKIE_NAME = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* InjectionToken */]('XSRF_COOKIE_NAME');
-var XSRF_HEADER_NAME = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* InjectionToken */]('XSRF_HEADER_NAME');
-/**
- * Retrieves the current XSRF token to use with the next outgoing request.
- *
- * \@stable
- * @abstract
- */
-var HttpXsrfTokenExtractor = (function () {
-    function HttpXsrfTokenExtractor() {
-    }
-    return HttpXsrfTokenExtractor;
-}());
-/**
- * `HttpXsrfTokenExtractor` which retrieves the token from a cookie.
- */
-var HttpXsrfCookieExtractor = (function () {
-    function HttpXsrfCookieExtractor(doc, platform, cookieName) {
-        this.doc = doc;
-        this.platform = platform;
-        this.cookieName = cookieName;
-        this.lastCookieString = '';
-        this.lastToken = null;
-        /**
-         * \@internal for testing
-         */
-        this.parseCount = 0;
-    }
-    /**
-     * @return {?}
-     */
-    HttpXsrfCookieExtractor.prototype.getToken = /**
-     * @return {?}
-     */
-    function () {
-        if (this.platform === 'server') {
-            return null;
-        }
-        var /** @type {?} */ cookieString = this.doc.cookie || '';
-        if (cookieString !== this.lastCookieString) {
-            this.parseCount++;
-            this.lastToken = Object(__WEBPACK_IMPORTED_MODULE_6__angular_common__["j" /* ɵparseCookieValue */])(cookieString, this.cookieName);
-            this.lastCookieString = cookieString;
-        }
-        return this.lastToken;
-    };
-    HttpXsrfCookieExtractor.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
-    ];
-    /** @nocollapse */
-    HttpXsrfCookieExtractor.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_6__angular_common__["c" /* DOCUMENT */],] },] },
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */], args: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* PLATFORM_ID */],] },] },
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */], args: [XSRF_COOKIE_NAME,] },] },
-    ]; };
-    return HttpXsrfCookieExtractor;
-}());
-/**
- * `HttpInterceptor` which adds an XSRF token to eligible outgoing requests.
- */
-var HttpXsrfInterceptor = (function () {
-    function HttpXsrfInterceptor(tokenService, headerName) {
-        this.tokenService = tokenService;
-        this.headerName = headerName;
-    }
-    /**
-     * @param {?} req
-     * @param {?} next
-     * @return {?}
-     */
-    HttpXsrfInterceptor.prototype.intercept = /**
-     * @param {?} req
-     * @param {?} next
-     * @return {?}
-     */
-    function (req, next) {
-        var /** @type {?} */ lcUrl = req.url.toLowerCase();
-        // Skip both non-mutating requests and absolute URLs.
-        // Non-mutating requests don't require a token, and absolute URLs require special handling
-        // anyway as the cookie set
-        // on our origin is not the same as the token expected by another origin.
-        if (req.method === 'GET' || req.method === 'HEAD' || lcUrl.startsWith('http://') ||
-            lcUrl.startsWith('https://')) {
-            return next.handle(req);
-        }
-        var /** @type {?} */ token = this.tokenService.getToken();
-        // Be careful not to overwrite an existing header of the same name.
-        if (token !== null && !req.headers.has(this.headerName)) {
-            req = req.clone({ headers: req.headers.set(this.headerName, token) });
-        }
-        return next.handle(req);
-    };
-    HttpXsrfInterceptor.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */] },
-    ];
-    /** @nocollapse */
-    HttpXsrfInterceptor.ctorParameters = function () { return [
-        { type: HttpXsrfTokenExtractor, },
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */], args: [XSRF_HEADER_NAME,] },] },
-    ]; };
-    return HttpXsrfInterceptor;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * Constructs an `HttpHandler` that applies a bunch of `HttpInterceptor`s
- * to a request before passing it to the given `HttpBackend`.
- *
- * Meant to be used as a factory function within `HttpClientModule`.
- *
- * \@stable
- * @param {?} backend
- * @param {?=} interceptors
- * @return {?}
- */
-function interceptingHandler(backend, interceptors) {
-    if (interceptors === void 0) { interceptors = []; }
-    if (!interceptors) {
-        return backend;
-    }
-    return interceptors.reduceRight(function (next, interceptor) { return new HttpInterceptorHandler(next, interceptor); }, backend);
-}
-/**
- * Factory function that determines where to store JSONP callbacks.
- *
- * Ordinarily JSONP callbacks are stored on the `window` object, but this may not exist
- * in test environments. In that case, callbacks are stored on an anonymous object instead.
- *
- * \@stable
- * @return {?}
- */
-function jsonpCallbackContext() {
-    if (typeof window === 'object') {
-        return window;
-    }
-    return {};
-}
-/**
- * `NgModule` which adds XSRF protection support to outgoing requests.
- *
- * Provided the server supports a cookie-based XSRF protection system, this
- * module can be used directly to configure XSRF protection with the correct
- * cookie and header names.
- *
- * If no such names are provided, the default is to use `X-XSRF-TOKEN` for
- * the header name and `XSRF-TOKEN` for the cookie name.
- *
- * \@stable
- */
-var HttpClientXsrfModule = (function () {
-    function HttpClientXsrfModule() {
-    }
-    /**
-     * Disable the default XSRF protection.
-     */
-    /**
-     * Disable the default XSRF protection.
-     * @return {?}
-     */
-    HttpClientXsrfModule.disable = /**
-     * Disable the default XSRF protection.
-     * @return {?}
-     */
-    function () {
-        return {
-            ngModule: HttpClientXsrfModule,
-            providers: [
-                { provide: HttpXsrfInterceptor, useClass: NoopInterceptor },
-            ],
-        };
-    };
-    /**
-     * Configure XSRF protection to use the given cookie name or header name,
-     * or the default names (as described above) if not provided.
-     */
-    /**
-     * Configure XSRF protection to use the given cookie name or header name,
-     * or the default names (as described above) if not provided.
-     * @param {?=} options
-     * @return {?}
-     */
-    HttpClientXsrfModule.withOptions = /**
-     * Configure XSRF protection to use the given cookie name or header name,
-     * or the default names (as described above) if not provided.
-     * @param {?=} options
-     * @return {?}
-     */
-    function (options) {
-        if (options === void 0) { options = {}; }
-        return {
-            ngModule: HttpClientXsrfModule,
-            providers: [
-                options.cookieName ? { provide: XSRF_COOKIE_NAME, useValue: options.cookieName } : [],
-                options.headerName ? { provide: XSRF_HEADER_NAME, useValue: options.headerName } : [],
-            ],
-        };
-    };
-    HttpClientXsrfModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */], args: [{
-                    providers: [
-                        HttpXsrfInterceptor,
-                        { provide: HTTP_INTERCEPTORS, useExisting: HttpXsrfInterceptor, multi: true },
-                        { provide: HttpXsrfTokenExtractor, useClass: HttpXsrfCookieExtractor },
-                        { provide: XSRF_COOKIE_NAME, useValue: 'XSRF-TOKEN' },
-                        { provide: XSRF_HEADER_NAME, useValue: 'X-XSRF-TOKEN' },
-                    ],
-                },] },
-    ];
-    /** @nocollapse */
-    HttpClientXsrfModule.ctorParameters = function () { return []; };
-    return HttpClientXsrfModule;
-}());
-/**
- * `NgModule` which provides the `HttpClient` and associated services.
- *
- * Interceptors can be added to the chain behind `HttpClient` by binding them
- * to the multiprovider for `HTTP_INTERCEPTORS`.
- *
- * \@stable
- */
-var HttpClientModule = (function () {
-    function HttpClientModule() {
-    }
-    HttpClientModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */], args: [{
-                    imports: [
-                        HttpClientXsrfModule.withOptions({
-                            cookieName: 'XSRF-TOKEN',
-                            headerName: 'X-XSRF-TOKEN',
-                        }),
-                    ],
-                    providers: [
-                        HttpClient,
-                        // HttpHandler is the backend + interceptors and is constructed
-                        // using the interceptingHandler factory function.
-                        {
-                            provide: HttpHandler,
-                            useFactory: interceptingHandler,
-                            deps: [HttpBackend, [new __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */](), new __WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* Inject */](HTTP_INTERCEPTORS)]],
-                        },
-                        HttpXhrBackend,
-                        { provide: HttpBackend, useExisting: HttpXhrBackend },
-                        BrowserXhr,
-                        { provide: XhrFactory, useExisting: BrowserXhr },
-                    ],
-                },] },
-    ];
-    /** @nocollapse */
-    HttpClientModule.ctorParameters = function () { return []; };
-    return HttpClientModule;
-}());
-/**
- * `NgModule` which enables JSONP support in `HttpClient`.
- *
- * Without this module, Jsonp requests will reach the backend
- * with method JSONP, where they'll be rejected.
- *
- * \@stable
- */
-var HttpClientJsonpModule = (function () {
-    function HttpClientJsonpModule() {
-    }
-    HttpClientJsonpModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */], args: [{
-                    providers: [
-                        JsonpClientBackend,
-                        { provide: JsonpCallbackContext, useFactory: jsonpCallbackContext },
-                        { provide: HTTP_INTERCEPTORS, useClass: JsonpInterceptor, multi: true },
-                    ],
-                },] },
-    ];
-    /** @nocollapse */
-    HttpClientJsonpModule.ctorParameters = function () { return []; };
-    return HttpClientJsonpModule;
-}());
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-
-/**
- * @fileoverview added by tsickle
- * @suppress {checkTypes} checked by tsc
- */
-/**
- * Generated bundle index. Do not edit.
- */
-
-
-//# sourceMappingURL=http.js.map
-
-
-/***/ }),
-/* 246 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IonicStorageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__storage__ = __webpack_require__(447);
-/* unused harmony reexport StorageConfigToken */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__storage__["a"]; });
-
-
-
-var IonicStorageModule = (function () {
-    function IonicStorageModule() {
-    }
-    IonicStorageModule.forRoot = function (storageConfig) {
-        if (storageConfig === void 0) { storageConfig = null; }
-        return {
-            ngModule: IonicStorageModule,
-            providers: [
-                { provide: __WEBPACK_IMPORTED_MODULE_1__storage__["b" /* StorageConfigToken */], useValue: storageConfig },
-                { provide: __WEBPACK_IMPORTED_MODULE_1__storage__["a" /* Storage */], useFactory: __WEBPACK_IMPORTED_MODULE_1__storage__["c" /* provideStorage */], deps: [__WEBPACK_IMPORTED_MODULE_1__storage__["b" /* StorageConfigToken */]] },
-            ]
-        };
-    };
-    IonicStorageModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */], args: [{},] },
-    ];
-    /** @nocollapse */
-    IonicStorageModule.ctorParameters = function () { return []; };
-    return IonicStorageModule;
-}());
-
-
-
-/***/ }),
-/* 247 */,
-/* 248 */,
 /* 249 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -92180,18 +92180,19 @@ var FCM = (function (_super) {
 /* 293 */,
 /* 294 */,
 /* 295 */,
-/* 296 */
+/* 296 */,
+/* 297 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__public_api__ = __webpack_require__(430);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__public_api__ = __webpack_require__(438);
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__public_api__["a"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__public_api__["b"]; });
 
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92292,7 +92293,6 @@ var Device = (function (_super) {
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 298 */,
 /* 299 */,
 /* 300 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -141511,1058 +141511,11 @@ var AngularFireDatabaseModule = (function () {
 
 /***/ }),
 /* 430 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__auth__ = __webpack_require__(241);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__auth__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_module__ = __webpack_require__(433);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__auth_module__["a"]; });
-
-
-//# sourceMappingURL=public_api.js.map
-
-/***/ }),
-/* 431 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global) {(function() {
-  var firebase = __webpack_require__(54).default;
-  var h,aa=aa||{},k=this;function m(a){return"string"==typeof a}function ba(a){return"boolean"==typeof a}function ca(){}
-function da(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";
-else if("function"==b&&"undefined"==typeof a.call)return"object";return b}function ea(a){return null===a}function fa(a){return"array"==da(a)}function ha(a){var b=da(a);return"array"==b||"object"==b&&"number"==typeof a.length}function p(a){return"function"==da(a)}function q(a){var b=typeof a;return"object"==b&&null!=a||"function"==b}var ia="closure_uid_"+(1E9*Math.random()>>>0),ja=0;function ka(a,b,c){return a.call.apply(a.bind,arguments)}
-function la(a,b,c){if(!a)throw Error();if(2<arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var c=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(c,d);return a.apply(b,c)}}return function(){return a.apply(b,arguments)}}function r(a,b,c){Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?r=ka:r=la;return r.apply(null,arguments)}
-function ma(a,b){var c=Array.prototype.slice.call(arguments,1);return function(){var b=c.slice();b.push.apply(b,arguments);return a.apply(this,b)}}var na=Date.now||function(){return+new Date};function t(a,b){function c(){}c.prototype=b.prototype;a.ib=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.Nc=function(a,c,f){for(var d=Array(arguments.length-2),e=2;e<arguments.length;e++)d[e-2]=arguments[e];return b.prototype[c].apply(a,d)}};function u(a){if(Error.captureStackTrace)Error.captureStackTrace(this,u);else{var b=Error().stack;b&&(this.stack=b)}a&&(this.message=String(a))}t(u,Error);u.prototype.name="CustomError";function oa(a,b){for(var c=a.split("%s"),d="",e=Array.prototype.slice.call(arguments,1);e.length&&1<c.length;)d+=c.shift()+e.shift();return d+c.join("%s")}var pa=String.prototype.trim?function(a){return a.trim()}:function(a){return a.replace(/^[\s\xa0]+|[\s\xa0]+$/g,"")};
-function qa(a){if(!ra.test(a))return a;-1!=a.indexOf("&")&&(a=a.replace(sa,"&amp;"));-1!=a.indexOf("<")&&(a=a.replace(ta,"&lt;"));-1!=a.indexOf(">")&&(a=a.replace(ua,"&gt;"));-1!=a.indexOf('"')&&(a=a.replace(va,"&quot;"));-1!=a.indexOf("'")&&(a=a.replace(wa,"&#39;"));-1!=a.indexOf("\x00")&&(a=a.replace(xa,"&#0;"));return a}var sa=/&/g,ta=/</g,ua=/>/g,va=/"/g,wa=/'/g,xa=/\x00/g,ra=/[\x00&<>"']/;function v(a,b){return-1!=a.indexOf(b)}function ya(a,b){return a<b?-1:a>b?1:0};function za(a,b){b.unshift(a);u.call(this,oa.apply(null,b));b.shift()}t(za,u);za.prototype.name="AssertionError";function Aa(a,b){throw new za("Failure"+(a?": "+a:""),Array.prototype.slice.call(arguments,1));};var Ba=Array.prototype.indexOf?function(a,b,c){return Array.prototype.indexOf.call(a,b,c)}:function(a,b,c){c=null==c?0:0>c?Math.max(0,a.length+c):c;if(m(a))return m(b)&&1==b.length?a.indexOf(b,c):-1;for(;c<a.length;c++)if(c in a&&a[c]===b)return c;return-1},w=Array.prototype.forEach?function(a,b,c){Array.prototype.forEach.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=m(a)?a.split(""):a,f=0;f<d;f++)f in e&&b.call(c,e[f],f,a)};
-function Ca(a,b){var c=a.length,d=m(a)?a.split(""):a;for(--c;0<=c;--c)c in d&&b.call(void 0,d[c],c,a)}var Da=Array.prototype.map?function(a,b,c){return Array.prototype.map.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=Array(d),f=m(a)?a.split(""):a,g=0;g<d;g++)g in f&&(e[g]=b.call(c,f[g],g,a));return e},Ea=Array.prototype.some?function(a,b,c){return Array.prototype.some.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=m(a)?a.split(""):a,f=0;f<d;f++)if(f in e&&b.call(c,e[f],f,a))return!0;return!1};
-function Fa(a){a:{var b=Ga;for(var c=a.length,d=m(a)?a.split(""):a,e=0;e<c;e++)if(e in d&&b.call(void 0,d[e],e,a)){b=e;break a}b=-1}return 0>b?null:m(a)?a.charAt(b):a[b]}function Ha(a,b){return 0<=Ba(a,b)}function Ia(a,b){b=Ba(a,b);var c;(c=0<=b)&&Array.prototype.splice.call(a,b,1);return c}function Ja(a,b){var c=0;Ca(a,function(d,e){b.call(void 0,d,e,a)&&1==Array.prototype.splice.call(a,e,1).length&&c++})}function Ka(a){return Array.prototype.concat.apply([],arguments)}
-function La(a){var b=a.length;if(0<b){for(var c=Array(b),d=0;d<b;d++)c[d]=a[d];return c}return[]};var Ma;a:{var Na=k.navigator;if(Na){var Oa=Na.userAgent;if(Oa){Ma=Oa;break a}}Ma=""}function x(a){return v(Ma,a)};function Pa(a,b){for(var c in a)b.call(void 0,a[c],c,a)}function Qa(a){var b=[],c=0,d;for(d in a)b[c++]=a[d];return b}function Ra(a){var b=[],c=0,d;for(d in a)b[c++]=d;return b}function Sa(a){for(var b in a)return!1;return!0}function Ta(a,b){for(var c in a)if(!(c in b)||a[c]!==b[c])return!1;for(c in b)if(!(c in a))return!1;return!0}function Ua(a){var b={},c;for(c in a)b[c]=a[c];return b}var Va="constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(" ");
-function Wa(a,b){for(var c,d,e=1;e<arguments.length;e++){d=arguments[e];for(c in d)a[c]=d[c];for(var f=0;f<Va.length;f++)c=Va[f],Object.prototype.hasOwnProperty.call(d,c)&&(a[c]=d[c])}};function Xa(a){Xa[" "](a);return a}Xa[" "]=ca;function Ya(a,b){var c=Za;return Object.prototype.hasOwnProperty.call(c,a)?c[a]:c[a]=b(a)};var $a=x("Opera"),y=x("Trident")||x("MSIE"),ab=x("Edge"),bb=ab||y,cb=x("Gecko")&&!(v(Ma.toLowerCase(),"webkit")&&!x("Edge"))&&!(x("Trident")||x("MSIE"))&&!x("Edge"),db=v(Ma.toLowerCase(),"webkit")&&!x("Edge");function eb(){var a=k.document;return a?a.documentMode:void 0}var fb;
-a:{var gb="",hb=function(){var a=Ma;if(cb)return/rv\:([^\);]+)(\)|;)/.exec(a);if(ab)return/Edge\/([\d\.]+)/.exec(a);if(y)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(db)return/WebKit\/(\S+)/.exec(a);if($a)return/(?:Version)[ \/]?(\S+)/.exec(a)}();hb&&(gb=hb?hb[1]:"");if(y){var ib=eb();if(null!=ib&&ib>parseFloat(gb)){fb=String(ib);break a}}fb=gb}var Za={};
-function jb(a){return Ya(a,function(){for(var b=0,c=pa(String(fb)).split("."),d=pa(String(a)).split("."),e=Math.max(c.length,d.length),f=0;0==b&&f<e;f++){var g=c[f]||"",l=d[f]||"";do{g=/(\d*)(\D*)(.*)/.exec(g)||["","","",""];l=/(\d*)(\D*)(.*)/.exec(l)||["","","",""];if(0==g[0].length&&0==l[0].length)break;b=ya(0==g[1].length?0:parseInt(g[1],10),0==l[1].length?0:parseInt(l[1],10))||ya(0==g[2].length,0==l[2].length)||ya(g[2],l[2]);g=g[3];l=l[3]}while(0==b)}return 0<=b})}var kb;var lb=k.document;
-kb=lb&&y?eb()||("CSS1Compat"==lb.compatMode?parseInt(fb,10):5):void 0;function mb(a){a.prototype.then=a.prototype.then;a.prototype.$goog_Thenable=!0}function nb(a){if(!a)return!1;try{return!!a.$goog_Thenable}catch(b){return!1}};function ob(a,b,c){this.f=c;this.c=a;this.g=b;this.b=0;this.a=null}ob.prototype.get=function(){if(0<this.b){this.b--;var a=this.a;this.a=a.next;a.next=null}else a=this.c();return a};function pb(a,b){a.g(b);a.b<a.f&&(a.b++,b.next=a.a,a.a=b)};var rb=new ob(function(){return new qb},function(a){a.reset()},100);function sb(){var a=tb,b=null;a.a&&(b=a.a,a.a=a.a.next,a.a||(a.b=null),b.next=null);return b}function qb(){this.next=this.b=this.a=null}qb.prototype.set=function(a,b){this.a=a;this.b=b;this.next=null};qb.prototype.reset=function(){this.next=this.b=this.a=null};function ub(a){k.setTimeout(function(){throw a;},0)}var wb;
-function xb(){var a=k.MessageChannel;"undefined"===typeof a&&"undefined"!==typeof window&&window.postMessage&&window.addEventListener&&!x("Presto")&&(a=function(){var a=document.createElement("IFRAME");a.style.display="none";a.src="";document.documentElement.appendChild(a);var b=a.contentWindow;a=b.document;a.open();a.write("");a.close();var c="callImmediate"+Math.random(),d="file:"==b.location.protocol?"*":b.location.protocol+"//"+b.location.host;a=r(function(a){if(("*"==d||a.origin==d)&&a.data==
-c)this.port1.onmessage()},this);b.addEventListener("message",a,!1);this.port1={};this.port2={postMessage:function(){b.postMessage(c,d)}}});if("undefined"!==typeof a&&!x("Trident")&&!x("MSIE")){var b=new a,c={},d=c;b.port1.onmessage=function(){if(void 0!==c.next){c=c.next;var a=c.pb;c.pb=null;a()}};return function(a){d.next={pb:a};d=d.next;b.port2.postMessage(0)}}return"undefined"!==typeof document&&"onreadystatechange"in document.createElement("SCRIPT")?function(a){var b=document.createElement("SCRIPT");
-b.onreadystatechange=function(){b.onreadystatechange=null;b.parentNode.removeChild(b);b=null;a();a=null};document.documentElement.appendChild(b)}:function(a){k.setTimeout(a,0)}};function yb(a,b){zb||Ab();Bb||(zb(),Bb=!0);var c=tb,d=rb.get();d.set(a,b);c.b?c.b.next=d:c.a=d;c.b=d}var zb;function Ab(){if(-1!=String(k.Promise).indexOf("[native code]")){var a=k.Promise.resolve(void 0);zb=function(){a.then(Cb)}}else zb=function(){var a=Cb;!p(k.setImmediate)||k.Window&&k.Window.prototype&&!x("Edge")&&k.Window.prototype.setImmediate==k.setImmediate?(wb||(wb=xb()),wb(a)):k.setImmediate(a)}}var Bb=!1,tb=new function(){this.b=this.a=null};
-function Cb(){for(var a;a=sb();){try{a.a.call(a.b)}catch(b){ub(b)}pb(rb,a)}Bb=!1};function z(a,b){this.a=Db;this.i=void 0;this.f=this.b=this.c=null;this.g=this.h=!1;if(a!=ca)try{var c=this;a.call(b,function(a){Eb(c,Fb,a)},function(a){if(!(a instanceof Gb))try{if(a instanceof Error)throw a;throw Error("Promise rejected.");}catch(e){}Eb(c,Hb,a)})}catch(d){Eb(this,Hb,d)}}var Db=0,Fb=2,Hb=3;function Ib(){this.next=this.f=this.b=this.g=this.a=null;this.c=!1}Ib.prototype.reset=function(){this.f=this.b=this.g=this.a=null;this.c=!1};
-var Jb=new ob(function(){return new Ib},function(a){a.reset()},100);function Kb(a,b,c){var d=Jb.get();d.g=a;d.b=b;d.f=c;return d}function A(a){if(a instanceof z)return a;var b=new z(ca);Eb(b,Fb,a);return b}function B(a){return new z(function(b,c){c(a)})}function Lb(a,b,c){Mb(a,b,c,null)||yb(ma(b,a))}function Nb(a){return new z(function(b,c){var d=a.length,e=[];if(d)for(var f=function(a,c){d--;e[a]=c;0==d&&b(e)},g=function(a){c(a)},l=0,n;l<a.length;l++)n=a[l],Lb(n,ma(f,l),g);else b(e)})}
-function Ob(a){return new z(function(b){var c=a.length,d=[];if(c)for(var e=function(a,e,f){c--;d[a]=e?{Qb:!0,value:f}:{Qb:!1,reason:f};0==c&&b(d)},f=0,g;f<a.length;f++)g=a[f],Lb(g,ma(e,f,!0),ma(e,f,!1));else b(d)})}z.prototype.then=function(a,b,c){return Pb(this,p(a)?a:null,p(b)?b:null,c)};mb(z);function Qb(a,b){b=Kb(b,b,void 0);b.c=!0;Rb(a,b);return a}h=z.prototype;h.s=function(a,b){return Pb(this,null,a,b)};h.cancel=function(a){this.a==Db&&yb(function(){var b=new Gb(a);Sb(this,b)},this)};
-function Sb(a,b){if(a.a==Db)if(a.c){var c=a.c;if(c.b){for(var d=0,e=null,f=null,g=c.b;g&&(g.c||(d++,g.a==a&&(e=g),!(e&&1<d)));g=g.next)e||(f=g);e&&(c.a==Db&&1==d?Sb(c,b):(f?(d=f,d.next==c.f&&(c.f=d),d.next=d.next.next):Tb(c),Ub(c,e,Hb,b)))}a.c=null}else Eb(a,Hb,b)}function Rb(a,b){a.b||a.a!=Fb&&a.a!=Hb||Vb(a);a.f?a.f.next=b:a.b=b;a.f=b}
-function Pb(a,b,c,d){var e=Kb(null,null,null);e.a=new z(function(a,g){e.g=b?function(c){try{var e=b.call(d,c);a(e)}catch(D){g(D)}}:a;e.b=c?function(b){try{var e=c.call(d,b);void 0===e&&b instanceof Gb?g(b):a(e)}catch(D){g(D)}}:g});e.a.c=a;Rb(a,e);return e.a}h.wc=function(a){this.a=Db;Eb(this,Fb,a)};h.xc=function(a){this.a=Db;Eb(this,Hb,a)};
-function Eb(a,b,c){a.a==Db&&(a===c&&(b=Hb,c=new TypeError("Promise cannot resolve to itself")),a.a=1,Mb(c,a.wc,a.xc,a)||(a.i=c,a.a=b,a.c=null,Vb(a),b!=Hb||c instanceof Gb||Wb(a,c)))}function Mb(a,b,c,d){if(a instanceof z)return Rb(a,Kb(b||ca,c||null,d)),!0;if(nb(a))return a.then(b,c,d),!0;if(q(a))try{var e=a.then;if(p(e))return Xb(a,e,b,c,d),!0}catch(f){return c.call(d,f),!0}return!1}
-function Xb(a,b,c,d,e){function f(a){l||(l=!0,d.call(e,a))}function g(a){l||(l=!0,c.call(e,a))}var l=!1;try{b.call(a,g,f)}catch(n){f(n)}}function Vb(a){a.h||(a.h=!0,yb(a.Mb,a))}function Tb(a){var b=null;a.b&&(b=a.b,a.b=b.next,b.next=null);a.b||(a.f=null);return b}h.Mb=function(){for(var a;a=Tb(this);)Ub(this,a,this.a,this.i);this.h=!1};
-function Ub(a,b,c,d){if(c==Hb&&b.b&&!b.c)for(;a&&a.g;a=a.c)a.g=!1;if(b.a)b.a.c=null,Yb(b,c,d);else try{b.c?b.g.call(b.f):Yb(b,c,d)}catch(e){Zb.call(null,e)}pb(Jb,b)}function Yb(a,b,c){b==Fb?a.g.call(a.f,c):a.b&&a.b.call(a.f,c)}function Wb(a,b){a.g=!0;yb(function(){a.g&&Zb.call(null,b)})}var Zb=ub;function Gb(a){u.call(this,a)}t(Gb,u);Gb.prototype.name="cancel";var $b=!y||9<=Number(kb);function ac(){this.a="";this.b=bc}ac.prototype.la=!0;ac.prototype.ja=function(){return this.a};ac.prototype.toString=function(){return"Const{"+this.a+"}"};function cc(a){if(a instanceof ac&&a.constructor===ac&&a.b===bc)return a.a;Aa("expected object of type Const, got '"+a+"'");return"type_error:Const"}var bc={};function dc(a){var b=new ac;b.a=a;return b}dc("");function ec(){this.a="";this.b=fc}ec.prototype.la=!0;ec.prototype.ja=function(){return this.a};ec.prototype.toString=function(){return"TrustedResourceUrl{"+this.a+"}"};function gc(a){if(a instanceof ec&&a.constructor===ec&&a.b===fc)return a.a;Aa("expected object of type TrustedResourceUrl, got '"+a+"' of type "+da(a));return"type_error:TrustedResourceUrl"}function hc(a,b){a=ic(a,b);b=new ec;b.a=a;return b}
-function ic(a,b){var c=cc(a);if(!jc.test(c))throw Error("Invalid TrustedResourceUrl format: "+c);return c.replace(kc,function(a,e){if(!Object.prototype.hasOwnProperty.call(b,e))throw Error('Found marker, "'+e+'", in format string, "'+c+'", but no valid label mapping found in args: '+JSON.stringify(b));a=b[e];return a instanceof ac?cc(a):encodeURIComponent(String(a))})}var kc=/%{(\w+)}/g,jc=/^(?:https:)?\/\/[0-9a-z.:[\]-]+\/|^\/[^\/\\]|^about:blank(#|$)/i,fc={};function lc(){this.a="";this.b=mc}lc.prototype.la=!0;lc.prototype.ja=function(){return this.a};lc.prototype.toString=function(){return"SafeUrl{"+this.a+"}"};function nc(a){if(a instanceof lc&&a.constructor===lc&&a.b===mc)return a.a;Aa("expected object of type SafeUrl, got '"+a+"' of type "+da(a));return"type_error:SafeUrl"}var oc=/^(?:(?:https?|mailto|ftp):|[^:/?#]*(?:[/?#]|$))/i;
-function pc(a){if(a instanceof lc)return a;a=a.la?a.ja():String(a);oc.test(a)||(a="about:invalid#zClosurez");return qc(a)}var mc={};function qc(a){var b=new lc;b.a=a;return b}qc("about:blank");function rc(){this.a="";this.b=sc}rc.prototype.la=!0;rc.prototype.ja=function(){return this.a};rc.prototype.toString=function(){return"SafeHtml{"+this.a+"}"};function uc(a){if(a instanceof rc&&a.constructor===rc&&a.b===sc)return a.a;Aa("expected object of type SafeHtml, got '"+a+"' of type "+da(a));return"type_error:SafeHtml"}var sc={};function vc(a){var b=new rc;b.a=a;return b}vc("<!DOCTYPE html>");vc("");vc("<br>");function wc(a){var b=document;return m(a)?b.getElementById(a):a}function xc(a,b){Pa(b,function(b,d){b&&b.la&&(b=b.ja());"style"==d?a.style.cssText=b:"class"==d?a.className=b:"for"==d?a.htmlFor=b:yc.hasOwnProperty(d)?a.setAttribute(yc[d],b):0==d.lastIndexOf("aria-",0)||0==d.lastIndexOf("data-",0)?a.setAttribute(d,b):a[d]=b})}
-var yc={cellpadding:"cellPadding",cellspacing:"cellSpacing",colspan:"colSpan",frameborder:"frameBorder",height:"height",maxlength:"maxLength",nonce:"nonce",role:"role",rowspan:"rowSpan",type:"type",usemap:"useMap",valign:"vAlign",width:"width"};
-function zc(a,b,c){var d=arguments,e=document,f=String(d[0]),g=d[1];if(!$b&&g&&(g.name||g.type)){f=["<",f];g.name&&f.push(' name="',qa(g.name),'"');if(g.type){f.push(' type="',qa(g.type),'"');var l={};Wa(l,g);delete l.type;g=l}f.push(">");f=f.join("")}f=e.createElement(f);g&&(m(g)?f.className=g:fa(g)?f.className=g.join(" "):xc(f,g));2<d.length&&Ac(e,f,d);return f}
-function Ac(a,b,c){function d(c){c&&b.appendChild(m(c)?a.createTextNode(c):c)}for(var e=2;e<c.length;e++){var f=c[e];!ha(f)||q(f)&&0<f.nodeType?d(f):w(Bc(f)?La(f):f,d)}}function Bc(a){if(a&&"number"==typeof a.length){if(q(a))return"function"==typeof a.item||"string"==typeof a.item;if(p(a))return"function"==typeof a.item}return!1};function Cc(a){var b=[];Dc(new Ec,a,b);return b.join("")}function Ec(){}
-function Dc(a,b,c){if(null==b)c.push("null");else{if("object"==typeof b){if(fa(b)){var d=b;b=d.length;c.push("[");for(var e="",f=0;f<b;f++)c.push(e),Dc(a,d[f],c),e=",";c.push("]");return}if(b instanceof String||b instanceof Number||b instanceof Boolean)b=b.valueOf();else{c.push("{");e="";for(d in b)Object.prototype.hasOwnProperty.call(b,d)&&(f=b[d],"function"!=typeof f&&(c.push(e),Fc(d,c),c.push(":"),Dc(a,f,c),e=","));c.push("}");return}}switch(typeof b){case "string":Fc(b,c);break;case "number":c.push(isFinite(b)&&
-!isNaN(b)?String(b):"null");break;case "boolean":c.push(String(b));break;case "function":c.push("null");break;default:throw Error("Unknown type: "+typeof b);}}}var Gc={'"':'\\"',"\\":"\\\\","/":"\\/","\b":"\\b","\f":"\\f","\n":"\\n","\r":"\\r","\t":"\\t","\x0B":"\\u000b"},Hc=/\uffff/.test("\uffff")?/[\\\"\x00-\x1f\x7f-\uffff]/g:/[\\\"\x00-\x1f\x7f-\xff]/g;
-function Fc(a,b){b.push('"',a.replace(Hc,function(a){var b=Gc[a];b||(b="\\u"+(a.charCodeAt(0)|65536).toString(16).substr(1),Gc[a]=b);return b}),'"')};function Ic(){0!=Jc&&(Kc[this[ia]||(this[ia]=++ja)]=this);this.oa=this.oa;this.Fa=this.Fa}var Jc=0,Kc={};Ic.prototype.oa=!1;function Lc(a){a.oa||(a.oa=!0,a.ta(),0!=Jc&&(a=a[ia]||(a[ia]=++ja),delete Kc[a]))}Ic.prototype.ta=function(){if(this.Fa)for(;this.Fa.length;)this.Fa.shift()()};var Mc=Object.freeze||function(a){return a};var Nc=!y||9<=Number(kb),Oc=y&&!jb("9"),Pc=function(){if(!k.addEventListener||!Object.defineProperty)return!1;var a=!1,b=Object.defineProperty({},"passive",{get:function(){a=!0}});k.addEventListener("test",ca,b);k.removeEventListener("test",ca,b);return a}();function C(a,b){this.type=a;this.b=this.target=b;this.Ab=!0}C.prototype.c=function(){this.Ab=!1};function Qc(a,b){C.call(this,a?a.type:"");this.relatedTarget=this.b=this.target=null;this.button=this.screenY=this.screenX=this.clientY=this.clientX=0;this.key="";this.metaKey=this.shiftKey=this.altKey=this.ctrlKey=!1;this.pointerId=0;this.pointerType="";this.a=null;if(a){var c=this.type=a.type,d=a.changedTouches?a.changedTouches[0]:null;this.target=a.target||a.srcElement;this.b=b;if(b=a.relatedTarget){if(cb){a:{try{Xa(b.nodeName);var e=!0;break a}catch(f){}e=!1}e||(b=null)}}else"mouseover"==c?b=
-a.fromElement:"mouseout"==c&&(b=a.toElement);this.relatedTarget=b;null===d?(this.clientX=void 0!==a.clientX?a.clientX:a.pageX,this.clientY=void 0!==a.clientY?a.clientY:a.pageY,this.screenX=a.screenX||0,this.screenY=a.screenY||0):(this.clientX=void 0!==d.clientX?d.clientX:d.pageX,this.clientY=void 0!==d.clientY?d.clientY:d.pageY,this.screenX=d.screenX||0,this.screenY=d.screenY||0);this.button=a.button;this.key=a.key||"";this.ctrlKey=a.ctrlKey;this.altKey=a.altKey;this.shiftKey=a.shiftKey;this.metaKey=
-a.metaKey;this.pointerId=a.pointerId||0;this.pointerType=m(a.pointerType)?a.pointerType:Rc[a.pointerType]||"";this.a=a;a.defaultPrevented&&this.c()}}t(Qc,C);var Rc=Mc({2:"touch",3:"pen",4:"mouse"});Qc.prototype.c=function(){Qc.ib.c.call(this);var a=this.a;if(a.preventDefault)a.preventDefault();else if(a.returnValue=!1,Oc)try{if(a.ctrlKey||112<=a.keyCode&&123>=a.keyCode)a.keyCode=-1}catch(b){}};Qc.prototype.g=function(){return this.a};var Sc="closure_listenable_"+(1E6*Math.random()|0),Tc=0;function Uc(a,b,c,d,e){this.listener=a;this.a=null;this.src=b;this.type=c;this.capture=!!d;this.La=e;this.key=++Tc;this.ma=this.Ha=!1}function Vc(a){a.ma=!0;a.listener=null;a.a=null;a.src=null;a.La=null};function Wc(a){this.src=a;this.a={};this.b=0}function Xc(a,b,c,d,e,f){var g=b.toString();b=a.a[g];b||(b=a.a[g]=[],a.b++);var l=Yc(b,c,e,f);-1<l?(a=b[l],d||(a.Ha=!1)):(a=new Uc(c,a.src,g,!!e,f),a.Ha=d,b.push(a));return a}function Zc(a,b){var c=b.type;c in a.a&&Ia(a.a[c],b)&&(Vc(b),0==a.a[c].length&&(delete a.a[c],a.b--))}function Yc(a,b,c,d){for(var e=0;e<a.length;++e){var f=a[e];if(!f.ma&&f.listener==b&&f.capture==!!c&&f.La==d)return e}return-1};var $c="closure_lm_"+(1E6*Math.random()|0),ad={},bd=0;function cd(a,b,c,d,e){if(d&&d.once)dd(a,b,c,d,e);else if(fa(b))for(var f=0;f<b.length;f++)cd(a,b[f],c,d,e);else c=ed(c),a&&a[Sc]?fd(a,b,c,q(d)?!!d.capture:!!d,e):gd(a,b,c,!1,d,e)}
-function gd(a,b,c,d,e,f){if(!b)throw Error("Invalid event type");var g=q(e)?!!e.capture:!!e,l=hd(a);l||(a[$c]=l=new Wc(a));c=Xc(l,b,c,d,g,f);if(!c.a){d=id();c.a=d;d.src=a;d.listener=c;if(a.addEventListener)Pc||(e=g),void 0===e&&(e=!1),a.addEventListener(b.toString(),d,e);else if(a.attachEvent)a.attachEvent(jd(b.toString()),d);else throw Error("addEventListener and attachEvent are unavailable.");bd++}}
-function id(){var a=kd,b=Nc?function(c){return a.call(b.src,b.listener,c)}:function(c){c=a.call(b.src,b.listener,c);if(!c)return c};return b}function dd(a,b,c,d,e){if(fa(b))for(var f=0;f<b.length;f++)dd(a,b[f],c,d,e);else c=ed(c),a&&a[Sc]?ld(a,b,c,q(d)?!!d.capture:!!d,e):gd(a,b,c,!0,d,e)}
-function E(a,b,c,d,e){if(fa(b))for(var f=0;f<b.length;f++)E(a,b[f],c,d,e);else(d=q(d)?!!d.capture:!!d,c=ed(c),a&&a[Sc])?(a=a.u,b=String(b).toString(),b in a.a&&(f=a.a[b],c=Yc(f,c,d,e),-1<c&&(Vc(f[c]),Array.prototype.splice.call(f,c,1),0==f.length&&(delete a.a[b],a.b--)))):a&&(a=hd(a))&&(b=a.a[b.toString()],a=-1,b&&(a=Yc(b,c,d,e)),(c=-1<a?b[a]:null)&&md(c))}
-function md(a){if("number"!=typeof a&&a&&!a.ma){var b=a.src;if(b&&b[Sc])Zc(b.u,a);else{var c=a.type,d=a.a;b.removeEventListener?b.removeEventListener(c,d,a.capture):b.detachEvent&&b.detachEvent(jd(c),d);bd--;(c=hd(b))?(Zc(c,a),0==c.b&&(c.src=null,b[$c]=null)):Vc(a)}}}function jd(a){return a in ad?ad[a]:ad[a]="on"+a}function nd(a,b,c,d){var e=!0;if(a=hd(a))if(b=a.a[b.toString()])for(b=b.concat(),a=0;a<b.length;a++){var f=b[a];f&&f.capture==c&&!f.ma&&(f=od(f,d),e=e&&!1!==f)}return e}
-function od(a,b){var c=a.listener,d=a.La||a.src;a.Ha&&md(a);return c.call(d,b)}
-function kd(a,b){if(a.ma)return!0;if(!Nc){if(!b)a:{b=["window","event"];for(var c=k,d=0;d<b.length;d++)if(c=c[b[d]],null==c){b=null;break a}b=c}d=b;b=new Qc(d,this);c=!0;if(!(0>d.keyCode||void 0!=d.returnValue)){a:{var e=!1;if(0==d.keyCode)try{d.keyCode=-1;break a}catch(g){e=!0}if(e||void 0==d.returnValue)d.returnValue=!0}d=[];for(e=b.b;e;e=e.parentNode)d.push(e);a=a.type;for(e=d.length-1;0<=e;e--){b.b=d[e];var f=nd(d[e],a,!0,b);c=c&&f}for(e=0;e<d.length;e++)b.b=d[e],f=nd(d[e],a,!1,b),c=c&&f}return c}return od(a,
-new Qc(b,this))}function hd(a){a=a[$c];return a instanceof Wc?a:null}var pd="__closure_events_fn_"+(1E9*Math.random()>>>0);function ed(a){if(p(a))return a;a[pd]||(a[pd]=function(b){return a.handleEvent(b)});return a[pd]};function F(){Ic.call(this);this.u=new Wc(this);this.Eb=this;this.Ra=null}t(F,Ic);F.prototype[Sc]=!0;F.prototype.removeEventListener=function(a,b,c,d){E(this,a,b,c,d)};
-function G(a,b){var c,d=a.Ra;if(d)for(c=[];d;d=d.Ra)c.push(d);a=a.Eb;d=b.type||b;if(m(b))b=new C(b,a);else if(b instanceof C)b.target=b.target||a;else{var e=b;b=new C(d,a);Wa(b,e)}e=!0;if(c)for(var f=c.length-1;0<=f;f--){var g=b.b=c[f];e=qd(g,d,!0,b)&&e}g=b.b=a;e=qd(g,d,!0,b)&&e;e=qd(g,d,!1,b)&&e;if(c)for(f=0;f<c.length;f++)g=b.b=c[f],e=qd(g,d,!1,b)&&e}
-F.prototype.ta=function(){F.ib.ta.call(this);if(this.u){var a=this.u,b=0,c;for(c in a.a){for(var d=a.a[c],e=0;e<d.length;e++)++b,Vc(d[e]);delete a.a[c];a.b--}}this.Ra=null};function fd(a,b,c,d,e){Xc(a.u,String(b),c,!1,d,e)}function ld(a,b,c,d,e){Xc(a.u,String(b),c,!0,d,e)}function qd(a,b,c,d){b=a.u.a[String(b)];if(!b)return!0;b=b.concat();for(var e=!0,f=0;f<b.length;++f){var g=b[f];if(g&&!g.ma&&g.capture==c){var l=g.listener,n=g.La||g.src;g.Ha&&Zc(a.u,g);e=!1!==l.call(n,d)&&e}}return e&&0!=d.Ab};function rd(a,b,c){if(p(a))c&&(a=r(a,c));else if(a&&"function"==typeof a.handleEvent)a=r(a.handleEvent,a);else throw Error("Invalid listener argument");return 2147483647<Number(b)?-1:k.setTimeout(a,b||0)}function sd(a){var b=null;return(new z(function(c,d){b=rd(function(){c(void 0)},a);-1==b&&d(Error("Failed to schedule timer."))})).s(function(a){k.clearTimeout(b);throw a;})};function td(a,b,c,d,e){this.reset(a,b,c,d,e)}td.prototype.a=null;var ud=0;td.prototype.reset=function(a,b,c,d,e){"number"==typeof e||ud++;d||na();this.b=b;delete this.a};function vd(a){this.f=a;this.b=this.c=this.a=null}function wd(a,b){this.name=a;this.value=b}wd.prototype.toString=function(){return this.name};var xd=new wd("SEVERE",1E3),yd=new wd("CONFIG",700),zd=new wd("FINE",500);function Ad(a){if(a.c)return a.c;if(a.a)return Ad(a.a);Aa("Root logger has no level set.");return null}
-vd.prototype.log=function(a,b,c){if(a.value>=Ad(this).value)for(p(b)&&(b=b()),a=new td(a,String(b),this.f),c&&(a.a=c),c="log:"+a.b,(a=k.console)&&a.timeStamp&&a.timeStamp(c),(a=k.msWriteProfilerMark)&&a(c),c=this;c;)c=c.a};var Bd={},Cd=null;function Dd(a){Cd||(Cd=new vd(""),Bd[""]=Cd,Cd.c=yd);var b;if(!(b=Bd[a])){b=new vd(a);var c=a.lastIndexOf("."),d=a.substr(c+1);c=Dd(a.substr(0,c));c.b||(c.b={});c.b[d]=b;b.a=c;Bd[a]=b}return b};function Ed(a,b){this.b={};this.a=[];this.c=0;var c=arguments.length;if(1<c){if(c%2)throw Error("Uneven number of arguments");for(var d=0;d<c;d+=2)this.set(arguments[d],arguments[d+1])}else if(a){a instanceof Ed?(c=a.S(),d=a.P()):(c=Ra(a),d=Qa(a));for(var e=0;e<c.length;e++)this.set(c[e],d[e])}}h=Ed.prototype;h.P=function(){Fd(this);for(var a=[],b=0;b<this.a.length;b++)a.push(this.b[this.a[b]]);return a};h.S=function(){Fd(this);return this.a.concat()};
-h.clear=function(){this.b={};this.c=this.a.length=0};function Fd(a){if(a.c!=a.a.length){for(var b=0,c=0;b<a.a.length;){var d=a.a[b];Gd(a.b,d)&&(a.a[c++]=d);b++}a.a.length=c}if(a.c!=a.a.length){var e={};for(c=b=0;b<a.a.length;)d=a.a[b],Gd(e,d)||(a.a[c++]=d,e[d]=1),b++;a.a.length=c}}h.get=function(a,b){return Gd(this.b,a)?this.b[a]:b};h.set=function(a,b){Gd(this.b,a)||(this.c++,this.a.push(a));this.b[a]=b};
-h.forEach=function(a,b){for(var c=this.S(),d=0;d<c.length;d++){var e=c[d],f=this.get(e);a.call(b,f,e,this)}};function Gd(a,b){return Object.prototype.hasOwnProperty.call(a,b)};function H(a,b){a&&a.log(zd,b,void 0)};function Hd(a){return Da(a,function(a){a=a.toString(16);return 1<a.length?a:"0"+a}).join("")};var Id=null,Jd=null;function Kd(a){var b="";Ld(a,function(a){b+=String.fromCharCode(a)});return b}function Ld(a,b){function c(b){for(;d<a.length;){var c=a.charAt(d++),e=Jd[c];if(null!=e)return e;if(!/^[\s\xa0]*$/.test(c))throw Error("Unknown base64 encoding at char: "+c);}return b}Md();for(var d=0;;){var e=c(-1),f=c(0),g=c(64),l=c(64);if(64===l&&-1===e)break;b(e<<2|f>>4);64!=g&&(b(f<<4&240|g>>2),64!=l&&b(g<<6&192|l))}}
-function Md(){if(!Id){Id={};Jd={};for(var a=0;65>a;a++)Id[a]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(a),Jd[Id[a]]=a,62<=a&&(Jd["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.".charAt(a)]=a)}};/*
- Portions of this code are from MochiKit, received by
- The Closure Authors under the MIT license. All other code is Copyright
- 2005-2009 The Closure Authors. All Rights Reserved.
-*/
-function Nd(a,b){this.g=[];this.v=a;this.o=b||null;this.f=this.a=!1;this.c=void 0;this.u=this.w=this.i=!1;this.h=0;this.b=null;this.l=0}Nd.prototype.cancel=function(a){if(this.a)this.c instanceof Nd&&this.c.cancel();else{if(this.b){var b=this.b;delete this.b;a?b.cancel(a):(b.l--,0>=b.l&&b.cancel())}this.v?this.v.call(this.o,this):this.u=!0;this.a||(a=new Od,Pd(this),Qd(this,!1,a))}};Nd.prototype.m=function(a,b){this.i=!1;Qd(this,a,b)};function Qd(a,b,c){a.a=!0;a.c=c;a.f=!b;Rd(a)}
-function Pd(a){if(a.a){if(!a.u)throw new Sd;a.u=!1}}Nd.prototype.A=function(a){Pd(this);Qd(this,!0,a)};function Td(a,b){Ud(a,null,b,void 0)}function Ud(a,b,c,d){a.g.push([b,c,d]);a.a&&Rd(a)}Nd.prototype.then=function(a,b,c){var d,e,f=new z(function(a,b){d=a;e=b});Ud(this,d,function(a){a instanceof Od?f.cancel():e(a)});return f.then(a,b,c)};mb(Nd);function Vd(a){return Ea(a.g,function(a){return p(a[1])})}
-function Rd(a){if(a.h&&a.a&&Vd(a)){var b=a.h,c=Wd[b];c&&(k.clearTimeout(c.a),delete Wd[b]);a.h=0}a.b&&(a.b.l--,delete a.b);b=a.c;for(var d=c=!1;a.g.length&&!a.i;){var e=a.g.shift(),f=e[0],g=e[1];e=e[2];if(f=a.f?g:f)try{var l=f.call(e||a.o,b);void 0!==l&&(a.f=a.f&&(l==b||l instanceof Error),a.c=b=l);if(nb(b)||"function"===typeof k.Promise&&b instanceof k.Promise)d=!0,a.i=!0}catch(n){b=n,a.f=!0,Vd(a)||(c=!0)}}a.c=b;d&&(l=r(a.m,a,!0),d=r(a.m,a,!1),b instanceof Nd?(Ud(b,l,d),b.w=!0):b.then(l,d));c&&(b=
-new Xd(b),Wd[b.a]=b,a.h=b.a)}function Sd(){u.call(this)}t(Sd,u);Sd.prototype.message="Deferred has already fired";Sd.prototype.name="AlreadyCalledError";function Od(){u.call(this)}t(Od,u);Od.prototype.message="Deferred was canceled";Od.prototype.name="CanceledError";function Xd(a){this.a=k.setTimeout(r(this.c,this),0);this.b=a}Xd.prototype.c=function(){delete Wd[this.a];throw this.b;};var Wd={};function Yd(){this.b=-1};function Zd(a,b){this.b=-1;this.b=$d;this.f=k.Uint8Array?new Uint8Array(this.b):Array(this.b);this.g=this.c=0;this.a=[];this.i=a;this.h=b;this.l=k.Int32Array?new Int32Array(64):Array(64);ae||(k.Int32Array?ae=new Int32Array(be):ae=be);this.reset()}var ae;t(Zd,Yd);for(var $d=64,ce=$d-1,de=[],ee=0;ee<ce;ee++)de[ee]=0;var fe=Ka(128,de);Zd.prototype.reset=function(){this.g=this.c=0;this.a=k.Int32Array?new Int32Array(this.h):La(this.h)};
-function ge(a){for(var b=a.f,c=a.l,d=0,e=0;e<b.length;)c[d++]=b[e]<<24|b[e+1]<<16|b[e+2]<<8|b[e+3],e=4*d;for(b=16;64>b;b++){e=c[b-15]|0;d=c[b-2]|0;var f=(c[b-16]|0)+((e>>>7|e<<25)^(e>>>18|e<<14)^e>>>3)|0,g=(c[b-7]|0)+((d>>>17|d<<15)^(d>>>19|d<<13)^d>>>10)|0;c[b]=f+g|0}d=a.a[0]|0;e=a.a[1]|0;var l=a.a[2]|0,n=a.a[3]|0,D=a.a[4]|0,vb=a.a[5]|0,tc=a.a[6]|0;f=a.a[7]|0;for(b=0;64>b;b++){var Bj=((d>>>2|d<<30)^(d>>>13|d<<19)^(d>>>22|d<<10))+(d&e^d&l^e&l)|0;g=D&vb^~D&tc;f=f+((D>>>6|D<<26)^(D>>>11|D<<21)^(D>>>
-25|D<<7))|0;g=g+(ae[b]|0)|0;g=f+(g+(c[b]|0)|0)|0;f=tc;tc=vb;vb=D;D=n+g|0;n=l;l=e;e=d;d=g+Bj|0}a.a[0]=a.a[0]+d|0;a.a[1]=a.a[1]+e|0;a.a[2]=a.a[2]+l|0;a.a[3]=a.a[3]+n|0;a.a[4]=a.a[4]+D|0;a.a[5]=a.a[5]+vb|0;a.a[6]=a.a[6]+tc|0;a.a[7]=a.a[7]+f|0}
-function he(a,b,c){void 0===c&&(c=b.length);var d=0,e=a.c;if(m(b))for(;d<c;)a.f[e++]=b.charCodeAt(d++),e==a.b&&(ge(a),e=0);else if(ha(b))for(;d<c;){var f=b[d++];if(!("number"==typeof f&&0<=f&&255>=f&&f==(f|0)))throw Error("message must be a byte array");a.f[e++]=f;e==a.b&&(ge(a),e=0)}else throw Error("message must be string or array");a.c=e;a.g+=c}
-var be=[1116352408,1899447441,3049323471,3921009573,961987163,1508970993,2453635748,2870763221,3624381080,310598401,607225278,1426881987,1925078388,2162078206,2614888103,3248222580,3835390401,4022224774,264347078,604807628,770255983,1249150122,1555081692,1996064986,2554220882,2821834349,2952996808,3210313671,3336571891,3584528711,113926993,338241895,666307205,773529912,1294757372,1396182291,1695183700,1986661051,2177026350,2456956037,2730485921,2820302411,3259730800,3345764771,3516065817,3600352804,
-4094571909,275423344,430227734,506948616,659060556,883997877,958139571,1322822218,1537002063,1747873779,1955562222,2024104815,2227730452,2361852424,2428436474,2756734187,3204031479,3329325298];function ie(){Zd.call(this,8,je)}t(ie,Zd);var je=[1779033703,3144134277,1013904242,2773480762,1359893119,2600822924,528734635,1541459225];function ke(a){if(a.P&&"function"==typeof a.P)return a.P();if(m(a))return a.split("");if(ha(a)){for(var b=[],c=a.length,d=0;d<c;d++)b.push(a[d]);return b}return Qa(a)}function le(a){if(a.S&&"function"==typeof a.S)return a.S();if(!a.P||"function"!=typeof a.P){if(ha(a)||m(a)){var b=[];a=a.length;for(var c=0;c<a;c++)b.push(c);return b}return Ra(a)}}
-function me(a,b){if(a.forEach&&"function"==typeof a.forEach)a.forEach(b,void 0);else if(ha(a)||m(a))w(a,b,void 0);else for(var c=le(a),d=ke(a),e=d.length,f=0;f<e;f++)b.call(void 0,d[f],c&&c[f],a)};var ne=/^(?:([^:/?#.]+):)?(?:\/\/(?:([^/?#]*)@)?([^/#?]*?)(?::([0-9]+))?(?=[/#?]|$))?([^?#]+)?(?:\?([^#]*))?(?:#([\s\S]*))?$/;function oe(a,b){if(a){a=a.split("&");for(var c=0;c<a.length;c++){var d=a[c].indexOf("="),e=null;if(0<=d){var f=a[c].substring(0,d);e=a[c].substring(d+1)}else f=a[c];b(f,e?decodeURIComponent(e.replace(/\+/g," ")):"")}}};function pe(a,b){this.b=this.l=this.c="";this.i=null;this.h=this.g="";this.f=!1;if(a instanceof pe){this.f=void 0!==b?b:a.f;qe(this,a.c);this.l=a.l;this.b=a.b;re(this,a.i);this.g=a.g;b=a.a;var c=new se;c.c=b.c;b.a&&(c.a=new Ed(b.a),c.b=b.b);te(this,c);this.h=a.h}else a&&(c=String(a).match(ne))?(this.f=!!b,qe(this,c[1]||"",!0),this.l=ue(c[2]||""),this.b=ue(c[3]||"",!0),re(this,c[4]),this.g=ue(c[5]||"",!0),te(this,c[6]||"",!0),this.h=ue(c[7]||"")):(this.f=!!b,this.a=new se(null,0,this.f))}
-pe.prototype.toString=function(){var a=[],b=this.c;b&&a.push(ve(b,we,!0),":");var c=this.b;if(c||"file"==b)a.push("//"),(b=this.l)&&a.push(ve(b,we,!0),"@"),a.push(encodeURIComponent(String(c)).replace(/%25([0-9a-fA-F]{2})/g,"%$1")),c=this.i,null!=c&&a.push(":",String(c));if(c=this.g)this.b&&"/"!=c.charAt(0)&&a.push("/"),a.push(ve(c,"/"==c.charAt(0)?xe:ye,!0));(c=this.a.toString())&&a.push("?",c);(c=this.h)&&a.push("#",ve(c,ze));return a.join("")};
-function qe(a,b,c){a.c=c?ue(b,!0):b;a.c&&(a.c=a.c.replace(/:$/,""))}function re(a,b){if(b){b=Number(b);if(isNaN(b)||0>b)throw Error("Bad port number "+b);a.i=b}else a.i=null}function te(a,b,c){b instanceof se?(a.a=b,Ae(a.a,a.f)):(c||(b=ve(b,Be)),a.a=new se(b,0,a.f))}function I(a,b,c){a.a.set(b,c)}function Ce(a,b){return a.a.get(b)}function De(a){return a instanceof pe?new pe(a):new pe(a,void 0)}function Ee(a,b){var c=new pe(null,void 0);qe(c,"https");a&&(c.b=a);b&&(c.g=b);return c}
-function ue(a,b){return a?b?decodeURI(a.replace(/%25/g,"%2525")):decodeURIComponent(a):""}function ve(a,b,c){return m(a)?(a=encodeURI(a).replace(b,Fe),c&&(a=a.replace(/%25([0-9a-fA-F]{2})/g,"%$1")),a):null}function Fe(a){a=a.charCodeAt(0);return"%"+(a>>4&15).toString(16)+(a&15).toString(16)}var we=/[#\/\?@]/g,ye=/[\#\?:]/g,xe=/[\#\?]/g,Be=/[\#\?@]/g,ze=/#/g;function se(a,b,c){this.b=this.a=null;this.c=a||null;this.f=!!c}
-function Ge(a){a.a||(a.a=new Ed,a.b=0,a.c&&oe(a.c,function(b,c){He(a,decodeURIComponent(b.replace(/\+/g," ")),c)}))}function Ie(a){var b=le(a);if("undefined"==typeof b)throw Error("Keys are undefined");var c=new se(null,0,void 0);a=ke(a);for(var d=0;d<b.length;d++){var e=b[d],f=a[d];fa(f)?Je(c,e,f):He(c,e,f)}return c}function He(a,b,c){Ge(a);a.c=null;b=Ke(a,b);var d=a.a.get(b);d||a.a.set(b,d=[]);d.push(c);a.b+=1}
-function Le(a,b){Ge(a);b=Ke(a,b);Gd(a.a.b,b)&&(a.c=null,a.b-=a.a.get(b).length,a=a.a,Gd(a.b,b)&&(delete a.b[b],a.c--,a.a.length>2*a.c&&Fd(a)))}h=se.prototype;h.clear=function(){this.a=this.c=null;this.b=0};function Me(a,b){Ge(a);b=Ke(a,b);return Gd(a.a.b,b)}h.forEach=function(a,b){Ge(this);this.a.forEach(function(c,d){w(c,function(c){a.call(b,c,d,this)},this)},this)};h.S=function(){Ge(this);for(var a=this.a.P(),b=this.a.S(),c=[],d=0;d<b.length;d++)for(var e=a[d],f=0;f<e.length;f++)c.push(b[d]);return c};
-h.P=function(a){Ge(this);var b=[];if(m(a))Me(this,a)&&(b=Ka(b,this.a.get(Ke(this,a))));else{a=this.a.P();for(var c=0;c<a.length;c++)b=Ka(b,a[c])}return b};h.set=function(a,b){Ge(this);this.c=null;a=Ke(this,a);Me(this,a)&&(this.b-=this.a.get(a).length);this.a.set(a,[b]);this.b+=1;return this};h.get=function(a,b){a=a?this.P(a):[];return 0<a.length?String(a[0]):b};function Je(a,b,c){Le(a,b);0<c.length&&(a.c=null,a.a.set(Ke(a,b),La(c)),a.b+=c.length)}
-h.toString=function(){if(this.c)return this.c;if(!this.a)return"";for(var a=[],b=this.a.S(),c=0;c<b.length;c++){var d=b[c],e=encodeURIComponent(String(d));d=this.P(d);for(var f=0;f<d.length;f++){var g=e;""!==d[f]&&(g+="="+encodeURIComponent(String(d[f])));a.push(g)}}return this.c=a.join("&")};function Ke(a,b){b=String(b);a.f&&(b=b.toLowerCase());return b}function Ae(a,b){b&&!a.f&&(Ge(a),a.c=null,a.a.forEach(function(a,b){var c=b.toLowerCase();b!=c&&(Le(this,b),Je(this,c,a))},a));a.f=b};function Ne(){}Ne.prototype.c=null;function Oe(a){return a.c||(a.c=a.b())};var Pe;function Qe(){}t(Qe,Ne);Qe.prototype.a=function(){var a=Re(this);return a?new ActiveXObject(a):new XMLHttpRequest};Qe.prototype.b=function(){var a={};Re(this)&&(a[0]=!0,a[1]=!0);return a};
-function Re(a){if(!a.f&&"undefined"==typeof XMLHttpRequest&&"undefined"!=typeof ActiveXObject){for(var b=["MSXML2.XMLHTTP.6.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],c=0;c<b.length;c++){var d=b[c];try{return new ActiveXObject(d),a.f=d}catch(e){}}throw Error("Could not create ActiveXObject. ActiveX might be disabled, or MSXML might not be installed");}return a.f}Pe=new Qe;function Se(a){F.call(this);this.headers=new Ed;this.w=a||null;this.b=!1;this.v=this.a=null;this.g=this.I=this.i="";this.c=this.G=this.h=this.A=!1;this.f=0;this.m=null;this.l=Te;this.o=this.N=!1}t(Se,F);var Te="",Ue=Se.prototype,Ve=Dd("goog.net.XhrIo");Ue.J=Ve;var We=/^https?$/i,Xe=["POST","PUT"];
-function Ye(a,b,c,d,e){if(a.a)throw Error("[goog.net.XhrIo] Object is active with another request="+a.i+"; newUri="+b);c=c?c.toUpperCase():"GET";a.i=b;a.g="";a.I=c;a.A=!1;a.b=!0;a.a=a.w?a.w.a():Pe.a();a.v=a.w?Oe(a.w):Oe(Pe);a.a.onreadystatechange=r(a.zb,a);try{H(a.J,Ze(a,"Opening Xhr")),a.G=!0,a.a.open(c,String(b),!0),a.G=!1}catch(g){H(a.J,Ze(a,"Error opening Xhr: "+g.message));$e(a,g);return}b=d||"";var f=new Ed(a.headers);e&&me(e,function(a,b){f.set(b,a)});e=Fa(f.S());d=k.FormData&&b instanceof
-k.FormData;!Ha(Xe,c)||e||d||f.set("Content-Type","application/x-www-form-urlencoded;charset=utf-8");f.forEach(function(a,b){this.a.setRequestHeader(b,a)},a);a.l&&(a.a.responseType=a.l);"withCredentials"in a.a&&a.a.withCredentials!==a.N&&(a.a.withCredentials=a.N);try{af(a),0<a.f&&(a.o=bf(a.a),H(a.J,Ze(a,"Will abort after "+a.f+"ms if incomplete, xhr2 "+a.o)),a.o?(a.a.timeout=a.f,a.a.ontimeout=r(a.Ea,a)):a.m=rd(a.Ea,a.f,a)),H(a.J,Ze(a,"Sending request")),a.h=!0,a.a.send(b),a.h=!1}catch(g){H(a.J,Ze(a,
-"Send error: "+g.message)),$e(a,g)}}function bf(a){return y&&jb(9)&&"number"==typeof a.timeout&&void 0!==a.ontimeout}function Ga(a){return"content-type"==a.toLowerCase()}h=Se.prototype;h.Ea=function(){"undefined"!=typeof aa&&this.a&&(this.g="Timed out after "+this.f+"ms, aborting",H(this.J,Ze(this,this.g)),G(this,"timeout"),this.abort(8))};function $e(a,b){a.b=!1;a.a&&(a.c=!0,a.a.abort(),a.c=!1);a.g=b;cf(a);df(a)}function cf(a){a.A||(a.A=!0,G(a,"complete"),G(a,"error"))}
-h.abort=function(){this.a&&this.b&&(H(this.J,Ze(this,"Aborting")),this.b=!1,this.c=!0,this.a.abort(),this.c=!1,G(this,"complete"),G(this,"abort"),df(this))};h.ta=function(){this.a&&(this.b&&(this.b=!1,this.c=!0,this.a.abort(),this.c=!1),df(this,!0));Se.ib.ta.call(this)};h.zb=function(){this.oa||(this.G||this.h||this.c?ef(this):this.fc())};h.fc=function(){ef(this)};
-function ef(a){if(a.b&&"undefined"!=typeof aa)if(a.v[1]&&4==ff(a)&&2==gf(a))H(a.J,Ze(a,"Local request error detected and ignored"));else if(a.h&&4==ff(a))rd(a.zb,0,a);else if(G(a,"readystatechange"),4==ff(a)){H(a.J,Ze(a,"Request complete"));a.b=!1;try{var b=gf(a);a:switch(b){case 200:case 201:case 202:case 204:case 206:case 304:case 1223:var c=!0;break a;default:c=!1}var d;if(!(d=c)){var e;if(e=0===b){var f=String(a.i).match(ne)[1]||null;if(!f&&k.self&&k.self.location){var g=k.self.location.protocol;
-f=g.substr(0,g.length-1)}e=!We.test(f?f.toLowerCase():"")}d=e}if(d)G(a,"complete"),G(a,"success");else{try{var l=2<ff(a)?a.a.statusText:""}catch(n){H(a.J,"Can not get status: "+n.message),l=""}a.g=l+" ["+gf(a)+"]";cf(a)}}finally{df(a)}}}function df(a,b){if(a.a){af(a);var c=a.a,d=a.v[0]?ca:null;a.a=null;a.v=null;b||G(a,"ready");try{c.onreadystatechange=d}catch(e){(a=a.J)&&a.log(xd,"Problem encountered resetting onreadystatechange: "+e.message,void 0)}}}
-function af(a){a.a&&a.o&&(a.a.ontimeout=null);"number"==typeof a.m&&(k.clearTimeout(a.m),a.m=null)}function ff(a){return a.a?a.a.readyState:0}function gf(a){try{return 2<ff(a)?a.a.status:-1}catch(b){return-1}}function hf(a){try{return a.a?a.a.responseText:""}catch(b){return H(a.J,"Can not get responseText: "+b.message),""}}
-h.getResponse=function(){try{if(!this.a)return null;if("response"in this.a)return this.a.response;switch(this.l){case Te:case "text":return this.a.responseText;case "arraybuffer":if("mozResponseArrayBuffer"in this.a)return this.a.mozResponseArrayBuffer}var a=this.J;a&&a.log(xd,"Response type "+this.l+" is not supported on this browser",void 0);return null}catch(b){return H(this.J,"Can not get response: "+b.message),null}};function Ze(a,b){return b+" ["+a.I+" "+a.i+" "+gf(a)+"]"};var jf=/^[+a-zA-Z0-9_.!#$%&'*\/=?^`{|}~-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9]{2,63}$/;function kf(a){var b={},c=b.document||document,d=gc(a),e=document.createElement("SCRIPT"),f={Bb:e,Ea:void 0},g=new Nd(lf,f),l=null,n=null!=b.timeout?b.timeout:5E3;0<n&&(l=window.setTimeout(function(){mf(e,!0);var a=new nf(of,"Timeout reached for loading script "+d);Pd(g);Qd(g,!1,a)},n),f.Ea=l);e.onload=e.onreadystatechange=function(){e.readyState&&"loaded"!=e.readyState&&"complete"!=e.readyState||(mf(e,b.Oc||!1,l),g.A(null))};e.onerror=function(){mf(e,!0,l);var a=new nf(pf,"Error while loading script "+
-d);Pd(g);Qd(g,!1,a)};f=b.attributes||{};Wa(f,{type:"text/javascript",charset:"UTF-8"});xc(e,f);e.src=gc(a);qf(c).appendChild(e);return g}function qf(a){var b;return(b=(a||document).getElementsByTagName("HEAD"))&&0!=b.length?b[0]:a.documentElement}function lf(){if(this&&this.Bb){var a=this.Bb;a&&"SCRIPT"==a.tagName&&mf(a,!0,this.Ea)}}
-function mf(a,b,c){null!=c&&k.clearTimeout(c);a.onload=ca;a.onerror=ca;a.onreadystatechange=ca;b&&window.setTimeout(function(){a&&a.parentNode&&a.parentNode.removeChild(a)},0)}var pf=0,of=1;function nf(a,b){var c="Jsloader error (code #"+a+")";b&&(c+=": "+b);u.call(this,c);this.code=a}t(nf,u);function rf(){}t(rf,Ne);rf.prototype.a=function(){var a=new XMLHttpRequest;if("withCredentials"in a)return a;if("undefined"!=typeof XDomainRequest)return new sf;throw Error("Unsupported browser");};rf.prototype.b=function(){return{}};
-function sf(){this.a=new XDomainRequest;this.readyState=0;this.onreadystatechange=null;this.responseText="";this.status=-1;this.statusText=this.responseXML=null;this.a.onload=r(this.Sb,this);this.a.onerror=r(this.wb,this);this.a.onprogress=r(this.Tb,this);this.a.ontimeout=r(this.Ub,this)}h=sf.prototype;h.open=function(a,b,c){if(null!=c&&!c)throw Error("Only async requests are supported.");this.a.open(a,b)};
-h.send=function(a){if(a)if("string"==typeof a)this.a.send(a);else throw Error("Only string data is supported");else this.a.send()};h.abort=function(){this.a.abort()};h.setRequestHeader=function(){};h.getResponseHeader=function(a){return"content-type"==a.toLowerCase()?this.a.contentType:""};h.Sb=function(){this.status=200;this.responseText=this.a.responseText;tf(this,4)};h.wb=function(){this.status=500;this.responseText="";tf(this,4)};h.Ub=function(){this.wb()};
-h.Tb=function(){this.status=200;tf(this,1)};function tf(a,b){a.readyState=b;if(a.onreadystatechange)a.onreadystatechange()}h.getAllResponseHeaders=function(){return"content-type: "+this.a.contentType};function uf(){var a=J();return y&&!!kb&&11==kb||/Edge\/\d+/.test(a)}function vf(){return k.window&&k.window.location.href||""}function wf(a,b){b=b||k.window;var c="about:blank";a&&(c=nc(pc(a)));b.location.href=c}function xf(a,b){var c=[],d;for(d in a)d in b?typeof a[d]!=typeof b[d]?c.push(d):fa(a[d])?Ta(a[d],b[d])||c.push(d):"object"==typeof a[d]&&null!=a[d]&&null!=b[d]?0<xf(a[d],b[d]).length&&c.push(d):a[d]!==b[d]&&c.push(d):c.push(d);for(d in b)d in a||c.push(d);return c}
-function yf(){var a=J();a=zf(a)!=Af?null:(a=a.match(/\sChrome\/(\d+)/i))&&2==a.length?parseInt(a[1],10):null;return a&&30>a?!1:!y||!kb||9<kb}function Bf(a){a=(a||J()).toLowerCase();return a.match(/android/)||a.match(/webos/)||a.match(/iphone|ipad|ipod/)||a.match(/blackberry/)||a.match(/windows phone/)||a.match(/iemobile/)?!0:!1}function Cf(a){a=a||k.window;try{a.close()}catch(b){}}
-function Df(a,b,c){var d=Math.floor(1E9*Math.random()).toString();b=b||500;c=c||600;var e=(window.screen.availHeight-c)/2,f=(window.screen.availWidth-b)/2;b={width:b,height:c,top:0<e?e:0,left:0<f?f:0,location:!0,resizable:!0,statusbar:!0,toolbar:!1};c=J().toLowerCase();d&&(b.target=d,v(c,"crios/")&&(b.target="_blank"));zf(J())==Ef&&(a=a||"http://localhost",b.scrollbars=!0);c=a||"";(d=b)||(d={});a=window;b=c instanceof lc?c:pc("undefined"!=typeof c.href?c.href:String(c));c=d.target||c.target;e=[];
-for(g in d)switch(g){case "width":case "height":case "top":case "left":e.push(g+"="+d[g]);break;case "target":case "noreferrer":break;default:e.push(g+"="+(d[g]?1:0))}var g=e.join(",");(x("iPhone")&&!x("iPod")&&!x("iPad")||x("iPad")||x("iPod"))&&a.navigator&&a.navigator.standalone&&c&&"_self"!=c?(g=a.document.createElement("A"),b instanceof lc||b instanceof lc||(b=b.la?b.ja():String(b),oc.test(b)||(b="about:invalid#zClosurez"),b=qc(b)),g.href=nc(b),g.setAttribute("target",c),d.noreferrer&&g.setAttribute("rel",
-"noreferrer"),d=document.createEvent("MouseEvent"),d.initMouseEvent("click",!0,!0,a,1),g.dispatchEvent(d),g={}):d.noreferrer?(g=a.open("",c,g),a=nc(b),g&&(bb&&v(a,";")&&(a="'"+a.replace(/'/g,"%27")+"'"),g.opener=null,dc("b/12014412, meta tag with sanitized URL"),a='<META HTTP-EQUIV="refresh" content="0; url='+qa(a)+'">',a=vc(a),g.document.write(uc(a)),g.document.close())):g=a.open(nc(b),c,g);if(g)try{g.focus()}catch(l){}return g}
-function Ff(a){return new z(function(b){function c(){sd(2E3).then(function(){if(!a||a.closed)b();else return c()})}return c()})}var Gf=/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/;function Hf(){var a=null;return(new z(function(b){"complete"==k.document.readyState?b():(a=function(){b()},dd(window,"load",a))})).s(function(b){E(window,"load",a);throw b;})}
-function If(){return Jf(void 0)?Hf().then(function(){return new z(function(a,b){var c=k.document,d=setTimeout(function(){b(Error("Cordova framework is not ready."))},1E3);c.addEventListener("deviceready",function(){clearTimeout(d);a()},!1)})}):B(Error("Cordova must run in an Android or iOS file scheme."))}function Jf(a){a=a||J();return!("file:"!==Kf()||!a.toLowerCase().match(/iphone|ipad|ipod|android/))}function Lf(){var a=k.window;try{return!(!a||a==a.top)}catch(b){return!1}}
-function K(){return firebase.INTERNAL.hasOwnProperty("reactNative")?"ReactNative":firebase.INTERNAL.hasOwnProperty("node")?"Node":"Browser"}function Mf(){var a=K();return"ReactNative"===a||"Node"===a}var Ef="Firefox",Af="Chrome";
-function zf(a){var b=a.toLowerCase();if(v(b,"opera/")||v(b,"opr/")||v(b,"opios/"))return"Opera";if(v(b,"iemobile"))return"IEMobile";if(v(b,"msie")||v(b,"trident/"))return"IE";if(v(b,"edge/"))return"Edge";if(v(b,"firefox/"))return Ef;if(v(b,"silk/"))return"Silk";if(v(b,"blackberry"))return"Blackberry";if(v(b,"webos"))return"Webos";if(!v(b,"safari/")||v(b,"chrome/")||v(b,"crios/")||v(b,"android"))if(!v(b,"chrome/")&&!v(b,"crios/")||v(b,"edge/")){if(v(b,"android"))return"Android";if((a=a.match(/([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/))&&
-2==a.length)return a[1]}else return Af;else return"Safari";return"Other"}var Nf={Cc:"FirebaseCore-web",Ec:"FirebaseUI-web"};function Of(a,b){b=b||[];var c=[],d={},e;for(e in Nf)d[Nf[e]]=!0;for(e=0;e<b.length;e++)"undefined"!==typeof d[b[e]]&&(delete d[b[e]],c.push(b[e]));c.sort();b=c;b.length||(b=["FirebaseCore-web"]);c=K();d="";"Browser"===c?d=zf(J()):d=c;return d+"/JsCore/"+a+"/"+b.join(",")}function J(){return k.navigator&&k.navigator.userAgent||""}
-function L(a,b){a=a.split(".");b=b||k;for(var c=0;c<a.length&&"object"==typeof b&&null!=b;c++)b=b[a[c]];c!=a.length&&(b=void 0);return b}function Pf(){try{var a=k.localStorage,b=Qf();if(a)return a.setItem(b,"1"),a.removeItem(b),uf()?!!k.indexedDB:!0}catch(c){}return!1}function Rf(){return(Sf()||"chrome-extension:"===Kf()||Jf())&&!Mf()&&Pf()}function Sf(){return"http:"===Kf()||"https:"===Kf()}function Kf(){return k.location&&k.location.protocol||null}
-function Tf(a){a=a||J();return Bf(a)||zf(a)==Ef?!1:!0}function Uf(a){return"undefined"===typeof a?null:Cc(a)}function Vf(a){var b={},c;for(c in a)a.hasOwnProperty(c)&&null!==a[c]&&void 0!==a[c]&&(b[c]=a[c]);return b}function Wf(a){if(null!==a)return JSON.parse(a)}function Qf(a){return a?a:""+Math.floor(1E9*Math.random()).toString()}function Xf(a){a=a||J();return"Safari"==zf(a)||a.toLowerCase().match(/iphone|ipad|ipod/)?!1:!0}
-function Yf(){var a=k.___jsl;if(a&&a.H)for(var b in a.H)if(a.H[b].r=a.H[b].r||[],a.H[b].L=a.H[b].L||[],a.H[b].r=a.H[b].L.concat(),a.CP)for(var c=0;c<a.CP.length;c++)a.CP[c]=null}function Zf(){var a=k.navigator;return a&&"boolean"===typeof a.onLine&&(Sf()||"chrome-extension:"===Kf()||"undefined"!==typeof a.connection)?a.onLine:!0}function $f(a,b,c,d){if(a>b)throw Error("Short delay should be less than long delay!");this.c=a;this.b=b;a=c||J();d=d||K();this.a=Bf(a)||"ReactNative"===d}
-$f.prototype.get=function(){return this.a?this.b:this.c};function ag(){var a=k.document;return a&&"undefined"!==typeof a.visibilityState?"visible"==a.visibilityState:!0}function bg(){var a=k.document,b=null;return ag()||!a?A():(new z(function(c){b=function(){ag()&&(a.removeEventListener("visibilitychange",b,!1),c())};a.addEventListener("visibilitychange",b,!1)})).s(function(c){a.removeEventListener("visibilitychange",b,!1);throw c;})}
-function cg(a){try{var b=new Date(parseInt(a,10));if(!isNaN(b.getTime())&&!/[^0-9]/.test(a))return b.toUTCString()}catch(c){}return null};var dg={};var eg;try{var fg={};Object.defineProperty(fg,"abcd",{configurable:!0,enumerable:!0,value:1});Object.defineProperty(fg,"abcd",{configurable:!0,enumerable:!0,value:2});eg=2==fg.abcd}catch(a){eg=!1}function M(a,b,c){eg?Object.defineProperty(a,b,{configurable:!0,enumerable:!0,value:c}):a[b]=c}function gg(a,b){if(b)for(var c in b)b.hasOwnProperty(c)&&M(a,c,b[c])}function hg(a){var b={};gg(b,a);return b}function ig(a){var b={},c;for(c in a)a.hasOwnProperty(c)&&(b[c]=a[c]);return b}
-function jg(a,b){if(!b||!b.length)return!0;if(!a)return!1;for(var c=0;c<b.length;c++){var d=a[b[c]];if(void 0===d||null===d||""===d)return!1}return!0}function kg(a){var b=a;if("object"==typeof a&&null!=a){b="length"in a?[]:{};for(var c in a)M(b,c,kg(a[c]))}return b};function lg(a){var b={},c=a[mg],d=a[ng];a=a[og];if(!c||!a)throw Error("Invalid provider user info!");b[pg]=d||null;b[qg]=c;M(this,rg,a);M(this,sg,kg(b))}var mg="email",ng="newEmail",og="requestType",qg="email",pg="fromEmail",sg="data",rg="operation";function N(a,b){this.code=tg+a;this.message=b||ug[a]||""}t(N,Error);N.prototype.B=function(){return{code:this.code,message:this.message}};N.prototype.toJSON=function(){return this.B()};function vg(a){var b=a&&a.code;return b?new N(b.substring(tg.length),a.message):null}
-var tg="auth/",ug={"argument-error":"","app-not-authorized":"This app, identified by the domain where it's hosted, is not authorized to use Firebase Authentication with the provided API key. Review your key configuration in the Google API console.","app-not-installed":"The requested mobile application corresponding to the identifier (Android package name or iOS bundle ID) provided is not installed on this device.","captcha-check-failed":"The reCAPTCHA response token provided is either invalid, expired, already used or the domain associated with it does not match the list of whitelisted domains.",
-"code-expired":"The SMS code has expired. Please re-send the verification code to try again.","cordova-not-ready":"Cordova framework is not ready.","cors-unsupported":"This browser is not supported.","credential-already-in-use":"This credential is already associated with a different user account.","custom-token-mismatch":"The custom token corresponds to a different audience.","requires-recent-login":"This operation is sensitive and requires recent authentication. Log in again before retrying this request.",
-"dynamic-link-not-activated":"Please activate Dynamic Links in the Firebase Console and agree to the terms and conditions.","email-already-in-use":"The email address is already in use by another account.","expired-action-code":"The action code has expired. ","cancelled-popup-request":"This operation has been cancelled due to another conflicting popup being opened.","internal-error":"An internal error has occurred.","invalid-app-credential":"The phone verification request contains an invalid application verifier. The reCAPTCHA token response is either invalid or expired.",
-"invalid-app-id":"The mobile app identifier is not registed for the current project.","invalid-user-token":"The user's credential is no longer valid. The user must sign in again.","invalid-auth-event":"An internal error has occurred.","invalid-verification-code":"The SMS verification code used to create the phone auth credential is invalid. Please resend the verification code sms and be sure use the verification code provided by the user.","invalid-continue-uri":"The continue URL provided in the request is invalid.",
-"invalid-cordova-configuration":"The following Cordova plugins must be installed to enable OAuth sign-in: cordova-plugin-buildinfo, cordova-universal-links-plugin, cordova-plugin-browsertab, cordova-plugin-inappbrowser and cordova-plugin-customurlscheme.","invalid-custom-token":"The custom token format is incorrect. Please check the documentation.","invalid-email":"The email address is badly formatted.","invalid-api-key":"Your API key is invalid, please check you have copied it correctly.","invalid-cert-hash":"The SHA-1 certificate hash provided is invalid.",
-"invalid-credential":"The supplied auth credential is malformed or has expired.","invalid-persistence-type":"The specified persistence type is invalid. It can only be local, session or none.","invalid-message-payload":"The email template corresponding to this action contains invalid characters in its message. Please fix by going to the Auth email templates section in the Firebase Console.","invalid-oauth-provider":"EmailAuthProvider is not supported for this operation. This operation only supports OAuth providers.",
-"invalid-oauth-client-id":"The OAuth client ID provided is either invalid or does not match the specified API key.","unauthorized-domain":"This domain is not authorized for OAuth operations for your Firebase project. Edit the list of authorized domains from the Firebase console.","invalid-action-code":"The action code is invalid. This can happen if the code is malformed, expired, or has already been used.","wrong-password":"The password is invalid or the user does not have a password.","invalid-phone-number":"The format of the phone number provided is incorrect. Please enter the phone number in a format that can be parsed into E.164 format. E.164 phone numbers are written in the format [+][country code][subscriber number including area code].",
-"invalid-recipient-email":"The email corresponding to this action failed to send as the provided recipient email address is invalid.","invalid-sender":"The email template corresponding to this action contains an invalid sender email or name. Please fix by going to the Auth email templates section in the Firebase Console.","invalid-verification-id":"The verification ID used to create the phone auth credential is invalid.","missing-android-pkg-name":"An Android Package Name must be provided if the Android App is required to be installed.",
-"auth-domain-config-required":"Be sure to include authDomain when calling firebase.initializeApp(), by following the instructions in the Firebase console.","missing-app-credential":"The phone verification request is missing an application verifier assertion. A reCAPTCHA response token needs to be provided.","missing-verification-code":"The phone auth credential was created with an empty SMS verification code.","missing-continue-uri":"A continue URL must be provided in the request.","missing-iframe-start":"An internal error has occurred.",
-"missing-ios-bundle-id":"An iOS Bundle ID must be provided if an App Store ID is provided.","missing-phone-number":"To send verification codes, provide a phone number for the recipient.","missing-verification-id":"The phone auth credential was created with an empty verification ID.","app-deleted":"This instance of FirebaseApp has been deleted.","account-exists-with-different-credential":"An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.",
-"network-request-failed":"A network error (such as timeout, interrupted connection or unreachable host) has occurred.","no-auth-event":"An internal error has occurred.","no-such-provider":"User was not linked to an account with the given provider.","operation-not-allowed":"The given sign-in provider is disabled for this Firebase project. Enable it in the Firebase console, under the sign-in method tab of the Auth section.","operation-not-supported-in-this-environment":'This operation is not supported in the environment this application is running on. "location.protocol" must be http, https or chrome-extension and web storage must be enabled.',
-"popup-blocked":"Unable to establish a connection with the popup. It may have been blocked by the browser.","popup-closed-by-user":"The popup has been closed by the user before finalizing the operation.","provider-already-linked":"User can only be linked to one identity for the given provider.","quota-exceeded":"The project's quota for this operation has been exceeded.","redirect-cancelled-by-user":"The redirect operation has been cancelled by the user before finalizing.","redirect-operation-pending":"A redirect sign-in operation is already pending.",
-timeout:"The operation has timed out.","user-token-expired":"The user's credential is no longer valid. The user must sign in again.","too-many-requests":"We have blocked all requests from this device due to unusual activity. Try again later.","unauthorized-continue-uri":"The domain of the continue URL is not whitelisted.  Please whitelist the domain in the Firebase console.","unsupported-persistence-type":"The current environment does not support the specified persistence type.","user-cancelled":"User did not grant your application the permissions it requested.",
-"user-not-found":"There is no user record corresponding to this identifier. The user may have been deleted.","user-disabled":"The user account has been disabled by an administrator.","user-mismatch":"The supplied credentials do not correspond to the previously signed in user.","user-signed-out":"","weak-password":"The password must be 6 characters long or more.","web-storage-unsupported":"This browser is not supported or 3rd party cookies and data may be disabled."};function wg(a){var b=a[xg];if("undefined"===typeof b)throw new N("missing-continue-uri");if("string"!==typeof b||"string"===typeof b&&!b.length)throw new N("invalid-continue-uri");this.h=b;this.c=this.a=null;this.g=!1;var c=a[yg];if(c&&"object"===typeof c){b=c[zg];var d=c[Ag];c=c[Bg];if("string"===typeof b&&b.length){this.a=b;if("undefined"!==typeof d&&"boolean"!==typeof d)throw new N("argument-error",Ag+" property must be a boolean when specified.");this.g=!!d;if("undefined"!==typeof c&&("string"!==
-typeof c||"string"===typeof c&&!c.length))throw new N("argument-error",Bg+" property must be a non empty string when specified.");this.c=c||null}else{if("undefined"!==typeof b)throw new N("argument-error",zg+" property must be a non empty string when specified.");if("undefined"!==typeof d||"undefined"!==typeof c)throw new N("missing-android-pkg-name");}}else if("undefined"!==typeof c)throw new N("argument-error",yg+" property must be a non null object when specified.");this.b=null;if((b=a[Cg])&&"object"===
-typeof b)if(b=b[Dg],"string"===typeof b&&b.length)this.b=b;else{if("undefined"!==typeof b)throw new N("argument-error",Dg+" property must be a non empty string when specified.");}else if("undefined"!==typeof b)throw new N("argument-error",Cg+" property must be a non null object when specified.");a=a[Eg];if("undefined"!==typeof a&&"boolean"!==typeof a)throw new N("argument-error",Eg+" property must be a boolean when specified.");if((this.f=!!a)&&!this.b&&!this.a)throw new N("argument-error",Eg+" property can't be true when no mobile application is provided.");
-}var yg="android",Eg="handleCodeInApp",Cg="iOS",xg="url",Ag="installApp",Bg="minimumVersion",zg="packageName",Dg="bundleId";function Fg(a){var b={};b.continueUrl=a.h;b.canHandleCodeInApp=a.f;if(b.androidPackageName=a.a)b.androidMinimumVersion=a.c,b.androidInstallApp=a.g;b.iOSBundleId=a.b;for(var c in b)null===b[c]&&delete b[c];return b};function Gg(a){this.b=a.sub;na();this.a=a.provider_id||a.firebase&&a.firebase.sign_in_provider||null}function Hg(a){a=a.split(".");if(3!=a.length)return null;a=a[1];for(var b=(4-a.length%4)%4,c=0;c<b;c++)a+=".";try{var d=JSON.parse(Kd(a));if(d.sub&&d.iss&&d.aud&&d.exp)return new Gg(d)}catch(e){}return null};var Ig="oauth_consumer_key oauth_nonce oauth_signature oauth_signature_method oauth_timestamp oauth_token oauth_version".split(" "),Jg=["client_id","response_type","scope","redirect_uri","state"],Kg={Dc:{Ma:"locale",za:500,ya:600,Na:"facebook.com",$a:Jg},Fc:{Ma:null,za:500,ya:620,Na:"github.com",$a:Jg},Gc:{Ma:"hl",za:515,ya:680,Na:"google.com",$a:Jg},Mc:{Ma:"lang",za:485,ya:705,Na:"twitter.com",$a:Ig}};function Lg(a){for(var b in Kg)if(Kg[b].Na==a)return Kg[b];return null};function Mg(a){var b={};b["facebook.com"]=Ng;b["google.com"]=Og;b["github.com"]=Pg;b["twitter.com"]=Qg;var c=a&&a[Rg];try{if(c)return b[c]?new b[c](a):new Sg(a);if("undefined"!==typeof a[Tg])return new Ug(a)}catch(d){}return null}var Tg="idToken",Rg="providerId";function Ug(a){var b=a[Rg];if(!b&&a[Tg]){var c=Hg(a[Tg]);c&&c.a&&(b=c.a)}if(!b)throw Error("Invalid additional user info!");a=!!a.isNewUser;M(this,"providerId",b);M(this,"isNewUser",a)}
-function Sg(a){Ug.call(this,a);a=Wf(a.rawUserInfo||"{}");M(this,"profile",kg(a||{}))}t(Sg,Ug);function Ng(a){Sg.call(this,a);if("facebook.com"!=this.providerId)throw Error("Invalid provider ID!");}t(Ng,Sg);function Pg(a){Sg.call(this,a);if("github.com"!=this.providerId)throw Error("Invalid provider ID!");M(this,"username",this.profile&&this.profile.login||null)}t(Pg,Sg);function Og(a){Sg.call(this,a);if("google.com"!=this.providerId)throw Error("Invalid provider ID!");}t(Og,Sg);
-function Qg(a){Sg.call(this,a);if("twitter.com"!=this.providerId)throw Error("Invalid provider ID!");M(this,"username",a.screenName||null)}t(Qg,Sg);function Vg(a,b){return a.then(function(a){if(a[O]){var c=Hg(a[O]);if(!c||b!=c.b)throw new N("user-mismatch");return a}throw new N("user-mismatch");}).s(function(a){throw a&&a.code&&a.code==tg+"user-not-found"?new N("user-mismatch"):a;})}
-function Wg(a,b){if(b.idToken||b.accessToken)b.idToken&&M(this,"idToken",b.idToken),b.accessToken&&M(this,"accessToken",b.accessToken);else if(b.oauthToken&&b.oauthTokenSecret)M(this,"accessToken",b.oauthToken),M(this,"secret",b.oauthTokenSecret);else throw new N("internal-error","failed to construct a credential");M(this,"providerId",a)}Wg.prototype.wa=function(a){return Xg(a,Yg(this))};Wg.prototype.b=function(a,b){var c=Yg(this);c.idToken=b;return Zg(a,c)};
-Wg.prototype.c=function(a,b){var c=Yg(this);return Vg($g(a,c),b)};function Yg(a){var b={};a.idToken&&(b.id_token=a.idToken);a.accessToken&&(b.access_token=a.accessToken);a.secret&&(b.oauth_token_secret=a.secret);b.providerId=a.providerId;return{postBody:Ie(b).toString(),requestUri:"http://localhost"}}
-Wg.prototype.B=function(){var a={providerId:this.providerId};this.idToken&&(a.oauthIdToken=this.idToken);this.accessToken&&(a.oauthAccessToken=this.accessToken);this.secret&&(a.oauthTokenSecret=this.secret);return a};function ah(a,b){this.nc=b||[];gg(this,{providerId:a,isOAuthProvider:!0});this.qb={};this.Wa=(Lg(a)||{}).Ma||null;this.Ua=null}ah.prototype.Ba=function(a){this.qb=Ua(a);return this};function P(a){ah.call(this,a,Jg);this.a=[]}t(P,ah);
-P.prototype.sa=function(a){Ha(this.a,a)||this.a.push(a);return this};P.prototype.vb=function(){return La(this.a)};P.prototype.credential=function(a,b){if(!a&&!b)throw new N("argument-error","credential failed: must provide the ID token and/or the access token.");return new Wg(this.providerId,{idToken:a||null,accessToken:b||null})};function bh(){P.call(this,"facebook.com")}t(bh,P);M(bh,"PROVIDER_ID","facebook.com");
-function ch(a){if(!a)throw new N("argument-error","credential failed: expected 1 argument (the OAuth access token).");var b=a;q(a)&&(b=a.accessToken);return(new bh).credential(null,b)}function dh(){P.call(this,"github.com")}t(dh,P);M(dh,"PROVIDER_ID","github.com");function eh(a){if(!a)throw new N("argument-error","credential failed: expected 1 argument (the OAuth access token).");var b=a;q(a)&&(b=a.accessToken);return(new dh).credential(null,b)}
-function fh(){P.call(this,"google.com");this.sa("profile")}t(fh,P);M(fh,"PROVIDER_ID","google.com");function gh(a,b){var c=a;q(a)&&(c=a.idToken,b=a.accessToken);return(new fh).credential(c,b)}function hh(){ah.call(this,"twitter.com",Ig)}t(hh,ah);M(hh,"PROVIDER_ID","twitter.com");
-function ih(a,b){var c=a;q(c)||(c={oauthToken:a,oauthTokenSecret:b});if(!c.oauthToken||!c.oauthTokenSecret)throw new N("argument-error","credential failed: expected 2 arguments (the OAuth access token and secret).");return new Wg("twitter.com",c)}function jh(a,b){this.a=a;this.f=b;M(this,"providerId","password")}jh.prototype.wa=function(a){return Q(a,kh,{email:this.a,password:this.f})};jh.prototype.b=function(a,b){return Q(a,lh,{idToken:b,email:this.a,password:this.f})};
-jh.prototype.c=function(a,b){return Vg(this.wa(a),b)};jh.prototype.B=function(){return{email:this.a,password:this.f}};function mh(){gg(this,{providerId:"password",isOAuthProvider:!1})}gg(mh,{PROVIDER_ID:"password"});function nh(a){if(!(a.Pa&&a.Oa||a.Da&&a.Y))throw new N("internal-error");this.a=a;M(this,"providerId","phone")}nh.prototype.wa=function(a){return a.Qa(oh(this))};nh.prototype.b=function(a,b){var c=oh(this);c.idToken=b;return Q(a,ph,c)};
-nh.prototype.c=function(a,b){var c=oh(this);c.operation="REAUTH";a=Q(a,qh,c);return Vg(a,b)};nh.prototype.B=function(){var a={providerId:"phone"};this.a.Pa&&(a.verificationId=this.a.Pa);this.a.Oa&&(a.verificationCode=this.a.Oa);this.a.Da&&(a.temporaryProof=this.a.Da);this.a.Y&&(a.phoneNumber=this.a.Y);return a};function oh(a){return a.a.Da&&a.a.Y?{temporaryProof:a.a.Da,phoneNumber:a.a.Y}:{sessionInfo:a.a.Pa,code:a.a.Oa}}
-function rh(a){try{this.a=a||firebase.auth()}catch(b){throw new N("argument-error","Either an instance of firebase.auth.Auth must be passed as an argument to the firebase.auth.PhoneAuthProvider constructor, or the default firebase App instance must be initialized via firebase.initializeApp().");}gg(this,{providerId:"phone",isOAuthProvider:!1})}
-rh.prototype.Qa=function(a,b){var c=this.a.c;return A(b.verify()).then(function(d){if(!m(d))throw new N("argument-error","An implementation of firebase.auth.ApplicationVerifier.prototype.verify() must return a firebase.Promise that resolves with a string.");switch(b.type){case "recaptcha":return sh(c,{phoneNumber:a,recaptchaToken:d}).then(function(a){"function"===typeof b.reset&&b.reset();return a},function(a){"function"===typeof b.reset&&b.reset();throw a;});default:throw new N("argument-error",
-'Only firebase.auth.ApplicationVerifiers with type="recaptcha" are currently supported.');}})};function th(a,b){if(!a)throw new N("missing-verification-id");if(!b)throw new N("missing-verification-code");return new nh({Pa:a,Oa:b})}gg(rh,{PROVIDER_ID:"phone"});
-function uh(a){if(a.temporaryProof&&a.phoneNumber)return new nh({Da:a.temporaryProof,Y:a.phoneNumber});var b=a&&a.providerId;if(!b||"password"===b)return null;var c=a&&a.oauthAccessToken,d=a&&a.oauthTokenSecret;a=a&&a.oauthIdToken;try{switch(b){case "google.com":return gh(a,c);case "facebook.com":return ch(c);case "github.com":return eh(c);case "twitter.com":return ih(c,d);default:return(new P(b)).credential(a,c)}}catch(e){return null}}
-function vh(a){if(!a.isOAuthProvider)throw new N("invalid-oauth-provider");};function wh(a,b,c,d,e){this.b=a;this.c=b||null;this.f=c||null;this.g=d||null;this.a=e||null;if(this.f||this.a){if(this.f&&this.a)throw new N("invalid-auth-event");if(this.f&&!this.g)throw new N("invalid-auth-event");}else throw new N("invalid-auth-event");}wh.prototype.B=function(){return{type:this.b,eventId:this.c,urlResponse:this.f,sessionId:this.g,error:this.a&&this.a.B()}};function xh(a){a=a||{};return a.type?new wh(a.type,a.eventId,a.urlResponse,a.sessionId,a.error&&vg(a.error)):null};function yh(a){var b="unauthorized-domain",c=void 0,d=De(a);a=d.b;d=d.c;"chrome-extension"==d?c=oa("This chrome extension ID (chrome-extension://%s) is not authorized to run this operation. Add it to the OAuth redirect domains list in the Firebase console -> Auth section -> Sign in method tab.",a):"http"==d||"https"==d?c=oa("This domain (%s) is not authorized to run this operation. Add it to the OAuth redirect domains list in the Firebase console -> Auth section -> Sign in method tab.",a):b="operation-not-supported-in-this-environment";
-N.call(this,b,c)}t(yh,N);function zh(a,b,c){N.call(this,a,c);a=b||{};a.rb&&M(this,"email",a.rb);a.Y&&M(this,"phoneNumber",a.Y);a.credential&&M(this,"credential",a.credential)}t(zh,N);zh.prototype.B=function(){var a={code:this.code,message:this.message};this.email&&(a.email=this.email);this.phoneNumber&&(a.phoneNumber=this.phoneNumber);var b=this.credential&&this.credential.B();b&&Wa(a,b);return a};zh.prototype.toJSON=function(){return this.B()};
-function Ah(a){if(a.code){var b=a.code||"";0==b.indexOf(tg)&&(b=b.substring(tg.length));var c={credential:uh(a)};if(a.email)c.rb=a.email;else if(a.phoneNumber)c.Y=a.phoneNumber;else return new N(b,a.message||void 0);return new zh(b,c,a.message)}return null};function Bh(a){this.f=a}t(Bh,Ne);Bh.prototype.a=function(){return new this.f};Bh.prototype.b=function(){return{}};
-function Ch(a,b,c){var d="Node"==K();d=k.XMLHttpRequest||d&&firebase.INTERNAL.node&&firebase.INTERNAL.node.XMLHttpRequest;if(!d)throw new N("internal-error","The XMLHttpRequest compatibility library was not found.");this.b=a;a=b||{};this.i=a.secureTokenEndpoint||"https://securetoken.googleapis.com/v1/token";this.l=a.secureTokenTimeout||Dh;this.c=Ua(a.secureTokenHeaders||Eh);this.g=a.firebaseEndpoint||"https://www.googleapis.com/identitytoolkit/v3/relyingparty/";this.h=a.firebaseTimeout||Fh;this.a=
-Ua(a.firebaseHeaders||Gh);c&&(this.a["X-Client-Version"]=c,this.c["X-Client-Version"]=c);this.f=new rf;this.o=new Bh(d)}var Hh,O="idToken",Dh=new $f(3E4,6E4),Eh={"Content-Type":"application/x-www-form-urlencoded"},Fh=new $f(3E4,6E4),Gh={"Content-Type":"application/json"};function Ih(a,b){b?a.a["X-Firebase-Locale"]=b:delete a.a["X-Firebase-Locale"]}function Jh(a,b){b?(a.a["X-Client-Version"]=b,a.c["X-Client-Version"]=b):(delete a.a["X-Client-Version"],delete a.c["X-Client-Version"])}
-function Kh(a,b,c,d,e,f,g){Zf()?(yf()?a=r(a.m,a):(Hh||(Hh=new z(function(a,b){Lh(a,b)})),a=r(a.u,a)),a(b,c,d,e,f,g)):c&&c(null)}
-Ch.prototype.m=function(a,b,c,d,e,f){var g="Node"==K(),l=Mf()?g?new Se(this.o):new Se:new Se(this.f);if(f){l.f=Math.max(0,f);var n=setTimeout(function(){G(l,"timeout")},f)}fd(l,"complete",function(){n&&clearTimeout(n);var a=null;try{a=JSON.parse(hf(this))||null}catch(vb){a=null}b&&b(a)});ld(l,"ready",function(){n&&clearTimeout(n);Lc(this)});ld(l,"timeout",function(){n&&clearTimeout(n);Lc(this);b&&b(null)});Ye(l,a,c,d,e)};
-var Mh=dc("https://apis.google.com/js/client.js?onload=%{onload}"),Nh="__fcb"+Math.floor(1E6*Math.random()).toString();function Lh(a,b){if(((window.gapi||{}).client||{}).request)a();else{k[Nh]=function(){((window.gapi||{}).client||{}).request?a():b(Error("CORS_UNSUPPORTED"))};var c=hc(Mh,{onload:Nh});Td(kf(c),function(){b(Error("CORS_UNSUPPORTED"))})}}
-Ch.prototype.u=function(a,b,c,d,e){var f=this;Hh.then(function(){window.gapi.client.setApiKey(f.b);var g=window.gapi.auth.getToken();window.gapi.auth.setToken(null);window.gapi.client.request({path:a,method:c,body:d,headers:e,authType:"none",callback:function(a){window.gapi.auth.setToken(g);b&&b(a)}})}).s(function(a){b&&b({error:{message:a&&a.message||"CORS_UNSUPPORTED"}})})};
-function Oh(a,b){return new z(function(c,d){"refresh_token"==b.grant_type&&b.refresh_token||"authorization_code"==b.grant_type&&b.code?Kh(a,a.i+"?key="+encodeURIComponent(a.b),function(a){a?a.error?d(Ph(a)):a.access_token&&a.refresh_token?c(a):d(new N("internal-error")):d(new N("network-request-failed"))},"POST",Ie(b).toString(),a.c,a.l.get()):d(new N("internal-error"))})}
-function Qh(a,b,c,d,e,f){var g=De(a.g+b);I(g,"key",a.b);f&&I(g,"cb",na().toString());var l="GET"==c;if(l)for(var n in d)d.hasOwnProperty(n)&&I(g,n,d[n]);return new z(function(b,f){Kh(a,g.toString(),function(a){a?a.error?f(Ph(a,e||{})):b(a):f(new N("network-request-failed"))},c,l?void 0:Cc(Vf(d)),a.a,a.h.get())})}function Rh(a){if(!jf.test(a.email))throw new N("invalid-email");}function Sh(a){"email"in a&&Rh(a)}
-function Th(a,b){return Q(a,Uh,{identifier:b,continueUri:Sf()?vf():"http://localhost"}).then(function(a){return a.allProviders||[]})}function Vh(a){return Q(a,Wh,{}).then(function(a){return a.authorizedDomains||[]})}function Xh(a){if(!a[O])throw new N("internal-error");}
-function Yh(a){if(a.phoneNumber||a.temporaryProof){if(!a.phoneNumber||!a.temporaryProof)throw new N("internal-error");}else{if(!a.sessionInfo)throw new N("missing-verification-id");if(!a.code)throw new N("missing-verification-code");}}Ch.prototype.gb=function(){return Q(this,Zh,{})};Ch.prototype.kb=function(a,b){return Q(this,$h,{idToken:a,email:b})};Ch.prototype.lb=function(a,b){return Q(this,lh,{idToken:a,password:b})};var ai={displayName:"DISPLAY_NAME",photoUrl:"PHOTO_URL"};h=Ch.prototype;
-h.mb=function(a,b){var c={idToken:a},d=[];Pa(ai,function(a,f){var e=b[f];null===e?d.push(a):f in b&&(c[f]=e)});d.length&&(c.deleteAttribute=d);return Q(this,$h,c)};h.cb=function(a,b){a={requestType:"PASSWORD_RESET",email:a};Wa(a,b);return Q(this,bi,a)};h.bb=function(a,b){a={requestType:"VERIFY_EMAIL",idToken:a};Wa(a,b);return Q(this,ci,a)};function sh(a,b){return Q(a,di,b)}h.Qa=function(a){return Q(this,ei,a)};function fi(a,b,c){return Q(a,gi,{idToken:b,deleteProvider:c})}
-function hi(a){if(!a.requestUri||!a.sessionId&&!a.postBody)throw new N("internal-error");}function ii(a){var b=null;a.needConfirmation?(a.code="account-exists-with-different-credential",b=Ah(a)):"FEDERATED_USER_ID_ALREADY_LINKED"==a.errorMessage?(a.code="credential-already-in-use",b=Ah(a)):"EMAIL_EXISTS"==a.errorMessage?(a.code="email-already-in-use",b=Ah(a)):a.errorMessage&&(b=ji(a.errorMessage));if(b)throw b;if(!a[O])throw new N("internal-error");}
-function Xg(a,b){b.returnIdpCredential=!0;return Q(a,ki,b)}function Zg(a,b){b.returnIdpCredential=!0;return Q(a,li,b)}function $g(a,b){b.returnIdpCredential=!0;b.autoCreate=!1;return Q(a,mi,b)}function ni(a){if(!a.oobCode)throw new N("invalid-action-code");}h.Ta=function(a,b){return Q(this,oi,{oobCode:a,newPassword:b})};h.Ia=function(a){return Q(this,pi,{oobCode:a})};h.Sa=function(a){return Q(this,qi,{oobCode:a})};
-var qi={endpoint:"setAccountInfo",D:ni,ga:"email"},pi={endpoint:"resetPassword",D:ni,O:function(a){if(!a.email||!a.requestType)throw new N("internal-error");}},ri={endpoint:"signupNewUser",D:function(a){Rh(a);if(!a.password)throw new N("weak-password");},O:Xh,T:!0},Uh={endpoint:"createAuthUri"},si={endpoint:"deleteAccount",ea:["idToken"]},gi={endpoint:"setAccountInfo",ea:["idToken","deleteProvider"],D:function(a){if(!fa(a.deleteProvider))throw new N("internal-error");}},ti={endpoint:"getAccountInfo"},
-ci={endpoint:"getOobConfirmationCode",ea:["idToken","requestType"],D:function(a){if("VERIFY_EMAIL"!=a.requestType)throw new N("internal-error");},ga:"email"},bi={endpoint:"getOobConfirmationCode",ea:["requestType"],D:function(a){if("PASSWORD_RESET"!=a.requestType)throw new N("internal-error");Rh(a)},ga:"email"},Wh={nb:!0,endpoint:"getProjectConfig",yb:"GET"},ui={nb:!0,endpoint:"getRecaptchaParam",yb:"GET",O:function(a){if(!a.recaptchaSiteKey)throw new N("internal-error");}},oi={endpoint:"resetPassword",
-D:ni,ga:"email"},di={endpoint:"sendVerificationCode",ea:["phoneNumber","recaptchaToken"],ga:"sessionInfo"},$h={endpoint:"setAccountInfo",ea:["idToken"],D:Sh,T:!0},lh={endpoint:"setAccountInfo",ea:["idToken"],D:function(a){Sh(a);if(!a.password)throw new N("weak-password");},O:Xh,T:!0},Zh={endpoint:"signupNewUser",O:Xh,T:!0},ki={endpoint:"verifyAssertion",D:hi,O:ii,T:!0},mi={endpoint:"verifyAssertion",D:hi,O:function(a){if(a.errorMessage&&"USER_NOT_FOUND"==a.errorMessage)throw new N("user-not-found");
-if(a.errorMessage)throw ji(a.errorMessage);if(!a[O])throw new N("internal-error");},T:!0},li={endpoint:"verifyAssertion",D:function(a){hi(a);if(!a.idToken)throw new N("internal-error");},O:ii,T:!0},vi={endpoint:"verifyCustomToken",D:function(a){if(!a.token)throw new N("invalid-custom-token");},O:Xh,T:!0},kh={endpoint:"verifyPassword",D:function(a){Rh(a);if(!a.password)throw new N("wrong-password");},O:Xh,T:!0},ei={endpoint:"verifyPhoneNumber",D:Yh,O:Xh},ph={endpoint:"verifyPhoneNumber",D:function(a){if(!a.idToken)throw new N("internal-error");
-Yh(a)},O:function(a){if(a.temporaryProof)throw a.code="credential-already-in-use",Ah(a);Xh(a)}},qh={Lb:{USER_NOT_FOUND:"user-not-found"},endpoint:"verifyPhoneNumber",D:Yh,O:Xh};
-function Q(a,b,c){if(!jg(c,b.ea))return B(new N("internal-error"));var d=b.yb||"POST",e;return A(c).then(b.D).then(function(){b.T&&(c.returnSecureToken=!0);return Qh(a,b.endpoint,d,c,b.Lb,b.nb||!1)}).then(function(a){return e=a}).then(b.O).then(function(){if(!b.ga)return e;if(!(b.ga in e))throw new N("internal-error");return e[b.ga]})}function ji(a){return Ph({error:{errors:[{message:a}],code:400,message:a}})}
-function Ph(a,b){var c=(a.error&&a.error.errors&&a.error.errors[0]||{}).reason||"";var d={keyInvalid:"invalid-api-key",ipRefererBlocked:"app-not-authorized"};if(c=d[c]?new N(d[c]):null)return c;c=a.error&&a.error.message||"";d={INVALID_CUSTOM_TOKEN:"invalid-custom-token",CREDENTIAL_MISMATCH:"custom-token-mismatch",MISSING_CUSTOM_TOKEN:"internal-error",INVALID_IDENTIFIER:"invalid-email",MISSING_CONTINUE_URI:"internal-error",INVALID_EMAIL:"invalid-email",INVALID_PASSWORD:"wrong-password",USER_DISABLED:"user-disabled",
-MISSING_PASSWORD:"internal-error",EMAIL_EXISTS:"email-already-in-use",PASSWORD_LOGIN_DISABLED:"operation-not-allowed",INVALID_IDP_RESPONSE:"invalid-credential",FEDERATED_USER_ID_ALREADY_LINKED:"credential-already-in-use",INVALID_MESSAGE_PAYLOAD:"invalid-message-payload",INVALID_RECIPIENT_EMAIL:"invalid-recipient-email",INVALID_SENDER:"invalid-sender",EMAIL_NOT_FOUND:"user-not-found",EXPIRED_OOB_CODE:"expired-action-code",INVALID_OOB_CODE:"invalid-action-code",MISSING_OOB_CODE:"internal-error",CREDENTIAL_TOO_OLD_LOGIN_AGAIN:"requires-recent-login",
-INVALID_ID_TOKEN:"invalid-user-token",TOKEN_EXPIRED:"user-token-expired",USER_NOT_FOUND:"user-token-expired",CORS_UNSUPPORTED:"cors-unsupported",DYNAMIC_LINK_NOT_ACTIVATED:"dynamic-link-not-activated",INVALID_APP_ID:"invalid-app-id",TOO_MANY_ATTEMPTS_TRY_LATER:"too-many-requests",WEAK_PASSWORD:"weak-password",OPERATION_NOT_ALLOWED:"operation-not-allowed",USER_CANCELLED:"user-cancelled",CAPTCHA_CHECK_FAILED:"captcha-check-failed",INVALID_APP_CREDENTIAL:"invalid-app-credential",INVALID_CODE:"invalid-verification-code",
-INVALID_PHONE_NUMBER:"invalid-phone-number",INVALID_SESSION_INFO:"invalid-verification-id",INVALID_TEMPORARY_PROOF:"invalid-credential",MISSING_APP_CREDENTIAL:"missing-app-credential",MISSING_CODE:"missing-verification-code",MISSING_PHONE_NUMBER:"missing-phone-number",MISSING_SESSION_INFO:"missing-verification-id",QUOTA_EXCEEDED:"quota-exceeded",SESSION_EXPIRED:"code-expired",INVALID_CONTINUE_URI:"invalid-continue-uri",MISSING_ANDROID_PACKAGE_NAME:"missing-android-pkg-name",MISSING_IOS_BUNDLE_ID:"missing-ios-bundle-id",
-UNAUTHORIZED_DOMAIN:"unauthorized-continue-uri",INVALID_OAUTH_CLIENT_ID:"invalid-oauth-client-id",INVALID_CERT_HASH:"invalid-cert-hash"};Wa(d,b||{});b=(b=c.match(/^[^\s]+\s*:\s*(.*)$/))&&1<b.length?b[1]:void 0;for(var e in d)if(0===c.indexOf(e))return new N(d[e],b);!b&&a&&(b=Uf(a));return new N("internal-error",b)};var wi={Ic:{Va:"https://www.googleapis.com/identitytoolkit/v3/relyingparty/",ab:"https://securetoken.googleapis.com/v1/token",id:"p"},Kc:{Va:"https://staging-www.sandbox.googleapis.com/identitytoolkit/v3/relyingparty/",ab:"https://staging-securetoken.sandbox.googleapis.com/v1/token",id:"s"},Lc:{Va:"https://www-googleapis-test.sandbox.google.com/identitytoolkit/v3/relyingparty/",ab:"https://test-securetoken.sandbox.googleapis.com/v1/token",id:"t"}};
-function xi(a){for(var b in wi)if(wi[b].id===a)return a=wi[b],{firebaseEndpoint:a.Va,secureTokenEndpoint:a.ab};return null}var yi;yi=xi("__EID__")?"__EID__":void 0;function zi(a){this.b=a;this.a=null;this.Ya=Ai(this)}
-function Ai(a){return Bi().then(function(){return new z(function(b,c){L("gapi.iframes.getContext")().open({where:document.body,url:a.b,messageHandlersFilter:L("gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER"),attributes:{style:{position:"absolute",top:"-100px",width:"1px",height:"1px"}},dontclear:!0},function(d){function e(){clearTimeout(f);b()}a.a=d;a.a.restyle({setHideOnLeave:!1});var f=setTimeout(function(){c(Error("Network Error"))},Ci.get());d.ping(e).then(e,function(){c(Error("Network Error"))})})})})}
-function Di(a,b){return a.Ya.then(function(){return new z(function(c){a.a.send(b.type,b,c,L("gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER"))})})}function Ei(a,b){a.Ya.then(function(){a.a.register("authEvent",b,L("gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER"))})}var Fi=dc("https://apis.google.com/js/api.js?onload=%{onload}"),Gi=new $f(3E4,6E4),Ci=new $f(5E3,15E3),Hi=null;
-function Bi(){return Hi?Hi:Hi=(new z(function(a,b){if(Zf()){var c=function(){Yf();L("gapi.load")("gapi.iframes",{callback:a,ontimeout:function(){Yf();b(Error("Network Error"))},timeout:Gi.get()})};if(L("gapi.iframes.Iframe"))a();else if(L("gapi.load"))c();else{var d="__iframefcb"+Math.floor(1E6*Math.random()).toString();k[d]=function(){L("gapi.load")?c():b(Error("Network Error"))};d=hc(Fi,{onload:d});A(kf(d)).s(function(){b(Error("Network Error"))})}}else b(Error("Network Error"))})).s(function(a){Hi=
-null;throw a;})};function Ii(a,b,c){this.i=a;this.g=b;this.h=c;this.f=null;this.a=Ee(this.i,"/__/auth/iframe");I(this.a,"apiKey",this.g);I(this.a,"appName",this.h);this.b=null;this.c=[]}Ii.prototype.toString=function(){this.f?I(this.a,"v",this.f):Le(this.a.a,"v");this.b?I(this.a,"eid",this.b):Le(this.a.a,"eid");this.c.length?I(this.a,"fw",this.c.join(",")):Le(this.a.a,"fw");return this.a.toString()};function Ji(a,b,c,d,e){this.m=a;this.u=b;this.c=c;this.l=d;this.i=this.g=this.h=null;this.a=e;this.f=null}
-Ji.prototype.toString=function(){var a=Ee(this.m,"/__/auth/handler");I(a,"apiKey",this.u);I(a,"appName",this.c);I(a,"authType",this.l);if(this.a.isOAuthProvider){var b=this.a;try{var c=firebase.app(this.c).auth().$()}catch(l){c=null}b.Ua=c;I(a,"providerId",this.a.providerId);b=this.a;c=Vf(b.qb);for(var d in c)c[d]=c[d].toString();d=b.nc;c=Ua(c);for(var e=0;e<d.length;e++){var f=d[e];f in c&&delete c[f]}b.Wa&&b.Ua&&!c[b.Wa]&&(c[b.Wa]=b.Ua);Sa(c)||I(a,"customParameters",Uf(c))}"function"===typeof this.a.vb&&
-(b=this.a.vb(),b.length&&I(a,"scopes",b.join(",")));this.h?I(a,"redirectUrl",this.h):Le(a.a,"redirectUrl");this.g?I(a,"eventId",this.g):Le(a.a,"eventId");this.i?I(a,"v",this.i):Le(a.a,"v");if(this.b)for(var g in this.b)this.b.hasOwnProperty(g)&&!Ce(a,g)&&I(a,g,this.b[g]);this.f?I(a,"eid",this.f):Le(a.a,"eid");g=Ki(this.c);g.length&&I(a,"fw",g.join(","));return a.toString()};function Ki(a){try{return firebase.app(a).auth().Ka()}catch(b){return[]}}
-function Li(a,b,c,d,e){this.u=a;this.f=b;this.b=c;this.c=d||null;this.h=e||null;this.m=this.o=this.v=null;this.g=[];this.l=this.a=null}
-function Mi(a){var b=vf();return Vh(a).then(function(a){a:{var c=De(b),e=c.c;c=c.b;for(var f=0;f<a.length;f++){var g=a[f];var l=c;var n=e;0==g.indexOf("chrome-extension://")?l=De(g).b==l&&"chrome-extension"==n:"http"!=n&&"https"!=n?l=!1:Gf.test(g)?l=l==g:(g=g.split(".").join("\\."),l=(new RegExp("^(.+\\."+g+"|"+g+")$","i")).test(l));if(l){a=!0;break a}}a=!1}if(!a)throw new yh(vf());})}
-function Ni(a){if(a.l)return a.l;a.l=Hf().then(function(){if(!a.o){var b=a.c,c=a.h,d=Ki(a.b),e=new Ii(a.u,a.f,a.b);e.f=b;e.b=c;e.c=La(d||[]);a.o=e.toString()}a.i=new zi(a.o);Oi(a)});return a.l}h=Li.prototype;h.Ca=function(a,b,c){var d=new N("popup-closed-by-user"),e=new N("web-storage-unsupported"),f=this,g=!1;return this.ba().then(function(){Pi(f).then(function(c){c||(a&&Cf(a),b(e),g=!0)})}).s(function(){}).then(function(){if(!g)return Ff(a)}).then(function(){if(!g)return sd(c).then(function(){b(d)})})};
-h.Cb=function(){var a=J();return!Tf(a)&&!Xf(a)};h.xb=function(){return!1};
-h.ub=function(a,b,c,d,e,f,g){if(!a)return B(new N("popup-blocked"));if(g&&!Tf())return this.ba().s(function(b){Cf(a);e(b)}),d(),A();this.a||(this.a=Mi(Qi(this)));var l=this;return this.a.then(function(){var b=l.ba().s(function(b){Cf(a);e(b);throw b;});d();return b}).then(function(){vh(c);if(!g){var d=Ri(l.u,l.f,l.b,b,c,null,f,l.c,void 0,l.h);wf(d,a)}}).s(function(a){"auth/network-request-failed"==a.code&&(l.a=null);throw a;})};
-function Qi(a){a.m||(a.v=a.c?Of(a.c,Ki(a.b)):null,a.m=new Ch(a.f,xi(a.h),a.v));return a.m}h.Aa=function(a,b,c){this.a||(this.a=Mi(Qi(this)));var d=this;return this.a.then(function(){vh(b);var e=Ri(d.u,d.f,d.b,a,b,vf(),c,d.c,void 0,d.h);wf(e)}).s(function(a){"auth/network-request-failed"==a.code&&(d.a=null);throw a;})};h.ba=function(){var a=this;return Ni(this).then(function(){return a.i.Ya}).s(function(){a.a=null;throw new N("network-request-failed");})};h.Db=function(){return!0};
-function Ri(a,b,c,d,e,f,g,l,n,D){a=new Ji(a,b,c,d,e);a.h=f;a.g=g;a.i=l;a.b=Ua(n||null);a.f=D;return a.toString()}function Oi(a){if(!a.i)throw Error("IfcHandler must be initialized!");Ei(a.i,function(b){var c={};if(b&&b.authEvent){var d=!1;b=xh(b.authEvent);for(c=0;c<a.g.length;c++)d=a.g[c](b)||d;c={};c.status=d?"ACK":"ERROR";return A(c)}c.status="ERROR";return A(c)})}
-function Pi(a){var b={type:"webStorageSupport"};return Ni(a).then(function(){return Di(a.i,b)}).then(function(a){if(a&&a.length&&"undefined"!==typeof a[0].webStorageSupport)return a[0].webStorageSupport;throw Error();})}h.ua=function(a){this.g.push(a)};h.Ja=function(a){Ja(this.g,function(b){return b==a})};function Si(a){this.a=a||firebase.INTERNAL.reactNative&&firebase.INTERNAL.reactNative.AsyncStorage;if(!this.a)throw new N("internal-error","The React Native compatibility library was not found.");}h=Si.prototype;h.get=function(a){return A(this.a.getItem(a)).then(function(a){return a&&Wf(a)})};h.set=function(a,b){return A(this.a.setItem(a,Uf(b)))};h.X=function(a){return A(this.a.removeItem(a))};h.ia=function(){};h.da=function(){};function Ti(){this.a={}}h=Ti.prototype;h.get=function(a){return A(this.a[a])};h.set=function(a,b){this.a[a]=b;return A()};h.X=function(a){delete this.a[a];return A()};h.ia=function(){};h.da=function(){};function Ui(a,b,c,d,e,f){try{var g=!!k.indexedDB}catch(l){g=!1}if(!g)throw new N("web-storage-unsupported");this.u=a;this.h=b;this.g=c;this.l=d;this.m=e;this.f={};this.c=[];this.a=0;this.o=f||k.indexedDB}var Vi;function Wi(a){return new z(function(b,c){var d=a.o.open(a.u,a.m);d.onerror=function(a){c(Error(a.target.errorCode))};d.onupgradeneeded=function(b){b=b.target.result;try{b.createObjectStore(a.h,{keyPath:a.g})}catch(f){c(f)}};d.onsuccess=function(a){b(a.target.result)}})}
-function Xi(a){a.i||(a.i=Wi(a));return a.i}function Yi(a,b){return b.objectStore(a.h)}function Zi(a,b,c){return b.transaction([a.h],c?"readwrite":"readonly")}function $i(a){return new z(function(b,c){a.onsuccess=function(a){a&&a.target?b(a.target.result):b()};a.onerror=function(a){c(Error(a.target.errorCode))}})}h=Ui.prototype;
-h.set=function(a,b){var c=!1,d,e=this;return Qb(Xi(this).then(function(b){d=b;b=Yi(e,Zi(e,d,!0));return $i(b.get(a))}).then(function(f){var g=Yi(e,Zi(e,d,!0));if(f)return f.value=b,$i(g.put(f));e.a++;c=!0;f={};f[e.g]=a;f[e.l]=b;return $i(g.add(f))}).then(function(){e.f[a]=b}),function(){c&&e.a--})};h.get=function(a){var b=this;return Xi(this).then(function(c){return $i(Yi(b,Zi(b,c,!1)).get(a))}).then(function(a){return a&&a.value})};
-h.X=function(a){var b=!1,c=this;return Qb(Xi(this).then(function(d){b=!0;c.a++;return $i(Yi(c,Zi(c,d,!0))["delete"](a))}).then(function(){delete c.f[a]}),function(){b&&c.a--})};
-h.vc=function(){var a=this;return Xi(this).then(function(b){var c=Yi(a,Zi(a,b,!1));return c.getAll?$i(c.getAll()):new z(function(a,b){var d=[],e=c.openCursor();e.onsuccess=function(b){(b=b.target.result)?(d.push(b.value),b["continue"]()):a(d)};e.onerror=function(a){b(Error(a.target.errorCode))}})}).then(function(b){var c={},d=[];if(0==a.a){for(d=0;d<b.length;d++)c[b[d][a.g]]=b[d][a.l];d=xf(a.f,c);a.f=c}return d})};h.ia=function(a){0==this.c.length&&aj(this);this.c.push(a)};
-h.da=function(a){Ja(this.c,function(b){return b==a});0==this.c.length&&this.b&&this.b.cancel("STOP_EVENT")};function aj(a){function b(){a.b=sd(800).then(r(a.vc,a)).then(function(b){0<b.length&&w(a.c,function(a){a(b)})}).then(b).s(function(a){"STOP_EVENT"!=a.message&&b()});return a.b}a.b&&a.b.cancel("STOP_EVENT");b()};function bj(){if(!cj()){if("Node"==K())throw new N("internal-error","The LocalStorage compatibility library was not found.");throw new N("web-storage-unsupported");}this.a=dj()||firebase.INTERNAL.node.localStorage}function dj(){try{var a=k.localStorage,b=Qf();a&&(a.setItem(b,"1"),a.removeItem(b));return a}catch(c){return null}}
-function cj(){var a="Node"==K();a=dj()||a&&firebase.INTERNAL.node&&firebase.INTERNAL.node.localStorage;if(!a)return!1;try{return a.setItem("__sak","1"),a.removeItem("__sak"),!0}catch(b){return!1}}h=bj.prototype;h.get=function(a){var b=this;return A().then(function(){var c=b.a.getItem(a);return Wf(c)})};h.set=function(a,b){var c=this;return A().then(function(){var d=Uf(b);null===d?c.X(a):c.a.setItem(a,d)})};h.X=function(a){var b=this;return A().then(function(){b.a.removeItem(a)})};
-h.ia=function(a){k.window&&cd(k.window,"storage",a)};h.da=function(a){k.window&&E(k.window,"storage",a)};function ej(){}h=ej.prototype;h.get=function(){return A(null)};h.set=function(){return A()};h.X=function(){return A()};h.ia=function(){};h.da=function(){};function fj(){if(!gj()){if("Node"==K())throw new N("internal-error","The SessionStorage compatibility library was not found.");throw new N("web-storage-unsupported");}this.a=hj()||firebase.INTERNAL.node.sessionStorage}function hj(){try{var a=k.sessionStorage,b=Qf();a&&(a.setItem(b,"1"),a.removeItem(b));return a}catch(c){return null}}
-function gj(){var a="Node"==K();a=hj()||a&&firebase.INTERNAL.node&&firebase.INTERNAL.node.sessionStorage;if(!a)return!1;try{return a.setItem("__sak","1"),a.removeItem("__sak"),!0}catch(b){return!1}}h=fj.prototype;h.get=function(a){var b=this;return A().then(function(){var c=b.a.getItem(a);return Wf(c)})};h.set=function(a,b){var c=this;return A().then(function(){var d=Uf(b);null===d?c.X(a):c.a.setItem(a,d)})};h.X=function(a){var b=this;return A().then(function(){b.a.removeItem(a)})};h.ia=function(){};
-h.da=function(){};function ij(){var a={};a.Browser=jj;a.Node=kj;a.ReactNative=lj;this.a=a[K()]}var mj,jj={C:bj,jb:fj},kj={C:bj,jb:fj},lj={C:Si,jb:ej};var nj={Hc:"local",NONE:"none",Jc:"session"};function oj(a){var b=new N("invalid-persistence-type"),c=new N("unsupported-persistence-type");a:{for(d in nj)if(nj[d]==a){var d=!0;break a}d=!1}if(!d||"string"!==typeof a)throw b;switch(K()){case "ReactNative":if("session"===a)throw c;break;case "Node":if("none"!==a)throw c;break;default:if(!Pf()&&"none"!==a)throw c;}}
-function pj(a,b,c,d,e){this.i=a;this.g=b;this.A=c;this.u=d;this.v=e;this.a={};mj||(mj=new ij);a=mj;try{if(uf()){Vi||(Vi=new Ui("firebaseLocalStorageDb","firebaseLocalStorage","fbase_key","value",1));var f=Vi}else f=new a.a.C;this.l=f}catch(g){this.l=new Ti,this.u=!0}try{this.o=new a.a.jb}catch(g){this.o=new Ti}this.w=new Ti;this.h=r(this.m,this);this.b={}}var qj;function rj(){qj||(qj=new pj("firebase",":",!Xf(J())&&Lf()?!0:!1,Tf(),Pf()));return qj}
-function sj(a,b){switch(b){case "session":return a.o;case "none":return a.w;default:return a.l}}function tj(a,b,c){return a.i+a.g+b.name+(c?a.g+c:"")}pj.prototype.get=function(a,b){return sj(this,a.C).get(tj(this,a,b))};function uj(a,b,c){c=tj(a,b,c);"local"==b.C&&(a.b[c]=null);return sj(a,b.C).X(c)}pj.prototype.set=function(a,b,c){var d=tj(this,a,c),e=this,f=sj(this,a.C);return f.set(d,b).then(function(){return f.get(d)}).then(function(b){"local"==a.C&&(e.b[d]=b)})};
-function vj(a,b,c,d){b=tj(a,b,c);a.v&&(a.b[b]=k.localStorage.getItem(b));Sa(a.a)&&(sj(a,"local").ia(a.h),a.u||uf()||!a.v||wj(a));a.a[b]||(a.a[b]=[]);a.a[b].push(d)}function xj(a,b,c){b=tj(a,yj("local"),b);a.a[b]&&(Ja(a.a[b],function(a){return a==c}),0==a.a[b].length&&delete a.a[b]);Sa(a.a)&&zj(a)}
-function wj(a){Aj(a);a.f=setInterval(function(){for(var b in a.a){var c=k.localStorage.getItem(b),d=a.b[b];c!=d&&(a.b[b]=c,c=new Qc({type:"storage",key:b,target:window,oldValue:d,newValue:c,a:!0}),a.m(c))}},1E3)}function Aj(a){a.f&&(clearInterval(a.f),a.f=null)}function zj(a){sj(a,"local").da(a.h);Aj(a)}
-pj.prototype.m=function(a){if(a&&a.g){var b=a.a.key;if(null==b)for(var c in this.a){var d=this.b[c];"undefined"===typeof d&&(d=null);var e=k.localStorage.getItem(c);e!==d&&(this.b[c]=e,this.c(c))}else if(0==b.indexOf(this.i+this.g)&&this.a[b]){"undefined"!==typeof a.a.a?sj(this,"local").da(this.h):Aj(this);if(this.A)if(c=k.localStorage.getItem(b),d=a.a.newValue,d!==c)null!==d?k.localStorage.setItem(b,d):k.localStorage.removeItem(b);else if(this.b[b]===d&&"undefined"===typeof a.a.a)return;var f=this;
-c=function(){if("undefined"!==typeof a.a.a||f.b[b]!==k.localStorage.getItem(b))f.b[b]=k.localStorage.getItem(b),f.c(b)};y&&kb&&10==kb&&k.localStorage.getItem(b)!==a.a.newValue&&a.a.newValue!==a.a.oldValue?setTimeout(c,10):c()}}else w(a,r(this.c,this))};pj.prototype.c=function(a){this.a[a]&&w(this.a[a],function(a){a()})};function Cj(a){this.a=a;this.b=rj()}var Dj={name:"authEvent",C:"local"};function Ej(a){return a.b.get(Dj,a.a).then(function(a){return xh(a)})};function Fj(){this.a=rj()};function Gj(a,b,c,d,e,f,g){this.u=a;this.i=b;this.l=c;this.m=d||null;this.o=g||null;this.h=b+":"+c;this.A=new Fj;this.g=new Cj(this.h);this.f=null;this.b=[];this.v=e||500;this.w=f||2E3;this.a=this.c=null}function Hj(a){return new N("invalid-cordova-configuration",a)}h=Gj.prototype;
-h.ba=function(){return this.xa?this.xa:this.xa=If().then(function(){if("function"!==typeof L("universalLinks.subscribe",k))throw Hj("cordova-universal-links-plugin is not installed");if("undefined"===typeof L("BuildInfo.packageName",k))throw Hj("cordova-plugin-buildinfo is not installed");if("function"!==typeof L("cordova.plugins.browsertab.openUrl",k))throw Hj("cordova-plugin-browsertab is not installed");if("function"!==typeof L("cordova.InAppBrowser.open",k))throw Hj("cordova-plugin-inappbrowser is not installed");
-},function(){throw new N("cordova-not-ready");})};function Ij(){for(var a=20,b=[];0<a;)b.push("1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".charAt(Math.floor(62*Math.random()))),a--;return b.join("")}function Jj(a){var b=new ie;he(b,a);a=[];var c=8*b.g;56>b.c?he(b,fe,56-b.c):he(b,fe,b.b-(b.c-56));for(var d=63;56<=d;d--)b.f[d]=c&255,c/=256;ge(b);for(d=c=0;d<b.i;d++)for(var e=24;0<=e;e-=8)a[c++]=b.a[d]>>e&255;return Hd(a)}
-h.Ca=function(a,b){b(new N("operation-not-supported-in-this-environment"));return A()};h.ub=function(){return B(new N("operation-not-supported-in-this-environment"))};h.Db=function(){return!1};h.Cb=function(){return!0};h.xb=function(){return!0};
-h.Aa=function(a,b,c){if(this.c)return B(new N("redirect-operation-pending"));var d=this,e=k.document,f=null,g=null,l=null,n=null;return this.c=Qb(A().then(function(){vh(b);return Kj(d)}).then(function(){return Lj(d,a,b,c)}).then(function(){return(new z(function(a,b){g=function(){var b=L("cordova.plugins.browsertab.close",k);a();"function"===typeof b&&b();d.a&&"function"===typeof d.a.close&&(d.a.close(),d.a=null);return!1};d.ua(g);l=function(){f||(f=sd(d.w).then(function(){b(new N("redirect-cancelled-by-user"))}))};
-n=function(){ag()&&l()};e.addEventListener("resume",l,!1);J().toLowerCase().match(/android/)||e.addEventListener("visibilitychange",n,!1)})).s(function(a){return Mj(d).then(function(){throw a;})})}),function(){l&&e.removeEventListener("resume",l,!1);n&&e.removeEventListener("visibilitychange",n,!1);f&&f.cancel();g&&d.Ja(g);d.c=null})};
-function Lj(a,b,c,d){var e=Ij(),f=new wh(b,d,null,e,new N("no-auth-event")),g=L("BuildInfo.packageName",k);if("string"!==typeof g)throw new N("invalid-cordova-configuration");var l=L("BuildInfo.displayName",k),n={};if(J().toLowerCase().match(/iphone|ipad|ipod/))n.ibi=g;else if(J().toLowerCase().match(/android/))n.apn=g;else return B(new N("operation-not-supported-in-this-environment"));l&&(n.appDisplayName=l);e=Jj(e);n.sessionId=e;var D=Ri(a.u,a.i,a.l,b,c,null,d,a.m,n,a.o);return a.ba().then(function(){var b=
-a.h;return a.A.a.set(Dj,f.B(),b)}).then(function(){var b=L("cordova.plugins.browsertab.isAvailable",k);if("function"!==typeof b)throw new N("invalid-cordova-configuration");var c=null;b(function(b){if(b){c=L("cordova.plugins.browsertab.openUrl",k);if("function"!==typeof c)throw new N("invalid-cordova-configuration");c(D)}else{c=L("cordova.InAppBrowser.open",k);if("function"!==typeof c)throw new N("invalid-cordova-configuration");b=J();b=!(!b.match(/(iPad|iPhone|iPod).*OS 7_\d/i)&&!b.match(/(iPad|iPhone|iPod).*OS 8_\d/i));
-a.a=c(D,b?"_blank":"_system","location=yes")}})})}function Nj(a,b){for(var c=0;c<a.b.length;c++)try{a.b[c](b)}catch(d){}}function Kj(a){a.f||(a.f=a.ba().then(function(){return new z(function(b){function c(d){b(d);a.Ja(c);return!1}a.ua(c);Oj(a)})}));return a.f}function Mj(a){var b=null;return Ej(a.g).then(function(c){b=c;c=a.g;return uj(c.b,Dj,c.a)}).then(function(){return b})}
-function Oj(a){function b(b){e=!0;f&&f.cancel();Mj(a).then(function(c){var e=d;if(c&&b&&b.url){e=null;var f=b.url;var g=De(f),l=Ce(g,"link"),n=Ce(De(l),"link");g=Ce(g,"deep_link_id");f=Ce(De(g),"link")||g||n||l||f;-1!=f.indexOf("/__/auth/callback")&&(e=De(f),e=Wf(Ce(e,"firebaseError")||null),e=(e="object"===typeof e?vg(e):null)?new wh(c.b,c.c,null,null,e):new wh(c.b,c.c,f,c.g));e=e||d}Nj(a,e)})}var c=L("universalLinks.subscribe",k);if("function"!==typeof c)throw new N("invalid-cordova-configuration");
-var d=new wh("unknown",null,null,null,new N("no-auth-event")),e=!1,f=sd(a.v).then(function(){return Mj(a).then(function(){e||Nj(a,d)})}),g=k.handleOpenURL;k.handleOpenURL=function(a){0==a.toLowerCase().indexOf(L("BuildInfo.packageName",k).toLowerCase()+"://")&&b({url:a});if("function"===typeof g)try{g(a)}catch(n){console.error(n)}};c(null,b)}
-h.ua=function(a){this.b.push(a);Kj(this).s(function(b){"auth/invalid-cordova-configuration"===b.code&&(b=new wh("unknown",null,null,null,new N("no-auth-event")),a(b))})};h.Ja=function(a){Ja(this.b,function(b){return b==a})};function Pj(a){this.a=a;this.b=rj()}var Qj={name:"pendingRedirect",C:"session"};function Rj(a){return a.b.set(Qj,"pending",a.a)}function Sj(a){return uj(a.b,Qj,a.a)}function Tj(a){return a.b.get(Qj,a.a).then(function(a){return"pending"==a})};function Uj(a,b,c){this.v=a;this.l=b;this.u=c;this.h=[];this.f=!1;this.i=r(this.m,this);this.c=new Vj;this.o=new Wj;this.g=new Pj(this.l+":"+this.u);this.b={};this.b.unknown=this.c;this.b.signInViaRedirect=this.c;this.b.linkViaRedirect=this.c;this.b.reauthViaRedirect=this.c;this.b.signInViaPopup=this.o;this.b.linkViaPopup=this.o;this.b.reauthViaPopup=this.o;this.a=Xj(this.v,this.l,this.u,yi)}
-function Xj(a,b,c,d){var e=firebase.SDK_VERSION||null;return Jf()?new Gj(a,b,c,e,void 0,void 0,d):new Li(a,b,c,e,d)}Uj.prototype.reset=function(){this.f=!1;this.a.Ja(this.i);this.a=Xj(this.v,this.l,this.u)};function Yj(a){a.f||(a.f=!0,a.a.ua(a.i));var b=a.a;return a.a.ba().s(function(c){a.a==b&&a.reset();throw c;})}function Zj(a){a.a.Cb()&&Yj(a).s(function(b){var c=new wh("unknown",null,null,null,new N("operation-not-supported-in-this-environment"));ak(b)&&a.m(c)});a.a.xb()||bk(a.c)}
-Uj.prototype.subscribe=function(a){Ha(this.h,a)||this.h.push(a);if(!this.f){var b=this;Tj(this.g).then(function(a){a?Sj(b.g).then(function(){Yj(b).s(function(a){var c=new wh("unknown",null,null,null,new N("operation-not-supported-in-this-environment"));ak(a)&&b.m(c)})}):Zj(b)}).s(function(){Zj(b)})}};Uj.prototype.unsubscribe=function(a){Ja(this.h,function(b){return b==a})};
-Uj.prototype.m=function(a){if(!a)throw new N("invalid-auth-event");for(var b=!1,c=0;c<this.h.length;c++){var d=this.h[c];if(d.ob(a.b,a.c)){(b=this.b[a.b])&&b.h(a,d);b=!0;break}}bk(this.c);return b};var ck=new $f(2E3,1E4),dk=new $f(3E4,6E4);Uj.prototype.aa=function(){return this.c.aa()};function ek(a,b,c,d,e,f){return a.a.ub(b,c,d,function(){a.f||(a.f=!0,a.a.ua(a.i))},function(){a.reset()},e,f)}function ak(a){return a&&"auth/cordova-not-ready"==a.code?!0:!1}
-Uj.prototype.Aa=function(a,b,c){var d=this,e;return Rj(this.g).then(function(){return d.a.Aa(a,b,c).s(function(a){if(ak(a))throw new N("operation-not-supported-in-this-environment");e=a;return Sj(d.g).then(function(){throw e;})}).then(function(){return d.a.Db()?new z(function(){}):Sj(d.g).then(function(){return d.aa()}).then(function(){}).s(function(){})})})};Uj.prototype.Ca=function(a,b,c,d){return this.a.Ca(c,function(c){a.fa(b,null,c,d)},ck.get())};var fk={};
-function gk(a,b,c){var d=b+":"+c;fk[d]||(fk[d]=new Uj(a,b,c));return fk[d]}function Vj(){this.b=null;this.f=[];this.c=[];this.a=null;this.g=!1}Vj.prototype.reset=function(){this.b=null;this.a&&(this.a.cancel(),this.a=null)};
-Vj.prototype.h=function(a,b){if(!a)return B(new N("invalid-auth-event"));this.reset();this.g=!0;var c=a.b,d=a.c,e=a.a&&"auth/web-storage-unsupported"==a.a.code,f=a.a&&"auth/operation-not-supported-in-this-environment"==a.a.code;"unknown"!=c||e||f?a.a?(hk(this,!0,null,a.a),a=A()):a=b.va(c,d)?ik(this,a,b):B(new N("invalid-auth-event")):(hk(this,!1,null,null),a=A());return a};function bk(a){a.g||(a.g=!0,hk(a,!1,null,null))}
-function ik(a,b,c){c=c.va(b.b,b.c);var d=b.f,e=b.g,f=!!b.b.match(/Redirect$/);return c(d,e).then(function(b){hk(a,f,b,null)}).s(function(b){hk(a,f,null,b)})}function jk(a,b){a.b=function(){return B(b)};if(a.c.length)for(var c=0;c<a.c.length;c++)a.c[c](b)}function kk(a,b){a.b=function(){return A(b)};if(a.f.length)for(var c=0;c<a.f.length;c++)a.f[c](b)}function hk(a,b,c,d){b?d?jk(a,d):kk(a,c):kk(a,{user:null});a.f=[];a.c=[]}
-Vj.prototype.aa=function(){var a=this;return new z(function(b,c){a.b?a.b().then(b,c):(a.f.push(b),a.c.push(c),lk(a))})};function lk(a){var b=new N("timeout");a.a&&a.a.cancel();a.a=sd(dk.get()).then(function(){a.b||hk(a,!0,null,b)})}function Wj(){}Wj.prototype.h=function(a,b){if(!a)return B(new N("invalid-auth-event"));var c=a.b,d=a.c;a.a?(b.fa(a.b,null,a.a,a.c),a=A()):a=b.va(c,d)?mk(a,b):B(new N("invalid-auth-event"));return a};
-function mk(a,b){var c=a.c,d=a.b;return b.va(d,c)(a.f,a.g).then(function(a){b.fa(d,a,null,c)}).s(function(a){b.fa(d,null,a,c)})};function nk(a,b){this.a=b;M(this,"verificationId",a)}nk.prototype.confirm=function(a){a=th(this.verificationId,a);return this.a(a)};function ok(a,b,c,d){return(new rh(a)).Qa(b,c).then(function(a){return new nk(a,d)})};function pk(a,b,c,d,e,f){this.h=a;this.i=b;this.g=c;this.c=d;this.f=e;this.l=!!f;this.b=null;this.a=this.c;if(this.f<this.c)throw Error("Proactive refresh lower bound greater than upper bound!");}pk.prototype.start=function(){this.a=this.c;qk(this,!0)};function rk(a,b){if(b)return a.a=a.c,a.g();b=a.a;a.a*=2;a.a>a.f&&(a.a=a.f);return b}
-function qk(a,b){sk(a);a.b=sd(rk(a,b)).then(function(){return a.l?A():bg()}).then(function(){return a.h()}).then(function(){qk(a,!0)}).s(function(b){a.i(b)&&qk(a,!1)})}function sk(a){a.b&&(a.b.cancel(),a.b=null)};function tk(a){this.f=a;this.b=this.a=null;this.c=0}tk.prototype.B=function(){return{apiKey:this.f.b,refreshToken:this.a,accessToken:this.b,expirationTime:this.c}};function uk(a,b){var c=b[O],d=b.refreshToken;b=vk(b.expiresIn);a.b=c;a.c=b;a.a=d}function vk(a){return na()+1E3*parseInt(a,10)}
-function wk(a,b){return Oh(a.f,b).then(function(b){a.b=b.access_token;a.c=vk(b.expires_in);a.a=b.refresh_token;return{accessToken:a.b,expirationTime:a.c,refreshToken:a.a}}).s(function(b){"auth/user-token-expired"==b.code&&(a.a=null);throw b;})}tk.prototype.getToken=function(a){a=!!a;return this.b&&!this.a?B(new N("user-token-expired")):a||!this.b||na()>this.c-3E4?this.a?wk(this,{grant_type:"refresh_token",refresh_token:this.a}):A(null):A({accessToken:this.b,expirationTime:this.c,refreshToken:this.a})};function xk(a,b){this.a=a||null;this.b=b||null;gg(this,{lastSignInTime:cg(b||null),creationTime:cg(a||null)})}function yk(a){return new xk(a.a,a.b)}xk.prototype.B=function(){return{lastLoginAt:this.b,createdAt:this.a}};function zk(a,b,c,d,e,f){gg(this,{uid:a,displayName:d||null,photoURL:e||null,email:c||null,phoneNumber:f||null,providerId:b})}function Ak(a,b){C.call(this,a);for(var c in b)this[c]=b[c]}t(Ak,C);
-function Bk(a,b,c){this.A=[];this.G=a.apiKey;this.o=a.appName;this.w=a.authDomain||null;a=firebase.SDK_VERSION?Of(firebase.SDK_VERSION):null;this.c=new Ch(this.G,xi(yi),a);this.h=new tk(this.c);Ck(this,b[O]);uk(this.h,b);M(this,"refreshToken",this.h.a);Dk(this,c||{});F.call(this);this.I=!1;this.w&&Rf()&&(this.a=gk(this.w,this.G,this.o));this.N=[];this.i=null;this.l=Ek(this);this.U=r(this.Ga,this);var d=this;this.ha=null;this.ra=function(a){d.na(a.h)};this.W=null;this.R=[];this.qa=function(a){Fk(d,
-a.f)};this.V=null}t(Bk,F);Bk.prototype.na=function(a){this.ha=a;Ih(this.c,a)};Bk.prototype.$=function(){return this.ha};function Gk(a,b){a.W&&E(a.W,"languageCodeChanged",a.ra);(a.W=b)&&cd(b,"languageCodeChanged",a.ra)}function Fk(a,b){a.R=b;Jh(a.c,firebase.SDK_VERSION?Of(firebase.SDK_VERSION,a.R):null)}Bk.prototype.Ka=function(){return La(this.R)};function Hk(a,b){a.V&&E(a.V,"frameworkChanged",a.qa);(a.V=b)&&cd(b,"frameworkChanged",a.qa)}Bk.prototype.Ga=function(){this.l.b&&(sk(this.l),this.l.start())};
-function Ik(a){try{return firebase.app(a.o).auth()}catch(b){throw new N("internal-error","No firebase.auth.Auth instance is available for the Firebase App '"+a.o+"'!");}}function Ek(a){return new pk(function(){return a.F(!0)},function(a){return a&&"auth/network-request-failed"==a.code?!0:!1},function(){var b=a.h.c-na()-3E5;return 0<b?b:0},3E4,96E4,!1)}function Jk(a){a.m||a.l.b||(a.l.start(),E(a,"tokenChanged",a.U),cd(a,"tokenChanged",a.U))}function Kk(a){E(a,"tokenChanged",a.U);sk(a.l)}
-function Ck(a,b){a.pa=b;M(a,"_lat",b)}function Lk(a,b){Ja(a.N,function(a){return a==b})}function Mk(a){for(var b=[],c=0;c<a.N.length;c++)b.push(a.N[c](a));return Ob(b).then(function(){return a})}function Nk(a){a.a&&!a.I&&(a.I=!0,a.a.subscribe(a))}
-function Dk(a,b){gg(a,{uid:b.uid,displayName:b.displayName||null,photoURL:b.photoURL||null,email:b.email||null,emailVerified:b.emailVerified||!1,phoneNumber:b.phoneNumber||null,isAnonymous:b.isAnonymous||!1,metadata:new xk(b.createdAt,b.lastLoginAt),providerData:[]})}M(Bk.prototype,"providerId","firebase");function Ok(){}function Pk(a){return A().then(function(){if(a.m)throw new N("app-deleted");})}function Qk(a){return Da(a.providerData,function(a){return a.providerId})}
-function Rk(a,b){b&&(Sk(a,b.providerId),a.providerData.push(b))}function Sk(a,b){Ja(a.providerData,function(a){return a.providerId==b})}function Tk(a,b,c){("uid"!=b||c)&&a.hasOwnProperty(b)&&M(a,b,c)}
-function Uk(a,b){a!=b&&(gg(a,{uid:b.uid,displayName:b.displayName,photoURL:b.photoURL,email:b.email,emailVerified:b.emailVerified,phoneNumber:b.phoneNumber,isAnonymous:b.isAnonymous,providerData:[]}),b.metadata?M(a,"metadata",yk(b.metadata)):M(a,"metadata",new xk),w(b.providerData,function(b){Rk(a,b)}),a.h=b.h,M(a,"refreshToken",a.h.a))}h=Bk.prototype;h.reload=function(){var a=this;return R(this,Pk(this).then(function(){return Vk(a).then(function(){return Mk(a)}).then(Ok)}))};
-function Vk(a){return a.F().then(function(b){var c=a.isAnonymous;return Wk(a,b).then(function(){c||Tk(a,"isAnonymous",!1);return b})})}h.F=function(a){var b=this;return R(this,Pk(this).then(function(){return b.h.getToken(a)}).then(function(a){if(!a)throw new N("internal-error");a.accessToken!=b.pa&&(Ck(b,a.accessToken),G(b,new Ak("tokenChanged")));Tk(b,"refreshToken",a.refreshToken);return a.accessToken}))};
-h.getToken=function(a){dg["firebase.User.prototype.getToken is deprecated. Please use firebase.User.prototype.getIdToken instead."]||(dg["firebase.User.prototype.getToken is deprecated. Please use firebase.User.prototype.getIdToken instead."]=!0,"undefined"!==typeof console&&"function"===typeof console.warn&&console.warn("firebase.User.prototype.getToken is deprecated. Please use firebase.User.prototype.getIdToken instead."));return this.F(a)};
-function Xk(a,b){b[O]&&a.pa!=b[O]&&(uk(a.h,b),G(a,new Ak("tokenChanged")),Ck(a,b[O]),Tk(a,"refreshToken",a.h.a))}function Wk(a,b){return Q(a.c,ti,{idToken:b}).then(r(a.gc,a))}
-h.gc=function(a){a=a.users;if(!a||!a.length)throw new N("internal-error");a=a[0];Dk(this,{uid:a.localId,displayName:a.displayName,photoURL:a.photoUrl,email:a.email,emailVerified:!!a.emailVerified,phoneNumber:a.phoneNumber,lastLoginAt:a.lastLoginAt,createdAt:a.createdAt});for(var b=Yk(a),c=0;c<b.length;c++)Rk(this,b[c]);Tk(this,"isAnonymous",!(this.email&&a.passwordHash)&&!(this.providerData&&this.providerData.length))};
-function Yk(a){return(a=a.providerUserInfo)&&a.length?Da(a,function(a){return new zk(a.rawId,a.providerId,a.email,a.displayName,a.photoUrl,a.phoneNumber)}):[]}h.Za=function(a){var b=this,c=null;return R(this,a.c(this.c,this.uid).then(function(a){Xk(b,a);c=Zk(b,a,"reauthenticate");b.i=null;return b.reload()}).then(function(){return c}),!0)};h.hc=function(a){return this.Za(a).then(function(){})};
-function $k(a,b){return Vk(a).then(function(){if(Ha(Qk(a),b))return Mk(a).then(function(){throw new N("provider-already-linked");})})}h.Xa=function(a){var b=this,c=null;return R(this,$k(this,a.providerId).then(function(){return b.F()}).then(function(c){return a.b(b.c,c)}).then(function(a){c=Zk(b,a,"link");return al(b,a)}).then(function(){return c}))};h.Zb=function(a){return this.Xa(a).then(function(a){return a.user})};
-h.$b=function(a,b){var c=this;return R(this,$k(this,"phone").then(function(){return ok(Ik(c),a,b,r(c.Xa,c))}))};h.ic=function(a,b){var c=this;return R(this,A().then(function(){return ok(Ik(c),a,b,r(c.Za,c))}),!0)};function Zk(a,b,c){var d=uh(b);b=Mg(b);return hg({user:a,credential:d,additionalUserInfo:b,operationType:c})}function al(a,b){Xk(a,b);return a.reload().then(function(){return a})}
-h.kb=function(a){var b=this;return R(this,this.F().then(function(c){return b.c.kb(c,a)}).then(function(a){Xk(b,a);return b.reload()}))};h.zc=function(a){var b=this;return R(this,this.F().then(function(c){return a.b(b.c,c)}).then(function(a){Xk(b,a);return b.reload()}))};h.lb=function(a){var b=this;return R(this,this.F().then(function(c){return b.c.lb(c,a)}).then(function(a){Xk(b,a);return b.reload()}))};
-h.mb=function(a){if(void 0===a.displayName&&void 0===a.photoURL)return Pk(this);var b=this;return R(this,this.F().then(function(c){return b.c.mb(c,{displayName:a.displayName,photoUrl:a.photoURL})}).then(function(a){Xk(b,a);Tk(b,"displayName",a.displayName||null);Tk(b,"photoURL",a.photoUrl||null);w(b.providerData,function(a){"password"===a.providerId&&(M(a,"displayName",b.displayName),M(a,"photoURL",b.photoURL))});return Mk(b)}).then(Ok))};
-h.yc=function(a){var b=this;return R(this,Vk(this).then(function(c){return Ha(Qk(b),a)?fi(b.c,c,[a]).then(function(a){var c={};w(a.providerUserInfo||[],function(a){c[a.providerId]=!0});w(Qk(b),function(a){c[a]||Sk(b,a)});c[rh.PROVIDER_ID]||M(b,"phoneNumber",null);return Mk(b)}):Mk(b).then(function(){throw new N("no-such-provider");})}))};
-h.delete=function(){var a=this;return R(this,this.F().then(function(b){return Q(a.c,si,{idToken:b})}).then(function(){G(a,new Ak("userDeleted"))})).then(function(){for(var b=0;b<a.A.length;b++)a.A[b].cancel("app-deleted");Gk(a,null);Hk(a,null);a.A=[];a.m=!0;Kk(a);M(a,"refreshToken",null);a.a&&a.a.unsubscribe(a)})};
-h.ob=function(a,b){return"linkViaPopup"==a&&(this.g||null)==b&&this.f||"reauthViaPopup"==a&&(this.g||null)==b&&this.f||"linkViaRedirect"==a&&(this.Z||null)==b||"reauthViaRedirect"==a&&(this.Z||null)==b?!0:!1};h.fa=function(a,b,c,d){"linkViaPopup"!=a&&"reauthViaPopup"!=a||d!=(this.g||null)||(c&&this.v?this.v(c):b&&!c&&this.f&&this.f(b),this.b&&(this.b.cancel(),this.b=null),delete this.f,delete this.v)};
-h.va=function(a,b){return"linkViaPopup"==a&&b==(this.g||null)?r(this.sb,this):"reauthViaPopup"==a&&b==(this.g||null)?r(this.tb,this):"linkViaRedirect"==a&&(this.Z||null)==b?r(this.sb,this):"reauthViaRedirect"==a&&(this.Z||null)==b?r(this.tb,this):null};h.ac=function(a){var b=this;return bl(this,"linkViaPopup",a,function(){return $k(b,a.providerId).then(function(){return Mk(b)})},!1)};h.jc=function(a){return bl(this,"reauthViaPopup",a,function(){return A()},!0)};
-function bl(a,b,c,d,e){if(!Rf())return B(new N("operation-not-supported-in-this-environment"));if(a.i&&!e)return B(a.i);var f=Lg(c.providerId),g=Qf(a.uid+":::"),l=null;(!Tf()||Lf())&&a.w&&c.isOAuthProvider&&(l=Ri(a.w,a.G,a.o,b,c,null,g,firebase.SDK_VERSION||null));var n=Df(l,f&&f.za,f&&f.ya);d=d().then(function(){cl(a);if(!e)return a.F().then(function(){})}).then(function(){return ek(a.a,n,b,c,g,!!l)}).then(function(){return new z(function(c,d){a.fa(b,null,new N("cancelled-popup-request"),a.g||null);
-a.f=c;a.v=d;a.g=g;a.b=a.a.Ca(a,b,n,g)})}).then(function(a){n&&Cf(n);return a?hg(a):null}).s(function(a){n&&Cf(n);throw a;});return R(a,d,e)}h.bc=function(a){var b=this;return dl(this,"linkViaRedirect",a,function(){return $k(b,a.providerId)},!1)};h.kc=function(a){return dl(this,"reauthViaRedirect",a,function(){return A()},!0)};
-function dl(a,b,c,d,e){if(!Rf())return B(new N("operation-not-supported-in-this-environment"));if(a.i&&!e)return B(a.i);var f=null,g=Qf(a.uid+":::");d=d().then(function(){cl(a);if(!e)return a.F().then(function(){})}).then(function(){a.Z=g;return Mk(a)}).then(function(b){a.ca&&(b=a.ca,b=b.b.set(el,a.B(),b.a));return b}).then(function(){return a.a.Aa(b,c,g)}).s(function(b){f=b;if(a.ca)return fl(a.ca);throw f;}).then(function(){if(f)throw f;});return R(a,d,e)}
-function cl(a){if(!a.a||!a.I){if(a.a&&!a.I)throw new N("internal-error");throw new N("auth-domain-config-required");}}h.sb=function(a,b){var c=this;this.b&&(this.b.cancel(),this.b=null);var d=null,e=this.F().then(function(d){return Zg(c.c,{requestUri:a,sessionId:b,idToken:d})}).then(function(a){d=Zk(c,a,"link");return al(c,a)}).then(function(){return d});return R(this,e)};
-h.tb=function(a,b){var c=this;this.b&&(this.b.cancel(),this.b=null);var d=null,e=A().then(function(){return Vg($g(c.c,{requestUri:a,sessionId:b}),c.uid)}).then(function(a){d=Zk(c,a,"reauthenticate");Xk(c,a);c.i=null;return c.reload()}).then(function(){return d});return R(this,e,!0)};h.bb=function(a){var b=this,c=null;return R(this,this.F().then(function(b){c=b;return"undefined"===typeof a||Sa(a)?{}:Fg(new wg(a))}).then(function(a){return b.c.bb(c,a)}).then(function(a){if(b.email!=a)return b.reload()}).then(function(){}))};
-function R(a,b,c){var d=gl(a,b,c);a.A.push(d);Qb(d,function(){Ia(a.A,d)});return d}function gl(a,b,c){return a.i&&!c?(b.cancel(),B(a.i)):b.s(function(b){!b||"auth/user-disabled"!=b.code&&"auth/user-token-expired"!=b.code||(a.i||G(a,new Ak("userInvalidated")),a.i=b);throw b;})}h.toJSON=function(){return this.B()};
-h.B=function(){var a={uid:this.uid,displayName:this.displayName,photoURL:this.photoURL,email:this.email,emailVerified:this.emailVerified,phoneNumber:this.phoneNumber,isAnonymous:this.isAnonymous,providerData:[],apiKey:this.G,appName:this.o,authDomain:this.w,stsTokenManager:this.h.B(),redirectEventId:this.Z||null};this.metadata&&Wa(a,this.metadata.B());w(this.providerData,function(b){a.providerData.push(ig(b))});return a};
-function hl(a){if(!a.apiKey)return null;var b={apiKey:a.apiKey,authDomain:a.authDomain,appName:a.appName},c={};if(a.stsTokenManager&&a.stsTokenManager.accessToken&&a.stsTokenManager.expirationTime)c[O]=a.stsTokenManager.accessToken,c.refreshToken=a.stsTokenManager.refreshToken||null,c.expiresIn=(a.stsTokenManager.expirationTime-na())/1E3;else return null;var d=new Bk(b,c,a);a.providerData&&w(a.providerData,function(a){a&&Rk(d,hg(a))});a.redirectEventId&&(d.Z=a.redirectEventId);return d}
-function il(a,b,c,d){var e=new Bk(a,b);c&&(e.ca=c);d&&Fk(e,d);return e.reload().then(function(){return e})};function jl(a){this.a=a;this.b=rj()}var el={name:"redirectUser",C:"session"};function fl(a){return uj(a.b,el,a.a)}function kl(a,b){return a.b.get(el,a.a).then(function(a){a&&b&&(a.authDomain=b);return hl(a||{})})};function ll(a,b){this.a=a;this.b=b||rj();this.c=null;this.f=ml(this);vj(this.b,yj("local"),this.a,r(this.g,this))}ll.prototype.g=function(){var a=this,b=yj("local");nl(this,function(){return A().then(function(){return a.c&&"local"!=a.c.C?a.b.get(b,a.a):null}).then(function(c){if(c)return ol(a,"local").then(function(){a.c=b})})})};function ol(a,b){var c=[],d;for(d in nj)nj[d]!==b&&c.push(uj(a.b,yj(nj[d]),a.a));c.push(uj(a.b,pl,a.a));return Nb(c)}
-function ml(a){var b=yj("local"),c=yj("session"),d=yj("none");return a.b.get(c,a.a).then(function(e){return e?c:a.b.get(d,a.a).then(function(c){return c?d:a.b.get(b,a.a).then(function(c){return c?b:a.b.get(pl,a.a).then(function(a){return a?yj(a):b})})})}).then(function(b){a.c=b;return ol(a,b.C)}).s(function(){a.c||(a.c=b)})}var pl={name:"persistence",C:"session"};function yj(a){return{name:"authUser",C:a}}
-ll.prototype.eb=function(a){var b=null,c=this;oj(a);return nl(this,function(){return a!=c.c.C?c.b.get(c.c,c.a).then(function(d){b=d;return ol(c,a)}).then(function(){c.c=yj(a);if(b)return c.b.set(c.c,b,c.a)}):A()})};function ql(a){return nl(a,function(){return a.b.set(pl,a.c.C,a.a)})}function rl(a,b){return nl(a,function(){return a.b.set(a.c,b.B(),a.a)})}function sl(a){return nl(a,function(){return uj(a.b,a.c,a.a)})}
-function tl(a,b){return nl(a,function(){return a.b.get(a.c,a.a).then(function(a){a&&b&&(a.authDomain=b);return hl(a||{})})})}function nl(a,b){a.f=a.f.then(b,b);return a.f};function ul(a){this.l=!1;M(this,"app",a);if(S(this).options&&S(this).options.apiKey)a=firebase.SDK_VERSION?Of(firebase.SDK_VERSION):null,this.c=new Ch(S(this).options&&S(this).options.apiKey,xi(yi),a);else throw new N("invalid-api-key");this.N=[];this.m=[];this.I=[];this.Gb=firebase.INTERNAL.createSubscribe(r(this.Xb,this));this.R=void 0;this.Hb=firebase.INTERNAL.createSubscribe(r(this.Yb,this));vl(this,null);this.h=new ll(S(this).options.apiKey+":"+S(this).name);this.G=new jl(S(this).options.apiKey+
-":"+S(this).name);this.U=T(this,wl(this));this.i=T(this,xl(this));this.W=!1;this.ha=r(this.uc,this);this.Ga=r(this.ka,this);this.pa=r(this.Pb,this);this.qa=r(this.Vb,this);this.ra=r(this.Wb,this);yl(this);this.INTERNAL={};this.INTERNAL["delete"]=r(this.delete,this);this.INTERNAL.logFramework=r(this.cc,this);this.o=0;F.call(this);zl(this);this.A=[]}t(ul,F);function Al(a){C.call(this,"languageCodeChanged");this.h=a}t(Al,C);function Bl(a){C.call(this,"frameworkChanged");this.f=a}t(Bl,C);h=ul.prototype;
-h.eb=function(a){a=this.h.eb(a);return T(this,a)};h.na=function(a){this.V===a||this.l||(this.V=a,Ih(this.c,this.V),G(this,new Al(this.$())))};h.$=function(){return this.V};h.Ac=function(){var a=k.navigator;this.na(a?a.languages&&a.languages[0]||a.language||a.userLanguage||null:null)};h.cc=function(a){this.A.push(a);Jh(this.c,firebase.SDK_VERSION?Of(firebase.SDK_VERSION,this.A):null);G(this,new Bl(this.A))};h.Ka=function(){return La(this.A)};
-function zl(a){Object.defineProperty(a,"lc",{get:function(){return this.$()},set:function(a){this.na(a)},enumerable:!1});a.V=null}h.toJSON=function(){return{apiKey:S(this).options.apiKey,authDomain:S(this).options.authDomain,appName:S(this).name,currentUser:U(this)&&U(this).B()}};function Cl(a){return a.Fb||B(new N("auth-domain-config-required"))}
-function yl(a){var b=S(a).options.authDomain,c=S(a).options.apiKey;b&&Rf()&&(a.Fb=a.U.then(function(){if(!a.l){a.a=gk(b,c,S(a).name);a.a.subscribe(a);U(a)&&Nk(U(a));if(a.w){Nk(a.w);var d=a.w;d.na(a.$());Gk(d,a);d=a.w;Fk(d,a.A);Hk(d,a);a.w=null}return a.a}}))}h.ob=function(a,b){switch(a){case "unknown":case "signInViaRedirect":return!0;case "signInViaPopup":return this.g==b&&!!this.f;default:return!1}};
-h.fa=function(a,b,c,d){"signInViaPopup"==a&&this.g==d&&(c&&this.v?this.v(c):b&&!c&&this.f&&this.f(b),this.b&&(this.b.cancel(),this.b=null),delete this.f,delete this.v)};h.va=function(a,b){return"signInViaRedirect"==a||"signInViaPopup"==a&&this.g==b&&this.f?r(this.Ob,this):null};
-h.Ob=function(a,b){var c=this;a={requestUri:a,sessionId:b};this.b&&(this.b.cancel(),this.b=null);var d=null,e=null,f=Xg(c.c,a).then(function(a){d=uh(a);e=Mg(a);return a});a=c.U.then(function(){return f}).then(function(a){return Dl(c,a)}).then(function(){return hg({user:U(c),credential:d,additionalUserInfo:e,operationType:"signIn"})});return T(this,a)};
-h.sc=function(a){if(!Rf())return B(new N("operation-not-supported-in-this-environment"));var b=this,c=Lg(a.providerId),d=Qf(),e=null;(!Tf()||Lf())&&S(this).options.authDomain&&a.isOAuthProvider&&(e=Ri(S(this).options.authDomain,S(this).options.apiKey,S(this).name,"signInViaPopup",a,null,d,firebase.SDK_VERSION||null));var f=Df(e,c&&c.za,c&&c.ya);c=Cl(this).then(function(b){return ek(b,f,"signInViaPopup",a,d,!!e)}).then(function(){return new z(function(a,c){b.fa("signInViaPopup",null,new N("cancelled-popup-request"),
-b.g);b.f=a;b.v=c;b.g=d;b.b=b.a.Ca(b,"signInViaPopup",f,d)})}).then(function(a){f&&Cf(f);return a?hg(a):null}).s(function(a){f&&Cf(f);throw a;});return T(this,c)};h.tc=function(a){if(!Rf())return B(new N("operation-not-supported-in-this-environment"));var b=this,c=Cl(this).then(function(){return ql(b.h)}).then(function(){return b.a.Aa("signInViaRedirect",a)});return T(this,c)};
-h.aa=function(){if(!Rf())return B(new N("operation-not-supported-in-this-environment"));var a=this,b=Cl(this).then(function(){return a.a.aa()}).then(function(a){return a?hg(a):null});return T(this,b)};function Dl(a,b){var c={};c.apiKey=S(a).options.apiKey;c.authDomain=S(a).options.authDomain;c.appName=S(a).name;return a.U.then(function(){return il(c,b,a.G,a.Ka())}).then(function(b){if(U(a)&&b.uid==U(a).uid)return Uk(U(a),b),a.ka(b);vl(a,b);Nk(b);return a.ka(b)}).then(function(){El(a)})}
-function vl(a,b){U(a)&&(Lk(U(a),a.Ga),E(U(a),"tokenChanged",a.pa),E(U(a),"userDeleted",a.qa),E(U(a),"userInvalidated",a.ra),Kk(U(a)));b&&(b.N.push(a.Ga),cd(b,"tokenChanged",a.pa),cd(b,"userDeleted",a.qa),cd(b,"userInvalidated",a.ra),0<a.o&&Jk(b));M(a,"currentUser",b);b&&(b.na(a.$()),Gk(b,a),Fk(b,a.A),Hk(b,a))}h.hb=function(){var a=this,b=this.i.then(function(){if(!U(a))return A();vl(a,null);return sl(a.h).then(function(){El(a)})});return T(this,b)};
-function Fl(a){var b=kl(a.G,S(a).options.authDomain).then(function(b){if(a.w=b)b.ca=a.G;return fl(a.G)});return T(a,b)}function wl(a){var b=S(a).options.authDomain,c=Fl(a).then(function(){return tl(a.h,b)}).then(function(b){return b?(b.ca=a.G,a.w&&(a.w.Z||null)==(b.Z||null)?b:b.reload().then(function(){return rl(a.h,b).then(function(){return b})}).s(function(c){return"auth/network-request-failed"==c.code?b:sl(a.h)})):null}).then(function(b){vl(a,b||null)});return T(a,c)}
-function xl(a){return a.U.then(function(){return a.aa()}).s(function(){}).then(function(){if(!a.l)return a.ha()}).s(function(){}).then(function(){if(!a.l){a.W=!0;var b=a.h;vj(b.b,yj("local"),b.a,a.ha)}})}
-h.uc=function(){var a=this;return tl(this.h,S(this).options.authDomain).then(function(b){if(!a.l){var c;if(c=U(a)&&b){c=U(a).uid;var d=b.uid;c=void 0===c||null===c||""===c||void 0===d||null===d||""===d?!1:c==d}if(c)return Uk(U(a),b),U(a).F();if(U(a)||b)vl(a,b),b&&(Nk(b),b.ca=a.G),a.a&&a.a.subscribe(a),El(a)}})};h.ka=function(a){return rl(this.h,a)};h.Pb=function(){El(this);this.ka(U(this))};h.Vb=function(){this.hb()};h.Wb=function(){this.hb()};
-function Gl(a,b){var c=null,d=null;return T(a,b.then(function(b){c=uh(b);d=Mg(b);return Dl(a,b)}).then(function(){return hg({user:U(a),credential:c,additionalUserInfo:d,operationType:"signIn"})}))}h.Xb=function(a){var b=this;this.addAuthTokenListener(function(){a.next(U(b))})};h.Yb=function(a){var b=this;Hl(this,function(){a.next(U(b))})};h.ec=function(a,b,c){var d=this;this.W&&firebase.Promise.resolve().then(function(){p(a)?a(U(d)):p(a.next)&&a.next(U(d))});return this.Gb(a,b,c)};
-h.dc=function(a,b,c){var d=this;this.W&&firebase.Promise.resolve().then(function(){d.R=d.getUid();p(a)?a(U(d)):p(a.next)&&a.next(U(d))});return this.Hb(a,b,c)};h.Rb=function(a){var b=this,c=this.i.then(function(){return U(b)?U(b).F(a).then(function(a){return{accessToken:a}}):null});return T(this,c)};h.pc=function(a){var b=this;return this.i.then(function(){return Gl(b,Q(b.c,vi,{token:a}))}).then(function(a){a=a.user;Tk(a,"isAnonymous",!1);return b.ka(a)}).then(function(){return U(b)})};
-h.qc=function(a,b){var c=this;return this.i.then(function(){return Gl(c,Q(c.c,kh,{email:a,password:b}))}).then(function(a){return a.user})};h.Kb=function(a,b){var c=this;return this.i.then(function(){return Gl(c,Q(c.c,ri,{email:a,password:b}))}).then(function(a){return a.user})};h.oc=function(a){return this.fb(a).then(function(a){return a.user})};h.fb=function(a){var b=this;return this.i.then(function(){return Gl(b,a.wa(b.c))})};
-h.gb=function(){var a=this;return this.i.then(function(){var b=U(a);return b&&b.isAnonymous?b:Gl(a,a.c.gb()).then(function(b){b=b.user;Tk(b,"isAnonymous",!0);return a.ka(b)}).then(function(){return U(a)})})};function S(a){return a.app}function U(a){return a.currentUser}h.getUid=function(){return U(this)&&U(this).uid||null};function Il(a){return U(a)&&U(a)._lat||null}
-function El(a){if(a.W){for(var b=0;b<a.m.length;b++)if(a.m[b])a.m[b](Il(a));if(a.R!==a.getUid()&&a.I.length)for(a.R=a.getUid(),b=0;b<a.I.length;b++)if(a.I[b])a.I[b](Il(a))}}h.Ib=function(a){this.addAuthTokenListener(a);this.o++;0<this.o&&U(this)&&Jk(U(this))};h.mc=function(a){var b=this;w(this.m,function(c){c==a&&b.o--});0>this.o&&(this.o=0);0==this.o&&U(this)&&Kk(U(this));this.removeAuthTokenListener(a)};
-h.addAuthTokenListener=function(a){var b=this;this.m.push(a);T(this,this.i.then(function(){b.l||Ha(b.m,a)&&a(Il(b))}))};h.removeAuthTokenListener=function(a){Ja(this.m,function(b){return b==a})};function Hl(a,b){a.I.push(b);T(a,a.i.then(function(){!a.l&&Ha(a.I,b)&&a.R!==a.getUid()&&(a.R=a.getUid(),b(Il(a)))}))}h.delete=function(){this.l=!0;for(var a=0;a<this.N.length;a++)this.N[a].cancel("app-deleted");this.N=[];this.h&&(a=this.h,xj(a.b,a.a,this.ha));this.a&&this.a.unsubscribe(this);return firebase.Promise.resolve()};
-function T(a,b){a.N.push(b);Qb(b,function(){Ia(a.N,b)});return b}h.Nb=function(a){return T(this,Th(this.c,a))};h.Bc=function(a){return this.Ia(a).then(function(a){return a.data.email})};h.Ta=function(a,b){return T(this,this.c.Ta(a,b).then(function(){}))};h.Ia=function(a){return T(this,this.c.Ia(a).then(function(a){return new lg(a)}))};h.Sa=function(a){return T(this,this.c.Sa(a).then(function(){}))};
-h.cb=function(a,b){var c=this;return T(this,A().then(function(){return"undefined"===typeof b||Sa(b)?{}:Fg(new wg(b))}).then(function(b){return c.c.cb(a,b)}).then(function(){}))};h.rc=function(a,b){return T(this,ok(this,a,b,r(this.fb,this)))};function Jl(a,b,c,d){a:{c=Array.prototype.slice.call(c);var e=0;for(var f=!1,g=0;g<b.length;g++)if(b[g].optional)f=!0;else{if(f)throw new N("internal-error","Argument validator encountered a required argument after an optional argument.");e++}f=b.length;if(c.length<e||f<c.length)d="Expected "+(e==f?1==e?"1 argument":e+" arguments":e+"-"+f+" arguments")+" but got "+c.length+".";else{for(e=0;e<c.length;e++)if(f=b[e].optional&&void 0===c[e],!b[e].M(c[e])&&!f){b=b[e];if(0>e||e>=Kl.length)throw new N("internal-error",
-"Argument validator received an unsupported number of arguments.");c=Kl[e];d=(d?"":c+" argument ")+(b.name?'"'+b.name+'" ':"")+"must be "+b.K+".";break a}d=null}}if(d)throw new N("argument-error",a+" failed: "+d);}var Kl="First Second Third Fourth Fifth Sixth Seventh Eighth Ninth".split(" ");function V(a,b){return{name:a||"",K:"a valid string",optional:!!b,M:m}}function Ll(){return{name:"opt_forceRefresh",K:"a boolean",optional:!0,M:ba}}
-function W(a,b){return{name:a||"",K:"a valid object",optional:!!b,M:q}}function Ml(a,b){return{name:a||"",K:"a function",optional:!!b,M:p}}function Nl(a,b){return{name:a||"",K:"null",optional:!!b,M:ea}}function Ol(){return{name:"",K:"an HTML element",optional:!1,M:function(a){return!!(a&&a instanceof Element)}}}function Pl(){return{name:"auth",K:"an instance of Firebase Auth",optional:!0,M:function(a){return!!(a&&a instanceof ul)}}}
-function Ql(){return{name:"app",K:"an instance of Firebase App",optional:!0,M:function(a){return!!(a&&a instanceof firebase.app.App)}}}function Rl(a){return{name:a?a+"Credential":"credential",K:a?"a valid "+a+" credential":"a valid credential",optional:!1,M:function(b){if(!b)return!1;var c=!a||b.providerId===a;return!(!b.wa||!c)}}}
-function Sl(){return{name:"authProvider",K:"a valid Auth provider",optional:!1,M:function(a){return!!(a&&a.providerId&&a.hasOwnProperty&&a.hasOwnProperty("isOAuthProvider"))}}}function Tl(){return{name:"applicationVerifier",K:"an implementation of firebase.auth.ApplicationVerifier",optional:!1,M:function(a){return!!(a&&m(a.type)&&p(a.verify))}}}function X(a,b,c,d){return{name:c||"",K:a.K+" or "+b.K,optional:!!d,M:function(c){return a.M(c)||b.M(c)}}};function Ul(a,b,c,d,e,f){M(this,"type","recaptcha");this.b=this.c=null;this.m=!1;this.l=b;this.a=c||{theme:"light",type:"image"};this.g=[];if(this.a[Vl])throw new N("argument-error","sitekey should not be provided for reCAPTCHA as one is automatically provisioned for the current project.");this.h="invisible"===this.a[Wl];if(!wc(b)||!this.h&&wc(b).hasChildNodes())throw new N("argument-error","reCAPTCHA container is either not found or already contains inner elements!");this.u=new Ch(a,f||null,e||null);
-this.o=d||function(){return null};var g=this;this.i=[];var l=this.a[Xl];this.a[Xl]=function(a){Yl(g,a);if("function"===typeof l)l(a);else if("string"===typeof l){var b=L(l,k);"function"===typeof b&&b(a)}};var n=this.a[Zl];this.a[Zl]=function(){Yl(g,null);if("function"===typeof n)n();else if("string"===typeof n){var a=L(n,k);"function"===typeof a&&a()}}}var Xl="callback",Zl="expired-callback",Vl="sitekey",Wl="size";function Yl(a,b){for(var c=0;c<a.i.length;c++)try{a.i[c](b)}catch(d){}}
-function $l(a,b){Ja(a.i,function(a){return a==b})}function am(a,b){a.g.push(b);Qb(b,function(){Ia(a.g,b)});return b}h=Ul.prototype;
-h.xa=function(){var a=this;return this.c?this.c:this.c=am(this,A().then(function(){if(Sf())return Hf();throw new N("operation-not-supported-in-this-environment","RecaptchaVerifier is only supported in a browser HTTP/HTTPS environment.");}).then(function(){return bm(cm(),a.o())}).then(function(){return Q(a.u,ui,{})}).then(function(b){a.a[Vl]=b.recaptchaSiteKey}).s(function(b){a.c=null;throw b;}))};
-h.render=function(){dm(this);var a=this;return am(this,this.xa().then(function(){if(null===a.b){var b=a.l;if(!a.h){var c=wc(b);b=zc("DIV");c.appendChild(b)}a.b=grecaptcha.render(b,a.a)}return a.b}))};h.verify=function(){dm(this);var a=this;return am(this,this.render().then(function(b){return new z(function(c){var d=grecaptcha.getResponse(b);if(d)c(d);else{var e=function(b){b&&($l(a,e),c(b))};a.i.push(e);a.h&&grecaptcha.execute(a.b)}})}))};h.reset=function(){dm(this);null!==this.b&&grecaptcha.reset(this.b)};
-function dm(a){if(a.m)throw new N("internal-error","RecaptchaVerifier instance has been destroyed.");}h.clear=function(){dm(this);this.m=!0;cm().b--;for(var a=0;a<this.g.length;a++)this.g[a].cancel("RecaptchaVerifier instance has been destroyed.");if(!this.h){a=wc(this.l);for(var b;b=a.firstChild;)a.removeChild(b)}};var em=dc("https://www.google.com/recaptcha/api.js?onload=%{onload}&render=explicit&hl=%{hl}");
-function fm(){this.b=k.grecaptcha?Infinity:0;this.c=null;this.a="__rcb"+Math.floor(1E6*Math.random()).toString()}
-function bm(a,b){return new z(function(c,d){if(Zf())if(!k.grecaptcha||b!==a.c&&!a.b){k[a.a]=function(){if(k.grecaptcha){a.c=b;var e=k.grecaptcha.render;k.grecaptcha.render=function(b,c){b=e(b,c);a.b++;return b};c()}else d(new N("internal-error"));delete k[a.a]};var e=hc(em,{onload:a.a,hl:b||""});A(kf(e)).s(function(){d(new N("internal-error","Unable to load external reCAPTCHA dependencies!"))})}else c();else d(new N("network-request-failed"))})}var gm=null;
-function cm(){gm||(gm=new fm);return gm}function hm(a,b,c){try{this.f=c||firebase.app()}catch(f){throw new N("argument-error","No firebase.app.App instance is currently initialized.");}if(this.f.options&&this.f.options.apiKey)c=this.f.options.apiKey;else throw new N("invalid-api-key");var d=this,e=null;try{e=this.f.auth().Ka()}catch(f){}e=firebase.SDK_VERSION?Of(firebase.SDK_VERSION,e):null;Ul.call(this,c,a,b,function(){try{var a=d.f.auth().$()}catch(g){a=null}return a},e,xi(yi))}t(hm,Ul);function Y(a,b){for(var c in b){var d=b[c].name;a[d]=im(d,a[c],b[c].j)}}function Z(a,b,c,d){a[b]=im(b,c,d)}function im(a,b,c){function d(){var a=Array.prototype.slice.call(arguments);Jl(e,c,a);return b.apply(this,a)}if(!c)return b;var e=jm(a),f;for(f in b)d[f]=b[f];for(f in b.prototype)d.prototype[f]=b.prototype[f];return d}function jm(a){a=a.split(".");return a[a.length-1]};Y(ul.prototype,{Sa:{name:"applyActionCode",j:[V("code")]},Ia:{name:"checkActionCode",j:[V("code")]},Ta:{name:"confirmPasswordReset",j:[V("code"),V("newPassword")]},Kb:{name:"createUserWithEmailAndPassword",j:[V("email"),V("password")]},Nb:{name:"fetchProvidersForEmail",j:[V("email")]},aa:{name:"getRedirectResult",j:[]},dc:{name:"onAuthStateChanged",j:[X(W(),Ml(),"nextOrObserver"),Ml("opt_error",!0),Ml("opt_completed",!0)]},ec:{name:"onIdTokenChanged",j:[X(W(),Ml(),"nextOrObserver"),Ml("opt_error",
-!0),Ml("opt_completed",!0)]},cb:{name:"sendPasswordResetEmail",j:[V("email"),X(W("opt_actionCodeSettings",!0),Nl(null,!0),"opt_actionCodeSettings",!0)]},eb:{name:"setPersistence",j:[V("persistence")]},fb:{name:"signInAndRetrieveDataWithCredential",j:[Rl()]},gb:{name:"signInAnonymously",j:[]},oc:{name:"signInWithCredential",j:[Rl()]},pc:{name:"signInWithCustomToken",j:[V("token")]},qc:{name:"signInWithEmailAndPassword",j:[V("email"),V("password")]},rc:{name:"signInWithPhoneNumber",j:[V("phoneNumber"),
-Tl()]},sc:{name:"signInWithPopup",j:[Sl()]},tc:{name:"signInWithRedirect",j:[Sl()]},hb:{name:"signOut",j:[]},toJSON:{name:"toJSON",j:[V(null,!0)]},Ac:{name:"useDeviceLanguage",j:[]},Bc:{name:"verifyPasswordResetCode",j:[V("code")]}});(function(a,b){for(var c in b){var d=b[c].name;if(d!==c){var e=b[c].Jb;Object.defineProperty(a,d,{get:function(){return this[c]},set:function(a){Jl(d,[e],[a],!0);this[c]=a},enumerable:!0})}}})(ul.prototype,{lc:{name:"languageCode",Jb:X(V(),Nl(),"languageCode")}});
-ul.Persistence=nj;ul.Persistence.LOCAL="local";ul.Persistence.SESSION="session";ul.Persistence.NONE="none";
-Y(Bk.prototype,{"delete":{name:"delete",j:[]},F:{name:"getIdToken",j:[Ll()]},getToken:{name:"getToken",j:[Ll()]},Xa:{name:"linkAndRetrieveDataWithCredential",j:[Rl()]},Zb:{name:"linkWithCredential",j:[Rl()]},$b:{name:"linkWithPhoneNumber",j:[V("phoneNumber"),Tl()]},ac:{name:"linkWithPopup",j:[Sl()]},bc:{name:"linkWithRedirect",j:[Sl()]},Za:{name:"reauthenticateAndRetrieveDataWithCredential",j:[Rl()]},hc:{name:"reauthenticateWithCredential",j:[Rl()]},ic:{name:"reauthenticateWithPhoneNumber",j:[V("phoneNumber"),
-Tl()]},jc:{name:"reauthenticateWithPopup",j:[Sl()]},kc:{name:"reauthenticateWithRedirect",j:[Sl()]},reload:{name:"reload",j:[]},bb:{name:"sendEmailVerification",j:[X(W("opt_actionCodeSettings",!0),Nl(null,!0),"opt_actionCodeSettings",!0)]},toJSON:{name:"toJSON",j:[V(null,!0)]},yc:{name:"unlink",j:[V("provider")]},kb:{name:"updateEmail",j:[V("email")]},lb:{name:"updatePassword",j:[V("password")]},zc:{name:"updatePhoneNumber",j:[Rl("phone")]},mb:{name:"updateProfile",j:[W("profile")]}});
-Y(z.prototype,{s:{name:"catch"},then:{name:"then"}});Y(nk.prototype,{confirm:{name:"confirm",j:[V("verificationCode")]}});Z(mh,"credential",function(a,b){return new jh(a,b)},[V("email"),V("password")]);Y(bh.prototype,{sa:{name:"addScope",j:[V("scope")]},Ba:{name:"setCustomParameters",j:[W("customOAuthParameters")]}});Z(bh,"credential",ch,[X(V(),W(),"token")]);Y(dh.prototype,{sa:{name:"addScope",j:[V("scope")]},Ba:{name:"setCustomParameters",j:[W("customOAuthParameters")]}});
-Z(dh,"credential",eh,[X(V(),W(),"token")]);Y(fh.prototype,{sa:{name:"addScope",j:[V("scope")]},Ba:{name:"setCustomParameters",j:[W("customOAuthParameters")]}});Z(fh,"credential",gh,[X(V(),X(W(),Nl()),"idToken"),X(V(),Nl(),"accessToken",!0)]);Y(hh.prototype,{Ba:{name:"setCustomParameters",j:[W("customOAuthParameters")]}});Z(hh,"credential",ih,[X(V(),W(),"token"),V("secret",!0)]);
-Y(P.prototype,{sa:{name:"addScope",j:[V("scope")]},credential:{name:"credential",j:[X(V(),Nl(),"idToken",!0),X(V(),Nl(),"accessToken",!0)]},Ba:{name:"setCustomParameters",j:[W("customOAuthParameters")]}});Z(rh,"credential",th,[V("verificationId"),V("verificationCode")]);Y(rh.prototype,{Qa:{name:"verifyPhoneNumber",j:[V("phoneNumber"),Tl()]}});Y(N.prototype,{toJSON:{name:"toJSON",j:[V(null,!0)]}});Y(zh.prototype,{toJSON:{name:"toJSON",j:[V(null,!0)]}});
-Y(yh.prototype,{toJSON:{name:"toJSON",j:[V(null,!0)]}});Y(hm.prototype,{clear:{name:"clear",j:[]},render:{name:"render",j:[]},verify:{name:"verify",j:[]}});
-(function(){if("undefined"!==typeof firebase&&firebase.INTERNAL&&firebase.INTERNAL.registerService){var a={Auth:ul,Error:N};Z(a,"EmailAuthProvider",mh,[]);Z(a,"FacebookAuthProvider",bh,[]);Z(a,"GithubAuthProvider",dh,[]);Z(a,"GoogleAuthProvider",fh,[]);Z(a,"TwitterAuthProvider",hh,[]);Z(a,"OAuthProvider",P,[V("providerId")]);Z(a,"PhoneAuthProvider",rh,[Pl()]);Z(a,"RecaptchaVerifier",hm,[X(V(),Ol(),"recaptchaContainer"),W("recaptchaParameters",!0),Ql()]);firebase.INTERNAL.registerService("auth",function(a,
-c){a=new ul(a);c({INTERNAL:{getUid:r(a.getUid,a),getToken:r(a.Rb,a),addAuthTokenListener:r(a.Ib,a),removeAuthTokenListener:r(a.mc,a)}});return a},a,function(a,c){if("create"===a)try{c.auth()}catch(d){}});firebase.INTERNAL.extendNamespace({User:Bk})}else throw Error("Cannot find the firebase namespace; be sure to include firebase-app.js before this library.");})();
-}).call(typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : typeof window !== 'undefined' ? window : {});
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(39)))
-
-/***/ }),
-/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var Observable_1 = __webpack_require__(4);
-var fromPromise_1 = __webpack_require__(162);
-Observable_1.Observable.fromPromise = fromPromise_1.fromPromise;
-//# sourceMappingURL=fromPromise.js.map
-
-/***/ }),
-/* 433 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export _getAngularFireAuth */
-/* unused harmony export AngularFireAuthProvider */
-/* unused harmony export AUTH_PROVIDERS */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AngularFireAuthModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase_auth__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase_auth___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_firebase_auth__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__auth__ = __webpack_require__(241);
-
-
-
-
-function _getAngularFireAuth(app) {
-    return new __WEBPACK_IMPORTED_MODULE_3__auth__["a" /* AngularFireAuth */](app);
-}
-var AngularFireAuthProvider = {
-    provide: __WEBPACK_IMPORTED_MODULE_3__auth__["a" /* AngularFireAuth */],
-    useFactory: _getAngularFireAuth,
-    deps: [__WEBPACK_IMPORTED_MODULE_2_angularfire2__["b" /* FirebaseApp */]]
-};
-var AUTH_PROVIDERS = [
-    AngularFireAuthProvider,
-];
-var AngularFireAuthModule = (function () {
-    function AngularFireAuthModule() {
-    }
-    AngularFireAuthModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */], args: [{
-                    imports: [__WEBPACK_IMPORTED_MODULE_2_angularfire2__["a" /* AngularFireModule */]],
-                    providers: [AUTH_PROVIDERS]
-                },] },
-    ];
-    AngularFireAuthModule.ctorParameters = function () { return []; };
-    return AngularFireAuthModule;
-}());
-
-//# sourceMappingURL=auth.module.js.map
-
-/***/ }),
-/* 434 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = checkReady;
-function checkReady() {
-    var DEVICE_READY_TIMEOUT = 5000;
-    // To help developers using cordova, we listen for the device ready event and
-    // log an error if it didn't fire in a reasonable amount of time. Generally,
-    // when this happens, developers should remove and reinstall plugins, since
-    // an inconsistent plugin is often the culprit.
-    var before = Date.now();
-    var didFireReady = false;
-    document.addEventListener('deviceready', function () {
-        console.log("Ionic Native: deviceready event fired after " + (Date.now() - before) + " ms");
-        didFireReady = true;
-    });
-    setTimeout(function () {
-        if (!didFireReady && !!window.cordova) {
-            console.warn("Ionic Native: deviceready did not fire within " + DEVICE_READY_TIMEOUT + "ms. This can happen when plugins are in an inconsistent state. Try removing plugins from plugins/ and reinstalling them.");
-        }
-    }, DEVICE_READY_TIMEOUT);
-}
-//# sourceMappingURL=bootstrap.js.map
-
-/***/ }),
-/* 435 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(4);
-var fromEvent_1 = __webpack_require__(436);
-Observable_1.Observable.fromEvent = fromEvent_1.fromEvent;
-//# sourceMappingURL=fromEvent.js.map
-
-/***/ }),
-/* 436 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var FromEventObservable_1 = __webpack_require__(437);
-exports.fromEvent = FromEventObservable_1.FromEventObservable.create;
-//# sourceMappingURL=fromEvent.js.map
-
-/***/ }),
-/* 437 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var Observable_1 = __webpack_require__(4);
-var tryCatch_1 = __webpack_require__(80);
-var isFunction_1 = __webpack_require__(79);
-var errorObject_1 = __webpack_require__(61);
-var Subscription_1 = __webpack_require__(40);
-var toString = Object.prototype.toString;
-function isNodeStyleEventEmitter(sourceObj) {
-    return !!sourceObj && typeof sourceObj.addListener === 'function' && typeof sourceObj.removeListener === 'function';
-}
-function isJQueryStyleEventEmitter(sourceObj) {
-    return !!sourceObj && typeof sourceObj.on === 'function' && typeof sourceObj.off === 'function';
-}
-function isNodeList(sourceObj) {
-    return !!sourceObj && toString.call(sourceObj) === '[object NodeList]';
-}
-function isHTMLCollection(sourceObj) {
-    return !!sourceObj && toString.call(sourceObj) === '[object HTMLCollection]';
-}
-function isEventTarget(sourceObj) {
-    return !!sourceObj && typeof sourceObj.addEventListener === 'function' && typeof sourceObj.removeEventListener === 'function';
-}
-/**
- * We need this JSDoc comment for affecting ESDoc.
- * @extends {Ignored}
- * @hide true
- */
-var FromEventObservable = (function (_super) {
-    __extends(FromEventObservable, _super);
-    function FromEventObservable(sourceObj, eventName, selector, options) {
-        _super.call(this);
-        this.sourceObj = sourceObj;
-        this.eventName = eventName;
-        this.selector = selector;
-        this.options = options;
-    }
-    /* tslint:enable:max-line-length */
-    /**
-     * Creates an Observable that emits events of a specific type coming from the
-     * given event target.
-     *
-     * <span class="informal">Creates an Observable from DOM events, or Node.js
-     * EventEmitter events or others.</span>
-     *
-     * <img src="./img/fromEvent.png" width="100%">
-     *
-     * `fromEvent` accepts as a first argument event target, which is an object with methods
-     * for registering event handler functions. As a second argument it takes string that indicates
-     * type of event we want to listen for. `fromEvent` supports selected types of event targets,
-     * which are described in detail below. If your event target does not match any of the ones listed,
-     * you should use {@link fromEventPattern}, which can be used on arbitrary APIs.
-     * When it comes to APIs supported by `fromEvent`, their methods for adding and removing event
-     * handler functions have different names, but they all accept a string describing event type
-     * and function itself, which will be called whenever said event happens.
-     *
-     * Every time resulting Observable is subscribed, event handler function will be registered
-     * to event target on given event type. When that event fires, value
-     * passed as a first argument to registered function will be emitted by output Observable.
-     * When Observable is unsubscribed, function will be unregistered from event target.
-     *
-     * Note that if event target calls registered function with more than one argument, second
-     * and following arguments will not appear in resulting stream. In order to get access to them,
-     * you can pass to `fromEvent` optional project function, which will be called with all arguments
-     * passed to event handler. Output Observable will then emit value returned by project function,
-     * instead of the usual value.
-     *
-     * Remember that event targets listed below are checked via duck typing. It means that
-     * no matter what kind of object you have and no matter what environment you work in,
-     * you can safely use `fromEvent` on that object if it exposes described methods (provided
-     * of course they behave as was described above). So for example if Node.js library exposes
-     * event target which has the same method names as DOM EventTarget, `fromEvent` is still
-     * a good choice.
-     *
-     * If the API you use is more callback then event handler oriented (subscribed
-     * callback function fires only once and thus there is no need to manually
-     * unregister it), you should use {@link bindCallback} or {@link bindNodeCallback}
-     * instead.
-     *
-     * `fromEvent` supports following types of event targets:
-     *
-     * **DOM EventTarget**
-     *
-     * This is an object with `addEventListener` and `removeEventListener` methods.
-     *
-     * In the browser, `addEventListener` accepts - apart from event type string and event
-     * handler function arguments - optional third parameter, which is either an object or boolean,
-     * both used for additional configuration how and when passed function will be called. When
-     * `fromEvent` is used with event target of that type, you can provide this values
-     * as third parameter as well.
-     *
-     * **Node.js EventEmitter**
-     *
-     * An object with `addListener` and `removeListener` methods.
-     *
-     * **JQuery-style event target**
-     *
-     * An object with `on` and `off` methods
-     *
-     * **DOM NodeList**
-     *
-     * List of DOM Nodes, returned for example by `document.querySelectorAll` or `Node.childNodes`.
-     *
-     * Although this collection is not event target in itself, `fromEvent` will iterate over all Nodes
-     * it contains and install event handler function in every of them. When returned Observable
-     * is unsubscribed, function will be removed from all Nodes.
-     *
-     * **DOM HtmlCollection**
-     *
-     * Just as in case of NodeList it is a collection of DOM nodes. Here as well event handler function is
-     * installed and removed in each of elements.
-     *
-     *
-     * @example <caption>Emits clicks happening on the DOM document</caption>
-     * var clicks = Rx.Observable.fromEvent(document, 'click');
-     * clicks.subscribe(x => console.log(x));
-     *
-     * // Results in:
-     * // MouseEvent object logged to console every time a click
-     * // occurs on the document.
-     *
-     *
-     * @example <caption>Use addEventListener with capture option</caption>
-     * var clicksInDocument = Rx.Observable.fromEvent(document, 'click', true); // note optional configuration parameter
-     *                                                                          // which will be passed to addEventListener
-     * var clicksInDiv = Rx.Observable.fromEvent(someDivInDocument, 'click');
-     *
-     * clicksInDocument.subscribe(() => console.log('document'));
-     * clicksInDiv.subscribe(() => console.log('div'));
-     *
-     * // By default events bubble UP in DOM tree, so normally
-     * // when we would click on div in document
-     * // "div" would be logged first and then "document".
-     * // Since we specified optional `capture` option, document
-     * // will catch event when it goes DOWN DOM tree, so console
-     * // will log "document" and then "div".
-     *
-     * @see {@link bindCallback}
-     * @see {@link bindNodeCallback}
-     * @see {@link fromEventPattern}
-     *
-     * @param {EventTargetLike} target The DOM EventTarget, Node.js
-     * EventEmitter, JQuery-like event target, NodeList or HTMLCollection to attach the event handler to.
-     * @param {string} eventName The event name of interest, being emitted by the
-     * `target`.
-     * @param {EventListenerOptions} [options] Options to pass through to addEventListener
-     * @param {SelectorMethodSignature<T>} [selector] An optional function to
-     * post-process results. It takes the arguments from the event handler and
-     * should return a single value.
-     * @return {Observable<T>}
-     * @static true
-     * @name fromEvent
-     * @owner Observable
-     */
-    FromEventObservable.create = function (target, eventName, options, selector) {
-        if (isFunction_1.isFunction(options)) {
-            selector = options;
-            options = undefined;
-        }
-        return new FromEventObservable(target, eventName, selector, options);
-    };
-    FromEventObservable.setupSubscription = function (sourceObj, eventName, handler, subscriber, options) {
-        var unsubscribe;
-        if (isNodeList(sourceObj) || isHTMLCollection(sourceObj)) {
-            for (var i = 0, len = sourceObj.length; i < len; i++) {
-                FromEventObservable.setupSubscription(sourceObj[i], eventName, handler, subscriber, options);
-            }
-        }
-        else if (isEventTarget(sourceObj)) {
-            var source_1 = sourceObj;
-            sourceObj.addEventListener(eventName, handler, options);
-            unsubscribe = function () { return source_1.removeEventListener(eventName, handler); };
-        }
-        else if (isJQueryStyleEventEmitter(sourceObj)) {
-            var source_2 = sourceObj;
-            sourceObj.on(eventName, handler);
-            unsubscribe = function () { return source_2.off(eventName, handler); };
-        }
-        else if (isNodeStyleEventEmitter(sourceObj)) {
-            var source_3 = sourceObj;
-            sourceObj.addListener(eventName, handler);
-            unsubscribe = function () { return source_3.removeListener(eventName, handler); };
-        }
-        else {
-            throw new TypeError('Invalid event target');
-        }
-        subscriber.add(new Subscription_1.Subscription(unsubscribe));
-    };
-    FromEventObservable.prototype._subscribe = function (subscriber) {
-        var sourceObj = this.sourceObj;
-        var eventName = this.eventName;
-        var options = this.options;
-        var selector = this.selector;
-        var handler = selector ? function () {
-            var args = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                args[_i - 0] = arguments[_i];
-            }
-            var result = tryCatch_1.tryCatch(selector).apply(void 0, args);
-            if (result === errorObject_1.errorObject) {
-                subscriber.error(errorObject_1.errorObject.e);
-            }
-            else {
-                subscriber.next(result);
-            }
-        } : function (e) { return subscriber.next(e); };
-        FromEventObservable.setupSubscription(sourceObj, eventName, handler, subscriber, options);
-    };
-    return FromEventObservable;
-}(Observable_1.Observable));
-exports.FromEventObservable = FromEventObservable;
-//# sourceMappingURL=FromEventObservable.js.map
-
-/***/ }),
-/* 438 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export InstanceCheck */
-/* unused harmony export CordovaCheck */
-/* harmony export (immutable) */ __webpack_exports__["c"] = Plugin;
-/* harmony export (immutable) */ __webpack_exports__["a"] = Cordova;
-/* unused harmony export CordovaInstance */
-/* harmony export (immutable) */ __webpack_exports__["b"] = CordovaProperty;
-/* unused harmony export InstanceProperty */
-/* unused harmony export CordovaFunctionOverride */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__plugin__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw__ = __webpack_require__(439);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw__);
-
-
-
-
-/**
- * @private
- */
-function InstanceCheck(opts) {
-    if (opts === void 0) { opts = {}; }
-    return function (pluginObj, methodName, descriptor) {
-        return {
-            value: function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                if (Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["b" /* instanceAvailability */])(this)) {
-                    return descriptor.value.apply(this, args);
-                }
-                else {
-                    if (opts.sync) {
-                        return;
-                    }
-                    else if (opts.observable) {
-                        return new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"](function () { });
-                    }
-                    return Object(__WEBPACK_IMPORTED_MODULE_1__util__["c" /* getPromise */])(function () { });
-                }
-            },
-            enumerable: true
-        };
-    };
-}
-/**
- * Executes function only if plugin is available
- * @private
- */
-function CordovaCheck(opts) {
-    if (opts === void 0) { opts = {}; }
-    return function (pluginObj, methodName, descriptor) {
-        return {
-            value: function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                var check = Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["a" /* checkAvailability */])(pluginObj);
-                if (check === true) {
-                    return descriptor.value.apply(this, args);
-                }
-                else {
-                    if (opts.sync) {
-                        return null;
-                    }
-                    else if (opts.observable) {
-                        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(new Error(check && check.error));
-                    }
-                    return Promise.reject(check && check.error);
-                }
-            },
-            enumerable: true
-        };
-    };
-}
-/**
- * @private
- *
- * Class decorator specifying Plugin metadata. Required for all plugins.
- *
- * @usage
- * ```typescript
- * @Plugin({
- *  pluginName: 'MyPlugin',
- *  plugin: 'cordova-plugin-myplugin',
- *  pluginRef: 'window.myplugin'
- *  })
- *  export class MyPlugin {
- *
- *    // Plugin wrappers, properties, and functions go here ...
- *
- *  }
- * ```
- */
-function Plugin(config) {
-    return function (cls) {
-        // Add these fields to the class
-        for (var prop in config) {
-            cls[prop] = config[prop];
-        }
-        cls['installed'] = function (printWarning) {
-            return !!Object(__WEBPACK_IMPORTED_MODULE_1__util__["b" /* getPlugin */])(config.pluginRef);
-        };
-        cls['getPlugin'] = function () {
-            return Object(__WEBPACK_IMPORTED_MODULE_1__util__["b" /* getPlugin */])(config.pluginRef);
-        };
-        cls['checkInstall'] = function () {
-            return Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["a" /* checkAvailability */])(cls) === true;
-        };
-        cls['getPluginName'] = function () {
-            return config.pluginName;
-        };
-        cls['getPluginRef'] = function () {
-            return config.pluginRef;
-        };
-        cls['getPluginInstallName'] = function () {
-            return config.plugin;
-        };
-        cls['getPluginRepo'] = function () {
-            return config.repo;
-        };
-        cls['getSupportedPlatforms'] = function () {
-            return config.platforms;
-        };
-        return cls;
-    };
-}
-/**
- * @private
- *
- * Wrap a stub function in a call to a Cordova plugin, checking if both Cordova
- * and the required plugin are installed.
- */
-function Cordova(opts) {
-    if (opts === void 0) { opts = {}; }
-    return function (target, methodName, descriptor) {
-        return {
-            value: function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["d" /* wrap */])(this, methodName, opts).apply(this, args);
-            },
-            enumerable: true
-        };
-    };
-}
-/**
- * @private
- *
- * Wrap an instance method
- */
-function CordovaInstance(opts) {
-    if (opts === void 0) { opts = {}; }
-    return function (target, methodName) {
-        return {
-            value: function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["e" /* wrapInstance */])(this, methodName, opts).apply(this, args);
-            },
-            enumerable: true
-        };
-    };
-}
-/**
- * @private
- *
- *
- * Before calling the original method, ensure Cordova and the plugin are installed.
- */
-function CordovaProperty(target, key) {
-    Object.defineProperty(target, key, {
-        enumerable: true,
-        get: function () {
-            if (Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["a" /* checkAvailability */])(target, key) === true) {
-                return Object(__WEBPACK_IMPORTED_MODULE_1__util__["b" /* getPlugin */])(target.constructor.getPluginRef())[key];
-            }
-            else {
-                return null;
-            }
-        },
-        set: function (value) {
-            if (Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["a" /* checkAvailability */])(target, key) === true) {
-                Object(__WEBPACK_IMPORTED_MODULE_1__util__["b" /* getPlugin */])(target.constructor.getPluginRef())[key] = value;
-            }
-        }
-    });
-}
-/**
- * @private
- * @param target
- * @param key
- * @constructor
- */
-function InstanceProperty(target, key) {
-    Object.defineProperty(target, key, {
-        enumerable: true,
-        get: function () {
-            return this._objectInstance[key];
-        },
-        set: function (value) {
-            this._objectInstance[key] = value;
-        }
-    });
-}
-/**
- * @private
- *
- * Wrap a stub function in a call to a Cordova plugin, checking if both Cordova
- * and the required plugin are installed.
- */
-function CordovaFunctionOverride(opts) {
-    if (opts === void 0) { opts = {}; }
-    return function (target, methodName, descriptor) {
-        return {
-            value: function () {
-                var args = [];
-                for (var _i = 0; _i < arguments.length; _i++) {
-                    args[_i] = arguments[_i];
-                }
-                return Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["c" /* overrideFunction */])(this, methodName, opts);
-            },
-            enumerable: true
-        };
-    };
-}
-//# sourceMappingURL=decorators.js.map
-
-/***/ }),
-/* 439 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var ErrorObservable_1 = __webpack_require__(440);
-exports._throw = ErrorObservable_1.ErrorObservable.create;
-//# sourceMappingURL=throw.js.map
-
-/***/ }),
-/* 440 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
-var Observable_1 = __webpack_require__(4);
-/**
- * We need this JSDoc comment for affecting ESDoc.
- * @extends {Ignored}
- * @hide true
- */
-var ErrorObservable = (function (_super) {
-    __extends(ErrorObservable, _super);
-    function ErrorObservable(error, scheduler) {
-        _super.call(this);
-        this.error = error;
-        this.scheduler = scheduler;
-    }
-    /**
-     * Creates an Observable that emits no items to the Observer and immediately
-     * emits an error notification.
-     *
-     * <span class="informal">Just emits 'error', and nothing else.
-     * </span>
-     *
-     * <img src="./img/throw.png" width="100%">
-     *
-     * This static operator is useful for creating a simple Observable that only
-     * emits the error notification. It can be used for composing with other
-     * Observables, such as in a {@link mergeMap}.
-     *
-     * @example <caption>Emit the number 7, then emit an error.</caption>
-     * var result = Rx.Observable.throw(new Error('oops!')).startWith(7);
-     * result.subscribe(x => console.log(x), e => console.error(e));
-     *
-     * @example <caption>Map and flatten numbers to the sequence 'a', 'b', 'c', but throw an error for 13</caption>
-     * var interval = Rx.Observable.interval(1000);
-     * var result = interval.mergeMap(x =>
-     *   x === 13 ?
-     *     Rx.Observable.throw('Thirteens are bad') :
-     *     Rx.Observable.of('a', 'b', 'c')
-     * );
-     * result.subscribe(x => console.log(x), e => console.error(e));
-     *
-     * @see {@link create}
-     * @see {@link empty}
-     * @see {@link never}
-     * @see {@link of}
-     *
-     * @param {any} error The particular Error to pass to the error notification.
-     * @param {Scheduler} [scheduler] A {@link IScheduler} to use for scheduling
-     * the emission of the error notification.
-     * @return {Observable} An error Observable: emits only the error notification
-     * using the given error argument.
-     * @static true
-     * @name throw
-     * @owner Observable
-     */
-    ErrorObservable.create = function (error, scheduler) {
-        return new ErrorObservable(error, scheduler);
-    };
-    ErrorObservable.dispatch = function (arg) {
-        var error = arg.error, subscriber = arg.subscriber;
-        subscriber.error(error);
-    };
-    ErrorObservable.prototype._subscribe = function (subscriber) {
-        var error = this.error;
-        var scheduler = this.scheduler;
-        subscriber.syncErrorThrowable = true;
-        if (scheduler) {
-            return scheduler.schedule(ErrorObservable.dispatch, 0, {
-                error: error, subscriber: subscriber
-            });
-        }
-        else {
-            subscriber.error(error);
-        }
-    };
-    return ErrorObservable;
-}(Observable_1.Observable));
-exports.ErrorObservable = ErrorObservable;
-//# sourceMappingURL=ErrorObservable.js.map
-
-/***/ }),
-/* 441 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IonicNativePlugin; });
-var IonicNativePlugin = (function () {
-    function IonicNativePlugin() {
-    }
-    /**
-     * Returns a boolean that indicates whether the plugin is installed
-     * @return {boolean}
-     */
-    /**
-       * Returns a boolean that indicates whether the plugin is installed
-       * @return {boolean}
-       */
-    IonicNativePlugin.installed = /**
-       * Returns a boolean that indicates whether the plugin is installed
-       * @return {boolean}
-       */
-    function () { return false; };
-    /**
-     * Returns the original plugin object
-     */
-    /**
-       * Returns the original plugin object
-       */
-    IonicNativePlugin.getPlugin = /**
-       * Returns the original plugin object
-       */
-    function () { };
-    /**
-     * Returns the plugin's name
-     */
-    /**
-       * Returns the plugin's name
-       */
-    IonicNativePlugin.getPluginName = /**
-       * Returns the plugin's name
-       */
-    function () { return; };
-    /**
-     * Returns the plugin's reference
-     */
-    /**
-       * Returns the plugin's reference
-       */
-    IonicNativePlugin.getPluginRef = /**
-       * Returns the plugin's reference
-       */
-    function () { return; };
-    /**
-     * Returns the plugin's install name
-     */
-    /**
-       * Returns the plugin's install name
-       */
-    IonicNativePlugin.getPluginInstallName = /**
-       * Returns the plugin's install name
-       */
-    function () { return; };
-    /**
-     * Returns the plugin's supported platforms
-     */
-    /**
-       * Returns the plugin's supported platforms
-       */
-    IonicNativePlugin.getSupportedPlatforms = /**
-       * Returns the plugin's supported platforms
-       */
-    function () { return; };
-    return IonicNativePlugin;
-}());
-
-//# sourceMappingURL=ionic-native-plugin.js.map
-
-/***/ }),
-/* 442 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var concatMap_1 = __webpack_require__(443);
+var concatMap_1 = __webpack_require__(431);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -142630,7 +141583,7 @@ exports.concatMap = concatMap;
 //# sourceMappingURL=concatMap.js.map
 
 /***/ }),
-/* 443 */
+/* 431 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -142703,7 +141656,7 @@ exports.concatMap = concatMap;
 //# sourceMappingURL=concatMap.js.map
 
 /***/ }),
-/* 444 */
+/* 432 */
 /***/ (function(module, exports) {
 
 // HACK: does nothing, because `toPromise` now lives on the `Observable` itself.
@@ -142711,9 +141664,9 @@ exports.concatMap = concatMap;
 //# sourceMappingURL=toPromise.js.map
 
 /***/ }),
-/* 445 */,
-/* 446 */,
-/* 447 */
+/* 433 */,
+/* 434 */,
+/* 435 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -142722,9 +141675,9 @@ exports.concatMap = concatMap;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return StorageConfigToken; });
 /* harmony export (immutable) */ __webpack_exports__["c"] = provideStorage;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_localforage__ = __webpack_require__(448);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_localforage__ = __webpack_require__(436);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_localforage___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_localforage__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_localforage_cordovasqlitedriver__ = __webpack_require__(449);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_localforage_cordovasqlitedriver__ = __webpack_require__(437);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_localforage_cordovasqlitedriver___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_localforage_cordovasqlitedriver__);
 
 
@@ -142955,7 +141908,7 @@ function provideStorage(storageConfig) {
 
 
 /***/ }),
-/* 448 */
+/* 436 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var require;var require;/*!
@@ -145262,7 +144215,7 @@ module.exports = localforage_js;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(39)))
 
 /***/ }),
-/* 449 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function (global, factory) {
@@ -145421,6 +144374,1053 @@ module.exports = localforage_js;
     return cordovaSQLiteDriver;
 
 }));
+
+/***/ }),
+/* 438 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__auth__ = __webpack_require__(246);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__auth__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__auth_module__ = __webpack_require__(441);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__auth_module__["a"]; });
+
+
+//# sourceMappingURL=public_api.js.map
+
+/***/ }),
+/* 439 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {(function() {
+  var firebase = __webpack_require__(54).default;
+  var h,aa=aa||{},k=this;function m(a){return"string"==typeof a}function ba(a){return"boolean"==typeof a}function ca(){}
+function da(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";
+else if("function"==b&&"undefined"==typeof a.call)return"object";return b}function ea(a){return null===a}function fa(a){return"array"==da(a)}function ha(a){var b=da(a);return"array"==b||"object"==b&&"number"==typeof a.length}function p(a){return"function"==da(a)}function q(a){var b=typeof a;return"object"==b&&null!=a||"function"==b}var ia="closure_uid_"+(1E9*Math.random()>>>0),ja=0;function ka(a,b,c){return a.call.apply(a.bind,arguments)}
+function la(a,b,c){if(!a)throw Error();if(2<arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var c=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(c,d);return a.apply(b,c)}}return function(){return a.apply(b,arguments)}}function r(a,b,c){Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?r=ka:r=la;return r.apply(null,arguments)}
+function ma(a,b){var c=Array.prototype.slice.call(arguments,1);return function(){var b=c.slice();b.push.apply(b,arguments);return a.apply(this,b)}}var na=Date.now||function(){return+new Date};function t(a,b){function c(){}c.prototype=b.prototype;a.ib=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.Nc=function(a,c,f){for(var d=Array(arguments.length-2),e=2;e<arguments.length;e++)d[e-2]=arguments[e];return b.prototype[c].apply(a,d)}};function u(a){if(Error.captureStackTrace)Error.captureStackTrace(this,u);else{var b=Error().stack;b&&(this.stack=b)}a&&(this.message=String(a))}t(u,Error);u.prototype.name="CustomError";function oa(a,b){for(var c=a.split("%s"),d="",e=Array.prototype.slice.call(arguments,1);e.length&&1<c.length;)d+=c.shift()+e.shift();return d+c.join("%s")}var pa=String.prototype.trim?function(a){return a.trim()}:function(a){return a.replace(/^[\s\xa0]+|[\s\xa0]+$/g,"")};
+function qa(a){if(!ra.test(a))return a;-1!=a.indexOf("&")&&(a=a.replace(sa,"&amp;"));-1!=a.indexOf("<")&&(a=a.replace(ta,"&lt;"));-1!=a.indexOf(">")&&(a=a.replace(ua,"&gt;"));-1!=a.indexOf('"')&&(a=a.replace(va,"&quot;"));-1!=a.indexOf("'")&&(a=a.replace(wa,"&#39;"));-1!=a.indexOf("\x00")&&(a=a.replace(xa,"&#0;"));return a}var sa=/&/g,ta=/</g,ua=/>/g,va=/"/g,wa=/'/g,xa=/\x00/g,ra=/[\x00&<>"']/;function v(a,b){return-1!=a.indexOf(b)}function ya(a,b){return a<b?-1:a>b?1:0};function za(a,b){b.unshift(a);u.call(this,oa.apply(null,b));b.shift()}t(za,u);za.prototype.name="AssertionError";function Aa(a,b){throw new za("Failure"+(a?": "+a:""),Array.prototype.slice.call(arguments,1));};var Ba=Array.prototype.indexOf?function(a,b,c){return Array.prototype.indexOf.call(a,b,c)}:function(a,b,c){c=null==c?0:0>c?Math.max(0,a.length+c):c;if(m(a))return m(b)&&1==b.length?a.indexOf(b,c):-1;for(;c<a.length;c++)if(c in a&&a[c]===b)return c;return-1},w=Array.prototype.forEach?function(a,b,c){Array.prototype.forEach.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=m(a)?a.split(""):a,f=0;f<d;f++)f in e&&b.call(c,e[f],f,a)};
+function Ca(a,b){var c=a.length,d=m(a)?a.split(""):a;for(--c;0<=c;--c)c in d&&b.call(void 0,d[c],c,a)}var Da=Array.prototype.map?function(a,b,c){return Array.prototype.map.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=Array(d),f=m(a)?a.split(""):a,g=0;g<d;g++)g in f&&(e[g]=b.call(c,f[g],g,a));return e},Ea=Array.prototype.some?function(a,b,c){return Array.prototype.some.call(a,b,c)}:function(a,b,c){for(var d=a.length,e=m(a)?a.split(""):a,f=0;f<d;f++)if(f in e&&b.call(c,e[f],f,a))return!0;return!1};
+function Fa(a){a:{var b=Ga;for(var c=a.length,d=m(a)?a.split(""):a,e=0;e<c;e++)if(e in d&&b.call(void 0,d[e],e,a)){b=e;break a}b=-1}return 0>b?null:m(a)?a.charAt(b):a[b]}function Ha(a,b){return 0<=Ba(a,b)}function Ia(a,b){b=Ba(a,b);var c;(c=0<=b)&&Array.prototype.splice.call(a,b,1);return c}function Ja(a,b){var c=0;Ca(a,function(d,e){b.call(void 0,d,e,a)&&1==Array.prototype.splice.call(a,e,1).length&&c++})}function Ka(a){return Array.prototype.concat.apply([],arguments)}
+function La(a){var b=a.length;if(0<b){for(var c=Array(b),d=0;d<b;d++)c[d]=a[d];return c}return[]};var Ma;a:{var Na=k.navigator;if(Na){var Oa=Na.userAgent;if(Oa){Ma=Oa;break a}}Ma=""}function x(a){return v(Ma,a)};function Pa(a,b){for(var c in a)b.call(void 0,a[c],c,a)}function Qa(a){var b=[],c=0,d;for(d in a)b[c++]=a[d];return b}function Ra(a){var b=[],c=0,d;for(d in a)b[c++]=d;return b}function Sa(a){for(var b in a)return!1;return!0}function Ta(a,b){for(var c in a)if(!(c in b)||a[c]!==b[c])return!1;for(c in b)if(!(c in a))return!1;return!0}function Ua(a){var b={},c;for(c in a)b[c]=a[c];return b}var Va="constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(" ");
+function Wa(a,b){for(var c,d,e=1;e<arguments.length;e++){d=arguments[e];for(c in d)a[c]=d[c];for(var f=0;f<Va.length;f++)c=Va[f],Object.prototype.hasOwnProperty.call(d,c)&&(a[c]=d[c])}};function Xa(a){Xa[" "](a);return a}Xa[" "]=ca;function Ya(a,b){var c=Za;return Object.prototype.hasOwnProperty.call(c,a)?c[a]:c[a]=b(a)};var $a=x("Opera"),y=x("Trident")||x("MSIE"),ab=x("Edge"),bb=ab||y,cb=x("Gecko")&&!(v(Ma.toLowerCase(),"webkit")&&!x("Edge"))&&!(x("Trident")||x("MSIE"))&&!x("Edge"),db=v(Ma.toLowerCase(),"webkit")&&!x("Edge");function eb(){var a=k.document;return a?a.documentMode:void 0}var fb;
+a:{var gb="",hb=function(){var a=Ma;if(cb)return/rv\:([^\);]+)(\)|;)/.exec(a);if(ab)return/Edge\/([\d\.]+)/.exec(a);if(y)return/\b(?:MSIE|rv)[: ]([^\);]+)(\)|;)/.exec(a);if(db)return/WebKit\/(\S+)/.exec(a);if($a)return/(?:Version)[ \/]?(\S+)/.exec(a)}();hb&&(gb=hb?hb[1]:"");if(y){var ib=eb();if(null!=ib&&ib>parseFloat(gb)){fb=String(ib);break a}}fb=gb}var Za={};
+function jb(a){return Ya(a,function(){for(var b=0,c=pa(String(fb)).split("."),d=pa(String(a)).split("."),e=Math.max(c.length,d.length),f=0;0==b&&f<e;f++){var g=c[f]||"",l=d[f]||"";do{g=/(\d*)(\D*)(.*)/.exec(g)||["","","",""];l=/(\d*)(\D*)(.*)/.exec(l)||["","","",""];if(0==g[0].length&&0==l[0].length)break;b=ya(0==g[1].length?0:parseInt(g[1],10),0==l[1].length?0:parseInt(l[1],10))||ya(0==g[2].length,0==l[2].length)||ya(g[2],l[2]);g=g[3];l=l[3]}while(0==b)}return 0<=b})}var kb;var lb=k.document;
+kb=lb&&y?eb()||("CSS1Compat"==lb.compatMode?parseInt(fb,10):5):void 0;function mb(a){a.prototype.then=a.prototype.then;a.prototype.$goog_Thenable=!0}function nb(a){if(!a)return!1;try{return!!a.$goog_Thenable}catch(b){return!1}};function ob(a,b,c){this.f=c;this.c=a;this.g=b;this.b=0;this.a=null}ob.prototype.get=function(){if(0<this.b){this.b--;var a=this.a;this.a=a.next;a.next=null}else a=this.c();return a};function pb(a,b){a.g(b);a.b<a.f&&(a.b++,b.next=a.a,a.a=b)};var rb=new ob(function(){return new qb},function(a){a.reset()},100);function sb(){var a=tb,b=null;a.a&&(b=a.a,a.a=a.a.next,a.a||(a.b=null),b.next=null);return b}function qb(){this.next=this.b=this.a=null}qb.prototype.set=function(a,b){this.a=a;this.b=b;this.next=null};qb.prototype.reset=function(){this.next=this.b=this.a=null};function ub(a){k.setTimeout(function(){throw a;},0)}var wb;
+function xb(){var a=k.MessageChannel;"undefined"===typeof a&&"undefined"!==typeof window&&window.postMessage&&window.addEventListener&&!x("Presto")&&(a=function(){var a=document.createElement("IFRAME");a.style.display="none";a.src="";document.documentElement.appendChild(a);var b=a.contentWindow;a=b.document;a.open();a.write("");a.close();var c="callImmediate"+Math.random(),d="file:"==b.location.protocol?"*":b.location.protocol+"//"+b.location.host;a=r(function(a){if(("*"==d||a.origin==d)&&a.data==
+c)this.port1.onmessage()},this);b.addEventListener("message",a,!1);this.port1={};this.port2={postMessage:function(){b.postMessage(c,d)}}});if("undefined"!==typeof a&&!x("Trident")&&!x("MSIE")){var b=new a,c={},d=c;b.port1.onmessage=function(){if(void 0!==c.next){c=c.next;var a=c.pb;c.pb=null;a()}};return function(a){d.next={pb:a};d=d.next;b.port2.postMessage(0)}}return"undefined"!==typeof document&&"onreadystatechange"in document.createElement("SCRIPT")?function(a){var b=document.createElement("SCRIPT");
+b.onreadystatechange=function(){b.onreadystatechange=null;b.parentNode.removeChild(b);b=null;a();a=null};document.documentElement.appendChild(b)}:function(a){k.setTimeout(a,0)}};function yb(a,b){zb||Ab();Bb||(zb(),Bb=!0);var c=tb,d=rb.get();d.set(a,b);c.b?c.b.next=d:c.a=d;c.b=d}var zb;function Ab(){if(-1!=String(k.Promise).indexOf("[native code]")){var a=k.Promise.resolve(void 0);zb=function(){a.then(Cb)}}else zb=function(){var a=Cb;!p(k.setImmediate)||k.Window&&k.Window.prototype&&!x("Edge")&&k.Window.prototype.setImmediate==k.setImmediate?(wb||(wb=xb()),wb(a)):k.setImmediate(a)}}var Bb=!1,tb=new function(){this.b=this.a=null};
+function Cb(){for(var a;a=sb();){try{a.a.call(a.b)}catch(b){ub(b)}pb(rb,a)}Bb=!1};function z(a,b){this.a=Db;this.i=void 0;this.f=this.b=this.c=null;this.g=this.h=!1;if(a!=ca)try{var c=this;a.call(b,function(a){Eb(c,Fb,a)},function(a){if(!(a instanceof Gb))try{if(a instanceof Error)throw a;throw Error("Promise rejected.");}catch(e){}Eb(c,Hb,a)})}catch(d){Eb(this,Hb,d)}}var Db=0,Fb=2,Hb=3;function Ib(){this.next=this.f=this.b=this.g=this.a=null;this.c=!1}Ib.prototype.reset=function(){this.f=this.b=this.g=this.a=null;this.c=!1};
+var Jb=new ob(function(){return new Ib},function(a){a.reset()},100);function Kb(a,b,c){var d=Jb.get();d.g=a;d.b=b;d.f=c;return d}function A(a){if(a instanceof z)return a;var b=new z(ca);Eb(b,Fb,a);return b}function B(a){return new z(function(b,c){c(a)})}function Lb(a,b,c){Mb(a,b,c,null)||yb(ma(b,a))}function Nb(a){return new z(function(b,c){var d=a.length,e=[];if(d)for(var f=function(a,c){d--;e[a]=c;0==d&&b(e)},g=function(a){c(a)},l=0,n;l<a.length;l++)n=a[l],Lb(n,ma(f,l),g);else b(e)})}
+function Ob(a){return new z(function(b){var c=a.length,d=[];if(c)for(var e=function(a,e,f){c--;d[a]=e?{Qb:!0,value:f}:{Qb:!1,reason:f};0==c&&b(d)},f=0,g;f<a.length;f++)g=a[f],Lb(g,ma(e,f,!0),ma(e,f,!1));else b(d)})}z.prototype.then=function(a,b,c){return Pb(this,p(a)?a:null,p(b)?b:null,c)};mb(z);function Qb(a,b){b=Kb(b,b,void 0);b.c=!0;Rb(a,b);return a}h=z.prototype;h.s=function(a,b){return Pb(this,null,a,b)};h.cancel=function(a){this.a==Db&&yb(function(){var b=new Gb(a);Sb(this,b)},this)};
+function Sb(a,b){if(a.a==Db)if(a.c){var c=a.c;if(c.b){for(var d=0,e=null,f=null,g=c.b;g&&(g.c||(d++,g.a==a&&(e=g),!(e&&1<d)));g=g.next)e||(f=g);e&&(c.a==Db&&1==d?Sb(c,b):(f?(d=f,d.next==c.f&&(c.f=d),d.next=d.next.next):Tb(c),Ub(c,e,Hb,b)))}a.c=null}else Eb(a,Hb,b)}function Rb(a,b){a.b||a.a!=Fb&&a.a!=Hb||Vb(a);a.f?a.f.next=b:a.b=b;a.f=b}
+function Pb(a,b,c,d){var e=Kb(null,null,null);e.a=new z(function(a,g){e.g=b?function(c){try{var e=b.call(d,c);a(e)}catch(D){g(D)}}:a;e.b=c?function(b){try{var e=c.call(d,b);void 0===e&&b instanceof Gb?g(b):a(e)}catch(D){g(D)}}:g});e.a.c=a;Rb(a,e);return e.a}h.wc=function(a){this.a=Db;Eb(this,Fb,a)};h.xc=function(a){this.a=Db;Eb(this,Hb,a)};
+function Eb(a,b,c){a.a==Db&&(a===c&&(b=Hb,c=new TypeError("Promise cannot resolve to itself")),a.a=1,Mb(c,a.wc,a.xc,a)||(a.i=c,a.a=b,a.c=null,Vb(a),b!=Hb||c instanceof Gb||Wb(a,c)))}function Mb(a,b,c,d){if(a instanceof z)return Rb(a,Kb(b||ca,c||null,d)),!0;if(nb(a))return a.then(b,c,d),!0;if(q(a))try{var e=a.then;if(p(e))return Xb(a,e,b,c,d),!0}catch(f){return c.call(d,f),!0}return!1}
+function Xb(a,b,c,d,e){function f(a){l||(l=!0,d.call(e,a))}function g(a){l||(l=!0,c.call(e,a))}var l=!1;try{b.call(a,g,f)}catch(n){f(n)}}function Vb(a){a.h||(a.h=!0,yb(a.Mb,a))}function Tb(a){var b=null;a.b&&(b=a.b,a.b=b.next,b.next=null);a.b||(a.f=null);return b}h.Mb=function(){for(var a;a=Tb(this);)Ub(this,a,this.a,this.i);this.h=!1};
+function Ub(a,b,c,d){if(c==Hb&&b.b&&!b.c)for(;a&&a.g;a=a.c)a.g=!1;if(b.a)b.a.c=null,Yb(b,c,d);else try{b.c?b.g.call(b.f):Yb(b,c,d)}catch(e){Zb.call(null,e)}pb(Jb,b)}function Yb(a,b,c){b==Fb?a.g.call(a.f,c):a.b&&a.b.call(a.f,c)}function Wb(a,b){a.g=!0;yb(function(){a.g&&Zb.call(null,b)})}var Zb=ub;function Gb(a){u.call(this,a)}t(Gb,u);Gb.prototype.name="cancel";var $b=!y||9<=Number(kb);function ac(){this.a="";this.b=bc}ac.prototype.la=!0;ac.prototype.ja=function(){return this.a};ac.prototype.toString=function(){return"Const{"+this.a+"}"};function cc(a){if(a instanceof ac&&a.constructor===ac&&a.b===bc)return a.a;Aa("expected object of type Const, got '"+a+"'");return"type_error:Const"}var bc={};function dc(a){var b=new ac;b.a=a;return b}dc("");function ec(){this.a="";this.b=fc}ec.prototype.la=!0;ec.prototype.ja=function(){return this.a};ec.prototype.toString=function(){return"TrustedResourceUrl{"+this.a+"}"};function gc(a){if(a instanceof ec&&a.constructor===ec&&a.b===fc)return a.a;Aa("expected object of type TrustedResourceUrl, got '"+a+"' of type "+da(a));return"type_error:TrustedResourceUrl"}function hc(a,b){a=ic(a,b);b=new ec;b.a=a;return b}
+function ic(a,b){var c=cc(a);if(!jc.test(c))throw Error("Invalid TrustedResourceUrl format: "+c);return c.replace(kc,function(a,e){if(!Object.prototype.hasOwnProperty.call(b,e))throw Error('Found marker, "'+e+'", in format string, "'+c+'", but no valid label mapping found in args: '+JSON.stringify(b));a=b[e];return a instanceof ac?cc(a):encodeURIComponent(String(a))})}var kc=/%{(\w+)}/g,jc=/^(?:https:)?\/\/[0-9a-z.:[\]-]+\/|^\/[^\/\\]|^about:blank(#|$)/i,fc={};function lc(){this.a="";this.b=mc}lc.prototype.la=!0;lc.prototype.ja=function(){return this.a};lc.prototype.toString=function(){return"SafeUrl{"+this.a+"}"};function nc(a){if(a instanceof lc&&a.constructor===lc&&a.b===mc)return a.a;Aa("expected object of type SafeUrl, got '"+a+"' of type "+da(a));return"type_error:SafeUrl"}var oc=/^(?:(?:https?|mailto|ftp):|[^:/?#]*(?:[/?#]|$))/i;
+function pc(a){if(a instanceof lc)return a;a=a.la?a.ja():String(a);oc.test(a)||(a="about:invalid#zClosurez");return qc(a)}var mc={};function qc(a){var b=new lc;b.a=a;return b}qc("about:blank");function rc(){this.a="";this.b=sc}rc.prototype.la=!0;rc.prototype.ja=function(){return this.a};rc.prototype.toString=function(){return"SafeHtml{"+this.a+"}"};function uc(a){if(a instanceof rc&&a.constructor===rc&&a.b===sc)return a.a;Aa("expected object of type SafeHtml, got '"+a+"' of type "+da(a));return"type_error:SafeHtml"}var sc={};function vc(a){var b=new rc;b.a=a;return b}vc("<!DOCTYPE html>");vc("");vc("<br>");function wc(a){var b=document;return m(a)?b.getElementById(a):a}function xc(a,b){Pa(b,function(b,d){b&&b.la&&(b=b.ja());"style"==d?a.style.cssText=b:"class"==d?a.className=b:"for"==d?a.htmlFor=b:yc.hasOwnProperty(d)?a.setAttribute(yc[d],b):0==d.lastIndexOf("aria-",0)||0==d.lastIndexOf("data-",0)?a.setAttribute(d,b):a[d]=b})}
+var yc={cellpadding:"cellPadding",cellspacing:"cellSpacing",colspan:"colSpan",frameborder:"frameBorder",height:"height",maxlength:"maxLength",nonce:"nonce",role:"role",rowspan:"rowSpan",type:"type",usemap:"useMap",valign:"vAlign",width:"width"};
+function zc(a,b,c){var d=arguments,e=document,f=String(d[0]),g=d[1];if(!$b&&g&&(g.name||g.type)){f=["<",f];g.name&&f.push(' name="',qa(g.name),'"');if(g.type){f.push(' type="',qa(g.type),'"');var l={};Wa(l,g);delete l.type;g=l}f.push(">");f=f.join("")}f=e.createElement(f);g&&(m(g)?f.className=g:fa(g)?f.className=g.join(" "):xc(f,g));2<d.length&&Ac(e,f,d);return f}
+function Ac(a,b,c){function d(c){c&&b.appendChild(m(c)?a.createTextNode(c):c)}for(var e=2;e<c.length;e++){var f=c[e];!ha(f)||q(f)&&0<f.nodeType?d(f):w(Bc(f)?La(f):f,d)}}function Bc(a){if(a&&"number"==typeof a.length){if(q(a))return"function"==typeof a.item||"string"==typeof a.item;if(p(a))return"function"==typeof a.item}return!1};function Cc(a){var b=[];Dc(new Ec,a,b);return b.join("")}function Ec(){}
+function Dc(a,b,c){if(null==b)c.push("null");else{if("object"==typeof b){if(fa(b)){var d=b;b=d.length;c.push("[");for(var e="",f=0;f<b;f++)c.push(e),Dc(a,d[f],c),e=",";c.push("]");return}if(b instanceof String||b instanceof Number||b instanceof Boolean)b=b.valueOf();else{c.push("{");e="";for(d in b)Object.prototype.hasOwnProperty.call(b,d)&&(f=b[d],"function"!=typeof f&&(c.push(e),Fc(d,c),c.push(":"),Dc(a,f,c),e=","));c.push("}");return}}switch(typeof b){case "string":Fc(b,c);break;case "number":c.push(isFinite(b)&&
+!isNaN(b)?String(b):"null");break;case "boolean":c.push(String(b));break;case "function":c.push("null");break;default:throw Error("Unknown type: "+typeof b);}}}var Gc={'"':'\\"',"\\":"\\\\","/":"\\/","\b":"\\b","\f":"\\f","\n":"\\n","\r":"\\r","\t":"\\t","\x0B":"\\u000b"},Hc=/\uffff/.test("\uffff")?/[\\\"\x00-\x1f\x7f-\uffff]/g:/[\\\"\x00-\x1f\x7f-\xff]/g;
+function Fc(a,b){b.push('"',a.replace(Hc,function(a){var b=Gc[a];b||(b="\\u"+(a.charCodeAt(0)|65536).toString(16).substr(1),Gc[a]=b);return b}),'"')};function Ic(){0!=Jc&&(Kc[this[ia]||(this[ia]=++ja)]=this);this.oa=this.oa;this.Fa=this.Fa}var Jc=0,Kc={};Ic.prototype.oa=!1;function Lc(a){a.oa||(a.oa=!0,a.ta(),0!=Jc&&(a=a[ia]||(a[ia]=++ja),delete Kc[a]))}Ic.prototype.ta=function(){if(this.Fa)for(;this.Fa.length;)this.Fa.shift()()};var Mc=Object.freeze||function(a){return a};var Nc=!y||9<=Number(kb),Oc=y&&!jb("9"),Pc=function(){if(!k.addEventListener||!Object.defineProperty)return!1;var a=!1,b=Object.defineProperty({},"passive",{get:function(){a=!0}});k.addEventListener("test",ca,b);k.removeEventListener("test",ca,b);return a}();function C(a,b){this.type=a;this.b=this.target=b;this.Ab=!0}C.prototype.c=function(){this.Ab=!1};function Qc(a,b){C.call(this,a?a.type:"");this.relatedTarget=this.b=this.target=null;this.button=this.screenY=this.screenX=this.clientY=this.clientX=0;this.key="";this.metaKey=this.shiftKey=this.altKey=this.ctrlKey=!1;this.pointerId=0;this.pointerType="";this.a=null;if(a){var c=this.type=a.type,d=a.changedTouches?a.changedTouches[0]:null;this.target=a.target||a.srcElement;this.b=b;if(b=a.relatedTarget){if(cb){a:{try{Xa(b.nodeName);var e=!0;break a}catch(f){}e=!1}e||(b=null)}}else"mouseover"==c?b=
+a.fromElement:"mouseout"==c&&(b=a.toElement);this.relatedTarget=b;null===d?(this.clientX=void 0!==a.clientX?a.clientX:a.pageX,this.clientY=void 0!==a.clientY?a.clientY:a.pageY,this.screenX=a.screenX||0,this.screenY=a.screenY||0):(this.clientX=void 0!==d.clientX?d.clientX:d.pageX,this.clientY=void 0!==d.clientY?d.clientY:d.pageY,this.screenX=d.screenX||0,this.screenY=d.screenY||0);this.button=a.button;this.key=a.key||"";this.ctrlKey=a.ctrlKey;this.altKey=a.altKey;this.shiftKey=a.shiftKey;this.metaKey=
+a.metaKey;this.pointerId=a.pointerId||0;this.pointerType=m(a.pointerType)?a.pointerType:Rc[a.pointerType]||"";this.a=a;a.defaultPrevented&&this.c()}}t(Qc,C);var Rc=Mc({2:"touch",3:"pen",4:"mouse"});Qc.prototype.c=function(){Qc.ib.c.call(this);var a=this.a;if(a.preventDefault)a.preventDefault();else if(a.returnValue=!1,Oc)try{if(a.ctrlKey||112<=a.keyCode&&123>=a.keyCode)a.keyCode=-1}catch(b){}};Qc.prototype.g=function(){return this.a};var Sc="closure_listenable_"+(1E6*Math.random()|0),Tc=0;function Uc(a,b,c,d,e){this.listener=a;this.a=null;this.src=b;this.type=c;this.capture=!!d;this.La=e;this.key=++Tc;this.ma=this.Ha=!1}function Vc(a){a.ma=!0;a.listener=null;a.a=null;a.src=null;a.La=null};function Wc(a){this.src=a;this.a={};this.b=0}function Xc(a,b,c,d,e,f){var g=b.toString();b=a.a[g];b||(b=a.a[g]=[],a.b++);var l=Yc(b,c,e,f);-1<l?(a=b[l],d||(a.Ha=!1)):(a=new Uc(c,a.src,g,!!e,f),a.Ha=d,b.push(a));return a}function Zc(a,b){var c=b.type;c in a.a&&Ia(a.a[c],b)&&(Vc(b),0==a.a[c].length&&(delete a.a[c],a.b--))}function Yc(a,b,c,d){for(var e=0;e<a.length;++e){var f=a[e];if(!f.ma&&f.listener==b&&f.capture==!!c&&f.La==d)return e}return-1};var $c="closure_lm_"+(1E6*Math.random()|0),ad={},bd=0;function cd(a,b,c,d,e){if(d&&d.once)dd(a,b,c,d,e);else if(fa(b))for(var f=0;f<b.length;f++)cd(a,b[f],c,d,e);else c=ed(c),a&&a[Sc]?fd(a,b,c,q(d)?!!d.capture:!!d,e):gd(a,b,c,!1,d,e)}
+function gd(a,b,c,d,e,f){if(!b)throw Error("Invalid event type");var g=q(e)?!!e.capture:!!e,l=hd(a);l||(a[$c]=l=new Wc(a));c=Xc(l,b,c,d,g,f);if(!c.a){d=id();c.a=d;d.src=a;d.listener=c;if(a.addEventListener)Pc||(e=g),void 0===e&&(e=!1),a.addEventListener(b.toString(),d,e);else if(a.attachEvent)a.attachEvent(jd(b.toString()),d);else throw Error("addEventListener and attachEvent are unavailable.");bd++}}
+function id(){var a=kd,b=Nc?function(c){return a.call(b.src,b.listener,c)}:function(c){c=a.call(b.src,b.listener,c);if(!c)return c};return b}function dd(a,b,c,d,e){if(fa(b))for(var f=0;f<b.length;f++)dd(a,b[f],c,d,e);else c=ed(c),a&&a[Sc]?ld(a,b,c,q(d)?!!d.capture:!!d,e):gd(a,b,c,!0,d,e)}
+function E(a,b,c,d,e){if(fa(b))for(var f=0;f<b.length;f++)E(a,b[f],c,d,e);else(d=q(d)?!!d.capture:!!d,c=ed(c),a&&a[Sc])?(a=a.u,b=String(b).toString(),b in a.a&&(f=a.a[b],c=Yc(f,c,d,e),-1<c&&(Vc(f[c]),Array.prototype.splice.call(f,c,1),0==f.length&&(delete a.a[b],a.b--)))):a&&(a=hd(a))&&(b=a.a[b.toString()],a=-1,b&&(a=Yc(b,c,d,e)),(c=-1<a?b[a]:null)&&md(c))}
+function md(a){if("number"!=typeof a&&a&&!a.ma){var b=a.src;if(b&&b[Sc])Zc(b.u,a);else{var c=a.type,d=a.a;b.removeEventListener?b.removeEventListener(c,d,a.capture):b.detachEvent&&b.detachEvent(jd(c),d);bd--;(c=hd(b))?(Zc(c,a),0==c.b&&(c.src=null,b[$c]=null)):Vc(a)}}}function jd(a){return a in ad?ad[a]:ad[a]="on"+a}function nd(a,b,c,d){var e=!0;if(a=hd(a))if(b=a.a[b.toString()])for(b=b.concat(),a=0;a<b.length;a++){var f=b[a];f&&f.capture==c&&!f.ma&&(f=od(f,d),e=e&&!1!==f)}return e}
+function od(a,b){var c=a.listener,d=a.La||a.src;a.Ha&&md(a);return c.call(d,b)}
+function kd(a,b){if(a.ma)return!0;if(!Nc){if(!b)a:{b=["window","event"];for(var c=k,d=0;d<b.length;d++)if(c=c[b[d]],null==c){b=null;break a}b=c}d=b;b=new Qc(d,this);c=!0;if(!(0>d.keyCode||void 0!=d.returnValue)){a:{var e=!1;if(0==d.keyCode)try{d.keyCode=-1;break a}catch(g){e=!0}if(e||void 0==d.returnValue)d.returnValue=!0}d=[];for(e=b.b;e;e=e.parentNode)d.push(e);a=a.type;for(e=d.length-1;0<=e;e--){b.b=d[e];var f=nd(d[e],a,!0,b);c=c&&f}for(e=0;e<d.length;e++)b.b=d[e],f=nd(d[e],a,!1,b),c=c&&f}return c}return od(a,
+new Qc(b,this))}function hd(a){a=a[$c];return a instanceof Wc?a:null}var pd="__closure_events_fn_"+(1E9*Math.random()>>>0);function ed(a){if(p(a))return a;a[pd]||(a[pd]=function(b){return a.handleEvent(b)});return a[pd]};function F(){Ic.call(this);this.u=new Wc(this);this.Eb=this;this.Ra=null}t(F,Ic);F.prototype[Sc]=!0;F.prototype.removeEventListener=function(a,b,c,d){E(this,a,b,c,d)};
+function G(a,b){var c,d=a.Ra;if(d)for(c=[];d;d=d.Ra)c.push(d);a=a.Eb;d=b.type||b;if(m(b))b=new C(b,a);else if(b instanceof C)b.target=b.target||a;else{var e=b;b=new C(d,a);Wa(b,e)}e=!0;if(c)for(var f=c.length-1;0<=f;f--){var g=b.b=c[f];e=qd(g,d,!0,b)&&e}g=b.b=a;e=qd(g,d,!0,b)&&e;e=qd(g,d,!1,b)&&e;if(c)for(f=0;f<c.length;f++)g=b.b=c[f],e=qd(g,d,!1,b)&&e}
+F.prototype.ta=function(){F.ib.ta.call(this);if(this.u){var a=this.u,b=0,c;for(c in a.a){for(var d=a.a[c],e=0;e<d.length;e++)++b,Vc(d[e]);delete a.a[c];a.b--}}this.Ra=null};function fd(a,b,c,d,e){Xc(a.u,String(b),c,!1,d,e)}function ld(a,b,c,d,e){Xc(a.u,String(b),c,!0,d,e)}function qd(a,b,c,d){b=a.u.a[String(b)];if(!b)return!0;b=b.concat();for(var e=!0,f=0;f<b.length;++f){var g=b[f];if(g&&!g.ma&&g.capture==c){var l=g.listener,n=g.La||g.src;g.Ha&&Zc(a.u,g);e=!1!==l.call(n,d)&&e}}return e&&0!=d.Ab};function rd(a,b,c){if(p(a))c&&(a=r(a,c));else if(a&&"function"==typeof a.handleEvent)a=r(a.handleEvent,a);else throw Error("Invalid listener argument");return 2147483647<Number(b)?-1:k.setTimeout(a,b||0)}function sd(a){var b=null;return(new z(function(c,d){b=rd(function(){c(void 0)},a);-1==b&&d(Error("Failed to schedule timer."))})).s(function(a){k.clearTimeout(b);throw a;})};function td(a,b,c,d,e){this.reset(a,b,c,d,e)}td.prototype.a=null;var ud=0;td.prototype.reset=function(a,b,c,d,e){"number"==typeof e||ud++;d||na();this.b=b;delete this.a};function vd(a){this.f=a;this.b=this.c=this.a=null}function wd(a,b){this.name=a;this.value=b}wd.prototype.toString=function(){return this.name};var xd=new wd("SEVERE",1E3),yd=new wd("CONFIG",700),zd=new wd("FINE",500);function Ad(a){if(a.c)return a.c;if(a.a)return Ad(a.a);Aa("Root logger has no level set.");return null}
+vd.prototype.log=function(a,b,c){if(a.value>=Ad(this).value)for(p(b)&&(b=b()),a=new td(a,String(b),this.f),c&&(a.a=c),c="log:"+a.b,(a=k.console)&&a.timeStamp&&a.timeStamp(c),(a=k.msWriteProfilerMark)&&a(c),c=this;c;)c=c.a};var Bd={},Cd=null;function Dd(a){Cd||(Cd=new vd(""),Bd[""]=Cd,Cd.c=yd);var b;if(!(b=Bd[a])){b=new vd(a);var c=a.lastIndexOf("."),d=a.substr(c+1);c=Dd(a.substr(0,c));c.b||(c.b={});c.b[d]=b;b.a=c;Bd[a]=b}return b};function Ed(a,b){this.b={};this.a=[];this.c=0;var c=arguments.length;if(1<c){if(c%2)throw Error("Uneven number of arguments");for(var d=0;d<c;d+=2)this.set(arguments[d],arguments[d+1])}else if(a){a instanceof Ed?(c=a.S(),d=a.P()):(c=Ra(a),d=Qa(a));for(var e=0;e<c.length;e++)this.set(c[e],d[e])}}h=Ed.prototype;h.P=function(){Fd(this);for(var a=[],b=0;b<this.a.length;b++)a.push(this.b[this.a[b]]);return a};h.S=function(){Fd(this);return this.a.concat()};
+h.clear=function(){this.b={};this.c=this.a.length=0};function Fd(a){if(a.c!=a.a.length){for(var b=0,c=0;b<a.a.length;){var d=a.a[b];Gd(a.b,d)&&(a.a[c++]=d);b++}a.a.length=c}if(a.c!=a.a.length){var e={};for(c=b=0;b<a.a.length;)d=a.a[b],Gd(e,d)||(a.a[c++]=d,e[d]=1),b++;a.a.length=c}}h.get=function(a,b){return Gd(this.b,a)?this.b[a]:b};h.set=function(a,b){Gd(this.b,a)||(this.c++,this.a.push(a));this.b[a]=b};
+h.forEach=function(a,b){for(var c=this.S(),d=0;d<c.length;d++){var e=c[d],f=this.get(e);a.call(b,f,e,this)}};function Gd(a,b){return Object.prototype.hasOwnProperty.call(a,b)};function H(a,b){a&&a.log(zd,b,void 0)};function Hd(a){return Da(a,function(a){a=a.toString(16);return 1<a.length?a:"0"+a}).join("")};var Id=null,Jd=null;function Kd(a){var b="";Ld(a,function(a){b+=String.fromCharCode(a)});return b}function Ld(a,b){function c(b){for(;d<a.length;){var c=a.charAt(d++),e=Jd[c];if(null!=e)return e;if(!/^[\s\xa0]*$/.test(c))throw Error("Unknown base64 encoding at char: "+c);}return b}Md();for(var d=0;;){var e=c(-1),f=c(0),g=c(64),l=c(64);if(64===l&&-1===e)break;b(e<<2|f>>4);64!=g&&(b(f<<4&240|g>>2),64!=l&&b(g<<6&192|l))}}
+function Md(){if(!Id){Id={};Jd={};for(var a=0;65>a;a++)Id[a]="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(a),Jd[Id[a]]=a,62<=a&&(Jd["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.".charAt(a)]=a)}};/*
+ Portions of this code are from MochiKit, received by
+ The Closure Authors under the MIT license. All other code is Copyright
+ 2005-2009 The Closure Authors. All Rights Reserved.
+*/
+function Nd(a,b){this.g=[];this.v=a;this.o=b||null;this.f=this.a=!1;this.c=void 0;this.u=this.w=this.i=!1;this.h=0;this.b=null;this.l=0}Nd.prototype.cancel=function(a){if(this.a)this.c instanceof Nd&&this.c.cancel();else{if(this.b){var b=this.b;delete this.b;a?b.cancel(a):(b.l--,0>=b.l&&b.cancel())}this.v?this.v.call(this.o,this):this.u=!0;this.a||(a=new Od,Pd(this),Qd(this,!1,a))}};Nd.prototype.m=function(a,b){this.i=!1;Qd(this,a,b)};function Qd(a,b,c){a.a=!0;a.c=c;a.f=!b;Rd(a)}
+function Pd(a){if(a.a){if(!a.u)throw new Sd;a.u=!1}}Nd.prototype.A=function(a){Pd(this);Qd(this,!0,a)};function Td(a,b){Ud(a,null,b,void 0)}function Ud(a,b,c,d){a.g.push([b,c,d]);a.a&&Rd(a)}Nd.prototype.then=function(a,b,c){var d,e,f=new z(function(a,b){d=a;e=b});Ud(this,d,function(a){a instanceof Od?f.cancel():e(a)});return f.then(a,b,c)};mb(Nd);function Vd(a){return Ea(a.g,function(a){return p(a[1])})}
+function Rd(a){if(a.h&&a.a&&Vd(a)){var b=a.h,c=Wd[b];c&&(k.clearTimeout(c.a),delete Wd[b]);a.h=0}a.b&&(a.b.l--,delete a.b);b=a.c;for(var d=c=!1;a.g.length&&!a.i;){var e=a.g.shift(),f=e[0],g=e[1];e=e[2];if(f=a.f?g:f)try{var l=f.call(e||a.o,b);void 0!==l&&(a.f=a.f&&(l==b||l instanceof Error),a.c=b=l);if(nb(b)||"function"===typeof k.Promise&&b instanceof k.Promise)d=!0,a.i=!0}catch(n){b=n,a.f=!0,Vd(a)||(c=!0)}}a.c=b;d&&(l=r(a.m,a,!0),d=r(a.m,a,!1),b instanceof Nd?(Ud(b,l,d),b.w=!0):b.then(l,d));c&&(b=
+new Xd(b),Wd[b.a]=b,a.h=b.a)}function Sd(){u.call(this)}t(Sd,u);Sd.prototype.message="Deferred has already fired";Sd.prototype.name="AlreadyCalledError";function Od(){u.call(this)}t(Od,u);Od.prototype.message="Deferred was canceled";Od.prototype.name="CanceledError";function Xd(a){this.a=k.setTimeout(r(this.c,this),0);this.b=a}Xd.prototype.c=function(){delete Wd[this.a];throw this.b;};var Wd={};function Yd(){this.b=-1};function Zd(a,b){this.b=-1;this.b=$d;this.f=k.Uint8Array?new Uint8Array(this.b):Array(this.b);this.g=this.c=0;this.a=[];this.i=a;this.h=b;this.l=k.Int32Array?new Int32Array(64):Array(64);ae||(k.Int32Array?ae=new Int32Array(be):ae=be);this.reset()}var ae;t(Zd,Yd);for(var $d=64,ce=$d-1,de=[],ee=0;ee<ce;ee++)de[ee]=0;var fe=Ka(128,de);Zd.prototype.reset=function(){this.g=this.c=0;this.a=k.Int32Array?new Int32Array(this.h):La(this.h)};
+function ge(a){for(var b=a.f,c=a.l,d=0,e=0;e<b.length;)c[d++]=b[e]<<24|b[e+1]<<16|b[e+2]<<8|b[e+3],e=4*d;for(b=16;64>b;b++){e=c[b-15]|0;d=c[b-2]|0;var f=(c[b-16]|0)+((e>>>7|e<<25)^(e>>>18|e<<14)^e>>>3)|0,g=(c[b-7]|0)+((d>>>17|d<<15)^(d>>>19|d<<13)^d>>>10)|0;c[b]=f+g|0}d=a.a[0]|0;e=a.a[1]|0;var l=a.a[2]|0,n=a.a[3]|0,D=a.a[4]|0,vb=a.a[5]|0,tc=a.a[6]|0;f=a.a[7]|0;for(b=0;64>b;b++){var Bj=((d>>>2|d<<30)^(d>>>13|d<<19)^(d>>>22|d<<10))+(d&e^d&l^e&l)|0;g=D&vb^~D&tc;f=f+((D>>>6|D<<26)^(D>>>11|D<<21)^(D>>>
+25|D<<7))|0;g=g+(ae[b]|0)|0;g=f+(g+(c[b]|0)|0)|0;f=tc;tc=vb;vb=D;D=n+g|0;n=l;l=e;e=d;d=g+Bj|0}a.a[0]=a.a[0]+d|0;a.a[1]=a.a[1]+e|0;a.a[2]=a.a[2]+l|0;a.a[3]=a.a[3]+n|0;a.a[4]=a.a[4]+D|0;a.a[5]=a.a[5]+vb|0;a.a[6]=a.a[6]+tc|0;a.a[7]=a.a[7]+f|0}
+function he(a,b,c){void 0===c&&(c=b.length);var d=0,e=a.c;if(m(b))for(;d<c;)a.f[e++]=b.charCodeAt(d++),e==a.b&&(ge(a),e=0);else if(ha(b))for(;d<c;){var f=b[d++];if(!("number"==typeof f&&0<=f&&255>=f&&f==(f|0)))throw Error("message must be a byte array");a.f[e++]=f;e==a.b&&(ge(a),e=0)}else throw Error("message must be string or array");a.c=e;a.g+=c}
+var be=[1116352408,1899447441,3049323471,3921009573,961987163,1508970993,2453635748,2870763221,3624381080,310598401,607225278,1426881987,1925078388,2162078206,2614888103,3248222580,3835390401,4022224774,264347078,604807628,770255983,1249150122,1555081692,1996064986,2554220882,2821834349,2952996808,3210313671,3336571891,3584528711,113926993,338241895,666307205,773529912,1294757372,1396182291,1695183700,1986661051,2177026350,2456956037,2730485921,2820302411,3259730800,3345764771,3516065817,3600352804,
+4094571909,275423344,430227734,506948616,659060556,883997877,958139571,1322822218,1537002063,1747873779,1955562222,2024104815,2227730452,2361852424,2428436474,2756734187,3204031479,3329325298];function ie(){Zd.call(this,8,je)}t(ie,Zd);var je=[1779033703,3144134277,1013904242,2773480762,1359893119,2600822924,528734635,1541459225];function ke(a){if(a.P&&"function"==typeof a.P)return a.P();if(m(a))return a.split("");if(ha(a)){for(var b=[],c=a.length,d=0;d<c;d++)b.push(a[d]);return b}return Qa(a)}function le(a){if(a.S&&"function"==typeof a.S)return a.S();if(!a.P||"function"!=typeof a.P){if(ha(a)||m(a)){var b=[];a=a.length;for(var c=0;c<a;c++)b.push(c);return b}return Ra(a)}}
+function me(a,b){if(a.forEach&&"function"==typeof a.forEach)a.forEach(b,void 0);else if(ha(a)||m(a))w(a,b,void 0);else for(var c=le(a),d=ke(a),e=d.length,f=0;f<e;f++)b.call(void 0,d[f],c&&c[f],a)};var ne=/^(?:([^:/?#.]+):)?(?:\/\/(?:([^/?#]*)@)?([^/#?]*?)(?::([0-9]+))?(?=[/#?]|$))?([^?#]+)?(?:\?([^#]*))?(?:#([\s\S]*))?$/;function oe(a,b){if(a){a=a.split("&");for(var c=0;c<a.length;c++){var d=a[c].indexOf("="),e=null;if(0<=d){var f=a[c].substring(0,d);e=a[c].substring(d+1)}else f=a[c];b(f,e?decodeURIComponent(e.replace(/\+/g," ")):"")}}};function pe(a,b){this.b=this.l=this.c="";this.i=null;this.h=this.g="";this.f=!1;if(a instanceof pe){this.f=void 0!==b?b:a.f;qe(this,a.c);this.l=a.l;this.b=a.b;re(this,a.i);this.g=a.g;b=a.a;var c=new se;c.c=b.c;b.a&&(c.a=new Ed(b.a),c.b=b.b);te(this,c);this.h=a.h}else a&&(c=String(a).match(ne))?(this.f=!!b,qe(this,c[1]||"",!0),this.l=ue(c[2]||""),this.b=ue(c[3]||"",!0),re(this,c[4]),this.g=ue(c[5]||"",!0),te(this,c[6]||"",!0),this.h=ue(c[7]||"")):(this.f=!!b,this.a=new se(null,0,this.f))}
+pe.prototype.toString=function(){var a=[],b=this.c;b&&a.push(ve(b,we,!0),":");var c=this.b;if(c||"file"==b)a.push("//"),(b=this.l)&&a.push(ve(b,we,!0),"@"),a.push(encodeURIComponent(String(c)).replace(/%25([0-9a-fA-F]{2})/g,"%$1")),c=this.i,null!=c&&a.push(":",String(c));if(c=this.g)this.b&&"/"!=c.charAt(0)&&a.push("/"),a.push(ve(c,"/"==c.charAt(0)?xe:ye,!0));(c=this.a.toString())&&a.push("?",c);(c=this.h)&&a.push("#",ve(c,ze));return a.join("")};
+function qe(a,b,c){a.c=c?ue(b,!0):b;a.c&&(a.c=a.c.replace(/:$/,""))}function re(a,b){if(b){b=Number(b);if(isNaN(b)||0>b)throw Error("Bad port number "+b);a.i=b}else a.i=null}function te(a,b,c){b instanceof se?(a.a=b,Ae(a.a,a.f)):(c||(b=ve(b,Be)),a.a=new se(b,0,a.f))}function I(a,b,c){a.a.set(b,c)}function Ce(a,b){return a.a.get(b)}function De(a){return a instanceof pe?new pe(a):new pe(a,void 0)}function Ee(a,b){var c=new pe(null,void 0);qe(c,"https");a&&(c.b=a);b&&(c.g=b);return c}
+function ue(a,b){return a?b?decodeURI(a.replace(/%25/g,"%2525")):decodeURIComponent(a):""}function ve(a,b,c){return m(a)?(a=encodeURI(a).replace(b,Fe),c&&(a=a.replace(/%25([0-9a-fA-F]{2})/g,"%$1")),a):null}function Fe(a){a=a.charCodeAt(0);return"%"+(a>>4&15).toString(16)+(a&15).toString(16)}var we=/[#\/\?@]/g,ye=/[\#\?:]/g,xe=/[\#\?]/g,Be=/[\#\?@]/g,ze=/#/g;function se(a,b,c){this.b=this.a=null;this.c=a||null;this.f=!!c}
+function Ge(a){a.a||(a.a=new Ed,a.b=0,a.c&&oe(a.c,function(b,c){He(a,decodeURIComponent(b.replace(/\+/g," ")),c)}))}function Ie(a){var b=le(a);if("undefined"==typeof b)throw Error("Keys are undefined");var c=new se(null,0,void 0);a=ke(a);for(var d=0;d<b.length;d++){var e=b[d],f=a[d];fa(f)?Je(c,e,f):He(c,e,f)}return c}function He(a,b,c){Ge(a);a.c=null;b=Ke(a,b);var d=a.a.get(b);d||a.a.set(b,d=[]);d.push(c);a.b+=1}
+function Le(a,b){Ge(a);b=Ke(a,b);Gd(a.a.b,b)&&(a.c=null,a.b-=a.a.get(b).length,a=a.a,Gd(a.b,b)&&(delete a.b[b],a.c--,a.a.length>2*a.c&&Fd(a)))}h=se.prototype;h.clear=function(){this.a=this.c=null;this.b=0};function Me(a,b){Ge(a);b=Ke(a,b);return Gd(a.a.b,b)}h.forEach=function(a,b){Ge(this);this.a.forEach(function(c,d){w(c,function(c){a.call(b,c,d,this)},this)},this)};h.S=function(){Ge(this);for(var a=this.a.P(),b=this.a.S(),c=[],d=0;d<b.length;d++)for(var e=a[d],f=0;f<e.length;f++)c.push(b[d]);return c};
+h.P=function(a){Ge(this);var b=[];if(m(a))Me(this,a)&&(b=Ka(b,this.a.get(Ke(this,a))));else{a=this.a.P();for(var c=0;c<a.length;c++)b=Ka(b,a[c])}return b};h.set=function(a,b){Ge(this);this.c=null;a=Ke(this,a);Me(this,a)&&(this.b-=this.a.get(a).length);this.a.set(a,[b]);this.b+=1;return this};h.get=function(a,b){a=a?this.P(a):[];return 0<a.length?String(a[0]):b};function Je(a,b,c){Le(a,b);0<c.length&&(a.c=null,a.a.set(Ke(a,b),La(c)),a.b+=c.length)}
+h.toString=function(){if(this.c)return this.c;if(!this.a)return"";for(var a=[],b=this.a.S(),c=0;c<b.length;c++){var d=b[c],e=encodeURIComponent(String(d));d=this.P(d);for(var f=0;f<d.length;f++){var g=e;""!==d[f]&&(g+="="+encodeURIComponent(String(d[f])));a.push(g)}}return this.c=a.join("&")};function Ke(a,b){b=String(b);a.f&&(b=b.toLowerCase());return b}function Ae(a,b){b&&!a.f&&(Ge(a),a.c=null,a.a.forEach(function(a,b){var c=b.toLowerCase();b!=c&&(Le(this,b),Je(this,c,a))},a));a.f=b};function Ne(){}Ne.prototype.c=null;function Oe(a){return a.c||(a.c=a.b())};var Pe;function Qe(){}t(Qe,Ne);Qe.prototype.a=function(){var a=Re(this);return a?new ActiveXObject(a):new XMLHttpRequest};Qe.prototype.b=function(){var a={};Re(this)&&(a[0]=!0,a[1]=!0);return a};
+function Re(a){if(!a.f&&"undefined"==typeof XMLHttpRequest&&"undefined"!=typeof ActiveXObject){for(var b=["MSXML2.XMLHTTP.6.0","MSXML2.XMLHTTP.3.0","MSXML2.XMLHTTP","Microsoft.XMLHTTP"],c=0;c<b.length;c++){var d=b[c];try{return new ActiveXObject(d),a.f=d}catch(e){}}throw Error("Could not create ActiveXObject. ActiveX might be disabled, or MSXML might not be installed");}return a.f}Pe=new Qe;function Se(a){F.call(this);this.headers=new Ed;this.w=a||null;this.b=!1;this.v=this.a=null;this.g=this.I=this.i="";this.c=this.G=this.h=this.A=!1;this.f=0;this.m=null;this.l=Te;this.o=this.N=!1}t(Se,F);var Te="",Ue=Se.prototype,Ve=Dd("goog.net.XhrIo");Ue.J=Ve;var We=/^https?$/i,Xe=["POST","PUT"];
+function Ye(a,b,c,d,e){if(a.a)throw Error("[goog.net.XhrIo] Object is active with another request="+a.i+"; newUri="+b);c=c?c.toUpperCase():"GET";a.i=b;a.g="";a.I=c;a.A=!1;a.b=!0;a.a=a.w?a.w.a():Pe.a();a.v=a.w?Oe(a.w):Oe(Pe);a.a.onreadystatechange=r(a.zb,a);try{H(a.J,Ze(a,"Opening Xhr")),a.G=!0,a.a.open(c,String(b),!0),a.G=!1}catch(g){H(a.J,Ze(a,"Error opening Xhr: "+g.message));$e(a,g);return}b=d||"";var f=new Ed(a.headers);e&&me(e,function(a,b){f.set(b,a)});e=Fa(f.S());d=k.FormData&&b instanceof
+k.FormData;!Ha(Xe,c)||e||d||f.set("Content-Type","application/x-www-form-urlencoded;charset=utf-8");f.forEach(function(a,b){this.a.setRequestHeader(b,a)},a);a.l&&(a.a.responseType=a.l);"withCredentials"in a.a&&a.a.withCredentials!==a.N&&(a.a.withCredentials=a.N);try{af(a),0<a.f&&(a.o=bf(a.a),H(a.J,Ze(a,"Will abort after "+a.f+"ms if incomplete, xhr2 "+a.o)),a.o?(a.a.timeout=a.f,a.a.ontimeout=r(a.Ea,a)):a.m=rd(a.Ea,a.f,a)),H(a.J,Ze(a,"Sending request")),a.h=!0,a.a.send(b),a.h=!1}catch(g){H(a.J,Ze(a,
+"Send error: "+g.message)),$e(a,g)}}function bf(a){return y&&jb(9)&&"number"==typeof a.timeout&&void 0!==a.ontimeout}function Ga(a){return"content-type"==a.toLowerCase()}h=Se.prototype;h.Ea=function(){"undefined"!=typeof aa&&this.a&&(this.g="Timed out after "+this.f+"ms, aborting",H(this.J,Ze(this,this.g)),G(this,"timeout"),this.abort(8))};function $e(a,b){a.b=!1;a.a&&(a.c=!0,a.a.abort(),a.c=!1);a.g=b;cf(a);df(a)}function cf(a){a.A||(a.A=!0,G(a,"complete"),G(a,"error"))}
+h.abort=function(){this.a&&this.b&&(H(this.J,Ze(this,"Aborting")),this.b=!1,this.c=!0,this.a.abort(),this.c=!1,G(this,"complete"),G(this,"abort"),df(this))};h.ta=function(){this.a&&(this.b&&(this.b=!1,this.c=!0,this.a.abort(),this.c=!1),df(this,!0));Se.ib.ta.call(this)};h.zb=function(){this.oa||(this.G||this.h||this.c?ef(this):this.fc())};h.fc=function(){ef(this)};
+function ef(a){if(a.b&&"undefined"!=typeof aa)if(a.v[1]&&4==ff(a)&&2==gf(a))H(a.J,Ze(a,"Local request error detected and ignored"));else if(a.h&&4==ff(a))rd(a.zb,0,a);else if(G(a,"readystatechange"),4==ff(a)){H(a.J,Ze(a,"Request complete"));a.b=!1;try{var b=gf(a);a:switch(b){case 200:case 201:case 202:case 204:case 206:case 304:case 1223:var c=!0;break a;default:c=!1}var d;if(!(d=c)){var e;if(e=0===b){var f=String(a.i).match(ne)[1]||null;if(!f&&k.self&&k.self.location){var g=k.self.location.protocol;
+f=g.substr(0,g.length-1)}e=!We.test(f?f.toLowerCase():"")}d=e}if(d)G(a,"complete"),G(a,"success");else{try{var l=2<ff(a)?a.a.statusText:""}catch(n){H(a.J,"Can not get status: "+n.message),l=""}a.g=l+" ["+gf(a)+"]";cf(a)}}finally{df(a)}}}function df(a,b){if(a.a){af(a);var c=a.a,d=a.v[0]?ca:null;a.a=null;a.v=null;b||G(a,"ready");try{c.onreadystatechange=d}catch(e){(a=a.J)&&a.log(xd,"Problem encountered resetting onreadystatechange: "+e.message,void 0)}}}
+function af(a){a.a&&a.o&&(a.a.ontimeout=null);"number"==typeof a.m&&(k.clearTimeout(a.m),a.m=null)}function ff(a){return a.a?a.a.readyState:0}function gf(a){try{return 2<ff(a)?a.a.status:-1}catch(b){return-1}}function hf(a){try{return a.a?a.a.responseText:""}catch(b){return H(a.J,"Can not get responseText: "+b.message),""}}
+h.getResponse=function(){try{if(!this.a)return null;if("response"in this.a)return this.a.response;switch(this.l){case Te:case "text":return this.a.responseText;case "arraybuffer":if("mozResponseArrayBuffer"in this.a)return this.a.mozResponseArrayBuffer}var a=this.J;a&&a.log(xd,"Response type "+this.l+" is not supported on this browser",void 0);return null}catch(b){return H(this.J,"Can not get response: "+b.message),null}};function Ze(a,b){return b+" ["+a.I+" "+a.i+" "+gf(a)+"]"};var jf=/^[+a-zA-Z0-9_.!#$%&'*\/=?^`{|}~-]+@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9]{2,63}$/;function kf(a){var b={},c=b.document||document,d=gc(a),e=document.createElement("SCRIPT"),f={Bb:e,Ea:void 0},g=new Nd(lf,f),l=null,n=null!=b.timeout?b.timeout:5E3;0<n&&(l=window.setTimeout(function(){mf(e,!0);var a=new nf(of,"Timeout reached for loading script "+d);Pd(g);Qd(g,!1,a)},n),f.Ea=l);e.onload=e.onreadystatechange=function(){e.readyState&&"loaded"!=e.readyState&&"complete"!=e.readyState||(mf(e,b.Oc||!1,l),g.A(null))};e.onerror=function(){mf(e,!0,l);var a=new nf(pf,"Error while loading script "+
+d);Pd(g);Qd(g,!1,a)};f=b.attributes||{};Wa(f,{type:"text/javascript",charset:"UTF-8"});xc(e,f);e.src=gc(a);qf(c).appendChild(e);return g}function qf(a){var b;return(b=(a||document).getElementsByTagName("HEAD"))&&0!=b.length?b[0]:a.documentElement}function lf(){if(this&&this.Bb){var a=this.Bb;a&&"SCRIPT"==a.tagName&&mf(a,!0,this.Ea)}}
+function mf(a,b,c){null!=c&&k.clearTimeout(c);a.onload=ca;a.onerror=ca;a.onreadystatechange=ca;b&&window.setTimeout(function(){a&&a.parentNode&&a.parentNode.removeChild(a)},0)}var pf=0,of=1;function nf(a,b){var c="Jsloader error (code #"+a+")";b&&(c+=": "+b);u.call(this,c);this.code=a}t(nf,u);function rf(){}t(rf,Ne);rf.prototype.a=function(){var a=new XMLHttpRequest;if("withCredentials"in a)return a;if("undefined"!=typeof XDomainRequest)return new sf;throw Error("Unsupported browser");};rf.prototype.b=function(){return{}};
+function sf(){this.a=new XDomainRequest;this.readyState=0;this.onreadystatechange=null;this.responseText="";this.status=-1;this.statusText=this.responseXML=null;this.a.onload=r(this.Sb,this);this.a.onerror=r(this.wb,this);this.a.onprogress=r(this.Tb,this);this.a.ontimeout=r(this.Ub,this)}h=sf.prototype;h.open=function(a,b,c){if(null!=c&&!c)throw Error("Only async requests are supported.");this.a.open(a,b)};
+h.send=function(a){if(a)if("string"==typeof a)this.a.send(a);else throw Error("Only string data is supported");else this.a.send()};h.abort=function(){this.a.abort()};h.setRequestHeader=function(){};h.getResponseHeader=function(a){return"content-type"==a.toLowerCase()?this.a.contentType:""};h.Sb=function(){this.status=200;this.responseText=this.a.responseText;tf(this,4)};h.wb=function(){this.status=500;this.responseText="";tf(this,4)};h.Ub=function(){this.wb()};
+h.Tb=function(){this.status=200;tf(this,1)};function tf(a,b){a.readyState=b;if(a.onreadystatechange)a.onreadystatechange()}h.getAllResponseHeaders=function(){return"content-type: "+this.a.contentType};function uf(){var a=J();return y&&!!kb&&11==kb||/Edge\/\d+/.test(a)}function vf(){return k.window&&k.window.location.href||""}function wf(a,b){b=b||k.window;var c="about:blank";a&&(c=nc(pc(a)));b.location.href=c}function xf(a,b){var c=[],d;for(d in a)d in b?typeof a[d]!=typeof b[d]?c.push(d):fa(a[d])?Ta(a[d],b[d])||c.push(d):"object"==typeof a[d]&&null!=a[d]&&null!=b[d]?0<xf(a[d],b[d]).length&&c.push(d):a[d]!==b[d]&&c.push(d):c.push(d);for(d in b)d in a||c.push(d);return c}
+function yf(){var a=J();a=zf(a)!=Af?null:(a=a.match(/\sChrome\/(\d+)/i))&&2==a.length?parseInt(a[1],10):null;return a&&30>a?!1:!y||!kb||9<kb}function Bf(a){a=(a||J()).toLowerCase();return a.match(/android/)||a.match(/webos/)||a.match(/iphone|ipad|ipod/)||a.match(/blackberry/)||a.match(/windows phone/)||a.match(/iemobile/)?!0:!1}function Cf(a){a=a||k.window;try{a.close()}catch(b){}}
+function Df(a,b,c){var d=Math.floor(1E9*Math.random()).toString();b=b||500;c=c||600;var e=(window.screen.availHeight-c)/2,f=(window.screen.availWidth-b)/2;b={width:b,height:c,top:0<e?e:0,left:0<f?f:0,location:!0,resizable:!0,statusbar:!0,toolbar:!1};c=J().toLowerCase();d&&(b.target=d,v(c,"crios/")&&(b.target="_blank"));zf(J())==Ef&&(a=a||"http://localhost",b.scrollbars=!0);c=a||"";(d=b)||(d={});a=window;b=c instanceof lc?c:pc("undefined"!=typeof c.href?c.href:String(c));c=d.target||c.target;e=[];
+for(g in d)switch(g){case "width":case "height":case "top":case "left":e.push(g+"="+d[g]);break;case "target":case "noreferrer":break;default:e.push(g+"="+(d[g]?1:0))}var g=e.join(",");(x("iPhone")&&!x("iPod")&&!x("iPad")||x("iPad")||x("iPod"))&&a.navigator&&a.navigator.standalone&&c&&"_self"!=c?(g=a.document.createElement("A"),b instanceof lc||b instanceof lc||(b=b.la?b.ja():String(b),oc.test(b)||(b="about:invalid#zClosurez"),b=qc(b)),g.href=nc(b),g.setAttribute("target",c),d.noreferrer&&g.setAttribute("rel",
+"noreferrer"),d=document.createEvent("MouseEvent"),d.initMouseEvent("click",!0,!0,a,1),g.dispatchEvent(d),g={}):d.noreferrer?(g=a.open("",c,g),a=nc(b),g&&(bb&&v(a,";")&&(a="'"+a.replace(/'/g,"%27")+"'"),g.opener=null,dc("b/12014412, meta tag with sanitized URL"),a='<META HTTP-EQUIV="refresh" content="0; url='+qa(a)+'">',a=vc(a),g.document.write(uc(a)),g.document.close())):g=a.open(nc(b),c,g);if(g)try{g.focus()}catch(l){}return g}
+function Ff(a){return new z(function(b){function c(){sd(2E3).then(function(){if(!a||a.closed)b();else return c()})}return c()})}var Gf=/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/;function Hf(){var a=null;return(new z(function(b){"complete"==k.document.readyState?b():(a=function(){b()},dd(window,"load",a))})).s(function(b){E(window,"load",a);throw b;})}
+function If(){return Jf(void 0)?Hf().then(function(){return new z(function(a,b){var c=k.document,d=setTimeout(function(){b(Error("Cordova framework is not ready."))},1E3);c.addEventListener("deviceready",function(){clearTimeout(d);a()},!1)})}):B(Error("Cordova must run in an Android or iOS file scheme."))}function Jf(a){a=a||J();return!("file:"!==Kf()||!a.toLowerCase().match(/iphone|ipad|ipod|android/))}function Lf(){var a=k.window;try{return!(!a||a==a.top)}catch(b){return!1}}
+function K(){return firebase.INTERNAL.hasOwnProperty("reactNative")?"ReactNative":firebase.INTERNAL.hasOwnProperty("node")?"Node":"Browser"}function Mf(){var a=K();return"ReactNative"===a||"Node"===a}var Ef="Firefox",Af="Chrome";
+function zf(a){var b=a.toLowerCase();if(v(b,"opera/")||v(b,"opr/")||v(b,"opios/"))return"Opera";if(v(b,"iemobile"))return"IEMobile";if(v(b,"msie")||v(b,"trident/"))return"IE";if(v(b,"edge/"))return"Edge";if(v(b,"firefox/"))return Ef;if(v(b,"silk/"))return"Silk";if(v(b,"blackberry"))return"Blackberry";if(v(b,"webos"))return"Webos";if(!v(b,"safari/")||v(b,"chrome/")||v(b,"crios/")||v(b,"android"))if(!v(b,"chrome/")&&!v(b,"crios/")||v(b,"edge/")){if(v(b,"android"))return"Android";if((a=a.match(/([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/))&&
+2==a.length)return a[1]}else return Af;else return"Safari";return"Other"}var Nf={Cc:"FirebaseCore-web",Ec:"FirebaseUI-web"};function Of(a,b){b=b||[];var c=[],d={},e;for(e in Nf)d[Nf[e]]=!0;for(e=0;e<b.length;e++)"undefined"!==typeof d[b[e]]&&(delete d[b[e]],c.push(b[e]));c.sort();b=c;b.length||(b=["FirebaseCore-web"]);c=K();d="";"Browser"===c?d=zf(J()):d=c;return d+"/JsCore/"+a+"/"+b.join(",")}function J(){return k.navigator&&k.navigator.userAgent||""}
+function L(a,b){a=a.split(".");b=b||k;for(var c=0;c<a.length&&"object"==typeof b&&null!=b;c++)b=b[a[c]];c!=a.length&&(b=void 0);return b}function Pf(){try{var a=k.localStorage,b=Qf();if(a)return a.setItem(b,"1"),a.removeItem(b),uf()?!!k.indexedDB:!0}catch(c){}return!1}function Rf(){return(Sf()||"chrome-extension:"===Kf()||Jf())&&!Mf()&&Pf()}function Sf(){return"http:"===Kf()||"https:"===Kf()}function Kf(){return k.location&&k.location.protocol||null}
+function Tf(a){a=a||J();return Bf(a)||zf(a)==Ef?!1:!0}function Uf(a){return"undefined"===typeof a?null:Cc(a)}function Vf(a){var b={},c;for(c in a)a.hasOwnProperty(c)&&null!==a[c]&&void 0!==a[c]&&(b[c]=a[c]);return b}function Wf(a){if(null!==a)return JSON.parse(a)}function Qf(a){return a?a:""+Math.floor(1E9*Math.random()).toString()}function Xf(a){a=a||J();return"Safari"==zf(a)||a.toLowerCase().match(/iphone|ipad|ipod/)?!1:!0}
+function Yf(){var a=k.___jsl;if(a&&a.H)for(var b in a.H)if(a.H[b].r=a.H[b].r||[],a.H[b].L=a.H[b].L||[],a.H[b].r=a.H[b].L.concat(),a.CP)for(var c=0;c<a.CP.length;c++)a.CP[c]=null}function Zf(){var a=k.navigator;return a&&"boolean"===typeof a.onLine&&(Sf()||"chrome-extension:"===Kf()||"undefined"!==typeof a.connection)?a.onLine:!0}function $f(a,b,c,d){if(a>b)throw Error("Short delay should be less than long delay!");this.c=a;this.b=b;a=c||J();d=d||K();this.a=Bf(a)||"ReactNative"===d}
+$f.prototype.get=function(){return this.a?this.b:this.c};function ag(){var a=k.document;return a&&"undefined"!==typeof a.visibilityState?"visible"==a.visibilityState:!0}function bg(){var a=k.document,b=null;return ag()||!a?A():(new z(function(c){b=function(){ag()&&(a.removeEventListener("visibilitychange",b,!1),c())};a.addEventListener("visibilitychange",b,!1)})).s(function(c){a.removeEventListener("visibilitychange",b,!1);throw c;})}
+function cg(a){try{var b=new Date(parseInt(a,10));if(!isNaN(b.getTime())&&!/[^0-9]/.test(a))return b.toUTCString()}catch(c){}return null};var dg={};var eg;try{var fg={};Object.defineProperty(fg,"abcd",{configurable:!0,enumerable:!0,value:1});Object.defineProperty(fg,"abcd",{configurable:!0,enumerable:!0,value:2});eg=2==fg.abcd}catch(a){eg=!1}function M(a,b,c){eg?Object.defineProperty(a,b,{configurable:!0,enumerable:!0,value:c}):a[b]=c}function gg(a,b){if(b)for(var c in b)b.hasOwnProperty(c)&&M(a,c,b[c])}function hg(a){var b={};gg(b,a);return b}function ig(a){var b={},c;for(c in a)a.hasOwnProperty(c)&&(b[c]=a[c]);return b}
+function jg(a,b){if(!b||!b.length)return!0;if(!a)return!1;for(var c=0;c<b.length;c++){var d=a[b[c]];if(void 0===d||null===d||""===d)return!1}return!0}function kg(a){var b=a;if("object"==typeof a&&null!=a){b="length"in a?[]:{};for(var c in a)M(b,c,kg(a[c]))}return b};function lg(a){var b={},c=a[mg],d=a[ng];a=a[og];if(!c||!a)throw Error("Invalid provider user info!");b[pg]=d||null;b[qg]=c;M(this,rg,a);M(this,sg,kg(b))}var mg="email",ng="newEmail",og="requestType",qg="email",pg="fromEmail",sg="data",rg="operation";function N(a,b){this.code=tg+a;this.message=b||ug[a]||""}t(N,Error);N.prototype.B=function(){return{code:this.code,message:this.message}};N.prototype.toJSON=function(){return this.B()};function vg(a){var b=a&&a.code;return b?new N(b.substring(tg.length),a.message):null}
+var tg="auth/",ug={"argument-error":"","app-not-authorized":"This app, identified by the domain where it's hosted, is not authorized to use Firebase Authentication with the provided API key. Review your key configuration in the Google API console.","app-not-installed":"The requested mobile application corresponding to the identifier (Android package name or iOS bundle ID) provided is not installed on this device.","captcha-check-failed":"The reCAPTCHA response token provided is either invalid, expired, already used or the domain associated with it does not match the list of whitelisted domains.",
+"code-expired":"The SMS code has expired. Please re-send the verification code to try again.","cordova-not-ready":"Cordova framework is not ready.","cors-unsupported":"This browser is not supported.","credential-already-in-use":"This credential is already associated with a different user account.","custom-token-mismatch":"The custom token corresponds to a different audience.","requires-recent-login":"This operation is sensitive and requires recent authentication. Log in again before retrying this request.",
+"dynamic-link-not-activated":"Please activate Dynamic Links in the Firebase Console and agree to the terms and conditions.","email-already-in-use":"The email address is already in use by another account.","expired-action-code":"The action code has expired. ","cancelled-popup-request":"This operation has been cancelled due to another conflicting popup being opened.","internal-error":"An internal error has occurred.","invalid-app-credential":"The phone verification request contains an invalid application verifier. The reCAPTCHA token response is either invalid or expired.",
+"invalid-app-id":"The mobile app identifier is not registed for the current project.","invalid-user-token":"The user's credential is no longer valid. The user must sign in again.","invalid-auth-event":"An internal error has occurred.","invalid-verification-code":"The SMS verification code used to create the phone auth credential is invalid. Please resend the verification code sms and be sure use the verification code provided by the user.","invalid-continue-uri":"The continue URL provided in the request is invalid.",
+"invalid-cordova-configuration":"The following Cordova plugins must be installed to enable OAuth sign-in: cordova-plugin-buildinfo, cordova-universal-links-plugin, cordova-plugin-browsertab, cordova-plugin-inappbrowser and cordova-plugin-customurlscheme.","invalid-custom-token":"The custom token format is incorrect. Please check the documentation.","invalid-email":"The email address is badly formatted.","invalid-api-key":"Your API key is invalid, please check you have copied it correctly.","invalid-cert-hash":"The SHA-1 certificate hash provided is invalid.",
+"invalid-credential":"The supplied auth credential is malformed or has expired.","invalid-persistence-type":"The specified persistence type is invalid. It can only be local, session or none.","invalid-message-payload":"The email template corresponding to this action contains invalid characters in its message. Please fix by going to the Auth email templates section in the Firebase Console.","invalid-oauth-provider":"EmailAuthProvider is not supported for this operation. This operation only supports OAuth providers.",
+"invalid-oauth-client-id":"The OAuth client ID provided is either invalid or does not match the specified API key.","unauthorized-domain":"This domain is not authorized for OAuth operations for your Firebase project. Edit the list of authorized domains from the Firebase console.","invalid-action-code":"The action code is invalid. This can happen if the code is malformed, expired, or has already been used.","wrong-password":"The password is invalid or the user does not have a password.","invalid-phone-number":"The format of the phone number provided is incorrect. Please enter the phone number in a format that can be parsed into E.164 format. E.164 phone numbers are written in the format [+][country code][subscriber number including area code].",
+"invalid-recipient-email":"The email corresponding to this action failed to send as the provided recipient email address is invalid.","invalid-sender":"The email template corresponding to this action contains an invalid sender email or name. Please fix by going to the Auth email templates section in the Firebase Console.","invalid-verification-id":"The verification ID used to create the phone auth credential is invalid.","missing-android-pkg-name":"An Android Package Name must be provided if the Android App is required to be installed.",
+"auth-domain-config-required":"Be sure to include authDomain when calling firebase.initializeApp(), by following the instructions in the Firebase console.","missing-app-credential":"The phone verification request is missing an application verifier assertion. A reCAPTCHA response token needs to be provided.","missing-verification-code":"The phone auth credential was created with an empty SMS verification code.","missing-continue-uri":"A continue URL must be provided in the request.","missing-iframe-start":"An internal error has occurred.",
+"missing-ios-bundle-id":"An iOS Bundle ID must be provided if an App Store ID is provided.","missing-phone-number":"To send verification codes, provide a phone number for the recipient.","missing-verification-id":"The phone auth credential was created with an empty verification ID.","app-deleted":"This instance of FirebaseApp has been deleted.","account-exists-with-different-credential":"An account already exists with the same email address but different sign-in credentials. Sign in using a provider associated with this email address.",
+"network-request-failed":"A network error (such as timeout, interrupted connection or unreachable host) has occurred.","no-auth-event":"An internal error has occurred.","no-such-provider":"User was not linked to an account with the given provider.","operation-not-allowed":"The given sign-in provider is disabled for this Firebase project. Enable it in the Firebase console, under the sign-in method tab of the Auth section.","operation-not-supported-in-this-environment":'This operation is not supported in the environment this application is running on. "location.protocol" must be http, https or chrome-extension and web storage must be enabled.',
+"popup-blocked":"Unable to establish a connection with the popup. It may have been blocked by the browser.","popup-closed-by-user":"The popup has been closed by the user before finalizing the operation.","provider-already-linked":"User can only be linked to one identity for the given provider.","quota-exceeded":"The project's quota for this operation has been exceeded.","redirect-cancelled-by-user":"The redirect operation has been cancelled by the user before finalizing.","redirect-operation-pending":"A redirect sign-in operation is already pending.",
+timeout:"The operation has timed out.","user-token-expired":"The user's credential is no longer valid. The user must sign in again.","too-many-requests":"We have blocked all requests from this device due to unusual activity. Try again later.","unauthorized-continue-uri":"The domain of the continue URL is not whitelisted.  Please whitelist the domain in the Firebase console.","unsupported-persistence-type":"The current environment does not support the specified persistence type.","user-cancelled":"User did not grant your application the permissions it requested.",
+"user-not-found":"There is no user record corresponding to this identifier. The user may have been deleted.","user-disabled":"The user account has been disabled by an administrator.","user-mismatch":"The supplied credentials do not correspond to the previously signed in user.","user-signed-out":"","weak-password":"The password must be 6 characters long or more.","web-storage-unsupported":"This browser is not supported or 3rd party cookies and data may be disabled."};function wg(a){var b=a[xg];if("undefined"===typeof b)throw new N("missing-continue-uri");if("string"!==typeof b||"string"===typeof b&&!b.length)throw new N("invalid-continue-uri");this.h=b;this.c=this.a=null;this.g=!1;var c=a[yg];if(c&&"object"===typeof c){b=c[zg];var d=c[Ag];c=c[Bg];if("string"===typeof b&&b.length){this.a=b;if("undefined"!==typeof d&&"boolean"!==typeof d)throw new N("argument-error",Ag+" property must be a boolean when specified.");this.g=!!d;if("undefined"!==typeof c&&("string"!==
+typeof c||"string"===typeof c&&!c.length))throw new N("argument-error",Bg+" property must be a non empty string when specified.");this.c=c||null}else{if("undefined"!==typeof b)throw new N("argument-error",zg+" property must be a non empty string when specified.");if("undefined"!==typeof d||"undefined"!==typeof c)throw new N("missing-android-pkg-name");}}else if("undefined"!==typeof c)throw new N("argument-error",yg+" property must be a non null object when specified.");this.b=null;if((b=a[Cg])&&"object"===
+typeof b)if(b=b[Dg],"string"===typeof b&&b.length)this.b=b;else{if("undefined"!==typeof b)throw new N("argument-error",Dg+" property must be a non empty string when specified.");}else if("undefined"!==typeof b)throw new N("argument-error",Cg+" property must be a non null object when specified.");a=a[Eg];if("undefined"!==typeof a&&"boolean"!==typeof a)throw new N("argument-error",Eg+" property must be a boolean when specified.");if((this.f=!!a)&&!this.b&&!this.a)throw new N("argument-error",Eg+" property can't be true when no mobile application is provided.");
+}var yg="android",Eg="handleCodeInApp",Cg="iOS",xg="url",Ag="installApp",Bg="minimumVersion",zg="packageName",Dg="bundleId";function Fg(a){var b={};b.continueUrl=a.h;b.canHandleCodeInApp=a.f;if(b.androidPackageName=a.a)b.androidMinimumVersion=a.c,b.androidInstallApp=a.g;b.iOSBundleId=a.b;for(var c in b)null===b[c]&&delete b[c];return b};function Gg(a){this.b=a.sub;na();this.a=a.provider_id||a.firebase&&a.firebase.sign_in_provider||null}function Hg(a){a=a.split(".");if(3!=a.length)return null;a=a[1];for(var b=(4-a.length%4)%4,c=0;c<b;c++)a+=".";try{var d=JSON.parse(Kd(a));if(d.sub&&d.iss&&d.aud&&d.exp)return new Gg(d)}catch(e){}return null};var Ig="oauth_consumer_key oauth_nonce oauth_signature oauth_signature_method oauth_timestamp oauth_token oauth_version".split(" "),Jg=["client_id","response_type","scope","redirect_uri","state"],Kg={Dc:{Ma:"locale",za:500,ya:600,Na:"facebook.com",$a:Jg},Fc:{Ma:null,za:500,ya:620,Na:"github.com",$a:Jg},Gc:{Ma:"hl",za:515,ya:680,Na:"google.com",$a:Jg},Mc:{Ma:"lang",za:485,ya:705,Na:"twitter.com",$a:Ig}};function Lg(a){for(var b in Kg)if(Kg[b].Na==a)return Kg[b];return null};function Mg(a){var b={};b["facebook.com"]=Ng;b["google.com"]=Og;b["github.com"]=Pg;b["twitter.com"]=Qg;var c=a&&a[Rg];try{if(c)return b[c]?new b[c](a):new Sg(a);if("undefined"!==typeof a[Tg])return new Ug(a)}catch(d){}return null}var Tg="idToken",Rg="providerId";function Ug(a){var b=a[Rg];if(!b&&a[Tg]){var c=Hg(a[Tg]);c&&c.a&&(b=c.a)}if(!b)throw Error("Invalid additional user info!");a=!!a.isNewUser;M(this,"providerId",b);M(this,"isNewUser",a)}
+function Sg(a){Ug.call(this,a);a=Wf(a.rawUserInfo||"{}");M(this,"profile",kg(a||{}))}t(Sg,Ug);function Ng(a){Sg.call(this,a);if("facebook.com"!=this.providerId)throw Error("Invalid provider ID!");}t(Ng,Sg);function Pg(a){Sg.call(this,a);if("github.com"!=this.providerId)throw Error("Invalid provider ID!");M(this,"username",this.profile&&this.profile.login||null)}t(Pg,Sg);function Og(a){Sg.call(this,a);if("google.com"!=this.providerId)throw Error("Invalid provider ID!");}t(Og,Sg);
+function Qg(a){Sg.call(this,a);if("twitter.com"!=this.providerId)throw Error("Invalid provider ID!");M(this,"username",a.screenName||null)}t(Qg,Sg);function Vg(a,b){return a.then(function(a){if(a[O]){var c=Hg(a[O]);if(!c||b!=c.b)throw new N("user-mismatch");return a}throw new N("user-mismatch");}).s(function(a){throw a&&a.code&&a.code==tg+"user-not-found"?new N("user-mismatch"):a;})}
+function Wg(a,b){if(b.idToken||b.accessToken)b.idToken&&M(this,"idToken",b.idToken),b.accessToken&&M(this,"accessToken",b.accessToken);else if(b.oauthToken&&b.oauthTokenSecret)M(this,"accessToken",b.oauthToken),M(this,"secret",b.oauthTokenSecret);else throw new N("internal-error","failed to construct a credential");M(this,"providerId",a)}Wg.prototype.wa=function(a){return Xg(a,Yg(this))};Wg.prototype.b=function(a,b){var c=Yg(this);c.idToken=b;return Zg(a,c)};
+Wg.prototype.c=function(a,b){var c=Yg(this);return Vg($g(a,c),b)};function Yg(a){var b={};a.idToken&&(b.id_token=a.idToken);a.accessToken&&(b.access_token=a.accessToken);a.secret&&(b.oauth_token_secret=a.secret);b.providerId=a.providerId;return{postBody:Ie(b).toString(),requestUri:"http://localhost"}}
+Wg.prototype.B=function(){var a={providerId:this.providerId};this.idToken&&(a.oauthIdToken=this.idToken);this.accessToken&&(a.oauthAccessToken=this.accessToken);this.secret&&(a.oauthTokenSecret=this.secret);return a};function ah(a,b){this.nc=b||[];gg(this,{providerId:a,isOAuthProvider:!0});this.qb={};this.Wa=(Lg(a)||{}).Ma||null;this.Ua=null}ah.prototype.Ba=function(a){this.qb=Ua(a);return this};function P(a){ah.call(this,a,Jg);this.a=[]}t(P,ah);
+P.prototype.sa=function(a){Ha(this.a,a)||this.a.push(a);return this};P.prototype.vb=function(){return La(this.a)};P.prototype.credential=function(a,b){if(!a&&!b)throw new N("argument-error","credential failed: must provide the ID token and/or the access token.");return new Wg(this.providerId,{idToken:a||null,accessToken:b||null})};function bh(){P.call(this,"facebook.com")}t(bh,P);M(bh,"PROVIDER_ID","facebook.com");
+function ch(a){if(!a)throw new N("argument-error","credential failed: expected 1 argument (the OAuth access token).");var b=a;q(a)&&(b=a.accessToken);return(new bh).credential(null,b)}function dh(){P.call(this,"github.com")}t(dh,P);M(dh,"PROVIDER_ID","github.com");function eh(a){if(!a)throw new N("argument-error","credential failed: expected 1 argument (the OAuth access token).");var b=a;q(a)&&(b=a.accessToken);return(new dh).credential(null,b)}
+function fh(){P.call(this,"google.com");this.sa("profile")}t(fh,P);M(fh,"PROVIDER_ID","google.com");function gh(a,b){var c=a;q(a)&&(c=a.idToken,b=a.accessToken);return(new fh).credential(c,b)}function hh(){ah.call(this,"twitter.com",Ig)}t(hh,ah);M(hh,"PROVIDER_ID","twitter.com");
+function ih(a,b){var c=a;q(c)||(c={oauthToken:a,oauthTokenSecret:b});if(!c.oauthToken||!c.oauthTokenSecret)throw new N("argument-error","credential failed: expected 2 arguments (the OAuth access token and secret).");return new Wg("twitter.com",c)}function jh(a,b){this.a=a;this.f=b;M(this,"providerId","password")}jh.prototype.wa=function(a){return Q(a,kh,{email:this.a,password:this.f})};jh.prototype.b=function(a,b){return Q(a,lh,{idToken:b,email:this.a,password:this.f})};
+jh.prototype.c=function(a,b){return Vg(this.wa(a),b)};jh.prototype.B=function(){return{email:this.a,password:this.f}};function mh(){gg(this,{providerId:"password",isOAuthProvider:!1})}gg(mh,{PROVIDER_ID:"password"});function nh(a){if(!(a.Pa&&a.Oa||a.Da&&a.Y))throw new N("internal-error");this.a=a;M(this,"providerId","phone")}nh.prototype.wa=function(a){return a.Qa(oh(this))};nh.prototype.b=function(a,b){var c=oh(this);c.idToken=b;return Q(a,ph,c)};
+nh.prototype.c=function(a,b){var c=oh(this);c.operation="REAUTH";a=Q(a,qh,c);return Vg(a,b)};nh.prototype.B=function(){var a={providerId:"phone"};this.a.Pa&&(a.verificationId=this.a.Pa);this.a.Oa&&(a.verificationCode=this.a.Oa);this.a.Da&&(a.temporaryProof=this.a.Da);this.a.Y&&(a.phoneNumber=this.a.Y);return a};function oh(a){return a.a.Da&&a.a.Y?{temporaryProof:a.a.Da,phoneNumber:a.a.Y}:{sessionInfo:a.a.Pa,code:a.a.Oa}}
+function rh(a){try{this.a=a||firebase.auth()}catch(b){throw new N("argument-error","Either an instance of firebase.auth.Auth must be passed as an argument to the firebase.auth.PhoneAuthProvider constructor, or the default firebase App instance must be initialized via firebase.initializeApp().");}gg(this,{providerId:"phone",isOAuthProvider:!1})}
+rh.prototype.Qa=function(a,b){var c=this.a.c;return A(b.verify()).then(function(d){if(!m(d))throw new N("argument-error","An implementation of firebase.auth.ApplicationVerifier.prototype.verify() must return a firebase.Promise that resolves with a string.");switch(b.type){case "recaptcha":return sh(c,{phoneNumber:a,recaptchaToken:d}).then(function(a){"function"===typeof b.reset&&b.reset();return a},function(a){"function"===typeof b.reset&&b.reset();throw a;});default:throw new N("argument-error",
+'Only firebase.auth.ApplicationVerifiers with type="recaptcha" are currently supported.');}})};function th(a,b){if(!a)throw new N("missing-verification-id");if(!b)throw new N("missing-verification-code");return new nh({Pa:a,Oa:b})}gg(rh,{PROVIDER_ID:"phone"});
+function uh(a){if(a.temporaryProof&&a.phoneNumber)return new nh({Da:a.temporaryProof,Y:a.phoneNumber});var b=a&&a.providerId;if(!b||"password"===b)return null;var c=a&&a.oauthAccessToken,d=a&&a.oauthTokenSecret;a=a&&a.oauthIdToken;try{switch(b){case "google.com":return gh(a,c);case "facebook.com":return ch(c);case "github.com":return eh(c);case "twitter.com":return ih(c,d);default:return(new P(b)).credential(a,c)}}catch(e){return null}}
+function vh(a){if(!a.isOAuthProvider)throw new N("invalid-oauth-provider");};function wh(a,b,c,d,e){this.b=a;this.c=b||null;this.f=c||null;this.g=d||null;this.a=e||null;if(this.f||this.a){if(this.f&&this.a)throw new N("invalid-auth-event");if(this.f&&!this.g)throw new N("invalid-auth-event");}else throw new N("invalid-auth-event");}wh.prototype.B=function(){return{type:this.b,eventId:this.c,urlResponse:this.f,sessionId:this.g,error:this.a&&this.a.B()}};function xh(a){a=a||{};return a.type?new wh(a.type,a.eventId,a.urlResponse,a.sessionId,a.error&&vg(a.error)):null};function yh(a){var b="unauthorized-domain",c=void 0,d=De(a);a=d.b;d=d.c;"chrome-extension"==d?c=oa("This chrome extension ID (chrome-extension://%s) is not authorized to run this operation. Add it to the OAuth redirect domains list in the Firebase console -> Auth section -> Sign in method tab.",a):"http"==d||"https"==d?c=oa("This domain (%s) is not authorized to run this operation. Add it to the OAuth redirect domains list in the Firebase console -> Auth section -> Sign in method tab.",a):b="operation-not-supported-in-this-environment";
+N.call(this,b,c)}t(yh,N);function zh(a,b,c){N.call(this,a,c);a=b||{};a.rb&&M(this,"email",a.rb);a.Y&&M(this,"phoneNumber",a.Y);a.credential&&M(this,"credential",a.credential)}t(zh,N);zh.prototype.B=function(){var a={code:this.code,message:this.message};this.email&&(a.email=this.email);this.phoneNumber&&(a.phoneNumber=this.phoneNumber);var b=this.credential&&this.credential.B();b&&Wa(a,b);return a};zh.prototype.toJSON=function(){return this.B()};
+function Ah(a){if(a.code){var b=a.code||"";0==b.indexOf(tg)&&(b=b.substring(tg.length));var c={credential:uh(a)};if(a.email)c.rb=a.email;else if(a.phoneNumber)c.Y=a.phoneNumber;else return new N(b,a.message||void 0);return new zh(b,c,a.message)}return null};function Bh(a){this.f=a}t(Bh,Ne);Bh.prototype.a=function(){return new this.f};Bh.prototype.b=function(){return{}};
+function Ch(a,b,c){var d="Node"==K();d=k.XMLHttpRequest||d&&firebase.INTERNAL.node&&firebase.INTERNAL.node.XMLHttpRequest;if(!d)throw new N("internal-error","The XMLHttpRequest compatibility library was not found.");this.b=a;a=b||{};this.i=a.secureTokenEndpoint||"https://securetoken.googleapis.com/v1/token";this.l=a.secureTokenTimeout||Dh;this.c=Ua(a.secureTokenHeaders||Eh);this.g=a.firebaseEndpoint||"https://www.googleapis.com/identitytoolkit/v3/relyingparty/";this.h=a.firebaseTimeout||Fh;this.a=
+Ua(a.firebaseHeaders||Gh);c&&(this.a["X-Client-Version"]=c,this.c["X-Client-Version"]=c);this.f=new rf;this.o=new Bh(d)}var Hh,O="idToken",Dh=new $f(3E4,6E4),Eh={"Content-Type":"application/x-www-form-urlencoded"},Fh=new $f(3E4,6E4),Gh={"Content-Type":"application/json"};function Ih(a,b){b?a.a["X-Firebase-Locale"]=b:delete a.a["X-Firebase-Locale"]}function Jh(a,b){b?(a.a["X-Client-Version"]=b,a.c["X-Client-Version"]=b):(delete a.a["X-Client-Version"],delete a.c["X-Client-Version"])}
+function Kh(a,b,c,d,e,f,g){Zf()?(yf()?a=r(a.m,a):(Hh||(Hh=new z(function(a,b){Lh(a,b)})),a=r(a.u,a)),a(b,c,d,e,f,g)):c&&c(null)}
+Ch.prototype.m=function(a,b,c,d,e,f){var g="Node"==K(),l=Mf()?g?new Se(this.o):new Se:new Se(this.f);if(f){l.f=Math.max(0,f);var n=setTimeout(function(){G(l,"timeout")},f)}fd(l,"complete",function(){n&&clearTimeout(n);var a=null;try{a=JSON.parse(hf(this))||null}catch(vb){a=null}b&&b(a)});ld(l,"ready",function(){n&&clearTimeout(n);Lc(this)});ld(l,"timeout",function(){n&&clearTimeout(n);Lc(this);b&&b(null)});Ye(l,a,c,d,e)};
+var Mh=dc("https://apis.google.com/js/client.js?onload=%{onload}"),Nh="__fcb"+Math.floor(1E6*Math.random()).toString();function Lh(a,b){if(((window.gapi||{}).client||{}).request)a();else{k[Nh]=function(){((window.gapi||{}).client||{}).request?a():b(Error("CORS_UNSUPPORTED"))};var c=hc(Mh,{onload:Nh});Td(kf(c),function(){b(Error("CORS_UNSUPPORTED"))})}}
+Ch.prototype.u=function(a,b,c,d,e){var f=this;Hh.then(function(){window.gapi.client.setApiKey(f.b);var g=window.gapi.auth.getToken();window.gapi.auth.setToken(null);window.gapi.client.request({path:a,method:c,body:d,headers:e,authType:"none",callback:function(a){window.gapi.auth.setToken(g);b&&b(a)}})}).s(function(a){b&&b({error:{message:a&&a.message||"CORS_UNSUPPORTED"}})})};
+function Oh(a,b){return new z(function(c,d){"refresh_token"==b.grant_type&&b.refresh_token||"authorization_code"==b.grant_type&&b.code?Kh(a,a.i+"?key="+encodeURIComponent(a.b),function(a){a?a.error?d(Ph(a)):a.access_token&&a.refresh_token?c(a):d(new N("internal-error")):d(new N("network-request-failed"))},"POST",Ie(b).toString(),a.c,a.l.get()):d(new N("internal-error"))})}
+function Qh(a,b,c,d,e,f){var g=De(a.g+b);I(g,"key",a.b);f&&I(g,"cb",na().toString());var l="GET"==c;if(l)for(var n in d)d.hasOwnProperty(n)&&I(g,n,d[n]);return new z(function(b,f){Kh(a,g.toString(),function(a){a?a.error?f(Ph(a,e||{})):b(a):f(new N("network-request-failed"))},c,l?void 0:Cc(Vf(d)),a.a,a.h.get())})}function Rh(a){if(!jf.test(a.email))throw new N("invalid-email");}function Sh(a){"email"in a&&Rh(a)}
+function Th(a,b){return Q(a,Uh,{identifier:b,continueUri:Sf()?vf():"http://localhost"}).then(function(a){return a.allProviders||[]})}function Vh(a){return Q(a,Wh,{}).then(function(a){return a.authorizedDomains||[]})}function Xh(a){if(!a[O])throw new N("internal-error");}
+function Yh(a){if(a.phoneNumber||a.temporaryProof){if(!a.phoneNumber||!a.temporaryProof)throw new N("internal-error");}else{if(!a.sessionInfo)throw new N("missing-verification-id");if(!a.code)throw new N("missing-verification-code");}}Ch.prototype.gb=function(){return Q(this,Zh,{})};Ch.prototype.kb=function(a,b){return Q(this,$h,{idToken:a,email:b})};Ch.prototype.lb=function(a,b){return Q(this,lh,{idToken:a,password:b})};var ai={displayName:"DISPLAY_NAME",photoUrl:"PHOTO_URL"};h=Ch.prototype;
+h.mb=function(a,b){var c={idToken:a},d=[];Pa(ai,function(a,f){var e=b[f];null===e?d.push(a):f in b&&(c[f]=e)});d.length&&(c.deleteAttribute=d);return Q(this,$h,c)};h.cb=function(a,b){a={requestType:"PASSWORD_RESET",email:a};Wa(a,b);return Q(this,bi,a)};h.bb=function(a,b){a={requestType:"VERIFY_EMAIL",idToken:a};Wa(a,b);return Q(this,ci,a)};function sh(a,b){return Q(a,di,b)}h.Qa=function(a){return Q(this,ei,a)};function fi(a,b,c){return Q(a,gi,{idToken:b,deleteProvider:c})}
+function hi(a){if(!a.requestUri||!a.sessionId&&!a.postBody)throw new N("internal-error");}function ii(a){var b=null;a.needConfirmation?(a.code="account-exists-with-different-credential",b=Ah(a)):"FEDERATED_USER_ID_ALREADY_LINKED"==a.errorMessage?(a.code="credential-already-in-use",b=Ah(a)):"EMAIL_EXISTS"==a.errorMessage?(a.code="email-already-in-use",b=Ah(a)):a.errorMessage&&(b=ji(a.errorMessage));if(b)throw b;if(!a[O])throw new N("internal-error");}
+function Xg(a,b){b.returnIdpCredential=!0;return Q(a,ki,b)}function Zg(a,b){b.returnIdpCredential=!0;return Q(a,li,b)}function $g(a,b){b.returnIdpCredential=!0;b.autoCreate=!1;return Q(a,mi,b)}function ni(a){if(!a.oobCode)throw new N("invalid-action-code");}h.Ta=function(a,b){return Q(this,oi,{oobCode:a,newPassword:b})};h.Ia=function(a){return Q(this,pi,{oobCode:a})};h.Sa=function(a){return Q(this,qi,{oobCode:a})};
+var qi={endpoint:"setAccountInfo",D:ni,ga:"email"},pi={endpoint:"resetPassword",D:ni,O:function(a){if(!a.email||!a.requestType)throw new N("internal-error");}},ri={endpoint:"signupNewUser",D:function(a){Rh(a);if(!a.password)throw new N("weak-password");},O:Xh,T:!0},Uh={endpoint:"createAuthUri"},si={endpoint:"deleteAccount",ea:["idToken"]},gi={endpoint:"setAccountInfo",ea:["idToken","deleteProvider"],D:function(a){if(!fa(a.deleteProvider))throw new N("internal-error");}},ti={endpoint:"getAccountInfo"},
+ci={endpoint:"getOobConfirmationCode",ea:["idToken","requestType"],D:function(a){if("VERIFY_EMAIL"!=a.requestType)throw new N("internal-error");},ga:"email"},bi={endpoint:"getOobConfirmationCode",ea:["requestType"],D:function(a){if("PASSWORD_RESET"!=a.requestType)throw new N("internal-error");Rh(a)},ga:"email"},Wh={nb:!0,endpoint:"getProjectConfig",yb:"GET"},ui={nb:!0,endpoint:"getRecaptchaParam",yb:"GET",O:function(a){if(!a.recaptchaSiteKey)throw new N("internal-error");}},oi={endpoint:"resetPassword",
+D:ni,ga:"email"},di={endpoint:"sendVerificationCode",ea:["phoneNumber","recaptchaToken"],ga:"sessionInfo"},$h={endpoint:"setAccountInfo",ea:["idToken"],D:Sh,T:!0},lh={endpoint:"setAccountInfo",ea:["idToken"],D:function(a){Sh(a);if(!a.password)throw new N("weak-password");},O:Xh,T:!0},Zh={endpoint:"signupNewUser",O:Xh,T:!0},ki={endpoint:"verifyAssertion",D:hi,O:ii,T:!0},mi={endpoint:"verifyAssertion",D:hi,O:function(a){if(a.errorMessage&&"USER_NOT_FOUND"==a.errorMessage)throw new N("user-not-found");
+if(a.errorMessage)throw ji(a.errorMessage);if(!a[O])throw new N("internal-error");},T:!0},li={endpoint:"verifyAssertion",D:function(a){hi(a);if(!a.idToken)throw new N("internal-error");},O:ii,T:!0},vi={endpoint:"verifyCustomToken",D:function(a){if(!a.token)throw new N("invalid-custom-token");},O:Xh,T:!0},kh={endpoint:"verifyPassword",D:function(a){Rh(a);if(!a.password)throw new N("wrong-password");},O:Xh,T:!0},ei={endpoint:"verifyPhoneNumber",D:Yh,O:Xh},ph={endpoint:"verifyPhoneNumber",D:function(a){if(!a.idToken)throw new N("internal-error");
+Yh(a)},O:function(a){if(a.temporaryProof)throw a.code="credential-already-in-use",Ah(a);Xh(a)}},qh={Lb:{USER_NOT_FOUND:"user-not-found"},endpoint:"verifyPhoneNumber",D:Yh,O:Xh};
+function Q(a,b,c){if(!jg(c,b.ea))return B(new N("internal-error"));var d=b.yb||"POST",e;return A(c).then(b.D).then(function(){b.T&&(c.returnSecureToken=!0);return Qh(a,b.endpoint,d,c,b.Lb,b.nb||!1)}).then(function(a){return e=a}).then(b.O).then(function(){if(!b.ga)return e;if(!(b.ga in e))throw new N("internal-error");return e[b.ga]})}function ji(a){return Ph({error:{errors:[{message:a}],code:400,message:a}})}
+function Ph(a,b){var c=(a.error&&a.error.errors&&a.error.errors[0]||{}).reason||"";var d={keyInvalid:"invalid-api-key",ipRefererBlocked:"app-not-authorized"};if(c=d[c]?new N(d[c]):null)return c;c=a.error&&a.error.message||"";d={INVALID_CUSTOM_TOKEN:"invalid-custom-token",CREDENTIAL_MISMATCH:"custom-token-mismatch",MISSING_CUSTOM_TOKEN:"internal-error",INVALID_IDENTIFIER:"invalid-email",MISSING_CONTINUE_URI:"internal-error",INVALID_EMAIL:"invalid-email",INVALID_PASSWORD:"wrong-password",USER_DISABLED:"user-disabled",
+MISSING_PASSWORD:"internal-error",EMAIL_EXISTS:"email-already-in-use",PASSWORD_LOGIN_DISABLED:"operation-not-allowed",INVALID_IDP_RESPONSE:"invalid-credential",FEDERATED_USER_ID_ALREADY_LINKED:"credential-already-in-use",INVALID_MESSAGE_PAYLOAD:"invalid-message-payload",INVALID_RECIPIENT_EMAIL:"invalid-recipient-email",INVALID_SENDER:"invalid-sender",EMAIL_NOT_FOUND:"user-not-found",EXPIRED_OOB_CODE:"expired-action-code",INVALID_OOB_CODE:"invalid-action-code",MISSING_OOB_CODE:"internal-error",CREDENTIAL_TOO_OLD_LOGIN_AGAIN:"requires-recent-login",
+INVALID_ID_TOKEN:"invalid-user-token",TOKEN_EXPIRED:"user-token-expired",USER_NOT_FOUND:"user-token-expired",CORS_UNSUPPORTED:"cors-unsupported",DYNAMIC_LINK_NOT_ACTIVATED:"dynamic-link-not-activated",INVALID_APP_ID:"invalid-app-id",TOO_MANY_ATTEMPTS_TRY_LATER:"too-many-requests",WEAK_PASSWORD:"weak-password",OPERATION_NOT_ALLOWED:"operation-not-allowed",USER_CANCELLED:"user-cancelled",CAPTCHA_CHECK_FAILED:"captcha-check-failed",INVALID_APP_CREDENTIAL:"invalid-app-credential",INVALID_CODE:"invalid-verification-code",
+INVALID_PHONE_NUMBER:"invalid-phone-number",INVALID_SESSION_INFO:"invalid-verification-id",INVALID_TEMPORARY_PROOF:"invalid-credential",MISSING_APP_CREDENTIAL:"missing-app-credential",MISSING_CODE:"missing-verification-code",MISSING_PHONE_NUMBER:"missing-phone-number",MISSING_SESSION_INFO:"missing-verification-id",QUOTA_EXCEEDED:"quota-exceeded",SESSION_EXPIRED:"code-expired",INVALID_CONTINUE_URI:"invalid-continue-uri",MISSING_ANDROID_PACKAGE_NAME:"missing-android-pkg-name",MISSING_IOS_BUNDLE_ID:"missing-ios-bundle-id",
+UNAUTHORIZED_DOMAIN:"unauthorized-continue-uri",INVALID_OAUTH_CLIENT_ID:"invalid-oauth-client-id",INVALID_CERT_HASH:"invalid-cert-hash"};Wa(d,b||{});b=(b=c.match(/^[^\s]+\s*:\s*(.*)$/))&&1<b.length?b[1]:void 0;for(var e in d)if(0===c.indexOf(e))return new N(d[e],b);!b&&a&&(b=Uf(a));return new N("internal-error",b)};var wi={Ic:{Va:"https://www.googleapis.com/identitytoolkit/v3/relyingparty/",ab:"https://securetoken.googleapis.com/v1/token",id:"p"},Kc:{Va:"https://staging-www.sandbox.googleapis.com/identitytoolkit/v3/relyingparty/",ab:"https://staging-securetoken.sandbox.googleapis.com/v1/token",id:"s"},Lc:{Va:"https://www-googleapis-test.sandbox.google.com/identitytoolkit/v3/relyingparty/",ab:"https://test-securetoken.sandbox.googleapis.com/v1/token",id:"t"}};
+function xi(a){for(var b in wi)if(wi[b].id===a)return a=wi[b],{firebaseEndpoint:a.Va,secureTokenEndpoint:a.ab};return null}var yi;yi=xi("__EID__")?"__EID__":void 0;function zi(a){this.b=a;this.a=null;this.Ya=Ai(this)}
+function Ai(a){return Bi().then(function(){return new z(function(b,c){L("gapi.iframes.getContext")().open({where:document.body,url:a.b,messageHandlersFilter:L("gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER"),attributes:{style:{position:"absolute",top:"-100px",width:"1px",height:"1px"}},dontclear:!0},function(d){function e(){clearTimeout(f);b()}a.a=d;a.a.restyle({setHideOnLeave:!1});var f=setTimeout(function(){c(Error("Network Error"))},Ci.get());d.ping(e).then(e,function(){c(Error("Network Error"))})})})})}
+function Di(a,b){return a.Ya.then(function(){return new z(function(c){a.a.send(b.type,b,c,L("gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER"))})})}function Ei(a,b){a.Ya.then(function(){a.a.register("authEvent",b,L("gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER"))})}var Fi=dc("https://apis.google.com/js/api.js?onload=%{onload}"),Gi=new $f(3E4,6E4),Ci=new $f(5E3,15E3),Hi=null;
+function Bi(){return Hi?Hi:Hi=(new z(function(a,b){if(Zf()){var c=function(){Yf();L("gapi.load")("gapi.iframes",{callback:a,ontimeout:function(){Yf();b(Error("Network Error"))},timeout:Gi.get()})};if(L("gapi.iframes.Iframe"))a();else if(L("gapi.load"))c();else{var d="__iframefcb"+Math.floor(1E6*Math.random()).toString();k[d]=function(){L("gapi.load")?c():b(Error("Network Error"))};d=hc(Fi,{onload:d});A(kf(d)).s(function(){b(Error("Network Error"))})}}else b(Error("Network Error"))})).s(function(a){Hi=
+null;throw a;})};function Ii(a,b,c){this.i=a;this.g=b;this.h=c;this.f=null;this.a=Ee(this.i,"/__/auth/iframe");I(this.a,"apiKey",this.g);I(this.a,"appName",this.h);this.b=null;this.c=[]}Ii.prototype.toString=function(){this.f?I(this.a,"v",this.f):Le(this.a.a,"v");this.b?I(this.a,"eid",this.b):Le(this.a.a,"eid");this.c.length?I(this.a,"fw",this.c.join(",")):Le(this.a.a,"fw");return this.a.toString()};function Ji(a,b,c,d,e){this.m=a;this.u=b;this.c=c;this.l=d;this.i=this.g=this.h=null;this.a=e;this.f=null}
+Ji.prototype.toString=function(){var a=Ee(this.m,"/__/auth/handler");I(a,"apiKey",this.u);I(a,"appName",this.c);I(a,"authType",this.l);if(this.a.isOAuthProvider){var b=this.a;try{var c=firebase.app(this.c).auth().$()}catch(l){c=null}b.Ua=c;I(a,"providerId",this.a.providerId);b=this.a;c=Vf(b.qb);for(var d in c)c[d]=c[d].toString();d=b.nc;c=Ua(c);for(var e=0;e<d.length;e++){var f=d[e];f in c&&delete c[f]}b.Wa&&b.Ua&&!c[b.Wa]&&(c[b.Wa]=b.Ua);Sa(c)||I(a,"customParameters",Uf(c))}"function"===typeof this.a.vb&&
+(b=this.a.vb(),b.length&&I(a,"scopes",b.join(",")));this.h?I(a,"redirectUrl",this.h):Le(a.a,"redirectUrl");this.g?I(a,"eventId",this.g):Le(a.a,"eventId");this.i?I(a,"v",this.i):Le(a.a,"v");if(this.b)for(var g in this.b)this.b.hasOwnProperty(g)&&!Ce(a,g)&&I(a,g,this.b[g]);this.f?I(a,"eid",this.f):Le(a.a,"eid");g=Ki(this.c);g.length&&I(a,"fw",g.join(","));return a.toString()};function Ki(a){try{return firebase.app(a).auth().Ka()}catch(b){return[]}}
+function Li(a,b,c,d,e){this.u=a;this.f=b;this.b=c;this.c=d||null;this.h=e||null;this.m=this.o=this.v=null;this.g=[];this.l=this.a=null}
+function Mi(a){var b=vf();return Vh(a).then(function(a){a:{var c=De(b),e=c.c;c=c.b;for(var f=0;f<a.length;f++){var g=a[f];var l=c;var n=e;0==g.indexOf("chrome-extension://")?l=De(g).b==l&&"chrome-extension"==n:"http"!=n&&"https"!=n?l=!1:Gf.test(g)?l=l==g:(g=g.split(".").join("\\."),l=(new RegExp("^(.+\\."+g+"|"+g+")$","i")).test(l));if(l){a=!0;break a}}a=!1}if(!a)throw new yh(vf());})}
+function Ni(a){if(a.l)return a.l;a.l=Hf().then(function(){if(!a.o){var b=a.c,c=a.h,d=Ki(a.b),e=new Ii(a.u,a.f,a.b);e.f=b;e.b=c;e.c=La(d||[]);a.o=e.toString()}a.i=new zi(a.o);Oi(a)});return a.l}h=Li.prototype;h.Ca=function(a,b,c){var d=new N("popup-closed-by-user"),e=new N("web-storage-unsupported"),f=this,g=!1;return this.ba().then(function(){Pi(f).then(function(c){c||(a&&Cf(a),b(e),g=!0)})}).s(function(){}).then(function(){if(!g)return Ff(a)}).then(function(){if(!g)return sd(c).then(function(){b(d)})})};
+h.Cb=function(){var a=J();return!Tf(a)&&!Xf(a)};h.xb=function(){return!1};
+h.ub=function(a,b,c,d,e,f,g){if(!a)return B(new N("popup-blocked"));if(g&&!Tf())return this.ba().s(function(b){Cf(a);e(b)}),d(),A();this.a||(this.a=Mi(Qi(this)));var l=this;return this.a.then(function(){var b=l.ba().s(function(b){Cf(a);e(b);throw b;});d();return b}).then(function(){vh(c);if(!g){var d=Ri(l.u,l.f,l.b,b,c,null,f,l.c,void 0,l.h);wf(d,a)}}).s(function(a){"auth/network-request-failed"==a.code&&(l.a=null);throw a;})};
+function Qi(a){a.m||(a.v=a.c?Of(a.c,Ki(a.b)):null,a.m=new Ch(a.f,xi(a.h),a.v));return a.m}h.Aa=function(a,b,c){this.a||(this.a=Mi(Qi(this)));var d=this;return this.a.then(function(){vh(b);var e=Ri(d.u,d.f,d.b,a,b,vf(),c,d.c,void 0,d.h);wf(e)}).s(function(a){"auth/network-request-failed"==a.code&&(d.a=null);throw a;})};h.ba=function(){var a=this;return Ni(this).then(function(){return a.i.Ya}).s(function(){a.a=null;throw new N("network-request-failed");})};h.Db=function(){return!0};
+function Ri(a,b,c,d,e,f,g,l,n,D){a=new Ji(a,b,c,d,e);a.h=f;a.g=g;a.i=l;a.b=Ua(n||null);a.f=D;return a.toString()}function Oi(a){if(!a.i)throw Error("IfcHandler must be initialized!");Ei(a.i,function(b){var c={};if(b&&b.authEvent){var d=!1;b=xh(b.authEvent);for(c=0;c<a.g.length;c++)d=a.g[c](b)||d;c={};c.status=d?"ACK":"ERROR";return A(c)}c.status="ERROR";return A(c)})}
+function Pi(a){var b={type:"webStorageSupport"};return Ni(a).then(function(){return Di(a.i,b)}).then(function(a){if(a&&a.length&&"undefined"!==typeof a[0].webStorageSupport)return a[0].webStorageSupport;throw Error();})}h.ua=function(a){this.g.push(a)};h.Ja=function(a){Ja(this.g,function(b){return b==a})};function Si(a){this.a=a||firebase.INTERNAL.reactNative&&firebase.INTERNAL.reactNative.AsyncStorage;if(!this.a)throw new N("internal-error","The React Native compatibility library was not found.");}h=Si.prototype;h.get=function(a){return A(this.a.getItem(a)).then(function(a){return a&&Wf(a)})};h.set=function(a,b){return A(this.a.setItem(a,Uf(b)))};h.X=function(a){return A(this.a.removeItem(a))};h.ia=function(){};h.da=function(){};function Ti(){this.a={}}h=Ti.prototype;h.get=function(a){return A(this.a[a])};h.set=function(a,b){this.a[a]=b;return A()};h.X=function(a){delete this.a[a];return A()};h.ia=function(){};h.da=function(){};function Ui(a,b,c,d,e,f){try{var g=!!k.indexedDB}catch(l){g=!1}if(!g)throw new N("web-storage-unsupported");this.u=a;this.h=b;this.g=c;this.l=d;this.m=e;this.f={};this.c=[];this.a=0;this.o=f||k.indexedDB}var Vi;function Wi(a){return new z(function(b,c){var d=a.o.open(a.u,a.m);d.onerror=function(a){c(Error(a.target.errorCode))};d.onupgradeneeded=function(b){b=b.target.result;try{b.createObjectStore(a.h,{keyPath:a.g})}catch(f){c(f)}};d.onsuccess=function(a){b(a.target.result)}})}
+function Xi(a){a.i||(a.i=Wi(a));return a.i}function Yi(a,b){return b.objectStore(a.h)}function Zi(a,b,c){return b.transaction([a.h],c?"readwrite":"readonly")}function $i(a){return new z(function(b,c){a.onsuccess=function(a){a&&a.target?b(a.target.result):b()};a.onerror=function(a){c(Error(a.target.errorCode))}})}h=Ui.prototype;
+h.set=function(a,b){var c=!1,d,e=this;return Qb(Xi(this).then(function(b){d=b;b=Yi(e,Zi(e,d,!0));return $i(b.get(a))}).then(function(f){var g=Yi(e,Zi(e,d,!0));if(f)return f.value=b,$i(g.put(f));e.a++;c=!0;f={};f[e.g]=a;f[e.l]=b;return $i(g.add(f))}).then(function(){e.f[a]=b}),function(){c&&e.a--})};h.get=function(a){var b=this;return Xi(this).then(function(c){return $i(Yi(b,Zi(b,c,!1)).get(a))}).then(function(a){return a&&a.value})};
+h.X=function(a){var b=!1,c=this;return Qb(Xi(this).then(function(d){b=!0;c.a++;return $i(Yi(c,Zi(c,d,!0))["delete"](a))}).then(function(){delete c.f[a]}),function(){b&&c.a--})};
+h.vc=function(){var a=this;return Xi(this).then(function(b){var c=Yi(a,Zi(a,b,!1));return c.getAll?$i(c.getAll()):new z(function(a,b){var d=[],e=c.openCursor();e.onsuccess=function(b){(b=b.target.result)?(d.push(b.value),b["continue"]()):a(d)};e.onerror=function(a){b(Error(a.target.errorCode))}})}).then(function(b){var c={},d=[];if(0==a.a){for(d=0;d<b.length;d++)c[b[d][a.g]]=b[d][a.l];d=xf(a.f,c);a.f=c}return d})};h.ia=function(a){0==this.c.length&&aj(this);this.c.push(a)};
+h.da=function(a){Ja(this.c,function(b){return b==a});0==this.c.length&&this.b&&this.b.cancel("STOP_EVENT")};function aj(a){function b(){a.b=sd(800).then(r(a.vc,a)).then(function(b){0<b.length&&w(a.c,function(a){a(b)})}).then(b).s(function(a){"STOP_EVENT"!=a.message&&b()});return a.b}a.b&&a.b.cancel("STOP_EVENT");b()};function bj(){if(!cj()){if("Node"==K())throw new N("internal-error","The LocalStorage compatibility library was not found.");throw new N("web-storage-unsupported");}this.a=dj()||firebase.INTERNAL.node.localStorage}function dj(){try{var a=k.localStorage,b=Qf();a&&(a.setItem(b,"1"),a.removeItem(b));return a}catch(c){return null}}
+function cj(){var a="Node"==K();a=dj()||a&&firebase.INTERNAL.node&&firebase.INTERNAL.node.localStorage;if(!a)return!1;try{return a.setItem("__sak","1"),a.removeItem("__sak"),!0}catch(b){return!1}}h=bj.prototype;h.get=function(a){var b=this;return A().then(function(){var c=b.a.getItem(a);return Wf(c)})};h.set=function(a,b){var c=this;return A().then(function(){var d=Uf(b);null===d?c.X(a):c.a.setItem(a,d)})};h.X=function(a){var b=this;return A().then(function(){b.a.removeItem(a)})};
+h.ia=function(a){k.window&&cd(k.window,"storage",a)};h.da=function(a){k.window&&E(k.window,"storage",a)};function ej(){}h=ej.prototype;h.get=function(){return A(null)};h.set=function(){return A()};h.X=function(){return A()};h.ia=function(){};h.da=function(){};function fj(){if(!gj()){if("Node"==K())throw new N("internal-error","The SessionStorage compatibility library was not found.");throw new N("web-storage-unsupported");}this.a=hj()||firebase.INTERNAL.node.sessionStorage}function hj(){try{var a=k.sessionStorage,b=Qf();a&&(a.setItem(b,"1"),a.removeItem(b));return a}catch(c){return null}}
+function gj(){var a="Node"==K();a=hj()||a&&firebase.INTERNAL.node&&firebase.INTERNAL.node.sessionStorage;if(!a)return!1;try{return a.setItem("__sak","1"),a.removeItem("__sak"),!0}catch(b){return!1}}h=fj.prototype;h.get=function(a){var b=this;return A().then(function(){var c=b.a.getItem(a);return Wf(c)})};h.set=function(a,b){var c=this;return A().then(function(){var d=Uf(b);null===d?c.X(a):c.a.setItem(a,d)})};h.X=function(a){var b=this;return A().then(function(){b.a.removeItem(a)})};h.ia=function(){};
+h.da=function(){};function ij(){var a={};a.Browser=jj;a.Node=kj;a.ReactNative=lj;this.a=a[K()]}var mj,jj={C:bj,jb:fj},kj={C:bj,jb:fj},lj={C:Si,jb:ej};var nj={Hc:"local",NONE:"none",Jc:"session"};function oj(a){var b=new N("invalid-persistence-type"),c=new N("unsupported-persistence-type");a:{for(d in nj)if(nj[d]==a){var d=!0;break a}d=!1}if(!d||"string"!==typeof a)throw b;switch(K()){case "ReactNative":if("session"===a)throw c;break;case "Node":if("none"!==a)throw c;break;default:if(!Pf()&&"none"!==a)throw c;}}
+function pj(a,b,c,d,e){this.i=a;this.g=b;this.A=c;this.u=d;this.v=e;this.a={};mj||(mj=new ij);a=mj;try{if(uf()){Vi||(Vi=new Ui("firebaseLocalStorageDb","firebaseLocalStorage","fbase_key","value",1));var f=Vi}else f=new a.a.C;this.l=f}catch(g){this.l=new Ti,this.u=!0}try{this.o=new a.a.jb}catch(g){this.o=new Ti}this.w=new Ti;this.h=r(this.m,this);this.b={}}var qj;function rj(){qj||(qj=new pj("firebase",":",!Xf(J())&&Lf()?!0:!1,Tf(),Pf()));return qj}
+function sj(a,b){switch(b){case "session":return a.o;case "none":return a.w;default:return a.l}}function tj(a,b,c){return a.i+a.g+b.name+(c?a.g+c:"")}pj.prototype.get=function(a,b){return sj(this,a.C).get(tj(this,a,b))};function uj(a,b,c){c=tj(a,b,c);"local"==b.C&&(a.b[c]=null);return sj(a,b.C).X(c)}pj.prototype.set=function(a,b,c){var d=tj(this,a,c),e=this,f=sj(this,a.C);return f.set(d,b).then(function(){return f.get(d)}).then(function(b){"local"==a.C&&(e.b[d]=b)})};
+function vj(a,b,c,d){b=tj(a,b,c);a.v&&(a.b[b]=k.localStorage.getItem(b));Sa(a.a)&&(sj(a,"local").ia(a.h),a.u||uf()||!a.v||wj(a));a.a[b]||(a.a[b]=[]);a.a[b].push(d)}function xj(a,b,c){b=tj(a,yj("local"),b);a.a[b]&&(Ja(a.a[b],function(a){return a==c}),0==a.a[b].length&&delete a.a[b]);Sa(a.a)&&zj(a)}
+function wj(a){Aj(a);a.f=setInterval(function(){for(var b in a.a){var c=k.localStorage.getItem(b),d=a.b[b];c!=d&&(a.b[b]=c,c=new Qc({type:"storage",key:b,target:window,oldValue:d,newValue:c,a:!0}),a.m(c))}},1E3)}function Aj(a){a.f&&(clearInterval(a.f),a.f=null)}function zj(a){sj(a,"local").da(a.h);Aj(a)}
+pj.prototype.m=function(a){if(a&&a.g){var b=a.a.key;if(null==b)for(var c in this.a){var d=this.b[c];"undefined"===typeof d&&(d=null);var e=k.localStorage.getItem(c);e!==d&&(this.b[c]=e,this.c(c))}else if(0==b.indexOf(this.i+this.g)&&this.a[b]){"undefined"!==typeof a.a.a?sj(this,"local").da(this.h):Aj(this);if(this.A)if(c=k.localStorage.getItem(b),d=a.a.newValue,d!==c)null!==d?k.localStorage.setItem(b,d):k.localStorage.removeItem(b);else if(this.b[b]===d&&"undefined"===typeof a.a.a)return;var f=this;
+c=function(){if("undefined"!==typeof a.a.a||f.b[b]!==k.localStorage.getItem(b))f.b[b]=k.localStorage.getItem(b),f.c(b)};y&&kb&&10==kb&&k.localStorage.getItem(b)!==a.a.newValue&&a.a.newValue!==a.a.oldValue?setTimeout(c,10):c()}}else w(a,r(this.c,this))};pj.prototype.c=function(a){this.a[a]&&w(this.a[a],function(a){a()})};function Cj(a){this.a=a;this.b=rj()}var Dj={name:"authEvent",C:"local"};function Ej(a){return a.b.get(Dj,a.a).then(function(a){return xh(a)})};function Fj(){this.a=rj()};function Gj(a,b,c,d,e,f,g){this.u=a;this.i=b;this.l=c;this.m=d||null;this.o=g||null;this.h=b+":"+c;this.A=new Fj;this.g=new Cj(this.h);this.f=null;this.b=[];this.v=e||500;this.w=f||2E3;this.a=this.c=null}function Hj(a){return new N("invalid-cordova-configuration",a)}h=Gj.prototype;
+h.ba=function(){return this.xa?this.xa:this.xa=If().then(function(){if("function"!==typeof L("universalLinks.subscribe",k))throw Hj("cordova-universal-links-plugin is not installed");if("undefined"===typeof L("BuildInfo.packageName",k))throw Hj("cordova-plugin-buildinfo is not installed");if("function"!==typeof L("cordova.plugins.browsertab.openUrl",k))throw Hj("cordova-plugin-browsertab is not installed");if("function"!==typeof L("cordova.InAppBrowser.open",k))throw Hj("cordova-plugin-inappbrowser is not installed");
+},function(){throw new N("cordova-not-ready");})};function Ij(){for(var a=20,b=[];0<a;)b.push("1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".charAt(Math.floor(62*Math.random()))),a--;return b.join("")}function Jj(a){var b=new ie;he(b,a);a=[];var c=8*b.g;56>b.c?he(b,fe,56-b.c):he(b,fe,b.b-(b.c-56));for(var d=63;56<=d;d--)b.f[d]=c&255,c/=256;ge(b);for(d=c=0;d<b.i;d++)for(var e=24;0<=e;e-=8)a[c++]=b.a[d]>>e&255;return Hd(a)}
+h.Ca=function(a,b){b(new N("operation-not-supported-in-this-environment"));return A()};h.ub=function(){return B(new N("operation-not-supported-in-this-environment"))};h.Db=function(){return!1};h.Cb=function(){return!0};h.xb=function(){return!0};
+h.Aa=function(a,b,c){if(this.c)return B(new N("redirect-operation-pending"));var d=this,e=k.document,f=null,g=null,l=null,n=null;return this.c=Qb(A().then(function(){vh(b);return Kj(d)}).then(function(){return Lj(d,a,b,c)}).then(function(){return(new z(function(a,b){g=function(){var b=L("cordova.plugins.browsertab.close",k);a();"function"===typeof b&&b();d.a&&"function"===typeof d.a.close&&(d.a.close(),d.a=null);return!1};d.ua(g);l=function(){f||(f=sd(d.w).then(function(){b(new N("redirect-cancelled-by-user"))}))};
+n=function(){ag()&&l()};e.addEventListener("resume",l,!1);J().toLowerCase().match(/android/)||e.addEventListener("visibilitychange",n,!1)})).s(function(a){return Mj(d).then(function(){throw a;})})}),function(){l&&e.removeEventListener("resume",l,!1);n&&e.removeEventListener("visibilitychange",n,!1);f&&f.cancel();g&&d.Ja(g);d.c=null})};
+function Lj(a,b,c,d){var e=Ij(),f=new wh(b,d,null,e,new N("no-auth-event")),g=L("BuildInfo.packageName",k);if("string"!==typeof g)throw new N("invalid-cordova-configuration");var l=L("BuildInfo.displayName",k),n={};if(J().toLowerCase().match(/iphone|ipad|ipod/))n.ibi=g;else if(J().toLowerCase().match(/android/))n.apn=g;else return B(new N("operation-not-supported-in-this-environment"));l&&(n.appDisplayName=l);e=Jj(e);n.sessionId=e;var D=Ri(a.u,a.i,a.l,b,c,null,d,a.m,n,a.o);return a.ba().then(function(){var b=
+a.h;return a.A.a.set(Dj,f.B(),b)}).then(function(){var b=L("cordova.plugins.browsertab.isAvailable",k);if("function"!==typeof b)throw new N("invalid-cordova-configuration");var c=null;b(function(b){if(b){c=L("cordova.plugins.browsertab.openUrl",k);if("function"!==typeof c)throw new N("invalid-cordova-configuration");c(D)}else{c=L("cordova.InAppBrowser.open",k);if("function"!==typeof c)throw new N("invalid-cordova-configuration");b=J();b=!(!b.match(/(iPad|iPhone|iPod).*OS 7_\d/i)&&!b.match(/(iPad|iPhone|iPod).*OS 8_\d/i));
+a.a=c(D,b?"_blank":"_system","location=yes")}})})}function Nj(a,b){for(var c=0;c<a.b.length;c++)try{a.b[c](b)}catch(d){}}function Kj(a){a.f||(a.f=a.ba().then(function(){return new z(function(b){function c(d){b(d);a.Ja(c);return!1}a.ua(c);Oj(a)})}));return a.f}function Mj(a){var b=null;return Ej(a.g).then(function(c){b=c;c=a.g;return uj(c.b,Dj,c.a)}).then(function(){return b})}
+function Oj(a){function b(b){e=!0;f&&f.cancel();Mj(a).then(function(c){var e=d;if(c&&b&&b.url){e=null;var f=b.url;var g=De(f),l=Ce(g,"link"),n=Ce(De(l),"link");g=Ce(g,"deep_link_id");f=Ce(De(g),"link")||g||n||l||f;-1!=f.indexOf("/__/auth/callback")&&(e=De(f),e=Wf(Ce(e,"firebaseError")||null),e=(e="object"===typeof e?vg(e):null)?new wh(c.b,c.c,null,null,e):new wh(c.b,c.c,f,c.g));e=e||d}Nj(a,e)})}var c=L("universalLinks.subscribe",k);if("function"!==typeof c)throw new N("invalid-cordova-configuration");
+var d=new wh("unknown",null,null,null,new N("no-auth-event")),e=!1,f=sd(a.v).then(function(){return Mj(a).then(function(){e||Nj(a,d)})}),g=k.handleOpenURL;k.handleOpenURL=function(a){0==a.toLowerCase().indexOf(L("BuildInfo.packageName",k).toLowerCase()+"://")&&b({url:a});if("function"===typeof g)try{g(a)}catch(n){console.error(n)}};c(null,b)}
+h.ua=function(a){this.b.push(a);Kj(this).s(function(b){"auth/invalid-cordova-configuration"===b.code&&(b=new wh("unknown",null,null,null,new N("no-auth-event")),a(b))})};h.Ja=function(a){Ja(this.b,function(b){return b==a})};function Pj(a){this.a=a;this.b=rj()}var Qj={name:"pendingRedirect",C:"session"};function Rj(a){return a.b.set(Qj,"pending",a.a)}function Sj(a){return uj(a.b,Qj,a.a)}function Tj(a){return a.b.get(Qj,a.a).then(function(a){return"pending"==a})};function Uj(a,b,c){this.v=a;this.l=b;this.u=c;this.h=[];this.f=!1;this.i=r(this.m,this);this.c=new Vj;this.o=new Wj;this.g=new Pj(this.l+":"+this.u);this.b={};this.b.unknown=this.c;this.b.signInViaRedirect=this.c;this.b.linkViaRedirect=this.c;this.b.reauthViaRedirect=this.c;this.b.signInViaPopup=this.o;this.b.linkViaPopup=this.o;this.b.reauthViaPopup=this.o;this.a=Xj(this.v,this.l,this.u,yi)}
+function Xj(a,b,c,d){var e=firebase.SDK_VERSION||null;return Jf()?new Gj(a,b,c,e,void 0,void 0,d):new Li(a,b,c,e,d)}Uj.prototype.reset=function(){this.f=!1;this.a.Ja(this.i);this.a=Xj(this.v,this.l,this.u)};function Yj(a){a.f||(a.f=!0,a.a.ua(a.i));var b=a.a;return a.a.ba().s(function(c){a.a==b&&a.reset();throw c;})}function Zj(a){a.a.Cb()&&Yj(a).s(function(b){var c=new wh("unknown",null,null,null,new N("operation-not-supported-in-this-environment"));ak(b)&&a.m(c)});a.a.xb()||bk(a.c)}
+Uj.prototype.subscribe=function(a){Ha(this.h,a)||this.h.push(a);if(!this.f){var b=this;Tj(this.g).then(function(a){a?Sj(b.g).then(function(){Yj(b).s(function(a){var c=new wh("unknown",null,null,null,new N("operation-not-supported-in-this-environment"));ak(a)&&b.m(c)})}):Zj(b)}).s(function(){Zj(b)})}};Uj.prototype.unsubscribe=function(a){Ja(this.h,function(b){return b==a})};
+Uj.prototype.m=function(a){if(!a)throw new N("invalid-auth-event");for(var b=!1,c=0;c<this.h.length;c++){var d=this.h[c];if(d.ob(a.b,a.c)){(b=this.b[a.b])&&b.h(a,d);b=!0;break}}bk(this.c);return b};var ck=new $f(2E3,1E4),dk=new $f(3E4,6E4);Uj.prototype.aa=function(){return this.c.aa()};function ek(a,b,c,d,e,f){return a.a.ub(b,c,d,function(){a.f||(a.f=!0,a.a.ua(a.i))},function(){a.reset()},e,f)}function ak(a){return a&&"auth/cordova-not-ready"==a.code?!0:!1}
+Uj.prototype.Aa=function(a,b,c){var d=this,e;return Rj(this.g).then(function(){return d.a.Aa(a,b,c).s(function(a){if(ak(a))throw new N("operation-not-supported-in-this-environment");e=a;return Sj(d.g).then(function(){throw e;})}).then(function(){return d.a.Db()?new z(function(){}):Sj(d.g).then(function(){return d.aa()}).then(function(){}).s(function(){})})})};Uj.prototype.Ca=function(a,b,c,d){return this.a.Ca(c,function(c){a.fa(b,null,c,d)},ck.get())};var fk={};
+function gk(a,b,c){var d=b+":"+c;fk[d]||(fk[d]=new Uj(a,b,c));return fk[d]}function Vj(){this.b=null;this.f=[];this.c=[];this.a=null;this.g=!1}Vj.prototype.reset=function(){this.b=null;this.a&&(this.a.cancel(),this.a=null)};
+Vj.prototype.h=function(a,b){if(!a)return B(new N("invalid-auth-event"));this.reset();this.g=!0;var c=a.b,d=a.c,e=a.a&&"auth/web-storage-unsupported"==a.a.code,f=a.a&&"auth/operation-not-supported-in-this-environment"==a.a.code;"unknown"!=c||e||f?a.a?(hk(this,!0,null,a.a),a=A()):a=b.va(c,d)?ik(this,a,b):B(new N("invalid-auth-event")):(hk(this,!1,null,null),a=A());return a};function bk(a){a.g||(a.g=!0,hk(a,!1,null,null))}
+function ik(a,b,c){c=c.va(b.b,b.c);var d=b.f,e=b.g,f=!!b.b.match(/Redirect$/);return c(d,e).then(function(b){hk(a,f,b,null)}).s(function(b){hk(a,f,null,b)})}function jk(a,b){a.b=function(){return B(b)};if(a.c.length)for(var c=0;c<a.c.length;c++)a.c[c](b)}function kk(a,b){a.b=function(){return A(b)};if(a.f.length)for(var c=0;c<a.f.length;c++)a.f[c](b)}function hk(a,b,c,d){b?d?jk(a,d):kk(a,c):kk(a,{user:null});a.f=[];a.c=[]}
+Vj.prototype.aa=function(){var a=this;return new z(function(b,c){a.b?a.b().then(b,c):(a.f.push(b),a.c.push(c),lk(a))})};function lk(a){var b=new N("timeout");a.a&&a.a.cancel();a.a=sd(dk.get()).then(function(){a.b||hk(a,!0,null,b)})}function Wj(){}Wj.prototype.h=function(a,b){if(!a)return B(new N("invalid-auth-event"));var c=a.b,d=a.c;a.a?(b.fa(a.b,null,a.a,a.c),a=A()):a=b.va(c,d)?mk(a,b):B(new N("invalid-auth-event"));return a};
+function mk(a,b){var c=a.c,d=a.b;return b.va(d,c)(a.f,a.g).then(function(a){b.fa(d,a,null,c)}).s(function(a){b.fa(d,null,a,c)})};function nk(a,b){this.a=b;M(this,"verificationId",a)}nk.prototype.confirm=function(a){a=th(this.verificationId,a);return this.a(a)};function ok(a,b,c,d){return(new rh(a)).Qa(b,c).then(function(a){return new nk(a,d)})};function pk(a,b,c,d,e,f){this.h=a;this.i=b;this.g=c;this.c=d;this.f=e;this.l=!!f;this.b=null;this.a=this.c;if(this.f<this.c)throw Error("Proactive refresh lower bound greater than upper bound!");}pk.prototype.start=function(){this.a=this.c;qk(this,!0)};function rk(a,b){if(b)return a.a=a.c,a.g();b=a.a;a.a*=2;a.a>a.f&&(a.a=a.f);return b}
+function qk(a,b){sk(a);a.b=sd(rk(a,b)).then(function(){return a.l?A():bg()}).then(function(){return a.h()}).then(function(){qk(a,!0)}).s(function(b){a.i(b)&&qk(a,!1)})}function sk(a){a.b&&(a.b.cancel(),a.b=null)};function tk(a){this.f=a;this.b=this.a=null;this.c=0}tk.prototype.B=function(){return{apiKey:this.f.b,refreshToken:this.a,accessToken:this.b,expirationTime:this.c}};function uk(a,b){var c=b[O],d=b.refreshToken;b=vk(b.expiresIn);a.b=c;a.c=b;a.a=d}function vk(a){return na()+1E3*parseInt(a,10)}
+function wk(a,b){return Oh(a.f,b).then(function(b){a.b=b.access_token;a.c=vk(b.expires_in);a.a=b.refresh_token;return{accessToken:a.b,expirationTime:a.c,refreshToken:a.a}}).s(function(b){"auth/user-token-expired"==b.code&&(a.a=null);throw b;})}tk.prototype.getToken=function(a){a=!!a;return this.b&&!this.a?B(new N("user-token-expired")):a||!this.b||na()>this.c-3E4?this.a?wk(this,{grant_type:"refresh_token",refresh_token:this.a}):A(null):A({accessToken:this.b,expirationTime:this.c,refreshToken:this.a})};function xk(a,b){this.a=a||null;this.b=b||null;gg(this,{lastSignInTime:cg(b||null),creationTime:cg(a||null)})}function yk(a){return new xk(a.a,a.b)}xk.prototype.B=function(){return{lastLoginAt:this.b,createdAt:this.a}};function zk(a,b,c,d,e,f){gg(this,{uid:a,displayName:d||null,photoURL:e||null,email:c||null,phoneNumber:f||null,providerId:b})}function Ak(a,b){C.call(this,a);for(var c in b)this[c]=b[c]}t(Ak,C);
+function Bk(a,b,c){this.A=[];this.G=a.apiKey;this.o=a.appName;this.w=a.authDomain||null;a=firebase.SDK_VERSION?Of(firebase.SDK_VERSION):null;this.c=new Ch(this.G,xi(yi),a);this.h=new tk(this.c);Ck(this,b[O]);uk(this.h,b);M(this,"refreshToken",this.h.a);Dk(this,c||{});F.call(this);this.I=!1;this.w&&Rf()&&(this.a=gk(this.w,this.G,this.o));this.N=[];this.i=null;this.l=Ek(this);this.U=r(this.Ga,this);var d=this;this.ha=null;this.ra=function(a){d.na(a.h)};this.W=null;this.R=[];this.qa=function(a){Fk(d,
+a.f)};this.V=null}t(Bk,F);Bk.prototype.na=function(a){this.ha=a;Ih(this.c,a)};Bk.prototype.$=function(){return this.ha};function Gk(a,b){a.W&&E(a.W,"languageCodeChanged",a.ra);(a.W=b)&&cd(b,"languageCodeChanged",a.ra)}function Fk(a,b){a.R=b;Jh(a.c,firebase.SDK_VERSION?Of(firebase.SDK_VERSION,a.R):null)}Bk.prototype.Ka=function(){return La(this.R)};function Hk(a,b){a.V&&E(a.V,"frameworkChanged",a.qa);(a.V=b)&&cd(b,"frameworkChanged",a.qa)}Bk.prototype.Ga=function(){this.l.b&&(sk(this.l),this.l.start())};
+function Ik(a){try{return firebase.app(a.o).auth()}catch(b){throw new N("internal-error","No firebase.auth.Auth instance is available for the Firebase App '"+a.o+"'!");}}function Ek(a){return new pk(function(){return a.F(!0)},function(a){return a&&"auth/network-request-failed"==a.code?!0:!1},function(){var b=a.h.c-na()-3E5;return 0<b?b:0},3E4,96E4,!1)}function Jk(a){a.m||a.l.b||(a.l.start(),E(a,"tokenChanged",a.U),cd(a,"tokenChanged",a.U))}function Kk(a){E(a,"tokenChanged",a.U);sk(a.l)}
+function Ck(a,b){a.pa=b;M(a,"_lat",b)}function Lk(a,b){Ja(a.N,function(a){return a==b})}function Mk(a){for(var b=[],c=0;c<a.N.length;c++)b.push(a.N[c](a));return Ob(b).then(function(){return a})}function Nk(a){a.a&&!a.I&&(a.I=!0,a.a.subscribe(a))}
+function Dk(a,b){gg(a,{uid:b.uid,displayName:b.displayName||null,photoURL:b.photoURL||null,email:b.email||null,emailVerified:b.emailVerified||!1,phoneNumber:b.phoneNumber||null,isAnonymous:b.isAnonymous||!1,metadata:new xk(b.createdAt,b.lastLoginAt),providerData:[]})}M(Bk.prototype,"providerId","firebase");function Ok(){}function Pk(a){return A().then(function(){if(a.m)throw new N("app-deleted");})}function Qk(a){return Da(a.providerData,function(a){return a.providerId})}
+function Rk(a,b){b&&(Sk(a,b.providerId),a.providerData.push(b))}function Sk(a,b){Ja(a.providerData,function(a){return a.providerId==b})}function Tk(a,b,c){("uid"!=b||c)&&a.hasOwnProperty(b)&&M(a,b,c)}
+function Uk(a,b){a!=b&&(gg(a,{uid:b.uid,displayName:b.displayName,photoURL:b.photoURL,email:b.email,emailVerified:b.emailVerified,phoneNumber:b.phoneNumber,isAnonymous:b.isAnonymous,providerData:[]}),b.metadata?M(a,"metadata",yk(b.metadata)):M(a,"metadata",new xk),w(b.providerData,function(b){Rk(a,b)}),a.h=b.h,M(a,"refreshToken",a.h.a))}h=Bk.prototype;h.reload=function(){var a=this;return R(this,Pk(this).then(function(){return Vk(a).then(function(){return Mk(a)}).then(Ok)}))};
+function Vk(a){return a.F().then(function(b){var c=a.isAnonymous;return Wk(a,b).then(function(){c||Tk(a,"isAnonymous",!1);return b})})}h.F=function(a){var b=this;return R(this,Pk(this).then(function(){return b.h.getToken(a)}).then(function(a){if(!a)throw new N("internal-error");a.accessToken!=b.pa&&(Ck(b,a.accessToken),G(b,new Ak("tokenChanged")));Tk(b,"refreshToken",a.refreshToken);return a.accessToken}))};
+h.getToken=function(a){dg["firebase.User.prototype.getToken is deprecated. Please use firebase.User.prototype.getIdToken instead."]||(dg["firebase.User.prototype.getToken is deprecated. Please use firebase.User.prototype.getIdToken instead."]=!0,"undefined"!==typeof console&&"function"===typeof console.warn&&console.warn("firebase.User.prototype.getToken is deprecated. Please use firebase.User.prototype.getIdToken instead."));return this.F(a)};
+function Xk(a,b){b[O]&&a.pa!=b[O]&&(uk(a.h,b),G(a,new Ak("tokenChanged")),Ck(a,b[O]),Tk(a,"refreshToken",a.h.a))}function Wk(a,b){return Q(a.c,ti,{idToken:b}).then(r(a.gc,a))}
+h.gc=function(a){a=a.users;if(!a||!a.length)throw new N("internal-error");a=a[0];Dk(this,{uid:a.localId,displayName:a.displayName,photoURL:a.photoUrl,email:a.email,emailVerified:!!a.emailVerified,phoneNumber:a.phoneNumber,lastLoginAt:a.lastLoginAt,createdAt:a.createdAt});for(var b=Yk(a),c=0;c<b.length;c++)Rk(this,b[c]);Tk(this,"isAnonymous",!(this.email&&a.passwordHash)&&!(this.providerData&&this.providerData.length))};
+function Yk(a){return(a=a.providerUserInfo)&&a.length?Da(a,function(a){return new zk(a.rawId,a.providerId,a.email,a.displayName,a.photoUrl,a.phoneNumber)}):[]}h.Za=function(a){var b=this,c=null;return R(this,a.c(this.c,this.uid).then(function(a){Xk(b,a);c=Zk(b,a,"reauthenticate");b.i=null;return b.reload()}).then(function(){return c}),!0)};h.hc=function(a){return this.Za(a).then(function(){})};
+function $k(a,b){return Vk(a).then(function(){if(Ha(Qk(a),b))return Mk(a).then(function(){throw new N("provider-already-linked");})})}h.Xa=function(a){var b=this,c=null;return R(this,$k(this,a.providerId).then(function(){return b.F()}).then(function(c){return a.b(b.c,c)}).then(function(a){c=Zk(b,a,"link");return al(b,a)}).then(function(){return c}))};h.Zb=function(a){return this.Xa(a).then(function(a){return a.user})};
+h.$b=function(a,b){var c=this;return R(this,$k(this,"phone").then(function(){return ok(Ik(c),a,b,r(c.Xa,c))}))};h.ic=function(a,b){var c=this;return R(this,A().then(function(){return ok(Ik(c),a,b,r(c.Za,c))}),!0)};function Zk(a,b,c){var d=uh(b);b=Mg(b);return hg({user:a,credential:d,additionalUserInfo:b,operationType:c})}function al(a,b){Xk(a,b);return a.reload().then(function(){return a})}
+h.kb=function(a){var b=this;return R(this,this.F().then(function(c){return b.c.kb(c,a)}).then(function(a){Xk(b,a);return b.reload()}))};h.zc=function(a){var b=this;return R(this,this.F().then(function(c){return a.b(b.c,c)}).then(function(a){Xk(b,a);return b.reload()}))};h.lb=function(a){var b=this;return R(this,this.F().then(function(c){return b.c.lb(c,a)}).then(function(a){Xk(b,a);return b.reload()}))};
+h.mb=function(a){if(void 0===a.displayName&&void 0===a.photoURL)return Pk(this);var b=this;return R(this,this.F().then(function(c){return b.c.mb(c,{displayName:a.displayName,photoUrl:a.photoURL})}).then(function(a){Xk(b,a);Tk(b,"displayName",a.displayName||null);Tk(b,"photoURL",a.photoUrl||null);w(b.providerData,function(a){"password"===a.providerId&&(M(a,"displayName",b.displayName),M(a,"photoURL",b.photoURL))});return Mk(b)}).then(Ok))};
+h.yc=function(a){var b=this;return R(this,Vk(this).then(function(c){return Ha(Qk(b),a)?fi(b.c,c,[a]).then(function(a){var c={};w(a.providerUserInfo||[],function(a){c[a.providerId]=!0});w(Qk(b),function(a){c[a]||Sk(b,a)});c[rh.PROVIDER_ID]||M(b,"phoneNumber",null);return Mk(b)}):Mk(b).then(function(){throw new N("no-such-provider");})}))};
+h.delete=function(){var a=this;return R(this,this.F().then(function(b){return Q(a.c,si,{idToken:b})}).then(function(){G(a,new Ak("userDeleted"))})).then(function(){for(var b=0;b<a.A.length;b++)a.A[b].cancel("app-deleted");Gk(a,null);Hk(a,null);a.A=[];a.m=!0;Kk(a);M(a,"refreshToken",null);a.a&&a.a.unsubscribe(a)})};
+h.ob=function(a,b){return"linkViaPopup"==a&&(this.g||null)==b&&this.f||"reauthViaPopup"==a&&(this.g||null)==b&&this.f||"linkViaRedirect"==a&&(this.Z||null)==b||"reauthViaRedirect"==a&&(this.Z||null)==b?!0:!1};h.fa=function(a,b,c,d){"linkViaPopup"!=a&&"reauthViaPopup"!=a||d!=(this.g||null)||(c&&this.v?this.v(c):b&&!c&&this.f&&this.f(b),this.b&&(this.b.cancel(),this.b=null),delete this.f,delete this.v)};
+h.va=function(a,b){return"linkViaPopup"==a&&b==(this.g||null)?r(this.sb,this):"reauthViaPopup"==a&&b==(this.g||null)?r(this.tb,this):"linkViaRedirect"==a&&(this.Z||null)==b?r(this.sb,this):"reauthViaRedirect"==a&&(this.Z||null)==b?r(this.tb,this):null};h.ac=function(a){var b=this;return bl(this,"linkViaPopup",a,function(){return $k(b,a.providerId).then(function(){return Mk(b)})},!1)};h.jc=function(a){return bl(this,"reauthViaPopup",a,function(){return A()},!0)};
+function bl(a,b,c,d,e){if(!Rf())return B(new N("operation-not-supported-in-this-environment"));if(a.i&&!e)return B(a.i);var f=Lg(c.providerId),g=Qf(a.uid+":::"),l=null;(!Tf()||Lf())&&a.w&&c.isOAuthProvider&&(l=Ri(a.w,a.G,a.o,b,c,null,g,firebase.SDK_VERSION||null));var n=Df(l,f&&f.za,f&&f.ya);d=d().then(function(){cl(a);if(!e)return a.F().then(function(){})}).then(function(){return ek(a.a,n,b,c,g,!!l)}).then(function(){return new z(function(c,d){a.fa(b,null,new N("cancelled-popup-request"),a.g||null);
+a.f=c;a.v=d;a.g=g;a.b=a.a.Ca(a,b,n,g)})}).then(function(a){n&&Cf(n);return a?hg(a):null}).s(function(a){n&&Cf(n);throw a;});return R(a,d,e)}h.bc=function(a){var b=this;return dl(this,"linkViaRedirect",a,function(){return $k(b,a.providerId)},!1)};h.kc=function(a){return dl(this,"reauthViaRedirect",a,function(){return A()},!0)};
+function dl(a,b,c,d,e){if(!Rf())return B(new N("operation-not-supported-in-this-environment"));if(a.i&&!e)return B(a.i);var f=null,g=Qf(a.uid+":::");d=d().then(function(){cl(a);if(!e)return a.F().then(function(){})}).then(function(){a.Z=g;return Mk(a)}).then(function(b){a.ca&&(b=a.ca,b=b.b.set(el,a.B(),b.a));return b}).then(function(){return a.a.Aa(b,c,g)}).s(function(b){f=b;if(a.ca)return fl(a.ca);throw f;}).then(function(){if(f)throw f;});return R(a,d,e)}
+function cl(a){if(!a.a||!a.I){if(a.a&&!a.I)throw new N("internal-error");throw new N("auth-domain-config-required");}}h.sb=function(a,b){var c=this;this.b&&(this.b.cancel(),this.b=null);var d=null,e=this.F().then(function(d){return Zg(c.c,{requestUri:a,sessionId:b,idToken:d})}).then(function(a){d=Zk(c,a,"link");return al(c,a)}).then(function(){return d});return R(this,e)};
+h.tb=function(a,b){var c=this;this.b&&(this.b.cancel(),this.b=null);var d=null,e=A().then(function(){return Vg($g(c.c,{requestUri:a,sessionId:b}),c.uid)}).then(function(a){d=Zk(c,a,"reauthenticate");Xk(c,a);c.i=null;return c.reload()}).then(function(){return d});return R(this,e,!0)};h.bb=function(a){var b=this,c=null;return R(this,this.F().then(function(b){c=b;return"undefined"===typeof a||Sa(a)?{}:Fg(new wg(a))}).then(function(a){return b.c.bb(c,a)}).then(function(a){if(b.email!=a)return b.reload()}).then(function(){}))};
+function R(a,b,c){var d=gl(a,b,c);a.A.push(d);Qb(d,function(){Ia(a.A,d)});return d}function gl(a,b,c){return a.i&&!c?(b.cancel(),B(a.i)):b.s(function(b){!b||"auth/user-disabled"!=b.code&&"auth/user-token-expired"!=b.code||(a.i||G(a,new Ak("userInvalidated")),a.i=b);throw b;})}h.toJSON=function(){return this.B()};
+h.B=function(){var a={uid:this.uid,displayName:this.displayName,photoURL:this.photoURL,email:this.email,emailVerified:this.emailVerified,phoneNumber:this.phoneNumber,isAnonymous:this.isAnonymous,providerData:[],apiKey:this.G,appName:this.o,authDomain:this.w,stsTokenManager:this.h.B(),redirectEventId:this.Z||null};this.metadata&&Wa(a,this.metadata.B());w(this.providerData,function(b){a.providerData.push(ig(b))});return a};
+function hl(a){if(!a.apiKey)return null;var b={apiKey:a.apiKey,authDomain:a.authDomain,appName:a.appName},c={};if(a.stsTokenManager&&a.stsTokenManager.accessToken&&a.stsTokenManager.expirationTime)c[O]=a.stsTokenManager.accessToken,c.refreshToken=a.stsTokenManager.refreshToken||null,c.expiresIn=(a.stsTokenManager.expirationTime-na())/1E3;else return null;var d=new Bk(b,c,a);a.providerData&&w(a.providerData,function(a){a&&Rk(d,hg(a))});a.redirectEventId&&(d.Z=a.redirectEventId);return d}
+function il(a,b,c,d){var e=new Bk(a,b);c&&(e.ca=c);d&&Fk(e,d);return e.reload().then(function(){return e})};function jl(a){this.a=a;this.b=rj()}var el={name:"redirectUser",C:"session"};function fl(a){return uj(a.b,el,a.a)}function kl(a,b){return a.b.get(el,a.a).then(function(a){a&&b&&(a.authDomain=b);return hl(a||{})})};function ll(a,b){this.a=a;this.b=b||rj();this.c=null;this.f=ml(this);vj(this.b,yj("local"),this.a,r(this.g,this))}ll.prototype.g=function(){var a=this,b=yj("local");nl(this,function(){return A().then(function(){return a.c&&"local"!=a.c.C?a.b.get(b,a.a):null}).then(function(c){if(c)return ol(a,"local").then(function(){a.c=b})})})};function ol(a,b){var c=[],d;for(d in nj)nj[d]!==b&&c.push(uj(a.b,yj(nj[d]),a.a));c.push(uj(a.b,pl,a.a));return Nb(c)}
+function ml(a){var b=yj("local"),c=yj("session"),d=yj("none");return a.b.get(c,a.a).then(function(e){return e?c:a.b.get(d,a.a).then(function(c){return c?d:a.b.get(b,a.a).then(function(c){return c?b:a.b.get(pl,a.a).then(function(a){return a?yj(a):b})})})}).then(function(b){a.c=b;return ol(a,b.C)}).s(function(){a.c||(a.c=b)})}var pl={name:"persistence",C:"session"};function yj(a){return{name:"authUser",C:a}}
+ll.prototype.eb=function(a){var b=null,c=this;oj(a);return nl(this,function(){return a!=c.c.C?c.b.get(c.c,c.a).then(function(d){b=d;return ol(c,a)}).then(function(){c.c=yj(a);if(b)return c.b.set(c.c,b,c.a)}):A()})};function ql(a){return nl(a,function(){return a.b.set(pl,a.c.C,a.a)})}function rl(a,b){return nl(a,function(){return a.b.set(a.c,b.B(),a.a)})}function sl(a){return nl(a,function(){return uj(a.b,a.c,a.a)})}
+function tl(a,b){return nl(a,function(){return a.b.get(a.c,a.a).then(function(a){a&&b&&(a.authDomain=b);return hl(a||{})})})}function nl(a,b){a.f=a.f.then(b,b);return a.f};function ul(a){this.l=!1;M(this,"app",a);if(S(this).options&&S(this).options.apiKey)a=firebase.SDK_VERSION?Of(firebase.SDK_VERSION):null,this.c=new Ch(S(this).options&&S(this).options.apiKey,xi(yi),a);else throw new N("invalid-api-key");this.N=[];this.m=[];this.I=[];this.Gb=firebase.INTERNAL.createSubscribe(r(this.Xb,this));this.R=void 0;this.Hb=firebase.INTERNAL.createSubscribe(r(this.Yb,this));vl(this,null);this.h=new ll(S(this).options.apiKey+":"+S(this).name);this.G=new jl(S(this).options.apiKey+
+":"+S(this).name);this.U=T(this,wl(this));this.i=T(this,xl(this));this.W=!1;this.ha=r(this.uc,this);this.Ga=r(this.ka,this);this.pa=r(this.Pb,this);this.qa=r(this.Vb,this);this.ra=r(this.Wb,this);yl(this);this.INTERNAL={};this.INTERNAL["delete"]=r(this.delete,this);this.INTERNAL.logFramework=r(this.cc,this);this.o=0;F.call(this);zl(this);this.A=[]}t(ul,F);function Al(a){C.call(this,"languageCodeChanged");this.h=a}t(Al,C);function Bl(a){C.call(this,"frameworkChanged");this.f=a}t(Bl,C);h=ul.prototype;
+h.eb=function(a){a=this.h.eb(a);return T(this,a)};h.na=function(a){this.V===a||this.l||(this.V=a,Ih(this.c,this.V),G(this,new Al(this.$())))};h.$=function(){return this.V};h.Ac=function(){var a=k.navigator;this.na(a?a.languages&&a.languages[0]||a.language||a.userLanguage||null:null)};h.cc=function(a){this.A.push(a);Jh(this.c,firebase.SDK_VERSION?Of(firebase.SDK_VERSION,this.A):null);G(this,new Bl(this.A))};h.Ka=function(){return La(this.A)};
+function zl(a){Object.defineProperty(a,"lc",{get:function(){return this.$()},set:function(a){this.na(a)},enumerable:!1});a.V=null}h.toJSON=function(){return{apiKey:S(this).options.apiKey,authDomain:S(this).options.authDomain,appName:S(this).name,currentUser:U(this)&&U(this).B()}};function Cl(a){return a.Fb||B(new N("auth-domain-config-required"))}
+function yl(a){var b=S(a).options.authDomain,c=S(a).options.apiKey;b&&Rf()&&(a.Fb=a.U.then(function(){if(!a.l){a.a=gk(b,c,S(a).name);a.a.subscribe(a);U(a)&&Nk(U(a));if(a.w){Nk(a.w);var d=a.w;d.na(a.$());Gk(d,a);d=a.w;Fk(d,a.A);Hk(d,a);a.w=null}return a.a}}))}h.ob=function(a,b){switch(a){case "unknown":case "signInViaRedirect":return!0;case "signInViaPopup":return this.g==b&&!!this.f;default:return!1}};
+h.fa=function(a,b,c,d){"signInViaPopup"==a&&this.g==d&&(c&&this.v?this.v(c):b&&!c&&this.f&&this.f(b),this.b&&(this.b.cancel(),this.b=null),delete this.f,delete this.v)};h.va=function(a,b){return"signInViaRedirect"==a||"signInViaPopup"==a&&this.g==b&&this.f?r(this.Ob,this):null};
+h.Ob=function(a,b){var c=this;a={requestUri:a,sessionId:b};this.b&&(this.b.cancel(),this.b=null);var d=null,e=null,f=Xg(c.c,a).then(function(a){d=uh(a);e=Mg(a);return a});a=c.U.then(function(){return f}).then(function(a){return Dl(c,a)}).then(function(){return hg({user:U(c),credential:d,additionalUserInfo:e,operationType:"signIn"})});return T(this,a)};
+h.sc=function(a){if(!Rf())return B(new N("operation-not-supported-in-this-environment"));var b=this,c=Lg(a.providerId),d=Qf(),e=null;(!Tf()||Lf())&&S(this).options.authDomain&&a.isOAuthProvider&&(e=Ri(S(this).options.authDomain,S(this).options.apiKey,S(this).name,"signInViaPopup",a,null,d,firebase.SDK_VERSION||null));var f=Df(e,c&&c.za,c&&c.ya);c=Cl(this).then(function(b){return ek(b,f,"signInViaPopup",a,d,!!e)}).then(function(){return new z(function(a,c){b.fa("signInViaPopup",null,new N("cancelled-popup-request"),
+b.g);b.f=a;b.v=c;b.g=d;b.b=b.a.Ca(b,"signInViaPopup",f,d)})}).then(function(a){f&&Cf(f);return a?hg(a):null}).s(function(a){f&&Cf(f);throw a;});return T(this,c)};h.tc=function(a){if(!Rf())return B(new N("operation-not-supported-in-this-environment"));var b=this,c=Cl(this).then(function(){return ql(b.h)}).then(function(){return b.a.Aa("signInViaRedirect",a)});return T(this,c)};
+h.aa=function(){if(!Rf())return B(new N("operation-not-supported-in-this-environment"));var a=this,b=Cl(this).then(function(){return a.a.aa()}).then(function(a){return a?hg(a):null});return T(this,b)};function Dl(a,b){var c={};c.apiKey=S(a).options.apiKey;c.authDomain=S(a).options.authDomain;c.appName=S(a).name;return a.U.then(function(){return il(c,b,a.G,a.Ka())}).then(function(b){if(U(a)&&b.uid==U(a).uid)return Uk(U(a),b),a.ka(b);vl(a,b);Nk(b);return a.ka(b)}).then(function(){El(a)})}
+function vl(a,b){U(a)&&(Lk(U(a),a.Ga),E(U(a),"tokenChanged",a.pa),E(U(a),"userDeleted",a.qa),E(U(a),"userInvalidated",a.ra),Kk(U(a)));b&&(b.N.push(a.Ga),cd(b,"tokenChanged",a.pa),cd(b,"userDeleted",a.qa),cd(b,"userInvalidated",a.ra),0<a.o&&Jk(b));M(a,"currentUser",b);b&&(b.na(a.$()),Gk(b,a),Fk(b,a.A),Hk(b,a))}h.hb=function(){var a=this,b=this.i.then(function(){if(!U(a))return A();vl(a,null);return sl(a.h).then(function(){El(a)})});return T(this,b)};
+function Fl(a){var b=kl(a.G,S(a).options.authDomain).then(function(b){if(a.w=b)b.ca=a.G;return fl(a.G)});return T(a,b)}function wl(a){var b=S(a).options.authDomain,c=Fl(a).then(function(){return tl(a.h,b)}).then(function(b){return b?(b.ca=a.G,a.w&&(a.w.Z||null)==(b.Z||null)?b:b.reload().then(function(){return rl(a.h,b).then(function(){return b})}).s(function(c){return"auth/network-request-failed"==c.code?b:sl(a.h)})):null}).then(function(b){vl(a,b||null)});return T(a,c)}
+function xl(a){return a.U.then(function(){return a.aa()}).s(function(){}).then(function(){if(!a.l)return a.ha()}).s(function(){}).then(function(){if(!a.l){a.W=!0;var b=a.h;vj(b.b,yj("local"),b.a,a.ha)}})}
+h.uc=function(){var a=this;return tl(this.h,S(this).options.authDomain).then(function(b){if(!a.l){var c;if(c=U(a)&&b){c=U(a).uid;var d=b.uid;c=void 0===c||null===c||""===c||void 0===d||null===d||""===d?!1:c==d}if(c)return Uk(U(a),b),U(a).F();if(U(a)||b)vl(a,b),b&&(Nk(b),b.ca=a.G),a.a&&a.a.subscribe(a),El(a)}})};h.ka=function(a){return rl(this.h,a)};h.Pb=function(){El(this);this.ka(U(this))};h.Vb=function(){this.hb()};h.Wb=function(){this.hb()};
+function Gl(a,b){var c=null,d=null;return T(a,b.then(function(b){c=uh(b);d=Mg(b);return Dl(a,b)}).then(function(){return hg({user:U(a),credential:c,additionalUserInfo:d,operationType:"signIn"})}))}h.Xb=function(a){var b=this;this.addAuthTokenListener(function(){a.next(U(b))})};h.Yb=function(a){var b=this;Hl(this,function(){a.next(U(b))})};h.ec=function(a,b,c){var d=this;this.W&&firebase.Promise.resolve().then(function(){p(a)?a(U(d)):p(a.next)&&a.next(U(d))});return this.Gb(a,b,c)};
+h.dc=function(a,b,c){var d=this;this.W&&firebase.Promise.resolve().then(function(){d.R=d.getUid();p(a)?a(U(d)):p(a.next)&&a.next(U(d))});return this.Hb(a,b,c)};h.Rb=function(a){var b=this,c=this.i.then(function(){return U(b)?U(b).F(a).then(function(a){return{accessToken:a}}):null});return T(this,c)};h.pc=function(a){var b=this;return this.i.then(function(){return Gl(b,Q(b.c,vi,{token:a}))}).then(function(a){a=a.user;Tk(a,"isAnonymous",!1);return b.ka(a)}).then(function(){return U(b)})};
+h.qc=function(a,b){var c=this;return this.i.then(function(){return Gl(c,Q(c.c,kh,{email:a,password:b}))}).then(function(a){return a.user})};h.Kb=function(a,b){var c=this;return this.i.then(function(){return Gl(c,Q(c.c,ri,{email:a,password:b}))}).then(function(a){return a.user})};h.oc=function(a){return this.fb(a).then(function(a){return a.user})};h.fb=function(a){var b=this;return this.i.then(function(){return Gl(b,a.wa(b.c))})};
+h.gb=function(){var a=this;return this.i.then(function(){var b=U(a);return b&&b.isAnonymous?b:Gl(a,a.c.gb()).then(function(b){b=b.user;Tk(b,"isAnonymous",!0);return a.ka(b)}).then(function(){return U(a)})})};function S(a){return a.app}function U(a){return a.currentUser}h.getUid=function(){return U(this)&&U(this).uid||null};function Il(a){return U(a)&&U(a)._lat||null}
+function El(a){if(a.W){for(var b=0;b<a.m.length;b++)if(a.m[b])a.m[b](Il(a));if(a.R!==a.getUid()&&a.I.length)for(a.R=a.getUid(),b=0;b<a.I.length;b++)if(a.I[b])a.I[b](Il(a))}}h.Ib=function(a){this.addAuthTokenListener(a);this.o++;0<this.o&&U(this)&&Jk(U(this))};h.mc=function(a){var b=this;w(this.m,function(c){c==a&&b.o--});0>this.o&&(this.o=0);0==this.o&&U(this)&&Kk(U(this));this.removeAuthTokenListener(a)};
+h.addAuthTokenListener=function(a){var b=this;this.m.push(a);T(this,this.i.then(function(){b.l||Ha(b.m,a)&&a(Il(b))}))};h.removeAuthTokenListener=function(a){Ja(this.m,function(b){return b==a})};function Hl(a,b){a.I.push(b);T(a,a.i.then(function(){!a.l&&Ha(a.I,b)&&a.R!==a.getUid()&&(a.R=a.getUid(),b(Il(a)))}))}h.delete=function(){this.l=!0;for(var a=0;a<this.N.length;a++)this.N[a].cancel("app-deleted");this.N=[];this.h&&(a=this.h,xj(a.b,a.a,this.ha));this.a&&this.a.unsubscribe(this);return firebase.Promise.resolve()};
+function T(a,b){a.N.push(b);Qb(b,function(){Ia(a.N,b)});return b}h.Nb=function(a){return T(this,Th(this.c,a))};h.Bc=function(a){return this.Ia(a).then(function(a){return a.data.email})};h.Ta=function(a,b){return T(this,this.c.Ta(a,b).then(function(){}))};h.Ia=function(a){return T(this,this.c.Ia(a).then(function(a){return new lg(a)}))};h.Sa=function(a){return T(this,this.c.Sa(a).then(function(){}))};
+h.cb=function(a,b){var c=this;return T(this,A().then(function(){return"undefined"===typeof b||Sa(b)?{}:Fg(new wg(b))}).then(function(b){return c.c.cb(a,b)}).then(function(){}))};h.rc=function(a,b){return T(this,ok(this,a,b,r(this.fb,this)))};function Jl(a,b,c,d){a:{c=Array.prototype.slice.call(c);var e=0;for(var f=!1,g=0;g<b.length;g++)if(b[g].optional)f=!0;else{if(f)throw new N("internal-error","Argument validator encountered a required argument after an optional argument.");e++}f=b.length;if(c.length<e||f<c.length)d="Expected "+(e==f?1==e?"1 argument":e+" arguments":e+"-"+f+" arguments")+" but got "+c.length+".";else{for(e=0;e<c.length;e++)if(f=b[e].optional&&void 0===c[e],!b[e].M(c[e])&&!f){b=b[e];if(0>e||e>=Kl.length)throw new N("internal-error",
+"Argument validator received an unsupported number of arguments.");c=Kl[e];d=(d?"":c+" argument ")+(b.name?'"'+b.name+'" ':"")+"must be "+b.K+".";break a}d=null}}if(d)throw new N("argument-error",a+" failed: "+d);}var Kl="First Second Third Fourth Fifth Sixth Seventh Eighth Ninth".split(" ");function V(a,b){return{name:a||"",K:"a valid string",optional:!!b,M:m}}function Ll(){return{name:"opt_forceRefresh",K:"a boolean",optional:!0,M:ba}}
+function W(a,b){return{name:a||"",K:"a valid object",optional:!!b,M:q}}function Ml(a,b){return{name:a||"",K:"a function",optional:!!b,M:p}}function Nl(a,b){return{name:a||"",K:"null",optional:!!b,M:ea}}function Ol(){return{name:"",K:"an HTML element",optional:!1,M:function(a){return!!(a&&a instanceof Element)}}}function Pl(){return{name:"auth",K:"an instance of Firebase Auth",optional:!0,M:function(a){return!!(a&&a instanceof ul)}}}
+function Ql(){return{name:"app",K:"an instance of Firebase App",optional:!0,M:function(a){return!!(a&&a instanceof firebase.app.App)}}}function Rl(a){return{name:a?a+"Credential":"credential",K:a?"a valid "+a+" credential":"a valid credential",optional:!1,M:function(b){if(!b)return!1;var c=!a||b.providerId===a;return!(!b.wa||!c)}}}
+function Sl(){return{name:"authProvider",K:"a valid Auth provider",optional:!1,M:function(a){return!!(a&&a.providerId&&a.hasOwnProperty&&a.hasOwnProperty("isOAuthProvider"))}}}function Tl(){return{name:"applicationVerifier",K:"an implementation of firebase.auth.ApplicationVerifier",optional:!1,M:function(a){return!!(a&&m(a.type)&&p(a.verify))}}}function X(a,b,c,d){return{name:c||"",K:a.K+" or "+b.K,optional:!!d,M:function(c){return a.M(c)||b.M(c)}}};function Ul(a,b,c,d,e,f){M(this,"type","recaptcha");this.b=this.c=null;this.m=!1;this.l=b;this.a=c||{theme:"light",type:"image"};this.g=[];if(this.a[Vl])throw new N("argument-error","sitekey should not be provided for reCAPTCHA as one is automatically provisioned for the current project.");this.h="invisible"===this.a[Wl];if(!wc(b)||!this.h&&wc(b).hasChildNodes())throw new N("argument-error","reCAPTCHA container is either not found or already contains inner elements!");this.u=new Ch(a,f||null,e||null);
+this.o=d||function(){return null};var g=this;this.i=[];var l=this.a[Xl];this.a[Xl]=function(a){Yl(g,a);if("function"===typeof l)l(a);else if("string"===typeof l){var b=L(l,k);"function"===typeof b&&b(a)}};var n=this.a[Zl];this.a[Zl]=function(){Yl(g,null);if("function"===typeof n)n();else if("string"===typeof n){var a=L(n,k);"function"===typeof a&&a()}}}var Xl="callback",Zl="expired-callback",Vl="sitekey",Wl="size";function Yl(a,b){for(var c=0;c<a.i.length;c++)try{a.i[c](b)}catch(d){}}
+function $l(a,b){Ja(a.i,function(a){return a==b})}function am(a,b){a.g.push(b);Qb(b,function(){Ia(a.g,b)});return b}h=Ul.prototype;
+h.xa=function(){var a=this;return this.c?this.c:this.c=am(this,A().then(function(){if(Sf())return Hf();throw new N("operation-not-supported-in-this-environment","RecaptchaVerifier is only supported in a browser HTTP/HTTPS environment.");}).then(function(){return bm(cm(),a.o())}).then(function(){return Q(a.u,ui,{})}).then(function(b){a.a[Vl]=b.recaptchaSiteKey}).s(function(b){a.c=null;throw b;}))};
+h.render=function(){dm(this);var a=this;return am(this,this.xa().then(function(){if(null===a.b){var b=a.l;if(!a.h){var c=wc(b);b=zc("DIV");c.appendChild(b)}a.b=grecaptcha.render(b,a.a)}return a.b}))};h.verify=function(){dm(this);var a=this;return am(this,this.render().then(function(b){return new z(function(c){var d=grecaptcha.getResponse(b);if(d)c(d);else{var e=function(b){b&&($l(a,e),c(b))};a.i.push(e);a.h&&grecaptcha.execute(a.b)}})}))};h.reset=function(){dm(this);null!==this.b&&grecaptcha.reset(this.b)};
+function dm(a){if(a.m)throw new N("internal-error","RecaptchaVerifier instance has been destroyed.");}h.clear=function(){dm(this);this.m=!0;cm().b--;for(var a=0;a<this.g.length;a++)this.g[a].cancel("RecaptchaVerifier instance has been destroyed.");if(!this.h){a=wc(this.l);for(var b;b=a.firstChild;)a.removeChild(b)}};var em=dc("https://www.google.com/recaptcha/api.js?onload=%{onload}&render=explicit&hl=%{hl}");
+function fm(){this.b=k.grecaptcha?Infinity:0;this.c=null;this.a="__rcb"+Math.floor(1E6*Math.random()).toString()}
+function bm(a,b){return new z(function(c,d){if(Zf())if(!k.grecaptcha||b!==a.c&&!a.b){k[a.a]=function(){if(k.grecaptcha){a.c=b;var e=k.grecaptcha.render;k.grecaptcha.render=function(b,c){b=e(b,c);a.b++;return b};c()}else d(new N("internal-error"));delete k[a.a]};var e=hc(em,{onload:a.a,hl:b||""});A(kf(e)).s(function(){d(new N("internal-error","Unable to load external reCAPTCHA dependencies!"))})}else c();else d(new N("network-request-failed"))})}var gm=null;
+function cm(){gm||(gm=new fm);return gm}function hm(a,b,c){try{this.f=c||firebase.app()}catch(f){throw new N("argument-error","No firebase.app.App instance is currently initialized.");}if(this.f.options&&this.f.options.apiKey)c=this.f.options.apiKey;else throw new N("invalid-api-key");var d=this,e=null;try{e=this.f.auth().Ka()}catch(f){}e=firebase.SDK_VERSION?Of(firebase.SDK_VERSION,e):null;Ul.call(this,c,a,b,function(){try{var a=d.f.auth().$()}catch(g){a=null}return a},e,xi(yi))}t(hm,Ul);function Y(a,b){for(var c in b){var d=b[c].name;a[d]=im(d,a[c],b[c].j)}}function Z(a,b,c,d){a[b]=im(b,c,d)}function im(a,b,c){function d(){var a=Array.prototype.slice.call(arguments);Jl(e,c,a);return b.apply(this,a)}if(!c)return b;var e=jm(a),f;for(f in b)d[f]=b[f];for(f in b.prototype)d.prototype[f]=b.prototype[f];return d}function jm(a){a=a.split(".");return a[a.length-1]};Y(ul.prototype,{Sa:{name:"applyActionCode",j:[V("code")]},Ia:{name:"checkActionCode",j:[V("code")]},Ta:{name:"confirmPasswordReset",j:[V("code"),V("newPassword")]},Kb:{name:"createUserWithEmailAndPassword",j:[V("email"),V("password")]},Nb:{name:"fetchProvidersForEmail",j:[V("email")]},aa:{name:"getRedirectResult",j:[]},dc:{name:"onAuthStateChanged",j:[X(W(),Ml(),"nextOrObserver"),Ml("opt_error",!0),Ml("opt_completed",!0)]},ec:{name:"onIdTokenChanged",j:[X(W(),Ml(),"nextOrObserver"),Ml("opt_error",
+!0),Ml("opt_completed",!0)]},cb:{name:"sendPasswordResetEmail",j:[V("email"),X(W("opt_actionCodeSettings",!0),Nl(null,!0),"opt_actionCodeSettings",!0)]},eb:{name:"setPersistence",j:[V("persistence")]},fb:{name:"signInAndRetrieveDataWithCredential",j:[Rl()]},gb:{name:"signInAnonymously",j:[]},oc:{name:"signInWithCredential",j:[Rl()]},pc:{name:"signInWithCustomToken",j:[V("token")]},qc:{name:"signInWithEmailAndPassword",j:[V("email"),V("password")]},rc:{name:"signInWithPhoneNumber",j:[V("phoneNumber"),
+Tl()]},sc:{name:"signInWithPopup",j:[Sl()]},tc:{name:"signInWithRedirect",j:[Sl()]},hb:{name:"signOut",j:[]},toJSON:{name:"toJSON",j:[V(null,!0)]},Ac:{name:"useDeviceLanguage",j:[]},Bc:{name:"verifyPasswordResetCode",j:[V("code")]}});(function(a,b){for(var c in b){var d=b[c].name;if(d!==c){var e=b[c].Jb;Object.defineProperty(a,d,{get:function(){return this[c]},set:function(a){Jl(d,[e],[a],!0);this[c]=a},enumerable:!0})}}})(ul.prototype,{lc:{name:"languageCode",Jb:X(V(),Nl(),"languageCode")}});
+ul.Persistence=nj;ul.Persistence.LOCAL="local";ul.Persistence.SESSION="session";ul.Persistence.NONE="none";
+Y(Bk.prototype,{"delete":{name:"delete",j:[]},F:{name:"getIdToken",j:[Ll()]},getToken:{name:"getToken",j:[Ll()]},Xa:{name:"linkAndRetrieveDataWithCredential",j:[Rl()]},Zb:{name:"linkWithCredential",j:[Rl()]},$b:{name:"linkWithPhoneNumber",j:[V("phoneNumber"),Tl()]},ac:{name:"linkWithPopup",j:[Sl()]},bc:{name:"linkWithRedirect",j:[Sl()]},Za:{name:"reauthenticateAndRetrieveDataWithCredential",j:[Rl()]},hc:{name:"reauthenticateWithCredential",j:[Rl()]},ic:{name:"reauthenticateWithPhoneNumber",j:[V("phoneNumber"),
+Tl()]},jc:{name:"reauthenticateWithPopup",j:[Sl()]},kc:{name:"reauthenticateWithRedirect",j:[Sl()]},reload:{name:"reload",j:[]},bb:{name:"sendEmailVerification",j:[X(W("opt_actionCodeSettings",!0),Nl(null,!0),"opt_actionCodeSettings",!0)]},toJSON:{name:"toJSON",j:[V(null,!0)]},yc:{name:"unlink",j:[V("provider")]},kb:{name:"updateEmail",j:[V("email")]},lb:{name:"updatePassword",j:[V("password")]},zc:{name:"updatePhoneNumber",j:[Rl("phone")]},mb:{name:"updateProfile",j:[W("profile")]}});
+Y(z.prototype,{s:{name:"catch"},then:{name:"then"}});Y(nk.prototype,{confirm:{name:"confirm",j:[V("verificationCode")]}});Z(mh,"credential",function(a,b){return new jh(a,b)},[V("email"),V("password")]);Y(bh.prototype,{sa:{name:"addScope",j:[V("scope")]},Ba:{name:"setCustomParameters",j:[W("customOAuthParameters")]}});Z(bh,"credential",ch,[X(V(),W(),"token")]);Y(dh.prototype,{sa:{name:"addScope",j:[V("scope")]},Ba:{name:"setCustomParameters",j:[W("customOAuthParameters")]}});
+Z(dh,"credential",eh,[X(V(),W(),"token")]);Y(fh.prototype,{sa:{name:"addScope",j:[V("scope")]},Ba:{name:"setCustomParameters",j:[W("customOAuthParameters")]}});Z(fh,"credential",gh,[X(V(),X(W(),Nl()),"idToken"),X(V(),Nl(),"accessToken",!0)]);Y(hh.prototype,{Ba:{name:"setCustomParameters",j:[W("customOAuthParameters")]}});Z(hh,"credential",ih,[X(V(),W(),"token"),V("secret",!0)]);
+Y(P.prototype,{sa:{name:"addScope",j:[V("scope")]},credential:{name:"credential",j:[X(V(),Nl(),"idToken",!0),X(V(),Nl(),"accessToken",!0)]},Ba:{name:"setCustomParameters",j:[W("customOAuthParameters")]}});Z(rh,"credential",th,[V("verificationId"),V("verificationCode")]);Y(rh.prototype,{Qa:{name:"verifyPhoneNumber",j:[V("phoneNumber"),Tl()]}});Y(N.prototype,{toJSON:{name:"toJSON",j:[V(null,!0)]}});Y(zh.prototype,{toJSON:{name:"toJSON",j:[V(null,!0)]}});
+Y(yh.prototype,{toJSON:{name:"toJSON",j:[V(null,!0)]}});Y(hm.prototype,{clear:{name:"clear",j:[]},render:{name:"render",j:[]},verify:{name:"verify",j:[]}});
+(function(){if("undefined"!==typeof firebase&&firebase.INTERNAL&&firebase.INTERNAL.registerService){var a={Auth:ul,Error:N};Z(a,"EmailAuthProvider",mh,[]);Z(a,"FacebookAuthProvider",bh,[]);Z(a,"GithubAuthProvider",dh,[]);Z(a,"GoogleAuthProvider",fh,[]);Z(a,"TwitterAuthProvider",hh,[]);Z(a,"OAuthProvider",P,[V("providerId")]);Z(a,"PhoneAuthProvider",rh,[Pl()]);Z(a,"RecaptchaVerifier",hm,[X(V(),Ol(),"recaptchaContainer"),W("recaptchaParameters",!0),Ql()]);firebase.INTERNAL.registerService("auth",function(a,
+c){a=new ul(a);c({INTERNAL:{getUid:r(a.getUid,a),getToken:r(a.Rb,a),addAuthTokenListener:r(a.Ib,a),removeAuthTokenListener:r(a.mc,a)}});return a},a,function(a,c){if("create"===a)try{c.auth()}catch(d){}});firebase.INTERNAL.extendNamespace({User:Bk})}else throw Error("Cannot find the firebase namespace; be sure to include firebase-app.js before this library.");})();
+}).call(typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : typeof window !== 'undefined' ? window : {});
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(39)))
+
+/***/ }),
+/* 440 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(4);
+var fromPromise_1 = __webpack_require__(162);
+Observable_1.Observable.fromPromise = fromPromise_1.fromPromise;
+//# sourceMappingURL=fromPromise.js.map
+
+/***/ }),
+/* 441 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export _getAngularFireAuth */
+/* unused harmony export AngularFireAuthProvider */
+/* unused harmony export AUTH_PROVIDERS */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AngularFireAuthModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase_auth__ = __webpack_require__(247);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_firebase_auth___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_firebase_auth__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__auth__ = __webpack_require__(246);
+
+
+
+
+function _getAngularFireAuth(app) {
+    return new __WEBPACK_IMPORTED_MODULE_3__auth__["a" /* AngularFireAuth */](app);
+}
+var AngularFireAuthProvider = {
+    provide: __WEBPACK_IMPORTED_MODULE_3__auth__["a" /* AngularFireAuth */],
+    useFactory: _getAngularFireAuth,
+    deps: [__WEBPACK_IMPORTED_MODULE_2_angularfire2__["b" /* FirebaseApp */]]
+};
+var AUTH_PROVIDERS = [
+    AngularFireAuthProvider,
+];
+var AngularFireAuthModule = (function () {
+    function AngularFireAuthModule() {
+    }
+    AngularFireAuthModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */], args: [{
+                    imports: [__WEBPACK_IMPORTED_MODULE_2_angularfire2__["a" /* AngularFireModule */]],
+                    providers: [AUTH_PROVIDERS]
+                },] },
+    ];
+    AngularFireAuthModule.ctorParameters = function () { return []; };
+    return AngularFireAuthModule;
+}());
+
+//# sourceMappingURL=auth.module.js.map
+
+/***/ }),
+/* 442 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = checkReady;
+function checkReady() {
+    var DEVICE_READY_TIMEOUT = 5000;
+    // To help developers using cordova, we listen for the device ready event and
+    // log an error if it didn't fire in a reasonable amount of time. Generally,
+    // when this happens, developers should remove and reinstall plugins, since
+    // an inconsistent plugin is often the culprit.
+    var before = Date.now();
+    var didFireReady = false;
+    document.addEventListener('deviceready', function () {
+        console.log("Ionic Native: deviceready event fired after " + (Date.now() - before) + " ms");
+        didFireReady = true;
+    });
+    setTimeout(function () {
+        if (!didFireReady && !!window.cordova) {
+            console.warn("Ionic Native: deviceready did not fire within " + DEVICE_READY_TIMEOUT + "ms. This can happen when plugins are in an inconsistent state. Try removing plugins from plugins/ and reinstalling them.");
+        }
+    }, DEVICE_READY_TIMEOUT);
+}
+//# sourceMappingURL=bootstrap.js.map
+
+/***/ }),
+/* 443 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var Observable_1 = __webpack_require__(4);
+var fromEvent_1 = __webpack_require__(444);
+Observable_1.Observable.fromEvent = fromEvent_1.fromEvent;
+//# sourceMappingURL=fromEvent.js.map
+
+/***/ }),
+/* 444 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var FromEventObservable_1 = __webpack_require__(445);
+exports.fromEvent = FromEventObservable_1.FromEventObservable.create;
+//# sourceMappingURL=fromEvent.js.map
+
+/***/ }),
+/* 445 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Observable_1 = __webpack_require__(4);
+var tryCatch_1 = __webpack_require__(80);
+var isFunction_1 = __webpack_require__(79);
+var errorObject_1 = __webpack_require__(61);
+var Subscription_1 = __webpack_require__(40);
+var toString = Object.prototype.toString;
+function isNodeStyleEventEmitter(sourceObj) {
+    return !!sourceObj && typeof sourceObj.addListener === 'function' && typeof sourceObj.removeListener === 'function';
+}
+function isJQueryStyleEventEmitter(sourceObj) {
+    return !!sourceObj && typeof sourceObj.on === 'function' && typeof sourceObj.off === 'function';
+}
+function isNodeList(sourceObj) {
+    return !!sourceObj && toString.call(sourceObj) === '[object NodeList]';
+}
+function isHTMLCollection(sourceObj) {
+    return !!sourceObj && toString.call(sourceObj) === '[object HTMLCollection]';
+}
+function isEventTarget(sourceObj) {
+    return !!sourceObj && typeof sourceObj.addEventListener === 'function' && typeof sourceObj.removeEventListener === 'function';
+}
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @extends {Ignored}
+ * @hide true
+ */
+var FromEventObservable = (function (_super) {
+    __extends(FromEventObservable, _super);
+    function FromEventObservable(sourceObj, eventName, selector, options) {
+        _super.call(this);
+        this.sourceObj = sourceObj;
+        this.eventName = eventName;
+        this.selector = selector;
+        this.options = options;
+    }
+    /* tslint:enable:max-line-length */
+    /**
+     * Creates an Observable that emits events of a specific type coming from the
+     * given event target.
+     *
+     * <span class="informal">Creates an Observable from DOM events, or Node.js
+     * EventEmitter events or others.</span>
+     *
+     * <img src="./img/fromEvent.png" width="100%">
+     *
+     * `fromEvent` accepts as a first argument event target, which is an object with methods
+     * for registering event handler functions. As a second argument it takes string that indicates
+     * type of event we want to listen for. `fromEvent` supports selected types of event targets,
+     * which are described in detail below. If your event target does not match any of the ones listed,
+     * you should use {@link fromEventPattern}, which can be used on arbitrary APIs.
+     * When it comes to APIs supported by `fromEvent`, their methods for adding and removing event
+     * handler functions have different names, but they all accept a string describing event type
+     * and function itself, which will be called whenever said event happens.
+     *
+     * Every time resulting Observable is subscribed, event handler function will be registered
+     * to event target on given event type. When that event fires, value
+     * passed as a first argument to registered function will be emitted by output Observable.
+     * When Observable is unsubscribed, function will be unregistered from event target.
+     *
+     * Note that if event target calls registered function with more than one argument, second
+     * and following arguments will not appear in resulting stream. In order to get access to them,
+     * you can pass to `fromEvent` optional project function, which will be called with all arguments
+     * passed to event handler. Output Observable will then emit value returned by project function,
+     * instead of the usual value.
+     *
+     * Remember that event targets listed below are checked via duck typing. It means that
+     * no matter what kind of object you have and no matter what environment you work in,
+     * you can safely use `fromEvent` on that object if it exposes described methods (provided
+     * of course they behave as was described above). So for example if Node.js library exposes
+     * event target which has the same method names as DOM EventTarget, `fromEvent` is still
+     * a good choice.
+     *
+     * If the API you use is more callback then event handler oriented (subscribed
+     * callback function fires only once and thus there is no need to manually
+     * unregister it), you should use {@link bindCallback} or {@link bindNodeCallback}
+     * instead.
+     *
+     * `fromEvent` supports following types of event targets:
+     *
+     * **DOM EventTarget**
+     *
+     * This is an object with `addEventListener` and `removeEventListener` methods.
+     *
+     * In the browser, `addEventListener` accepts - apart from event type string and event
+     * handler function arguments - optional third parameter, which is either an object or boolean,
+     * both used for additional configuration how and when passed function will be called. When
+     * `fromEvent` is used with event target of that type, you can provide this values
+     * as third parameter as well.
+     *
+     * **Node.js EventEmitter**
+     *
+     * An object with `addListener` and `removeListener` methods.
+     *
+     * **JQuery-style event target**
+     *
+     * An object with `on` and `off` methods
+     *
+     * **DOM NodeList**
+     *
+     * List of DOM Nodes, returned for example by `document.querySelectorAll` or `Node.childNodes`.
+     *
+     * Although this collection is not event target in itself, `fromEvent` will iterate over all Nodes
+     * it contains and install event handler function in every of them. When returned Observable
+     * is unsubscribed, function will be removed from all Nodes.
+     *
+     * **DOM HtmlCollection**
+     *
+     * Just as in case of NodeList it is a collection of DOM nodes. Here as well event handler function is
+     * installed and removed in each of elements.
+     *
+     *
+     * @example <caption>Emits clicks happening on the DOM document</caption>
+     * var clicks = Rx.Observable.fromEvent(document, 'click');
+     * clicks.subscribe(x => console.log(x));
+     *
+     * // Results in:
+     * // MouseEvent object logged to console every time a click
+     * // occurs on the document.
+     *
+     *
+     * @example <caption>Use addEventListener with capture option</caption>
+     * var clicksInDocument = Rx.Observable.fromEvent(document, 'click', true); // note optional configuration parameter
+     *                                                                          // which will be passed to addEventListener
+     * var clicksInDiv = Rx.Observable.fromEvent(someDivInDocument, 'click');
+     *
+     * clicksInDocument.subscribe(() => console.log('document'));
+     * clicksInDiv.subscribe(() => console.log('div'));
+     *
+     * // By default events bubble UP in DOM tree, so normally
+     * // when we would click on div in document
+     * // "div" would be logged first and then "document".
+     * // Since we specified optional `capture` option, document
+     * // will catch event when it goes DOWN DOM tree, so console
+     * // will log "document" and then "div".
+     *
+     * @see {@link bindCallback}
+     * @see {@link bindNodeCallback}
+     * @see {@link fromEventPattern}
+     *
+     * @param {EventTargetLike} target The DOM EventTarget, Node.js
+     * EventEmitter, JQuery-like event target, NodeList or HTMLCollection to attach the event handler to.
+     * @param {string} eventName The event name of interest, being emitted by the
+     * `target`.
+     * @param {EventListenerOptions} [options] Options to pass through to addEventListener
+     * @param {SelectorMethodSignature<T>} [selector] An optional function to
+     * post-process results. It takes the arguments from the event handler and
+     * should return a single value.
+     * @return {Observable<T>}
+     * @static true
+     * @name fromEvent
+     * @owner Observable
+     */
+    FromEventObservable.create = function (target, eventName, options, selector) {
+        if (isFunction_1.isFunction(options)) {
+            selector = options;
+            options = undefined;
+        }
+        return new FromEventObservable(target, eventName, selector, options);
+    };
+    FromEventObservable.setupSubscription = function (sourceObj, eventName, handler, subscriber, options) {
+        var unsubscribe;
+        if (isNodeList(sourceObj) || isHTMLCollection(sourceObj)) {
+            for (var i = 0, len = sourceObj.length; i < len; i++) {
+                FromEventObservable.setupSubscription(sourceObj[i], eventName, handler, subscriber, options);
+            }
+        }
+        else if (isEventTarget(sourceObj)) {
+            var source_1 = sourceObj;
+            sourceObj.addEventListener(eventName, handler, options);
+            unsubscribe = function () { return source_1.removeEventListener(eventName, handler); };
+        }
+        else if (isJQueryStyleEventEmitter(sourceObj)) {
+            var source_2 = sourceObj;
+            sourceObj.on(eventName, handler);
+            unsubscribe = function () { return source_2.off(eventName, handler); };
+        }
+        else if (isNodeStyleEventEmitter(sourceObj)) {
+            var source_3 = sourceObj;
+            sourceObj.addListener(eventName, handler);
+            unsubscribe = function () { return source_3.removeListener(eventName, handler); };
+        }
+        else {
+            throw new TypeError('Invalid event target');
+        }
+        subscriber.add(new Subscription_1.Subscription(unsubscribe));
+    };
+    FromEventObservable.prototype._subscribe = function (subscriber) {
+        var sourceObj = this.sourceObj;
+        var eventName = this.eventName;
+        var options = this.options;
+        var selector = this.selector;
+        var handler = selector ? function () {
+            var args = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                args[_i - 0] = arguments[_i];
+            }
+            var result = tryCatch_1.tryCatch(selector).apply(void 0, args);
+            if (result === errorObject_1.errorObject) {
+                subscriber.error(errorObject_1.errorObject.e);
+            }
+            else {
+                subscriber.next(result);
+            }
+        } : function (e) { return subscriber.next(e); };
+        FromEventObservable.setupSubscription(sourceObj, eventName, handler, subscriber, options);
+    };
+    return FromEventObservable;
+}(Observable_1.Observable));
+exports.FromEventObservable = FromEventObservable;
+//# sourceMappingURL=FromEventObservable.js.map
+
+/***/ }),
+/* 446 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export InstanceCheck */
+/* unused harmony export CordovaCheck */
+/* harmony export (immutable) */ __webpack_exports__["c"] = Plugin;
+/* harmony export (immutable) */ __webpack_exports__["a"] = Cordova;
+/* unused harmony export CordovaInstance */
+/* harmony export (immutable) */ __webpack_exports__["b"] = CordovaProperty;
+/* unused harmony export InstanceProperty */
+/* unused harmony export CordovaFunctionOverride */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__plugin__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw__ = __webpack_require__(447);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_throw__);
+
+
+
+
+/**
+ * @private
+ */
+function InstanceCheck(opts) {
+    if (opts === void 0) { opts = {}; }
+    return function (pluginObj, methodName, descriptor) {
+        return {
+            value: function () {
+                var args = [];
+                for (var _i = 0; _i < arguments.length; _i++) {
+                    args[_i] = arguments[_i];
+                }
+                if (Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["b" /* instanceAvailability */])(this)) {
+                    return descriptor.value.apply(this, args);
+                }
+                else {
+                    if (opts.sync) {
+                        return;
+                    }
+                    else if (opts.observable) {
+                        return new __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"](function () { });
+                    }
+                    return Object(__WEBPACK_IMPORTED_MODULE_1__util__["c" /* getPromise */])(function () { });
+                }
+            },
+            enumerable: true
+        };
+    };
+}
+/**
+ * Executes function only if plugin is available
+ * @private
+ */
+function CordovaCheck(opts) {
+    if (opts === void 0) { opts = {}; }
+    return function (pluginObj, methodName, descriptor) {
+        return {
+            value: function () {
+                var args = [];
+                for (var _i = 0; _i < arguments.length; _i++) {
+                    args[_i] = arguments[_i];
+                }
+                var check = Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["a" /* checkAvailability */])(pluginObj);
+                if (check === true) {
+                    return descriptor.value.apply(this, args);
+                }
+                else {
+                    if (opts.sync) {
+                        return null;
+                    }
+                    else if (opts.observable) {
+                        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw(new Error(check && check.error));
+                    }
+                    return Promise.reject(check && check.error);
+                }
+            },
+            enumerable: true
+        };
+    };
+}
+/**
+ * @private
+ *
+ * Class decorator specifying Plugin metadata. Required for all plugins.
+ *
+ * @usage
+ * ```typescript
+ * @Plugin({
+ *  pluginName: 'MyPlugin',
+ *  plugin: 'cordova-plugin-myplugin',
+ *  pluginRef: 'window.myplugin'
+ *  })
+ *  export class MyPlugin {
+ *
+ *    // Plugin wrappers, properties, and functions go here ...
+ *
+ *  }
+ * ```
+ */
+function Plugin(config) {
+    return function (cls) {
+        // Add these fields to the class
+        for (var prop in config) {
+            cls[prop] = config[prop];
+        }
+        cls['installed'] = function (printWarning) {
+            return !!Object(__WEBPACK_IMPORTED_MODULE_1__util__["b" /* getPlugin */])(config.pluginRef);
+        };
+        cls['getPlugin'] = function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_1__util__["b" /* getPlugin */])(config.pluginRef);
+        };
+        cls['checkInstall'] = function () {
+            return Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["a" /* checkAvailability */])(cls) === true;
+        };
+        cls['getPluginName'] = function () {
+            return config.pluginName;
+        };
+        cls['getPluginRef'] = function () {
+            return config.pluginRef;
+        };
+        cls['getPluginInstallName'] = function () {
+            return config.plugin;
+        };
+        cls['getPluginRepo'] = function () {
+            return config.repo;
+        };
+        cls['getSupportedPlatforms'] = function () {
+            return config.platforms;
+        };
+        return cls;
+    };
+}
+/**
+ * @private
+ *
+ * Wrap a stub function in a call to a Cordova plugin, checking if both Cordova
+ * and the required plugin are installed.
+ */
+function Cordova(opts) {
+    if (opts === void 0) { opts = {}; }
+    return function (target, methodName, descriptor) {
+        return {
+            value: function () {
+                var args = [];
+                for (var _i = 0; _i < arguments.length; _i++) {
+                    args[_i] = arguments[_i];
+                }
+                return Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["d" /* wrap */])(this, methodName, opts).apply(this, args);
+            },
+            enumerable: true
+        };
+    };
+}
+/**
+ * @private
+ *
+ * Wrap an instance method
+ */
+function CordovaInstance(opts) {
+    if (opts === void 0) { opts = {}; }
+    return function (target, methodName) {
+        return {
+            value: function () {
+                var args = [];
+                for (var _i = 0; _i < arguments.length; _i++) {
+                    args[_i] = arguments[_i];
+                }
+                return Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["e" /* wrapInstance */])(this, methodName, opts).apply(this, args);
+            },
+            enumerable: true
+        };
+    };
+}
+/**
+ * @private
+ *
+ *
+ * Before calling the original method, ensure Cordova and the plugin are installed.
+ */
+function CordovaProperty(target, key) {
+    Object.defineProperty(target, key, {
+        enumerable: true,
+        get: function () {
+            if (Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["a" /* checkAvailability */])(target, key) === true) {
+                return Object(__WEBPACK_IMPORTED_MODULE_1__util__["b" /* getPlugin */])(target.constructor.getPluginRef())[key];
+            }
+            else {
+                return null;
+            }
+        },
+        set: function (value) {
+            if (Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["a" /* checkAvailability */])(target, key) === true) {
+                Object(__WEBPACK_IMPORTED_MODULE_1__util__["b" /* getPlugin */])(target.constructor.getPluginRef())[key] = value;
+            }
+        }
+    });
+}
+/**
+ * @private
+ * @param target
+ * @param key
+ * @constructor
+ */
+function InstanceProperty(target, key) {
+    Object.defineProperty(target, key, {
+        enumerable: true,
+        get: function () {
+            return this._objectInstance[key];
+        },
+        set: function (value) {
+            this._objectInstance[key] = value;
+        }
+    });
+}
+/**
+ * @private
+ *
+ * Wrap a stub function in a call to a Cordova plugin, checking if both Cordova
+ * and the required plugin are installed.
+ */
+function CordovaFunctionOverride(opts) {
+    if (opts === void 0) { opts = {}; }
+    return function (target, methodName, descriptor) {
+        return {
+            value: function () {
+                var args = [];
+                for (var _i = 0; _i < arguments.length; _i++) {
+                    args[_i] = arguments[_i];
+                }
+                return Object(__WEBPACK_IMPORTED_MODULE_0__plugin__["c" /* overrideFunction */])(this, methodName, opts);
+            },
+            enumerable: true
+        };
+    };
+}
+//# sourceMappingURL=decorators.js.map
+
+/***/ }),
+/* 447 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var ErrorObservable_1 = __webpack_require__(448);
+exports._throw = ErrorObservable_1.ErrorObservable.create;
+//# sourceMappingURL=throw.js.map
+
+/***/ }),
+/* 448 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var Observable_1 = __webpack_require__(4);
+/**
+ * We need this JSDoc comment for affecting ESDoc.
+ * @extends {Ignored}
+ * @hide true
+ */
+var ErrorObservable = (function (_super) {
+    __extends(ErrorObservable, _super);
+    function ErrorObservable(error, scheduler) {
+        _super.call(this);
+        this.error = error;
+        this.scheduler = scheduler;
+    }
+    /**
+     * Creates an Observable that emits no items to the Observer and immediately
+     * emits an error notification.
+     *
+     * <span class="informal">Just emits 'error', and nothing else.
+     * </span>
+     *
+     * <img src="./img/throw.png" width="100%">
+     *
+     * This static operator is useful for creating a simple Observable that only
+     * emits the error notification. It can be used for composing with other
+     * Observables, such as in a {@link mergeMap}.
+     *
+     * @example <caption>Emit the number 7, then emit an error.</caption>
+     * var result = Rx.Observable.throw(new Error('oops!')).startWith(7);
+     * result.subscribe(x => console.log(x), e => console.error(e));
+     *
+     * @example <caption>Map and flatten numbers to the sequence 'a', 'b', 'c', but throw an error for 13</caption>
+     * var interval = Rx.Observable.interval(1000);
+     * var result = interval.mergeMap(x =>
+     *   x === 13 ?
+     *     Rx.Observable.throw('Thirteens are bad') :
+     *     Rx.Observable.of('a', 'b', 'c')
+     * );
+     * result.subscribe(x => console.log(x), e => console.error(e));
+     *
+     * @see {@link create}
+     * @see {@link empty}
+     * @see {@link never}
+     * @see {@link of}
+     *
+     * @param {any} error The particular Error to pass to the error notification.
+     * @param {Scheduler} [scheduler] A {@link IScheduler} to use for scheduling
+     * the emission of the error notification.
+     * @return {Observable} An error Observable: emits only the error notification
+     * using the given error argument.
+     * @static true
+     * @name throw
+     * @owner Observable
+     */
+    ErrorObservable.create = function (error, scheduler) {
+        return new ErrorObservable(error, scheduler);
+    };
+    ErrorObservable.dispatch = function (arg) {
+        var error = arg.error, subscriber = arg.subscriber;
+        subscriber.error(error);
+    };
+    ErrorObservable.prototype._subscribe = function (subscriber) {
+        var error = this.error;
+        var scheduler = this.scheduler;
+        subscriber.syncErrorThrowable = true;
+        if (scheduler) {
+            return scheduler.schedule(ErrorObservable.dispatch, 0, {
+                error: error, subscriber: subscriber
+            });
+        }
+        else {
+            subscriber.error(error);
+        }
+    };
+    return ErrorObservable;
+}(Observable_1.Observable));
+exports.ErrorObservable = ErrorObservable;
+//# sourceMappingURL=ErrorObservable.js.map
+
+/***/ }),
+/* 449 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IonicNativePlugin; });
+var IonicNativePlugin = (function () {
+    function IonicNativePlugin() {
+    }
+    /**
+     * Returns a boolean that indicates whether the plugin is installed
+     * @return {boolean}
+     */
+    /**
+       * Returns a boolean that indicates whether the plugin is installed
+       * @return {boolean}
+       */
+    IonicNativePlugin.installed = /**
+       * Returns a boolean that indicates whether the plugin is installed
+       * @return {boolean}
+       */
+    function () { return false; };
+    /**
+     * Returns the original plugin object
+     */
+    /**
+       * Returns the original plugin object
+       */
+    IonicNativePlugin.getPlugin = /**
+       * Returns the original plugin object
+       */
+    function () { };
+    /**
+     * Returns the plugin's name
+     */
+    /**
+       * Returns the plugin's name
+       */
+    IonicNativePlugin.getPluginName = /**
+       * Returns the plugin's name
+       */
+    function () { return; };
+    /**
+     * Returns the plugin's reference
+     */
+    /**
+       * Returns the plugin's reference
+       */
+    IonicNativePlugin.getPluginRef = /**
+       * Returns the plugin's reference
+       */
+    function () { return; };
+    /**
+     * Returns the plugin's install name
+     */
+    /**
+       * Returns the plugin's install name
+       */
+    IonicNativePlugin.getPluginInstallName = /**
+       * Returns the plugin's install name
+       */
+    function () { return; };
+    /**
+     * Returns the plugin's supported platforms
+     */
+    /**
+       * Returns the plugin's supported platforms
+       */
+    IonicNativePlugin.getSupportedPlatforms = /**
+       * Returns the plugin's supported platforms
+       */
+    function () { return; };
+    return IonicNativePlugin;
+}());
+
+//# sourceMappingURL=ionic-native-plugin.js.map
 
 /***/ }),
 /* 450 */
