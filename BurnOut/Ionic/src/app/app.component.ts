@@ -13,12 +13,20 @@ export class MyApp {
   
 	rootPage:any = 'LoginPage';
 
-	constructor(private alertCtrl: AlertController,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private _fcm: FCM) {
+	constructor(
+		private alertCtrl: AlertController,
+		platform: Platform,
+		statusBar: StatusBar, 
+		public splashScreen: SplashScreen,
+		private _fcm: FCM) {
 
 		platform.ready().then(() => {
 
 			statusBar.styleDefault();
-			splashScreen.hide();
+
+			setTimeout(()=>{
+				this.splashScreen.hide();
+			},2000);
 
 			this._fcm.getToken()
 				.then( ( token: string ) => {

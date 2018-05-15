@@ -59,6 +59,7 @@ export class LoginPage {
         this._getMyIDDevice().then((uuid) => {
 
             self._uuid = uuid;
+            console.log(self._uuid);
 
         }, (error) => {
             console.log(error);
@@ -92,7 +93,6 @@ export class LoginPage {
         this.loading.present().then(() => {
 
             this.toast(this._uuid);
-            console.log(this._uuid);
 
             this.fireAuth.auth.signInWithEmailAndPassword(this.formulario.email, this.formulario.password)
                 .then(resultado => {
