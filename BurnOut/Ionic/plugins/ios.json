@@ -7,9 +7,6 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.ue.burnoutapp"
-    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.ue.burnoutapp"
     },
@@ -23,9 +20,6 @@
       "PACKAGE_NAME": "com.ue.burnoutapp"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.ue.burnoutapp"
-    },
-    "cordova-sqlite-storage": {
       "PACKAGE_NAME": "com.ue.burnoutapp"
     },
     "ionic-plugin-keyboard": {

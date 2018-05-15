@@ -1,12 +1,4 @@
 {
-  "cordova-plugin-camera": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-camera@3.0.0"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "ionic-plugin-keyboard": {
     "source": {
       "type": "registry",
@@ -51,14 +43,6 @@
     "source": {
       "type": "registry",
       "id": "cordova-plugin-inappbrowser@1.7.2"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-sqlite-storage": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-sqlite-storage"
     },
     "is_top_level": true,
     "variables": {}

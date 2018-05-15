@@ -1,38 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "cordova-plugin-camera.Camera",
-    "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
-    "pluginId": "cordova-plugin-camera",
-    "clobbers": [
-      "Camera"
-    ]
-  },
-  {
-    "id": "cordova-plugin-camera.CameraPopoverOptions",
-    "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
-    "pluginId": "cordova-plugin-camera",
-    "clobbers": [
-      "CameraPopoverOptions"
-    ]
-  },
-  {
-    "id": "cordova-plugin-camera.camera",
-    "file": "plugins/cordova-plugin-camera/www/Camera.js",
-    "pluginId": "cordova-plugin-camera",
-    "clobbers": [
-      "navigator.camera"
-    ]
-  },
-  {
-    "id": "cordova-plugin-camera.CameraPopoverHandle",
-    "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
-    "pluginId": "cordova-plugin-camera",
-    "clobbers": [
-      "CameraPopoverHandle"
-    ]
-  },
-  {
     "id": "ionic-plugin-keyboard.keyboard",
     "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
     "pluginId": "ionic-plugin-keyboard",
@@ -67,14 +35,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-sqlite-storage.SQLitePlugin",
-    "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
-    "pluginId": "cordova-sqlite-storage",
-    "clobbers": [
-      "SQLitePlugin"
-    ]
-  },
-  {
     "id": "cordova-plugin-fcm.FCMPlugin",
     "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
     "pluginId": "cordova-plugin-fcm",
@@ -86,14 +46,12 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "cordova-plugin-camera": "3.0.0",
   "ionic-plugin-keyboard": "2.2.1",
   "cordova-plugin-whitelist": "1.3.1",
   "cordova-plugin-device": "1.1.4",
   "cordova-plugin-splashscreen": "4.0.3",
   "cordova-plugin-ionic-webview": "1.1.16",
   "cordova-plugin-inappbrowser": "1.7.2",
-  "cordova-sqlite-storage": "2.1.5",
   "cordova-plugin-fcm": "2.1.2"
 };
 // BOTTOM OF METADATA

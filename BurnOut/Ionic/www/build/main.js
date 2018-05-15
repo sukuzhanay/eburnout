@@ -60,39 +60,39 @@ webpackEmptyAsyncContext.id = 149;
 
 var map = {
 	"../pages/addbracelet/addbracelet.module": [
-		473,
+		472,
 		15
 	],
 	"../pages/adduser/adduser.module": [
-		474,
+		473,
 		14
 	],
 	"../pages/adminbracelet/adminbracelet.module": [
-		475,
+		474,
 		13
 	],
 	"../pages/consentimiento/consentimiento.module": [
-		476,
+		475,
 		12
 	],
 	"../pages/dashboard/dashboard.module": [
-		477,
+		476,
 		0
 	],
 	"../pages/editbracelet/editbracelet.module": [
-		478,
+		477,
 		11
 	],
 	"../pages/edituser/edituser.module": [
-		479,
+		478,
 		10
 	],
 	"../pages/encuesta/encuesta.module": [
-		480,
+		479,
 		9
 	],
 	"../pages/login/login.module": [
-		487,
+		480,
 		1
 	],
 	"../pages/personaldata/personaldata.module": [
@@ -100,27 +100,27 @@ var map = {
 		2
 	],
 	"../pages/profile/profile.module": [
-		483,
+		482,
 		8
 	],
 	"../pages/recomendacion/recomendacion.module": [
-		482,
+		483,
 		7
 	],
 	"../pages/recommendations/recommendations.module": [
-		485,
+		484,
 		6
 	],
 	"../pages/registro/registro.module": [
-		484,
+		485,
 		5
 	],
 	"../pages/tab-general/tab-general.module": [
-		488,
+		486,
 		4
 	],
 	"../pages/userbracelet/userbracelet.module": [
-		486,
+		487,
 		3
 	]
 };
@@ -503,7 +503,7 @@ var RecommendationsService = (function () {
          * luego tiene que responder
          * @type {number}
          */
-        this.days_to_answer = 5;
+        this.days_to_answer = 7;
         this.id_first_question_forced = 23;
         this.id_second_question_forced = 24;
     }
@@ -1051,33 +1051,31 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(288);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(467);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(468);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_http__ = __webpack_require__(245);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_common_http__ = __webpack_require__(241);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angularfire2__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2_database__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_angularfire2_auth__ = __webpack_require__(297);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_global_global__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_database_database__ = __webpack_require__(293);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_fit_bit_service_fit_bit_service__ = __webpack_require__(296);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ngx_echarts__ = __webpack_require__(469);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_storage__ = __webpack_require__(242);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_base64__ = __webpack_require__(472);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_fcm__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_database_bracelet_list_service__ = __webpack_require__(291);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_database_profile_list_service__ = __webpack_require__(292);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_database_consent_user_service__ = __webpack_require__(294);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_fit_bit_service_tokenfitbit_service__ = __webpack_require__(243);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_database_datafitbit_service__ = __webpack_require__(244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_database_recommendations_service__ = __webpack_require__(295);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_device__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_http__ = __webpack_require__(245);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_common_http__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angularfire2_database__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2_auth__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_global_global__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_database_database__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_fit_bit_service_fit_bit_service__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ngx_echarts__ = __webpack_require__(468);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_storage__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_base64__ = __webpack_require__(471);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_fcm__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_database_bracelet_list_service__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_database_profile_list_service__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_database_consent_user_service__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_fit_bit_service_tokenfitbit_service__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_database_datafitbit_service__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_database_recommendations_service__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_device__ = __webpack_require__(298);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -1138,23 +1136,23 @@ var AppModule = (function () {
                         { loadChildren: '../pages/editbracelet/editbracelet.module#EditbraceletPageModule', name: 'EditbraceletPage', segment: 'editbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edituser/edituser.module#EdituserPageModule', name: 'EdituserPage', segment: 'edituser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/encuesta/encuesta.module#EncuestaPageModule', name: 'EncuestaPage', segment: 'encuesta', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/personaldata/personaldata.module#PersonaldataPageModule', name: 'PersonaldataPage', segment: 'personaldata', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/recomendacion/recomendacion.module#RecomendacionPageModule', name: 'RecomendacionPage', segment: 'recomendacion', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/registro/registro.module#RegistroPageModule', name: 'RegistroPage', segment: 'registro', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/recommendations/recommendations.module#RecommendationsPageModule', name: 'RecommendationsPage', segment: 'recommendations', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/userbracelet/userbracelet.module#UserbraceletPageModule', name: 'UserbraceletPage', segment: 'userbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tab-general/tab-general.module#TabGeneralPageModule', name: 'TabGeneralPage', segment: 'tab-general', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/personaldata/personaldata.module#PersonaldataPageModule', name: 'PersonaldataPage', segment: 'personaldata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recomendacion/recomendacion.module#RecomendacionPageModule', name: 'RecomendacionPage', segment: 'recomendacion', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recommendations/recommendations.module#RecommendationsPageModule', name: 'RecommendationsPage', segment: 'recommendations', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/registro/registro.module#RegistroPageModule', name: 'RegistroPage', segment: 'registro', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tab-general/tab-general.module#TabGeneralPageModule', name: 'TabGeneralPage', segment: 'tab-general', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/userbracelet/userbracelet.module#UserbraceletPageModule', name: 'UserbraceletPage', segment: 'userbracelet', priority: 'low', defaultHistory: [] }
                     ]
                 }),
-                __WEBPACK_IMPORTED_MODULE_7__angular_http__["b" /* HttpModule */],
-                __WEBPACK_IMPORTED_MODULE_8__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_15_ngx_echarts__["a" /* NgxEchartsModule */],
-                __WEBPACK_IMPORTED_MODULE_9_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
-                __WEBPACK_IMPORTED_MODULE_10_angularfire2_database__["b" /* AngularFireDatabaseModule */],
-                __WEBPACK_IMPORTED_MODULE_11_angularfire2_auth__["b" /* AngularFireAuthModule */],
-                __WEBPACK_IMPORTED_MODULE_16__ionic_storage__["a" /* IonicStorageModule */].forRoot()
+                __WEBPACK_IMPORTED_MODULE_6__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_7__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_14_ngx_echarts__["a" /* NgxEchartsModule */],
+                __WEBPACK_IMPORTED_MODULE_8_angularfire2__["a" /* AngularFireModule */].initializeApp(firebaseConfig),
+                __WEBPACK_IMPORTED_MODULE_9_angularfire2_database__["b" /* AngularFireDatabaseModule */],
+                __WEBPACK_IMPORTED_MODULE_10_angularfire2_auth__["b" /* AngularFireAuthModule */],
+                __WEBPACK_IMPORTED_MODULE_15__ionic_storage__["a" /* IonicStorageModule */].forRoot()
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
             entryComponents: [
@@ -1164,19 +1162,18 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */],
-                __WEBPACK_IMPORTED_MODULE_18__ionic_native_fcm__["a" /* FCM */],
-                __WEBPACK_IMPORTED_MODULE_25__ionic_native_device__["a" /* Device */],
-                __WEBPACK_IMPORTED_MODULE_12__providers_global_global__["a" /* GlobalProvider */],
-                __WEBPACK_IMPORTED_MODULE_13__providers_database_database__["a" /* DatabaseProvider */],
-                __WEBPACK_IMPORTED_MODULE_14__providers_fit_bit_service_fit_bit_service__["a" /* FitBitServiceProvider */],
-                __WEBPACK_IMPORTED_MODULE_19__providers_database_bracelet_list_service__["a" /* BraceletListService */],
-                __WEBPACK_IMPORTED_MODULE_20__providers_database_profile_list_service__["a" /* ProfileListService */],
-                __WEBPACK_IMPORTED_MODULE_21__providers_database_consent_user_service__["a" /* ConsentUserService */],
-                __WEBPACK_IMPORTED_MODULE_22__providers_fit_bit_service_tokenfitbit_service__["a" /* TokenFitBitService */],
-                __WEBPACK_IMPORTED_MODULE_17__ionic_native_base64__["a" /* Base64 */],
-                __WEBPACK_IMPORTED_MODULE_23__providers_database_datafitbit_service__["a" /* DataFitBitService */],
-                __WEBPACK_IMPORTED_MODULE_24__providers_database_recommendations_service__["a" /* RecommendationsService */]
+                __WEBPACK_IMPORTED_MODULE_17__ionic_native_fcm__["a" /* FCM */],
+                __WEBPACK_IMPORTED_MODULE_24__ionic_native_device__["a" /* Device */],
+                __WEBPACK_IMPORTED_MODULE_11__providers_global_global__["a" /* GlobalProvider */],
+                __WEBPACK_IMPORTED_MODULE_12__providers_database_database__["a" /* DatabaseProvider */],
+                __WEBPACK_IMPORTED_MODULE_13__providers_fit_bit_service_fit_bit_service__["a" /* FitBitServiceProvider */],
+                __WEBPACK_IMPORTED_MODULE_18__providers_database_bracelet_list_service__["a" /* BraceletListService */],
+                __WEBPACK_IMPORTED_MODULE_19__providers_database_profile_list_service__["a" /* ProfileListService */],
+                __WEBPACK_IMPORTED_MODULE_20__providers_database_consent_user_service__["a" /* ConsentUserService */],
+                __WEBPACK_IMPORTED_MODULE_21__providers_fit_bit_service_tokenfitbit_service__["a" /* TokenFitBitService */],
+                __WEBPACK_IMPORTED_MODULE_16__ionic_native_base64__["a" /* Base64 */],
+                __WEBPACK_IMPORTED_MODULE_22__providers_database_datafitbit_service__["a" /* DataFitBitService */],
+                __WEBPACK_IMPORTED_MODULE_23__providers_database_recommendations_service__["a" /* RecommendationsService */]
             ]
         })
     ], AppModule);
