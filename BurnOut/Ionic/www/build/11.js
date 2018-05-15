@@ -1,1 +1,142 @@
-webpackJsonp([11],{419:function(l,n,u){"use strict";function a(l){return t._21(0,[(l()(),t._19(-1,null,["\n"])),(l()(),t.Z(1,0,null,null,13,"ion-header",[],null,null,null,null,null)),t.Y(2,16384,null,0,m.a,[f.a,t.j,t.z,[2,k.a]],null,null),(l()(),t._19(-1,null,["\n  "])),(l()(),t.Z(4,0,null,null,9,"div",[],null,null,null,null,null)),(l()(),t._19(-1,null,["\n    "])),(l()(),t.Z(6,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,P.b,P.a)),t.Y(7,49152,null,0,v.a,[Z.a,[2,k.a],[2,C.a],f.a,t.j,t.z],null,null),(l()(),t._19(-1,3,["\n      "])),(l()(),t.Z(9,0,null,3,2,"ion-title",[],null,null,null,j.b,j.a)),t.Y(10,49152,null,0,z.a,[f.a,t.j,t.z,[2,A.a],[2,v.a]],null,null),(l()(),t._19(-1,0,["Recomendación"])),(l()(),t._19(-1,3,["\n    "])),(l()(),t._19(-1,null,["\n  "])),(l()(),t._19(-1,null,["\n"])),(l()(),t._19(-1,null,["\n"])),(l()(),t._19(-1,null,["\n\n"])),(l()(),t._19(-1,null,["\n"])),(l()(),t.Z(18,0,null,null,26,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,Y.b,Y.a)),t.Y(19,4374528,null,0,x.a,[f.a,y.a,E.a,t.j,t.z,Z.a,N.a,t.u,[2,k.a],[2,C.a]],null,null),(l()(),t._19(-1,1,["\n  "])),(l()(),t.Z(21,0,null,1,1,"ion-icon",[["class","icono"],["name","pulse"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(22,147456,null,0,R.a,[f.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t._19(-1,1,["\n  "])),(l()(),t.Z(24,0,null,1,1,"p",[["class","titulo"]],null,null,null,null,null)),(l()(),t._19(-1,null,["Te recomendamos mejorar"])),(l()(),t._19(-1,1,["\n  "])),(l()(),t.Z(27,0,null,1,1,"p",[["class","titulo-texto"]],null,null,null,null,null)),(l()(),t._19(-1,null,["CANSANCIO EMOCIONAL:"])),(l()(),t._19(-1,1,["\n  "])),(l()(),t.Z(30,0,null,1,1,"p",[["class","texto"]],null,null,null,null,null)),(l()(),t._19(31,null,["- ",""])),(l()(),t._19(-1,1,["\n  "])),(l()(),t.Z(33,0,null,1,1,"p",[["class","titulo-texto"]],null,null,null,null,null)),(l()(),t._19(-1,null,["DESPERSONALIZACIÓN:"])),(l()(),t._19(-1,1,["\n  "])),(l()(),t.Z(36,0,null,1,1,"p",[["class","texto"]],null,null,null,null,null)),(l()(),t._19(37,null,["- ",""])),(l()(),t._19(-1,1,["\n  "])),(l()(),t.Z(39,0,null,1,1,"p",[["class","titulo-texto"]],null,null,null,null,null)),(l()(),t._19(-1,null,["REALIZACIÓN PERSONAL:"])),(l()(),t._19(-1,1,["\n  "])),(l()(),t.Z(42,0,null,1,1,"p",[["class","texto"]],null,null,null,null,null)),(l()(),t._19(43,null,["- ",""])),(l()(),t._19(-1,1,["\n"])),(l()(),t._19(-1,null,["\n"]))],function(l,n){l(n,22,0,"pulse")},function(l,n){var u=n.component;l(n,6,0,t._13(n,7)._hidden,t._13(n,7)._sbPadding);l(n,18,0,t._13(n,19).statusbarPadding,t._13(n,19)._hasRefresher);l(n,21,0,t._13(n,22)._hidden);l(n,31,0,u.cansancioEmocional);l(n,37,0,u.despersonalizacion);l(n,43,0,u.realizacionPersonal)})}Object.defineProperty(n,"__esModule",{value:!0});var t=u(0),o=(u(3),u(69),u(100)),e=function(){function l(l){this.global=l,this.cansancioEmocional="Realiza la encuesta para saber tu recomendación",this.despersonalizacion="Realiza la encuesta para saber tu recomendación",this.realizacionPersonal="Realiza la encuesta para saber tu recomendación"}return l.prototype.ionViewDidLoad=function(){},l.prototype.ionViewWillEnter=function(){this.calcularNivel()},l.prototype.calcularNivel=function(){var l="",n="",u="";this.global.resultadoPreguntas.ae>0&&this.global.resultadoPreguntas.ae<=18?l="bajo":this.global.resultadoPreguntas.ae>18&&this.global.resultadoPreguntas.ae<=26?l="medio":this.global.resultadoPreguntas.ae>26&&this.global.resultadoPreguntas.ae<=54&&(l="alto"),this.global.resultadoPreguntas.d>0&&this.global.resultadoPreguntas.d<=5?n="bajo":this.global.resultadoPreguntas.d>5&&this.global.resultadoPreguntas.d<=9?n="medio":this.global.resultadoPreguntas.d>9&&this.global.resultadoPreguntas.d<=30&&(n="alto"),this.global.resultadoPreguntas.rp>0&&this.global.resultadoPreguntas.rp<=33?u="bajo":this.global.resultadoPreguntas.rp>33&&this.global.resultadoPreguntas.rp<=39?u="medio":this.global.resultadoPreguntas.rp>39&&this.global.resultadoPreguntas.rp<=48&&(u="alto");for(var a=0,t=this.global.recommendations;a<t.length;a++){var o=t[a];"AE"==o.type&&l==o.nivel&&(this.cansancioEmocional=o.recommendation),"D"==o.type&&n==o.nivel&&(this.despersonalizacion=o.recommendation),"RP"==o.type&&u==o.nivel&&(this.realizacionPersonal=o.recommendation)}},l}(),s=function(){return function(){}}(),i=u(281),r=u(282),c=u(283),d=u(284),b=u(285),_=u(286),g=u(287),p=u(288),h=u(289),m=u(154),f=u(2),k=u(6),P=u(432),v=u(51),Z=u(11),C=u(27),j=u(433),z=u(152),A=u(70),Y=u(429),x=u(28),y=u(5),E=u(12),N=u(45),R=u(53),I=t.X({encapsulation:2,styles:[],data:{}}),q=t.V("page-recomendacion",e,function(l){return t._21(0,[(l()(),t.Z(0,0,null,null,1,"page-recomendacion",[],null,null,null,a,I)),t.Y(1,49152,null,0,e,[o.a],null,null)],null,null)},{},{},[]),O=u(17),L=u(21),S=u(153),X=u(46);u.d(n,"RecomendacionPageModuleNgFactory",function(){return w});var w=t.W(s,[],function(l){return t._10([t._11(512,t.i,t.S,[[8,[i.a,r.a,c.a,d.a,b.a,_.a,g.a,p.a,h.a,q]],[3,t.i],t.s]),t._11(4608,O.l,O.k,[t.r,[2,O.t]]),t._11(4608,L.r,L.r,[]),t._11(4608,L.d,L.d,[]),t._11(512,O.c,O.c,[]),t._11(512,L.p,L.p,[]),t._11(512,L.g,L.g,[]),t._11(512,L.n,L.n,[]),t._11(512,S.a,S.a,[]),t._11(512,S.b,S.b,[]),t._11(512,s,s,[]),t._11(256,X.a,e,[])])})},429:function(l,n,u){"use strict";function a(l){return t._21(2,[t._17(402653184,1,{_fixedContent:0}),t._17(402653184,2,{_scrollContent:0}),(l()(),t.Z(2,0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),t._12(null,0),(l()(),t.Z(4,0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),t._12(null,1),t._12(null,2)],null,null)}u.d(n,"a",function(){return o}),n.b=a;var t=u(0),o=(u(28),u(2),u(5),u(12),u(45),u(6),u(27),t.X({encapsulation:2,styles:[],data:{}}))},432:function(l,n,u){"use strict";function a(l){return t._21(0,[(l()(),t.Z(0,0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),t.Y(1,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t.Z(2,0,null,null,8,"button",[["class","back-button"],["ion-button","bar-button"]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.backButtonClick(u)&&a}return a},e.b,e.a)),t.Y(3,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t.Y(4,1097728,null,0,s.a,[[8,"bar-button"],i.a,t.j,t.z],null,null),(l()(),t.Z(5,0,null,0,2,"ion-icon",[["class","back-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(6,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t.Y(7,147456,null,0,r.a,[i.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t.Z(8,0,null,0,2,"span",[["class","back-button-text"]],null,null,null,null,null)),t.Y(9,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t._19(10,null,["",""])),t._12(null,0),t._12(null,1),t._12(null,2),(l()(),t.Z(14,0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),t.Y(15,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t._12(null,3)],function(l,n){var u=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+u._mode);l(n,3,0,"back-button","back-button-"+u._mode);l(n,6,0,"back-button-icon","back-button-icon-"+u._mode);l(n,7,0,u._bbIcon);l(n,9,0,"back-button-text","back-button-text-"+u._mode);l(n,15,0,"toolbar-content","toolbar-content-"+u._mode)},function(l,n){var u=n.component;l(n,2,0,u._hideBb);l(n,5,0,t._13(n,7)._hidden);l(n,10,0,u._backText)})}u.d(n,"a",function(){return c}),n.b=a;var t=u(0),o=u(17),e=u(52),s=u(26),i=u(2),r=u(53),c=(u(51),u(6),u(27),t.X({encapsulation:2,styles:[],data:{}}))},433:function(l,n,u){"use strict";function a(l){return t._21(2,[(l()(),t.Z(0,0,null,null,2,"div",[["class","toolbar-title"]],null,null,null,null,null)),t.Y(1,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t._12(null,0)],function(l,n){l(n,1,0,"toolbar-title","toolbar-title-"+n.component._mode)},null)}u.d(n,"a",function(){return e}),n.b=a;var t=u(0),o=u(17),e=(u(152),u(2),u(70),u(51),t.X({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([11],{
+
+/***/ 477:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditbraceletPageModule", function() { return EditbraceletPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__editbracelet__ = __webpack_require__(773);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var EditbraceletPageModule = (function () {
+    function EditbraceletPageModule() {
+    }
+    EditbraceletPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__editbracelet__["a" /* EditbraceletPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__editbracelet__["a" /* EditbraceletPage */]),
+            ],
+        })
+    ], EditbraceletPageModule);
+    return EditbraceletPageModule;
+}());
+
+//# sourceMappingURL=editbracelet.module.js.map
+
+/***/ }),
+
+/***/ 773:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditbraceletPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_database_bracelet_list_service__ = __webpack_require__(291);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var EditbraceletPage = (function () {
+    function EditbraceletPage(navCtrl, navParams, braceletListService, formBuilder, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.braceletListService = braceletListService;
+        this.formBuilder = formBuilder;
+        this.alertCtrl = alertCtrl;
+        this.bracelet = {
+            code: "",
+            client_secret: "",
+            serial: ""
+        };
+        this.ctrls_edit = this.formBuilder.group({
+            code: [this.bracelet.code, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(10), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[a-zA-Z0-9 ]*'), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
+            client_secret: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(50), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
+            serial: [this.bracelet.serial, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(30), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[a-zA-Z0-9 ]*'), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
+        });
+    }
+    EditbraceletPage.prototype.ionViewDidLoad = function () {
+        this.bracelet = this.navParams.get('bracelet');
+        this.ctrls_edit.controls.code.setValue(this.bracelet.code);
+        this.ctrls_edit.controls.client_secret.setValue(this.bracelet.client_secret);
+        this.ctrls_edit.controls.serial.setValue(this.bracelet.serial);
+    };
+    EditbraceletPage.prototype.updateBracelet = function (bracelet) {
+        var _this = this;
+        if (this.ctrls_edit.valid) {
+            this.bracelet.code = this.ctrls_edit.controls.code.value;
+            this.bracelet.client_secret = this.ctrls_edit.controls.client_secret.value;
+            this.bracelet.serial = this.ctrls_edit.controls.serial.value;
+            this.braceletListService.updateBracelet(bracelet).then(function () {
+                _this.navCtrl.setRoot('AdminbraceletPage');
+            });
+        }
+    };
+    EditbraceletPage.prototype.removeBracelet = function (bracelet) {
+        var self = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirmar eliminación',
+            message: 'Deseas eliminar el registro?',
+            buttons: [
+                {
+                    text: 'No',
+                    role: 'cancelar'
+                },
+                {
+                    text: 'Sí',
+                    handler: function () {
+                        self.braceletListService.removeBracelet(bracelet).then(function () {
+                            self.navCtrl.setRoot('AdminbraceletPage');
+                        });
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    EditbraceletPage.prototype.toListBracelet = function () {
+        this.navCtrl.setRoot('AdminbraceletPage');
+    };
+    EditbraceletPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-editbracelet',template:/*ion-inline-start:"/myApp/src/pages/editbracelet/editbracelet.html"*/'<ion-header>\n \n    <ion-navbar>\n        <ion-title>{{bracelet?.code}}</ion-title>\n    </ion-navbar>\n \n</ion-header>\n \n<ion-content padding>\n \n    <ion-list no-lines>\n \n        <form [formGroup]="ctrls_edit">\n     \n            <ion-item>\n                <ion-label floating>Código</ion-label>\n                <ion-input formControlName="code" type="text" [class.invalid]="!ctrls_edit.controls.code.valid && (ctrls_edit.controls.code.dirty)">\n                    \n                </ion-input>\n            </ion-item>\n            <ion-item *ngIf="!ctrls_edit.controls.code.valid  && (ctrls_edit.controls.code.dirty)">\n                <p>No se permiten caractéres especiales, sólo letras y números.</p>\n            </ion-item>\n\n            <ion-item>\n                <ion-label floating>Client Secret</ion-label>\n                <ion-input formControlName="client_secret" type="text" [class.invalid]="!ctrls_edit.controls.client_secret.valid && (ctrls_edit.controls.client_secret.dirty)">\n                    \n                </ion-input>\n            </ion-item>\n            <ion-item *ngIf="!ctrls_edit.controls.client_secret.valid  && (ctrls_edit.controls.client_secret.dirty)">\n                <p>Client Secret es requerido y no puede estar vacio.</p>\n            </ion-item>\n\n\n            <ion-item>\n                <ion-label floating>Serial</ion-label>\n                <ion-input formControlName="serial" type="text" [class.invalid]="!ctrls_edit.controls.serial.valid && (ctrls_edit.controls.serial.dirty)">\n\n                </ion-input>\n            </ion-item>\n     \n           <ion-item *ngIf="!ctrls_edit.controls.serial.valid  && (ctrls_edit.controls.serial.dirty)">\n                <p>No se permiten caractéres especiales, sólo letras y números.</p>\n            </ion-item>\n\n        </form>\n\n    </ion-list>\n\n\n    <button ion-button full color="primary" (click)="updateBracelet(bracelet)">Guardar</button>\n    <button ion-button full color="warning" (click)="removeBracelet(bracelet)">Eliminar</button>\n    <button ion-button full color="secondary" (click)="toListBracelet()">Cancelar</button>\n\n</ion-content>'/*ion-inline-end:"/myApp/src/pages/editbracelet/editbracelet.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_database_bracelet_list_service__["a" /* BraceletListService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    ], EditbraceletPage);
+    return EditbraceletPage;
+}());
+
+//# sourceMappingURL=editbracelet.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=11.js.map

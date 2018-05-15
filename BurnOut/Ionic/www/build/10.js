@@ -1,1 +1,174 @@
-webpackJsonp([10],{423:function(l,n,u){"use strict";function a(l){return o._21(0,[(l()(),o.Z(0,0,null,null,8,"ion-item",[["class","item item-block"],["detail-push",""],["navPush","EdituserPage"]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==o._13(l,6).onClick()&&a}return a},m.b,m.a)),o.Y(1,1097728,null,3,v.a,[Y.a,j.a,o.j,o.z,[2,P.a]],null,null),o._17(335544320,6,{contentLabel:0}),o._17(603979776,7,{_buttons:1}),o._17(603979776,8,{_icons:1}),o.Y(5,16384,null,0,C.a,[],null,null),o.Y(6,16384,null,0,Z.a,[[2,z.a]],{navPush:[0,"navPush"],navParams:[1,"navParams"]},null),o._15(7,{profile:0}),(l()(),o._19(8,2,["\n          ","\n      "]))],function(l,n){l(n,6,0,"EdituserPage",l(n,7,0,n.context.$implicit))},function(l,n){l(n,8,0,n.context.$implicit.email)})}function t(l){return o._21(0,[(l()(),o.Z(0,0,null,null,35,"ion-header",[],null,null,null,null,null)),o.Y(1,16384,null,0,y.a,[j.a,o.j,o.z,[2,x.a]],null,null),(l()(),o._19(-1,null,["\n\n\t"])),(l()(),o.Z(3,0,null,null,31,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,A.b,A.a)),o.Y(4,49152,null,0,L.a,[q.a,[2,x.a],[2,z.a],j.a,o.j,o.z],null,null),(l()(),o._19(-1,3,["\n\n        "])),(l()(),o.Z(6,0,null,1,10,"ion-buttons",[["start",""]],null,null,null,null,null)),o.Y(7,16384,null,1,O.a,[j.a,o.j,o.z,[2,w.a],[2,L.a]],null,null),o._17(603979776,1,{_buttons:1}),(l()(),o._19(-1,null,["\n            "])),(l()(),o.Z(10,0,null,null,5,"button",[["ion-button",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.returnParent()&&a}return a},F.b,F.a)),o.Y(11,1097728,[[1,4]],0,U.a,[[8,""],j.a,o.j,o.z],null,null),(l()(),o._19(-1,0,["\n                "])),(l()(),o.Z(13,0,null,0,1,"ion-icon",[["name","arrow-back"],["role","img"]],[[2,"hide",null]],null,null,null,null)),o.Y(14,147456,null,0,X.a,[j.a,o.j,o.z],{name:[0,"name"]},null),(l()(),o._19(-1,0,["\n            "])),(l()(),o._19(-1,null,["\n        "])),(l()(),o._19(-1,3,["\n\n    \t"])),(l()(),o.Z(18,0,null,3,2,"ion-title",[],null,null,null,S.b,S.a)),o.Y(19,49152,null,0,B.a,[j.a,o.j,o.z,[2,w.a],[2,L.a]],null,null),(l()(),o._19(-1,0,["Usuarios"])),(l()(),o._19(-1,3,["\n\n      "])),(l()(),o.Z(22,0,null,2,11,"ion-buttons",[["end",""]],null,null,null,null,null)),o.Y(23,16384,null,1,O.a,[j.a,o.j,o.z,[2,w.a],[2,L.a]],null,null),o._17(603979776,2,{_buttons:1}),(l()(),o._19(-1,null,["\n          "])),(l()(),o.Z(26,0,null,null,6,"button",[["ion-button",""],["navPush","AdduserPage"]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==o._13(l,28).onClick()&&a}return a},F.b,F.a)),o.Y(27,1097728,[[2,4]],0,U.a,[[8,""],j.a,o.j,o.z],null,null),o.Y(28,16384,null,0,Z.a,[[2,z.a]],{navPush:[0,"navPush"]},null),(l()(),o._19(-1,0,["\n            "])),(l()(),o.Z(30,0,null,0,1,"ion-icon",[["name","add"],["role","img"]],[[2,"hide",null]],null,null,null,null)),o.Y(31,147456,null,0,X.a,[j.a,o.j,o.z],{name:[0,"name"]},null),(l()(),o._19(-1,0,["\n          "])),(l()(),o._19(-1,null,["\n      "])),(l()(),o._19(-1,3,["\n\n  \t"])),(l()(),o._19(-1,null,["\n\n"])),(l()(),o._19(-1,null,["\n\n\n"])),(l()(),o.Z(37,0,null,null,18,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,E.b,E.a)),o.Y(38,4374528,null,0,I.a,[j.a,M.a,R.a,o.j,o.z,q.a,$.a,o.u,[2,x.a],[2,z.a]],null,null),(l()(),o._19(-1,1,["\n\n  "])),(l()(),o.Z(40,0,null,1,14,"ion-list",[],null,null,null,null,null)),o.Y(41,16384,null,0,J.a,[j.a,o.j,o.z,M.a,N.l,R.a],null,null),(l()(),o._19(-1,null,["\n      "])),(l()(),o.Z(43,0,null,null,6,"ion-list-header",[["class","item"]],null,null,null,m.b,m.a)),o.Y(44,1097728,null,3,v.a,[Y.a,j.a,o.j,o.z,[2,P.a]],null,null),o._17(335544320,3,{contentLabel:0}),o._17(603979776,4,{_buttons:1}),o._17(603979776,5,{_icons:1}),o.Y(48,16384,null,0,T.a,[j.a,o.z,o.j,[8,null]],null,null),(l()(),o._19(-1,2,["\n          Usuarios\n      "])),(l()(),o._19(-1,null,["\n \n      "])),(l()(),o.U(16777216,null,null,2,null,a)),o.Y(52,802816,null,0,V.i,[o.I,o.F,o.p],{ngForOf:[0,"ngForOf"]},null),o._14(131072,V.b,[o.g]),(l()(),o._19(-1,null,["\n  \n  "])),(l()(),o._19(-1,1,["\n\n"]))],function(l,n){var u=n.component;l(n,14,0,"arrow-back");l(n,28,0,"AdduserPage");l(n,31,0,"add");l(n,52,0,o._20(n,52,0,o._13(n,53).transform(u.profileList)))},function(l,n){l(n,3,0,o._13(n,4)._hidden,o._13(n,4)._sbPadding);l(n,13,0,o._13(n,14)._hidden);l(n,30,0,o._13(n,31)._hidden);l(n,37,0,o._13(n,38).statusbarPadding,o._13(n,38)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var o=u(0),e=(u(3),u(69),u(158)),s=this&&this.__assign||Object.assign||function(l){for(var n,u=1,a=arguments.length;u<a;u++){n=arguments[u];for(var t in n)Object.prototype.hasOwnProperty.call(n,t)&&(l[t]=n[t])}return l},i=function(){function l(l,n,u,a){this.navCtrl=l,this.navParams=n,this.evts=u,this.profileListService=a,this.profileList=this.profileListService.getProfileList().snapshotChanges().map(function(l){return l.map(function(l){return s({key:l.payload.key},l.payload.val())})})}return l.prototype.returnParent=function(){this.navCtrl.setRoot("ProfilePage")},l}(),r=function(){return function(){}}(),c=u(281),_=u(282),b=u(283),d=u(284),f=u(285),p=u(286),k=u(287),g=u(288),h=u(289),m=u(290),v=u(22),Y=u(18),j=u(2),P=u(54),C=u(101),Z=u(106),z=u(27),y=u(154),x=u(6),A=u(432),L=u(51),q=u(11),O=u(163),w=u(70),F=u(52),U=u(26),X=u(53),S=u(433),B=u(152),E=u(429),I=u(28),M=u(5),R=u(12),$=u(45),J=u(71),N=u(10),T=u(104),V=u(17),W=u(14),D=u(105),G=o.X({encapsulation:2,styles:[],data:{}}),H=o.V("page-userbracelet",i,function(l){return o._21(0,[(l()(),o.Z(0,0,null,null,1,"page-userbracelet",[],null,null,null,t,G)),o.Y(1,49152,null,0,i,[z.a,W.a,D.a,e.a],null,null)],null,null)},{},{},[]),K=u(21),Q=u(153),ll=u(46);u.d(n,"UserbraceletPageModuleNgFactory",function(){return nl});var nl=o.W(r,[],function(l){return o._10([o._11(512,o.i,o.S,[[8,[c.a,_.a,b.a,d.a,f.a,p.a,k.a,g.a,h.a,H]],[3,o.i],o.s]),o._11(4608,V.l,V.k,[o.r,[2,V.t]]),o._11(4608,K.r,K.r,[]),o._11(4608,K.d,K.d,[]),o._11(512,V.c,V.c,[]),o._11(512,K.p,K.p,[]),o._11(512,K.g,K.g,[]),o._11(512,K.n,K.n,[]),o._11(512,Q.a,Q.a,[]),o._11(512,Q.b,Q.b,[]),o._11(512,r,r,[]),o._11(256,ll.a,i,[])])})},429:function(l,n,u){"use strict";function a(l){return t._21(2,[t._17(402653184,1,{_fixedContent:0}),t._17(402653184,2,{_scrollContent:0}),(l()(),t.Z(2,0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),t._12(null,0),(l()(),t.Z(4,0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),t._12(null,1),t._12(null,2)],null,null)}u.d(n,"a",function(){return o}),n.b=a;var t=u(0),o=(u(28),u(2),u(5),u(12),u(45),u(6),u(27),t.X({encapsulation:2,styles:[],data:{}}))},432:function(l,n,u){"use strict";function a(l){return t._21(0,[(l()(),t.Z(0,0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),t.Y(1,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t.Z(2,0,null,null,8,"button",[["class","back-button"],["ion-button","bar-button"]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.backButtonClick(u)&&a}return a},e.b,e.a)),t.Y(3,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t.Y(4,1097728,null,0,s.a,[[8,"bar-button"],i.a,t.j,t.z],null,null),(l()(),t.Z(5,0,null,0,2,"ion-icon",[["class","back-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),t.Y(6,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t.Y(7,147456,null,0,r.a,[i.a,t.j,t.z],{name:[0,"name"]},null),(l()(),t.Z(8,0,null,0,2,"span",[["class","back-button-text"]],null,null,null,null,null)),t.Y(9,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),t._19(10,null,["",""])),t._12(null,0),t._12(null,1),t._12(null,2),(l()(),t.Z(14,0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),t.Y(15,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t._12(null,3)],function(l,n){var u=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+u._mode);l(n,3,0,"back-button","back-button-"+u._mode);l(n,6,0,"back-button-icon","back-button-icon-"+u._mode);l(n,7,0,u._bbIcon);l(n,9,0,"back-button-text","back-button-text-"+u._mode);l(n,15,0,"toolbar-content","toolbar-content-"+u._mode)},function(l,n){var u=n.component;l(n,2,0,u._hideBb);l(n,5,0,t._13(n,7)._hidden);l(n,10,0,u._backText)})}u.d(n,"a",function(){return c}),n.b=a;var t=u(0),o=u(17),e=u(52),s=u(26),i=u(2),r=u(53),c=(u(51),u(6),u(27),t.X({encapsulation:2,styles:[],data:{}}))},433:function(l,n,u){"use strict";function a(l){return t._21(2,[(l()(),t.Z(0,0,null,null,2,"div",[["class","toolbar-title"]],null,null,null,null,null)),t.Y(1,278528,null,0,o.h,[t.p,t.q,t.j,t.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),t._12(null,0)],function(l,n){l(n,1,0,"toolbar-title","toolbar-title-"+n.component._mode)},null)}u.d(n,"a",function(){return e}),n.b=a;var t=u(0),o=u(17),e=(u(152),u(2),u(70),u(51),t.X({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([10],{
+
+/***/ 476:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EdituserPageModule", function() { return EdituserPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edituser__ = __webpack_require__(772);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var EdituserPageModule = (function () {
+    function EdituserPageModule() {
+    }
+    EdituserPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__edituser__["a" /* EdituserPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edituser__["a" /* EdituserPage */]),
+            ],
+        })
+    ], EdituserPageModule);
+    return EdituserPageModule;
+}());
+
+//# sourceMappingURL=edituser.module.js.map
+
+/***/ }),
+
+/***/ 772:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EdituserPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_database_profile_list_service__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database_bracelet_list_service__ = __webpack_require__(291);
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var EdituserPage = (function () {
+    function EdituserPage(navCtrl, navParams, profileListService, formBuilder, braceletListService, alertCtrl) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.profileListService = profileListService;
+        this.formBuilder = formBuilder;
+        this.braceletListService = braceletListService;
+        this.alertCtrl = alertCtrl;
+        this.user = {
+            email: "",
+            name: "",
+            bracelet_id: "",
+            code: "",
+            client_secret: ""
+        };
+        this.bracelets = [];
+        this.ctrls_edit = this.formBuilder.group({
+            email: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(50), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$'), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
+            name: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(30), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[a-zA-Z0-9 ]*'), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
+            braceletsel: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])]
+        });
+        this.braceletList = this.braceletListService.getBraceletList()
+            .snapshotChanges()
+            .map(function (changes) {
+            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        });
+        this.braceletList.forEach(function (item) {
+            _this.bracelets = item;
+        });
+    }
+    EdituserPage.prototype.ionViewDidLoad = function () {
+        this.user = this.navParams.get('profile');
+        this.ctrls_edit.controls.email.setValue(this.user.email);
+        this.ctrls_edit.controls.name.setValue(this.user.name);
+        this.ctrls_edit.controls.braceletsel.setValue(this.user.code);
+    };
+    EdituserPage.prototype.updateUser = function (user) {
+        var _this = this;
+        if (this.ctrls_edit.valid) {
+            this.user.email = this.ctrls_edit.controls.email.value;
+            this.user.name = this.ctrls_edit.controls.name.value;
+            this.user.code = this.ctrls_edit.controls.braceletsel.value;
+            this.user.bracelet_id = "";
+            this.user.client_secret = "";
+            for (var j = 0; j < this.bracelets.length; j++) {
+                if (this.bracelets[j].code == this.user.code) {
+                    this.user.bracelet_id = this.bracelets[j].key.toString();
+                    this.user.client_secret = this.bracelets[j].client_secret.toString();
+                }
+            }
+            this.profileListService.updateUser(this.user).then(function (ref) {
+                _this.navCtrl.setRoot('UserbraceletPage');
+            });
+        }
+    };
+    EdituserPage.prototype.removeUser = function (user) {
+        var self = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirmar eliminación',
+            message: 'Deseas eliminar el registro?',
+            buttons: [
+                {
+                    text: 'No',
+                    role: 'cancelar'
+                },
+                {
+                    text: 'Sí',
+                    handler: function () {
+                        self.profileListService.removeUser(user).then(function () {
+                            self.navCtrl.setRoot('UserbraceletPage');
+                        });
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    EdituserPage.prototype.toListUser = function () {
+        this.navCtrl.setRoot('UserbraceletPage');
+    };
+    EdituserPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-edituser',template:/*ion-inline-start:"/myApp/src/pages/edituser/edituser.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{user?.email}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n    <ion-list no-lines>\n        \n        <form [formGroup]="ctrls_edit">\n\n            <ion-item>\n                <ion-label floating>Email</ion-label>\n                <ion-input formControlName="email" type="text" [class.invalid]="!ctrls_edit.controls.email.valid && (ctrls_edit.controls.email.dirty)">\n                    \n                </ion-input>\n            </ion-item>\n            <ion-item *ngIf="!ctrls_edit.controls.email.valid  && (ctrls_edit.controls.email.dirty)">\n                <p>Debe contener formato de email.</p>\n            </ion-item>\n        \n             \n            <ion-item>\n                <ion-label floating>Nombre</ion-label>\n                <ion-input formControlName="name" type="text" [class.invalid]="!ctrls_edit.controls.name.valid && (ctrls_edit.controls.name.dirty)">\n\n                </ion-input>\n            </ion-item>\n             \n            <ion-item *ngIf="!ctrls_edit.controls.name.valid  && (ctrls_edit.controls.name.dirty)">\n                <p>No se permiten caractéres especiales, sólo letras y números.</p>\n            </ion-item>\n        \n            <ion-item>\n                <ion-label>Seleccione la Pulsera</ion-label>\n                <ion-select formControlName="braceletsel" [class.invalid]="!ctrls_edit.controls.braceletsel.valid">\n\n                    <ion-option *ngFor="let bracelet of braceletList | async" [value]="bracelet.code">\n                        {{ bracelet.code }}\n                    </ion-option>\n\n                </ion-select>\n            </ion-item> \n        \n            <ion-item *ngIf="!ctrls_edit.controls.braceletsel.valid">\n                <p>La pulsera es requerida, debe seleccionar alguna.</p>\n            </ion-item>\n\n\n        </form>\n        \n    </ion-list>\n        \n    <button ion-button full color="primary" (click)="updateUser(user)">Guardar</button>\n    <button ion-button full color="warning" (click)="removeUser(user)">Eliminar</button>\n    <button ion-button full color="secondary" (click)="toListUser()">Cancelar</button>\n\n</ion-content>\n\n'/*ion-inline-end:"/myApp/src/pages/edituser/edituser.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_database_profile_list_service__["a" /* ProfileListService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_database_bracelet_list_service__["a" /* BraceletListService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    ], EdituserPage);
+    return EdituserPage;
+}());
+
+//# sourceMappingURL=edituser.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=10.js.map

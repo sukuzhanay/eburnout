@@ -25,6 +25,8 @@ export class LoginPage {
     observable: any;
 
     private _id : number = 0;
+
+    private _uuid:any;
   
 
     constructor(
@@ -49,149 +51,52 @@ export class LoginPage {
   
     }
 
-    private _cipher(message, action) {
-        var text = message;
-        var encrypted = "";
-
-        for(var i = 0; i < text.length; i++) {
-            var ASCII = text[i].charCodeAt(0);
-            var n = null;
-
-            if(i % 2 == 0) {
-                n = action == 'encrypt' ? ASCII + 4 : ASCII - 4;
-            }
-
-            else if(i % 2 == 1) {
-                n = action == 'encrypt' ? ASCII + 7 : ASCII - 7;
-            }
-
-            var s = String.fromCharCode(n);
-
-            encrypted += s;;
-        }
-   
-        return encrypted;
-
-    }
-
-
+    
     private _onInit(){
 
+        var self = this;
 
+        this._getMyIDDevice().then((uuid) => {
 
+            self._uuid = uuid;
 
-
-        
-
-
-     // Sql lite deactive
-/*
-        var _self = this;
-        this._createDatabase().then((success) => {
-
-
-
-
-            if(success[0] !== undefined){
-
-                _self._id = success[0]["id"];
-                _self.formulario.email = success[0]["email"];
-                var desc = _self._cipher(success[0]["pwd"],'')
-                _self.formulario.password = desc;
-
-                return _self.login();
-
-            }
-            
         }, (error) => {
-            _self.toast(JSON.stringify(error));
+            console.log(error);
         });
-*/
+
     }
 
-/*
-    private _createDatabase(){
-        var _self = this;
-        return this._sqlite.create({
-              name: 'eburnout.db',
-              location: 'default' // the location field is required
-        })
-        .then((db) => {
-              _self._setDatabase(db);
-              _self._createTable();
-              return _self._getUser();
-        })
-        .catch(error =>{
-            _self.toast(JSON.stringify(error));
-            Promise.reject( error );
+
+    private _getMyIDDevice(): Promise<any> {
+
+        var self = this;
+
+        return new Promise(function (resolve, reject) {
+
+            resolve(self.device.uuid);
+
         });
+
+
     }
 
 
-    private _setDatabase(db: SQLiteObject){
-        if(this._db === null){
-              this._db = db;
-        }
-    }
+    /* LOGIN FIREBASE */
+    login() {
 
-    private _update(email:any,pwd:any,id: any){
-        let sql = 'UPDATE usuario SET email=?, pwd=? WHERE id=?';
-        return this._db.executeSql(sql, [email, pwd, id]);
-    }
 
-    private _create(email:any,pwd:any){
-        let sql = 'INSERT INTO usuario(email,pwd) VALUES(?,?)';
-        return this._db.executeSql(sql, [email,pwd]);
-    }
-*/
-    /*private _deleteTable(){
-        let sql = 'DROP TABLE IF EXISTS usuario';
-        return this._db.executeSql(sql, []);
-    }*/
-
-    /*
-    private _createTable(){
-        let sql = 'CREATE TABLE IF NOT EXISTS usuario(id INTEGER PRIMARY KEY AUTOINCREMENT, email VARCHAR(100),pwd TEXT)';
-        return this._db.executeSql(sql, []);
-    }
-
-    private _getUser(){
-
-        let sql = 'SELECT * FROM usuario WHERE id=1';
-        return this._db.executeSql(sql, [])
-            .then(response => {
-                let arrData = [];
-                for (let index = 0; index < response.rows.length; index++) {
-                    arrData.push( response.rows.item(index) );
-                }
-                return Promise.resolve( arrData );
-            })
-            .catch(error => Promise.reject( error ) );
-			
-    }
-*/
-   
+        this.loading = this.loadingCtrl.create({
+            content: 'Cargando'
+        });
     
+        this.loading.present().then(() => {
 
+            this.toast(this._uuid);
 
-
-
-  /* LOGIN FIREBASE */
-  login() {
-
-
-    this.loading = this.loadingCtrl.create({
-      content: 'Cargando'
-    });
-    this.loading.present().then(() => {
-
-          this.toast(this.device.uuid);
-
-
-      this.fireAuth.auth.signInWithEmailAndPassword(this.formulario.email, this.formulario.password)
-        .then(resultado => {
-          this.observable = Observable.combineLatest(
-            this.database.preguntas(), this.database.recomendaciones(),
+            this.fireAuth.auth.signInWithEmailAndPassword(this.formulario.email, this.formulario.password)
+                .then(resultado => {
+                    this.observable = Observable.combineLatest(
+                    this.database.preguntas(), this.database.recomendaciones(),
             this.database.usuarioRegistradoBD(resultado.uid), this.database.encuestasUltimas(resultado.uid),
             this.database.idClientFitBit(this.formulario.email),
             this.consentUserService.getConsentUser(this.formulario.email)

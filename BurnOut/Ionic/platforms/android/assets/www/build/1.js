@@ -50,109 +50,20 @@ var LoginPage = (function () {
     LoginPage.prototype.ionViewDidLoad = function () {
         this._onInit();
     };
-    LoginPage.prototype._cipher = function (message, action) {
-        var text = message;
-        var encrypted = "";
-        for (var i = 0; i < text.length; i++) {
-            var ASCII = text[i].charCodeAt(0);
-            var n = null;
-            if (i % 2 == 0) {
-                n = action == 'encrypt' ? ASCII + 4 : ASCII - 4;
-            }
-            else if (i % 2 == 1) {
-                n = action == 'encrypt' ? ASCII + 7 : ASCII - 7;
-            }
-            var s = String.fromCharCode(n);
-            encrypted += s;
-            ;
-        }
-        return encrypted;
-    };
     LoginPage.prototype._onInit = function () {
-        // Sql lite deactive
-        /*
-                var _self = this;
-                this._createDatabase().then((success) => {
-        
-        
-        
-        
-                    if(success[0] !== undefined){
-        
-                        _self._id = success[0]["id"];
-                        _self.formulario.email = success[0]["email"];
-                        var desc = _self._cipher(success[0]["pwd"],'')
-                        _self.formulario.password = desc;
-        
-                        return _self.login();
-        
-                    }
-                    
-                }, (error) => {
-                    _self.toast(JSON.stringify(error));
-                });
-        */
+        var self = this;
+        this._getMyIDDevice().then(function (uuid) {
+            self._uuid = uuid;
+        }, function (error) {
+            console.log(error);
+        });
     };
-    /*
-        private _createDatabase(){
-            var _self = this;
-            return this._sqlite.create({
-                  name: 'eburnout.db',
-                  location: 'default' // the location field is required
-            })
-            .then((db) => {
-                  _self._setDatabase(db);
-                  _self._createTable();
-                  return _self._getUser();
-            })
-            .catch(error =>{
-                _self.toast(JSON.stringify(error));
-                Promise.reject( error );
-            });
-        }
-    
-    
-        private _setDatabase(db: SQLiteObject){
-            if(this._db === null){
-                  this._db = db;
-            }
-        }
-    
-        private _update(email:any,pwd:any,id: any){
-            let sql = 'UPDATE usuario SET email=?, pwd=? WHERE id=?';
-            return this._db.executeSql(sql, [email, pwd, id]);
-        }
-    
-        private _create(email:any,pwd:any){
-            let sql = 'INSERT INTO usuario(email,pwd) VALUES(?,?)';
-            return this._db.executeSql(sql, [email,pwd]);
-        }
-    */
-    /*private _deleteTable(){
-        let sql = 'DROP TABLE IF EXISTS usuario';
-        return this._db.executeSql(sql, []);
-    }*/
-    /*
-    private _createTable(){
-        let sql = 'CREATE TABLE IF NOT EXISTS usuario(id INTEGER PRIMARY KEY AUTOINCREMENT, email VARCHAR(100),pwd TEXT)';
-        return this._db.executeSql(sql, []);
-    }
-
-    private _getUser(){
-
-        let sql = 'SELECT * FROM usuario WHERE id=1';
-        return this._db.executeSql(sql, [])
-            .then(response => {
-                let arrData = [];
-                for (let index = 0; index < response.rows.length; index++) {
-                    arrData.push( response.rows.item(index) );
-                }
-                return Promise.resolve( arrData );
-            })
-            .catch(error => Promise.reject( error ) );
-            
-    }
-*/
+    LoginPage.prototype._getMyIDDevice = function () {
+        var self = this;
+        return new Promise(function (resolve, reject) {
+            resolve(self.device.uuid);
+        });
+    };
     /* LOGIN FIREBASE */
     LoginPage.prototype.login = function () {
         var _this = this;
@@ -160,7 +71,7 @@ var LoginPage = (function () {
             content: 'Cargando'
         });
         this.loading.present().then(function () {
-            _this.toast(_this.device.uuid);
+            _this.toast(_this._uuid);
             _this.fireAuth.auth.signInWithEmailAndPassword(_this.formulario.email, _this.formulario.password)
                 .then(function (resultado) {
                 _this.observable = __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__["Observable"].combineLatest(_this.database.preguntas(), _this.database.recomendaciones(), _this.database.usuarioRegistradoBD(resultado.uid), _this.database.encuestasUltimas(resultado.uid), _this.database.idClientFitBit(_this.formulario.email), _this.consentUserService.getConsentUser(_this.formulario.email)).subscribe(function (resultados) {

@@ -1,1 +1,369 @@
-webpackJsonp([6],{415:function(l,n,u){"use strict";function t(l){return _._21(0,[(l()(),_.Z(0,0,null,null,10,"div",[],null,null,null,null,null)),(l()(),_._19(-1,null,["\n        \n        "])),(l()(),_.Z(2,0,null,null,7,"div",[["class","contenedor"]],null,null,null,null,null)),(l()(),_._19(-1,null,["\n        \n            "])),(l()(),_.Z(4,0,null,null,4,"div",[["class","bloque-pregunta"]],null,null,null,null,null)),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(6,0,null,null,1,"p",[["class","pregunta"]],null,null,null,null,null)),(l()(),_._19(-1,null,["Cargando..."])),(l()(),_._19(-1,null,["\n            "])),(l()(),_._19(-1,null,["\n\n        "])),(l()(),_._19(-1,null,["\n\n    "]))],null,null)}function e(l){return _._21(0,[(l()(),_.Z(0,0,null,null,0,"span",[],null,null,null,null,null))],null,null)}function a(l){return _._21(0,[(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(1,0,null,null,2,"button",[["class","btn-respuesta"],["icon-only",""],["ion-button",""],["style","background: #A10E2F"]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.respuesta(0)&&t}return t},Y.b,Y.a)),_.Y(2,1097728,null,0,U.a,[[8,""],P.a,_.j,_.z],null,null),(l()(),_._19(-1,0,["\n                    NUNCA\n                "])),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(5,0,null,null,2,"button",[["class","btn-respuesta"],["icon-only",""],["ion-button",""],["style","background: #82613C"]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.respuesta(1)&&t}return t},Y.b,Y.a)),_.Y(6,1097728,null,0,U.a,[[8,""],P.a,_.j,_.z],null,null),(l()(),_._19(-1,0,["\n                    Algunas veces al AÑO\n                "])),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(9,0,null,null,2,"button",[["class","btn-respuesta"],["icon-only",""],["ion-button",""],["style","background: #F59A00"]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.respuesta(2)&&t}return t},Y.b,Y.a)),_.Y(10,1097728,null,0,U.a,[[8,""],P.a,_.j,_.z],null,null),(l()(),_._19(-1,0,["\n                    Una vez a MES\n                "])),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(13,0,null,null,2,"button",[["class","btn-respuesta"],["icon-only",""],["ion-button",""],["style","background: #EB5D13"]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.respuesta(3)&&t}return t},Y.b,Y.a)),_.Y(14,1097728,null,0,U.a,[[8,""],P.a,_.j,_.z],null,null),(l()(),_._19(-1,0,["\n                    Algunas veces al MES\n                "])),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(17,0,null,null,2,"button",[["class","btn-respuesta"],["icon-only",""],["ion-button",""],["style","background: #2499D3"]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.respuesta(4)&&t}return t},Y.b,Y.a)),_.Y(18,1097728,null,0,U.a,[[8,""],P.a,_.j,_.z],null,null),(l()(),_._19(-1,0,["\n                    Una vez a la SEMANA\n                "])),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(21,0,null,null,2,"button",[["class","btn-respuesta"],["icon-only",""],["ion-button",""],["style","background: #347193"]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.respuesta(5)&&t}return t},Y.b,Y.a)),_.Y(22,1097728,null,0,U.a,[[8,""],P.a,_.j,_.z],null,null),(l()(),_._19(-1,0,["\n                    Algunas veces a la SEMANA\n                "])),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(25,0,null,null,2,"button",[["class","btn-respuesta"],["icon-only",""],["ion-button",""],["style","background: #70A63B"]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.respuesta(6)&&t}return t},Y.b,Y.a)),_.Y(26,1097728,null,0,U.a,[[8,""],P.a,_.j,_.z],null,null),(l()(),_._19(-1,0,["\n                    DIARIAMENTE\n                "])),(l()(),_._19(-1,null,["\n            "]))],null,null)}function s(l){return _._21(0,[(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(1,0,null,null,23,"form",[["class","formulario"],["novalidate",""]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngSubmit"],[null,"submit"],[null,"reset"]],function(l,n,u){var t=!0,e=l.component;if("submit"===n){t=!1!==_._13(l,3).onSubmit(u)&&t}if("reset"===n){t=!1!==_._13(l,3).onReset()&&t}if("ngSubmit"===n){t=!1!==e.terminar()&&t}return t},null,null)),_.Y(2,16384,null,0,q.q,[],null,null),_.Y(3,4210688,null,0,q.l,[[8,null],[8,null]],null,{ngSubmit:"ngSubmit"}),_._16(2048,null,q.b,null,[q.l]),_.Y(5,16384,null,0,q.k,[q.b],null,null),(l()(),_._19(-1,null,["\n                    "])),(l()(),_.Z(7,0,null,null,12,"ion-item",[["class","item item-block"]],null,null,null,x.b,x.a)),_.Y(8,1097728,null,3,A.a,[E.a,P.a,_.j,_.z,[2,w.a]],null,null),_._17(335544320,1,{contentLabel:0}),_._17(603979776,2,{_buttons:1}),_._17(603979776,3,{_icons:1}),_.Y(12,16384,null,0,z.a,[],null,null),(l()(),_._19(-1,2,["\n                        "])),(l()(),_.Z(14,0,null,3,4,"ion-textarea",[["name","mensaje"],["placeholder","Mensaje opcional"],["rows","6"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var t=!0;if("ngModelChange"===n){t=!1!==(l.component.formulario.mensaje=u)&&t}return t},Q.b,Q.a)),_.Y(15,671744,null,0,q.m,[[2,q.b],[8,null],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),_._16(2048,null,q.i,null,[q.m]),_.Y(17,16384,null,0,q.j,[q.i],null,null),_.Y(18,5423104,null,0,L.a,[P.a,F.a,E.a,M.a,_.j,_.z,[2,T.a],[2,A.a],[2,q.i],D.a],{placeholder:[0,"placeholder"]},null),(l()(),_._19(-1,2,["\n                    "])),(l()(),_._19(-1,null,["\n                    "])),(l()(),_.Z(21,0,null,null,2,"button",[["class","btn-1"],["ion-button",""],["type","submit"]],null,null,null,Y.b,Y.a)),_.Y(22,1097728,null,0,U.a,[[8,""],P.a,_.j,_.z],null,null),(l()(),_._19(-1,0,["Terminar"])),(l()(),_._19(-1,null,["\n                "])),(l()(),_._19(-1,null,["\n            "]))],function(l,n){l(n,15,0,"mensaje",n.component.formulario.mensaje);l(n,18,0,"Mensaje opcional")},function(l,n){l(n,1,0,_._13(n,5).ngClassUntouched,_._13(n,5).ngClassTouched,_._13(n,5).ngClassPristine,_._13(n,5).ngClassDirty,_._13(n,5).ngClassValid,_._13(n,5).ngClassInvalid,_._13(n,5).ngClassPending);l(n,14,0,_._13(n,17).ngClassUntouched,_._13(n,17).ngClassTouched,_._13(n,17).ngClassPristine,_._13(n,17).ngClassDirty,_._13(n,17).ngClassValid,_._13(n,17).ngClassInvalid,_._13(n,17).ngClassPending)})}function o(l){return _._21(0,[(l()(),_.Z(0,0,null,null,20,"div",[],null,null,null,null,null)),(l()(),_._19(-1,null,["\n        \n        "])),(l()(),_.Z(2,0,null,null,1,"p",[["class","num-pregunta"]],null,null,null,null,null)),(l()(),_._19(3,null,[""," de ",""])),(l()(),_._19(-1,null,["\n        "])),(l()(),_.Z(5,0,null,null,14,"div",[["class","contenedor"]],null,null,null,null,null)),(l()(),_._19(-1,null,["\n        \n            "])),(l()(),_.Z(7,0,null,null,4,"div",[["class","bloque-pregunta"]],null,null,null,null,null)),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(9,0,null,null,1,"p",[["class","pregunta"]],null,null,null,null,null)),(l()(),_._19(10,null,["",""])),(l()(),_._19(-1,null,["\n            "])),(l()(),_._19(-1,null,["\n        \n            "])),(l()(),_.U(16777216,null,null,1,null,e)),_.Y(14,16384,null,0,O.j,[_.I,_.F],{ngIf:[0,"ngIf"],ngIfThen:[1,"ngIfThen"],ngIfElse:[2,"ngIfElse"]},null),(l()(),_._19(-1,null,["\n\n            "])),(l()(),_.U(0,[["bloqueRespuestas",2]],null,0,null,a)),(l()(),_._19(-1,null,["\n\n            "])),(l()(),_.U(0,[["bloqueInput",2]],null,0,null,s)),(l()(),_._19(-1,null,["\n        "])),(l()(),_._19(-1,null,["\n\n    "]))],function(l,n){var u=n.component;l(n,14,0,"Q"!=u.global.questions[u.indicePregunta].type,_._13(n,16),_._13(n,18))},function(l,n){var u=n.component;l(n,3,0,u.indicePregunta+1,u.global.questions.length);l(n,10,0,u.global.questions[u.indicePregunta].question)})}function i(l){return _._21(0,[(l()(),_.Z(0,0,null,null,13,"div",[],null,null,null,null,null)),(l()(),_._19(-1,null,["\n        \n        "])),(l()(),_.Z(2,0,null,null,10,"div",[["class","contenedor"]],null,null,null,null,null)),(l()(),_._19(-1,null,["\n        \n            "])),(l()(),_.Z(4,0,null,null,7,"div",[["class","bloque-pregunta"]],null,null,null,null,null)),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(6,0,null,null,1,"p",[["class","pregunta"]],null,null,null,null,null)),(l()(),_._19(-1,null,["Es necesario que empiece el considerar ya aceptar recomendaciones"])),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(9,0,null,null,1,"p",[["class","pregunta"]],null,null,null,null,null)),(l()(),_._19(10,null,["En "," días, dará las respuestas "])),(l()(),_._19(-1,null,["\n            "])),(l()(),_._19(-1,null,["\n\n        "])),(l()(),_._19(-1,null,["\n\n    "]))],null,function(l,n){l(n,10,0,n.component._recommendationsService.days_to_answer)})}function r(l){return _._21(0,[(l()(),_.Z(0,0,null,null,16,"div",[],null,null,null,null,null)),(l()(),_._19(-1,null,["\n        \n        "])),(l()(),_.Z(2,0,null,null,13,"div",[["class","contenedor"]],null,null,null,null,null)),(l()(),_._19(-1,null,["\n        \n            "])),(l()(),_.Z(4,0,null,null,10,"div",[["class","bloque-pregunta"]],null,null,null,null,null)),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(6,0,null,null,1,"p",[["class","pregunta"]],null,null,null,null,null)),(l()(),_._19(-1,null,["Es necesario que continue el considerar recomendaciones,"])),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(9,0,null,null,1,"p",[["class","pregunta"]],null,null,null,null,null)),(l()(),_._19(-1,null,["o bien que espere al periodo de respuestas. "])),(l()(),_._19(-1,null,["\n                "])),(l()(),_.Z(12,0,null,null,1,"p",[["class","pregunta"]],null,null,null,null,null)),(l()(),_._19(13,null,["Faltan "," día(s) para que pueda ingresar sus respuestas. "])),(l()(),_._19(-1,null,["\n            "])),(l()(),_._19(-1,null,["\n\n        "])),(l()(),_._19(-1,null,["\n\n    "]))],null,function(l,n){l(n,13,0,n.component.diff_dates)})}function c(l){return _._21(0,[(l()(),_._19(-1,null,["\n"])),(l()(),_.Z(1,0,null,null,13,"ion-header",[],null,null,null,null,null)),_.Y(2,16384,null,0,B.a,[P.a,_.j,_.z,[2,N.a]],null,null),(l()(),_._19(-1,null,["\n  "])),(l()(),_.Z(4,0,null,null,9,"div",[],null,null,null,null,null)),(l()(),_._19(-1,null,["\n    "])),(l()(),_.Z(6,0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,R.b,R.a)),_.Y(7,49152,null,0,X.a,[M.a,[2,N.a],[2,V.a],P.a,_.j,_.z],null,null),(l()(),_._19(-1,3,["\n      "])),(l()(),_.Z(9,0,null,3,2,"ion-title",[],null,null,null,K.b,K.a)),_.Y(10,49152,null,0,J.a,[P.a,_.j,_.z,[2,W.a],[2,X.a]],null,null),(l()(),_._19(-1,0,["Encuesta"])),(l()(),_._19(-1,3,["\n    "])),(l()(),_._19(-1,null,["\n  "])),(l()(),_._19(-1,null,["\n"])),(l()(),_._19(-1,null,["\n"])),(l()(),_._19(-1,null,["\n\n"])),(l()(),_._19(-1,null,["\n"])),(l()(),_.Z(18,0,null,null,14,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,G.b,G.a)),_.Y(19,4374528,null,0,T.a,[P.a,F.a,D.a,_.j,_.z,M.a,H.a,_.u,[2,N.a],[2,V.a]],null,null),(l()(),_._19(-1,1,["\n\n    "])),(l()(),_.U(16777216,null,1,1,null,t)),_.Y(22,16384,null,0,O.j,[_.I,_.F],{ngIf:[0,"ngIf"]},null),(l()(),_._19(-1,1,["\n\n\n    "])),(l()(),_.U(16777216,null,1,1,null,o)),_.Y(25,16384,null,0,O.j,[_.I,_.F],{ngIf:[0,"ngIf"]},null),(l()(),_._19(-1,1,["\n\n\n    "])),(l()(),_.U(16777216,null,1,1,null,i)),_.Y(28,16384,null,0,O.j,[_.I,_.F],{ngIf:[0,"ngIf"]},null),(l()(),_._19(-1,1,["\n\n\n    "])),(l()(),_.U(16777216,null,1,1,null,r)),_.Y(31,16384,null,0,O.j,[_.I,_.F],{ngIf:[0,"ngIf"]},null),(l()(),_._19(-1,1,["\n\n\n   \n\n\n\n\n"])),(l()(),_._19(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,22,0,!u.to_Survey&&!u.on_recommendation&&!u.in_response);l(n,25,0,u.to_Survey&&!u.on_recommendation&&!u.in_response);l(n,28,0,!u.to_Survey&&u.on_recommendation&&!u.in_response);l(n,31,0,!u.to_Survey&&!u.on_recommendation&&u.in_response)},function(l,n){l(n,6,0,_._13(n,7)._hidden,_._13(n,7)._sbPadding);l(n,18,0,_._13(n,19).statusbarPadding,_._13(n,19)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var _=u(0),d=(u(3),u(69),u(100)),p=u(159),g=u(162),b=this&&this.__assign||Object.assign||function(l){for(var n,u=1,t=arguments.length;u<t;u++){n=arguments[u];for(var e in n)Object.prototype.hasOwnProperty.call(n,e)&&(l[e]=n[e])}return l},f=function(){function l(l,n,u,t,e){this.navCtrl=l,this.global=n,this.database=u,this._recommendationsService=t,this._global=e,this._QuestionUser={email:"",user:"",survey:"",created_at:"",updated_at:"",questions:[],answers:[]},this.key_latestSurvey="",this.date_latestSurvey="",this.to_Survey=!1,this.on_recommendation=!1,this.in_response=!1,this.diff_dates=0,this.last_survey=!1,this.resultadoPreguntas={ae:0,d:0,rp:0,q:""},this.indicePregunta=0,this.formulario={mensaje:""},this.loadQuestionUser()}return l.prototype.loadQuestionUser=function(){var l=this;this._QuestionUserList=this._QuestionUserList?this._QuestionUserList:this._recommendationsService.getQuestionUserList(this._global.usuario.id).snapshotChanges().map(function(l){return l.map(function(l){return b({key:l.payload.key},l.payload.val())})}),this._QuestionUserList.forEach(function(n){l.to_Survey=!1,l.on_recommendation=!1,l.in_response=!1,console.log("questions 1"),l.last_survey=!1,n.length?(l._QuestionUser=n[0],console.log(l._QuestionUser),void 0==l._QuestionUser.answers&&l._QuestionUser.questions.length?(l.on_recommendation=!1,l.in_response=!0,l.to_Survey=!1,l.diff_dates=l._recommendationsService.diff_dates(l._QuestionUser.created_at),l.diff_dates=l.diff_dates>l._recommendationsService.days_to_answer?0:l._recommendationsService.days_to_answer-l.diff_dates):l._QuestionUser.answers.length&&l._QuestionUser.questions.length&&(l.last_survey=!0,l.get_LastSurvey())):(l.last_survey=!0,l.get_LastSurvey())})},l.prototype.get_LastSurvey=function(){var l=this;this.LastSurvey=this.LastSurvey?this.LastSurvey:this._recommendationsService.getLastUserSurvey(this._global.usuario.id).snapshotChanges().map(function(l){return l.map(function(l){return b({key:l.payload.key},l.payload.val())})}),this.LastSurvey.forEach(function(n){n.length?l.last_survey&&(l.key_latestSurvey=n[0].key,console.log(l.key_latestSurvey),l.date_latestSurvey=n[0].created_at,l._recommendationsService.getQuestionUserPerSurveyList(l.key_latestSurvey).valueChanges().subscribe(function(n){console.log(n),l.last_survey&&(n.length?(l.to_Survey=!0,l.on_recommendation=!1,l.in_response=!1):(l.to_Survey=!1,l.on_recommendation=!0,l.in_response=!1)),l.last_survey=!1})):(l.to_Survey=!0,l.on_recommendation=!1,l.in_response=!1)})},l.prototype.ionViewDidLoad=function(){},l.prototype.respuesta=function(l){if(this.indicePregunta<this.global.questions.length-1){switch(this.global.questions[this.indicePregunta].type){case"AE":this.resultadoPreguntas.ae+=l;break;case"D":this.resultadoPreguntas.d+=l;break;case"RP":this.resultadoPreguntas.rp+=l}this.indicePregunta++}},l.prototype.terminar=function(){this.indicePregunta=0,this.resultadoPreguntas.q=this.formulario.mensaje,this.global.resultadoPreguntas=this.resultadoPreguntas,this.global.resultadosPreguntas.push(this.global.resultadoPreguntas),this.global.resultadosPreguntas.length>3&&this.global.resultadosPreguntas.shift(),this.database.guardarUltimaEncuesta(this.global.usuario.id,this.global.resultadoPreguntas),this.database.guardarEncuesta(this.global.usuario.id,this.global.resultadoPreguntas),this.resultadoPreguntas={ae:0,d:0,rp:0,q:""},this.formulario={mensaje:""},this.loadQuestionUser(),this.navCtrl.parent.select(2)},l}(),m=function(){return function(){}}(),h=u(281),v=u(282),y=u(283),k=u(284),Z=u(285),j=u(286),C=u(287),I=u(288),S=u(289),Y=u(52),U=u(26),P=u(2),q=u(21),x=u(290),A=u(22),E=u(18),w=u(54),z=u(101),Q=u(444),L=u(155),F=u(5),M=u(11),T=u(28),D=u(12),O=u(17),B=u(154),N=u(6),R=u(432),X=u(51),V=u(27),K=u(433),J=u(152),W=u(70),G=u(429),H=u(45),$=_.X({encapsulation:2,styles:[],data:{}}),ll=_.V("page-encuesta",f,function(l){return _._21(0,[(l()(),_.Z(0,0,null,null,1,"page-encuesta",[],null,null,null,c,$)),_.Y(1,49152,null,0,f,[V.a,d.a,p.a,g.a,d.a],null,null)],null,null)},{},{},[]),nl=u(153),ul=u(46);u.d(n,"EncuestaPageModuleNgFactory",function(){return tl});var tl=_.W(m,[],function(l){return _._10([_._11(512,_.i,_.S,[[8,[h.a,v.a,y.a,k.a,Z.a,j.a,C.a,I.a,S.a,ll]],[3,_.i],_.s]),_._11(4608,O.l,O.k,[_.r,[2,O.t]]),_._11(4608,q.r,q.r,[]),_._11(4608,q.d,q.d,[]),_._11(512,O.c,O.c,[]),_._11(512,q.p,q.p,[]),_._11(512,q.g,q.g,[]),_._11(512,q.n,q.n,[]),_._11(512,nl.a,nl.a,[]),_._11(512,nl.b,nl.b,[]),_._11(512,m,m,[]),_._11(256,ul.a,f,[])])})},429:function(l,n,u){"use strict";function t(l){return e._21(2,[e._17(402653184,1,{_fixedContent:0}),e._17(402653184,2,{_scrollContent:0}),(l()(),e.Z(2,0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),e._12(null,0),(l()(),e.Z(4,0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),e._12(null,1),e._12(null,2)],null,null)}u.d(n,"a",function(){return a}),n.b=t;var e=u(0),a=(u(28),u(2),u(5),u(12),u(45),u(6),u(27),e.X({encapsulation:2,styles:[],data:{}}))},432:function(l,n,u){"use strict";function t(l){return e._21(0,[(l()(),e.Z(0,0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),e.Y(1,278528,null,0,a.h,[e.p,e.q,e.j,e.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),e.Z(2,0,null,null,8,"button",[["class","back-button"],["ion-button","bar-button"]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.backButtonClick(u)&&t}return t},s.b,s.a)),e.Y(3,278528,null,0,a.h,[e.p,e.q,e.j,e.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),e.Y(4,1097728,null,0,o.a,[[8,"bar-button"],i.a,e.j,e.z],null,null),(l()(),e.Z(5,0,null,0,2,"ion-icon",[["class","back-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e.Y(6,278528,null,0,a.h,[e.p,e.q,e.j,e.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),e.Y(7,147456,null,0,r.a,[i.a,e.j,e.z],{name:[0,"name"]},null),(l()(),e.Z(8,0,null,0,2,"span",[["class","back-button-text"]],null,null,null,null,null)),e.Y(9,278528,null,0,a.h,[e.p,e.q,e.j,e.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(l()(),e._19(10,null,["",""])),e._12(null,0),e._12(null,1),e._12(null,2),(l()(),e.Z(14,0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),e.Y(15,278528,null,0,a.h,[e.p,e.q,e.j,e.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),e._12(null,3)],function(l,n){var u=n.component;l(n,1,0,"toolbar-background","toolbar-background-"+u._mode);l(n,3,0,"back-button","back-button-"+u._mode);l(n,6,0,"back-button-icon","back-button-icon-"+u._mode);l(n,7,0,u._bbIcon);l(n,9,0,"back-button-text","back-button-text-"+u._mode);l(n,15,0,"toolbar-content","toolbar-content-"+u._mode)},function(l,n){var u=n.component;l(n,2,0,u._hideBb);l(n,5,0,e._13(n,7)._hidden);l(n,10,0,u._backText)})}u.d(n,"a",function(){return c}),n.b=t;var e=u(0),a=u(17),s=u(52),o=u(26),i=u(2),r=u(53),c=(u(51),u(6),u(27),e.X({encapsulation:2,styles:[],data:{}}))},433:function(l,n,u){"use strict";function t(l){return e._21(2,[(l()(),e.Z(0,0,null,null,2,"div",[["class","toolbar-title"]],null,null,null,null,null)),e.Y(1,278528,null,0,a.h,[e.p,e.q,e.j,e.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),e._12(null,0)],function(l,n){l(n,1,0,"toolbar-title","toolbar-title-"+n.component._mode)},null)}u.d(n,"a",function(){return s}),n.b=t;var e=u(0),a=u(17),s=(u(152),u(2),u(70),u(51),e.X({encapsulation:2,styles:[],data:{}}))},444:function(l,n,u){"use strict";function t(l){return i._21(0,[(l()(),i.Z(0,0,[[1,0],["textInput",1]],null,1,"input",[["class","text-input"],["dir","auto"]],[[8,"type",0],[1,"aria-labelledby",0],[1,"min",0],[1,"max",0],[1,"step",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var t=!0,e=l.component;if("input"===n){t=!1!==e.onInput(u)&&t}if("blur"===n){t=!1!==e.onBlur(u)&&t}if("focus"===n){t=!1!==e.onFocus(u)&&t}if("keydown"===n){t=!1!==e.onKeydown(u)&&t}return t},null,null)),i.Y(1,278528,null,0,r.h,[i.p,i.q,i.j,i.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._type,u._labelId,u.min,u.max,u.step,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function e(l){return i._21(0,[(l()(),i.Z(0,0,[[1,0],["textInput",1]],null,1,"textarea",[["class","text-input"]],[[1,"aria-labelledby",0],[1,"autocomplete",0],[1,"autocorrect",0],[8,"placeholder",0],[8,"disabled",0],[8,"readOnly",0]],[[null,"input"],[null,"blur"],[null,"focus"],[null,"keydown"]],function(l,n,u){var t=!0,e=l.component;if("input"===n){t=!1!==e.onInput(u)&&t}if("blur"===n){t=!1!==e.onBlur(u)&&t}if("focus"===n){t=!1!==e.onFocus(u)&&t}if("keydown"===n){t=!1!==e.onKeydown(u)&&t}return t},null,null)),i.Y(1,278528,null,0,r.h,[i.p,i.q,i.j,i.A],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null)],function(l,n){l(n,1,0,"text-input","text-input-"+n.component._mode)},function(l,n){var u=n.component;l(n,0,0,u._labelId,u.autocomplete,u.autocorrect,u.placeholder,u._disabled,u._readonly)})}function a(l){return i._21(0,[(l()(),i.Z(0,0,null,null,1,"button",[["class","text-input-clear-icon"],["clear",""],["ion-button",""],["tabindex","-1"],["type","button"]],null,[[null,"click"],[null,"mousedown"]],function(l,n,u){var t=!0,e=l.component;if("click"===n){t=!1!==e.clearTextInput(u)&&t}if("mousedown"===n){t=!1!==e.clearTextInput(u)&&t}return t},c.b,c.a)),i.Y(1,1097728,null,0,_.a,[[8,""],d.a,i.j,i.z],{clear:[0,"clear"]},null)],function(l,n){l(n,1,0,"")},null)}function s(l){return i._21(0,[(l()(),i.Z(0,0,null,null,0,"div",[["class","input-cover"]],null,[[null,"touchstart"],[null,"touchend"],[null,"mousedown"],[null,"mouseup"]],function(l,n,u){var t=!0,e=l.component;if("touchstart"===n){t=!1!==e._pointerStart(u)&&t}if("touchend"===n){t=!1!==e._pointerEnd(u)&&t}if("mousedown"===n){t=!1!==e._pointerStart(u)&&t}if("mouseup"===n){t=!1!==e._pointerEnd(u)&&t}return t},null,null))],null,null)}function o(l){return i._21(2,[i._17(671088640,1,{_native:0}),(l()(),i.U(16777216,null,null,1,null,t)),i.Y(2,16384,null,0,r.j,[i.I,i.F],{ngIf:[0,"ngIf"]},null),(l()(),i.U(16777216,null,null,1,null,e)),i.Y(4,16384,null,0,r.j,[i.I,i.F],{ngIf:[0,"ngIf"]},null),(l()(),i.U(16777216,null,null,1,null,a)),i.Y(6,16384,null,0,r.j,[i.I,i.F],{ngIf:[0,"ngIf"]},null),(l()(),i.U(16777216,null,null,1,null,s)),i.Y(8,16384,null,0,r.j,[i.I,i.F],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,!u._isTextarea);l(n,4,0,u._isTextarea);l(n,6,0,u._clearInput);l(n,8,0,u._useAssist)},null)}u.d(n,"a",function(){return p}),n.b=o;var i=u(0),r=u(17),c=u(52),_=u(26),d=u(2),p=(u(155),u(5),u(18),u(22),u(12),i.X({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([6],{
+
+/***/ 1127:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecommendationsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global_global__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_database_recommendations_service__ = __webpack_require__(295);
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var RecommendationsPage = (function () {
+    function RecommendationsPage(navCtrl, navParams, _recommendationsService, _global, alertCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this._recommendationsService = _recommendationsService;
+        this._global = _global;
+        this.alertCtrl = alertCtrl;
+        this.section = "";
+        this.first = true;
+        this.section_a = "";
+        this.first_a = true;
+        this.key_latestSurvey = "";
+        this.date_latestSurvey = "";
+        this._QuestionUser = {
+            email: "",
+            user: "",
+            survey: "",
+            created_at: "",
+            updated_at: "",
+            questions: [],
+            answers: []
+        };
+        this.is_permissible = true;
+        this._insert = true;
+        this._question_modality = true;
+        this.loadQuestionUser();
+    }
+    RecommendationsPage.prototype._before_save_is_false = function () {
+        var pass = false;
+        for (var i = 0; i < this._QuestionUser.questions.length; i++)
+            if (this._QuestionUser.questions[i].checked)
+                pass = true;
+        if (!pass) {
+            var alert_1 = this.alertCtrl.create({
+                title: "Selección de Recomendación(es)",
+                message: "Debe seleccionar al menos una recomendación",
+                buttons: [
+                    {
+                        text: 'OK',
+                        role: 'cancelar'
+                    }
+                ]
+            });
+            alert_1.present();
+        }
+        return pass;
+    };
+    RecommendationsPage.prototype._before_save_is_false_answer = function () {
+        var pass = true;
+        for (var i = 0; i < this._QuestionUser.answers.length; i++)
+            if (!this._QuestionUser.answers[i].value.toString().trim().length)
+                pass = false;
+        if (!pass) {
+            var alert_2 = this.alertCtrl.create({
+                title: "Inclusión de Respuesta(s)",
+                message: "Debe escribir un valor de resultado en cada una de las preguntas",
+                buttons: [
+                    {
+                        text: 'OK',
+                        role: 'cancelar'
+                    }
+                ]
+            });
+            alert_2.present();
+        }
+        return pass;
+    };
+    RecommendationsPage.prototype._clean = function () {
+        this._QuestionUser = {
+            email: "",
+            user: "",
+            survey: "",
+            created_at: "",
+            updated_at: "",
+            questions: [],
+            answers: []
+        };
+        this.Answers = undefined;
+    };
+    RecommendationsPage.prototype.loadQuestionUser = function () {
+        var _this = this;
+        this._QuestionUserList = !this._QuestionUserList ? this._recommendationsService.getQuestionUserList(this._global.usuario.id)
+            .snapshotChanges()
+            .map(function (changes) {
+            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        }) : this._QuestionUserList;
+        this._QuestionUserList.forEach(function (item) {
+            _this.LastSurvey = !_this.LastSurvey ? _this._recommendationsService.getLastUserSurvey(_this._global.usuario.id)
+                .snapshotChanges()
+                .map(function (changes) {
+                return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+            }) : _this.LastSurvey;
+            _this.LastSurvey.forEach(function (encuesta) {
+                if (encuesta.length) {
+                    _this.is_permissible = true;
+                    _this.key_latestSurvey = encuesta[0]["key"];
+                    _this.date_latestSurvey = encuesta[0]["created_at"];
+                    console.log(_this.key_latestSurvey);
+                    _this.section = "";
+                    _this.first = true;
+                    _this.section_a = "";
+                    _this.first_a = true;
+                    _this._question_modality = true;
+                    console.log('questions 2');
+                    if (item.length) {
+                        if (item[0]["survey"] == _this.key_latestSurvey) {
+                            _this._QuestionUser = item[0];
+                            var diff_dates = _this._recommendationsService.diff_dates(_this._QuestionUser.created_at);
+                            console.log(diff_dates);
+                            if (diff_dates >= _this._recommendationsService.days_to_answer) {
+                                _this._question_modality = false;
+                            }
+                            else {
+                                _this._question_modality = true;
+                            }
+                            _this._insert = false;
+                        }
+                        else {
+                            _this._insert = true;
+                            _this._clean();
+                        }
+                    }
+                    else {
+                        _this._insert = true;
+                        _this._clean();
+                    }
+                    console.log(_this._QuestionUser);
+                    if (_this._question_modality) {
+                        _this.loadQuestions();
+                    }
+                    else {
+                        _this.loadAnswers();
+                    }
+                }
+                else {
+                    _this.is_permissible = false;
+                }
+            });
+        });
+    };
+    RecommendationsPage.prototype.loadQuestions = function () {
+        var _this = this;
+        this.RecommendationsList = !this.RecommendationsList ? this._recommendationsService.getQuestionsList()
+            .snapshotChanges()
+            .map(function (changes) {
+            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        }) : this.RecommendationsList;
+        this.RecommendationsList.forEach(function (item) {
+            if (_this.Recommendations == undefined) {
+                _this.Recommendations = item;
+                if (_this.Recommendations.length)
+                    _this.section = _this.Recommendations[0]["categoria"];
+            }
+            // ES NUEVA
+            if (!_this._QuestionUser.questions.length) {
+                for (var i = 0; i < _this.Recommendations.length; i++) {
+                    _this._QuestionUser.questions.push({
+                        id: _this.Recommendations[i]["id"],
+                        recommendation: _this.Recommendations[i]["recommendation"],
+                        checked: false,
+                    });
+                }
+            }
+        });
+    };
+    RecommendationsPage.prototype.loadAnswers = function () {
+        var _this = this;
+        this.AnswersList = !this.AnswersList ? this._recommendationsService.getAnswersList()
+            .snapshotChanges()
+            .map(function (changes) {
+            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
+        }) : this.AnswersList;
+        this.AnswersList.forEach(function (item) {
+            if (_this.Answers == undefined && item.length && _this._QuestionUser.questions.length) {
+                var index = 0;
+                var indice = 0;
+                _this.Answers = [];
+                for (var i = 0; i < _this._QuestionUser.questions.length; i++) {
+                    if (_this._QuestionUser.questions[i].checked) {
+                        index = parseInt(_this._QuestionUser.questions[i].id) - 1;
+                        _this.Answers[indice] = item[index];
+                        indice++;
+                    }
+                }
+                if (_this.Answers.length) {
+                    _this.Answers[indice] = item[_this._recommendationsService.id_first_question_forced - 1];
+                    indice++;
+                    _this.Answers[indice] = item[_this._recommendationsService.id_second_question_forced - 1];
+                    _this.section_a = _this.Answers[0]["categoria"];
+                }
+            }
+            // ES NUEVA
+            if (_this._QuestionUser.answers == undefined) {
+                _this._QuestionUser.answers = [];
+                for (var j = 0; j < _this.Answers.length; j++) {
+                    _this._QuestionUser.answers.push({
+                        id: _this.Answers[j]["id"],
+                        question: _this.Answers[j]["pregunta"],
+                        value: "",
+                    });
+                }
+            }
+        });
+    };
+    RecommendationsPage.prototype.changeSection = function (newSection) {
+        this.section = newSection;
+        return true;
+    };
+    RecommendationsPage.prototype.changeSection_a = function (newSection) {
+        this.section_a = newSection;
+        return true;
+    };
+    RecommendationsPage.prototype.setNotFirst = function () {
+        this.first = false;
+        return true;
+    };
+    RecommendationsPage.prototype.setNotFirst_a = function () {
+        this.first_a = false;
+        return true;
+    };
+    RecommendationsPage.prototype.AddSelCatego = function (recommendation) {
+    };
+    RecommendationsPage.prototype.AddSelAnswer = function (answer) {
+    };
+    RecommendationsPage.prototype.saveRecomm = function () {
+        if (!this._before_save_is_false())
+            return false;
+        var title = "";
+        var mge = "";
+        var date = new Date();
+        if (this._insert) {
+            this._QuestionUser.email = this._global.usuario.email;
+            this._QuestionUser.user = this._global.usuario.id;
+            this._QuestionUser.survey = this.key_latestSurvey;
+            this._QuestionUser.created_at = date.toISOString();
+            this._recommendationsService.addQuestionUser(this._QuestionUser);
+            title = "Crear Recomendación(es)";
+            mge = "Se creó recomendación(es)";
+        }
+        else {
+            this._QuestionUser.updated_at = date.toISOString();
+            this._recommendationsService.updateQuestionUser(this._QuestionUser);
+            title = "Actualizar Recomendación(es)";
+            mge = "Se actualizó recomendación(es)";
+        }
+        var alert = this.alertCtrl.create({
+            title: title,
+            message: mge,
+            buttons: [
+                {
+                    text: 'OK',
+                    role: 'cancelar'
+                }
+            ]
+        });
+        alert.present();
+    };
+    RecommendationsPage.prototype.saveAnswer = function () {
+        var _this = this;
+        if (!this._before_save_is_false_answer())
+            return false;
+        var date = new Date();
+        this._QuestionUser.updated_at = date.toISOString();
+        this._recommendationsService.updateQuestionUser(this._QuestionUser);
+        var alert = this.alertCtrl.create({
+            title: "Actualizar Respuesta(s)",
+            message: "Se actualizó respuesta(s)",
+            buttons: [
+                {
+                    text: 'OK',
+                    role: 'cancelar',
+                    handler: function () {
+                        _this.navCtrl.parent.select(1);
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    RecommendationsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-recommendations',template:/*ion-inline-start:"/myApp/src/pages/recommendations/recommendations.html"*/'<!-->HEADER</!-->\n<ion-header>\n\n	<div>\n    	<ion-navbar>\n      		<ion-title>Recomendaciones</ion-title>\n    	</ion-navbar>\n  	</div>\n\n</ion-header>\n<!-->FIN HEADER</!-->\n\n<!-->CONTENT</!-->\n<ion-content padding>\n\n	<ion-icon name="pulse" class="icono" style="font-size: 50px; text-align: right; padding-left: 50%"></ion-icon>\n\n	<div *ngIf="is_permissible">\n\n		<div *ngIf="_question_modality && _QuestionUser.questions.length">\n\n			<div *ngFor="let recommendation of Recommendations; let i = index">\n		  \n				<div *ngIf="recommendation.categoria != section || i == 0">\n\n					<ion-item text-wrap>\n					\n						<ion-icon name="happy" darkgreen item-left></ion-icon>\n\n		     			<ion-label>{{recommendation.categoria}}</ion-label>\n\n		     		</ion-item>\n\n					<div [class.inactive]="changeSection(recommendation.categoria)"></div>\n					\n				</div>\n\n				<ion-item text-wrap>\n\n		     		<ion-label (tap)="AddSelCatego(recommendation);" tappable>{{recommendation.recommendation}}</ion-label>\n		     	\n		     		<ion-checkbox red item-right [(ngModel)]="_QuestionUser.questions[i].checked" (ionChange)="AddSelCatego(recommendation);"></ion-checkbox>\n\n				</ion-item>\n\n			</div>\n\n		\n\n			<br/>\n			<br/>\n\n\n			<button ion-button full color="primary" (click)="saveRecomm()">Guardar</button>\n\n		</div>\n\n		<div *ngIf="!_question_modality && _QuestionUser.answers != undefined">\n\n			<div *ngIf="_QuestionUser.answers.length">\n\n				<div *ngFor="let Answer of Answers; let j = index">\n			  \n					<div *ngIf="Answer.categoria != section_a || j == 0">\n\n						<ion-item text-wrap>\n						\n							<ion-icon name="checkmark-circle" darkgreen item-left></ion-icon>\n\n			     			<ion-label>{{Answer.categoria}}</ion-label>\n\n			     		</ion-item>\n\n						<div [class.inactive]="changeSection_a(Answer.categoria)"></div>\n						\n					</div>\n\n					<ion-item text-wrap>\n\n			     		<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>\n			     	\n			     		<ion-input type="text" [(ngModel)]="_QuestionUser.answers[j].value" placeholder="en minutos, dias, texto"></ion-input>\n\n					</ion-item>\n\n				</div>\n\n			</div>\n\n			<br/>\n			<br/>\n\n\n			<button ion-button full color="primary" (click)="saveAnswer()">Guardar</button>\n\n		</div>\n\n	</div>\n\n	<br/>\n	<br/>\n\n\n</ion-content>\n<!-->FIN CONTENT</!-->'/*ion-inline-end:"/myApp/src/pages/recommendations/recommendations.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_database_recommendations_service__["a" /* RecommendationsService */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_global_global__["a" /* GlobalProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+    ], RecommendationsPage);
+    return RecommendationsPage;
+}());
+
+//# sourceMappingURL=recommendations.js.map
+
+/***/ }),
+
+/***/ 487:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecommendationsPageModule", function() { return RecommendationsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__recommendations__ = __webpack_require__(1127);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var RecommendationsPageModule = (function () {
+    function RecommendationsPageModule() {
+    }
+    RecommendationsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__recommendations__["a" /* RecommendationsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__recommendations__["a" /* RecommendationsPage */]),
+            ],
+        })
+    ], RecommendationsPageModule);
+    return RecommendationsPageModule;
+}());
+
+//# sourceMappingURL=recommendations.module.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=6.js.map
