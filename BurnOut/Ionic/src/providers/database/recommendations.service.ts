@@ -16,8 +16,6 @@ export class RecommendationsService {
 
     private answerQListRef = this.db.list<AnswerR>('answer_categories/');
 
-    private userSurveyListRef = this.db.list('encuestas/');
-
     /**
      * Son los días iniciales y permisibles para empezar a contestar, antes puede escoger cualquier indicativo, 
      * luego tiene que responder

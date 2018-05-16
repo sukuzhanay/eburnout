@@ -36,6 +36,8 @@ import { RecommendationsService } from './../providers/database/recommendations.
 
 import { Device } from '@ionic-native/device';
 
+import { AutomaticLoginService } from './../providers/global/automatic-login.service';
+
 export const firebaseConfig = {
   apiKey: "AIzaSyA0mnZssyqo5PieFUUBTipdU9VB9uh0Xvo",
   authDomain: "my-first-project-7d187.firebaseapp.com",
@@ -86,7 +88,8 @@ export const firebaseConfig = {
     TokenFitBitService,
     Base64,
     DataFitBitService,
-    RecommendationsService
+    RecommendationsService,
+    AutomaticLoginService
   ]
 })
 export class AppModule { }

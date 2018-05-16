@@ -26,7 +26,7 @@ export class MyApp {
 
 			setTimeout(()=>{
 				this.splashScreen.hide();
-			},2000);
+			},10000);
 
 			this._fcm.getToken()
 				.then( ( token: string ) => {

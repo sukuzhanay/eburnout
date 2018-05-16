@@ -1,1 +1,111 @@
-webpackJsonp([15],{422:function(l,n,a){"use strict";function t(l){return s._21(0,[(l()(),s.Z(0,0,null,null,1,"ion-icon",[["class","tab-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),s.Y(1,147456,null,0,Z.a,[Y.a,s.j,s.z],{name:[0,"name"],isActive:[1,"isActive"]},null)],function(l,n){var a=n.component;l(n,1,0,a.tab.tabIcon,a.tab.isSelected)},function(l,n){l(n,0,0,s._13(n,1)._hidden)})}function u(l){return s._21(0,[(l()(),s.Z(0,0,null,null,1,"span",[["class","tab-button-text"]],null,null,null,null,null)),(l()(),s._19(1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.tab.tabTitle)})}function e(l){return s._21(0,[(l()(),s.Z(0,0,null,null,2,"ion-badge",[["class","tab-badge"]],null,null,null,null,null)),s.Y(1,16384,null,0,j.a,[Y.a,s.j,s.z],{color:[0,"color"]},null),(l()(),s._19(2,null,["",""]))],function(l,n){l(n,1,0,n.component.tab.tabBadgeStyle)},function(l,n){l(n,2,0,n.component.tab.tabBadge)})}function o(l){return s._21(0,[(l()(),s.U(16777216,null,null,1,null,t)),s.Y(1,16384,null,0,R.j,[s.I,s.F],{ngIf:[0,"ngIf"]},null),(l()(),s.U(16777216,null,null,1,null,u)),s.Y(3,16384,null,0,R.j,[s.I,s.F],{ngIf:[0,"ngIf"]},null),(l()(),s.U(16777216,null,null,1,null,e)),s.Y(5,16384,null,0,R.j,[s.I,s.F],{ngIf:[0,"ngIf"]},null),(l()(),s.Z(6,0,null,null,0,"div",[["class","button-effect"]],null,null,null,null,null))],function(l,n){var a=n.component;l(n,1,0,a.tab.tabIcon);l(n,3,0,a.tab.tabTitle);l(n,5,0,a.tab.tabBadge)},null)}function i(l){return s._21(0,[(l()(),s.Z(0,0,null,null,1,"a",[["class","tab-button"],["href","#"],["role","tab"]],[[1,"id",0],[1,"aria-controls",0],[1,"aria-selected",0],[2,"has-title",null],[2,"has-icon",null],[2,"has-title-only",null],[2,"icon-only",null],[2,"has-badge",null],[2,"disable-hover",null],[2,"tab-disabled",null],[2,"tab-hidden",null]],[[null,"ionSelect"],[null,"click"]],function(l,n,a){var t=!0,u=l.component;if("click"===n){t=!1!==s._13(l,1).onClick()&&t}if("ionSelect"===n){t=!1!==u.select(l.context.$implicit)&&t}return t},o,P)),s.Y(1,114688,null,0,z.a,[Y.a,s.j,s.z],{tab:[0,"tab"]},{ionSelect:"ionSelect"})],function(l,n){l(n,1,0,n.context.$implicit)},function(l,n){l(n,0,1,[s._13(n,1).tab._btnId,s._13(n,1).tab._tabId,s._13(n,1).tab.isSelected,s._13(n,1).hasTitle,s._13(n,1).hasIcon,s._13(n,1).hasTitleOnly,s._13(n,1).hasIconOnly,s._13(n,1).hasBadge,s._13(n,1).disHover,!s._13(n,1).tab.enabled,!s._13(n,1).tab.show])})}function c(l){return s._21(0,[s._17(402653184,1,{_highlight:0}),s._17(402653184,2,{_tabbar:0}),s._17(402653184,3,{portal:0}),(l()(),s.Z(3,0,[[2,0],["tabbar",1]],null,4,"div",[["class","tabbar"],["role","tablist"]],null,null,null,null,null)),(l()(),s.U(16777216,null,null,1,null,i)),s.Y(5,802816,null,0,R.i,[s.I,s.F,s.p],{ngForOf:[0,"ngForOf"]},null),(l()(),s.Z(6,0,null,null,1,"div",[["class","tab-highlight"]],null,null,null,null,null)),s.Y(7,16384,[[1,4]],0,k.a,[s.j,S.a],null,null),s._12(null,0),(l()(),s.Z(9,16777216,[[3,3],["portal",1]],null,0,"div",[["tab-portal",""]],null,null,null,null,null))],function(l,n){l(n,5,0,n.component._tabs)},null)}function b(l){return s._21(0,[s._17(402653184,1,{_vp:0}),(l()(),s.Z(1,16777216,[[1,3],["viewport",1]],null,0,"div",[],null,null,null,null,null)),(l()(),s.Z(2,0,null,null,0,"div",[["class","nav-decor"]],null,null,null,null,null))],null,null)}function r(l){return s._21(0,[s._17(402653184,1,{tabRef:0}),(l()(),s.Z(1,0,null,null,15,"ion-tabs",[],null,null,null,c,U)),s._16(6144,null,F.a,null,[x.a]),s.Y(3,4374528,[[1,4],["tab",4]],0,x.a,[[2,O.a],[2,V.a],w.a,Y.a,s.j,B.a,s.z,D.a,E.a],null,null),(l()(),s._19(-1,0,["\n  "])),(l()(),s.Z(5,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","apps"],["tabTitle","Dashboard"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,b,M)),s.Y(6,245760,null,0,X.a,[x.a,w.a,Y.a,B.a,s.j,s.u,s.z,s.i,s.g,A.l,C.a,[2,D.a],S.a,s.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),s._19(-1,0,["\n  "])),(l()(),s.Z(8,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","list-box"],["tabTitle","Encuesta"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,b,M)),s.Y(9,245760,null,0,X.a,[x.a,w.a,Y.a,B.a,s.j,s.u,s.z,s.i,s.g,A.l,C.a,[2,D.a],S.a,s.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),s._19(-1,0,["\n  "])),(l()(),s.Z(11,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","speedometer"],["tabTitle","Recomendaciones"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,b,M)),s.Y(12,245760,null,0,X.a,[x.a,w.a,Y.a,B.a,s.j,s.u,s.z,s.i,s.g,A.l,C.a,[2,D.a],S.a,s.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),s._19(-1,0,["\n  "])),(l()(),s.Z(14,0,null,0,1,"ion-tab",[["role","tabpanel"],["tabIcon","contact"],["tabTitle","Perfil"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,b,M)),s.Y(15,245760,null,0,X.a,[x.a,w.a,Y.a,B.a,s.j,s.u,s.z,s.i,s.g,A.l,C.a,[2,D.a],S.a,s.k],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null),(l()(),s._19(-1,0,["\n"]))],function(l,n){var a=n.component;l(n,6,0,a.dashboardRoot,"Dashboard","apps");l(n,9,0,a.encuestaRoot,"Encuesta","list-box");l(n,12,0,a.recomendacionRoot,"Recomendaciones","speedometer");l(n,15,0,a.profileRoot,"Perfil","contact")},function(l,n){l(n,5,0,s._13(n,6)._tabId,s._13(n,6)._btnId);l(n,8,0,s._13(n,9)._tabId,s._13(n,9)._btnId);l(n,11,0,s._13(n,12)._tabId,s._13(n,12)._btnId);l(n,14,0,s._13(n,15)._tabId,s._13(n,15)._btnId)})}Object.defineProperty(n,"__esModule",{value:!0});var s=a(0),_=(a(3),a(69),function(){function l(l,n){this.navCtrl=l,this.navParams=n,this.dashboardRoot="DashboardPage",this.encuestaRoot="EncuestaPage",this.recomendacionRoot="RecommendationsPage",this.profileRoot="ProfilePage",this.primeraVez=this.navParams.get("primeraVez")}return l.prototype.ionViewDidEnter=function(){this.tabRef.select(this.primeraVez?1:0)},l}()),d=function(){return function(){}}(),f=a(281),p=a(282),g=a(283),h=a(284),I=a(285),m=a(286),v=a(287),T=a(288),y=a(289),Z=a(53),Y=a(2),j=a(172),R=a(17),z=a(167),P=s.X({encapsulation:2,styles:[],data:{}}),k=a(109),S=a(12),F=a(39),x=a(103),O=a(27),V=a(6),w=a(11),B=a(5),D=a(16),E=a(45),U=s.X({encapsulation:2,styles:[],data:{}}),X=a(166),A=a(10),C=a(32),M=s.X({encapsulation:2,styles:[],data:{}}),$=a(14),G=s.X({encapsulation:2,styles:[],data:{}}),H=s.V("page-tab-general",_,function(l){return s._21(0,[(l()(),s.Z(0,0,null,null,1,"page-tab-general",[],null,null,null,r,G)),s.Y(1,49152,null,0,_,[O.a,$.a],null,null)],null,null)},{},{},[]),J=a(21),N=a(153),W=a(46);a.d(n,"TabGeneralPageModuleNgFactory",function(){return q});var q=s.W(d,[],function(l){return s._10([s._11(512,s.i,s.S,[[8,[f.a,p.a,g.a,h.a,I.a,m.a,v.a,T.a,y.a,H]],[3,s.i],s.s]),s._11(4608,R.l,R.k,[s.r,[2,R.t]]),s._11(4608,J.r,J.r,[]),s._11(4608,J.d,J.d,[]),s._11(512,R.c,R.c,[]),s._11(512,J.p,J.p,[]),s._11(512,J.g,J.g,[]),s._11(512,J.n,J.n,[]),s._11(512,N.a,N.a,[]),s._11(512,N.b,N.b,[]),s._11(512,d,d,[]),s._11(256,W.a,_,[])])})}});
+webpackJsonp([15],{
+
+/***/ 473:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddbraceletPageModule", function() { return AddbraceletPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addbracelet__ = __webpack_require__(769);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AddbraceletPageModule = (function () {
+    function AddbraceletPageModule() {
+    }
+    AddbraceletPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__addbracelet__["a" /* AddbraceletPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__addbracelet__["a" /* AddbraceletPage */]),
+            ],
+        })
+    ], AddbraceletPageModule);
+    return AddbraceletPageModule;
+}());
+
+//# sourceMappingURL=addbracelet.module.js.map
+
+/***/ }),
+
+/***/ 769:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddbraceletPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_database_bracelet_list_service__ = __webpack_require__(293);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AddbraceletPage = (function () {
+    function AddbraceletPage(navCtrl, navParams, braceletListService, formBuilder) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.braceletListService = braceletListService;
+        this.formBuilder = formBuilder;
+        this.bracelet = {
+            code: "",
+            client_secret: "",
+            serial: ""
+        };
+        this.ctrls_add = this.formBuilder.group({
+            code: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(10), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[a-zA-Z0-9 ]*'), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
+            client_secret: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(50), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
+            serial: ['', __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].maxLength(30), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].pattern('[a-zA-Z0-9 ]*'), __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])],
+        });
+    }
+    AddbraceletPage.prototype.addBracelet = function () {
+        var _this = this;
+        if (this.ctrls_add.valid) {
+            this.bracelet.code = this.ctrls_add.controls.code.value;
+            this.bracelet.client_secret = this.ctrls_add.controls.client_secret.value;
+            this.bracelet.serial = this.ctrls_add.controls.serial.value;
+            this.braceletListService.addBracelet(this.bracelet).then(function (ref) {
+                _this.navCtrl.setRoot('AdminbraceletPage');
+            });
+        }
+    };
+    AddbraceletPage.prototype.toListBracelet = function () {
+        this.navCtrl.setRoot('AdminbraceletPage');
+    };
+    AddbraceletPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-addbracelet',template:/*ion-inline-start:"/myApp/src/pages/addbracelet/addbracelet.html"*/'<ion-header>\n \n    <ion-navbar>\n        <ion-title>Agregar Pulsera</ion-title>\n    </ion-navbar>\n \n</ion-header>\n \n<ion-content padding>\n \n\n    <ion-list no-lines>\n \n        <form [formGroup]="ctrls_add">\n     \n            <ion-item>\n                <ion-label floating>Código</ion-label>\n                <ion-input formControlName="code" type="text" [class.invalid]="!ctrls_add.controls.code.valid && (ctrls_add.controls.code.dirty)">\n                    \n                </ion-input>\n            </ion-item>\n            <ion-item *ngIf="!ctrls_add.controls.code.valid  && (ctrls_add.controls.code.dirty)">\n                <p>No se permiten caractéres especiales, sólo letras y números.</p>\n            </ion-item>\n\n\n            <ion-item>\n                <ion-label floating>Client Secret</ion-label>\n                <ion-input formControlName="client_secret" type="text" [class.invalid]="!ctrls_add.controls.client_secret.valid && (ctrls_add.controls.client_secret.dirty)">\n                    \n                </ion-input>\n            </ion-item>\n            <ion-item *ngIf="!ctrls_add.controls.client_secret.valid  && (ctrls_add.controls.client_secret.dirty)">\n                <p>Client Secret es requerido y no puede estar vacio.</p>\n            </ion-item>\n\n     \n            <ion-item>\n                <ion-label floating>Serial</ion-label>\n                <ion-input formControlName="serial" type="text" [class.invalid]="!ctrls_add.controls.serial.valid && (ctrls_add.controls.serial.dirty)">\n\n                </ion-input>\n            </ion-item>\n     \n           <ion-item *ngIf="!ctrls_add.controls.serial.valid  && (ctrls_add.controls.serial.dirty)">\n                <p>No se permiten caractéres especiales, sólo letras y números.</p>\n            </ion-item>\n     \n        </form>\n \n    </ion-list>\n\n    <button ion-button full color="primary" (click)="addBracelet()">Guardar</button>\n    <button ion-button full color="secondary" (click)="toListBracelet()">Cancelar</button>\n \n    \n    \n</ion-content>'/*ion-inline-end:"/myApp/src/pages/addbracelet/addbracelet.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_database_bracelet_list_service__["a" /* BraceletListService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
+    ], AddbraceletPage);
+    return AddbraceletPage;
+}());
+
+//# sourceMappingURL=addbracelet.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=15.js.map
