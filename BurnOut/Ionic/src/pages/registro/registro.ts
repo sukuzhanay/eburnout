@@ -18,7 +18,8 @@ export class RegistroPage {
     sexo: string, estadocivil: string, hijos: string, altura: string,
     peso: string, especialidad: string, tipocontrato: string, anosresidente: string,
     contratoadjunto: string, tiempoplazaactual: string,
-    tiempovidalaboral: string, tipotrabajo: string, ejerciciofisico: string,
+    tiempovidalaboral: string, tipotrabajo: string, horasActFisica: string, horasActGratificantes: string,
+    horasActCuidados: string, horasActSocial: string, ejerciciofisico: string,
     lectura: string, musica: string, salessocialmente: string, viajas: string, estudias: string,
     ultimaencuesta: { ae: number, d: number, rp: number, q: string }
   };
@@ -46,6 +47,10 @@ export class RegistroPage {
   tiempovidalaboral: any;
   tipotrabajo: any;
 
+  horasActFisica: any;
+  horasActGratificantes:any;
+  horasActCuidados:any;
+  horasActSocial:any;
   ejerciciofisico: any;
   lectura: any;
   musica: any;
@@ -100,14 +105,17 @@ export class RegistroPage {
         break;
       case 3:
         this.anosresidente != null ? this.contratoadjunto = null : this.anosresidente = null;
-        if (this.ejerciciofisico != null && this.lectura != null && this.musica != null && this.salessocialmente != null
+        if (this.horasActFisica != null && this.horasActGratificantes != null && this.horasActCuidados != null && this.horasActSocial 
+            != null && this.ejerciciofisico != null && this.lectura != null && this.musica != null && this.salessocialmente != null
           && this.viajas != null && this.estudias != null) {
           this.usuario = {
             id: this.idUsuario, email: this.email, password: this.password, edad: this.edad,
             sexo: this.sexo, estadocivil: this.estadocivil, hijos: this.hijos, altura: this.altura,
             peso: this.peso, especialidad: this.especialidad, tipocontrato: this.tipocontrato, anosresidente: this.anosresidente,
             contratoadjunto: this.contratoadjunto, tiempoplazaactual: this.tiempoplazaactual,
-            tiempovidalaboral: this.tiempovidalaboral, tipotrabajo: this.tipotrabajo, ejerciciofisico: this.ejerciciofisico,
+            tiempovidalaboral: this.tiempovidalaboral, tipotrabajo: this.tipotrabajo, horasActFisica: this.horasActFisica,
+            horasActGratificantes: this.horasActGratificantes, horasActCuidados: this.horasActCuidados, horasActSocial: this.horasActSocial, 
+            ejerciciofisico: this.ejerciciofisico,
             lectura: this.lectura, musica: this.musica, salessocialmente: this.salessocialmente, viajas: this.viajas, estudias: this.estudias,
             ultimaencuesta: { ae: 0, d: 0, rp: 0, q: '' }
           };

@@ -129,7 +129,97 @@
     </ion-item>
   </div>
   <div *ngIf="numRegistro == 3">
-    <p class="titulo">¿Que haces en tu tiempo libre?</p>
+    <!-- DESDE AQUI HE INSERTADO 4 PREGUNTAS -->
+    <p class="titulo">¿Cual es tu estado personal actual?</p>
+    <ion-item>
+        <ion-label>¿Cuántas horas de actividad física realizas a la semana? (caminar, gimnasio, etc)</ion-label>
+        <ion-select [(ngModel)]="horasActFisica" okText="Aceptar" cancelText="Cancelar">
+          <ion-option value="0">0</ion-option>
+          <ion-option value="1">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+          <ion-option value="4">4</ion-option>
+          <ion-option value="5">5</ion-option>
+          <ion-option value="6">6</ion-option>
+          <ion-option value="7">7</ion-option>
+          <ion-option value="8">8</ion-option>
+          <ion-option value="9">9</ion-option>
+          <ion-option value="10">10</ion-option>
+          <ion-option value="11">11</ion-option>
+          <ion-option value="12">12</ion-option>
+          <ion-option value="13">13</ion-option>
+          <ion-option value="14">14</ion-option>
+          <ion-option value="15">15</ion-option>
+          <ion-option value="16">16</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>¿Cuántas horas dedicas a actividades gratificantes a la semana? (aficiones, contacto con la naturaleza, etc)</ion-label>
+        <ion-select [(ngModel)]="horasActGratificantes" okText="Aceptar" cancelText="Cancelar">
+          <ion-option value="0">0</ion-option>
+          <ion-option value="1">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+          <ion-option value="4">4</ion-option>
+          <ion-option value="5">5</ion-option>
+          <ion-option value="6">6</ion-option>
+          <ion-option value="7">7</ion-option>
+          <ion-option value="8">8</ion-option>
+          <ion-option value="9">9</ion-option>
+          <ion-option value="10">10</ion-option>
+          <ion-option value="11">11</ion-option>
+          <ion-option value="12">12</ion-option>
+          <ion-option value="13">13</ion-option>
+          <ion-option value="14">14</ion-option>
+          <ion-option value="15">15</ion-option>
+          <ion-option value="16">16</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>¿Cuántas horas dedicas a asegurar autocuidados biológicos? (sueño, alimentación, etc)</ion-label>
+        <ion-select [(ngModel)]="horasActCuidados" okText="Aceptar" cancelText="Cancelar">
+          <ion-option value="0">0</ion-option>
+          <ion-option value="1">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+          <ion-option value="4">4</ion-option>
+          <ion-option value="5">5</ion-option>
+          <ion-option value="6">6</ion-option>
+          <ion-option value="7">7</ion-option>
+          <ion-option value="8">8</ion-option>
+          <ion-option value="9">9</ion-option>
+          <ion-option value="10">10</ion-option>
+          <ion-option value="11">11</ion-option>
+          <ion-option value="12">12</ion-option>
+          <ion-option value="13">13</ion-option>
+          <ion-option value="14">14</ion-option>
+          <ion-option value="15">15</ion-option>
+          <ion-option value="16">16</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>¿Cuántas horas dedicas a contactos sociales? (encuentros, llamadas, etc)</ion-label>
+        <ion-select [(ngModel)]="horasActSocial" okText="Aceptar" cancelText="Cancelar">
+          <ion-option value="0">0</ion-option>
+          <ion-option value="1">1</ion-option>
+          <ion-option value="2">2</ion-option>
+          <ion-option value="3">3</ion-option>
+          <ion-option value="4">4</ion-option>
+          <ion-option value="5">5</ion-option>
+          <ion-option value="6">6</ion-option>
+          <ion-option value="7">7</ion-option>
+          <ion-option value="8">8</ion-option>
+          <ion-option value="9">9</ion-option>
+          <ion-option value="10">10</ion-option>
+          <ion-option value="11">11</ion-option>
+          <ion-option value="12">12</ion-option>
+          <ion-option value="13">13</ion-option>
+          <ion-option value="14">14</ion-option>
+          <ion-option value="15">15</ion-option>
+          <ion-option value="16">16</ion-option>
+        </ion-select>
+    </ion-item>
+  <!-- FIN : DESDE AQUI HE INSERTADO 4 PREGUNTAS -->
     <ion-item>
       <ion-label>Haces ejercicio físico</ion-label>
       <ion-select [(ngModel)]="ejerciciofisico" okText="Aceptar" cancelText="Cancelar">
