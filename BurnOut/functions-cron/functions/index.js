@@ -115,8 +115,8 @@ exports.hourly_job = functions.pubsub.topic('hourly-tick').onPublish((event) => 
 								}
 
 								if(diffdates==0){
-									const mje = "Le recordamos que quedan "+diffdates.toString()+" días para que capture sus respuestas, gracias."
-									send_notification(QAUser.email, { "title":"Eburnout", "body":mje});
+									const mje = "Te quedan "+diffdates.toString()+" días para que respondas a las recomendaciones que elegistes"
+									send_notification(QAUser.email, { "title":"eBurnOut", "body":mje});
 								}
 
 							}
@@ -126,7 +126,7 @@ exports.hourly_job = functions.pubsub.topic('hourly-tick').onPublish((event) => 
 					}else{
 						// FALTA QUE REALICE RECOMENDACIONES
 						if(survey.hasOwnProperty('email')){
-							send_notification(survey.email, { "title":"Eburnout", "body":"Es necesario que se subscriba a las recomendaciones, gracias."});
+							send_notification(survey.email, { "title":"eBurnOut", "body":"Es hora de elejir algunas recomendaciones"});
 						}
 
 					}
