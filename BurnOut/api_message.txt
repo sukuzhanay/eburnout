@@ -1,0 +1,9 @@
+
+
+curl --request POST \
+  --url https://fcm.googleapis.com/fcm/send \
+  --header 'authorization: key=AIzaSyB_mk7PfJCwuHBCw51P4juWqxBJdwVEG5o' \
+  --header 'cache-control: no-cache' \
+  --header 'content-type: application/json' \
+  --header 'postman-token: 7eb2234c-a49a-e347-9ca2-7f23946ccd3a' \
+  --data '{ "notification":{ "title":"Notification title", "body":"Notification body", "sound":"default", "click_action":"FCM_PLUGIN_ACTIVITY", "icon":"fcm_push_icon"  }, "data":{ "param1":"value1","param2":"value2"\n  }, "priority":"high", "to": "dxk8JhkBCLg:APA91bEwgPCNmYL2W36WR_OIc2fjhrDp08OseOraIP_S2zaRV1-7p4yI2JEUVY31FlWlf49s4JJ9MlPS8KKxZhFC65LH2ujuBS-LUkbLo86T3PSQyDIgQvL1Hud69XNrHFrzmcrGHtbB" }'

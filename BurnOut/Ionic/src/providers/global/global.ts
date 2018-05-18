@@ -14,6 +14,8 @@ export class GlobalProvider {
 
   access_token: string = "";
 
+  token_message : string = "";
+
   constructor() {
     this.resultadoPreguntas = { ae: 0, d: 0, rp: 0, q: '' };
   }

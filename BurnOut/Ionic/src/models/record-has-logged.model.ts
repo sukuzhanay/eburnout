@@ -4,4 +4,5 @@ export interface Record_has_logged {
     created_at: string;
     latest_logged: string;
     uuid: string;
+    token_message: string;
 };

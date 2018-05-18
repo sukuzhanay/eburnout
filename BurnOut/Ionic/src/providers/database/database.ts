@@ -46,10 +46,10 @@ export class DatabaseProvider {
   /* FIN CONSULTA GUARDAR ULTIMA ENCUESTA */
 
   /* CONSULTA GUARDAR ENCUESTA */
-  guardarEncuesta(idUsuario: string, resultadoPreguntas: any) {
+  guardarEncuesta(idUsuario: string, email: string, resultadoPreguntas: any) {
 
     var date = new Date();
-    this.db.database.ref('/encuestas').push({ id: idUsuario, created_at:date.toISOString(), encuesta: resultadoPreguntas });
+    this.db.database.ref('/encuestas').push({ id: idUsuario, email: email, created_at:date.toISOString(), encuesta: resultadoPreguntas });
     
   }
   /* FIN CONSULTA GUARDAR ENCUESTA */

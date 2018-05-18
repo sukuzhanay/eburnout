@@ -1,13 +1,13 @@
 webpackJsonp([9],{
 
-/***/ 1116:
+/***/ 1114:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EncuestaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global_global__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global_global__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_database_database__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database_recommendations_service__ = __webpack_require__(297);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
@@ -176,7 +176,7 @@ var EncuestaPage = (function () {
             this.global.resultadosPreguntas.shift();
         }
         this.database.guardarUltimaEncuesta(this.global.usuario.id, this.global.resultadoPreguntas);
-        this.database.guardarEncuesta(this.global.usuario.id, this.global.resultadoPreguntas);
+        this.database.guardarEncuesta(this.global.usuario.id, this.global.usuario.email, this.global.resultadoPreguntas);
         this.resultadoPreguntas = { ae: 0, d: 0, rp: 0, q: '' };
         this.formulario = { mensaje: '' };
         this.loadQuestionUser();
@@ -199,7 +199,7 @@ var EncuestaPage = (function () {
 
 /***/ }),
 
-/***/ 480:
+/***/ 478:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -207,7 +207,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EncuestaPageModule", function() { return EncuestaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__encuesta__ = __webpack_require__(1116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__encuesta__ = __webpack_require__(1114);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);

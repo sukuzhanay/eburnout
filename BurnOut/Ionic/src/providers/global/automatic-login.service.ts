@@ -4,8 +4,9 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { Device } from '@ionic-native/device';
 import { AngularFireAuth } from 'angularfire2/auth';
 
-
 import { Record_has_logged } from '../../models/record-has-logged.model';
+
+import { GlobalProvider } from '../global/global';
 
 
 @Injectable()
@@ -21,7 +22,8 @@ export class AutomaticLoginService {
     	created_at: "",
     	latest_logged: "",
     	uuid: "",
-    	pwd: ""
+    	pwd: "",
+    	token_message: ""
 	}
 
 	private _uuid_tmp : string = '70a0353498a27a34';
@@ -30,6 +32,7 @@ export class AutomaticLoginService {
     	private db: AngularFireDatabase,
     	private device: Device,
     	public fireAuth: AngularFireAuth,
+		public global: GlobalProvider		
 	){
 
 
@@ -53,13 +56,13 @@ export class AutomaticLoginService {
 							
 							.subscribe(changes => {
 
-								var record: Record_has_logged = { email: "", created_at: "", uuid: "", pwd: "", latest_logged: "" };
+								var record: Record_has_logged = { email: "", token_message: "", created_at: "", uuid: "", pwd: "", latest_logged: "" };
 
                             	changes.map(c => {
                             		record[c.payload.key] = c.payload.val()
                             	});
 
-                        		self._logged_user = { email: "", created_at: "", uuid: "", pwd: "", latest_logged: "" };
+                        		self._logged_user = { email: "", token_message: "", created_at: "", uuid: "", pwd: "", latest_logged: "" };
 		            		
 		            			if(Object.keys(record).length){
 
@@ -102,6 +105,9 @@ export class AutomaticLoginService {
   		var date = new Date();
   		record["created_at"] = date.toISOString();
   		record["uuid"] = this._uuid;
+
+  		record["token_message"] = this.global.token_message;
+
         return this.db.database.ref('/has_logged/' + this._uuid).set(record);
 
     }
@@ -109,6 +115,8 @@ export class AutomaticLoginService {
     updateLoggedUser(record: Record_has_logged) {
     	var date = new Date();
   		record.latest_logged = date.toISOString();
+  		record.token_message = this.global.token_message;
+
         return this.db.database.ref('/has_logged/' + this._uuid).set(record);
     }
  

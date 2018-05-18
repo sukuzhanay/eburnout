@@ -1,43 +1,5 @@
 webpackJsonp([16],{
 
-/***/ 137:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var GlobalProvider = (function () {
-    function GlobalProvider() {
-        this.questions = [];
-        this.recommendations = [];
-        this.usuario = [];
-        this.resultadosPreguntas = [];
-        this.client_id = "";
-        this.client_secret = "";
-        this.access_token = "";
-        this.resultadoPreguntas = { ae: 0, d: 0, rp: 0, q: '' };
-    }
-    GlobalProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [])
-    ], GlobalProvider);
-    return GlobalProvider;
-}());
-
-//# sourceMappingURL=global.js.map
-
-/***/ }),
-
 /***/ 150:
 /***/ (function(module, exports) {
 
@@ -68,11 +30,11 @@ var map = {
 		14
 	],
 	"../pages/adminbracelet/adminbracelet.module": [
-		476,
+		475,
 		13
 	],
 	"../pages/consentimiento/consentimiento.module": [
-		475,
+		476,
 		12
 	],
 	"../pages/dashboard/dashboard.module": [
@@ -80,47 +42,47 @@ var map = {
 		0
 	],
 	"../pages/editbracelet/editbracelet.module": [
-		478,
+		479,
 		11
 	],
 	"../pages/edituser/edituser.module": [
-		479,
+		483,
 		10
 	],
 	"../pages/encuesta/encuesta.module": [
-		480,
+		478,
 		9
 	],
 	"../pages/login/login.module": [
-		481,
+		480,
 		1
 	],
 	"../pages/personaldata/personaldata.module": [
-		482,
+		481,
 		2
 	],
 	"../pages/profile/profile.module": [
-		483,
+		485,
 		8
 	],
 	"../pages/recomendacion/recomendacion.module": [
-		484,
+		482,
 		7
 	],
 	"../pages/recommendations/recommendations.module": [
-		485,
+		488,
 		6
 	],
 	"../pages/registro/registro.module": [
-		486,
+		484,
 		5
 	],
 	"../pages/tab-general/tab-general.module": [
-		488,
+		487,
 		4
 	],
 	"../pages/userbracelet/userbracelet.module": [
-		487,
+		486,
 		3
 	]
 };
@@ -384,9 +346,9 @@ var DatabaseProvider = (function () {
     };
     /* FIN CONSULTA GUARDAR ULTIMA ENCUESTA */
     /* CONSULTA GUARDAR ENCUESTA */
-    DatabaseProvider.prototype.guardarEncuesta = function (idUsuario, resultadoPreguntas) {
+    DatabaseProvider.prototype.guardarEncuesta = function (idUsuario, email, resultadoPreguntas) {
         var date = new Date();
-        this.db.database.ref('/encuestas').push({ id: idUsuario, created_at: date.toISOString(), encuesta: resultadoPreguntas });
+        this.db.database.ref('/encuestas').push({ id: idUsuario, email: email, created_at: date.toISOString(), encuesta: resultadoPreguntas });
     };
     /* FIN CONSULTA GUARDAR ENCUESTA */
     /* CONSULTA ULTIMAS 3 ENCUESTA */
@@ -554,7 +516,7 @@ var RecommendationsService = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FitBitServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(242);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(433);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
@@ -563,7 +525,7 @@ var RecommendationsService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__auth_config__ = __webpack_require__(434);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_fbsleep__ = __webpack_require__(435);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__global_global__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__global_global__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_storage__ = __webpack_require__(243);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__tokenfitbit_service__ = __webpack_require__(244);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__database_datafitbit_service__ = __webpack_require__(245);
@@ -1033,6 +995,7 @@ var FitBitServiceProvider = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__ = __webpack_require__(249);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__global_global__ = __webpack_require__(61);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1046,11 +1009,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AutomaticLoginService = (function () {
-    function AutomaticLoginService(db, device, fireAuth) {
+    function AutomaticLoginService(db, device, fireAuth, global) {
         this.db = db;
         this.device = device;
         this.fireAuth = fireAuth;
+        this.global = global;
         this._user = "mti.jgaytan@gmail.com";
         this._pwd = "joga321";
         this._logged_user = {
@@ -1058,7 +1023,8 @@ var AutomaticLoginService = (function () {
             created_at: "",
             latest_logged: "",
             uuid: "",
-            pwd: ""
+            pwd: "",
+            token_message: ""
         };
         this._uuid_tmp = '70a0353498a27a34';
     }
@@ -1071,11 +1037,11 @@ var AutomaticLoginService = (function () {
                     .then(function (resultado) {
                     self._userHasLoggedBD(self._uuid).snapshotChanges()
                         .subscribe(function (changes) {
-                        var record = { email: "", created_at: "", uuid: "", pwd: "", latest_logged: "" };
+                        var record = { email: "", token_message: "", created_at: "", uuid: "", pwd: "", latest_logged: "" };
                         changes.map(function (c) {
                             record[c.payload.key] = c.payload.val();
                         });
-                        self._logged_user = { email: "", created_at: "", uuid: "", pwd: "", latest_logged: "" };
+                        self._logged_user = { email: "", token_message: "", created_at: "", uuid: "", pwd: "", latest_logged: "" };
                         if (Object.keys(record).length) {
                             self._logged_user = record;
                         }
@@ -1104,11 +1070,13 @@ var AutomaticLoginService = (function () {
         var date = new Date();
         record["created_at"] = date.toISOString();
         record["uuid"] = this._uuid;
+        record["token_message"] = this.global.token_message;
         return this.db.database.ref('/has_logged/' + this._uuid).set(record);
     };
     AutomaticLoginService.prototype.updateLoggedUser = function (record) {
         var date = new Date();
         record.latest_logged = date.toISOString();
+        record.token_message = this.global.token_message;
         return this.db.database.ref('/has_logged/' + this._uuid).set(record);
     };
     AutomaticLoginService.prototype._getMyIDDevice = function () {
@@ -1121,7 +1089,8 @@ var AutomaticLoginService = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__["a" /* Device */],
-            __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["a" /* AngularFireAuth */]])
+            __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["a" /* AngularFireAuth */],
+            __WEBPACK_IMPORTED_MODULE_4__global_global__["a" /* GlobalProvider */]])
     ], AutomaticLoginService);
     return AutomaticLoginService;
 }());
@@ -1161,7 +1130,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angularfire2_database__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angularfire2_auth__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_global_global__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_global_global__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_database_database__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_fit_bit_service_fit_bit_service__ = __webpack_require__(298);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ngx_echarts__ = __webpack_require__(469);
@@ -1237,20 +1206,20 @@ var AppModule = (function () {
                     links: [
                         { loadChildren: '../pages/addbracelet/addbracelet.module#AddbraceletPageModule', name: 'AddbraceletPage', segment: 'addbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adduser/adduser.module#AdduserPageModule', name: 'AdduserPage', segment: 'adduser', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/consentimiento/consentimiento.module#ConsentimientoPageModule', name: 'ConsentimientoPage', segment: 'consentimiento', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adminbracelet/adminbracelet.module#AdminbraceletPageModule', name: 'AdminbraceletPage', segment: 'adminbracelet', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/consentimiento/consentimiento.module#ConsentimientoPageModule', name: 'ConsentimientoPage', segment: 'consentimiento', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/editbracelet/editbracelet.module#EditbraceletPageModule', name: 'EditbraceletPage', segment: 'editbracelet', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/edituser/edituser.module#EdituserPageModule', name: 'EdituserPage', segment: 'edituser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/encuesta/encuesta.module#EncuestaPageModule', name: 'EncuestaPage', segment: 'encuesta', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/editbracelet/editbracelet.module#EditbraceletPageModule', name: 'EditbraceletPage', segment: 'editbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/personaldata/personaldata.module#PersonaldataPageModule', name: 'PersonaldataPage', segment: 'personaldata', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recomendacion/recomendacion.module#RecomendacionPageModule', name: 'RecomendacionPage', segment: 'recomendacion', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/recommendations/recommendations.module#RecommendationsPageModule', name: 'RecommendationsPage', segment: 'recommendations', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edituser/edituser.module#EdituserPageModule', name: 'EdituserPage', segment: 'edituser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/registro/registro.module#RegistroPageModule', name: 'RegistroPage', segment: 'registro', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/userbracelet/userbracelet.module#UserbraceletPageModule', name: 'UserbraceletPage', segment: 'userbracelet', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tab-general/tab-general.module#TabGeneralPageModule', name: 'TabGeneralPage', segment: 'tab-general', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tab-general/tab-general.module#TabGeneralPageModule', name: 'TabGeneralPage', segment: 'tab-general', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recommendations/recommendations.module#RecommendationsPageModule', name: 'RecommendationsPage', segment: 'recommendations', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_6__angular_http__["b" /* HttpModule */],
@@ -1349,6 +1318,7 @@ var FBSleep = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(291);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(290);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_fcm__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_global_global__ = __webpack_require__(61);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1363,13 +1333,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var MyApp = (function () {
-    function MyApp(alertCtrl, platform, statusBar, splashScreen, _fcm) {
+    function MyApp(alertCtrl, platform, statusBar, splashScreen, _fcm, global) {
         var _this = this;
         this.alertCtrl = alertCtrl;
         this.splashScreen = splashScreen;
         this._fcm = _fcm;
+        this.global = global;
         this.rootPage = 'LoginPage';
+        this._title_default = "Eburnout";
+        this._mge_default = "Ha recibido una notificación";
+        var self = this;
         platform.ready().then(function () {
             statusBar.styleDefault();
             setTimeout(function () {
@@ -1377,20 +1352,26 @@ var MyApp = (function () {
             }, 10000);
             _this._fcm.getToken()
                 .then(function (token) {
+                self.global.token_message = token;
                 console.log("token is ", token);
             }).catch(function (error) {
                 console.log(error);
             });
-            _this._fcm.onTokenRefresh().subscribe(function (token) { return console.log("Nuevo token", token); }, function (error) { return console.log(error); });
+            _this._fcm.onTokenRefresh().subscribe(function (token) {
+                self.global.token_message = token;
+                console.log("Nuevo token", token);
+            }, function (error) { return console.log(error); });
             _this._fcm.onNotification().subscribe(function (data) {
                 if (data.wasTapped) {
                     console.log("Recibido en backgroud", JSON.stringify(data));
                 }
                 else {
                     console.log("Recibido en foreground", JSON.stringify(data));
+                    var title = data.title != undefined ? data.title : _this._title_default;
+                    var message = data.body != undefined ? data.body : _this._mge_default;
                     var alert_1 = _this.alertCtrl.create({
-                        title: 'Eburnout',
-                        message: JSON.stringify(data),
+                        title: title,
+                        message: message,
                         buttons: [
                             {
                                 text: 'Ok',
@@ -1412,12 +1393,52 @@ var MyApp = (function () {
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
             __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_fcm__["a" /* FCM */]])
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_fcm__["a" /* FCM */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_global_global__["a" /* GlobalProvider */]])
     ], MyApp);
     return MyApp;
 }());
 
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 61:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GlobalProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var GlobalProvider = (function () {
+    function GlobalProvider() {
+        this.questions = [];
+        this.recommendations = [];
+        this.usuario = [];
+        this.resultadosPreguntas = [];
+        this.client_id = "";
+        this.client_secret = "";
+        this.access_token = "";
+        this.token_message = "";
+        this.resultadoPreguntas = { ae: 0, d: 0, rp: 0, q: '' };
+    }
+    GlobalProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [])
+    ], GlobalProvider);
+    return GlobalProvider;
+}());
+
+//# sourceMappingURL=global.js.map
 
 /***/ })
 

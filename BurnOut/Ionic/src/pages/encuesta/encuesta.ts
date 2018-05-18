@@ -230,7 +230,7 @@ export class EncuestaPage {
       this.global.resultadosPreguntas.shift();
     }
     this.database.guardarUltimaEncuesta(this.global.usuario.id, this.global.resultadoPreguntas);
-    this.database.guardarEncuesta(this.global.usuario.id, this.global.resultadoPreguntas);
+    this.database.guardarEncuesta(this.global.usuario.id, this.global.usuario.email, this.global.resultadoPreguntas);
     this.resultadoPreguntas = { ae: 0, d: 0, rp: 0, q: '' };
     this.formulario = { mensaje: '' };
     this.loadQuestionUser();
