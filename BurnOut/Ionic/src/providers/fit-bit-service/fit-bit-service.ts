@@ -95,7 +95,7 @@ export class FitBitServiceProvider {
      * SOLO PARA CUANDO SE ESTE EN NAVEGADOR Y NO EN MOBILE, ES PARA QUE NO PIDA CONTINUAMENTE EL TOCKEN EN NUEVA VENTANA
      * @type {boolean}
      */
-    private _debugin : boolean = true;
+    private _debugin : boolean = false;
 
     tokenFBRecord: Observable<TokenFBUser[]>;
 
