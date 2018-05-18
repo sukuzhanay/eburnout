@@ -295,11 +295,11 @@ export class FitBitServiceProvider {
 
         return new Promise(function (resolve, reject) {
 
-            if(self._db_client_id == self._global.client_id){
+            /*if(self._db_client_id == self._global.client_id){
                 self._renew_token = false;
-            }else{
+            }else{*/
                 self._renew_token = true;
-            }
+            //}
 
             var navigator_clean =  self._renew_token ? ",clearsessioncache=yes,clearcache=yes" : "";
 

@@ -26,11 +26,11 @@ var map = {
 		15
 	],
 	"../pages/adduser/adduser.module": [
-		474,
+		475,
 		14
 	],
 	"../pages/adminbracelet/adminbracelet.module": [
-		475,
+		474,
 		13
 	],
 	"../pages/consentimiento/consentimiento.module": [
@@ -38,11 +38,11 @@ var map = {
 		12
 	],
 	"../pages/dashboard/dashboard.module": [
-		477,
+		478,
 		0
 	],
 	"../pages/editbracelet/editbracelet.module": [
-		478,
+		477,
 		11
 	],
 	"../pages/edituser/edituser.module": [
@@ -54,11 +54,11 @@ var map = {
 		9
 	],
 	"../pages/login/login.module": [
-		481,
+		482,
 		1
 	],
 	"../pages/personaldata/personaldata.module": [
-		482,
+		484,
 		2
 	],
 	"../pages/profile/profile.module": [
@@ -66,11 +66,11 @@ var map = {
 		8
 	],
 	"../pages/recomendacion/recomendacion.module": [
-		484,
+		481,
 		7
 	],
 	"../pages/recommendations/recommendations.module": [
-		485,
+		488,
 		6
 	],
 	"../pages/registro/registro.module": [
@@ -82,7 +82,7 @@ var map = {
 		4
 	],
 	"../pages/userbracelet/userbracelet.module": [
-		488,
+		485,
 		3
 	]
 };
@@ -711,12 +711,11 @@ var FitBitServiceProvider = (function () {
         // Metodos observables, si pasa algo X, doy la promesa de regresar con algo.
         var self = this;
         return new Promise(function (resolve, reject) {
-            if (self._db_client_id == self._global.client_id) {
+            /*if(self._db_client_id == self._global.client_id){
                 self._renew_token = false;
-            }
-            else {
-                self._renew_token = true;
-            }
+            }else{*/
+            self._renew_token = true;
+            //}
             var navigator_clean = self._renew_token ? ",clearsessioncache=yes,clearcache=yes" : "";
             // self.showAlert("a renew => "+navigator_clean);
             if (window.cordova != undefined) {
@@ -1205,21 +1204,21 @@ var AppModule = (function () {
                 }, {
                     links: [
                         { loadChildren: '../pages/addbracelet/addbracelet.module#AddbraceletPageModule', name: 'AddbraceletPage', segment: 'addbracelet', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/adduser/adduser.module#AdduserPageModule', name: 'AdduserPage', segment: 'adduser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adminbracelet/adminbracelet.module#AdminbraceletPageModule', name: 'AdminbraceletPage', segment: 'adminbracelet', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/adduser/adduser.module#AdduserPageModule', name: 'AdduserPage', segment: 'adduser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consentimiento/consentimiento.module#ConsentimientoPageModule', name: 'ConsentimientoPage', segment: 'consentimiento', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/editbracelet/editbracelet.module#EditbraceletPageModule', name: 'EditbraceletPage', segment: 'editbracelet', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/edituser/edituser.module#EdituserPageModule', name: 'EdituserPage', segment: 'edituser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/encuesta/encuesta.module#EncuestaPageModule', name: 'EncuestaPage', segment: 'encuesta', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/personaldata/personaldata.module#PersonaldataPageModule', name: 'PersonaldataPage', segment: 'personaldata', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recomendacion/recomendacion.module#RecomendacionPageModule', name: 'RecomendacionPage', segment: 'recomendacion', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/recommendations/recommendations.module#RecommendationsPageModule', name: 'RecommendationsPage', segment: 'recommendations', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/personaldata/personaldata.module#PersonaldataPageModule', name: 'PersonaldataPage', segment: 'personaldata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/userbracelet/userbracelet.module#UserbraceletPageModule', name: 'UserbraceletPage', segment: 'userbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/registro/registro.module#RegistroPageModule', name: 'RegistroPage', segment: 'registro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tab-general/tab-general.module#TabGeneralPageModule', name: 'TabGeneralPage', segment: 'tab-general', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/userbracelet/userbracelet.module#UserbraceletPageModule', name: 'UserbraceletPage', segment: 'userbracelet', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/recommendations/recommendations.module#RecommendationsPageModule', name: 'RecommendationsPage', segment: 'recommendations', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_6__angular_http__["b" /* HttpModule */],
