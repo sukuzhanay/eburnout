@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 1118:
+/***/ 1119:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,7 +12,7 @@ webpackJsonp([1],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database_database__ = __webpack_require__(295);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_combineLatest__ = __webpack_require__(1119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_combineLatest__ = __webpack_require__(1120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_combineLatest___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_observable_combineLatest__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_database_consent_user_service__ = __webpack_require__(296);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_global_automatic_login_service__ = __webpack_require__(299);
@@ -160,19 +160,19 @@ var LoginPage = (function () {
 
 /***/ }),
 
-/***/ 1119:
+/***/ 1120:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Observable_1 = __webpack_require__(4);
-var combineLatest_1 = __webpack_require__(1120);
+var combineLatest_1 = __webpack_require__(1121);
 Observable_1.Observable.combineLatest = combineLatest_1.combineLatest;
 //# sourceMappingURL=combineLatest.js.map
 
 /***/ }),
 
-/***/ 1120:
+/***/ 1121:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -180,7 +180,7 @@ Observable_1.Observable.combineLatest = combineLatest_1.combineLatest;
 var isScheduler_1 = __webpack_require__(140);
 var isArray_1 = __webpack_require__(138);
 var ArrayObservable_1 = __webpack_require__(139);
-var combineLatest_1 = __webpack_require__(1121);
+var combineLatest_1 = __webpack_require__(1122);
 /* tslint:enable:max-line-length */
 /**
  * Combines multiple Observables to create an Observable whose values are
@@ -315,7 +315,7 @@ exports.combineLatest = combineLatest;
 
 /***/ }),
 
-/***/ 1121:
+/***/ 1122:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -481,7 +481,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(1118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(1119);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
