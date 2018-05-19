@@ -115,7 +115,7 @@ exports.hourly_job = functions.pubsub.topic('hourly-tick').onPublish((event) => 
 								}
 
 								if(diffdates==0){
-									const mje = "Te quedan "+diffdates.toString()+" días para que respondas a las recomendaciones que elegistes"
+									const mje = "Te quedan "+diffdates.toString()+" días, valora las recomendaciones que elegistes"
 									send_notification(QAUser.email, { "title":"eBurnOut", "body":mje});
 								}
 
