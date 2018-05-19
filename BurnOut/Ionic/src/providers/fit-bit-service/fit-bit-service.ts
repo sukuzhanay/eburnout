@@ -91,6 +91,12 @@ export class FitBitServiceProvider {
         fecha: ""
     };
 
+    private _last_date_ahi : string = "";
+    private _AHI : any;
+    
+    private _last_date_sleep : string = "";
+    private _sleeps : any;
+
     /**
      * SOLO PARA CUANDO SE ESTE EN NAVEGADOR Y NO EN MOBILE, ES PARA QUE NO PIDA CONTINUAMENTE EL TOCKEN EN NUEVA VENTANA
      * @type {boolean}
@@ -99,6 +105,8 @@ export class FitBitServiceProvider {
 
     tokenFBRecord: Observable<TokenFBUser[]>;
 
+    lastahi:any;
+    lastsleep: any;
 
     constructor(
         public http: HttpClient, // get y post
@@ -473,6 +481,7 @@ export class FitBitServiceProvider {
 
     private _toCron(){
         this._get_heart();
+        this._process_raw_data();
     }
 
 
@@ -519,6 +528,8 @@ export class FitBitServiceProvider {
                             return a;
                         }
                     );
+
+                    _self._AHI = timeSeries;
 
                 }
 
@@ -574,6 +585,8 @@ export class FitBitServiceProvider {
                         _self._fbsleep.minutesawake = sleeps["sleep"]["minutesAwake"];
 
                     }
+
+                    _self._sleeps = sleeps;
                 }
 
                 if(_self._debugin){
@@ -690,6 +703,54 @@ export class FitBitServiceProvider {
 
         this._dataFitBitService.addDataFitBitSleep(this._UserFBSleep);
 
+    }
+
+
+    protected _process_raw_data(){
+
+        var self = this;
+
+        var date = new Date();
+        var save_shi = true;
+
+        self.lastahi = !self.lastahi ? self._dataFitBitService.getLastRawAHI(self._global.usuario.email).valueChanges() : self.lastahi;
+        
+        self.lastahi.forEach(rawahi => {
+
+            if(rawahi.length){
+
+                var diffdates = self._dataFitBitService.diff_dates(rawahi[0]["created_at"]);
+
+                if(diffdates && self._AHI != undefined && save_shi){
+                    self._dataFitBitService.addRawAHI({email: self._global.usuario.email, raw: self._AHI, created_at: date.toISOString() });
+                    self._last_date_ahi = rawahi[0]["created_at"];
+                    save_shi = false;
+                }
+
+            }
+
+        });
+
+        var save_sleeps = true;
+
+        self.lastsleep = !self.lastsleep ? self._dataFitBitService.getLastRawSleep(self._global.usuario.email).valueChanges() : self.lastsleep;
+
+        self.lastsleep.forEach(rawsleep => {
+
+            if(rawsleep.length){
+
+                var diffdatess = self._dataFitBitService.diff_dates(rawsleep[0]["created_at"]);
+
+                if(diffdatess && self._sleeps != undefined && save_sleeps){
+                    self._dataFitBitService.addRawSleep({email: self._global.usuario.email, raw: self._sleeps, created_at: date.toISOString() });
+                    self._last_date_sleep = rawsleep[0]["created_at"];
+                    save_sleeps = false;
+                }
+
+            }
+    
+        });
+    
     }
 
 }
