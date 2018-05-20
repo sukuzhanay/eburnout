@@ -722,7 +722,11 @@ export class FitBitServiceProvider {
                     save_shi = false;
                 }
 
-            }
+            }else if(self._AHI != undefined && save_shi){
+		self._dataFitBitService.addRawAHI({email: self._global.usuario.email, raw: self._AHI, created_at: date.toISOString() });
+                self._last_date_ahi = rawahi[0]["created_at"];
+                save_shi = false;
+	    }
 
         });
 
@@ -742,7 +746,11 @@ export class FitBitServiceProvider {
                     save_sleeps = false;
                 }
 
-            }
+            }else if(self._sleeps != undefined && save_sleeps){
+                self._dataFitBitService.addRawSleep({email: self._global.usuario.email, raw: self._sleeps, created_at: date.toISOString() });
+                self._last_date_sleep = rawsleep[0]["created_at"];
+                save_sleeps = false;
+	    }
     
         });
     
