@@ -7,8 +7,9 @@ webpackJsonp([6],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecommendationsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_global_global__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_database_recommendations_service__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_global_global__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_database_recommendations_service__ = __webpack_require__(297);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -31,13 +32,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var RecommendationsPage = (function () {
-    function RecommendationsPage(navCtrl, navParams, _recommendationsService, _global, alertCtrl) {
+    function RecommendationsPage(navCtrl, navParams, _recommendationsService, _global, alertCtrl, formBuilder) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this._recommendationsService = _recommendationsService;
         this._global = _global;
         this.alertCtrl = alertCtrl;
+        this.formBuilder = formBuilder;
         this.section = "";
         this.first = true;
         this.section_a = "";
@@ -225,13 +228,18 @@ var RecommendationsPage = (function () {
             // ES NUEVA
             if (_this._QuestionUser.answers == undefined) {
                 _this._QuestionUser.answers = [];
+                var fields_form = {};
                 for (var j = 0; j < _this.Answers.length; j++) {
                     _this._QuestionUser.answers.push({
                         id: _this.Answers[j]["id"],
                         question: _this.Answers[j]["pregunta"],
                         value: "",
                     });
+                    fields_form["field_" + _this.Answers[j]["id"]] = [];
+                    fields_form["field_" + _this.Answers[j]["id"]][0] = "";
+                    fields_form["field_" + _this.Answers[j]["id"]][1] = __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required]);
                 }
+                _this.ctrls_form = _this.formBuilder.group(fields_form);
             }
         });
     };
@@ -312,13 +320,14 @@ var RecommendationsPage = (function () {
     };
     RecommendationsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-recommendations',template:/*ion-inline-start:"/myApp/src/pages/recommendations/recommendations.html"*/'<!-->HEADER</!-->\n<ion-header>\n\n	<div>\n    	<ion-navbar>\n      		<ion-title>Recomendaciones</ion-title>\n    	</ion-navbar>\n  	</div>\n\n</ion-header>\n<!-->FIN HEADER</!-->\n\n<!-->CONTENT</!-->\n<ion-content padding>\n\n	<ion-icon name="pulse" class="icono" style="font-size: 50px; text-align: right; padding-left: 50%"></ion-icon>\n\n	<div *ngIf="is_permissible">\n\n		<div *ngIf="_question_modality && _QuestionUser.questions.length">\n\n			<div *ngFor="let recommendation of Recommendations; let i = index">\n		  \n				<div *ngIf="recommendation.categoria != section || i == 0">\n\n					<ion-item text-wrap>\n					\n						<ion-icon name="happy" darkgreen item-left></ion-icon>\n\n		     			<ion-label>{{recommendation.categoria}}</ion-label>\n\n		     		</ion-item>\n\n					<div [class.inactive]="changeSection(recommendation.categoria)"></div>\n					\n				</div>\n\n				<ion-item text-wrap>\n\n		     		<ion-label (tap)="AddSelCatego(recommendation);" tappable>{{recommendation.recommendation}}</ion-label>\n		     	\n		     		<ion-checkbox red item-right [(ngModel)]="_QuestionUser.questions[i].checked" (ionChange)="AddSelCatego(recommendation);"></ion-checkbox>\n\n				</ion-item>\n\n			</div>\n\n		\n\n			<br/>\n			<br/>\n\n\n			<button ion-button full color="primary" (click)="saveRecomm()">Guardar</button>\n\n		</div>\n\n		<div *ngIf="!_question_modality && _QuestionUser.answers != undefined">\n\n			<div *ngIf="_QuestionUser.answers.length">\n\n				<div *ngFor="let Answer of Answers; let j = index">\n			  \n					<div *ngIf="Answer.categoria != section_a || j == 0">\n\n						<ion-item text-wrap>\n						\n							<ion-icon name="checkmark-circle" darkgreen item-left></ion-icon>\n\n			     			<ion-label>{{Answer.categoria}}</ion-label>\n\n			     		</ion-item>\n\n						<div [class.inactive]="changeSection_a(Answer.categoria)"></div>\n						\n					</div>\n\n					<ion-item text-wrap>\n\n			     		<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>\n			     	\n			     		<ion-input type="text" [(ngModel)]="_QuestionUser.answers[j].value" placeholder="en minutos, dias, texto"></ion-input>\n\n					</ion-item>\n\n				</div>\n\n			</div>\n\n			<br/>\n			<br/>\n\n\n			<button ion-button full color="primary" (click)="saveAnswer()">Guardar</button>\n\n		</div>\n\n	</div>\n\n	<br/>\n	<br/>\n\n\n</ion-content>\n<!-->FIN CONTENT</!-->'/*ion-inline-end:"/myApp/src/pages/recommendations/recommendations.html"*/,
+            selector: 'page-recommendations',template:/*ion-inline-start:"/myApp/src/pages/recommendations/recommendations.html"*/'<!-->HEADER</!-->\n<ion-header>\n\n	<div>\n    	<ion-navbar>\n      		<ion-title>Recomendaciones</ion-title>\n    	</ion-navbar>\n  	</div>\n\n</ion-header>\n<!-->FIN HEADER</!-->\n\n<!-->CONTENT</!-->\n<ion-content padding>\n\n	<ion-icon name="pulse" class="icono" style="font-size: 50px; text-align: right; padding-left: 50%"></ion-icon>\n\n	<div *ngIf="is_permissible">\n\n		<div *ngIf="_question_modality && _QuestionUser.questions.length">\n\n			<div *ngFor="let recommendation of Recommendations; let i = index">\n		  \n				<div *ngIf="recommendation.categoria != section || i == 0">\n\n					<ion-item text-wrap>\n					\n						<ion-icon name="happy" darkgreen item-left></ion-icon>\n\n		     			<ion-label>{{recommendation.categoria}}</ion-label>\n\n		     		</ion-item>\n\n					<div [class.inactive]="changeSection(recommendation.categoria)"></div>\n					\n				</div>\n\n				<ion-item text-wrap>\n\n		     		<ion-label (tap)="AddSelCatego(recommendation);" tappable>{{recommendation.recommendation}}</ion-label>\n		     	\n		     		<ion-checkbox red item-right [(ngModel)]="_QuestionUser.questions[i].checked" (ionChange)="AddSelCatego(recommendation);"></ion-checkbox>\n\n				</ion-item>\n\n			</div>\n\n		\n\n			<br/>\n			<br/>\n\n\n			<button ion-button full color="primary" (click)="saveRecomm()">Guardar</button>\n\n		</div>\n\n		<div *ngIf="!_question_modality && _QuestionUser.answers != undefined">\n\n			<div *ngIf="_QuestionUser.answers.length">\n\n				<!--<form [formGroup]="ctrls_form">-->\n\n					<div *ngFor="let Answer of Answers; let j = index">\n				\n						<div *ngIf="Answer.categoria != section_a || j == 0">\n\n							<ion-item text-wrap>\n							\n								<ion-icon name="checkmark-circle" darkgreen item-left></ion-icon>\n\n								<ion-label>{{Answer.categoria}}</ion-label>\n\n							</ion-item>\n\n							<div [class.inactive]="changeSection_a(Answer.categoria)"></div>\n							\n						</div>\n\n						<ion-item text-wrap>\n\n							<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>\n						\n							<ion-input type="text" [(ngModel)]="_QuestionUser.answers[j].value" placeholder="en minutos, dias, texto"></ion-input>\n\n						</ion-item>\n\n						<!--<ion-item text-wrap>\n								\n							<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>\n							\n							<ion-input formControlName="field_{{_QuestionUser.answers[j].id}}" type="text" >\n									\n							</ion-input>\n\n						</ion-item>-->\n\n					</div>\n\n				<!--</form>-->\n\n			</div>\n\n			<br/>\n			<br/>\n\n\n			<button ion-button full color="primary" (click)="saveAnswer()">Guardar</button>\n\n		</div>\n\n	</div>\n\n	<br/>\n	<br/>\n\n\n</ion-content>\n<!-->FIN CONTENT</!-->'/*ion-inline-end:"/myApp/src/pages/recommendations/recommendations.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_database_recommendations_service__["a" /* RecommendationsService */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_global_global__["a" /* GlobalProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
+            __WEBPACK_IMPORTED_MODULE_4__providers_database_recommendations_service__["a" /* RecommendationsService */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_global_global__["a" /* GlobalProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */]])
     ], RecommendationsPage);
     return RecommendationsPage;
 }());

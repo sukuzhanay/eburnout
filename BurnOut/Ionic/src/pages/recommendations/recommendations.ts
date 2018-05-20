@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { GlobalProvider } from '../../providers/global/global';
 
@@ -54,7 +55,7 @@ export class RecommendationsPage {
     public is_permissible : boolean = true;
 
     
-
+	ctrls_form: FormGroup;
 
 
     private _insert: boolean = true;
@@ -65,7 +66,8 @@ export class RecommendationsPage {
 		public navParams: NavParams,
 		private _recommendationsService : RecommendationsService,
 		private _global: GlobalProvider,
-		private alertCtrl: AlertController
+		private alertCtrl: AlertController,
+		public formBuilder: FormBuilder,
 	) {
 
         this.loadQuestionUser();
@@ -318,15 +320,21 @@ export class RecommendationsPage {
 
             // ES NUEVA
             if(this._QuestionUser.answers == undefined){
-            	this._QuestionUser.answers = [];
+				this._QuestionUser.answers = [];
+				var fields_form = {};
 
             	for (var j = 0; j < this.Answers.length; j++) {
             		this._QuestionUser.answers.push({
             			id: this.Answers[j]["id"],
             			question: this.Answers[j]["pregunta"],
             			value: "",
-            		});
-            	}
+					});
+					fields_form["field_"+this.Answers[j]["id"]] = [];
+					fields_form["field_"+this.Answers[j]["id"]][0] = "";
+					fields_form["field_"+this.Answers[j]["id"]][1] = Validators.compose([Validators.required]);
+				}
+				
+				this.ctrls_form = this.formBuilder.group(fields_form);
 
             }
 
