@@ -723,10 +723,10 @@ export class FitBitServiceProvider {
                 }
 
             }else if(self._AHI != undefined && save_shi){
-		self._dataFitBitService.addRawAHI({email: self._global.usuario.email, raw: self._AHI, created_at: date.toISOString() });
-                self._last_date_ahi = rawahi[0]["created_at"];
+		        self._dataFitBitService.addRawAHI({email: self._global.usuario.email, raw: self._AHI, created_at: date.toISOString() });
+                self._last_date_ahi = date.toISOString();
                 save_shi = false;
-	    }
+	        }
 
         });
 
@@ -736,6 +736,7 @@ export class FitBitServiceProvider {
 
         self.lastsleep.forEach(rawsleep => {
 
+            
             if(rawsleep.length){
 
                 var diffdatess = self._dataFitBitService.diff_dates(rawsleep[0]["created_at"]);
@@ -748,9 +749,9 @@ export class FitBitServiceProvider {
 
             }else if(self._sleeps != undefined && save_sleeps){
                 self._dataFitBitService.addRawSleep({email: self._global.usuario.email, raw: self._sleeps, created_at: date.toISOString() });
-                self._last_date_sleep = rawsleep[0]["created_at"];
+                self._last_date_sleep = date.toISOString();
                 save_sleeps = false;
-	    }
+	        }
     
         });
     
