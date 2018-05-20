@@ -56,7 +56,9 @@ function send_notification(email, message){
 
 			if(logged.hasOwnProperty('token_message')){
 
-				tokens.push(logged.token_message)
+				if(logged.token_message.toString().length){
+					tokens.push(logged.token_message);
+				}
 
 			}
 
