@@ -1,3 +1,5 @@
+// Es como el import de JAVA
+// Todos los que empiezan con arroba estan en modules
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';

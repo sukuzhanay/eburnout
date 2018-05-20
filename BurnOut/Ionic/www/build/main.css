@@ -30662,6 +30662,7 @@ ion-title {
 }
 
 /* FIN LOADING */
+<<<<<<< HEAD
 page-consentimiento .icono {
   display: -webkit-box;
   display: -webkit-flex;
@@ -30694,6 +30695,80 @@ page-consentimiento .texto {
   margin-bottom: 20px;
   font-weight: 600;
   text-align: justify;
+=======
+page-camara .texto-1 {
+  font-size: 1.25em;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 4px 0 4px 0;
+}
+
+page-camara .texto-2 {
+  font-size: 1.25em;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+page-camara .texto-3 {
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 28px;
+  color: #DE3831;
+}
+
+page-camara .texto-4 {
+  text-align: center;
+  font-weight: 500;
+}
+
+page-camara .texto-contraste {
+  font-size: 1.1em;
+  color: #DE3831;
+}
+
+page-camara .border-foto {
+  padding: 4px;
+  border: 2px solid #3D3B39;
+  border-radius: 100%;
+  margin: 28px auto 28px auto;
+  width: 192px;
+  height: 192px;
+}
+
+page-camara .border-foto .foto {
+  background-size: cover;
+  background-position: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+}
+
+page-camara .btn-1 {
+  width: 100%;
+  margin: 0;
+}
+
+page-camara .btn-izq {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+page-camara .btn-der {
+  background: #3D3B39;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+page-camara .btn-der.activated {
+  background: #332D2A;
+  -webkit-box-shadow: inherit;
+  box-shadow: inherit;
+>>>>>>> master
 }
 
 page-dashboard .col-flecha {
@@ -31116,11 +31191,14 @@ page-recomendacion .texto {
   text-transform: uppercase;
 }
 
+<<<<<<< HEAD
 page-recommendations .fixedLabel {
   min-width: 20% !important;
   max-width: 50% !important;
 }
 
+=======
+>>>>>>> master
 page-registro .titulo {
   font-size: 1.15em;
   font-weight: 600;

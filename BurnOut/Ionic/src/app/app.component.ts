@@ -1,3 +1,5 @@
+// Aqui se define el componente inicial que arranca, es como el main de JAVA
+
 import { Component } from '@angular/core';
 import { Platform, AlertController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
