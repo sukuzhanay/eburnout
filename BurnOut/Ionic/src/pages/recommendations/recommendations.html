@@ -59,31 +59,45 @@
 
 			<div *ngIf="_QuestionUser.answers.length">
 
-				<div *ngFor="let Answer of Answers; let j = index">
-			  
-					<div *ngIf="Answer.categoria != section_a || j == 0">
+				<!--<form [formGroup]="ctrls_form">-->
+
+					<div *ngFor="let Answer of Answers; let j = index">
+				
+						<div *ngIf="Answer.categoria != section_a || j == 0">
+
+							<ion-item text-wrap>
+							
+								<ion-icon name="checkmark-circle" darkgreen item-left></ion-icon>
+
+								<ion-label>{{Answer.categoria}}</ion-label>
+
+							</ion-item>
+
+							<div [class.inactive]="changeSection_a(Answer.categoria)"></div>
+							
+						</div>
 
 						<ion-item text-wrap>
+
+							<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>
 						
-							<ion-icon name="checkmark-circle" darkgreen item-left></ion-icon>
+							<ion-input type="text" [(ngModel)]="_QuestionUser.answers[j].value" placeholder="en minutos, dias, texto"></ion-input>
 
-			     			<ion-label>{{Answer.categoria}}</ion-label>
+						</ion-item>
 
-			     		</ion-item>
+						<!--<ion-item text-wrap>
+								
+							<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>
+							
+							<ion-input formControlName="field_{{_QuestionUser.answers[j].id}}" type="text" >
+									
+							</ion-input>
 
-						<div [class.inactive]="changeSection_a(Answer.categoria)"></div>
-						
+						</ion-item>-->
+
 					</div>
 
-					<ion-item text-wrap>
-
-			     		<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>
-			     	
-			     		<ion-input type="text" [(ngModel)]="_QuestionUser.answers[j].value" placeholder="en minutos, dias, texto"></ion-input>
-
-					</ion-item>
-
-				</div>
+				<!--</form>-->
 
 			</div>
 
