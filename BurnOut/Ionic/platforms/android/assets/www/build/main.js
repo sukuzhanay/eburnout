@@ -30,11 +30,11 @@ var map = {
 		14
 	],
 	"../pages/adminbracelet/adminbracelet.module": [
-		476,
+		475,
 		13
 	],
 	"../pages/consentimiento/consentimiento.module": [
-		475,
+		476,
 		12
 	],
 	"../pages/dashboard/dashboard.module": [
@@ -42,31 +42,31 @@ var map = {
 		0
 	],
 	"../pages/editbracelet/editbracelet.module": [
-		479,
+		478,
 		11
 	],
 	"../pages/edituser/edituser.module": [
-		478,
+		479,
 		10
 	],
 	"../pages/encuesta/encuesta.module": [
-		481,
+		480,
 		9
 	],
 	"../pages/login/login.module": [
-		482,
+		481,
 		1
 	],
 	"../pages/personaldata/personaldata.module": [
-		480,
+		482,
 		2
 	],
 	"../pages/profile/profile.module": [
-		484,
+		483,
 		8
 	],
 	"../pages/recomendacion/recomendacion.module": [
-		483,
+		484,
 		7
 	],
 	"../pages/recommendations/recommendations.module": [
@@ -178,12 +178,35 @@ var DataFitBitService = (function () {
         this.db = db;
         this.dataFitBitAHIRef = this.db.list('data_fitbit_ahi/');
         this.dataFitBitSleepRef = this.db.list('data_fitbit_sleep/');
+        this.dataFBRawSleepRef = this.db.list('raw_sleep/');
+        this.dataFBRawAHIRef = this.db.list('raw_ahi/');
     }
     DataFitBitService.prototype.addDataFitBitAHI = function (userfbahi) {
         return this.dataFitBitAHIRef.push(userfbahi);
     };
     DataFitBitService.prototype.addDataFitBitSleep = function (userfbsleep) {
         return this.dataFitBitSleepRef.push(userfbsleep);
+    };
+    DataFitBitService.prototype.getLastRawAHI = function (email) {
+        return this.db.list('/raw_ahi/', function (ahi) { return ahi.orderByChild('email').equalTo(email).limitToLast(1); });
+    };
+    DataFitBitService.prototype.addRawAHI = function (ahi) {
+        return this.dataFBRawAHIRef.push(ahi);
+    };
+    DataFitBitService.prototype.getLastRawSleep = function (email) {
+        return this.db.list('/raw_sleep/', function (sleep) { return sleep.orderByChild('email').equalTo(email).limitToLast(1); });
+    };
+    DataFitBitService.prototype.addRawSleep = function (sleep) {
+        return this.dataFBRawSleepRef.push(sleep);
+    };
+    DataFitBitService.prototype.diff_dates = function (dateq) {
+        var days = 0;
+        var dq = new Date(dateq);
+        var b = new Date();
+        var c = b.toISOString();
+        var d = new Date(c);
+        days = Math.round((d.getTime() - dq.getTime()) / (1000 * 60 * 60 * 24));
+        return days;
     };
     DataFitBitService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
@@ -602,6 +625,8 @@ var FitBitServiceProvider = (function () {
             percent_eight_hours: 0,
             fecha: ""
         };
+        this._last_date_ahi = "";
+        this._last_date_sleep = "";
         /**
          * SOLO PARA CUANDO SE ESTE EN NAVEGADOR Y NO EN MOBILE, ES PARA QUE NO PIDA CONTINUAMENTE EL TOCKEN EN NUEVA VENTANA
          * @type {boolean}
@@ -834,6 +859,7 @@ var FitBitServiceProvider = (function () {
     };
     FitBitServiceProvider.prototype._toCron = function () {
         this._get_heart();
+        this._process_raw_data();
     };
     FitBitServiceProvider.prototype._get_authHeader = function () {
         return {
@@ -863,6 +889,7 @@ var FitBitServiceProvider = (function () {
                     };
                     return a;
                 });
+                _self._AHI = timeSeries;
             }
             if (_self._debugin) {
                 console.log(_self._tsAHI);
@@ -900,6 +927,7 @@ var FitBitServiceProvider = (function () {
                     _self._fbsleep.endtime = sleeps["sleep"]["endTime"];
                     _self._fbsleep.minutesawake = sleeps["sleep"]["minutesAwake"];
                 }
+                _self._sleeps = sleeps;
             }
             if (_self._debugin) {
                 console.log(_self._fbsleep.timeinbed);
@@ -966,6 +994,34 @@ var FitBitServiceProvider = (function () {
         this._UserFBSleep.minutes = minutes;
         this._UserFBSleep.percent_eight_hours = percent_eight_hours;
         this._dataFitBitService.addDataFitBitSleep(this._UserFBSleep);
+    };
+    FitBitServiceProvider.prototype._process_raw_data = function () {
+        var self = this;
+        var date = new Date();
+        var save_shi = true;
+        self.lastahi = !self.lastahi ? self._dataFitBitService.getLastRawAHI(self._global.usuario.email).valueChanges() : self.lastahi;
+        self.lastahi.forEach(function (rawahi) {
+            if (rawahi.length) {
+                var diffdates = self._dataFitBitService.diff_dates(rawahi[0]["created_at"]);
+                if (diffdates && self._AHI != undefined && save_shi) {
+                    self._dataFitBitService.addRawAHI({ email: self._global.usuario.email, raw: self._AHI, created_at: date.toISOString() });
+                    self._last_date_ahi = rawahi[0]["created_at"];
+                    save_shi = false;
+                }
+            }
+        });
+        var save_sleeps = true;
+        self.lastsleep = !self.lastsleep ? self._dataFitBitService.getLastRawSleep(self._global.usuario.email).valueChanges() : self.lastsleep;
+        self.lastsleep.forEach(function (rawsleep) {
+            if (rawsleep.length) {
+                var diffdatess = self._dataFitBitService.diff_dates(rawsleep[0]["created_at"]);
+                if (diffdatess && self._sleeps != undefined && save_sleeps) {
+                    self._dataFitBitService.addRawSleep({ email: self._global.usuario.email, raw: self._sleeps, created_at: date.toISOString() });
+                    self._last_date_sleep = rawsleep[0]["created_at"];
+                    save_sleeps = false;
+                }
+            }
+        });
     };
     FitBitServiceProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])() // Decorator
@@ -1205,16 +1261,16 @@ var AppModule = (function () {
                     links: [
                         { loadChildren: '../pages/adduser/adduser.module#AdduserPageModule', name: 'AdduserPage', segment: 'adduser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/addbracelet/addbracelet.module#AddbraceletPageModule', name: 'AddbraceletPage', segment: 'addbracelet', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/consentimiento/consentimiento.module#ConsentimientoPageModule', name: 'ConsentimientoPage', segment: 'consentimiento', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adminbracelet/adminbracelet.module#AdminbraceletPageModule', name: 'AdminbraceletPage', segment: 'adminbracelet', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/consentimiento/consentimiento.module#ConsentimientoPageModule', name: 'ConsentimientoPage', segment: 'consentimiento', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/edituser/edituser.module#EdituserPageModule', name: 'EdituserPage', segment: 'edituser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/editbracelet/editbracelet.module#EditbraceletPageModule', name: 'EditbraceletPage', segment: 'editbracelet', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/personaldata/personaldata.module#PersonaldataPageModule', name: 'PersonaldataPage', segment: 'personaldata', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edituser/edituser.module#EdituserPageModule', name: 'EdituserPage', segment: 'edituser', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/encuesta/encuesta.module#EncuestaPageModule', name: 'EncuestaPage', segment: 'encuesta', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/recomendacion/recomendacion.module#RecomendacionPageModule', name: 'RecomendacionPage', segment: 'recomendacion', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/personaldata/personaldata.module#PersonaldataPageModule', name: 'PersonaldataPage', segment: 'personaldata', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recomendacion/recomendacion.module#RecomendacionPageModule', name: 'RecomendacionPage', segment: 'recomendacion', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recommendations/recommendations.module#RecommendationsPageModule', name: 'RecommendationsPage', segment: 'recommendations', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/registro/registro.module#RegistroPageModule', name: 'RegistroPage', segment: 'registro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tab-general/tab-general.module#TabGeneralPageModule', name: 'TabGeneralPage', segment: 'tab-general', priority: 'low', defaultHistory: [] },

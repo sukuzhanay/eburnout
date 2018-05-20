@@ -22,11 +22,11 @@ webpackEmptyAsyncContext.id = 150;
 
 var map = {
 	"../pages/addbracelet/addbracelet.module": [
-		473,
+		474,
 		15
 	],
 	"../pages/adduser/adduser.module": [
-		474,
+		473,
 		14
 	],
 	"../pages/adminbracelet/adminbracelet.module": [
@@ -1026,10 +1026,15 @@ var FitBitServiceProvider = (function () {
     FitBitServiceProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])() // Decorator
         ,
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["j" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_8__global_global__["a" /* GlobalProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__global_global__["a" /* GlobalProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_9__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_9__ionic_storage__["b" /* Storage */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_10__tokenfitbit_service__["a" /* TokenFitBitService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_10__tokenfitbit_service__["a" /* TokenFitBitService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_11__database_datafitbit_service__["a" /* DataFitBitService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__database_datafitbit_service__["a" /* DataFitBitService */]) === "function" && _g || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["j" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_6_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_8__global_global__["a" /* GlobalProvider */],
+            __WEBPACK_IMPORTED_MODULE_9__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_10__tokenfitbit_service__["a" /* TokenFitBitService */],
+            __WEBPACK_IMPORTED_MODULE_11__database_datafitbit_service__["a" /* DataFitBitService */]])
     ], FitBitServiceProvider);
     return FitBitServiceProvider;
-    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=fit-bit-service.js.map
@@ -1254,8 +1259,8 @@ var AppModule = (function () {
                     preloadModules: true
                 }, {
                     links: [
-                        { loadChildren: '../pages/addbracelet/addbracelet.module#AddbraceletPageModule', name: 'AddbraceletPage', segment: 'addbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adduser/adduser.module#AdduserPageModule', name: 'AdduserPage', segment: 'adduser', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/addbracelet/addbracelet.module#AddbraceletPageModule', name: 'AddbraceletPage', segment: 'addbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adminbracelet/adminbracelet.module#AdminbraceletPageModule', name: 'AdminbraceletPage', segment: 'adminbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consentimiento/consentimiento.module#ConsentimientoPageModule', name: 'ConsentimientoPage', segment: 'consentimiento', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
