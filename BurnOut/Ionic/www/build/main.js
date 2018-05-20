@@ -22,11 +22,11 @@ webpackEmptyAsyncContext.id = 150;
 
 var map = {
 	"../pages/addbracelet/addbracelet.module": [
-		473,
+		474,
 		15
 	],
 	"../pages/adduser/adduser.module": [
-		474,
+		473,
 		14
 	],
 	"../pages/adminbracelet/adminbracelet.module": [
@@ -1001,7 +1001,6 @@ var FitBitServiceProvider = (function () {
         var save_shi = true;
         self.lastahi = !self.lastahi ? self._dataFitBitService.getLastRawAHI(self._global.usuario.email).valueChanges() : self.lastahi;
         self.lastahi.forEach(function (rawahi) {
-            console.log(rawahi);
             if (rawahi.length) {
                 var diffdates = self._dataFitBitService.diff_dates(rawahi[0]["created_at"]);
                 if (diffdates && self._AHI != undefined && save_shi) {
@@ -1272,8 +1271,8 @@ var AppModule = (function () {
                     preloadModules: true
                 }, {
                     links: [
-                        { loadChildren: '../pages/addbracelet/addbracelet.module#AddbraceletPageModule', name: 'AddbraceletPage', segment: 'addbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adduser/adduser.module#AdduserPageModule', name: 'AdduserPage', segment: 'adduser', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/addbracelet/addbracelet.module#AddbraceletPageModule', name: 'AddbraceletPage', segment: 'addbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adminbracelet/adminbracelet.module#AdminbraceletPageModule', name: 'AdminbraceletPage', segment: 'adminbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consentimiento/consentimiento.module#ConsentimientoPageModule', name: 'ConsentimientoPage', segment: 'consentimiento', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },

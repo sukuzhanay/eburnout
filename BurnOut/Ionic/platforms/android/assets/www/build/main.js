@@ -22,11 +22,11 @@ webpackEmptyAsyncContext.id = 150;
 
 var map = {
 	"../pages/addbracelet/addbracelet.module": [
-		473,
+		474,
 		15
 	],
 	"../pages/adduser/adduser.module": [
-		474,
+		473,
 		14
 	],
 	"../pages/adminbracelet/adminbracelet.module": [
@@ -1009,6 +1009,11 @@ var FitBitServiceProvider = (function () {
                     save_shi = false;
                 }
             }
+            else if (self._AHI != undefined && save_shi) {
+                self._dataFitBitService.addRawAHI({ email: self._global.usuario.email, raw: self._AHI, created_at: date.toISOString() });
+                self._last_date_ahi = date.toISOString();
+                save_shi = false;
+            }
         });
         var save_sleeps = true;
         self.lastsleep = !self.lastsleep ? self._dataFitBitService.getLastRawSleep(self._global.usuario.email).valueChanges() : self.lastsleep;
@@ -1020,6 +1025,11 @@ var FitBitServiceProvider = (function () {
                     self._last_date_sleep = rawsleep[0]["created_at"];
                     save_sleeps = false;
                 }
+            }
+            else if (self._sleeps != undefined && save_sleeps) {
+                self._dataFitBitService.addRawSleep({ email: self._global.usuario.email, raw: self._sleeps, created_at: date.toISOString() });
+                self._last_date_sleep = date.toISOString();
+                save_sleeps = false;
             }
         });
     };
@@ -1206,6 +1216,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+// Es como el import de JAVA
+// Todos los que empiezan con arroba estan en modules
 
 
 
@@ -1259,8 +1271,8 @@ var AppModule = (function () {
                     preloadModules: true
                 }, {
                     links: [
-                        { loadChildren: '../pages/addbracelet/addbracelet.module#AddbraceletPageModule', name: 'AddbraceletPage', segment: 'addbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adduser/adduser.module#AdduserPageModule', name: 'AdduserPage', segment: 'adduser', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/addbracelet/addbracelet.module#AddbraceletPageModule', name: 'AddbraceletPage', segment: 'addbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/adminbracelet/adminbracelet.module#AdminbraceletPageModule', name: 'AdminbraceletPage', segment: 'adminbracelet', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consentimiento/consentimiento.module#ConsentimientoPageModule', name: 'ConsentimientoPage', segment: 'consentimiento', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
@@ -1374,6 +1386,7 @@ var FBSleep = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(290);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_fcm__ = __webpack_require__(292);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_global_global__ = __webpack_require__(61);
+// Aqui se define el componente inicial que arranca, es como el main de JAVA
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1442,7 +1455,7 @@ var MyApp = (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/myApp/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/myApp/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/myApp/src/app/app.html"*/'\n<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/myApp/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
