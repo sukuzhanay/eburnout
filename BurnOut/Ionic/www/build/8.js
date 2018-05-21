@@ -30,6 +30,9 @@ var ProfilePage = (function () {
         this.admin_emails.push('mti.jgaytan@gmail.com');
         this.admin_emails.push('sukuzhanay@gmail.com');
         this._ami_admin();
+        if (!this.is_admin) {
+            this.toPersonalData();
+        }
     }
     ProfilePage.prototype._ami_admin = function () {
         for (var i = 0; i < this.admin_emails.length; i++)
@@ -49,7 +52,7 @@ var ProfilePage = (function () {
     };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-profile',template:/*ion-inline-start:"/myApp/src/pages/profile/profile.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Perfil\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    \n    <br/>\n    <br/>\n\n    <button ion-button block icon-start (click)="toPersonalData()">\n  		<ion-icon name="logo-buffer"></ion-icon>\n  			Mis datos\n	</button>\n\n    <br/>\n    <br/>\n\n    <div *ngIf="is_admin">\n\n    	<button ion-button block icon-start (click)="toAdminBracelet()">\n            <ion-icon name="finger-print"></ion-icon>\n            Pulseras\n        </button>\n\n    </div>\n\n    <br/>\n    <br/>\n\n    <div *ngIf="is_admin">\n\n        <button ion-button block icon-start (click)="toUserBracelet()">\n            <ion-icon name="people"></ion-icon>\n            Usuarios\n        </button>\n\n    </div>\n\n\n	\n\n</ion-content>'/*ion-inline-end:"/myApp/src/pages/profile/profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/myApp/src/pages/profile/profile.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Perfil\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n    <br/>\n    <br/>\n\n    <div *ngIf="is_admin">\n\n        <button ion-button block icon-start (click)="toPersonalData()">\n            <ion-icon name="logo-buffer"></ion-icon>\n                Mis datos\n        </button>\n\n        <br/>\n        <br/>\n\n        <div *ngIf="is_admin">\n\n            <button ion-button block icon-start (click)="toAdminBracelet()">\n                <ion-icon name="finger-print"></ion-icon>\n                Pulseras\n            </button>\n\n        </div>\n\n        <br/>\n        <br/>\n\n        <div *ngIf="is_admin">\n\n            <button ion-button block icon-start (click)="toUserBracelet()">\n                <ion-icon name="people"></ion-icon>\n                Usuarios\n            </button>\n\n        </div>\n\n    </div>\n\n</ion-content>'/*ion-inline-end:"/myApp/src/pages/profile/profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],

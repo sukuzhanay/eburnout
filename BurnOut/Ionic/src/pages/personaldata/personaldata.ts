@@ -14,11 +14,19 @@ export class PersonaldataPage {
 
 	personalList: PersonalData;
 
+	admin_emails : Array<string> = [];
+
+	is_admin: boolean = false;
+	
+
 	constructor(
   		public navCtrl: NavController,
   		public navParams: NavParams,
   		public global: GlobalProvider
   	) {
+
+		this.admin_emails.push('mti.jgaytan@gmail.com');
+		this.admin_emails.push('sukuzhanay@gmail.com');
 
   		 this.personalList = new PersonalData(
   		 	this.global.usuario.id,
@@ -46,6 +54,17 @@ export class PersonaldataPage {
 
   	returnParent(){
   		this.navCtrl.setRoot("ProfilePage");
-  	}
+	}
+	  
+
+	private _ami_admin(){
+
+		for (var i = 0; i < this.admin_emails.length; i++)
+			if(this.global.usuario.email == this.admin_emails[i]){
+				this.is_admin = true;
+				break;
+			}
+		
+	}
 
 }

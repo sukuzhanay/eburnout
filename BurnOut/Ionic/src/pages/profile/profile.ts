@@ -28,6 +28,10 @@ export class ProfilePage {
 
 		this._ami_admin();
 
+		if(!this.is_admin){
+			this.toPersonalData();
+		}
+
 	}
 
 	private _ami_admin(){

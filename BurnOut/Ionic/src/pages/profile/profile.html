@@ -7,40 +7,41 @@
 </ion-header>
 
 <ion-content>
-    
-    <br/>
-    <br/>
-
-    <button ion-button block icon-start (click)="toPersonalData()">
-  		<ion-icon name="logo-buffer"></ion-icon>
-  			Mis datos
-	</button>
 
     <br/>
     <br/>
 
     <div *ngIf="is_admin">
 
-    	<button ion-button block icon-start (click)="toAdminBracelet()">
-            <ion-icon name="finger-print"></ion-icon>
-            Pulseras
+        <button ion-button block icon-start (click)="toPersonalData()">
+            <ion-icon name="logo-buffer"></ion-icon>
+                Mis datos
         </button>
 
+        <br/>
+        <br/>
+
+        <div *ngIf="is_admin">
+
+            <button ion-button block icon-start (click)="toAdminBracelet()">
+                <ion-icon name="finger-print"></ion-icon>
+                Pulseras
+            </button>
+
+        </div>
+
+        <br/>
+        <br/>
+
+        <div *ngIf="is_admin">
+
+            <button ion-button block icon-start (click)="toUserBracelet()">
+                <ion-icon name="people"></ion-icon>
+                Usuarios
+            </button>
+
+        </div>
+
     </div>
-
-    <br/>
-    <br/>
-
-    <div *ngIf="is_admin">
-
-        <button ion-button block icon-start (click)="toUserBracelet()">
-            <ion-icon name="people"></ion-icon>
-            Usuarios
-        </button>
-
-    </div>
-
-
-	
 
 </ion-content>
