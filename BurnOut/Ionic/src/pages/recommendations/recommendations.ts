@@ -108,25 +108,35 @@ export class RecommendationsPage {
 	protected _before_save_is_false_answer(){
 
 		var pass = true;
-
-		for (var i = 0; i < this._QuestionUser.answers.length; i++)
-			if(!this._QuestionUser.answers[i].value.toString().trim().length)
-				pass = false;
 		
+		for (var j = 0; j < this.Answers.length; j++) {
+			this._QuestionUser.answers[j].value = this.ctrls_form.controls["field_"+this.Answers[j]["id"]]["value"];
+		}
+
+		if(this.ctrls_form.valid){
+
+			for (var i = 0; i < this._QuestionUser.answers.length; i++)
+				if(!this._QuestionUser.answers[i].value.toString().trim().length)
+					pass = false;
+			
+		}else{
+			pass = false;
+		}
+
 		if(!pass){
 
-        	let alert = this.alertCtrl.create({
-            	title: "Inclusión de Respuesta(s)",
-            	message: "Debe escribir un valor de resultado en cada una de las preguntas",
-            	buttons: [
-                	{
-                    	text: 'OK',
-                    	role: 'cancelar'
-                	}
-            	]
-        	});
-        
-        	alert.present();
+			let alert = this.alertCtrl.create({
+				title: "Inclusión de Respuesta(s)",
+				message: "Debe escribir un valor de resultado en cada una de las preguntas",
+				buttons: [
+					{
+						text: 'OK',
+						role: 'cancelar'
+					}
+				]
+			});
+		
+			alert.present();
 
 		}
 
@@ -201,8 +211,8 @@ export class RecommendationsPage {
 
                         if(item[0]["survey"] == this.key_latestSurvey){
 
-                            this._QuestionUser = item[0];
-
+							this._QuestionUser = item[0];
+							
                             var diff_dates = this._recommendationsService.diff_dates(this._QuestionUser.created_at);
 
                             console.log(diff_dates);
@@ -280,6 +290,30 @@ export class RecommendationsPage {
 	}
 
 
+
+	protected _set_ctrl_form(){
+
+		if(this._QuestionUser.answers != undefined){
+			
+			var fields_form = {};
+
+			for (var j = 0; j < this.Answers.length; j++) {
+				fields_form["field_"+this.Answers[j]["id"]] = [];
+				fields_form["field_"+this.Answers[j]["id"]][0] = this._QuestionUser.answers.length ? this._QuestionUser.answers[j].value : "";
+				fields_form["field_"+this.Answers[j]["id"]][1] = Validators.compose(
+					[
+						Validators.pattern(this.Answers[j]["rule"]),
+						Validators.required
+					]
+				);
+			}
+			
+			this.ctrls_form = this.formBuilder.group(fields_form);
+
+		}
+
+	}
+
 	protected loadAnswers(){
 
 		this.AnswersList = !this.AnswersList ? this._recommendationsService.getAnswersList()
@@ -321,22 +355,17 @@ export class RecommendationsPage {
             // ES NUEVA
             if(this._QuestionUser.answers == undefined){
 				this._QuestionUser.answers = [];
-				var fields_form = {};
-
             	for (var j = 0; j < this.Answers.length; j++) {
             		this._QuestionUser.answers.push({
             			id: this.Answers[j]["id"],
             			question: this.Answers[j]["pregunta"],
             			value: "",
 					});
-					fields_form["field_"+this.Answers[j]["id"]] = [];
-					fields_form["field_"+this.Answers[j]["id"]][0] = "";
-					fields_form["field_"+this.Answers[j]["id"]][1] = Validators.compose([Validators.required]);
 				}
 				
-				this.ctrls_form = this.formBuilder.group(fields_form);
-
-            }
+			}
+			
+			this._set_ctrl_form();
 
         });
 

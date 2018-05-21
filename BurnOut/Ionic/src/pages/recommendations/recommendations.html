@@ -57,9 +57,9 @@
 
 		<div *ngIf="!_question_modality && _QuestionUser.answers != undefined">
 
-			<div *ngIf="_QuestionUser.answers.length">
+			<div *ngIf="_QuestionUser.answers.length && ctrls_form!=undefined">
 
-				<!--<form [formGroup]="ctrls_form">-->
+				<form [formGroup]="ctrls_form">
 
 					<div *ngFor="let Answer of Answers; let j = index">
 				
@@ -77,27 +77,36 @@
 							
 						</div>
 
-						<ion-item text-wrap>
+						<!--<ion-item text-wrap>
 
 							<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>
 						
 							<ion-input type="text" [(ngModel)]="_QuestionUser.answers[j].value" placeholder="en minutos, dias, texto"></ion-input>
 
-						</ion-item>
+						</ion-item>-->
 
-						<!--<ion-item text-wrap>
+						<ion-item text-wrap>
 								
 							<ion-label class="fixedLabel" (tap)="AddSelAnswer(Answer);" tappable>{{Answer.pregunta}}</ion-label>
 							
-							<ion-input formControlName="field_{{_QuestionUser.answers[j].id}}" type="text" >
+							<ion-input formControlName="field_{{_QuestionUser.answers[j].id}}" type="text" placeholder="{{Answer.desc_rule}}">
 									
 							</ion-input>
 
-						</ion-item>-->
+						</ion-item>
+
+						<p *ngIf="ctrls_form.controls['field_'+_QuestionUser.answers[j].id].errors && ctrls_form.controls['field_'+_QuestionUser.answers[j].id].dirty" class="error" padding>
+							Valor del campo no es válido, es valor {{Answer.desc_rule}}
+						</p>
+
 
 					</div>
 
-				<!--</form>-->
+					<ion-item *ngIf="!ctrls_form.valid">
+						<p class="error">Favor de atender los campos en rojo, para que pueda guardar.</p>
+					</ion-item>
+
+				</form>
 
 			</div>
 

@@ -31121,6 +31121,10 @@ page-recommendations .fixedLabel {
   max-width: 50% !important;
 }
 
+page-recommendations .error {
+  color: red;
+}
+
 page-registro .titulo {
   font-size: 1.15em;
   font-weight: 600;
