@@ -132,7 +132,7 @@ Interactive charts allow complex health-related indicators to be presented in a 
 
 ---
 
-### ☁️ Cloud & Web Layer — `BurnOutLanding`
+### ☁️ Cloud & Web Layer — `BurnOutLanding` and application configuration
 
 Firebase-backed components provide the cloud-connected and public-facing layers of the eBurnout ecosystem.
 
@@ -220,7 +220,7 @@ The deployed environment was also subjected to external security validation, inc
 
 ### 🐳 Containerized Development
 
-Docker tooling is included as part of the Ionic development workflow, providing a reproducible development environment for portions of the project.
+Docker tooling is included as part of the Ionic development workflow. Its historical Ubuntu 16.04 / Node.js 8 installation paths require review before rebuilding today.
 
 ---
 
@@ -444,67 +444,22 @@ My current work extends those foundations toward:
 
 ---
 
-## 🔗 Related Work & Professional Identity
+## 📋 Project status & evidence
 
-<p align="left">
+This is a historical project. The author confirms its development for physicians and work in two hospital environments, together with the capabilities described above. The McAfee SECURE statement refers to the historical deployed environment; it is not a claim of current certification or a new security assessment.
 
-<a href="https://christiansucuzhanay.com/">
-  <img src="BurnOutLanding/CHRISTIAN_VLADIMIR_SUCUZHANAY_AREVALO_500x600_1.jpg" width="28" height="28" alt="Christian Vladimir Sucuzhanay Arévalo" style="vertical-align:middle;">
-</a>
-&nbsp;
-<a href="https://christiansucuzhanay.com/">
-  <img src="https://img.shields.io/badge/ChristianSucuzhanay.com-08111F?style=for-the-badge" alt="Official Website">
-</a>
+- Mobile and dashboard manifests document Ionic/Angular, Firebase, charting and local-storage dependencies.
+- The repository includes Fitbit provider code and Firebase configuration.
+- The companion [Burnout ML analysis](https://github.com/sukuzhanay/Machine-Learning-BurnOut-Project) contains the notebook, Orange workflow and academic report. It is separate from the application runtime.
+- Reproduction, current deployment availability and clinical predictive performance were not revalidated by this documentation update.
 
-<a href="https://www.linkedin.com/in/sucuzhanay">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
 
-<a href="https://builder.aws.com/community/@sucuzhanay">
-  <img src="https://img.shields.io/badge/AWS_Builder-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS Builder">
-</a>
+## Author
 
-<a href="https://github.com/sukuzhanay">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-</a>
+**Christian Vladimir Sucuzhanay Arévalo**
 
-</p>
+Data & AI Solutions Architect | AWS Data Architecture | Generative AI & Amazon Bedrock | Big Data | Former University Lecturer
 
----
+[Entity Home](https://christiansucuzhanay.com/) · [Technical Portfolio](https://sukuzhanay.github.io/) · [LinkedIn](https://www.linkedin.com/in/sucuzhanay) · [AWS Builder](https://builder.aws.com/community/@sucuzhanay) · [GitHub](https://github.com/sukuzhanay)
 
-## 👤 Author
-
-### Christian Vladimir Sucuzhanay Arévalo
-
-**Data & AI Solutions Architect | AWS Data Architecture | Generative AI & Amazon Bedrock | Big Data | Former University Lecturer**
-
-<p align="left">
-
-<a href="https://christiansucuzhanay.com/">
-      
-  <img src="BurnOutLanding/CHRISTIAN_VLADIMIR_SUCUZHANAY_AREVALO_500x600_1.jpg" width="24" height="24" alt="Christian Sucuzhanay" style="vertical-align:middle;">
-</a>
-&nbsp;
-<a href="https://christiansucuzhanay.com/">
-  <img src="https://img.shields.io/badge/Website-08111F?style=flat-square" alt="Website">
-</a>
-
-<a href="https://www.linkedin.com/in/sucuzhanay">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
-
-<a href="https://builder.aws.com/community/@sucuzhanay">
-  <img src="https://img.shields.io/badge/AWS_Builder-232F3E?style=flat-square&logo=amazonwebservices&logoColor=FF9900" alt="AWS Builder">
-</a>
-
-<a href="https://github.com/sukuzhanay">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
-</a>
-
-</p>
-
----
-
-<p align="center">
-  <strong>Build. Explain. Teach. Share.</strong>
-</p>
+**Build. Explain. Teach. Share.**
