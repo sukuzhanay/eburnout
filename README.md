@@ -446,10 +446,29 @@ My current work extends those foundations toward:
 
 ## 🔗 Related Work & Professional Identity
 
-[![Website](https://img.shields.io/badge/Official_Website-christiansucuzhanay.com-08111f?style=flat-square)](https://christiansucuzhanay.com/)
-[![Portfolio](https://img.shields.io/badge/Technical_Portfolio-GitHub_Pages-f59e0b?style=flat-square)](https://sukuzhanay.github.io/)
-[![AWS Builder](https://img.shields.io/badge/AWS_Builder-Technical_Writing-08111f?style=flat-square)](https://builder.aws.com/community/@sukuzhanay)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Christian_Sucuzhanay-f59e0b?style=flat-square)](https://www.linkedin.com/in/sucuzhanay)
+<p align="left">
+
+<a href="https://christiansucuzhanay.com/">
+  <img src="assets/christian-sucuzhanay-profile.jpg" width="28" height="28" alt="Christian Vladimir Sucuzhanay Arévalo" style="vertical-align:middle;">
+</a>
+&nbsp;
+<a href="https://christiansucuzhanay.com/">
+  <img src="https://img.shields.io/badge/ChristianSucuzhanay.com-08111F?style=for-the-badge" alt="Official Website">
+</a>
+
+<a href="https://www.linkedin.com/in/sucuzhanay">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+
+<a href="https://builder.aws.com/community/@sucuzhanay">
+  <img src="https://img.shields.io/badge/AWS_Builder-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS Builder">
+</a>
+
+<a href="https://github.com/sukuzhanay">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+</a>
+
+</p>
 
 ---
 
@@ -459,10 +478,29 @@ My current work extends those foundations toward:
 
 **Data & AI Solutions Architect | AWS Data Architecture | Generative AI & Amazon Bedrock | Big Data | Former University Lecturer**
 
-🌐 [Official Website](https://christiansucuzhanay.com/) ·
-💻 [Technical Portfolio](https://sukuzhanay.github.io/) ·
-☁️ [AWS Builder](https://builder.aws.com/community/@sukuzhanay) ·
-💼 [LinkedIn](https://www.linkedin.com/in/sucuzhanay)
+<p align="left">
+
+<a href="https://christiansucuzhanay.com/">
+  <img src="assets/christian-sucuzhanay-profile.jpg" width="24" height="24" alt="Christian Sucuzhanay" style="vertical-align:middle;">
+</a>
+&nbsp;
+<a href="https://christiansucuzhanay.com/">
+  <img src="https://img.shields.io/badge/Website-08111F?style=flat-square" alt="Website">
+</a>
+
+<a href="https://www.linkedin.com/in/sucuzhanay">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+
+<a href="https://builder.aws.com/community/@sucuzhanay">
+  <img src="https://img.shields.io/badge/AWS_Builder-232F3E?style=flat-square&logo=amazonwebservices&logoColor=FF9900" alt="AWS Builder">
+</a>
+
+<a href="https://github.com/sukuzhanay">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+</a>
+
+</p>
 
 ---
 
