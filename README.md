@@ -1,99 +1,320 @@
-# eBurnout: Occupational Burnout Detection & Management System
+# eBurnout
 
-A comprehensive, full-stack ecosystem designed to assess, monitor, and mitigate occupational burnout risk among healthcare professionals. The system bridges machine learning risk-stratification with a cross-platform mobile application and a real-time web analytics dashboard.
+### Occupational Burnout Detection & Management Platform
 
-> **Architectural Note:** This project demonstrates an end-to-end product lifecycle, from data science conceptualization (predictive modeling) to a deployed, scalable, serverless multi-platform application.
+A full-stack health-tech ecosystem designed to **assess, monitor and support the management of occupational burnout risk among healthcare professionals**.
 
----
+eBurnout combines questionnaire-based assessment, physiological data, wearable integration, mobile engineering and real-time analytics in a multi-platform system designed for clinical environments.
 
-## 🏗️ System Architecture
-
-The solution is decoupled into three primary components, orchestrated via a serverless cloud backend:
-
-1. **Mobile Application (`BurnOut/Ionic`)**  
-   An offline-first, cross-platform app (iOS/Android) built with Ionic 3 and Angular 5. It allows end-users to complete daily assessments, track behavioral metrics, and view personalized risk dashboards.
-2. **Web Analytics Dashboard (`BurnOut/Back`)**  
-   A responsive administrative portal for HR and medical staff to monitor aggregate institutional risk, manage user cohorts, and visualize longitudinal burnout trends.
-3. **Cloud Infrastructure & Landing (`BurnOutLanding`)**  
-   A serverless backend powered by Firebase (Authentication, Realtime Database, Hosting), ensuring high availability, automatic scaling, and real-time data synchronization without DevOps overhead.
+> **Engineering scope:** From data-science and predictive-risk concepts to mobile applications, cloud services, wearable integration and institutional analytics.
 
 ---
 
-## ⚙️ Key Technical Features
+## Overview
 
-- **Offline-First Data Persistence**: Local caching via `cordova-sqlite-storage` ensures full app functionality in low-connectivity environments (e.g., hospital basements), with automatic conflict resolution upon reconnection.
-- **Advanced Data Visualization**: Integration of `ECharts` and `Chart.js` for rendering complex, multi-dimensional health metrics efficiently on both mobile and web clients.
-- **Hardware Integration**: Native access to device camera and secure in-app browsing for supplementary health documentation.
-- **Security & Compliance**: Implementation of secure authentication flows and data anonymization protocols, validated by McAfee SECURE certification.
+Occupational burnout is a multidimensional problem that cannot be represented adequately by a single data source.
+
+eBurnout was designed around a broader model combining:
+
+- **Maslach-based burnout assessment**
+- **Physiological data**
+- **Wearable-device information**
+- **Behavioral and longitudinal indicators**
+- **Risk visualization and monitoring**
+
+The system was conceived for use with **healthcare professionals** and developed in connection with real hospital environments.
+
+Rather than implementing an isolated model or questionnaire, eBurnout explores the complete engineering problem:
+
+**data acquisition → persistence → processing → risk assessment → visualization → monitoring**
 
 ---
 
-## 🧰 Tech Stack
+## Architecture
+
+```text
+                         ┌─────────────────────┐
+                         │ Healthcare          │
+                         │ Professional        │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                         ┌─────────────────────┐
+                         │ Ionic / Angular App │
+                         │    iOS · Android    │
+                         └──────────┬──────────┘
+                                    │
+                   ┌────────────────┴────────────────┐
+                   │                                 │
+                   ▼                                 ▼
+        ┌────────────────────┐            ┌────────────────────┐
+        │ Maslach &          │            │ Fitbit / Wearable  │
+        │ Assessment Data    │            │ Physiological Data │
+        └─────────┬──────────┘            └─────────┬──────────┘
+                  │                                 │
+                  └────────────────┬────────────────┘
+                                   │
+                                   ▼
+                        ┌─────────────────────┐
+                        │ Risk Assessment &   │
+                        │ Application Logic   │
+                        └──────────┬──────────┘
+                                   │
+                 ┌─────────────────┴─────────────────┐
+                 │                                   │
+                 ▼                                   ▼
+      ┌─────────────────────┐             ┌─────────────────────┐
+      │ Personal Dashboard  │             │ Institutional       │
+      │ & Risk Indicators   │             │ Analytics Dashboard │
+      └─────────────────────┘             └─────────────────────┘
+                                   │
+                                   ▼
+                        ┌─────────────────────┐
+                        │ Firebase Cloud      │
+                        │ Services            │
+                        └─────────────────────┘
+```
+
+---
+
+## System Components
+
+### Mobile Application
+
+`BurnOut/Ionic`
+
+Cross-platform application for **iOS and Android**, built with Ionic 3 and Angular 5.
+
+It provides the end-user experience for assessments, behavioral indicators, physiological-data integration and personalized risk visualization.
+
+### Analytics Dashboard
+
+`BurnOut/Back`
+
+Web application designed to provide an aggregate view of burnout indicators and longitudinal information for institutional analysis.
+
+Built with Angular and interactive visualization components.
+
+### Cloud & Web Layer
+
+`BurnOutLanding`
+
+Firebase-backed components supporting authentication, real-time data persistence, hosting and the public-facing application layer.
+
+---
+
+## Key Engineering Features
+
+**Offline-first architecture**  
+Local persistence through Cordova SQLite Storage and Ionic Storage allows the mobile application to continue operating in low-connectivity environments, with synchronization when connectivity becomes available.
+
+**Wearable integration**  
+Fitbit authentication and physiological-data integration complement questionnaire-derived information with data obtained from connected devices.
+
+**Multi-source assessment**  
+The system combines traditional burnout assessment with physiological and behavioral information rather than relying on a single signal.
+
+**Real-time analytics**  
+Interactive dashboards expose individual and aggregate burnout indicators using ECharts and Chart.js.
+
+**Cross-platform engineering**  
+A shared Ionic/Angular architecture targets iOS and Android while retaining access to native device capabilities through Cordova.
+
+**Serverless cloud architecture**  
+Firebase services provide authentication, real-time persistence and hosting without requiring a traditionally managed application-server infrastructure.
+
+**Security & privacy considerations**  
+Authentication, controlled data access and anonymization mechanisms were incorporated into a system handling sensitive occupational-health information.
+
+**Security validation**  
+The deployed environment was subjected to external security validation, including McAfee SECURE certification.
+
+---
+
+## Technology Stack
 
 | Layer | Technologies |
-| :--- | :--- |
-| **Mobile** | Ionic 3, Angular 5, TypeScript, Cordova (iOS/Android) |
-| **Web Dashboard** | Angular 5, Angular Flex-Layout, RxJS |
-| **Backend / Cloud** | Firebase (Auth, Realtime DB, Hosting), AngularFire2 |
-| **Data Visualization** | ECharts (`ngx-echarts`), Chart.js |
-| **Local Storage** | Cordova SQLite Storage, Ionic Storage |
+|---|---|
+| **Mobile** | Ionic 3 · Angular 5 · TypeScript · Cordova |
+| **Web Dashboard** | Angular 5 · Angular Flex-Layout · RxJS |
+| **Cloud / Backend** | Firebase Authentication · Realtime Database · Hosting · AngularFire2 |
+| **Visualization** | ECharts · ngx-echarts · Chart.js |
+| **Local Persistence** | Cordova SQLite Storage · Ionic Storage |
+| **Wearables** | Fitbit API · OAuth |
+| **Development** | Docker · npm · Ionic CLI · Angular CLI |
+| **Platforms** | iOS · Android · Web |
 
 ---
 
-## ⚖️ Architectural Trade-offs & Decisions
+## Architectural Decisions
 
-As an architect, every technology choice involves a trade-off. Key decisions for this system include:
+### Serverless vs. Custom Backend
 
-1. **Serverless (Firebase) vs. Custom Backend (Node.js/PostgreSQL)**  
-   - *Decision*: Adopted Firebase.  
-   - *Trade-off*: Sacrificed complex relational query flexibility and strict SQL ACID guarantees in exchange for rapid development cycles, native real-time synchronization, and zero server maintenance. The NoSQL document model was carefully structured around user-centric trees to mitigate query limitations.
-2. **Offline-First Mobile Strategy**  
-   - *Decision*: Implemented local SQLite caching instead of pure cloud-dependent API calls.  
-   - *Trade-off*: Increased local storage footprint and complexity in state synchronization, but guaranteed 100% uptime for the end-user in environments with unstable network coverage.
-3. **ECharts over D3.js**  
-   - *Decision*: Selected `ECharts` via `ngx-echarts`.  
-   - *Trade-off*: Less granular, pixel-perfect customizability than D3.js, but gained significant advantages in out-of-the-box mobile rendering performance, smaller bundle size impact, and easier Angular integration.
+**Decision — Firebase**
+
+A managed serverless backend accelerated development and provided native real-time synchronization without maintaining a conventional application-server stack.
+
+**Trade-off**
+
+Reduced operational overhead and faster iteration in exchange for tighter coupling to Firebase's data model and fewer relational-query capabilities than a traditional SQL backend.
 
 ---
 
-## 🚀 Getting Started
+### Offline-first vs. Cloud-dependent Mobile
 
-### Prerequisites
-- Node.js (v8.x or higher recommended for legacy Angular 5 compatibility)
-- Ionic CLI (`npm install -g ionic`)
-- Angular CLI (`npm install -g @angular/cli@1.5.0`)
+**Decision — Local persistence**
 
-### 1. Mobile Application (Ionic)
+The mobile application incorporates SQLite/local storage rather than depending exclusively on continuous cloud connectivity.
+
+**Trade-off**
+
+Additional state and synchronization complexity in exchange for resilience in environments where connectivity may be unreliable — particularly relevant to hospital environments.
+
+---
+
+### Cross-platform vs. Native Applications
+
+**Decision — Ionic + Angular + Cordova**
+
+A common codebase was used across mobile platforms.
+
+**Trade-off**
+
+Reduced duplicated development effort and enabled a shared application architecture, while introducing a hybrid runtime and dependency on native plugins for device-specific capabilities.
+
+---
+
+### Questionnaire-only vs. Multi-source Assessment
+
+**Decision — Combine assessment and physiological data**
+
+Traditional burnout assessment was complemented with wearable-derived physiological information.
+
+**Trade-off**
+
+Greater data-integration complexity in exchange for a richer analytical foundation than questionnaire data alone.
+
+---
+
+### ECharts vs. Lower-level Visualization
+
+**Decision — ECharts / Chart.js**
+
+Higher-level visualization libraries were selected for the analytical interfaces.
+
+**Trade-off**
+
+Less low-level visualization control in exchange for faster implementation, responsive dashboards and straightforward integration with the Angular application.
+
+---
+
+## End-to-End Engineering Scope
+
+```text
+Clinical Use Case
+       ↓
+Mobile Application
+       ↓
+Questionnaire ────── Wearable / Physiological Data
+       │                         │
+       └────────────┬────────────┘
+                    ↓
+             Data Persistence
+                    ↓
+          Assessment / Analytics
+                    ↓
+        Individual Risk Dashboard
+                    ↓
+       Institutional Monitoring
+                    ↓
+           Cloud Infrastructure
+```
+
+eBurnout therefore represents more than an individual application.
+
+It brings together:
+
+**Software Engineering · Data Integration · Mobile · Cloud · Analytics · Health-Tech**
+
+---
+
+## Project Structure
+
+```text
+eburnout/
+│
+├── BurnOut/
+│   ├── Ionic/                 # iOS / Android application
+│   └── Back/                  # Analytics & administration dashboard
+│
+├── BurnOutLanding/            # Web / Firebase components
+│
+├── DIAGRAMA DE FLUJO eburnout.pdf
+│                              # System and application-flow documentation
+│
+└── README.md
+```
+
+---
+
+## Getting Started
+
+> **Legacy environment:** eBurnout was developed with the Ionic 3 / Angular 5 ecosystem. Reproducing the original application may require compatible Node.js and dependency versions.
+
+### Mobile
+
 ```bash
-cd BurnOut/Ioniceburnout/
+cd BurnOut/Ionic
 npm install
-ionic cordova platform add android # or ios
+ionic serve
+```
+
+For a native target:
+
+```bash
+ionic cordova platform add android
 ionic cordova run android
 ```
-### 2. Web Dashboard (Angular)
+
+or configure the corresponding iOS environment.
+
+### Web Dashboard
+
 ```bash
 cd BurnOut/Back
 npm install
-ng serve --open
+ng serve
 ```
-## 📂 Project Structure
+
+Then open:
+
 ```text
-eburnout/
-├── BurnOut/
-│   ├── Ionic/               # Cross-platform mobile application source
-│   └── Back/                # Angular web dashboard for administrators
-├── BurnOutLanding/          # Firebase-hosted public landing page
-├── DIAGRAMA DE FLUJO eburnout.pdf # System architecture and user flow diagrams
-└── README.md                # Project documentation
+http://localhost:4200/
 ```
 
-## 👤 Author & Maintainer
+---
 
-**Christian Vladimir Sucuzhanay Arevalo**  
-*Data & AI Solutions Architect*  
-Building production-grade GenAI systems and data architectures on AWS.
+## From eBurnout to Data & AI Architecture
 
-🔗 [LinkedIn](https://www.linkedin.com/in/sucuzhanay) · 🌐 [Portfolio](https://christiansucuzhanay.com/) · ☁️ [AWS Builder](https://builder.aws.com/community/@sucuzhanay)
+eBurnout represents an earlier stage of my engineering work where several themes that remain central to my work today were already converging:
 
+**data acquisition · system integration · cloud services · analytics · architecture**
 
+My current work extends those foundations toward **AWS Data Architecture, Generative AI, Amazon Bedrock, RAG and AI-ready data platforms**.
 
+---
+
+## Author
+
+**Christian Vladimir Sucuzhanay Arévalo**
+
+Data & AI Solutions Architect | AWS Data Architecture | Generative AI & Amazon Bedrock | Big Data | Former University Lecturer
+
+[Official Website](https://christiansucuzhanay.com/) ·
+[Technical Portfolio](https://sukuzhanay.github.io/) ·
+[AWS Builder](https://builder.aws.com/community/@sucuzhanay) ·
+[LinkedIn](https://www.linkedin.com/in/sucuzhanay)
+
+---
+
+**Build. Explain. Teach. Share.**
