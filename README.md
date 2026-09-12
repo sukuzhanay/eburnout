@@ -77,7 +77,7 @@ npm install
 ng serve --open
 ```
 ## 📂 Project Structure
-```bash
+```text
 eburnout/
 ├── BurnOut/
 │   ├── Ionic/               # Cross-platform mobile application source
