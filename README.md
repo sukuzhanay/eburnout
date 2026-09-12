@@ -449,7 +449,7 @@ My current work extends those foundations toward:
 <p align="left">
 
 <a href="https://christiansucuzhanay.com/">
-  <img src="assets/christian-sucuzhanay-profile.jpg" width="28" height="28" alt="Christian Vladimir Sucuzhanay Arévalo" style="vertical-align:middle;">
+  <img src="BurnOutLanding/CHRISTIAN_VLADIMIR_SUCUZHANAY_AREVALO_500x600_1.jpg" width="28" height="28" alt="Christian Vladimir Sucuzhanay Arévalo" style="vertical-align:middle;">
 </a>
 &nbsp;
 <a href="https://christiansucuzhanay.com/">
