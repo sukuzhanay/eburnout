@@ -65,7 +65,35 @@ As an architect, every technology choice involves a trade-off. Key decisions for
 
 ### 1. Mobile Application (Ionic)
 ```bash
-cd BurnOut/Ionic
+cd BurnOut/Ioniceburnout/
 npm install
 ionic cordova platform add android # or ios
 ionic cordova run android
+```
+### 2. Web Dashboard (Angular)
+```bash
+cd BurnOut/Back
+npm install
+ng serve --open
+```
+## 📂 Project Structure
+```bash
+eburnout/
+├── BurnOut/
+│   ├── Ionic/               # Cross-platform mobile application source
+│   └── Back/                # Angular web dashboard for administrators
+├── BurnOutLanding/          # Firebase-hosted public landing page
+├── DIAGRAMA DE FLUJO eburnout.pdf # System architecture and user flow diagrams
+└── README.md                # Project documentation
+```
+
+## 👤 Author & Maintainer
+
+**Christian Vladimir Sucuzhanay Arevalo**  
+*Data & AI Solutions Architect*  
+Building production-grade GenAI systems and data architectures on AWS.
+
+🔗 [LinkedIn](https://www.linkedin.com/in/sucuzhanay) · 🌐 [Portfolio](https://christiansucuzhanay.com/) · ☁️ [AWS Builder](https://builder.aws.com/community/@sucuzhanay)
+
+
+
