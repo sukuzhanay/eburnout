@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="162" height="26" viewBox="0 0 162 26" role="img" aria-label="HealthTech: eBurnout">
+  <title>HealthTech: eBurnout</title>
+  <rect width="162" height="26" rx="4" fill="#08111f"/>
+  <path d="M88 5v16" stroke="#f59e0b"/>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="12" text-anchor="middle">
+    <text x="44.0" y="17" fill="#ffffff">HealthTech</text>
+    <text x="125.0" y="17" fill="#f59e0b">eBurnout</text>
+  </g>
+</svg>

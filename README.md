@@ -2,11 +2,23 @@
 
 ### Occupational Burnout Detection & Management Platform
 
-![HealthTech](https://img.shields.io/badge/HealthTech-eBurnout-08111f?style=flat-square)
-![Mobile](https://img.shields.io/badge/Mobile-Ionic-08111f?style=flat-square)
-![Cloud](https://img.shields.io/badge/Cloud-Firebase-f59e0b?style=flat-square)
-![Data](https://img.shields.io/badge/Data-Analytics-08111f?style=flat-square)
-![Wearables](https://img.shields.io/badge/Wearables-Fitbit-f59e0b?style=flat-square)
+### Engineering Highlights
+
+| 📱 Multi-Platform Product | ☁️ Cloud & Offline Data | ⌚ Health Data Integration |
+| --- | --- | --- |
+| Ionic/Angular mobile application for iOS and Android, plus an Angular analytics dashboard. | Firebase services and real-time data synchronization, with SQLite/Ionic Storage dependencies and local persistence. | Burnout assessments, Fitbit wearable/physiological data integration, and analytics across mobile and web interfaces. |
+
+<p align="center">
+  <a href="assets/eburnout-architecture.png"><img src="assets/eburnout-architecture.png" width="820" alt="Original eBurnout application flow: login, consent, personal data, burnout survey, recommendations, dashboard and five-day follow-up cycle." /></a>
+</p>
+
+> **Historical architecture:** Original application workflow from the legacy Ionic 3 / Angular 5 era; this is a historical flow diagram, not a current deployment diagram. [Original PDF](DIAGRAMA%20DE%20FLUJO%20eburnout.pdf).
+
+![HealthTech: eBurnout](assets/badges/healthtech.svg)
+![Mobile: Ionic](assets/badges/mobile.svg)
+![Cloud: Firebase](assets/badges/cloud.svg)
+![Data: Analytics](assets/badges/data.svg)
+![Wearables: Fitbit](assets/badges/wearables.svg)
 
 A comprehensive, full-stack **health-tech ecosystem** designed to assess, monitor and support the management of occupational burnout risk among healthcare professionals.
 
@@ -460,6 +472,6 @@ This is a historical project. The author confirms its development for physicians
 
 Data & AI Solutions Architect | AWS Data Architecture | Generative AI & Amazon Bedrock | Big Data | Former University Lecturer
 
-[Entity Home](https://christiansucuzhanay.com/) · [Technical Portfolio](https://sukuzhanay.github.io/) · [LinkedIn](https://www.linkedin.com/in/sucuzhanay) · [AWS Builder](https://builder.aws.com/community/@sucuzhanay) · [GitHub](https://github.com/sukuzhanay)
+[Entity Home](https://christiansucuzhanay.com/) · [Technical Portfolio](https://sukuzhanay.github.io/) · [LinkedIn](https://www.linkedin.com/in/sucuzhanay) · [AWS Builder](https://builder.aws.com/community/@sukuzhanay) · [GitHub](https://github.com/sukuzhanay)
 
 **Build. Explain. Teach. Share.**
