@@ -1,1 +1,13 @@
 theme: jekyll-theme-cayman
+
+exclude:
+  - BurnOut/Ionic/node_modules
+  - BurnOut/Ionic/plugins
+  - BurnOut/Ionic/platforms
+  - BurnOut/Ionic/www
+  - BurnOut/Ionic/.sourcemaps
+  - BurnOut/Back/node_modules
+  - BurnOut/Back/public
+  - BurnOut/Back/dist
+  - vendor
+  - node_modules
